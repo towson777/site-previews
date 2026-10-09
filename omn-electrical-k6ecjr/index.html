@@ -1,0 +1,401 @@
+<!doctype html>
+<html lang="en-GB">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<meta name="robots" content="noindex,nofollow">
+<title>OMN Electrical — Southampton electrician</title>
+<meta name="description" content="Concept: OMN Electrical, Southampton electrician. Rewires, consumer units, EICRs, lighting. Free quotes, no VAT.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@12..96,500;12..96,700;12..96,800&family=Figtree:wght@400;500;600;700&display=swap" rel="stylesheet">
+<style>
+:root{
+  --ink:#111214;--char:#1b1d21;--char2:#25282d;--gold:#d9b25e;--gold2:#f2dc9b;--gold-d:#8a6a22;
+  --paper:#fff;--mist:#f6f4ee;--line:#e6e2d6;--muted:#5d6068;
+  --r:18px;--shadow:0 20px 50px -24px rgba(17,18,20,.35);
+}
+*{box-sizing:border-box;margin:0}
+html{scroll-behavior:smooth;scroll-padding-top:90px}
+body{font-family:Figtree,system-ui,sans-serif;color:var(--ink);background:var(--paper);line-height:1.6;font-size:17px;-webkit-font-smoothing:antialiased}
+img{max-width:100%;display:block}
+a{color:inherit}
+h1,h2,h3{font-family:'Bricolage Grotesque',Figtree,sans-serif;line-height:1.08;letter-spacing:-.02em}
+.wrap{width:min(1160px,100% - 32px);margin-inline:auto}
+:focus-visible{outline:3px solid var(--gold);outline-offset:3px;border-radius:6px}
+.skip{position:absolute;left:-999px;top:8px;background:var(--gold);color:var(--ink);padding:8px 14px;border-radius:8px;z-index:100}
+.skip:focus{left:8px}
+
+/* preview banner */
+.banner{background:#000;color:#cfcfcf;font-size:13px;text-align:center;padding:7px 16px;border-bottom:1px solid #2a2a2a}
+.banner b{color:var(--gold2);font-weight:600}
+
+/* header */
+header.top{position:sticky;top:0;z-index:50;background:rgba(10,10,11,.88);backdrop-filter:blur(14px);-webkit-backdrop-filter:blur(14px);border-bottom:1px solid #2b2b2b}
+.top .wrap{display:flex;align-items:center;justify-content:space-between;gap:16px;height:68px}
+.top img.logo{height:44px;width:auto}
+.top nav{display:none;gap:26px}
+.top nav a{color:#d8d8d8;text-decoration:none;font-weight:500;font-size:15px}
+.top nav a:hover{color:var(--gold2)}
+.btn{display:inline-flex;align-items:center;gap:10px;font:600 16px Figtree,sans-serif;text-decoration:none;border:0;cursor:pointer;border-radius:999px;padding:14px 24px;transition:transform .2s,box-shadow .2s,background .2s}
+.btn-gold{background:linear-gradient(135deg,var(--gold2),var(--gold));color:var(--ink);box-shadow:0 8px 24px -10px rgba(217,178,94,.7)}
+.btn-gold:hover{transform:translateY(-2px);box-shadow:0 14px 30px -10px rgba(217,178,94,.85)}
+.btn-ghost{background:transparent;color:#fff;border:1.5px solid rgba(255,255,255,.35)}
+.btn-ghost:hover{border-color:var(--gold2);color:var(--gold2)}
+.top .btn{padding:10px 18px;font-size:15px}
+@media(min-width:900px){.top nav{display:flex}}
+
+/* hero */
+.hero{background:radial-gradient(900px 500px at 85% 10%,rgba(217,178,94,.22),transparent 60%),var(--ink);color:#fff;padding:56px 0 0;overflow:hidden}
+.hero .grid{display:grid;gap:40px}
+.eyebrow{display:inline-block;font-size:13px;font-weight:700;letter-spacing:.14em;text-transform:uppercase;color:var(--gold2);margin-bottom:18px}
+.hero h1{font-size:clamp(38px,8vw,72px);font-weight:800}
+.hero h1 em{font-style:normal;background:linear-gradient(120deg,var(--gold2),var(--gold));-webkit-background-clip:text;background-clip:text;color:transparent}
+.hero p.lead{font-size:19px;color:#c9cbd0;max-width:540px;margin:22px 0 30px}
+.hero .cta{display:flex;flex-wrap:wrap;gap:12px}
+.hero figure{position:relative;border-radius:var(--r) var(--r) 0 0;overflow:hidden;align-self:end;max-height:520px}
+.hero figure img{width:100%;height:100%;object-fit:cover;aspect-ratio:4/3}
+.hero figcaption{position:absolute;left:14px;bottom:14px;background:rgba(0,0,0,.65);backdrop-filter:blur(8px);color:#eee;font-size:13px;padding:6px 12px;border-radius:999px}
+@media(min-width:900px){.hero{padding-top:84px}.hero .grid{grid-template-columns:1.05fr .95fr;align-items:center}.hero figure{max-height:none}.hero figure img{aspect-ratio:auto;min-height:480px}}
+
+/* proof */
+.proof{background:var(--char);color:#fff;border-top:1px solid #34373d}
+.proof .wrap{display:grid;grid-template-columns:repeat(2,1fr);gap:1px;background:#34373d}
+.proof div.i{background:var(--char);padding:22px 18px}
+.proof strong{display:block;font:800 clamp(26px,5vw,38px)/1 'Bricolage Grotesque',sans-serif;color:var(--gold2)}
+.proof span{font-size:14px;color:#b9bcc3}
+@media(min-width:800px){.proof .wrap{grid-template-columns:repeat(4,1fr)}}
+
+section{padding:76px 0}
+.kicker{font-size:13px;font-weight:700;letter-spacing:.14em;text-transform:uppercase;color:var(--gold-d)}
+h2{font-size:clamp(30px,5vw,48px);margin:10px 0 14px;font-weight:800}
+.sub{color:var(--muted);max-width:620px}
+
+/* no VAT band */
+.vat{background:linear-gradient(135deg,var(--gold2),var(--gold));color:var(--ink);padding:34px 0}
+.vat .wrap{display:flex;flex-wrap:wrap;gap:16px 40px;align-items:center;justify-content:space-between}
+.vat h2{margin:0;font-size:clamp(24px,4vw,36px)}
+.vat p{max-width:520px;font-weight:500}
+
+/* services */
+.cards{display:grid;gap:16px;margin-top:38px}
+.card{background:var(--mist);border:1px solid var(--line);border-radius:var(--r);padding:26px;transition:transform .25s,box-shadow .25s,border-color .25s}
+.card:hover{transform:translateY(-4px);box-shadow:var(--shadow);border-color:var(--gold)}
+.card svg{width:34px;height:34px;stroke:var(--gold-d);fill:none;stroke-width:1.7;stroke-linecap:round;stroke-linejoin:round;margin-bottom:14px}
+.card h3{font-size:21px;margin-bottom:6px}
+.card p{color:var(--muted);font-size:15.5px}
+@media(min-width:640px){.cards{grid-template-columns:repeat(2,1fr)}}
+@media(min-width:980px){.cards{grid-template-columns:repeat(3,1fr)}}
+
+/* EICR */
+.eicr{background:var(--ink);color:#fff}
+.eicr .grid{display:grid;gap:36px;align-items:center}
+.eicr .kicker{color:var(--gold2)}
+.eicr .sub{color:#bfc2c9}
+.eicr ul{list-style:none;padding:0;margin:22px 0 28px;display:grid;gap:12px}
+.eicr li{display:flex;gap:12px;color:#dfe1e5}
+.eicr li::before{content:"";flex:none;width:22px;height:22px;margin-top:3px;border-radius:50%;background:var(--gold) url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='none' stroke='%23111' stroke-width='3.2' stroke-linecap='round' stroke-linejoin='round'%3E%3Cpath d='M6 12.5l4 4 8-9'/%3E%3C/svg%3E") center/14px no-repeat}
+.eicr .panel{background:var(--char2);border:1px solid #3a3d44;border-radius:var(--r);padding:30px}
+.eicr .panel h3{font-size:26px;margin-bottom:8px}
+.eicr .panel p{color:#bfc2c9;margin-bottom:20px}
+@media(min-width:900px){.eicr .grid{grid-template-columns:1.1fr .9fr}}
+
+/* gallery */
+.gallery{display:grid;gap:14px;margin-top:36px}
+.gallery figure{position:relative;border-radius:var(--r);overflow:hidden;background:#000;cursor:zoom-in}
+.gallery img{width:100%;height:100%;object-fit:cover;transition:transform .6s}
+.gallery figure:hover img{transform:scale(1.04)}
+.gallery figcaption{position:absolute;inset:auto 0 0 0;padding:34px 18px 14px;color:#fff;font-size:14px;background:linear-gradient(transparent,rgba(0,0,0,.75))}
+.gallery button{all:unset;display:block;width:100%;height:100%;cursor:zoom-in}
+@media(min-width:760px){
+  .gallery{grid-template-columns:1.3fr 1fr;grid-template-rows:280px 280px}
+  .gallery figure:nth-child(1){grid-row:span 2}
+}
+@media(max-width:759px){.gallery figure{aspect-ratio:4/3}.gallery figure.tall{aspect-ratio:3/4}}
+dialog.lb{border:0;background:transparent;padding:0;max-width:94vw;max-height:94vh;margin:auto}
+dialog.lb::backdrop{background:rgba(0,0,0,.88)}
+dialog.lb img{max-height:90vh;max-width:94vw;border-radius:12px}
+dialog.lb button{position:absolute;top:8px;right:8px;background:#fff;border:0;border-radius:50%;width:40px;height:40px;font-size:22px;cursor:pointer}
+
+/* why / process */
+.why{background:var(--mist)}
+.why .grid{display:grid;gap:40px;align-items:center}
+.why figure{border-radius:var(--r);overflow:hidden;box-shadow:var(--shadow)}
+.why figure img{width:100%;aspect-ratio:4/3;object-fit:cover}
+.steps{list-style:none;padding:0;margin-top:26px;display:grid;gap:18px;counter-reset:s}
+.steps li{counter-increment:s;display:grid;grid-template-columns:44px 1fr;gap:14px}
+.steps li::before{content:counter(s);width:44px;height:44px;border-radius:50%;background:var(--ink);color:var(--gold2);font:700 18px 'Bricolage Grotesque';display:grid;place-items:center}
+.steps b{display:block;font-size:18px}
+.steps span{color:var(--muted);font-size:15.5px}
+@media(min-width:900px){.why .grid{grid-template-columns:.9fr 1.1fr}}
+
+/* reviews */
+.rev{text-align:center}
+.score{margin:36px auto 0;max-width:760px;background:var(--ink);color:#fff;border-radius:28px;padding:44px 28px;position:relative;overflow:hidden}
+.score::after{content:"";position:absolute;inset:-40% -10% auto auto;width:360px;height:360px;background:radial-gradient(circle,rgba(217,178,94,.35),transparent 65%)}
+.score .big{font:800 clamp(72px,16vw,128px)/1 'Bricolage Grotesque';background:linear-gradient(120deg,var(--gold2),var(--gold));-webkit-background-clip:text;background-clip:text;color:transparent;position:relative}
+.score .big small{font-size:.35em;color:#9a9da4;-webkit-text-fill-color:#9a9da4}
+.stars{color:var(--gold);letter-spacing:6px;font-size:22px;margin:6px 0 10px;position:relative}
+.score p{color:#cfd1d6;position:relative;max-width:480px;margin:0 auto}
+.score .row{display:flex;justify-content:center;flex-wrap:wrap;gap:12px 36px;margin-top:26px;position:relative}
+.score .row b{display:block;font:700 28px 'Bricolage Grotesque';color:#fff}
+.score .row span{font-size:13px;color:#a8abb2}
+
+/* areas */
+.areas{background:var(--mist)}
+.chips{display:flex;flex-wrap:wrap;gap:10px;margin-top:24px}
+.chip{background:#fff;border:1px solid var(--line);padding:9px 18px;border-radius:999px;font-weight:500}
+
+/* contact */
+.contact{background:var(--ink);color:#fff}
+.contact .grid{display:grid;gap:40px}
+.contact .kicker{color:var(--gold2)}
+.contact .sub{color:#bfc2c9}
+.phone{display:inline-block;margin-top:22px;font:800 clamp(30px,6vw,46px) 'Bricolage Grotesque';color:var(--gold2);text-decoration:none}
+.phone:hover{color:#fff}
+form{background:#fff;color:var(--ink);border-radius:24px;padding:28px;display:grid;gap:16px}
+label{display:grid;gap:6px;font-weight:600;font-size:14.5px}
+input,select,textarea{font:inherit;font-weight:400;padding:13px 14px;border:1.5px solid #cfcab9;border-radius:12px;background:#fdfcf9;width:100%}
+input:focus,select:focus,textarea:focus{outline:3px solid rgba(217,178,94,.55);border-color:var(--gold-d)}
+input[type=file]{padding:10px;background:#fff}
+.two{display:grid;gap:16px}
+@media(min-width:560px){.two{grid-template-columns:1fr 1fr}}
+@media(min-width:900px){.contact .grid{grid-template-columns:.85fr 1.15fr;align-items:start}}
+.note{font-size:13px;color:var(--muted)}
+#msg{display:none;background:#fff6dd;border:1px solid var(--gold);padding:14px 16px;border-radius:12px;font-weight:600}
+
+footer{background:#000;color:#9a9da4;padding:34px 0;font-size:14px}
+footer .wrap{display:flex;flex-wrap:wrap;gap:14px 30px;justify-content:space-between;align-items:center}
+footer img{height:38px}
+
+/* motion */
+.rv{opacity:0;transform:translateY(22px);transition:opacity .7s ease,transform .7s ease}
+.rv.in{opacity:1;transform:none}
+@media(prefers-reduced-motion:reduce){
+  html{scroll-behavior:auto}
+  .rv{opacity:1;transform:none;transition:none}
+  *{transition:none!important}
+}
+</style>
+</head>
+<body>
+<a class="skip" href="#main">Skip to content</a>
+<div class="banner" role="note">Website concept for <b>OMN Electrical</b> — preview only, not the live site.</div>
+
+<header class="top">
+  <div class="wrap">
+    <a href="#top" aria-label="OMN Electrical home"><img class="logo" src="assets/logo.webp" alt="OMN Electrical logo" width="156" height="44"></a>
+    <nav aria-label="Main">
+      <a href="#services">Services</a><a href="#eicr">EICR &amp; landlords</a><a href="#projects">Lighting projects</a><a href="#reviews">Reviews</a>
+    </nav>
+    <a class="btn btn-gold" href="tel:07427810430" aria-label="Call 07427 810430">
+      <svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M6.6 10.8a15 15 0 006.6 6.6l2.2-2.2a1 1 0 011-.25 11.4 11.4 0 003.6.57 1 1 0 011 1V20a1 1 0 01-1 1A17 17 0 013 4a1 1 0 011-1h3.5a1 1 0 011 1c0 1.25.2 2.45.57 3.6a1 1 0 01-.25 1z"/></svg>
+      07427 810430
+    </a>
+  </div>
+</header>
+
+<main id="main">
+<div id="top"></div>
+<section class="hero" style="padding-bottom:0">
+  <div class="wrap grid">
+    <div>
+      <span class="eyebrow">NAPIT registered · Southampton &amp; Hampshire</span>
+      <h1>Southampton’s top-rated electrician — <em>and we don’t charge VAT.</em></h1>
+      <p class="lead">Precise, tidy electrical work for homes and landlords, from a new consumer unit to a full lighting scheme. Quotes are free, and prices are kept honest.</p>
+      <div class="cta">
+        <a class="btn btn-gold" href="#quote">Get a free quote</a>
+        <a class="btn btn-ghost" href="tel:07427810430">Call 07427 810430</a>
+      </div>
+    </div>
+    <figure class="rv">
+      <img src="assets/house-night.webp" alt="Brick-built house at dusk with warm uplighting on the walls and lit entrance steps" width="1024" height="768" fetchpriority="high">
+      <figcaption>Exterior lighting scheme</figcaption>
+    </figure>
+  </div>
+</section>
+
+<div class="proof">
+  <div class="wrap">
+    <div class="i"><strong>9.97/10</strong><span>Checkatrade score</span></div>
+    <div class="i"><strong>356</strong><span>Customer reviews</span></div>
+    <div class="i"><strong>97</strong><span>Reviews in the last 12 months</span></div>
+    <div class="i"><strong>Since 2019</strong><span>Trading · NAPIT, EAL, NVQ</span></div>
+  </div>
+</div>
+
+<div class="vat">
+  <div class="wrap">
+    <h2>No VAT. Free quotes.</h2>
+    <p>OMN Electrical isn’t VAT registered, so there’s no 20% added on top of your quote. Send the details and get a clear price back.</p>
+    <a class="btn" style="background:var(--ink);color:#fff" href="#quote">Request a quote</a>
+  </div>
+</div>
+
+<section id="services">
+  <div class="wrap">
+    <span class="kicker">What we do</span>
+    <h2>Electrical work, done properly.</h2>
+    <p class="sub">From small fixes to whole-house projects, every job is planned, neat and tested.</p>
+    <div class="cards">
+      <article class="card rv"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M3 11l9-7 9 7M5 10v10h14V10M9 20v-6h6v6"/></svg><h3>Rewires</h3><p>Full and partial rewires that bring your home up to modern standards.</p></article>
+      <article class="card rv"><svg viewBox="0 0 24 24" aria-hidden="true"><rect x="4" y="3" width="16" height="18" rx="2"/><path d="M8 7h3M8 11h3M8 15h3M14 7h2M14 11h2M14 15h2"/></svg><h3>Consumer unit upgrades</h3><p>Safer, modern fuse boards fitted cleanly and certified.</p></article>
+      <article class="card rv"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M9 3h6l4 4v14H5V3h4zM9 13l2 2 4-4"/></svg><h3>EICRs</h3><p>Electrical installation condition reports for homeowners and landlords.</p></article>
+      <article class="card rv"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M9 18h6M10 21h4M12 3a6 6 0 00-3.5 10.9c.6.5 1 1.2 1 2V16h5v-.1c0-.8.4-1.5 1-2A6 6 0 0012 3z"/></svg><h3>Lighting design &amp; LED</h3><p>Warm, layered lighting schemes and LED upgrades that transform a room.</p></article>
+      <article class="card rv"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 2v3M4.2 6.2l2.1 2.1M19.8 6.2l-2.1 2.1M2 14h3M19 14h3M8 22h8M9 18h6a5 5 0 10-6 0z"/></svg><h3>Garden lighting</h3><p>Outdoor lighting for paths, steps, patios and house frontages.</p></article>
+      <article class="card rv"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M13 2L4 14h7l-1 8 9-12h-7z"/></svg><h3>Hot tub wiring</h3><p>Safe, correctly specified supplies for hot tubs.</p></article>
+      <article class="card rv"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 3l9 16H3z M12 10v4M12 17h.01"/></svg><h3>Smoke alarms</h3><p>Fitting and upgrading of smoke alarms for peace of mind.</p></article>
+      <article class="card rv"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M4 8h16M4 12h16M4 16h16M7 4v16M17 4v16"/></svg><h3>Data cabling</h3><p>Tidy network cabling for home offices and connected homes.</p></article>
+      <article class="card rv"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M5 20V9l7-5 7 5v11M9 20v-5h6v5M12 9v2"/></svg><h3>Boiler wiring</h3><p>Electrical connections and controls for boiler installations.</p></article>
+    </div>
+  </div>
+</section>
+
+<section class="eicr" id="eicr">
+  <div class="wrap grid">
+    <div>
+      <span class="kicker">EICR &amp; landlords</span>
+      <h2>Landlord certificates, without the faff.</h2>
+      <p class="sub">An EICR checks the safety of your fixed wiring. Book an inspection and get a clear report.</p>
+      <ul>
+        <li>Electrical installation condition reports for rental and private homes</li>
+        <li>NAPIT registered, with EAL and NVQ qualifications</li>
+        <li>Straight answers, plain-English reports and a free quote first</li>
+      </ul>
+      <a class="btn btn-gold" href="#quote">Book an EICR</a>
+    </div>
+    <div class="panel rv">
+      <h3>Not sure what you need?</h3>
+      <p>Tell us about the property and upload a photo of the consumer unit if you can. We’ll point you the right way.</p>
+      <a class="btn btn-ghost" href="tel:07427810430">Call 07427 810430</a>
+    </div>
+  </div>
+</section>
+
+<section id="projects">
+  <div class="wrap">
+    <span class="kicker">Lighting projects</span>
+    <h2>Lighting that changes how a home feels.</h2>
+    <p class="sub">A few finished schemes. Tap an image to enlarge.</p>
+    <div class="gallery">
+      <figure class="rv"><button type="button" data-full="assets/lounge.webp" data-alt="Living room with warm LED lighting under floating shelves and around a wall-mounted television"><img src="assets/lounge.webp" alt="Living room with warm LED lighting under floating shelves and around a wall-mounted television" loading="lazy"></button><figcaption>Living room shelf lighting</figcaption></figure>
+      <figure class="rv"><button type="button" data-full="assets/house-night.webp" data-alt="Brick house at dusk with warm uplighting and lit entrance steps"><img src="assets/house-night.webp" alt="Brick house at dusk with warm uplighting and lit entrance steps" loading="lazy"></button><figcaption>Exterior &amp; step lighting</figcaption></figure>
+      <figure class="rv tall"><button type="button" data-full="assets/wardrobe.webp" data-alt="Walk-in wardrobe with slim LED strip lighting along the ceiling and shelving"><img src="assets/wardrobe.webp" alt="Walk-in wardrobe with slim LED strip lighting along the ceiling and shelving" loading="lazy" style="object-position:center 40%"></button><figcaption>Walk-in wardrobe LED strips</figcaption></figure>
+    </div>
+  </div>
+</section>
+
+<section class="why">
+  <div class="wrap grid">
+    <figure class="rv"><img src="assets/van.webp" alt="OMN Electrical electrician standing beside the company van" loading="lazy" style="object-position:70% center"></figure>
+    <div>
+      <span class="kicker">Why OMN Electrical</span>
+      <h2>Small business care, top-tier results.</h2>
+      <p class="sub">Run by a Southampton sole trader since 2019, with a customer score that speaks for itself.</p>
+      <ol class="steps">
+        <li><div><b>Tell us what you need</b><span>Call or send the form, with photos if it helps.</span></div></li>
+        <li><div><b>Get a free, clear quote</b><span>No VAT added, so the price you’re quoted is the price that counts.</span></div></li>
+        <li><div><b>Neat, tested work</b><span>Done tidily, certified, and left clean.</span></div></li>
+      </ol>
+    </div>
+  </div>
+</section>
+
+<section class="rev" id="reviews">
+  <div class="wrap">
+    <span class="kicker">Reviews</span>
+    <h2>Customers rate us 9.97 out of 10.</h2>
+    <p class="sub" style="margin-inline:auto">Rated on Checkatrade, one of the UK’s best-known trade review sites.</p>
+    <div class="score rv">
+      <div class="big">9.97<small>/10</small></div>
+      <div class="stars" aria-hidden="true">★★★★★</div>
+      <p>Based on 356 reviews on Checkatrade — a very high number for a one-person business.</p>
+      <div class="row">
+        <div><b>356</b><span>total reviews</span></div>
+        <div><b>97</b><span>in the last 12 months</span></div>
+        <div><b>2019</b><span>trading since</span></div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="areas">
+  <div class="wrap">
+    <span class="kicker">Areas covered</span>
+    <h2>Southampton and across Hampshire.</h2>
+    <p class="sub">Based in Southampton and working throughout Hampshire. Not sure if you’re covered? Just ask.</p>
+    <div class="chips"><span class="chip">Southampton</span><span class="chip">Hampshire</span></div>
+  </div>
+</section>
+
+<section class="contact" id="quote">
+  <div class="wrap grid">
+    <div>
+      <span class="kicker">Get a free quote</span>
+      <h2>Tell us about the job.</h2>
+      <p class="sub">Send the details, and a photo of the job if you have one. Or just pick up the phone.</p>
+      <a class="phone" href="tel:07427810430">07427 810430</a>
+    </div>
+    <form id="qf" novalidate>
+      <div class="two">
+        <label>Your name<input name="name" autocomplete="name" required></label>
+        <label>Phone<input name="phone" type="tel" autocomplete="tel" required></label>
+      </div>
+      <label>Email<input name="email" type="email" autocomplete="email"></label>
+      <label>What do you need?
+        <select name="job">
+          <option>Free quote — general electrical work</option>
+          <option>EICR / landlord certificate</option>
+          <option>Consumer unit upgrade</option>
+          <option>Rewire</option>
+          <option>Lighting design / LED</option>
+          <option>Garden lighting</option>
+          <option>Something else</option>
+        </select>
+      </label>
+      <label>Tell us a bit more<textarea name="details" rows="4"></textarea></label>
+      <label>Add a photo (optional)<input type="file" name="photo" accept="image/*"></label>
+      <button class="btn btn-gold" type="submit" style="justify-content:center">Send my request</button>
+      <p id="msg" role="status"></p>
+      <p class="note">No VAT added to quotes.</p>
+    </form>
+  </div>
+</section>
+</main>
+
+<footer>
+  <div class="wrap">
+    <img src="assets/logo.webp" alt="OMN Electrical" width="135" height="38">
+    <span>Southampton &amp; Hampshire · NAPIT registered · <a href="tel:07427810430">07427 810430</a></span>
+    <span>Concept preview only</span>
+  </div>
+</footer>
+
+<dialog class="lb" id="lb" aria-label="Enlarged image"><img alt=""><button type="button" aria-label="Close">×</button></dialog>
+
+<script>
+(function(){
+  var f=document.getElementById('qf'),m=document.getElementById('msg');
+  f.addEventListener('submit',function(e){
+    e.preventDefault();
+    m.style.display='block';
+    m.textContent='This is a preview — the form will go live with your new site.';
+    m.scrollIntoView({block:'nearest',behavior:'smooth'});
+  });
+  var lb=document.getElementById('lb'),li=lb.querySelector('img');
+  document.querySelectorAll('.gallery button').forEach(function(b){
+    b.addEventListener('click',function(){
+      li.src=b.dataset.full;li.alt=b.dataset.alt;
+      if(lb.showModal)lb.showModal();
+    });
+  });
+  lb.addEventListener('click',function(){lb.close()});
+  var els=document.querySelectorAll('.rv');
+  if('IntersectionObserver' in window){
+    var io=new IntersectionObserver(function(es){es.forEach(function(x){if(x.isIntersecting){x.target.classList.add('in');io.unobserve(x.target)}})},{threshold:.12});
+    els.forEach(function(e){io.observe(e)});
+  }else{els.forEach(function(e){e.classList.add('in')})}
+})();
+</script>
+</body>
+</html>
