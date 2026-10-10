@@ -1,0 +1,392 @@
+<!doctype html>
+<html lang="en-GB">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="robots" content="noindex,nofollow">
+<title>ILM Kitchens, Bathrooms &amp; Plumbing | Southampton</title>
+<meta name="description" content="Concept website for ILM Kitchens, Bathrooms &amp; Plumbing Ltd, Southampton. Kitchens and bathrooms designed, supplied and fitted by plumbers.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,300;0,9..144,500;1,9..144,300;1,9..144,400&family=Hanken+Grotesk:wght@400;500;600;700&display=swap" rel="stylesheet">
+<style>
+/* Layout: editorial, design-studio feel. Charcoal canvas, warm oak accent, brushed-steel hairlines. Large light serif headlines, quiet grotesk body, one full-bleed kitchen image. */
+:root{
+  --char:#1b1c1e; --char-2:#26282b; --oak:#c08a52; --oak-d:#8a5a28; --oak-l:#e4c49b;
+  --off:#f5f3ef; --white:#fff; --steel:#a9b0b5; --steel-d:#5d666c; --line:#dedad2;
+  --display:"Fraunces",Georgia,serif; --body:"Hanken Grotesk",system-ui,Arial,sans-serif;
+  --gutter:clamp(16px,4vw,48px);
+}
+*{box-sizing:border-box}
+html{scroll-behavior:smooth;scroll-padding-top:80px}
+body{margin:0;background:var(--off);color:var(--char);font:400 1.0625rem/1.65 var(--body);-webkit-font-smoothing:antialiased}
+img{max-width:100%;display:block}
+a{color:inherit}
+h1,h2,h3{font-family:var(--display);font-weight:300;line-height:1.05;margin:0;text-wrap:balance;letter-spacing:-.015em}
+h1 em,h2 em{font-style:italic;font-weight:400;color:var(--oak-d)}
+p{margin:0}
+.wrap{width:100%;max-width:1240px;margin-inline:auto;padding-inline:var(--gutter)}
+:focus-visible{outline:3px solid var(--oak);outline-offset:3px;border-radius:3px}
+.skip{position:absolute;left:-999px;top:0;background:var(--oak);color:var(--char);padding:.6rem 1rem;z-index:100}
+.skip:focus{left:8px;top:8px}
+.banner{background:#000;color:#e6e6e6;font-size:.8125rem;line-height:1.4;text-align:center;padding:.5rem var(--gutter)}
+.banner b{color:var(--oak-l);font-weight:600}
+
+header.top{position:sticky;top:0;z-index:50;background:rgba(245,243,239,.92);backdrop-filter:blur(12px);border-bottom:1px solid var(--line)}
+.bar{display:flex;align-items:center;gap:1rem;min-height:70px}
+.brand{display:flex;align-items:center;gap:.7rem;text-decoration:none;min-width:0}
+.brand svg{width:44px;height:44px;flex:none}
+.brand strong{font:500 1.15rem/1 var(--display);letter-spacing:.01em;display:block}
+.brand small{display:block;font-size:.66rem;letter-spacing:.18em;text-transform:uppercase;color:var(--steel-d);margin-top:.25rem;white-space:nowrap}
+nav{margin-left:auto;display:none;gap:1.8rem;font-weight:500;font-size:.95rem}
+nav a{text-decoration:none;color:var(--steel-d);padding:.3rem 0;border-bottom:1.5px solid transparent;transition:color .15s,border-color .15s}
+nav a:hover{color:var(--char);border-color:var(--oak)}
+.call{margin-left:auto;display:inline-flex;align-items:center;gap:.5rem;background:var(--char);color:#fff;text-decoration:none;font-weight:600;padding:.6rem 1.05rem;border-radius:2px;font-size:.95rem;white-space:nowrap;transition:background .15s}
+.call:hover{background:var(--oak-d)}
+.call svg{width:16px;height:16px}
+@media(min-width:960px){nav{display:flex}.call{margin-left:1rem}}
+
+.btn{display:inline-flex;align-items:center;justify-content:center;gap:.6rem;padding:1rem 1.7rem;font:600 1rem var(--body);text-decoration:none;border:1.5px solid transparent;border-radius:2px;cursor:pointer;transition:background .2s,color .2s,border-color .2s,transform .2s;letter-spacing:.01em}
+.btn-oak{background:var(--oak);color:var(--char)}.btn-oak:hover{background:var(--oak-l);transform:translateY(-2px)}
+.btn-dark{background:var(--char);color:#fff}.btn-dark:hover{background:var(--oak-d)}
+.btn-line{border-color:rgba(255,255,255,.4);color:#fff}.btn-line:hover{border-color:#fff;background:rgba(255,255,255,.08)}
+.btn svg{width:18px;height:18px}
+
+/* hero */
+.hero{background:var(--char);color:#fff;position:relative;overflow:hidden}
+.hero .grid{display:grid;min-height:auto}
+.hero .copy{padding:clamp(3rem,7vw,6rem) var(--gutter);display:flex;flex-direction:column;justify-content:center;gap:1.6rem;max-width:720px}
+.eyebrow{font-size:.78rem;letter-spacing:.22em;text-transform:uppercase;color:var(--oak-l);display:flex;align-items:center;gap:.8rem}
+.eyebrow::before{content:"";width:36px;height:1px;background:var(--oak)}
+.hero h1{font-size:clamp(2.7rem,7.4vw,5.6rem);color:#fff}
+.hero h1 em{color:var(--oak)}
+.hero p.lede{color:#c9ccce;font-size:clamp(1.05rem,2vw,1.2rem);max-width:30rem}
+.cta-row{display:flex;flex-wrap:wrap;gap:.8rem}
+.hero .img{position:relative;min-height:320px;background:#000}
+.hero .img img{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;opacity:.92}
+.hero .img::after{content:"";position:absolute;inset:0;background:linear-gradient(180deg,rgba(27,28,30,.9) 0%,rgba(27,28,30,0) 35%)}
+@media(min-width:960px){.hero .grid{grid-template-columns:minmax(0,1.05fr) minmax(0,1fr)}.hero .copy{padding-left:max(var(--gutter),calc((100vw - 1240px)/2 + var(--gutter)))}.hero .img{min-height:640px}.hero .img::after{background:linear-gradient(90deg,rgba(27,28,30,.9) 0%,rgba(27,28,30,0) 35%)}}
+
+/* proof */
+.proof{background:var(--char-2);color:#fff;border-top:1px solid #3a3d41}
+.proof ul{list-style:none;margin:0;padding:0;display:grid;grid-template-columns:1fr 1fr}
+.proof li{padding:1.3rem 0;display:flex;flex-direction:column;gap:.2rem}
+.proof li:nth-child(odd){padding-right:1rem}
+.proof b{font:300 clamp(1.9rem,4.5vw,2.8rem)/1 var(--display);color:var(--oak)}
+.proof span{font-size:.85rem;color:var(--steel);letter-spacing:.04em}
+@media(min-width:800px){.proof ul{grid-template-columns:repeat(4,1fr)}.proof li{padding:1.8rem 1.4rem;border-left:1px solid #3a3d41}.proof li:first-child{border-left:0;padding-left:0}}
+
+section{padding-block:clamp(3.5rem,8vw,7rem)}
+.kicker{font-size:.78rem;letter-spacing:.22em;text-transform:uppercase;color:var(--oak-d);font-weight:600;margin-bottom:1rem}
+h2{font-size:clamp(2.1rem,5vw,3.6rem)}
+.sec-head{max-width:46rem;margin-bottom:3rem}
+.sec-head p{margin-top:1.1rem;color:var(--steel-d);font-size:1.12rem}
+
+/* what we do */
+.pillars{display:grid;gap:1.2rem}
+@media(min-width:800px){.pillars{grid-template-columns:repeat(3,1fr);gap:1.6rem}}
+.pillar{background:var(--white);padding:2rem 1.7rem 2.2rem;border-top:3px solid var(--oak);display:flex;flex-direction:column;gap:1rem;transition:transform .25s,box-shadow .25s}
+.pillar:hover{transform:translateY(-5px);box-shadow:0 24px 40px -24px rgba(0,0,0,.3)}
+.pillar .ic{width:44px;height:44px;color:var(--oak-d)}
+.pillar h3{font-size:1.9rem}
+.pillar p{color:var(--steel-d)}
+.pillar ul{list-style:none;margin:.4rem 0 0;padding:0;display:grid;gap:.4rem;font-size:.97rem;font-weight:500}
+.pillar li{padding-left:1.3rem;position:relative}
+.pillar li::before{content:"";position:absolute;left:0;top:.7em;width:.7rem;height:1px;background:var(--oak-d)}
+
+/* process */
+.dark{background:var(--char);color:#fff}
+.dark .kicker{color:var(--oak-l)}
+.dark h2 em{color:var(--oak)}
+.process{display:grid;gap:2.5rem}
+@media(min-width:900px){.process{grid-template-columns:.9fr 1.1fr;gap:5rem;align-items:start}}
+.stepper{display:grid;gap:0;border-top:1px solid #3a3d41}
+.stepper div{display:grid;grid-template-columns:auto 1fr;gap:0 1.4rem;padding:1.7rem 0;border-bottom:1px solid #3a3d41}
+.stepper .n{font:300 2.4rem/1 var(--display);color:var(--oak);grid-row:span 2;min-width:2.2rem}
+.stepper h3{font-size:1.5rem}
+.stepper p{color:#b9bdc0;margin-top:.4rem}
+
+/* gallery band */
+.band{position:relative;min-height:420px;display:grid;align-items:end}
+.band img{position:absolute;inset:0;width:100%;height:100%;object-fit:cover}
+.band::after{content:"";position:absolute;inset:0;background:linear-gradient(0deg,rgba(27,28,30,.85),rgba(27,28,30,0) 55%)}
+.band .wrap{position:relative;z-index:1;padding-block:2.5rem;color:#fff}
+.band h2{font-size:clamp(1.8rem,4vw,3rem);max-width:30rem}
+.band .kicker{color:var(--oak-l)}
+.projects{display:grid;gap:1.2rem;margin-top:3rem}
+@media(min-width:800px){.projects{grid-template-columns:repeat(3,1fr)}}
+.ph{border:1.5px dashed var(--steel);background:repeating-linear-gradient(135deg,transparent 0 14px,rgba(169,176,181,.14) 14px 15px);aspect-ratio:4/3;display:grid;place-items:center;text-align:center;padding:1.5rem;color:var(--steel-d);font-size:.95rem}
+.ph b{display:block;font:400 1.3rem var(--display);color:var(--char);margin-bottom:.3rem}
+.hint{margin-top:1rem;color:var(--steel-d);font-size:.92rem}
+
+/* reviews */
+.rev{display:grid;gap:2.5rem}
+@media(min-width:900px){.rev{grid-template-columns:1fr 1fr;gap:5rem;align-items:center}}
+.big{font:300 clamp(6rem,18vw,11rem)/.85 var(--display);color:var(--oak-d);letter-spacing:-.04em}
+.big small{font-size:.28em;color:var(--steel-d);letter-spacing:0}
+.rev p{color:var(--steel-d);font-size:1.12rem;max-width:30rem;margin-top:1rem}
+.rev a.src{display:inline-block;margin-top:1.3rem;font-weight:600;color:var(--oak-d)}
+.rev ul{list-style:none;padding:0;margin:0;display:grid;gap:0;border-top:1px solid var(--line)}
+.rev li{display:flex;justify-content:space-between;gap:1rem;padding:1.1rem 0;border-bottom:1px solid var(--line);font-weight:500}
+.rev li span:last-child{font:400 1.3rem var(--display);color:var(--char)}
+
+/* areas */
+.areas{background:var(--white);border-block:1px solid var(--line)}
+.areas .grid{display:grid;gap:2.5rem}
+@media(min-width:900px){.areas .grid{grid-template-columns:.8fr 1.2fr;gap:5rem;align-items:center}}
+.areas p{color:var(--steel-d);margin-top:1.1rem;font-size:1.1rem}
+.mapbox{background:var(--char);border-radius:4px;padding:clamp(.6rem,2vw,1.2rem);position:relative}
+.mapbox svg{width:100%;height:auto;display:block}
+.mapbox .cap{color:var(--steel);font-size:.78rem;letter-spacing:.06em;padding:.5rem .4rem 0}
+.arc{stroke-dasharray:1400;stroke-dashoffset:0;animation:draw 2.6s .3s both ease-out}
+@keyframes draw{from{stroke-dashoffset:1400}}
+.pulse{transform-origin:center;transform-box:fill-box;animation:ping 2.4s infinite}
+@keyframes ping{0%{transform:scale(.6);opacity:.9}100%{transform:scale(2.6);opacity:0}}
+
+/* contact */
+.contact .grid{display:grid;gap:3rem}
+@media(min-width:900px){.contact .grid{grid-template-columns:.8fr 1.2fr;gap:5rem}}
+.big-phone{display:block;font:300 clamp(2rem,6vw,3.2rem)/1 var(--display);text-decoration:none;margin:1.2rem 0 .6rem;color:var(--char);border-bottom:1px solid var(--oak);width:max-content;max-width:100%}
+.big-phone:hover{color:var(--oak-d)}
+.facts{list-style:none;padding:0;margin:1.6rem 0 0;display:grid;gap:.7rem;color:var(--steel-d)}
+.facts b{color:var(--char);font-weight:600}
+.panel{background:var(--white);padding:clamp(1.4rem,3.5vw,2.6rem);border-top:3px solid var(--oak)}
+.panel h3{font-size:1.8rem;margin-bottom:1.4rem}
+label{display:block;font-weight:600;font-size:.88rem;margin-bottom:.35rem;letter-spacing:.02em}
+input,select,textarea{width:100%;font:inherit;color:var(--char);background:var(--off);border:1px solid #c9c5bb;border-radius:2px;padding:.8rem .9rem;transition:border-color .15s,box-shadow .15s,background .15s}
+input:hover,select:hover,textarea:hover{border-color:var(--oak-d)}
+input:focus,select:focus,textarea:focus{outline:none;border-color:var(--oak-d);box-shadow:0 0 0 3px rgba(192,138,82,.35);background:#fff}
+input[type=file]{padding:.6rem}
+.fields{display:grid;gap:1rem}
+@media(min-width:560px){.fields{grid-template-columns:1fr 1fr}.fields .full{grid-column:1/-1}}
+.fields>div{min-width:0}
+.note{display:none;margin-top:1rem;padding:.9rem 1rem;background:#eaf3e6;color:#1d4a17;font-weight:600;border-left:3px solid #4b9a3a}
+.note.show{display:block}
+
+footer{background:var(--char);color:var(--steel);padding-block:2.5rem;font-size:.92rem}
+footer .wrap{display:flex;flex-wrap:wrap;gap:1rem 2rem;justify-content:space-between}
+footer b{color:#fff;font-weight:600}
+
+.dock{position:fixed;left:0;right:0;bottom:0;z-index:60;padding:.6rem var(--gutter) calc(.6rem + env(safe-area-inset-bottom,0px));background:rgba(27,28,30,.96);backdrop-filter:blur(10px)}
+.dock .btn{width:100%;padding:.85rem}
+body{padding-bottom:70px}
+@media(min-width:900px){.dock{display:none}body{padding-bottom:0}}
+.reveal{animation:rise .9s both cubic-bezier(.2,.8,.2,1)}
+@keyframes rise{from{opacity:0;transform:translateY(16px)}}
+@media(prefers-reduced-motion:reduce){*,*::before,*::after{animation:none!important;transition:none!important;scroll-behavior:auto!important}}
+</style>
+</head>
+<body>
+<a class="skip" href="#main">Skip to content</a>
+<div class="banner">Website concept for <b>ILM Kitchens, Bathrooms &amp; Plumbing Ltd</b> — preview only, not the live site. Designed by Itchen Studio · sam@itchenstudio.co.uk</div>
+
+<header class="top">
+  <div class="wrap bar">
+    <a class="brand" href="#top" aria-label="ILM Kitchens, Bathrooms and Plumbing, home">
+      <svg viewBox="0 0 44 44" role="img" aria-label="ILM monogram"><rect width="44" height="44" fill="#1b1c1e"/><path d="M9 11v22M16 11v22M16 33h8M29 33V11l6 14 6-14v22" transform="translate(-6 0) scale(.9 1) translate(3 0)" fill="none" stroke="#c08a52" stroke-width="2.4" stroke-linejoin="miter"/><path d="M8 38h28" stroke="#a9b0b5" stroke-width="1"/></svg>
+      <span><strong>ILM</strong><small>Kitchens · Bathrooms · Plumbing</small></span>
+    </a>
+    <nav aria-label="Main">
+      <a href="#what">What we do</a>
+      <a href="#process">Process</a>
+      <a href="#projects">Projects</a>
+      <a href="#reviews">Reviews</a>
+      <a href="#areas">Areas</a>
+      <a href="#contact">Contact</a>
+    </nav>
+    <a class="call" href="tel:+447775696174" aria-label="Call ILM on 07775 696174">
+      <svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M6.6 10.8a15.1 15.1 0 0 0 6.6 6.6l2.2-2.2a1 1 0 0 1 1-.25 11.4 11.4 0 0 0 3.6.57 1 1 0 0 1 1 1V20a1 1 0 0 1-1 1A17 17 0 0 1 3 4a1 1 0 0 1 1-1h3.5a1 1 0 0 1 1 1c0 1.25.2 2.45.57 3.57a1 1 0 0 1-.25 1z"/></svg>
+      07775 696174
+    </a>
+  </div>
+</header>
+
+<main id="main">
+<div id="top"></div>
+<section class="hero" style="padding:0">
+  <div class="grid">
+    <div class="copy reveal">
+      <span class="eyebrow">Southampton &amp; Hampshire</span>
+      <h1>Kitchens &amp; bathrooms, <em>designed, supplied and fitted.</em></h1>
+      <p class="lede">By plumbers who do the pipework themselves. One local company takes your room from first sketch to the last tap, with the plumbing handled in-house.</p>
+      <div class="cta-row">
+        <a class="btn btn-oak" href="#contact">Book a free design visit</a>
+        <a class="btn btn-line" href="tel:+447775696174">Call 07775 696174</a>
+      </div>
+    </div>
+    <div class="img">
+      <img src="assets/kitchen.webp" alt="Showroom kitchen with sage shaker cabinets, integrated ovens, a wine cooler and an oak-topped island with dark seating" width="1800" height="1350">
+    </div>
+  </div>
+</section>
+
+<div class="proof">
+  <div class="wrap">
+    <ul>
+      <li><b>10 / 10</b><span>Checkatrade rating</span></li>
+      <li><b>128</b><span>Customer reviews</span></li>
+      <li><b>2002</b><span>In the trade since</span></li>
+      <li><b>In-house</b><span>Plumbing done in-house</span></li>
+    </ul>
+  </div>
+</div>
+
+<section id="what">
+  <div class="wrap">
+    <div class="sec-head">
+      <div class="kicker">What we do</div>
+      <h2>Three trades, <em>one tidy team.</em></h2>
+      <p>Most room refits go wrong in the gaps between trades. ILM plans, supplies and fits the room so those gaps close.</p>
+    </div>
+    <div class="pillars">
+      <article class="pillar">
+        <svg class="ic" viewBox="0 0 44 44" fill="none" stroke="currentColor" stroke-width="1.6" aria-hidden="true"><rect x="5" y="8" width="34" height="28"/><path d="M5 20h34M22 8v12M12 28h4M28 28h4"/></svg>
+        <h3>Kitchens</h3>
+        <p>Design, supply and installation, in partnership with Alton Barn Kitchens.</p>
+        <ul><li>Design consultation</li><li>Supply and fitting</li><li>Plumbing and appliances connected</li></ul>
+      </article>
+      <article class="pillar">
+        <svg class="ic" viewBox="0 0 44 44" fill="none" stroke="currentColor" stroke-width="1.6" aria-hidden="true"><path d="M5 22h34v6a8 8 0 0 1-8 8H13a8 8 0 0 1-8-8zM9 22V11a3 3 0 0 1 6 0M12 36l-2 4M32 36l2 4"/></svg>
+        <h3>Bathrooms</h3>
+        <p>Complete bathroom design and installation, from the first measure to the last seal.</p>
+        <ul><li>Design consultation</li><li>Supply and fitting</li><li>Showers, baths and basins</li></ul>
+      </article>
+      <article class="pillar">
+        <svg class="ic" viewBox="0 0 44 44" fill="none" stroke="currentColor" stroke-width="1.6" aria-hidden="true"><path d="M6 14h20v8h12M26 14V6M38 22v16M6 30h14v8"/></svg>
+        <h3>Plumbing</h3>
+        <p>Non-gas plumbing for homes across Southampton and Hampshire, from repairs to new runs.</p>
+        <ul><li>Repairs and upgrades</li><li>New pipework</li><li>Done by the same in-house team</li></ul>
+      </article>
+    </div>
+  </div>
+</section>
+
+<section class="dark" id="process">
+  <div class="wrap process">
+    <div>
+      <div class="kicker">How it works</div>
+      <h2>From first visit to <em>finished room.</em></h2>
+    </div>
+    <div class="stepper">
+      <div><span class="n">1</span><h3>Free design visit</h3><p>We come to you, look at the space and talk through how you want it to feel and work.</p></div>
+      <div><span class="n">2</span><h3>Design and supply</h3><p>A layout and a clear quote, with the units, fittings and finishes arranged for you.</p></div>
+      <div><span class="n">3</span><h3>Fitted properly</h3><p>Installation and plumbing handled in-house, left clean and working.</p></div>
+    </div>
+  </div>
+</section>
+
+<section class="band" id="projects" style="padding:0" aria-labelledby="proj-h">
+  <img src="assets/kitchen.webp" alt="" width="1800" height="1350" loading="lazy">
+  <div class="wrap"><div class="kicker">Projects</div><h2 id="proj-h">Rooms that look considered and work hard.</h2></div>
+</section>
+<section style="padding-top:0">
+  <div class="wrap">
+    <div class="projects">
+      <div class="ph"><div><b>Kitchen project</b>Before and after photos go here</div></div>
+      <div class="ph"><div><b>Bathroom project</b>Before and after photos go here</div></div>
+      <div class="ph"><div><b>Plumbing project</b>Photos from recent jobs go here</div></div>
+    </div>
+    <p class="hint">Concept note: placeholder slots for the before-and-after gallery that will be built from ILM's own project photos.</p>
+  </div>
+</section>
+
+<section id="reviews" style="background:var(--white);border-block:1px solid var(--line)">
+  <div class="wrap rev">
+    <div>
+      <div class="kicker">Customer reviews</div>
+      <div class="big" aria-label="10 out of 10">10<small>/10</small></div>
+      <p>A perfect score from 128 customers on Checkatrade. Their review feed can sit right here on the new site, updating as new reviews arrive.</p>
+      <a class="src" href="https://www.checkatrade.com/trades/ilmkitchens" rel="noopener">Read the reviews on Checkatrade →</a>
+    </div>
+    <ul>
+      <li><span>Checkatrade rating</span><span>10 / 10</span></li>
+      <li><span>Reviews</span><span>128</span></li>
+      <li><span>In the trade since</span><span>2002</span></li>
+      <li><span>Company type</span><span>Limited company</span></li>
+    </ul>
+  </div>
+</section>
+
+<section class="areas" id="areas">
+  <div class="wrap grid">
+    <div>
+      <div class="kicker">Areas covered</div>
+      <h2>Southampton, Hampshire <em>and beyond.</em></h2>
+      <p>Based in Southampton and working right across Hampshire and into the neighbouring counties.</p>
+    </div>
+    <div class="mapbox">
+      <svg viewBox="0 0 700 340" role="img" aria-label="Stylised map: an arc of coverage around Southampton, from Seaton in the west through Newbury to Newhaven in the east">
+        <defs><pattern id="dots" width="16" height="16" patternUnits="userSpaceOnUse"><circle cx="2" cy="2" r="1" fill="#3a3d41"/></pattern></defs>
+        <rect width="700" height="340" fill="url(#dots)"/>
+        <!-- sea -->
+        <path d="M0 230 C40 238 80 246 110 262 C140 280 170 296 210 292 C250 288 270 276 300 282 C330 290 345 300 380 296 C400 270 420 262 450 268 C490 276 520 258 560 250 C610 240 650 226 700 226 L700 340 L0 340Z" fill="#23262a" stroke="#4a4e53" stroke-width="1"/>
+        <path d="M335 300 C350 292 380 290 400 296 C395 312 345 316 335 300Z" fill="#1b1c1e" stroke="#4a4e53"/>
+        <!-- arc -->
+        <path class="arc" d="M26 232 C70 110 170 50 270 28 C360 8 450 14 520 50 C600 90 650 150 676 214" fill="none" stroke="#c08a52" stroke-width="3.5" stroke-linecap="round"/>
+        <path d="M26 232 C70 110 170 50 270 28 C360 8 450 14 520 50 C600 90 650 150 676 214 L676 340 L26 340Z" fill="#c08a52" opacity=".06"/>
+        <!-- towns -->
+        <g font-family="Hanken Grotesk,Arial,sans-serif" font-size="12" fill="#a9b0b5">
+          <circle cx="26" cy="232" r="4" fill="#c08a52"/><text x="34" y="250">Seaton</text>
+          <circle cx="676" cy="214" r="4" fill="#c08a52"/><text x="618" y="238">Newhaven</text>
+          <circle cx="388" cy="22" r="4" fill="#c08a52"/><text x="398" y="30">Newbury</text>
+          <circle cx="290" cy="112" r="2.5"/><text x="226" y="106">Salisbury</text>
+          <circle cx="370" cy="132" r="2.5"/><text x="378" y="122">Winchester</text>
+          <circle cx="520" cy="178" r="2.5"/><text x="528" y="176">Chichester</text>
+          <circle cx="470" cy="150" r="2.5"/><text x="476" y="144">Portsmouth</text>
+          <circle cx="270" cy="212" r="2.5"/><text x="226" y="230">Bournemouth</text>
+          <circle cx="580" cy="148" r="2.5"/><text x="560" y="134">Brighton</text>
+          <circle cx="460" cy="62" r="2.5"/><text x="466" y="64">Guildford</text>
+        </g>
+        <g><circle class="pulse" cx="376" cy="188" r="8" fill="#c08a52"/><circle cx="376" cy="188" r="7" fill="#c08a52" stroke="#1b1c1e" stroke-width="2"/>
+        <text x="390" y="204" font-family="Fraunces,Georgia,serif" font-size="17" fill="#fff">Southampton</text></g>
+      </svg>
+      <div class="cap">Stylised coverage map. Edges are approximate.</div>
+    </div>
+  </div>
+</section>
+
+<section class="contact" id="contact">
+  <div class="wrap grid">
+    <div>
+      <div class="kicker">Get in touch</div>
+      <h2>Book a free <em>design visit.</em></h2>
+      <a class="big-phone" href="tel:+447775696174">07775 696174</a>
+      <ul class="facts">
+        <li><b>Email</b><br>ilmkitchensltd@mail.com</li>
+        <li><b>Director</b><br>Mark Osborne</li>
+        <li><b>Area</b><br>Southampton &amp; Hampshire</li>
+      </ul>
+    </div>
+    <div class="panel">
+      <h3>Tell us about your room</h3>
+      <form id="enq" novalidate>
+        <div class="fields">
+          <div><label for="f-name">Name</label><input id="f-name" name="name" autocomplete="name" required></div>
+          <div><label for="f-phone">Phone</label><input id="f-phone" name="phone" type="tel" autocomplete="tel" required></div>
+          <div><label for="f-email">Email</label><input id="f-email" name="email" type="email" autocomplete="email"></div>
+          <div><label for="f-room">Room</label><select id="f-room" name="room"><option>Kitchen</option><option>Bathroom</option><option>Plumbing</option><option>Kitchen and bathroom</option></select></div>
+          <div class="full"><label for="f-msg">What do you have in mind?</label><textarea id="f-msg" name="msg" rows="4"></textarea></div>
+          <div class="full"><label for="f-photos">Photos of the room (optional)</label><input id="f-photos" name="photos" type="file" accept="image/*" multiple></div>
+          <div class="full"><button class="btn btn-dark" type="submit" style="width:100%">Request my free design visit</button></div>
+        </div>
+        <p class="note" role="status">This is a preview — the form will go live with your new site.</p>
+      </form>
+    </div>
+  </div>
+</section>
+</main>
+
+<footer>
+  <div class="wrap">
+    <div><b>ILM Kitchens, Bathrooms &amp; Plumbing Ltd</b><br>Southampton · 07775 696174</div>
+    <div>Concept design by Itchen Studio. Not the live site.</div>
+  </div>
+</footer>
+
+<div class="dock"><a class="btn btn-oak" href="tel:+447775696174">Call 07775 696174</a></div>
+
+<script>
+document.getElementById('enq').addEventListener('submit',function(e){e.preventDefault();this.querySelector('.note').classList.add('show');});
+</script>
+</body>
+</html>
