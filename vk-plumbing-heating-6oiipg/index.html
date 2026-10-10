@@ -1,0 +1,489 @@
+<!doctype html>
+<html lang="en-GB">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="robots" content="noindex,nofollow">
+<title>VK Plumbing &amp; Heating | Southampton plumber and heating engineer</title>
+<meta name="description" content="Concept website for VK Plumbing &amp; Heating, Southampton. 24/7 plumbing and heating with one engineer from start to finish.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@12..96,500;12..96,700;12..96,800&family=Figtree:wght@400;500;600;700&display=swap" rel="stylesheet">
+<style>
+/* Layout: dark charcoal masthead and hero taken from the logo, flame-orange calls to action, teal for trust and structure. Big type, tall photo panels. */
+:root{
+  --ink:#10161b; --ink-2:#1a232b; --teal:#0a5a63; --teal-d:#073f46; --flame:#ff7a1a; --flame-d:#c9540a;
+  --paper:#f6f8f8; --white:#fff; --line:#d9e1e2; --muted:#4b5b61; --sun:#ffc83d;
+  --display:"Bricolage Grotesque","Arial Narrow",Arial,sans-serif; --body:"Figtree",system-ui,Arial,sans-serif;
+  --gutter:clamp(16px,4vw,40px);
+}
+*{box-sizing:border-box}
+html{scroll-behavior:smooth;scroll-padding-top:84px}
+body{margin:0;background:var(--paper);color:var(--ink);font:400 1.0625rem/1.6 var(--body);-webkit-font-smoothing:antialiased;padding-bottom:72px}
+img{max-width:100%;display:block}
+a{color:inherit}
+h1,h2,h3{font-family:var(--display);line-height:1.04;margin:0;text-wrap:balance;letter-spacing:-.02em}
+p{margin:0}
+.wrap{width:100%;max-width:1200px;margin-inline:auto;padding-inline:var(--gutter)}
+:focus-visible{outline:3px solid var(--sun);outline-offset:3px;border-radius:4px}
+.skip{position:absolute;left:-999px;top:0;background:var(--sun);color:var(--ink);padding:.6rem 1rem;z-index:100}
+.skip:focus{left:8px;top:8px}
+
+/* preview banner */
+.banner{background:#000;color:#e8eef0;font-size:.8125rem;line-height:1.4;text-align:center;padding:.5rem var(--gutter)}
+.banner b{color:var(--sun);font-weight:600}
+
+/* header */
+header.top{position:sticky;top:0;z-index:50;background:rgba(16,22,27,.94);backdrop-filter:blur(10px);color:#fff;border-bottom:1px solid #2a363f}
+.bar{display:flex;align-items:center;gap:1rem;min-height:68px}
+.brand{display:flex;align-items:center;gap:.75rem;text-decoration:none;min-width:0}
+.brand img{width:46px;height:41px;border-radius:6px;object-fit:cover}
+.brand span{font-family:var(--display);font-weight:800;font-size:1.05rem;letter-spacing:-.01em;line-height:1.05}
+.brand small{display:block;font:500 .72rem/1.2 var(--body);color:#9fb2b8;letter-spacing:.04em;text-transform:uppercase}
+nav{margin-left:auto;display:none;gap:1.6rem;font-weight:500;font-size:.95rem}
+nav a{text-decoration:none;color:#cfdadd;padding:.3rem 0;border-bottom:2px solid transparent}
+nav a:hover{color:#fff;border-color:var(--flame)}
+.call{margin-left:auto;display:inline-flex;align-items:center;gap:.5rem;background:var(--flame);color:#1b0d02;text-decoration:none;font-weight:700;padding:.65rem 1.05rem;border-radius:999px;white-space:nowrap;transition:transform .15s,background .15s}
+.call:hover{background:#ff8f3d;transform:translateY(-1px)}
+.call svg{width:18px;height:18px}
+@media(min-width:900px){nav{display:flex}.call{margin-left:1rem}}
+
+/* buttons */
+.btn{display:inline-flex;align-items:center;justify-content:center;gap:.6rem;padding:.95rem 1.5rem;border-radius:999px;font-weight:700;text-decoration:none;font-size:1.02rem;border:2px solid transparent;cursor:pointer;font-family:var(--body);transition:transform .15s,background .15s,color .15s,border-color .15s}
+.btn svg{width:20px;height:20px;flex:none}
+.btn-flame{background:var(--flame);color:#1b0d02}.btn-flame:hover{background:#ff8f3d;transform:translateY(-2px)}
+.btn-wa{background:#25d366;color:#04230f}.btn-wa:hover{background:#3be07b;transform:translateY(-2px)}
+.btn-ghost{border-color:#3a4a53;color:#fff}.btn-ghost:hover{border-color:#fff}
+.btn-teal{background:var(--teal);color:#fff}.btn-teal:hover{background:var(--teal-d);transform:translateY(-2px)}
+
+/* hero */
+.hero{background:var(--ink);color:#fff;position:relative;overflow:hidden}
+.hero::before{content:"";position:absolute;inset:auto -10% -40% auto;width:70vmax;height:70vmax;background:radial-gradient(closest-side,rgba(255,122,26,.28),rgba(255,122,26,0) 70%);pointer-events:none}
+.hero::after{content:"";position:absolute;inset:-30% auto auto -20%;width:60vmax;height:60vmax;background:radial-gradient(closest-side,rgba(10,90,99,.55),rgba(10,90,99,0) 70%);pointer-events:none}
+.hero .wrap{position:relative;z-index:1;display:grid;gap:2.5rem;padding-block:clamp(2.5rem,6vw,5rem) 0}
+.eyebrow{display:inline-flex;align-items:center;gap:.6rem;font-weight:600;font-size:.85rem;letter-spacing:.1em;text-transform:uppercase;color:var(--sun)}
+.eyebrow i{width:9px;height:9px;border-radius:50%;background:#35e07a;box-shadow:0 0 0 0 rgba(53,224,122,.6);animation:pulse 2.2s infinite}
+@keyframes pulse{70%{box-shadow:0 0 0 10px rgba(53,224,122,0)}100%{box-shadow:0 0 0 0 rgba(53,224,122,0)}}
+.hero h1{font-size:clamp(2.6rem,8.2vw,5.6rem);font-weight:800;margin:.9rem 0 1.2rem}
+.hero h1 em{font-style:normal;color:var(--flame)}
+.hero p.lede{max-width:34rem;color:#c6d3d7;font-size:clamp(1.05rem,2.2vw,1.25rem)}
+.cta-row{display:flex;flex-wrap:wrap;gap:.8rem;margin-top:1.8rem}
+.hero .small{margin-top:1rem;font-size:.9rem;color:#9fb2b8}
+.hero-media{position:relative;display:none}
+.hero-media img{width:100%;height:100%;object-fit:cover;border-radius:28px 28px 0 0;aspect-ratio:4/5;object-position:50% 40%}
+.hero-media .tag{position:absolute;left:-1.2rem;bottom:2rem;background:var(--sun);color:var(--ink);padding:.9rem 1.2rem;border-radius:16px;box-shadow:0 14px 30px rgba(0,0,0,.35);font-weight:600;font-size:.92rem;line-height:1.3}
+.hero-media .tag b{display:block;font:800 1.9rem/1 var(--display)}
+@media(min-width:900px){.hero .wrap{grid-template-columns:1.25fr .75fr;align-items:end;gap:3rem}.hero-media{display:block}.hero .copy{padding-bottom:4rem}}
+
+/* proof strip */
+.proof{background:var(--white);border-bottom:1px solid var(--line)}
+.proof ul{list-style:none;margin:0;padding:0;display:grid;grid-template-columns:repeat(2,1fr)}
+.proof li{padding:1.15rem 1rem;border-right:1px solid var(--line);border-bottom:1px solid var(--line);display:flex;flex-direction:column;gap:.15rem}
+.proof li:nth-child(2n){border-right:0}
+.proof b{font:800 clamp(1.5rem,4vw,2.1rem)/1 var(--display);color:var(--teal)}
+.proof span{font-size:.88rem;color:var(--muted)}
+@media(min-width:800px){.proof ul{grid-template-columns:repeat(4,1fr)}.proof li{border-bottom:0;padding:1.5rem 1.5rem}.proof li:nth-child(2n){border-right:1px solid var(--line)}.proof li:last-child{border-right:0}}
+
+/* sections */
+section{padding-block:clamp(3.5rem,8vw,6.5rem)}
+.kicker{font-weight:700;font-size:.82rem;letter-spacing:.12em;text-transform:uppercase;color:var(--flame-d);margin-bottom:.8rem}
+h2{font-size:clamp(2rem,5vw,3.4rem);font-weight:800}
+.sec-head{display:grid;gap:1rem;margin-bottom:2.5rem;max-width:44rem}
+.sec-head p{color:var(--muted);font-size:1.1rem}
+
+/* services */
+.svc{display:grid;gap:1rem;grid-template-columns:1fr}
+@media(min-width:640px){.svc{grid-template-columns:1fr 1fr}}
+@media(min-width:1000px){.svc{grid-template-columns:repeat(6,1fr)}.svc .s-lg{grid-column:span 3}.svc .s-sm{grid-column:span 2}.svc .s-full{grid-column:1/-1}}
+.card{background:var(--white);border:1px solid var(--line);border-radius:20px;padding:1.6rem;display:flex;flex-direction:column;gap:.7rem;transition:transform .2s,box-shadow .2s,border-color .2s}
+.card:hover{transform:translateY(-4px);box-shadow:0 18px 40px -18px rgba(10,50,60,.35);border-color:var(--teal)}
+.card .ic{width:46px;height:46px;border-radius:14px;background:var(--teal);color:#fff;display:grid;place-items:center}
+.card .ic svg{width:24px;height:24px}
+.card h3{font-size:1.45rem}
+.card p{color:var(--muted);font-size:1rem}
+.card.dark{background:var(--ink);color:#fff;border-color:var(--ink)}
+.card.dark p{color:#bccbd0}.card.dark .ic{background:var(--flame);color:#1b0d02}
+.card.dark:hover{border-color:var(--flame)}
+
+/* landlords */
+.landlord{background:var(--teal);color:#fff}
+.landlord .grid{display:grid;gap:2.5rem}
+@media(min-width:900px){.landlord .grid{grid-template-columns:1fr 1fr;align-items:center;gap:4rem}}
+.landlord .kicker{color:var(--sun)}
+.landlord p{color:#d3ecee;font-size:1.1rem;margin-top:1rem;max-width:34rem}
+.landlord ul{list-style:none;padding:0;margin:1.5rem 0 0;display:grid;gap:.7rem}
+.landlord li{display:flex;gap:.7rem;align-items:flex-start;font-weight:500}
+.landlord li svg{width:22px;height:22px;flex:none;color:var(--sun);margin-top:2px}
+.remind{background:var(--white);color:var(--ink);border-radius:24px;padding:clamp(1.4rem,3vw,2.2rem);box-shadow:0 30px 60px -30px rgba(0,0,0,.5)}
+.remind h3{font-size:1.6rem;margin-bottom:.4rem}
+.remind p{color:var(--muted);margin:0 0 1.2rem;font-size:1rem}
+
+/* forms */
+label{display:block;font-weight:600;font-size:.92rem;margin-bottom:.35rem}
+input,select,textarea{width:100%;font:inherit;color:var(--ink);background:#fff;border:1.5px solid #b8c6c9;border-radius:12px;padding:.8rem .9rem;transition:border-color .15s,box-shadow .15s}
+input:hover,select:hover,textarea:hover{border-color:var(--teal)}
+input:focus,select:focus,textarea:focus{outline:none;border-color:var(--teal);box-shadow:0 0 0 4px rgba(10,90,99,.18)}
+.fields{display:grid;gap:1rem}
+@media(min-width:560px){.fields.two{grid-template-columns:1fr 1fr}}
+.fields>div{min-width:0}
+.note{display:none;margin-top:1rem;padding:.9rem 1rem;border-radius:12px;background:#e5f6ea;color:#0f4a23;font-weight:600}
+.note.show{display:block}
+
+/* process */
+.steps{display:grid;gap:1.2rem;grid-template-columns:1fr}
+@media(min-width:800px){.steps{grid-template-columns:repeat(3,1fr)}}
+.step{border-top:3px solid var(--ink);padding-top:1.2rem}
+.step h3{font-size:1.5rem;margin-bottom:.5rem}
+.step p{color:var(--muted)}
+.step .n{font:800 .9rem var(--display);color:var(--flame-d);letter-spacing:.1em;margin-bottom:.5rem;text-transform:uppercase}
+
+/* gallery */
+.gallery{columns:2;column-gap:.9rem}
+@media(min-width:900px){.gallery{columns:3;column-gap:1.1rem}}
+.gallery figure{margin:0 0 .9rem;break-inside:avoid;position:relative;border-radius:18px;overflow:hidden;background:var(--ink)}
+.gallery button{all:unset;display:block;cursor:zoom-in;width:100%}
+.gallery button:focus-visible{outline:3px solid var(--sun);outline-offset:-3px}
+.gallery img{width:100%;height:auto;transition:transform .5s}
+.gallery figure:hover img{transform:scale(1.04)}
+.gallery figcaption{position:absolute;left:0;right:0;bottom:0;padding:2.2rem .9rem .7rem;background:linear-gradient(transparent,rgba(0,0,0,.75));color:#fff;font-size:.85rem;font-weight:500}
+dialog{border:0;padding:0;background:transparent;max-width:min(94vw,640px);max-height:94vh}
+dialog::backdrop{background:rgba(5,10,12,.88)}
+dialog img{max-height:90vh;width:auto;margin:auto;border-radius:14px}
+dialog button{position:absolute;top:.6rem;right:.6rem;background:#fff;border:0;border-radius:999px;width:42px;height:42px;font-size:1.4rem;cursor:pointer}
+
+/* reviews */
+.reviews{background:var(--ink);color:#fff}
+.reviews .wrap{display:grid;gap:2.5rem}
+@media(min-width:900px){.reviews .wrap{grid-template-columns:.9fr 1.1fr;align-items:center;gap:4rem}}
+.score{font:800 clamp(5rem,16vw,9rem)/.9 var(--display);color:var(--flame);letter-spacing:-.04em}
+.score small{font-size:.3em;color:#9fb2b8;letter-spacing:0;margin-left:.2em}
+.stars{display:flex;gap:4px;margin:.8rem 0}
+.stars svg{width:26px;height:26px;color:var(--sun)}
+.reviews p{color:#bccbd0;max-width:32rem}
+.bars{display:grid;gap:1.1rem}
+.bar-row{display:grid;gap:.4rem}
+.bar-row div:first-child{display:flex;justify-content:space-between;font-weight:600}
+.track{height:10px;background:#26333b;border-radius:99px;overflow:hidden}
+.track i{display:block;height:100%;background:linear-gradient(90deg,var(--flame),var(--sun));border-radius:99px;transform-origin:left;animation:grow 1.2s .2s both cubic-bezier(.2,.8,.2,1)}
+@keyframes grow{from{transform:scaleX(0)}}
+.reviews a.src{display:inline-block;margin-top:1.4rem;color:var(--sun);font-weight:600}
+
+/* areas */
+.areas{display:grid;gap:2rem}
+@media(min-width:900px){.areas{grid-template-columns:1fr 1fr;align-items:center;gap:4rem}}
+.chips{display:flex;flex-wrap:wrap;gap:.5rem;margin-top:1.2rem}
+.chips span{border:1.5px solid var(--line);background:var(--white);border-radius:999px;padding:.4rem .9rem;font-weight:600;font-size:.95rem}
+.chips span.hot{background:var(--teal);border-color:var(--teal);color:#fff}
+.postcodes{background:var(--white);border:1px solid var(--line);border-radius:24px;padding:2rem}
+.postcodes h3{font-size:1.4rem;margin-bottom:1rem}
+.pc{display:grid;grid-template-columns:repeat(auto-fill,minmax(64px,1fr));gap:.5rem}
+.pc span{background:var(--paper);border:1px solid var(--line);border-radius:10px;text-align:center;padding:.5rem 0;font:700 .95rem var(--display);letter-spacing:.02em}
+
+/* contact */
+.contact{background:var(--paper)}
+.contact .grid{display:grid;gap:2.5rem}
+@media(min-width:900px){.contact .grid{grid-template-columns:.85fr 1.15fr;gap:4rem}}
+.big-phone{display:block;font:800 clamp(2rem,6vw,3rem)/1 var(--display);text-decoration:none;color:var(--teal);margin:1rem 0 1.4rem;letter-spacing:-.02em}
+.big-phone:hover{color:var(--flame-d)}
+.panel{background:var(--white);border:1px solid var(--line);border-radius:24px;padding:clamp(1.4rem,3vw,2.2rem)}
+.tabs{display:flex;gap:.4rem;margin-bottom:1.4rem;background:var(--paper);padding:.3rem;border-radius:999px;border:1px solid var(--line)}
+.tabs button{flex:1;border:0;background:transparent;font:600 .95rem var(--body);padding:.6rem .4rem;border-radius:999px;cursor:pointer;color:var(--muted)}
+.tabs button[aria-selected=true]{background:var(--ink);color:#fff}
+.facts{list-style:none;padding:0;margin:0;display:grid;gap:.6rem;color:var(--muted)}
+.facts b{color:var(--ink)}
+
+footer{background:var(--ink);color:#9fb2b8;padding-block:2.5rem;font-size:.92rem}
+footer .wrap{display:flex;flex-wrap:wrap;gap:1rem 2rem;justify-content:space-between;align-items:center}
+footer b{color:#fff}
+
+/* mobile sticky bar */
+.dock{position:fixed;left:0;right:0;bottom:0;z-index:60;display:grid;grid-template-columns:1fr 1fr;gap:.5rem;padding:.6rem var(--gutter) calc(.6rem + env(safe-area-inset-bottom,0px));background:rgba(16,22,27,.96);backdrop-filter:blur(10px);border-top:1px solid #2a363f}
+.dock .btn{padding:.8rem .5rem}
+@media(min-width:900px){.dock{display:none}body{padding-bottom:0}}
+
+.reveal{animation:rise .8s both cubic-bezier(.2,.8,.2,1)}
+@keyframes rise{from{opacity:0;transform:translateY(18px)}}
+@media(prefers-reduced-motion:reduce){*,*::before,*::after{animation:none!important;transition:none!important;scroll-behavior:auto!important}}
+</style>
+</head>
+<body>
+<a class="skip" href="#main">Skip to content</a>
+<div class="banner">Website concept for <b>VK Plumbing &amp; Heating</b> — preview only, not the live site. Designed by Itchen Studio · sam@itchenstudio.co.uk</div>
+
+<header class="top">
+  <div class="wrap bar">
+    <a class="brand" href="#top" aria-label="VK Plumbing and Maintenance, home">
+      <img src="assets/logo.webp" alt="VK Plumbing and Maintenance logo" width="46" height="41">
+      <span>VK Plumbing &amp; Heating<small>Southampton</small></span>
+    </a>
+    <nav aria-label="Main">
+      <a href="#services">Services</a>
+      <a href="#landlords">Landlords</a>
+      <a href="#work">Work</a>
+      <a href="#reviews">Reviews</a>
+      <a href="#areas">Areas</a>
+      <a href="#contact">Contact</a>
+    </nav>
+    <a class="call" href="tel:+447893933298" aria-label="Call VK Plumbing and Heating on 07893 933298">
+      <svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M6.6 10.8a15.1 15.1 0 0 0 6.6 6.6l2.2-2.2a1 1 0 0 1 1-.25 11.4 11.4 0 0 0 3.6.57 1 1 0 0 1 1 1V20a1 1 0 0 1-1 1A17 17 0 0 1 3 4a1 1 0 0 1 1-1h3.5a1 1 0 0 1 1 1c0 1.25.2 2.45.57 3.57a1 1 0 0 1-.25 1z"/></svg>
+      <span>07893 933298</span>
+    </a>
+  </div>
+</header>
+
+<main id="main">
+<div id="top"></div>
+<section class="hero" style="padding:0">
+  <div class="wrap">
+    <div class="copy reveal">
+      <span class="eyebrow"><i></i> Plumbing &amp; heating, 24/7</span>
+      <h1>One engineer, <em>start to finish.</em></h1>
+      <p class="lede">Boilers, heating, hot water and everyday plumbing across Southampton. Vivek Kakiya does every job himself, so the person you speak to is the person who turns up.</p>
+      <div class="cta-row">
+        <a class="btn btn-flame" href="tel:+447893933298">
+          <svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M6.6 10.8a15.1 15.1 0 0 0 6.6 6.6l2.2-2.2a1 1 0 0 1 1-.25 11.4 11.4 0 0 0 3.6.57 1 1 0 0 1 1 1V20a1 1 0 0 1-1 1A17 17 0 0 1 3 4a1 1 0 0 1 1-1h3.5a1 1 0 0 1 1 1c0 1.25.2 2.45.57 3.57a1 1 0 0 1-.25 1z"/></svg>
+          Call 07893 933298
+        </a>
+        <a class="btn btn-wa" href="https://wa.me/447893933298" rel="noopener">
+          <svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M12 2a10 10 0 0 0-8.6 15.1L2 22l5-1.3A10 10 0 1 0 12 2zm5.8 14.1c-.25.7-1.4 1.3-1.95 1.35-.5.05-1.1.07-1.8-.12a14 14 0 0 1-5.3-3.3c-1.8-1.9-2.5-3.5-2.6-3.7s-.6-1.3-.6-2.2.5-1.3.65-1.5a.7.7 0 0 1 .5-.2h.35c.12 0 .28 0 .43.35l.8 1.9c.07.15.1.3 0 .45l-.4.55c-.1.13-.2.28-.1.5a6 6 0 0 0 2.7 2.4c.2.1.35.1.5-.05l.7-.85c.15-.2.3-.15.5-.08l1.8.85c.2.1.35.15.4.25.05.1.05.55-.2 1.2z"/></svg>
+          WhatsApp now
+        </a>
+      </div>
+      <p class="small">Cards accepted.</p>
+    </div>
+    <div class="hero-media reveal" style="animation-delay:.15s">
+      <img src="assets/towel-rail.webp" alt="Brass heated towel rail fitted on a panelled bathroom wall with copper pipework to a terracotta tiled floor" width="1024" height="1828">
+      <div class="tag"><b>165</b>Checkatrade reviews</div>
+    </div>
+  </div>
+</section>
+
+<div class="proof">
+  <div class="wrap">
+    <ul>
+      <li><b>9.9 / 10</b><span>Checkatrade rating</span></li>
+      <li><b>165</b><span>Verified customer reviews</span></li>
+      <li><b>56</b><span>Reviews in the last 12 months</span></li>
+      <li><b>City &amp; Guilds</b><span>Level 2 qualified</span></li>
+    </ul>
+  </div>
+</div>
+
+<section id="services">
+  <div class="wrap">
+    <div class="sec-head">
+      <div class="kicker">What Vivek does</div>
+      <h2>Heating that works. Plumbing that stays fixed.</h2>
+      <p>From a dripping tap to a full boiler swap, you get one point of contact and one engineer on the tools.</p>
+    </div>
+    <div class="svc">
+      <article class="card dark s-lg">
+        <div class="ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 3c2 3 5 5 5 9a5 5 0 0 1-10 0c0-1.6.6-2.7 1.5-3.8C9 9.5 10 10 10.5 11 11.5 8.5 11 5.5 12 3z"/></svg></div>
+        <h3>Boiler installation, service &amp; repair</h3>
+        <p>Gas boiler fitting, annual servicing and fault finding..</p>
+      </article>
+      <article class="card s-lg">
+        <div class="ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M14 4v10.5a4 4 0 1 1-4 0V4a2 2 0 1 1 4 0z"/></svg></div>
+        <h3>Central heating &amp; radiators</h3>
+        <p>New radiators, balancing and system upgrades, so every room gets warm at the same time.</p>
+      </article>
+      <article class="card s-sm">
+        <div class="ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M3 12a9 9 0 0 1 18 0M12 12l4-4M5 17h14"/></svg></div>
+        <h3>Power flushing</h3>
+        <p>Clears sludge from tired heating systems so radiators heat evenly and the boiler stops working so hard.</p>
+      </article>
+      <article class="card s-sm">
+        <div class="ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="6" y="3" width="12" height="18" rx="3"/><path d="M9 8h6M9 12h6"/></svg></div>
+        <h3>Unvented cylinders</h3>
+        <p>Mains-pressure hot water for showers that perform, installed and commissioned properly.</p>
+      </article>
+      <article class="card s-sm">
+        <div class="ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 11h14v3a6 6 0 0 1-6 6h-2a6 6 0 0 1-6-6zM8 11V6a2 2 0 0 1 4 0M7 20l-1 2M17 20l1 2"/></svg></div>
+        <h3>Kitchens &amp; bathrooms</h3>
+        <p>First-fix and second-fix plumbing for new kitchens and bathrooms, done around your fitter's schedule.</p>
+      </article>
+      <article class="card s-full">
+        <div class="ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 2l9 5v6c0 5-4 8-9 9-5-1-9-4-9-9V7z"/><path d="M8.5 12l2.5 2.5 4.5-5"/></svg></div>
+        <h3>Landlord gas safety certificates</h3>
+        <p>Annual landlord gas safety checks (CP12) with a reminder before the next one is due, so you never scramble for a certificate.</p>
+      </article>
+    </div>
+  </div>
+</section>
+
+<section class="landlord" id="landlords">
+  <div class="wrap grid">
+    <div>
+      <div class="kicker">For landlords</div>
+      <h2>Never miss a CP12 date again.</h2>
+      <p>Book your landlord gas safety certificate once and get an annual reminder when the next one is coming up.</p>
+      <ul>
+        <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12.5l4.5 4.5L19 7.5"/></svg>Book a gas safety check online</li>
+        <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12.5l4.5 4.5L19 7.5"/></svg>Sign up for an annual reminder</li>
+        <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12.5l4.5 4.5L19 7.5"/></svg>The same engineer who does the check does the fix</li>
+      </ul>
+    </div>
+    <div class="remind">
+      <h3>Annual CP12 reminder</h3>
+      <p>Tell us when the last certificate was done and we'll remind you.</p>
+      <form class="preview-form" novalidate>
+        <div class="fields">
+          <div><label for="r-name">Your name</label><input id="r-name" name="name" autocomplete="name" required></div>
+          <div><label for="r-email">Email</label><input id="r-email" name="email" type="email" autocomplete="email" required></div>
+          <div><label for="r-date">Date of last certificate</label><input id="r-date" name="date" type="date"></div>
+          <div><button class="btn btn-teal" type="submit" style="width:100%">Remind me each year</button></div>
+        </div>
+        <p class="note" role="status">This is a preview — the form will go live with your new site.</p>
+      </form>
+    </div>
+  </div>
+</section>
+
+<section id="how">
+  <div class="wrap">
+    <div class="sec-head">
+      <div class="kicker">How it works</div>
+      <h2>No call centre. No hand-offs.</h2>
+    </div>
+    <div class="steps">
+      <div class="step"><div class="n">Step one</div><h3>You call or message</h3><p>Ring or WhatsApp at any hour. You speak to the engineer who will do the work.</p></div>
+      <div class="step"><div class="n">Step two</div><h3>He sorts it</h3><p>Fault found, fixed or installed by the same pair of hands, with the job explained as he goes.</p></div>
+      <div class="step"><div class="n">Step three</div><h3>You pay how you like</h3><p>Cards are accepted, so there is no hunting for cash on the day.</p></div>
+    </div>
+  </div>
+</section>
+
+<section id="work" style="background:var(--white);border-block:1px solid var(--line)">
+  <div class="wrap">
+    <div class="sec-head">
+      <div class="kicker">Recent work</div>
+      <h2>Neat pipework, from first fix to finished room.</h2>
+      <p>A few jobs from Vivek's Checkatrade gallery. Tap any photo to enlarge.</p>
+    </div>
+    <div class="gallery">
+      <figure><button type="button" data-full="assets/towel-rail.webp" data-alt="Brass towel rail fitted with copper feed pipes"><img src="assets/towel-rail.webp" loading="lazy" alt="Brass heated towel rail fitted on a panelled wall with copper pipes" width="1024" height="1828"></button><figcaption>Traditional brass towel rail</figcaption></figure>
+      <figure><button type="button" data-full="assets/first-fix.webp" data-alt="First-fix copper pipework along a brick wall"><img src="assets/first-fix.webp" loading="lazy" alt="Copper first-fix pipework clipped along a brick wall under a window" width="1024" height="1365"></button><figcaption>First-fix copper runs</figcaption></figure>
+      <figure><button type="button" data-full="assets/bathroom.webp" data-alt="Finished bathroom with hexagon floor tiles"><img src="assets/bathroom.webp" loading="lazy" alt="Finished white bathroom with metro wall tiles and a hexagonal tiled floor" width="1024" height="1814"></button><figcaption>Finished bathroom</figcaption></figure>
+      <figure><button type="button" data-full="assets/copper-manifold.webp" data-alt="Neat vertical copper pipe runs"><img src="assets/copper-manifold.webp" loading="lazy" alt="Five parallel copper pipes running up a wall to the ceiling" width="1024" height="1822"></button><figcaption>Tidy vertical pipe runs</figcaption></figure>
+      <figure><button type="button" data-full="assets/outside-tap.webp" data-alt="Outside brass tap fitted to a brick wall"><img src="assets/outside-tap.webp" loading="lazy" alt="Brass outside tap fitted to a red brick wall with water running" width="1024" height="1820"></button><figcaption>Outside tap</figcaption></figure>
+    </div>
+  </div>
+</section>
+<dialog id="lb" aria-label="Enlarged photo"><button type="button" aria-label="Close photo">×</button><img alt="" src=""></dialog>
+
+<section class="reviews" id="reviews">
+  <div class="wrap">
+    <div>
+      <div class="kicker" style="color:var(--sun)">Customer reviews</div>
+      <div class="score" aria-label="9.9 out of 10">9.9<small>/10</small></div>
+      <div class="stars" aria-hidden="true">
+        <svg viewBox="0 0 24 24" fill="currentColor"><path d="M12 2l3 6.9 7.5.7-5.7 5 1.7 7.4L12 18l-6.5 4 1.7-7.4-5.7-5 7.5-.7z"/></svg>
+        <svg viewBox="0 0 24 24" fill="currentColor"><path d="M12 2l3 6.9 7.5.7-5.7 5 1.7 7.4L12 18l-6.5 4 1.7-7.4-5.7-5 7.5-.7z"/></svg>
+        <svg viewBox="0 0 24 24" fill="currentColor"><path d="M12 2l3 6.9 7.5.7-5.7 5 1.7 7.4L12 18l-6.5 4 1.7-7.4-5.7-5 7.5-.7z"/></svg>
+        <svg viewBox="0 0 24 24" fill="currentColor"><path d="M12 2l3 6.9 7.5.7-5.7 5 1.7 7.4L12 18l-6.5 4 1.7-7.4-5.7-5 7.5-.7z"/></svg>
+        <svg viewBox="0 0 24 24" fill="currentColor"><path d="M12 2l3 6.9 7.5.7-5.7 5 1.7 7.4L12 18l-6.5 4 1.7-7.4-5.7-5 7.5-.7z"/></svg>
+      </div>
+      <p>Rated by 165 customers on Checkatrade, with 56 of those reviews left in the last twelve months. Right now most of Vivek's work comes through that profile. This site is where it can all live under his own name.</p>
+      <a class="src" href="https://www.checkatrade.com/trades/vkplumbingandheating" rel="noopener">Read the reviews on Checkatrade →</a>
+    </div>
+    <div class="bars">
+      <div class="bar-row"><div><span>Overall rating</span><span>9.9 / 10</span></div><div class="track"><i style="width:99%"></i></div></div>
+      <div class="bar-row"><div><span>Reviews, all time</span><span>165</span></div><div class="track"><i style="width:100%"></i></div></div>
+      <div class="bar-row"><div><span>Reviews, last 12 months</span><span>56</span></div><div class="track"><i style="width:34%"></i></div></div>
+    </div>
+  </div>
+</section>
+
+<section id="areas">
+  <div class="wrap areas">
+    <div>
+      <div class="kicker">Areas covered</div>
+      <h2>Southampton, SO14 to SO40.</h2>
+      <p style="color:var(--muted);margin-top:1rem;font-size:1.1rem">Based in Southampton and working across the city and surrounding postcodes, out towards the edge of Winchester.</p>
+      <div class="chips"><span class="hot">Southampton</span><span>Winchester fringe</span></div>
+    </div>
+    <div class="postcodes">
+      <h3>Postcode districts</h3>
+      <div class="pc" aria-label="Postcodes SO14 to SO40"></div>
+      <p style="margin-top:1rem;color:var(--muted);font-size:.92rem">Not sure if you're covered? Send a message with your postcode.</p>
+    </div>
+  </div>
+</section>
+
+<section class="contact" id="contact" style="border-top:1px solid var(--line)">
+  <div class="wrap grid">
+    <div>
+      <div class="kicker">Get in touch</div>
+      <h2>Call, message or book online.</h2>
+      <a class="big-phone" href="tel:+447893933298">07893 933298</a>
+      <div class="cta-row" style="margin-top:0">
+        <a class="btn btn-flame" href="tel:+447893933298">Call now</a>
+        <a class="btn btn-wa" href="https://wa.me/447893933298" rel="noopener">WhatsApp</a>
+      </div>
+      <ul class="facts" style="margin-top:2rem">
+        <li><b>Hours:</b> 24/7 call-outs</li>
+        <li><b>Area:</b> Southampton and the Winchester fringe</li>
+        <li><b>Payment:</b> Cards accepted</li>
+        <li><b>Qualified:</b> City &amp; Guilds Level 2</li>
+      </ul>
+    </div>
+    <div class="panel">
+      <div class="tabs" role="tablist" aria-label="Enquiry type">
+        <button role="tab" id="t1" aria-selected="true" aria-controls="p1" type="button">Boiler service</button>
+        <button role="tab" id="t2" aria-selected="false" aria-controls="p2" type="button">Something else</button>
+      </div>
+      <form id="p1" role="tabpanel" aria-labelledby="t1" class="preview-form" novalidate>
+        <div class="fields two">
+          <div><label for="b-name">Name</label><input id="b-name" name="name" autocomplete="name" required></div>
+          <div><label for="b-phone">Phone</label><input id="b-phone" name="phone" type="tel" autocomplete="tel" required></div>
+          <div><label for="b-pc">Postcode</label><input id="b-pc" name="postcode" autocomplete="postal-code"></div>
+          <div><label for="b-type">Boiler type</label><select id="b-type" name="type"><option>Gas boiler</option><option>Not sure</option></select></div>
+          <div style="grid-column:1/-1"><label for="b-day">Preferred day</label><input id="b-day" name="day" type="date"></div>
+          <div style="grid-column:1/-1"><button class="btn btn-flame" type="submit" style="width:100%">Request a service visit</button></div>
+        </div>
+        <p class="note" role="status">This is a preview — the form will go live with your new site.</p>
+      </form>
+      <form id="p2" role="tabpanel" aria-labelledby="t2" class="preview-form" hidden novalidate>
+        <div class="fields two">
+          <div><label for="o-name">Name</label><input id="o-name" name="name" autocomplete="name" required></div>
+          <div><label for="o-phone">Phone</label><input id="o-phone" name="phone" type="tel" autocomplete="tel" required></div>
+          <div style="grid-column:1/-1"><label for="o-job">What do you need doing?</label><textarea id="o-job" name="job" rows="4" placeholder="A leak, a new radiator, no hot water..."></textarea></div>
+          <div style="grid-column:1/-1"><button class="btn btn-flame" type="submit" style="width:100%">Send enquiry</button></div>
+        </div>
+        <p class="note" role="status">This is a preview — the form will go live with your new site.</p>
+      </form>
+    </div>
+  </div>
+</section>
+</main>
+
+<footer>
+  <div class="wrap">
+    <div><b>VK Plumbing &amp; Heating</b><br>Southampton · 07893 933298</div>
+    <div>Concept design by Itchen Studio. Not the live site.</div>
+  </div>
+</footer>
+
+<div class="dock">
+  <a class="btn btn-flame" href="tel:+447893933298">Call now</a>
+  <a class="btn btn-wa" href="https://wa.me/447893933298" rel="noopener">WhatsApp</a>
+</div>
+
+<script>
+(function(){
+  var pc=document.querySelector('.pc'),h='';
+  for(var i=14;i<=40;i++)h+='<span>SO'+i+'</span>';
+  pc.innerHTML=h;
+  document.querySelectorAll('.preview-form').forEach(function(f){
+    f.addEventListener('submit',function(e){e.preventDefault();f.querySelector('.note').classList.add('show');});
+  });
+  var t=[document.getElementById('t1'),document.getElementById('t2')],p=[document.getElementById('p1'),document.getElementById('p2')];
+  t.forEach(function(b,i){b.addEventListener('click',function(){t.forEach(function(x,j){x.setAttribute('aria-selected',j===i);p[j].hidden=j!==i;});});});
+  var dlg=document.getElementById('lb'),im=dlg.querySelector('img');
+  document.querySelectorAll('.gallery button').forEach(function(b){b.addEventListener('click',function(){im.src=b.dataset.full;im.alt=b.dataset.alt;if(dlg.showModal)dlg.showModal();});});
+  dlg.querySelector('button').addEventListener('click',function(){dlg.close();});
+  dlg.addEventListener('click',function(e){if(e.target===dlg)dlg.close();});
+})();
+</script>
+</body>
+</html>
