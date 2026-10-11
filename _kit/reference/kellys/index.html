@@ -1,0 +1,491 @@
+<!doctype html>
+<html lang="en-GB">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<meta name="robots" content="noindex,nofollow">
+<title>Kelly's Hair Studio · Concept site by Itchen Studio</title>
+<meta name="description" content="A concept website for a fictional Chandler's Ford hair salon, designed and built by Itchen Studio.">
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Crect width='32' height='32' rx='16' fill='%231c1918'/%3E%3Ctext x='16' y='23' font-family='Didot,Georgia' font-style='italic' font-size='20' fill='%23ecd5cb' text-anchor='middle'%3EK%3C/text%3E%3C/svg%3E">
+<link rel="preload" href="fonts/bodoni-moda.woff2" as="font" type="font/woff2" crossorigin>
+<link rel="preload" href="fonts/bodoni-moda-italic.woff2" as="font" type="font/woff2" crossorigin>
+<link rel="preload" href="fonts/jost.woff2" as="font" type="font/woff2" crossorigin>
+<script>(function(d){if(!matchMedia('(prefers-reduced-motion: reduce)').matches){d.documentElement.classList.add('motion');setTimeout(function(){if(!d.documentElement.classList.contains('ready'))d.documentElement.classList.remove('motion')},3000)}})(document)</script>
+<style>
+@font-face{font-family:"Bodoni Moda";src:url("fonts/bodoni-moda.woff2") format("woff2");font-weight:400 900;font-display:swap}
+@font-face{font-family:"Bodoni Moda";src:url("fonts/bodoni-moda-italic.woff2") format("woff2");font-weight:400 900;font-style:italic;font-display:swap}
+@font-face{font-family:"Jost";src:url("fonts/jost.woff2") format("woff2");font-weight:100 900;font-display:swap}
+/* Layout: a fashion-editorial salon site. Staggered photo hero over a giant italic wordmark, a statement, services list with a cursor-following photo, a tabbed price list with book links, a multi-step booking drawer, team monograms, a gallery, and a visit footer. Porcelain, ink, blush and mink. */
+:root{
+  --porcelain:#f6f1ec; --paper:#fffcf9; --line:#e5d9d0; --ink:#1c1918; --muted:#77665f; --mink:#8b736a;
+  --blush:#ecd5cb; --blush-soft:#f4e6df; --rose:#9a5b4f; --champagne:#d8c3a5;
+  --display:"Bodoni Moda", Didot, "Bodoni 72", Georgia, serif; --body:"Jost", "Futura", system-ui, sans-serif;
+  --ease:cubic-bezier(.2,.7,.1,1);
+}
+*{box-sizing:border-box}
+html.lenis,html.lenis body{height:auto}
+body{margin:0;background:var(--porcelain);color:var(--ink);font:400 17px/1.65 var(--body);-webkit-font-smoothing:antialiased;overflow-x:clip}
+img{max-width:100%;display:block}
+.wrap{max-width:1280px;margin:0 auto;padding-inline:36px}
+@media (max-width:640px){.wrap{padding-inline:16px}}
+h1,h2,h3{font-family:var(--display);font-weight:400;margin:0;letter-spacing:-.01em;text-wrap:balance;font-variation-settings:"opsz" 96}
+h2{font-size:clamp(46px,6.2vw,96px);line-height:.98}
+h2 i,h1 i{font-style:italic}
+p{margin:0}
+.lbl{font:500 12px/1 var(--body);letter-spacing:.28em;text-transform:uppercase;color:var(--mink)}
+:focus-visible{outline:2px solid var(--rose);outline-offset:3px;border-radius:4px}
+[hidden]{display:none!important}
+.btn{display:inline-flex;align-items:center;gap:12px;font:500 14px/1 var(--body);letter-spacing:.18em;text-transform:uppercase;text-decoration:none;padding:19px 30px;border-radius:0;border:1px solid var(--ink);cursor:pointer;transition:background-color .3s,color .3s,border-color .3s;background:var(--ink);color:var(--porcelain)}
+.btn:hover{background:var(--rose);border-color:var(--rose)}
+.btn.ghost{background:transparent;color:var(--ink)}
+.btn.ghost:hover{background:var(--ink);color:var(--porcelain)}
+.linkbtn{font:500 13px/1 var(--body);letter-spacing:.18em;text-transform:uppercase;background:none;border:0;border-bottom:1px solid currentColor;padding:4px 0;color:var(--rose);cursor:pointer}
+
+.concept{background:var(--ink);color:#cdbfb8;font-size:13px;line-height:18px;text-align:center;padding:8px 16px}
+.concept a{color:#fff;font-weight:500}
+
+.top{position:sticky;top:0;z-index:50;background:color-mix(in srgb,var(--porcelain) 90%,transparent);backdrop-filter:blur(10px);-webkit-backdrop-filter:blur(10px);transition:transform .4s var(--ease);border-bottom:1px solid var(--line)}
+.top.away{transform:translateY(-100%)}
+.top .wrap{display:grid;grid-template-columns:1fr auto 1fr;align-items:center;height:78px;gap:16px}
+.top nav{display:flex;gap:30px}
+.top nav a{font:500 13px/1 var(--body);letter-spacing:.2em;text-transform:uppercase;text-decoration:none;color:var(--ink)}
+.top nav a:hover{color:var(--rose)}
+.wordmark{font:italic 400 34px/1 var(--display);text-decoration:none;color:var(--ink);letter-spacing:-.01em}
+.top .right{justify-self:end}
+.top .btn{padding:14px 22px;font-size:12px}
+@media (max-width:860px){.top nav{display:none}.top .wrap{grid-template-columns:auto 1fr}.top .right{grid-column:2}}
+
+/* hero */
+.hero{position:relative;padding-top:48px;overflow:hidden}
+.hero-top{display:grid;grid-template-columns:minmax(0,1fr) minmax(0,1.4fr);gap:48px;align-items:end}
+.hero-top .lead{font-size:19px;color:#4a3f3b;max-width:24em;margin-top:22px}
+.hero-top .ctas{display:flex;gap:12px;flex-wrap:wrap;margin-top:30px}
+.photos{display:grid;grid-template-columns:1fr 1.25fr 1fr;gap:14px;align-items:end}
+.photos figure{margin:0;overflow:hidden;position:relative}
+.photos figure img{width:100%;height:100%;object-fit:cover}
+.photos .p1{aspect-ratio:3/4;margin-bottom:60px}
+.photos .p2{aspect-ratio:3/4.4;border-radius:999px 999px 0 0}
+.photos .p3{aspect-ratio:3/4;margin-bottom:120px}
+.giant{font:italic 400 clamp(120px,27vw,420px)/.8 var(--display);letter-spacing:-.04em;margin:28px 0 0 -.04em;white-space:nowrap;color:var(--ink);font-variation-settings:"opsz" 96}
+.giant .ch{display:inline-block}
+.hero .giant{padding-bottom:.16em}
+.hero .tag{display:flex;justify-content:space-between;gap:16px;flex-wrap:wrap;border-top:1px solid var(--ink);padding-block:16px 28px;margin-top:0;position:relative;z-index:1;background:var(--porcelain)}
+@media (max-width:900px){.hero-top{grid-template-columns:1fr}.photos .p1{margin-bottom:30px}.photos .p3{margin-bottom:60px}}
+html.motion:not(.ready) .giant .ch{transform:translateY(100%);opacity:0}
+html.motion:not(.ready) [data-intro]{opacity:0}
+
+/* statement */
+.state{padding-block:140px;background:var(--ink);color:var(--porcelain);text-align:center}
+.state p.big{font:400 clamp(34px,4.4vw,66px)/1.15 var(--display);max-width:18em;margin:0 auto;font-variation-settings:"opsz" 72}
+.state p.big i{color:var(--blush)}
+.state .lbl{color:var(--champagne);display:block;margin-bottom:34px}
+.state .w{display:inline}
+html.motion .state .w{opacity:.2}
+
+/* services with cursor image */
+.svcs{padding-block:140px 60px;position:relative}
+.svc-list{list-style:none;margin:56px 0 0;padding:0;border-top:1px solid var(--ink)}
+.svc-list li{border-bottom:1px solid var(--ink)}
+.svc-list button{all:unset;box-sizing:border-box;width:100%;display:grid;grid-template-columns:70px minmax(0,1fr) auto;align-items:center;gap:20px;padding:30px 4px;cursor:pointer}
+.svc-list button:focus-visible{outline:2px solid var(--rose);outline-offset:-2px}
+.svc-list .n{font:500 13px/1 var(--body);letter-spacing:.2em;color:var(--mink)}
+.svc-list .t{font:400 clamp(36px,5vw,72px)/1 var(--display);transition:transform .5s var(--ease),color .3s}
+.svc-list .d{font-size:15px;color:var(--muted);max-width:22em;text-align:right}
+.svc-list button:hover .t{transform:translateX(18px);color:var(--rose)}
+.svc-list button:hover .t i{color:var(--rose)}
+.cursor-img{position:fixed;left:0;top:0;width:280px;aspect-ratio:3/4;pointer-events:none;z-index:40;overflow:hidden;opacity:0;visibility:hidden}
+.cursor-img img{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;opacity:0;transition:opacity .35s}
+.cursor-img img.on{opacity:1}
+@media (max-width:760px){.svc-list button{grid-template-columns:40px 1fr}.svc-list .d{grid-column:2;text-align:left}.cursor-img{display:none}}
+
+/* prices */
+.prices{padding-block:100px 140px}
+.prices-head{display:flex;justify-content:space-between;align-items:end;gap:32px;flex-wrap:wrap;margin-bottom:44px}
+.ptabs{display:flex;gap:28px;flex-wrap:wrap;border-bottom:1px solid var(--line)}
+.ptabs button{all:unset;cursor:pointer;font:500 13px/1 var(--body);letter-spacing:.2em;text-transform:uppercase;padding:16px 0;border-bottom:2px solid transparent;margin-bottom:-1px;color:var(--muted)}
+.ptabs button[aria-selected="true"]{color:var(--ink);border-bottom-color:var(--ink)}
+.ptabs button:focus-visible{outline:2px solid var(--rose)}
+.plist{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:0 72px;margin-top:20px}
+.pr{display:grid;grid-template-columns:minmax(0,1fr) auto;gap:6px 18px;padding:22px 0;border-bottom:1px solid var(--line);align-items:baseline}
+.pr h3{font:400 26px/1.2 var(--display)}
+.pr .price{font:400 26px/1 var(--display);font-variant-numeric:lining-nums tabular-nums;white-space:nowrap}
+.pr .price small{font:500 11px/1 var(--body);letter-spacing:.16em;text-transform:uppercase;color:var(--mink);margin-right:6px}
+.pr .meta{font-size:14.5px;color:var(--muted);display:flex;gap:16px;align-items:center;flex-wrap:wrap}
+.pr .linkbtn{justify-self:end;font-size:11px}
+.pnote{font-size:14px;color:var(--muted);margin-top:24px;max-width:46em}
+@media (max-width:860px){.plist{grid-template-columns:1fr}}
+
+/* team */
+.team{padding-block:120px;background:var(--blush-soft)}
+.team-grid{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:28px;margin-top:56px}
+.member{display:grid;gap:14px}
+.member .mono{aspect-ratio:3/3.6;background:var(--blush);display:grid;place-items:center;font:italic 400 clamp(90px,10vw,150px)/1 var(--display);color:var(--rose);border-radius:999px 999px 0 0}
+.member h3{font:400 30px/1.1 var(--display)}
+.member .role{font:500 12px/1 var(--body);letter-spacing:.2em;text-transform:uppercase;color:var(--mink)}
+.member p{color:#4a3f3b;font-size:16px}
+@media (max-width:860px){.team-grid{grid-template-columns:1fr;gap:44px}.member .mono{max-width:320px}}
+
+/* gallery */
+.gallery{padding-block:140px;overflow:hidden}
+.g-grid{display:grid;grid-template-columns:1.2fr .8fr 1fr;gap:16px;margin-top:56px;align-items:start}
+.g-grid figure{margin:0;overflow:hidden;position:relative}
+.g-grid img{width:100%;height:112%;object-fit:cover}
+.g-grid .g1{aspect-ratio:4/3.1}
+.g-grid .g2{aspect-ratio:3/4;margin-top:120px}
+.g-grid .g3{aspect-ratio:4/3.2;margin-top:40px}
+.g-grid figcaption{font:500 11px/1 var(--body);letter-spacing:.2em;text-transform:uppercase;color:var(--mink);margin-top:10px}
+@media (max-width:860px){.g-grid{grid-template-columns:1fr 1fr}.g-grid .g1{grid-column:1/-1}.g-grid .g2{margin-top:0}.g-grid .g3{margin-top:60px}}
+
+/* visit */
+.visit{background:var(--ink);color:var(--porcelain);padding-block:120px 48px}
+.visit .row{display:grid;grid-template-columns:minmax(0,1.2fr) minmax(0,1fr) minmax(0,1fr);gap:48px;align-items:start}
+.visit h2{color:var(--porcelain)}
+.visit h2 i{color:var(--blush)}
+.visit .lbl{color:var(--champagne)}
+.visit dl{display:grid;grid-template-columns:auto auto;gap:10px 28px;margin:16px 0 0;font-size:16px;color:#e5dad3}
+.visit dd{margin:0;text-align:right}
+.visit p{color:#e5dad3;margin-top:16px}
+.visit .giant{color:var(--porcelain);font-size:clamp(100px,22vw,340px);margin-top:80px}
+.visit .base{display:flex;justify-content:space-between;flex-wrap:wrap;gap:16px;border-top:1px solid #3a3330;padding-top:20px;font-size:14px;color:#b9aaa2}
+.visit a{color:#fff}
+@media (max-width:900px){.visit .row{grid-template-columns:1fr;gap:36px}}
+
+/* booking drawer */
+.scrim{position:fixed;inset:0;background:#1c1918a6;z-index:80;opacity:0;transition:opacity .35s}
+.scrim.on{opacity:1}
+.drawer{position:fixed;top:0;right:0;bottom:0;width:min(640px,100%);background:var(--paper);z-index:81;display:flex;flex-direction:column;transform:translateX(100%);transition:transform .55s var(--ease);box-shadow:-30px 0 60px -20px #0005}
+.drawer.on{transform:none}
+.dr-head{display:flex;justify-content:space-between;align-items:center;padding:22px 28px;border-bottom:1px solid var(--line)}
+.dr-head .wordmark{font-size:28px}
+.dr-close{all:unset;cursor:pointer;font:500 12px/1 var(--body);letter-spacing:.2em;text-transform:uppercase;padding:8px}
+.dr-close:focus-visible{outline:2px solid var(--rose)}
+.prog{display:flex;gap:6px;padding:16px 28px 0}
+.prog i{flex:1;height:2px;background:var(--line)}
+.prog i.on{background:var(--ink)}
+.dr-body{flex:1;overflow-y:auto;padding:24px 28px 28px;overscroll-behavior:contain}
+.dr-body h3{font:400 38px/1.05 var(--display);margin:6px 0 20px}
+.opt{all:unset;box-sizing:border-box;width:100%;display:grid;grid-template-columns:minmax(0,1fr) auto;gap:4px 16px;padding:16px 18px;border:1px solid var(--line);margin-bottom:10px;cursor:pointer;background:#fff}
+.opt:hover{border-color:var(--mink)}
+.opt[aria-pressed="true"]{border-color:var(--ink);box-shadow:inset 0 0 0 1px var(--ink)}
+.opt:focus-visible{outline:2px solid var(--rose)}
+.opt b{font:400 21px/1.2 var(--display)}
+.opt span{font-size:14px;color:var(--muted)}
+.opt .pp{font:400 20px/1 var(--display);align-self:center;grid-row:span 2}
+.ocat{font:500 11px/1 var(--body);letter-spacing:.22em;text-transform:uppercase;color:var(--mink);margin:22px 0 10px}
+.ocat:first-child{margin-top:0}
+.styl{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:10px}
+.styl .opt{grid-template-columns:1fr;text-align:center;justify-items:center;padding:20px 10px}
+.styl .av{width:64px;height:64px;border-radius:50%;background:var(--blush);display:grid;place-items:center;font:italic 400 30px/1 var(--display);color:var(--rose);margin-bottom:6px}
+.cal{display:grid;grid-template-columns:repeat(7,minmax(0,1fr));gap:6px}
+.cal button{all:unset;box-sizing:border-box;cursor:pointer;text-align:center;padding:10px 0;border:1px solid var(--line);background:#fff;display:grid;gap:2px}
+.cal button small{font:500 10px/1 var(--body);letter-spacing:.14em;text-transform:uppercase;color:var(--muted)}
+.cal button b{font:400 22px/1 var(--display)}
+.cal button[aria-pressed="true"]{background:var(--ink);color:var(--porcelain);border-color:var(--ink)}
+.cal button[aria-pressed="true"] small{color:var(--champagne)}
+.cal button:disabled{opacity:.3;cursor:not-allowed}
+.cal button:focus-visible{outline:2px solid var(--rose)}
+.slots{display:grid;grid-template-columns:repeat(auto-fill,minmax(82px,1fr));gap:6px;margin-top:18px}
+.slots button{all:unset;box-sizing:border-box;cursor:pointer;text-align:center;padding:12px 0;border:1px solid var(--line);background:#fff;font:500 15px/1 var(--body);font-variant-numeric:tabular-nums}
+.slots button[aria-pressed="true"]{background:var(--rose);border-color:var(--rose);color:#fff}
+.slots button:disabled{opacity:.3;text-decoration:line-through;cursor:not-allowed}
+.slots button:focus-visible{outline:2px solid var(--ink)}
+.fields{display:grid;gap:14px}
+.fields label{display:grid;gap:6px;font-size:14px;font-weight:500}
+.fields input,.fields textarea{font:inherit;font-size:16px;border:1px solid var(--line);background:#fff;padding:13px 14px;color:var(--ink);border-radius:0}
+.fields input:focus,.fields textarea:focus{outline:none;border-color:var(--ink)}
+.dr-foot{border-top:1px solid var(--line);padding:18px 28px calc(18px + env(safe-area-inset-bottom,0px));display:flex;justify-content:space-between;align-items:center;gap:16px;background:var(--paper)}
+.dr-foot .sum{font-size:14px;color:var(--muted);line-height:1.4}
+.dr-foot .sum b{display:block;color:var(--ink);font:400 20px/1.2 var(--display)}
+.dr-foot .acts{display:flex;gap:8px}
+.dr-foot .btn{padding:15px 22px;font-size:12px}
+.done{text-align:center;display:grid;gap:16px;justify-items:center;padding-top:24px}
+.done .seal{width:96px;height:96px;border-radius:50%;background:var(--blush);display:grid;place-items:center;font:italic 400 48px/1 var(--display);color:var(--rose)}
+.done dl{display:grid;grid-template-columns:auto auto;gap:8px 24px;margin:8px 0 0;text-align:left;font-size:16px}
+.done dt{color:var(--muted)}
+.done dd{margin:0;font-weight:500}
+.done .note{color:var(--muted);font-size:14px;max-width:28em}
+@media (max-width:520px){.styl{grid-template-columns:1fr}.dr-body h3{font-size:32px}.cal{gap:4px}}
+</style>
+</head>
+<body>
+<div class="concept">Concept site by <a href="https://itchenstudio.co.uk/#work">Itchen Studio</a>. Kelly's is a fictional salon, so prices, stylists and bookings are examples.</div>
+
+<header class="top">
+  <div class="wrap">
+    <nav aria-label="Main"><a href="#services">Services</a><a href="#prices">Prices</a><a href="#team">Team</a></nav>
+    <a class="wordmark" href="#hero" aria-label="Kelly's, home">Kelly's</a>
+    <div class="right"><button class="btn" type="button" data-book>Book now</button></div>
+  </div>
+</header>
+
+<main>
+<section class="hero" id="hero" aria-labelledby="h1">
+  <div class="wrap">
+    <div class="hero-top">
+      <div>
+        <p class="lbl" data-intro>Hair studio · Chandler's Ford</p>
+        <h1 id="h1" style="font-size:clamp(44px,5vw,76px);line-height:1.02;margin-top:20px" data-intro>Hair that feels <i>like you.</i></h1>
+        <p class="lead" data-intro>Cuts, colour and balayage in a calm, light-filled studio. No rush, no hard sell, just great hair and a proper cup of tea.</p>
+        <div class="ctas" data-intro><button class="btn" type="button" data-book>Book an appointment</button><a class="btn ghost" href="#prices">See prices</a></div>
+      </div>
+      <div class="photos" aria-hidden="true">
+        <figure class="p1" data-drift="-14"><img src="img/salon-1100.webp" alt=""></figure>
+        <figure class="p2" data-drift="-4"><img src="img/movement-1100.webp" alt=""></figure>
+        <figure class="p3" data-drift="-22"><img src="img/balayage-1100.webp" alt=""></figure>
+      </div>
+    </div>
+    <p class="giant" aria-hidden="true"><span class="ch">K</span><span class="ch">e</span><span class="ch">l</span><span class="ch">l</span><span class="ch">y</span><span class="ch">'</span><span class="ch">s</span></p>
+    <div class="tag lbl"><span>Est. 2016</span><span>Tue–Sat · Late Thursdays</span><span>Book online 24/7</span></div>
+  </div>
+</section>
+
+<section class="state" aria-label="About Kelly's">
+  <div class="wrap">
+    <span class="lbl">The studio</span>
+    <p class="big" id="stmt">Every appointment starts with a proper chat, because the best hair is the kind <i>you can do yourself</i> on a Tuesday morning.</p>
+  </div>
+</section>
+
+<section class="svcs" id="services" aria-labelledby="svc-title">
+  <div class="wrap">
+    <p class="lbl" data-reveal>What we do</p>
+    <h2 id="svc-title" data-split style="margin-top:20px">Services</h2>
+    <ul class="svc-list">
+      <li data-reveal><button type="button" data-book data-cat="cut" data-img="0"><span class="n">01</span><span class="t">Cut &amp; <i>finish</i></span><span class="d">Restyles, trims, fringes and blow-dries, finished the way you'll wear it.</span></button></li>
+      <li data-reveal><button type="button" data-book data-cat="colour" data-img="1"><span class="n">02</span><span class="t">Colour &amp; <i>balayage</i></span><span class="d">Soft, lived-in colour, gloss and full head highlights, tailored to your skin tone.</span></button></li>
+      <li data-reveal><button type="button" data-book data-cat="treat" data-img="2"><span class="n">03</span><span class="t">Treatments</span><span class="d">Bond repair, deep conditioning and a scalp massage you'll think about all week.</span></button></li>
+      <li data-reveal><button type="button" data-book data-cat="style" data-img="3"><span class="n">04</span><span class="t">Occasion &amp; <i>bridal</i></span><span class="d">Up-dos, trials and wedding-morning visits for you and your party.</span></button></li>
+    </ul>
+  </div>
+  <div class="cursor-img" id="cimg" aria-hidden="true"><img src="img/movement-1100.webp" alt=""><img src="img/balayage-1100.webp" alt=""><img src="img/wash-1100.webp" alt=""><img src="img/tools-1100.webp" alt=""></div>
+</section>
+
+<section class="prices" id="prices" aria-labelledby="pr-title">
+  <div class="wrap">
+    <div class="prices-head">
+      <div><p class="lbl" data-reveal>Price list</p><h2 id="pr-title" data-split style="margin-top:20px">Prices, <i>plainly.</i></h2></div>
+      <button class="btn ghost" type="button" data-book data-reveal>Book online</button>
+    </div>
+    <div class="ptabs" role="tablist" aria-label="Price list sections"><button type="button" role="tab" id="pt-cut" aria-controls="pl-cut" aria-selected="true" tabindex="0">Cut &amp; finish</button><button type="button" role="tab" id="pt-colour" aria-controls="pl-colour" aria-selected="false" tabindex="-1">Colour</button><button type="button" role="tab" id="pt-treat" aria-controls="pl-treat" aria-selected="false" tabindex="-1">Treatments</button><button type="button" role="tab" id="pt-style" aria-controls="pl-style" aria-selected="false" tabindex="-1">Occasion</button></div>
+    <div class="plist" role="tabpanel" id="pl-cut" aria-labelledby="pt-cut" ><div class="pr"><h3>Restyle</h3><span class="price"><small>from</small>£58</span><p class="meta"><span>1h 15m</span><span>Consultation, wash, cut and blow-dry</span></p><button class="linkbtn" type="button" data-book data-svc="cut-restyle">Book</button></div><div class="pr"><h3>Cut &amp; blow-dry</h3><span class="price"><small>from</small>£48</span><p class="meta"><span>1h</span><span>Keeping your shape fresh</span></p><button class="linkbtn" type="button" data-book data-svc="cut-trim">Book</button></div><div class="pr"><h3>Short hair cut</h3><span class="price"><small>from</small>£36</span><p class="meta"><span>45m</span><span>Crops, pixies and clipper work</span></p><button class="linkbtn" type="button" data-book data-svc="cut-short">Book</button></div><div class="pr"><h3>Fringe trim</h3><span class="price"><small></small>£8</span><p class="meta"><span>15m</span><span>Pop in between appointments</span></p><button class="linkbtn" type="button" data-book data-svc="cut-fringe">Book</button></div><div class="pr"><h3>Blow-dry</h3><span class="price"><small>from</small>£30</span><p class="meta"><span>45m</span><span>Smooth, bouncy or waves</span></p><button class="linkbtn" type="button" data-book data-svc="cut-blow">Book</button></div></div><div class="plist" role="tabpanel" id="pl-colour" aria-labelledby="pt-colour" hidden><div class="pr"><h3>Balayage</h3><span class="price"><small>from</small>£145</span><p class="meta"><span>3h</span><span>Hand-painted, with toner and blow-dry</span></p><button class="linkbtn" type="button" data-book data-svc="col-bal">Book</button></div><div class="pr"><h3>Full head highlights</h3><span class="price"><small>from</small>£120</span><p class="meta"><span>2h 30m</span><span>Foils, toner and blow-dry</span></p><button class="linkbtn" type="button" data-book data-svc="col-full">Book</button></div><div class="pr"><h3>Root tint</h3><span class="price"><small>from</small>£62</span><p class="meta"><span>1h 30m</span><span>Includes blow-dry</span></p><button class="linkbtn" type="button" data-book data-svc="col-roots">Book</button></div><div class="pr"><h3>Gloss &amp; tone</h3><span class="price"><small>from</small>£45</span><p class="meta"><span>45m</span><span>Refresh tone and shine</span></p><button class="linkbtn" type="button" data-book data-svc="col-gloss">Book</button></div><div class="pr"><h3>Colour correction</h3><span class="price" style="font-size:18px">By consultation</span><p class="meta"><span>By consultation only</span></p><a class="linkbtn" href="#visit" style="text-decoration:none">Call us</a></div></div><div class="plist" role="tabpanel" id="pl-treat" aria-labelledby="pt-treat" hidden><div class="pr"><h3>Bond repair treatment</h3><span class="price"><small></small>£35</span><p class="meta"><span>30m</span><span>For colour-treated or heat-damaged hair</span></p><button class="linkbtn" type="button" data-book data-svc="tr-bond">Book</button></div><div class="pr"><h3>Deep conditioning ritual</h3><span class="price"><small></small>£25</span><p class="meta"><span>30m</span><span>With scalp massage</span></p><button class="linkbtn" type="button" data-book data-svc="tr-deep">Book</button></div><div class="pr"><h3>Smoothing treatment</h3><span class="price"><small>from</small>£160</span><p class="meta"><span>2h 30m</span><span>Up to 12 weeks of frizz-free hair</span></p><button class="linkbtn" type="button" data-book data-svc="tr-kera">Book</button></div></div><div class="plist" role="tabpanel" id="pl-style" aria-labelledby="pt-style" hidden><div class="pr"><h3>Up-do</h3><span class="price"><small>from</small>£55</span><p class="meta"><span>1h</span><span>Weddings, proms and black-tie</span></p><button class="linkbtn" type="button" data-book data-svc="st-up">Book</button></div><div class="pr"><h3>Bridal trial</h3><span class="price"><small></small>£75</span><p class="meta"><span>1h 30m</span><span>Plan your wedding-day look</span></p><button class="linkbtn" type="button" data-book data-svc="st-trial">Book</button></div><div class="pr"><h3>Bridal morning</h3><span class="price"><small>from</small>£140</span><p class="meta"><span>2h</span><span>At the studio or your venue</span></p><button class="linkbtn" type="button" data-book data-svc="st-bride">Book</button></div></div>
+    <p class="pnote">Prices start from the amount shown and depend on hair length and thickness. New colour clients need a quick patch test 48 hours before their appointment, free of charge.</p>
+  </div>
+</section>
+
+<section class="team" id="team" aria-labelledby="team-title">
+  <div class="wrap">
+    <p class="lbl" data-reveal>The team</p>
+    <h2 id="team-title" data-split style="margin-top:20px">Small team, <i>big chats.</i></h2>
+    <div class="team-grid">
+      <article class="member" data-reveal><span class="mono" aria-hidden="true">K</span><span class="role">Owner · Colour specialist</span><h3>Kelly</h3><p>Fourteen years behind the chair and still obsessed with the perfect blonde. Book Kelly for balayage and colour corrections.</p></article>
+      <article class="member" data-reveal><span class="mono" aria-hidden="true">A</span><span class="role">Senior stylist</span><h3>Amy</h3><p>Precision cuts, bobs and curly hair. Amy will tell you honestly what will and won't work for your hair.</p></article>
+      <article class="member" data-reveal><span class="mono" aria-hidden="true">J</span><span class="role">Stylist · Bridal</span><h3>Jade</h3><p>Up-dos, waves and wedding mornings. Jade travels to venues across Hampshire for bridal parties.</p></article>
+    </div>
+  </div>
+</section>
+
+<section class="gallery" aria-labelledby="gal-title">
+  <div class="wrap">
+    <p class="lbl" data-reveal>Inside the studio</p>
+    <h2 id="gal-title" data-split style="margin-top:20px">Come <i>as you are.</i></h2>
+    <div class="g-grid">
+      <figure class="g1" data-clip><img src="img/salon-2000.webp" alt="The studio floor with round mirrors and black styling chairs" loading="lazy" data-parallax><figcaption>The studio</figcaption></figure>
+      <figure class="g2" data-clip><img src="img/wash-1100.webp" alt="A client having her hair washed at the basin" loading="lazy" data-parallax><figcaption>The wash</figcaption></figure>
+      <figure class="g3" data-clip><img src="img/tools-1100.webp" alt="Hands holding up brushes, scissors and colour tools" loading="lazy" data-parallax><figcaption>The kit</figcaption></figure>
+    </div>
+  </div>
+</section>
+</main>
+
+<footer class="visit" id="visit" aria-labelledby="visit-title">
+  <div class="wrap">
+    <div class="row">
+      <div><p class="lbl">Visit</p><h2 id="visit-title" style="margin-top:20px">See you <i>soon.</i></h2><p>3 The Precinct, Chandler's Ford<br>Free parking behind the studio.</p></div>
+      <div><p class="lbl">Opening hours</p><dl><dt>Mon</dt><dd>Closed</dd><dt>Tue–Wed</dt><dd>9am – 5:30pm</dd><dt>Thu</dt><dd>9am – 8pm</dd><dt>Fri</dt><dd>9am – 5:30pm</dd><dt>Sat</dt><dd>8:30am – 4pm</dd><dt>Sun</dt><dd>Closed</dd></dl></div>
+      <div><p class="lbl">Get in touch</p><p>023 8049 6577<br>hello@kellyshair.example</p><p style="margin-top:22px"><button class="btn" type="button" data-book style="background:var(--porcelain);color:var(--ink);border-color:var(--porcelain)">Book now</button></p></div>
+    </div>
+    <p class="giant" aria-hidden="true">Kelly's</p>
+    <div class="base"><span>© 2026 Kelly's Hair Studio (concept)</span><span>Designed and built by <a href="https://itchenstudio.co.uk">Itchen Studio</a></span></div>
+  </div>
+</footer>
+
+<div class="scrim" id="scrim" hidden></div>
+<aside class="drawer" id="drawer" role="dialog" aria-modal="true" aria-labelledby="dr-title" hidden>
+  <div class="dr-head"><span class="wordmark" aria-hidden="true">Kelly's</span><span class="lbl" id="dr-step">Step 1 of 4</span><button class="dr-close" type="button" id="dr-close">Close ✕</button></div>
+  <div class="prog" aria-hidden="true"><i></i><i></i><i></i><i></i></div>
+  <div class="dr-body" id="dr-body"></div>
+  <div class="dr-foot" id="dr-foot"><div class="sum" id="dr-sum">Nothing chosen yet</div><div class="acts"><button class="btn ghost" type="button" id="dr-back">Back</button><button class="btn" type="button" id="dr-next">Continue</button></div></div>
+</aside>
+
+<script src="../../js/gsap.min.js" defer></script>
+<script src="../../js/ScrollTrigger.min.js" defer></script>
+<script src="../../js/lenis.min.js" defer></script>
+<script src="../../js/concept.js" defer></script>
+<script>
+var SERVICES = [{"id": "cut-restyle", "c": "cut", "n": "Restyle", "p": 58, "m": 75, "from": true, "note": "Consultation, wash, cut and blow-dry"}, {"id": "cut-trim", "c": "cut", "n": "Cut & blow-dry", "p": 48, "m": 60, "from": true, "note": "Keeping your shape fresh"}, {"id": "cut-short", "c": "cut", "n": "Short hair cut", "p": 36, "m": 45, "from": true, "note": "Crops, pixies and clipper work"}, {"id": "cut-fringe", "c": "cut", "n": "Fringe trim", "p": 8, "m": 15, "from": false, "note": "Pop in between appointments"}, {"id": "cut-blow", "c": "cut", "n": "Blow-dry", "p": 30, "m": 45, "from": true, "note": "Smooth, bouncy or waves"}, {"id": "col-bal", "c": "colour", "n": "Balayage", "p": 145, "m": 180, "from": true, "note": "Hand-painted, with toner and blow-dry"}, {"id": "col-full", "c": "colour", "n": "Full head highlights", "p": 120, "m": 150, "from": true, "note": "Foils, toner and blow-dry"}, {"id": "col-roots", "c": "colour", "n": "Root tint", "p": 62, "m": 90, "from": true, "note": "Includes blow-dry"}, {"id": "col-gloss", "c": "colour", "n": "Gloss & tone", "p": 45, "m": 45, "from": true, "note": "Refresh tone and shine"}, {"id": "tr-bond", "c": "treat", "n": "Bond repair treatment", "p": 35, "m": 30, "from": false, "note": "For colour-treated or heat-damaged hair"}, {"id": "tr-deep", "c": "treat", "n": "Deep conditioning ritual", "p": 25, "m": 30, "from": false, "note": "With scalp massage"}, {"id": "tr-kera", "c": "treat", "n": "Smoothing treatment", "p": 160, "m": 150, "from": true, "note": "Up to 12 weeks of frizz-free hair"}, {"id": "st-up", "c": "style", "n": "Up-do", "p": 55, "m": 60, "from": true, "note": "Weddings, proms and black-tie"}, {"id": "st-trial", "c": "style", "n": "Bridal trial", "p": 75, "m": 90, "from": false, "note": "Plan your wedding-day look"}, {"id": "st-bride", "c": "style", "n": "Bridal morning", "p": 140, "m": 120, "from": true, "note": "At the studio or your venue"}];
+document.addEventListener('DOMContentLoaded', function(){
+  var site = window.ConceptSite.init();
+  var esc = function(s){ return String(s).replace(/[&<>"]/g, function(c){ return {'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;'}[c]; }); };
+
+  /* price tabs */
+  var tabs = document.querySelectorAll('.ptabs [role="tab"]');
+  tabs.forEach(function(t){
+    t.addEventListener('click', function(){
+      tabs.forEach(function(x){ x.setAttribute('aria-selected', String(x === t)); x.tabIndex = x === t ? 0 : -1; });
+      document.querySelectorAll('.plist').forEach(function(p){ p.hidden = p.id !== t.getAttribute('aria-controls'); });
+      if (site.motion) gsap.fromTo('#' + t.getAttribute('aria-controls') + ' .pr', { autoAlpha:0, y:14 }, { autoAlpha:1, y:0, duration:.5, stagger:.04, ease:'power3.out' });
+    });
+    t.addEventListener('keydown', function(e){
+      var i = Array.prototype.indexOf.call(tabs, t);
+      if (e.key === 'ArrowRight' || e.key === 'ArrowLeft') { var n = tabs[(i + (e.key === 'ArrowRight' ? 1 : tabs.length - 1)) % tabs.length]; n.focus(); n.click(); }
+    });
+  });
+
+  /* ---------- booking drawer ---------- */
+  var STYLISTS = [{ id:'any', n:'Anyone', r:'First available', a:'✦' }, { id:'kelly', n:'Kelly', r:'Owner · Colour', a:'K' }, { id:'amy', n:'Amy', r:'Senior stylist', a:'A' }, { id:'jade', n:'Jade', r:'Stylist · Bridal', a:'J' }];
+  var OPEN = { 2:[9,17.5], 3:[9,17.5], 4:[9,20], 5:[9,17.5], 6:[8.5,16] };
+  var DN = ['Sun','Mon','Tue','Wed','Thu','Fri','Sat'], MN = ['Jan','Feb','Mar','Apr','May','Jun','Jul','Aug','Sep','Oct','Nov','Dec'];
+  var drawer = document.getElementById('drawer'), scrim = document.getElementById('scrim'), body = document.getElementById('dr-body');
+  var B = { step:0, svc:null, sty:'any', day:null, time:null, name:'', phone:'', email:'', notes:'' }, lastFocus = null;
+  var today = new Date(); today.setHours(0,0,0,0);
+  var days = []; for (var i = 1; i <= 14; i++) days.push(new Date(today.getFullYear(), today.getMonth(), today.getDate() + i));
+  function svc(){ return SERVICES.find(function(s){ return s.id === B.svc; }); }
+  function dur(m){ return m >= 60 ? Math.floor(m / 60) + 'h' + (m % 60 ? ' ' + (m % 60) + 'm' : '') : m + 'm'; }
+  function lab(t){ return String(Math.floor(t)).padStart(2, '0') + ':' + (t % 1 ? '30' : '00'); }
+  function seeded(n){ var x = Math.sin(n) * 10000; return x - Math.floor(x); }
+  function slots(d){
+    var o = OPEN[d.getDay()]; if (!o) return [];
+    var len = (svc() ? svc().m : 60) / 60, out = [];
+    for (var t = o[0]; t + len <= o[1]; t += .5) out.push({ t:t, off: seeded(d.getDate() * 13 + t * 5 + B.sty.length) < .38 });
+    return out;
+  }
+  function when(){ var d = days[B.day]; return DN[d.getDay()] + ' ' + d.getDate() + ' ' + MN[d.getMonth()] + ', ' + lab(B.time); }
+  function render(){
+    var s = svc();
+    document.querySelectorAll('.prog i').forEach(function(p, k){ p.classList.toggle('on', k <= Math.min(B.step, 3)); });
+    document.getElementById('dr-step').textContent = B.step < 4 ? 'Step ' + (B.step + 1) + ' of 4' : 'Booked';
+    var h = '';
+    if (B.step === 0) {
+      h = '<h3 id="dr-title">Choose a service</h3>';
+      var cats = { cut:'Cut & finish', colour:'Colour', treat:'Treatments', style:'Occasion & bridal' };
+      Object.keys(cats).forEach(function(c){
+        h += '<p class="ocat">' + cats[c] + '</p>';
+        SERVICES.filter(function(x){ return x.c === c; }).forEach(function(x){
+          h += '<button type="button" class="opt" data-svc="' + x.id + '" aria-pressed="' + (B.svc === x.id) + '"><b>' + esc(x.n) + '</b><span class="pp">' + (x.from ? 'from ' : '') + '£' + x.p + '</span><span>' + dur(x.m) + (x.note ? ' · ' + esc(x.note) : '') + '</span></button>';
+        });
+      });
+    } else if (B.step === 1) {
+      h = '<h3 id="dr-title">Who would you like?</h3><div class="styl">';
+      STYLISTS.forEach(function(x){ h += '<button type="button" class="opt" data-sty="' + x.id + '" aria-pressed="' + (B.sty === x.id) + '"><span class="av" aria-hidden="true">' + x.a + '</span><b>' + x.n + '</b><span>' + x.r + '</span></button>'; });
+      h += '</div>';
+    } else if (B.step === 2) {
+      h = '<h3 id="dr-title">Pick a day and time</h3><div class="cal">';
+      days.forEach(function(d, k){
+        var free = slots(d).some(function(x){ return !x.off; });
+        h += '<button type="button" data-day="' + k + '" aria-pressed="' + (B.day === k) + '" ' + (free ? '' : 'disabled') + ' aria-label="' + DN[d.getDay()] + ' ' + d.getDate() + ' ' + MN[d.getMonth()] + (free ? '' : ', unavailable') + '"><small>' + DN[d.getDay()] + '</small><b>' + d.getDate() + '</b></button>';
+      });
+      h += '</div><div class="slots" id="slots">';
+      if (B.day !== null) slots(days[B.day]).forEach(function(x){ h += '<button type="button" data-time="' + x.t + '" aria-pressed="' + (B.time === x.t) + '" ' + (x.off ? 'disabled aria-label="' + lab(x.t) + ', taken"' : '') + '>' + lab(x.t) + '</button>'; });
+      else h += '<p style="color:var(--muted);font-size:15px;grid-column:1/-1">Choose a day to see free times.</p>';
+      h += '</div>';
+    } else if (B.step === 3) {
+      h = '<h3 id="dr-title">Your details</h3><div class="fields"><label>Full name<input id="f-n" autocomplete="name" value="' + esc(B.name) + '" required></label><label>Mobile<input id="f-p" type="tel" autocomplete="tel" value="' + esc(B.phone) + '" required></label><label>Email<input id="f-e" type="email" autocomplete="email" value="' + esc(B.email) + '"></label><label>Anything we should know? <span style="font-weight:400;color:var(--muted)">(optional)</span><textarea id="f-x" rows="3" placeholder="Inspiration photos, sensitivities, last colour">' + esc(B.notes) + '</textarea></label></div>';
+    } else {
+      var st = STYLISTS.find(function(x){ return x.id === B.sty; });
+      h = '<div class="done" role="status"><span class="seal" aria-hidden="true">K</span><p class="lbl">Booking KH-' + (2000 + Math.floor(Math.random() * 7000)) + '</p><h3 id="dr-title">You\'re booked in.</h3><dl><dt>Service</dt><dd>' + esc(s.n) + '</dd><dt>With</dt><dd>' + esc(st.n) + '</dd><dt>When</dt><dd>' + when() + '</dd><dt>Price</dt><dd>' + (s.from ? 'from ' : '') + '£' + s.p + '</dd></dl><p class="note">On a real site you\'d get a confirmation text now, with a reminder the day before and a link to reschedule. This is a concept, so nothing was booked.</p><button class="btn ghost" type="button" id="cal-add">Add to calendar</button></div>';
+    }
+    body.innerHTML = h;
+    var sumEl = document.getElementById('dr-sum');
+    sumEl.innerHTML = s ? '<b>' + esc(s.n) + '</b>' + dur(s.m) + ' · ' + (s.from ? 'from ' : '') + '£' + s.p + (B.time !== null && B.day !== null ? ' · ' + when() : '') : 'Nothing chosen yet';
+    var next = document.getElementById('dr-next'), back = document.getElementById('dr-back');
+    back.hidden = B.step === 0 || B.step === 4;
+    next.textContent = B.step === 3 ? 'Confirm booking' : B.step === 4 ? 'Done' : 'Continue';
+    next.disabled = (B.step === 0 && !B.svc) || (B.step === 2 && (B.day === null || B.time === null));
+    next.style.opacity = next.disabled ? .4 : '';
+    if (site.motion) gsap.from(body.children, { autoAlpha:0, x:24, duration:.45, stagger:.05, ease:'power3.out' });
+    var t = body.querySelector('#dr-title'); if (t) { t.tabIndex = -1; }
+    var ca = document.getElementById('cal-add'); if (ca) ca.addEventListener('click', function(){ ca.textContent = 'Added (demo)'; });
+  }
+  body.addEventListener('click', function(e){
+    var b = e.target.closest('button'); if (!b || b.disabled) return;
+    if (b.dataset.svc) { B.svc = b.dataset.svc; B.time = null; render(); }
+    else if (b.dataset.sty) { B.sty = b.dataset.sty; B.time = null; render(); }
+    else if (b.dataset.day) { B.day = +b.dataset.day; B.time = null; render(); var sl = document.getElementById('slots'); if (sl && sl.firstElementChild) sl.firstElementChild.focus(); }
+    else if (b.dataset.time) { B.time = +b.dataset.time; render(); }
+  });
+  document.getElementById('dr-next').addEventListener('click', function(){
+    if (B.step === 3) {
+      var n = document.getElementById('f-n'), p = document.getElementById('f-p'), bad = null;
+      [n, p].forEach(function(el){ var ok = el.value.trim() !== ''; el.style.borderColor = ok ? '' : '#b3261e'; if (!ok && !bad) bad = el; });
+      if (bad) { bad.focus(); return; }
+      B.name = n.value; B.phone = p.value; B.email = document.getElementById('f-e').value; B.notes = document.getElementById('f-x').value;
+    }
+    if (B.step === 4) { close(); return; }
+    B.step++; render(); var t = body.querySelector('#dr-title'); if (t) t.focus();
+  });
+  document.getElementById('dr-back').addEventListener('click', function(){ if (B.step > 0) { B.step--; render(); } });
+  function open(cat, id){
+    lastFocus = document.activeElement;
+    B.step = 0; B.time = null; B.day = null;
+    if (id) { B.svc = id; B.step = 1; } else if (cat) { var f = SERVICES.find(function(s){ return s.c === cat; }); B.svc = f ? f.id : null; }
+    render();
+    scrim.hidden = false; drawer.hidden = false;
+    requestAnimationFrame(function(){ scrim.classList.add('on'); drawer.classList.add('on'); });
+    if (site.lenis) site.lenis.stop();
+    document.body.style.overflow = 'hidden';
+    setTimeout(function(){ var t = body.querySelector('#dr-title'); if (t) t.focus(); }, 60);
+  }
+  function close(){
+    scrim.classList.remove('on'); drawer.classList.remove('on');
+    setTimeout(function(){ scrim.hidden = true; drawer.hidden = true; }, 500);
+    if (site.lenis) site.lenis.start();
+    document.body.style.overflow = '';
+    if (lastFocus) lastFocus.focus();
+  }
+  document.querySelectorAll('[data-book]').forEach(function(b){ b.addEventListener('click', function(){ open(b.dataset.cat, b.dataset.svc); }); });
+  document.getElementById('dr-close').addEventListener('click', close);
+  scrim.addEventListener('click', close);
+  document.addEventListener('keydown', function(e){
+    if (drawer.hidden) return;
+    if (e.key === 'Escape') close();
+    if (e.key === 'Tab') {
+      var f = drawer.querySelectorAll('button:not([disabled]):not([hidden]), input, textarea, [tabindex="0"]');
+      f = Array.prototype.filter.call(f, function(x){ return x.offsetParent !== null; });
+      if (!f.length) return;
+      if (e.shiftKey && document.activeElement === f[0]) { e.preventDefault(); f[f.length - 1].focus(); }
+      else if (!e.shiftKey && document.activeElement === f[f.length - 1]) { e.preventDefault(); f[0].focus(); }
+    }
+  });
+
+  if (!site.motion) return;
+  /* hero */
+  var chs = gsap.utils.toArray('.hero .giant .ch');
+  gsap.set(chs, { yPercent:100, autoAlpha:0 });
+  gsap.to(chs, { yPercent:0, autoAlpha:1, duration:1.3, stagger:.07, ease:'expo.out', delay:.35 });
+  gsap.from('.photos figure', { yPercent:18, autoAlpha:0, duration:1.4, stagger:.12, ease:'expo.out', delay:.15 });
+  document.querySelectorAll('[data-drift]').forEach(function(el){
+    gsap.to(el, { yPercent:+el.dataset.drift, ease:'none', scrollTrigger:{ trigger:'.hero', start:'top top', end:'bottom top', scrub:true } });
+  });
+  gsap.to('.hero .giant', { xPercent:-6, ease:'none', scrollTrigger:{ trigger:'.hero', start:'top top', end:'bottom top', scrub:true } });
+  /* statement */
+  var words = window.ConceptSite.splitWords(document.getElementById('stmt'));
+  gsap.set(words, { opacity:.18 });
+  gsap.to(words, { opacity:1, stagger:.08, ease:'none', scrollTrigger:{ trigger:'#stmt', start:'top 80%', end:'bottom 45%', scrub:true } });
+  /* footer giant */
+  gsap.from('.visit .giant', { yPercent:40, ease:'none', scrollTrigger:{ trigger:'.visit .giant', start:'top bottom', end:'bottom bottom', scrub:true } });
+  /* cursor-follow image */
+  var cimg = document.getElementById('cimg'), imgs = cimg.querySelectorAll('img');
+  if (matchMedia('(pointer: fine)').matches) {
+    var xTo = gsap.quickTo(cimg, 'x', { duration:.5, ease:'power3' }), yTo = gsap.quickTo(cimg, 'y', { duration:.5, ease:'power3' });
+    gsap.set(cimg, { xPercent:-50, yPercent:-50, scale:.8, autoAlpha:0 });
+    var list = document.querySelector('.svc-list');
+    list.addEventListener('mousemove', function(e){ xTo(e.clientX); yTo(e.clientY); });
+    list.querySelectorAll('button').forEach(function(b){
+      b.addEventListener('mouseenter', function(){ imgs.forEach(function(im, k){ im.classList.toggle('on', k === +b.dataset.img); }); gsap.to(cimg, { autoAlpha:1, scale:1, rotate:(+b.dataset.img % 2 ? 3 : -3), duration:.4, ease:'power3.out' }); });
+    });
+    list.addEventListener('mouseleave', function(){ gsap.to(cimg, { autoAlpha:0, scale:.8, duration:.3 }); });
+  }
+});
+</script>
+</body>
+</html>

@@ -1,0 +1,450 @@
+<!doctype html>
+<html lang="en-GB">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<meta name="robots" content="noindex,nofollow">
+<title>Tambury Park · Concept site by Itchen Studio</title>
+<meta name="description" content="A concept website for a fictional Southampton café and bakery, designed and built by Itchen Studio.">
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Crect width='32' height='32' rx='16' fill='%233a4a35'/%3E%3Ctext x='16' y='22' font-family='Georgia' font-style='italic' font-size='17' fill='%23f3ebdd' text-anchor='middle'%3ET%3C/text%3E%3C/svg%3E">
+<link rel="preload" href="fonts/fraunces.woff2" as="font" type="font/woff2" crossorigin>
+<link rel="preload" href="fonts/figtree.woff2" as="font" type="font/woff2" crossorigin>
+<script>(function(d){if(!matchMedia('(prefers-reduced-motion: reduce)').matches){d.documentElement.classList.add('motion');setTimeout(function(){if(!d.documentElement.classList.contains('ready'))d.documentElement.classList.remove('motion')},3000)}})(document)</script>
+<style>
+@font-face{font-family:"Fraunces";src:url("fonts/fraunces.woff2") format("woff2");font-weight:100 900;font-display:swap}
+@font-face{font-family:"Fraunces";src:url("fonts/fraunces-italic.woff2") format("woff2");font-weight:100 900;font-style:italic;font-display:swap}
+@font-face{font-family:"Figtree";src:url("fonts/figtree.woff2") format("woff2");font-weight:300 900;font-display:swap}
+/* Layout: a warm editorial café site. Split hero with an overlapping photo collage and a spinning stamp, a bakes ribbon, a zoom-into-the-counter scene, a tabbed menu with dotted price leaders, a table-booking widget, and a visit section with live opening hours. Oat, espresso, sage and terracotta. */
+:root{
+  --oat:#f3ebdd; --paper:#fbf7ef; --line:#e1d5c1; --espresso:#2a1c15; --muted:#6f5d50;
+  --sage:#8d9c7a; --sage-deep:#34432f; --sage-soft:#dfe4d3; --terra:#c4623a; --terra-deep:#a24b27; --butter:#f1d9a7;
+  --display:"Fraunces", Georgia, "Times New Roman", serif; --body:"Figtree", system-ui, -apple-system, "Segoe UI", sans-serif;
+  --ease:cubic-bezier(.2,.7,.1,1);
+}
+*{box-sizing:border-box}
+html.lenis,html.lenis body{height:auto}
+body{margin:0;background:var(--oat);color:var(--espresso);font:400 17px/1.6 var(--body);-webkit-font-smoothing:antialiased;overflow-x:clip}
+img{max-width:100%;display:block}
+.wrap{max-width:1240px;margin:0 auto;padding-inline:32px}
+@media (max-width:640px){.wrap{padding-inline:16px}}
+h1,h2,h3{font-family:var(--display);font-weight:400;margin:0;font-variation-settings:"opsz" 144,"SOFT" 100,"WONK" 0;letter-spacing:-.02em;text-wrap:balance}
+h2{font-size:clamp(44px,6vw,88px);line-height:.98}
+em{font-style:italic;font-variation-settings:"opsz" 144,"SOFT" 100,"WONK" 1;color:var(--terra)}
+p{margin:0}
+.kicker{font:600 13px/1 var(--body);letter-spacing:.16em;text-transform:uppercase;color:var(--sage-deep);display:inline-flex;align-items:center;gap:10px}
+.kicker::before{content:"";width:8px;height:8px;border-radius:50%;background:var(--terra)}
+:focus-visible{outline:2.5px solid var(--terra);outline-offset:3px;border-radius:6px}
+[hidden]{display:none!important}
+.btn{display:inline-flex;align-items:center;gap:10px;font:600 16px/1 var(--body);text-decoration:none;padding:17px 26px;border-radius:999px;border:1.5px solid transparent;cursor:pointer;transition:background-color .25s,color .25s,border-color .25s}
+.btn-dark{background:var(--espresso);color:var(--oat)}
+.btn-dark:hover{background:var(--terra)}
+.btn-line{border-color:var(--espresso);color:var(--espresso);background:transparent}
+.btn-line:hover{background:var(--espresso);color:var(--oat)}
+
+.concept{background:var(--espresso);color:#d9ccbd;font-size:13px;line-height:18px;text-align:center;padding:8px 16px}
+.concept a{color:#fff;font-weight:600}
+
+.top{position:sticky;top:0;z-index:50;background:color-mix(in srgb,var(--oat) 90%,transparent);backdrop-filter:blur(10px);-webkit-backdrop-filter:blur(10px);transition:transform .4s var(--ease)}
+.top.away{transform:translateY(-100%)}
+.top .wrap{display:flex;align-items:center;justify-content:space-between;height:76px;gap:20px}
+.logo{font:400 30px/1 var(--display);font-style:italic;font-variation-settings:"opsz" 144,"SOFT" 100,"WONK" 1;text-decoration:none;color:var(--espresso);letter-spacing:-.02em}
+.logo span{font-style:normal;font:600 11px/1 var(--body);letter-spacing:.2em;text-transform:uppercase;color:var(--muted);margin-left:8px;vertical-align:middle}
+nav.main{display:flex;align-items:center;gap:30px}
+nav.main a:not(.btn){text-decoration:none;color:var(--espresso);font-weight:500}
+nav.main a:not(.btn):hover{color:var(--terra)}
+nav.main .btn{padding:12px 20px;font-size:15px}
+.open{display:inline-flex;align-items:center;gap:8px;font-size:14px;font-weight:600;color:var(--sage-deep)}
+.open i{width:9px;height:9px;border-radius:50%;background:#5c9a4c}
+.open.closed{color:var(--muted)}.open.closed i{background:#b9a99a}
+@media (max-width:900px){nav.main a:not(.btn),nav.main .open{display:none}.logo span{display:none}}
+
+/* hero */
+.hero{padding-block:56px 96px;position:relative}
+.hero .wrap{display:grid;grid-template-columns:minmax(0,1fr) minmax(0,1fr);gap:56px;align-items:center}
+.hero h1{font-size:clamp(64px,9.4vw,148px);line-height:.92;letter-spacing:-.035em}
+.hero h1 .ln{display:block;overflow:hidden;padding-bottom:.08em;margin-bottom:-.08em}
+.hero h1 .ln>span{display:inline-block}
+.hero .lead{font-size:20px;line-height:1.6;max-width:27em;margin-top:28px;color:#4a3a30}
+.hero .ctas{display:flex;flex-wrap:wrap;gap:12px;margin-top:34px}
+.collage{position:relative;aspect-ratio:1/1.05;min-width:0}
+.collage .a{position:absolute;left:4%;top:0;width:58%;aspect-ratio:2/3;border-radius:200px 200px 18px 18px;overflow:hidden;box-shadow:0 30px 60px -30px #2a1c1580}
+.collage .b{position:absolute;right:0;bottom:4%;width:62%;aspect-ratio:4/3.1;border-radius:18px;overflow:hidden;box-shadow:0 30px 60px -30px #2a1c1580;border:8px solid var(--oat)}
+.collage img{width:100%;height:100%;object-fit:cover}
+.stamp{position:absolute;left:-2%;bottom:6%;width:150px;height:150px;z-index:2}
+.stamp svg{width:100%;height:100%}
+.stamp text{font:600 11.5px var(--body);letter-spacing:3.2px;text-transform:uppercase;fill:var(--espresso)}
+.stamp .disc{fill:var(--butter)}
+html.motion .stamp .ring{animation:spin 22s linear infinite;transform-origin:75px 75px}
+@keyframes spin{to{transform:rotate(360deg)}}
+@media (max-width:900px){.hero .wrap{grid-template-columns:1fr;gap:40px}.hero{padding-block:32px 64px}.stamp{width:116px;height:116px}}
+html.motion:not(.ready) .hero h1 .ln>span{transform:translateY(105%)}
+html.motion:not(.ready) [data-intro]{opacity:0}
+
+/* ribbon */
+.ribbon{background:var(--sage-deep);color:var(--oat);padding:26px 0;overflow:hidden;white-space:nowrap}
+.ribbon .track{display:inline-flex;will-change:transform}
+.ribbon span{font:400 clamp(30px,4vw,52px)/1 var(--display);font-style:italic;font-variation-settings:"opsz" 144,"SOFT" 100,"WONK" 1;padding:0 26px;display:inline-flex;align-items:center;gap:52px}
+.ribbon span::after{content:"✻";font-style:normal;color:var(--butter);font-size:.6em}
+
+/* counter zoom */
+.zoom{position:relative}
+.zoom-pin{height:100vh;display:grid;place-items:center;overflow:hidden;position:relative}
+.zoom-frame{position:relative;width:min(560px,70vw);aspect-ratio:3/4;border-radius:300px 300px 24px 24px;overflow:hidden;will-change:width,height,border-radius}
+.zoom-frame img{width:100%;height:100%;object-fit:cover}
+.zoom-frame::after{content:"";position:absolute;inset:0;background:linear-gradient(0deg,#2a1c15b3,#2a1c1500 55%)}
+.zoom-copy{position:absolute;left:0;right:0;bottom:8vh;z-index:2;color:#fff;text-align:center;padding-inline:16px}
+.zoom-copy h2{color:#fff;font-size:clamp(44px,7vw,104px)}
+.zoom-copy h2 em{color:var(--butter)}
+.zoom-copy p{max-width:32em;margin:18px auto 0;font-size:18px;color:#f4ebe0}
+html:not(.motion) .zoom-pin{height:auto;padding-block:80px}
+html:not(.motion) .zoom-copy{position:static;color:var(--espresso);margin-top:28px}
+html:not(.motion) .zoom-copy h2{color:var(--espresso)}
+html:not(.motion) .zoom-copy p{color:var(--muted)}
+
+/* bakes */
+.bakes{padding-block:120px 40px}
+.bakes .wrap{display:grid;grid-template-columns:minmax(0,1fr) minmax(0,1fr);gap:64px;align-items:center}
+.bakes .ph{border-radius:20px;overflow:hidden;aspect-ratio:4/5}
+.bakes .ph img{width:100%;height:116%;object-fit:cover}
+.bakes .lead{font-size:19px;color:#4a3a30;margin-top:22px;max-width:28em}
+.today{margin-top:30px;display:grid;gap:0;border-top:1px solid var(--line)}
+.today div{display:flex;justify-content:space-between;gap:16px;padding:14px 0;border-bottom:1px solid var(--line);font-size:17px}
+.today b{font-weight:600}
+.today span{color:var(--muted);font-size:15px}
+@media (max-width:900px){.bakes .wrap{grid-template-columns:1fr;gap:40px}.bakes{padding-block:80px 24px}}
+
+/* menu */
+.menu{padding-block:120px}
+.menu-head{display:flex;justify-content:space-between;align-items:end;gap:32px;flex-wrap:wrap;margin-bottom:44px}
+.tabs{display:flex;gap:8px;flex-wrap:wrap}
+.tabs button{font:600 15px/1 var(--body);padding:13px 18px;border-radius:999px;border:1.5px solid var(--espresso);background:transparent;color:var(--espresso);cursor:pointer;transition:all .2s}
+.tabs button[aria-selected="true"]{background:var(--espresso);color:var(--oat)}
+.panel{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:0 64px}
+.item{display:grid;gap:4px;padding:20px 0;border-bottom:1px solid var(--line)}
+.item .top-row{display:flex;align-items:baseline;gap:12px}
+.item h3{font-size:26px;line-height:1.15;font-variation-settings:"opsz" 72,"SOFT" 100,"WONK" 0}
+.item .dots{flex:1;border-bottom:2px dotted #c8b8a2;transform:translateY(-6px);min-width:20px}
+.item .price{font:500 22px/1 var(--display);font-variant-numeric:tabular-nums}
+.item p{color:var(--muted);font-size:15.5px;line-height:1.5;max-width:30em}
+.item .tags{display:flex;gap:6px;margin-top:4px}
+.item .tags span{font:700 11px/1 var(--body);letter-spacing:.06em;padding:5px 7px;border-radius:5px;background:var(--sage-soft);color:var(--sage-deep)}
+@media (max-width:860px){.panel{grid-template-columns:1fr}.menu{padding-block:80px}}
+
+/* booking */
+.book{background:var(--sage-deep);color:var(--oat);padding-block:120px;position:relative;overflow:hidden}
+.book .wrap{display:grid;grid-template-columns:minmax(0,.85fr) minmax(0,1.15fr);gap:64px;align-items:start}
+.book h2{color:var(--oat)}
+.book h2 em{color:var(--butter)}
+.book .kicker{color:var(--butter)}
+.book .intro{color:#d6dccb;font-size:18px;margin-top:22px;max-width:26em}
+.book .ph{margin-top:40px;border-radius:200px 200px 18px 18px;overflow:hidden;aspect-ratio:4/5;max-width:340px}
+.book .ph img{width:100%;height:100%;object-fit:cover}
+.widget{background:var(--paper);color:var(--espresso);border-radius:24px;padding:30px;display:grid;gap:26px;box-shadow:0 40px 80px -40px #00000080}
+.wl{font:700 12px/1 var(--body);letter-spacing:.14em;text-transform:uppercase;color:var(--muted);margin-bottom:12px;display:block}
+.guests{display:flex;align-items:center;gap:16px}
+.guests button{width:46px;height:46px;border-radius:50%;border:1.5px solid var(--espresso);background:transparent;font:500 22px/1 var(--body);color:var(--espresso);cursor:pointer}
+.guests button:disabled{opacity:.3;cursor:default}
+.guests output{font:400 40px/1 var(--display);min-width:2ch;text-align:center;font-variant-numeric:tabular-nums}
+.guests small{color:var(--muted);font-size:14px}
+.days{display:grid;grid-template-columns:repeat(7,minmax(0,1fr));gap:8px}
+.day{border:1.5px solid var(--line);background:#fff;border-radius:14px;padding:10px 4px;text-align:center;cursor:pointer;font:inherit;color:inherit;display:grid;gap:2px}
+.day small{font-size:11px;font-weight:700;letter-spacing:.08em;text-transform:uppercase;color:var(--muted)}
+.day b{font:500 22px/1 var(--display)}
+.day[aria-pressed="true"]{background:var(--espresso);border-color:var(--espresso);color:var(--oat)}
+.day[aria-pressed="true"] small{color:var(--butter)}
+.day:disabled{opacity:.35;cursor:not-allowed}
+.times{display:grid;grid-template-columns:repeat(auto-fill,minmax(84px,1fr));gap:8px}
+.time{font:600 15px/1 var(--body);padding:12px 6px;border-radius:10px;border:1.5px solid var(--line);background:#fff;color:var(--espresso);cursor:pointer;font-variant-numeric:tabular-nums}
+.time[aria-pressed="true"]{background:var(--terra);border-color:var(--terra);color:#fff}
+.time:disabled{text-decoration:line-through;opacity:.4;cursor:not-allowed}
+.who{display:grid;grid-template-columns:1fr 1fr;gap:12px}
+.who label{display:grid;gap:6px;font-weight:600;font-size:14px}
+.who input{font:inherit;font-size:16px;border:1.5px solid var(--line);border-radius:12px;padding:12px 14px;background:#fff;color:var(--espresso)}
+.who input:focus{outline:none;border-color:var(--terra)}
+.sumbar{display:flex;align-items:center;justify-content:space-between;gap:16px;flex-wrap:wrap;border-top:1px solid var(--line);padding-top:20px}
+.sumbar p{font-size:15px;color:var(--muted)}
+.sumbar p b{color:var(--espresso)}
+.confirm{display:grid;gap:16px;text-align:center;justify-items:center;padding-block:20px}
+.confirm .tick{width:72px;height:72px;border-radius:50%;background:var(--sage-soft);color:var(--sage-deep);display:grid;place-items:center}
+.confirm .tick svg{width:36px;height:36px}
+.confirm h3{font-size:38px}
+.confirm .ref{font:600 14px/1 var(--body);letter-spacing:.14em;text-transform:uppercase;color:var(--terra)}
+.confirm dl{display:grid;grid-template-columns:auto auto;gap:6px 18px;margin:0;font-size:16px;text-align:left}
+.confirm dt{color:var(--muted)}
+.confirm dd{margin:0;font-weight:600}
+.confirm .note{color:var(--muted);font-size:14px;max-width:26em}
+@media (max-width:960px){.book .wrap{grid-template-columns:1fr;gap:40px}.book .ph{display:none}.book{padding-block:88px}.widget{padding:22px}}
+@media (max-width:520px){.days{grid-template-columns:repeat(4,minmax(0,1fr))}.who{grid-template-columns:1fr}}
+
+/* visit */
+.visit{padding-block:120px 96px}
+.visit .wrap{display:grid;grid-template-columns:minmax(0,1fr) minmax(0,1fr);gap:64px;align-items:start}
+.hours{margin-top:30px;border-top:1px solid var(--line)}
+.hours div{display:flex;justify-content:space-between;padding:13px 4px;border-bottom:1px solid var(--line);font-size:17px}
+.hours div.today{background:var(--paper);font-weight:700;border-radius:8px;padding-inline:12px}
+.addr{margin-top:26px;font-size:18px;line-height:1.6}
+.map{border-radius:24px;overflow:hidden;aspect-ratio:1/1;background:#e9dfcf;position:relative}
+.map svg{width:100%;height:100%;display:block}
+@media (max-width:900px){.visit .wrap{grid-template-columns:1fr;gap:40px}.visit{padding-block:80px}}
+
+footer{background:var(--espresso);color:#cdbfae;padding-block:56px 40px}
+footer .big{font:400 clamp(60px,12vw,180px)/.9 var(--display);font-style:italic;font-variation-settings:"opsz" 144,"SOFT" 100,"WONK" 1;color:var(--oat);letter-spacing:-.04em}
+footer .row{display:flex;flex-wrap:wrap;justify-content:space-between;gap:16px;margin-top:40px;font-size:14px;border-top:1px solid #4a3a30;padding-top:20px}
+footer a{color:#fff}
+</style>
+</head>
+<body>
+<div class="concept">Concept site by <a href="https://itchenstudio.co.uk/#work">Itchen Studio</a>. Tambury Park is a fictional café, so bookings and details are examples.</div>
+
+<header class="top">
+  <div class="wrap">
+    <a class="logo" href="#hero">Tambury Park<span>Café &amp; bakery</span></a>
+    <nav class="main" aria-label="Main">
+      <span class="open" id="open"><i aria-hidden="true"></i><span>Open today 7:30am–4pm</span></span>
+      <a href="#menu">Menu</a><a href="#visit">Visit</a>
+      <a class="btn btn-dark" href="#book">Book a table</a>
+    </nav>
+  </div>
+</header>
+
+<main>
+<section class="hero" id="hero" aria-labelledby="h1">
+  <div class="wrap">
+    <div>
+      <p class="kicker" data-intro>Café &amp; bakery · Southampton</p>
+      <h1 id="h1" style="margin-top:22px"><span class="ln"><span>Good coffee,</span></span><span class="ln"><span><em>slow</em> mornings.</span></span></h1>
+      <p class="lead" data-intro>Sourdough out of the oven by seven, single-origin coffee, and a long table by the window that's yours for as long as you like.</p>
+      <div class="ctas" data-intro><a class="btn btn-dark" href="#book">Book a table</a><a class="btn btn-line" href="#menu">See the menu</a></div>
+    </div>
+    <div class="collage" aria-hidden="true">
+      <div class="a" data-drift="-6"><img src="img/flat-whites-1100.webp" alt=""></div>
+      <div class="b" data-drift="8"><img src="img/pour-1100.webp" alt=""></div>
+      <div class="stamp" data-intro>
+        <svg viewBox="0 0 150 150"><circle class="disc" cx="75" cy="75" r="72"/><g class="ring"><defs><path id="circ" d="M75 75 m-54 0 a54 54 0 1 1 108 0 a54 54 0 1 1 -108 0"/></defs><text><textPath href="#circ">Fresh bakes daily · Since 2019 ·</textPath></text></g><text x="75" y="88" text-anchor="middle" style="font:italic 400 40px Fraunces, Georgia, serif;letter-spacing:0;text-transform:none;fill:#2a1c15">T</text></svg>
+      </div>
+    </div>
+  </div>
+</section>
+
+<div class="ribbon" aria-label="Sourdough, cardamom buns, flat whites, seasonal brunch, dogs welcome"><div class="track" aria-hidden="true"><span>Country sourdough</span><span>Cardamom knots</span><span>Flat whites</span><span>Seasonal brunch</span><span>Dogs welcome</span><span>Cake by the slice</span><span>Country sourdough</span><span>Cardamom knots</span><span>Flat whites</span><span>Seasonal brunch</span><span>Dogs welcome</span><span>Cake by the slice</span></div></div>
+
+<section class="zoom" aria-labelledby="zoom-title">
+  <div class="zoom-pin">
+    <div class="zoom-frame" id="zframe"><img src="img/interior-1100.webp" srcset="img/interior-1100.webp 1100w, img/interior-2000.webp 2000w" sizes="100vw" alt="Inside Tambury Park: a long wooden table, pendant lights and the pastry counter" loading="lazy"></div>
+    <div class="zoom-copy"><h2 id="zoom-title" data-split>Pull up a chair.<br><em>Stay a while.</em></h2><p data-reveal>Thirty seats, good light, fast wifi and no rush. Dogs and laptops welcome; just keep the corner table for the regulars.</p></div>
+  </div>
+</section>
+
+<section class="bakes" aria-labelledby="bk-title">
+  <div class="wrap">
+    <div class="ph" data-clip><img src="img/pastries-1100.webp" alt="A shelf of fresh pastries: berry danishes and croissants" loading="lazy" data-parallax></div>
+    <div>
+      <p class="kicker" data-reveal>The bakery</p>
+      <h2 id="bk-title" data-split style="margin-top:18px">Baked here,<br><em>before sunrise.</em></h2>
+      <p class="lead" data-reveal>Everything on the counter is made in our kitchen out the back, from the 48-hour sourdough to the cardamom buns that sell out by ten.</p>
+      <div class="today" data-reveal>
+        <div><b>Cardamom knots</b><span>out at 7:00</span></div>
+        <div><b>Country sourdough</b><span>out at 7:30</span></div>
+        <div><b>Blackberry &amp; custard danish</b><span>out at 8:15</span></div>
+        <div><b>Brown butter cookies</b><span>out at 11:00</span></div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="menu" id="menu" aria-labelledby="menu-title">
+  <div class="wrap">
+    <div class="menu-head">
+      <div><p class="kicker" data-reveal>Menu</p><h2 id="menu-title" data-split style="margin-top:18px">What's <em>cooking.</em></h2></div>
+      <div class="tabs" role="tablist" aria-label="Menu sections"><button type="button" role="tab" id="tab-breakfast" aria-controls="p-breakfast" aria-selected="true" tabindex="0">Breakfast</button><button type="button" role="tab" id="tab-lunch" aria-controls="p-lunch" aria-selected="false" tabindex="-1">Lunch</button><button type="button" role="tab" id="tab-bakes" aria-controls="p-bakes" aria-selected="false" tabindex="-1">Bakes</button><button type="button" role="tab" id="tab-coffee" aria-controls="p-coffee" aria-selected="false" tabindex="-1">Coffee &amp; drinks</button></div>
+    </div>
+    <div class="panel" role="tabpanel" id="p-breakfast" aria-labelledby="tab-breakfast" ><div class="item"><div class="top-row"><h3>Sourdough &amp; jam</h3><span class="dots" aria-hidden="true"></span><span class="price">£4.50</span></div><p>Our country loaf, toasted, with cultured butter and this week's jam.</p><div class="tags"><span>VG</span></div></div><div class="item"><div class="top-row"><h3>Eggs on toast</h3><span class="dots" aria-hidden="true"></span><span class="price">£7.50</span></div><p>Two free-range eggs any way, on sourdough, with chilli butter.</p><div class="tags"><span>V</span></div></div><div class="item"><div class="top-row"><h3>The Tambury plate</h3><span class="dots" aria-hidden="true"></span><span class="price">£12.50</span></div><p>Bacon, sausage, eggs, roast tomatoes, mushrooms and toast.</p></div><div class="item"><div class="top-row"><h3>Bircher muesli</h3><span class="dots" aria-hidden="true"></span><span class="price">£6.00</span></div><p>Oats soaked overnight with apple, yoghurt, toasted seeds and honey.</p><div class="tags"><span>V</span><span>GF</span></div></div><div class="item"><div class="top-row"><h3>Mushrooms on toast</h3><span class="dots" aria-hidden="true"></span><span class="price">£9.50</span></div><p>Garlicky mushrooms, ricotta, thyme and a fried egg on top.</p><div class="tags"><span>V</span></div></div><div class="item"><div class="top-row"><h3>Pancake stack</h3><span class="dots" aria-hidden="true"></span><span class="price">£9.00</span></div><p>Buttermilk pancakes, berries, crème fraîche and maple.</p><div class="tags"><span>V</span></div></div></div><div class="panel" role="tabpanel" id="p-lunch" aria-labelledby="tab-lunch" hidden><div class="item"><div class="top-row"><h3>Soup of the day</h3><span class="dots" aria-hidden="true"></span><span class="price">£7.00</span></div><p>Always vegan, always with bread from the oven that morning.</p><div class="tags"><span>VG</span></div></div><div class="item"><div class="top-row"><h3>Grilled cheese</h3><span class="dots" aria-hidden="true"></span><span class="price">£8.50</span></div><p>Three cheeses, pickled onion and mustard, on sourdough.</p><div class="tags"><span>V</span></div></div><div class="item"><div class="top-row"><h3>Chicken &amp; tarragon sandwich</h3><span class="dots" aria-hidden="true"></span><span class="price">£9.50</span></div><p>Roast chicken, tarragon mayo, gem lettuce, on focaccia.</p></div><div class="item"><div class="top-row"><h3>Grain bowl</h3><span class="dots" aria-hidden="true"></span><span class="price">£10.50</span></div><p>Spiced lentils, roast squash, greens, tahini and pickles.</p><div class="tags"><span>VG</span><span>GF</span></div></div><div class="item"><div class="top-row"><h3>Quiche &amp; salad</h3><span class="dots" aria-hidden="true"></span><span class="price">£9.00</span></div><p>Today's quiche with a crunchy seasonal salad.</p><div class="tags"><span>V</span></div></div><div class="item"><div class="top-row"><h3>Kids' toastie</h3><span class="dots" aria-hidden="true"></span><span class="price">£5.50</span></div><p>Ham or cheese, with apple slices and a mini cookie.</p></div></div><div class="panel" role="tabpanel" id="p-bakes" aria-labelledby="tab-bakes" hidden><div class="item"><div class="top-row"><h3>Cardamom knot</h3><span class="dots" aria-hidden="true"></span><span class="price">£3.40</span></div><p>Our best seller. Sticky, fragrant, gone by ten.</p><div class="tags"><span>V</span></div></div><div class="item"><div class="top-row"><h3>Butter croissant</h3><span class="dots" aria-hidden="true"></span><span class="price">£3.20</span></div><p>Three days of laminating for that many layers.</p><div class="tags"><span>V</span></div></div><div class="item"><div class="top-row"><h3>Blackberry danish</h3><span class="dots" aria-hidden="true"></span><span class="price">£3.80</span></div><p>Vanilla custard and blackberries from the farm shop.</p><div class="tags"><span>V</span></div></div><div class="item"><div class="top-row"><h3>Brown butter cookie</h3><span class="dots" aria-hidden="true"></span><span class="price">£2.80</span></div><p>Dark chocolate and sea salt, crisp edges, soft middle.</p><div class="tags"><span>V</span></div></div><div class="item"><div class="top-row"><h3>Banana bread</h3><span class="dots" aria-hidden="true"></span><span class="price">£3.50</span></div><p>A thick slice, toasted with salted butter.</p><div class="tags"><span>V</span></div></div><div class="item"><div class="top-row"><h3>Lemon polenta cake</h3><span class="dots" aria-hidden="true"></span><span class="price">£3.90</span></div><p>Sharp, sticky and naturally gluten-free.</p><div class="tags"><span>V</span><span>GF</span></div></div></div><div class="panel" role="tabpanel" id="p-coffee" aria-labelledby="tab-coffee" hidden><div class="item"><div class="top-row"><h3>Flat white</h3><span class="dots" aria-hidden="true"></span><span class="price">£3.40</span></div><p>Single origin, rotated every month. Oat milk at no extra cost.</p></div><div class="item"><div class="top-row"><h3>Filter coffee</h3><span class="dots" aria-hidden="true"></span><span class="price">£2.90</span></div><p>Batch brew, bottomless if you're staying in.</p></div><div class="item"><div class="top-row"><h3>Cappuccino</h3><span class="dots" aria-hidden="true"></span><span class="price">£3.40</span></div><p>Classic, with chocolate on top if you ask nicely.</p></div><div class="item"><div class="top-row"><h3>Hot chocolate</h3><span class="dots" aria-hidden="true"></span><span class="price">£3.60</span></div><p>Proper chocolate, melted in, with or without cream.</p><div class="tags"><span>V</span></div></div><div class="item"><div class="top-row"><h3>Loose-leaf tea</h3><span class="dots" aria-hidden="true"></span><span class="price">£3.00</span></div><p>Breakfast, Earl Grey, mint or chamomile, by the pot.</p><div class="tags"><span>VG</span></div></div><div class="item"><div class="top-row"><h3>Fresh orange juice</h3><span class="dots" aria-hidden="true"></span><span class="price">£3.80</span></div><p>Squeezed to order.</p><div class="tags"><span>VG</span></div></div></div>
+    <p style="margin-top:22px;color:var(--muted);font-size:14px">VG vegan · V vegetarian · GF gluten-free on request. Ask us about allergens.</p>
+  </div>
+</section>
+
+<section class="book" id="book" aria-labelledby="book-title">
+  <div class="wrap">
+    <div>
+      <p class="kicker">Book a table</p>
+      <h2 id="book-title" data-split style="margin-top:18px">Save me<br><em>a seat.</em></h2>
+      <p class="intro">Walk-ins are always welcome, but weekends get busy. Book a table for brunch and we'll have it ready when you arrive.</p>
+      <div class="ph" data-clip><img src="img/counter-1100.webp" alt="The cake counter at Tambury Park" loading="lazy"></div>
+    </div>
+    <form class="widget" id="widget" novalidate>
+      <div id="step-pick">
+        <div style="display:grid;gap:26px">
+          <div><span class="wl" id="gl">Guests</span><div class="guests" role="group" aria-labelledby="gl"><button type="button" id="gminus" aria-label="Fewer guests">−</button><output id="gcount" aria-live="polite">2</output><button type="button" id="gplus" aria-label="More guests">+</button><small id="gnote">Tables for up to 8. Bigger group? Give us a ring.</small></div></div>
+          <div><span class="wl" id="dl">Day</span><div class="days" id="days" role="group" aria-labelledby="dl"></div></div>
+          <div><span class="wl" id="tl">Time</span><div class="times" id="times" role="group" aria-labelledby="tl"></div></div>
+          <div class="who"><label>Name<input id="bname" autocomplete="name" required></label><label>Mobile<input id="bphone" type="tel" autocomplete="tel" required></label></div>
+          <div class="sumbar"><p id="summary">Choose a time</p><button class="btn btn-dark" type="submit">Book table</button></div>
+        </div>
+      </div>
+      <div class="confirm" id="step-done" hidden role="status" aria-live="polite">
+        <span class="tick"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="m5 12.5 4.5 4.5L19 7.5"/></svg></span>
+        <span class="ref" id="ref">Booking TP-4821</span>
+        <h3>See you <em>soon.</em></h3>
+        <dl id="cdl"></dl>
+        <p class="note">On a real site you'd get a text confirmation now and a reminder the day before. This is a concept, so nothing was booked.</p>
+        <button class="btn btn-line" type="button" id="again">Make another booking</button>
+      </div>
+    </form>
+  </div>
+</section>
+
+<section class="visit" id="visit" aria-labelledby="visit-title">
+  <div class="wrap">
+    <div>
+      <p class="kicker" data-reveal>Visit</p>
+      <h2 id="visit-title" data-split style="margin-top:18px">Find us on<br><em>the parade.</em></h2>
+      <div class="hours" id="hours" data-reveal>
+        <div data-d="1"><span>Monday</span><span>7:30am – 4pm</span></div>
+        <div data-d="2"><span>Tuesday</span><span>7:30am – 4pm</span></div>
+        <div data-d="3"><span>Wednesday</span><span>7:30am – 4pm</span></div>
+        <div data-d="4"><span>Thursday</span><span>7:30am – 4pm</span></div>
+        <div data-d="5"><span>Friday</span><span>7:30am – 5pm</span></div>
+        <div data-d="6"><span>Saturday</span><span>8am – 5pm</span></div>
+        <div data-d="0"><span>Sunday</span><span>9am – 3pm</span></div>
+      </div>
+      <p class="addr" data-reveal>14 Tambury Parade, Southampton<br><span style="color:var(--muted)">Two minutes from the park gates, with bike racks out front.</span></p>
+    </div>
+    <div class="map" data-clip aria-label="Illustrated map showing Tambury Park café on the parade, beside the park"><svg viewBox="0 0 600 600" role="img" aria-label="Map: Tambury Park café on Tambury Parade, beside the park"><rect width="600" height="600" fill="#e9dfcf"/>
+<path d="M330 -10 C 300 160 420 260 380 420 S 300 560 340 620 L 620 620 L 620 -10 Z" fill="#cfd7bf"/>
+<g fill="#bfcaa9"><circle cx="470" cy="150" r="26"/><circle cx="505" cy="230" r="20"/><circle cx="455" cy="330" r="30"/><circle cx="530" cy="430" r="24"/><circle cx="470" cy="520" r="18"/></g>
+<path d="M410 100 C 450 200 430 300 470 380" fill="none" stroke="#f3ebdd" stroke-width="6" stroke-dasharray="2 10" stroke-linecap="round"/>
+<g fill="none" stroke="#fbf7ef" stroke-linecap="round"><path d="M-10 300 C 120 290 220 310 330 300 S 520 290 620 300" stroke-width="30"/><path d="M180 -10 L 200 620" stroke-width="22"/><path d="M-10 140 L 340 160" stroke-width="16"/><path d="M-10 460 L 330 440" stroke-width="16"/><path d="M60 -10 L 90 620" stroke-width="12"/></g>
+<text x="40" y="292" font-family="Figtree,sans-serif" font-size="15" font-weight="700" fill="#8c7a6a" letter-spacing="2">TAMBURY PARADE</text>
+<text x="440" y="70" font-family="Fraunces,Georgia,serif" font-style="italic" font-size="26" fill="#34432f">the park</text>
+<g transform="translate(262 246)"><circle r="40" fill="#c4623a" opacity=".18"/><path d="M0 22 C -16 2 -20 -8 -20 -16 a20 20 0 0 1 40 0 c0 8 -4 18 -20 38z" fill="#c4623a"/><circle cy="-16" r="7" fill="#fbf7ef"/></g>
+<g transform="translate(232 190)"><rect x="-6" y="-26" width="128" height="36" rx="18" fill="#2a1c15"/><text x="58" y="-3" text-anchor="middle" font-family="Fraunces,Georgia,serif" font-style="italic" font-size="17" fill="#f3ebdd">Tambury Park</text></g>
+</svg></div>
+  </div>
+</section>
+</main>
+
+<footer>
+  <div class="wrap">
+    <p class="big">Tambury Park</p>
+    <div class="row"><span>© 2026 Tambury Park (concept) · @tamburypark</span><span>Designed and built by <a href="https://itchenstudio.co.uk">Itchen Studio</a></span></div>
+  </div>
+</footer>
+
+<script src="../../js/gsap.min.js" defer></script>
+<script src="../../js/ScrollTrigger.min.js" defer></script>
+<script src="../../js/lenis.min.js" defer></script>
+<script src="../../js/concept.js" defer></script>
+<script>
+document.addEventListener('DOMContentLoaded', function(){
+  var site = window.ConceptSite.init();
+  var HOURS = { 0:[9,15], 1:[7.5,16], 2:[7.5,16], 3:[7.5,16], 4:[7.5,16], 5:[7.5,17], 6:[8,17] };
+  function fmtH(h){ var hh = Math.floor(h), m = Math.round((h - hh) * 60), ap = hh >= 12 ? 'pm' : 'am', h12 = hh % 12 || 12; return h12 + (m ? ':' + String(m).padStart(2, '0') : '') + ap; }
+
+  /* open now */
+  var now = new Date(), d = now.getDay(), hr = now.getHours() + now.getMinutes() / 60, h = HOURS[d];
+  var openEl = document.getElementById('open'), isOpen = hr >= h[0] && hr < h[1];
+  openEl.classList.toggle('closed', !isOpen);
+  openEl.lastElementChild.textContent = isOpen ? 'Open now · until ' + fmtH(h[1]) : 'Closed now · opens ' + (hr < h[0] ? fmtH(h[0]) + ' today' : fmtH(HOURS[(d + 1) % 7][0]) + ' tomorrow');
+  var row = document.querySelector('#hours [data-d="' + d + '"]'); if (row) row.classList.add('today');
+
+  /* menu tabs */
+  var tabs = document.querySelectorAll('[role="tab"]');
+  tabs.forEach(function(t){
+    t.addEventListener('click', function(){
+      tabs.forEach(function(x){ x.setAttribute('aria-selected', String(x === t)); x.tabIndex = x === t ? 0 : -1; });
+      document.querySelectorAll('[role="tabpanel"]').forEach(function(p){ p.hidden = p.id !== t.getAttribute('aria-controls'); });
+      var p = document.getElementById(t.getAttribute('aria-controls'));
+      if (site.motion) gsap.fromTo(p.querySelectorAll('.item'), { autoAlpha:0, y:16 }, { autoAlpha:1, y:0, duration:.5, stagger:.05, ease:'power3.out' });
+    });
+    t.addEventListener('keydown', function(e){
+      var i = Array.prototype.indexOf.call(tabs, t);
+      if (e.key === 'ArrowRight' || e.key === 'ArrowLeft') { var n = tabs[(i + (e.key === 'ArrowRight' ? 1 : tabs.length - 1)) % tabs.length]; n.focus(); n.click(); }
+    });
+  });
+
+  /* booking */
+  var guests = 2, day = null, time = null;
+  var daysEl = document.getElementById('days'), timesEl = document.getElementById('times');
+  var DN = ['Sun','Mon','Tue','Wed','Thu','Fri','Sat'], MN = ['Jan','Feb','Mar','Apr','May','Jun','Jul','Aug','Sep','Oct','Nov','Dec'];
+  var dates = [];
+  for (var i = 0; i < 7; i++) { var dt = new Date(now.getFullYear(), now.getMonth(), now.getDate() + i); dates.push(dt); }
+  function seeded(n){ var x = Math.sin(n) * 10000; return x - Math.floor(x); }
+  function slots(dt){
+    var hh = HOURS[dt.getDay()], out = [];
+    for (var t = Math.ceil(hh[0] * 2) / 2 + .5; t <= hh[1] - 1; t += .5) {
+      var past = dt.toDateString() === now.toDateString() && t <= hr + .5;
+      var full = seeded(dt.getDate() * 31 + t * 7) < (dt.getDay() === 6 || dt.getDay() === 0 ? .45 : .2);
+      out.push({ t:t, off: past || full, why: past ? 'past' : full ? 'full' : '' });
+    }
+    return out;
+  }
+  function label(t){ var hh = Math.floor(t), m = t % 1 ? '30' : '00'; return String(hh).padStart(2, '0') + ':' + m; }
+  function drawDays(){
+    daysEl.innerHTML = '';
+    dates.forEach(function(dt, k){
+      var b = document.createElement('button'); b.type = 'button'; b.className = 'day';
+      var free = slots(dt).some(function(s){ return !s.off; });
+      b.disabled = !free;
+      b.setAttribute('aria-pressed', String(day === k));
+      b.setAttribute('aria-label', (k === 0 ? 'Today, ' : k === 1 ? 'Tomorrow, ' : '') + DN[dt.getDay()] + ' ' + dt.getDate() + ' ' + MN[dt.getMonth()] + (free ? '' : ', fully booked'));
+      b.innerHTML = '<small>' + (k === 0 ? 'Today' : DN[dt.getDay()]) + '</small><b>' + dt.getDate() + '</b>';
+      b.addEventListener('click', function(){ day = k; time = null; drawDays(); drawTimes(); sum(); });
+      daysEl.appendChild(b);
+    });
+    if (day === null) { var first = dates.findIndex(function(dt){ return slots(dt).some(function(s){ return !s.off; }); }); if (first >= 0) { day = first; drawDays(); } }
+  }
+  function drawTimes(){
+    timesEl.innerHTML = '';
+    if (day === null) return;
+    slots(dates[day]).forEach(function(s){
+      var b = document.createElement('button'); b.type = 'button'; b.className = 'time'; b.textContent = label(s.t);
+      b.disabled = s.off; b.setAttribute('aria-pressed', String(time === s.t));
+      if (s.off) b.setAttribute('aria-label', label(s.t) + (s.why === 'full' ? ', fully booked' : ', not available'));
+      b.addEventListener('click', function(){ time = s.t; drawTimes(); sum(); });
+      timesEl.appendChild(b);
+    });
+    if (site.motion) gsap.from(timesEl.children, { autoAlpha:0, y:8, duration:.35, stagger:.015, ease:'power2.out' });
+  }
+  function when(){ var dt = dates[day]; return (day === 0 ? 'Today' : day === 1 ? 'Tomorrow' : DN[dt.getDay()]) + ' ' + dt.getDate() + ' ' + MN[dt.getMonth()]; }
+  function sum(){
+    document.getElementById('summary').innerHTML = time === null ? 'Choose a time' : 'Table for <b>' + guests + '</b> · <b>' + when() + '</b> at <b>' + label(time) + '</b>';
+  }
+  function setGuests(n){ guests = Math.max(1, Math.min(8, n)); document.getElementById('gcount').textContent = guests; document.getElementById('gminus').disabled = guests <= 1; document.getElementById('gplus').disabled = guests >= 8; sum(); }
+  document.getElementById('gminus').addEventListener('click', function(){ setGuests(guests - 1); });
+  document.getElementById('gplus').addEventListener('click', function(){ setGuests(guests + 1); });
+  document.getElementById('widget').addEventListener('submit', function(e){
+    e.preventDefault();
+    if (time === null) { document.getElementById('summary').innerHTML = '<b style="color:var(--terra)">Pick a time first</b>'; return; }
+    var n = document.getElementById('bname'), p = document.getElementById('bphone'), bad = null;
+    [n, p].forEach(function(el){ var ok = el.value.trim() !== ''; el.style.borderColor = ok ? '' : '#b3261e'; if (!ok && !bad) bad = el; });
+    if (bad) { bad.focus(); return; }
+    document.getElementById('ref').textContent = 'Booking TP-' + (1000 + Math.floor(Math.random() * 8999));
+    document.getElementById('cdl').innerHTML = '<dt>Name</dt><dd>' + n.value.replace(/[<>&]/g, '') + '</dd><dt>Guests</dt><dd>' + guests + '</dd><dt>When</dt><dd>' + when() + ', ' + label(time) + '</dd>';
+    document.getElementById('step-pick').hidden = true;
+    var done = document.getElementById('step-done'); done.hidden = false;
+    if (site.motion) gsap.from(done.children, { autoAlpha:0, y:16, duration:.5, stagger:.07, ease:'power3.out' });
+  });
+  document.getElementById('again').addEventListener('click', function(){ document.getElementById('step-done').hidden = true; document.getElementById('step-pick').hidden = false; time = null; drawTimes(); sum(); });
+  setGuests(2); drawDays(); drawTimes(); sum();
+
+  if (!site.motion) return;
+  /* collage drift */
+  document.querySelectorAll('[data-drift]').forEach(function(el){
+    gsap.to(el, { yPercent: +el.dataset.drift * 2, ease:'none', scrollTrigger:{ trigger:'.hero', start:'top top', end:'bottom top', scrub:true } });
+  });
+  gsap.from('.collage .a', { yPercent:12, autoAlpha:0, duration:1.4, ease:'expo.out', delay:.25 });
+  gsap.from('.collage .b', { yPercent:20, autoAlpha:0, duration:1.4, ease:'expo.out', delay:.4 });
+
+  /* zoom into the café */
+  var mm = gsap.matchMedia();
+  mm.add('(min-width: 0px)', function(){
+    var f = document.getElementById('zframe');
+    gsap.timeline({ scrollTrigger:{ trigger:'.zoom-pin', start:'top top', end:'+=1400', pin:true, scrub:.6, anticipatePin:1 } })
+      .to(f, { width:'100vw', height:'100vh', borderRadius:0, ease:'power1.inOut', duration:1 })
+      .from('.zoom-copy', { autoAlpha:0, y:40, duration:.4 }, .55)
+      .to({}, { duration:.3 });
+  });
+});
+</script>
+</body>
+</html>
