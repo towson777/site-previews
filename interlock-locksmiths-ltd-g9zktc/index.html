@@ -1,0 +1,570 @@
+<!doctype html>
+<!--
+ART DIRECTION BRIEF — Interlock Locksmiths Ltd (Southampton)
+Idea: a lock is a few millimetres of precision. The page lets you watch one open: a key slides in, five pin stacks climb to the shear line, the bolt withdraws.
+Palette: ink #10141b, steel blue #3d63b0 / deep #243e78 (from their logo's blue), mist #eef2f8, white, lime #c8f23a for calls to act.
+Type: Archivo (width axis, 62-125%) set condensed, heavy, uppercase for display; Hanken Grotesk for text.
+Hero: full-bleed photo of hands and a driver at a lock, type breaking over it in two giant lines, proof line pinned along the bottom. Not a two-column split.
+Signature scroll moment: "The key turns" — pinned SVG cutaway of a pin-tumbler cylinder. Scroll slides the key in; each pin rides the key's cuts up to the shear line; the bolt then retracts and the label flips to OPEN. Phones get an auto-playing, unpinned version.
+Interactive feature: quote wizard — what's happened > postcode (checks coverage) > photos (thumbnails) > details > confirmation reference. Sends nothing.
+Headline shortlist: 1 Doors that lock, slide and close. / 2 Locked out? Call Tim. / 3 Bifolds that slide again. / 4 Locks that turn. Doors that slide. / 5 Twenty years of stuck doors. / 6 uPVC locks, fixed today. / 7 Southampton to Portsmouth, door by door. / 8 Every door, every lock. / 9 Doors that open and shut. / 10 Fixed before it's replaced.
+Crossed out: 2 (needs a first-name introduction), 5 (jokey, "20+" is vague), 6 (promise of same-day not in the facts), 7 (clumsy), 8 and 9 (any locksmith), 10 (claim not supported).
+Pick: "Locks that turn. Doors that slide." — says the two things they are known for (uPVC/high-security locks, bifold and patio door repairs) in six plain words.
+-->
+<html lang="en-GB">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<meta name="robots" content="noindex,nofollow">
+<title>Interlock Locksmiths Ltd · Southampton</title>
+<meta name="description" content="A website concept for Interlock Locksmiths Ltd, Southampton. Preview only.">
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Crect width='32' height='32' rx='7' fill='%233d63b0'/%3E%3Ccircle cx='16' cy='11' r='6' fill='%23fff'/%3E%3Crect x='13.5' y='15' width='5' height='13' fill='%23fff'/%3E%3C/svg%3E">
+<link rel="preload" href="assets/fonts/archivo.woff2" as="font" type="font/woff2" crossorigin>
+<link rel="preload" href="assets/fonts/hanken-grotesk.woff2" as="font" type="font/woff2" crossorigin>
+<script>(function(d){if(!matchMedia('(prefers-reduced-motion: reduce)').matches){d.documentElement.classList.add('motion');setTimeout(function(){if(!d.documentElement.classList.contains('ready'))d.documentElement.classList.remove('motion')},3000)}})(document)</script>
+<style>
+@font-face{font-family:"Archivo";src:url("assets/fonts/archivo.woff2") format("woff2");font-weight:100 900;font-stretch:62% 125%;font-display:swap}
+@font-face{font-family:"Hanken Grotesk";src:url("assets/fonts/hanken-grotesk.woff2") format("woff2");font-weight:100 900;font-display:swap}
+:root{
+  --ink:#10141b; --char:#1a2029; --line:#2a3340; --steel:#3d63b0; --steel-deep:#243e78; --steel-text:#2c4c93; --mist:#eef2f8; --paper:#fff; --muted:#566274; --lime:#c8f23a; --lime-deep:#a6cc1f;
+  --display:"Archivo", "Arial Narrow", system-ui, sans-serif; --body:"Hanken Grotesk", system-ui, sans-serif; --ease:cubic-bezier(.2,.8,.2,1);
+}
+*{box-sizing:border-box}
+html.lenis,html.lenis body{height:auto}
+body{margin:0;background:var(--mist);color:var(--ink);font:400 17px/1.6 var(--body);-webkit-font-smoothing:antialiased;overflow-x:clip}
+img{max-width:100%;display:block}
+p{margin:0}
+.wrap{max-width:1280px;margin:0 auto;padding-inline:36px}
+@media (max-width:640px){.wrap{padding-inline:16px}}
+.cond{font-family:var(--display);font-stretch:68%;font-weight:800;text-transform:uppercase;letter-spacing:-.005em;line-height:.9;margin:0}
+h2.cond{font-size:clamp(46px,7vw,104px)}
+h3{margin:0}
+.lbl{font:700 13px/1 var(--body);letter-spacing:.2em;text-transform:uppercase;color:var(--steel-text)}
+:focus-visible{outline:3px solid var(--lime);outline-offset:3px;border-radius:3px}
+.light :focus-visible,.on-light :focus-visible{outline-color:var(--steel)}
+[hidden]{display:none!important}
+.btn{display:inline-flex;align-items:center;justify-content:center;gap:10px;min-height:52px;padding:0 26px;border-radius:4px;border:2px solid var(--lime);background:var(--lime);color:var(--ink);font:800 16px/1 var(--display);font-stretch:85%;letter-spacing:.06em;text-transform:uppercase;text-decoration:none;cursor:pointer;transition:background-color .25s,color .25s,transform .25s var(--ease)}
+.btn:hover{background:#fff;border-color:#fff;transform:translateY(-2px)}
+.btn.ghost{background:transparent;color:#fff;border-color:#ffffff66}
+.btn.ghost:hover{background:#fff;color:var(--ink);border-color:#fff}
+.btn.dark{background:var(--ink);border-color:var(--ink);color:#fff}
+.btn.dark:hover{background:var(--steel);border-color:var(--steel)}
+.btn svg{width:20px;height:20px}
+
+/* preview banner */
+.concept{background:#0a0d12;color:#b9c3d1;font-size:13px;line-height:18px;text-align:center;padding:8px 16px}
+.concept b{color:#fff;font-weight:600}
+
+/* header */
+.top{position:sticky;top:0;z-index:60;background:#10141bf0;backdrop-filter:blur(10px);-webkit-backdrop-filter:blur(10px);color:#fff;border-bottom:1px solid #ffffff14;transition:transform .5s var(--ease)}
+.top.away{transform:translateY(-100%)}
+.top .wrap{display:flex;align-items:center;justify-content:space-between;gap:20px;height:72px}
+.logo{display:block;color:#fff;text-decoration:none}
+.logo svg{height:46px;width:auto;display:block}
+.top nav{display:flex;gap:30px}
+.top nav a{color:#d7deea;text-decoration:none;font:600 15px/1 var(--body);letter-spacing:.04em;padding:12px 0}
+.top nav a:hover{color:var(--lime)}
+.top .btn{min-height:46px;padding:0 20px;font-size:15px}
+@media (max-width:900px){.top nav{display:none}}
+@media (max-width:420px){.top .btn .num{display:none}.logo svg{height:40px}}
+
+/* hero */
+.hero{position:relative;min-height:min(94vh,900px);display:flex;align-items:flex-end;background:var(--ink);color:#fff;overflow:hidden}
+.hero .bg{position:absolute;inset:0}
+.hero .bg img{width:100%;height:100%;object-fit:cover;object-position:62% 50%}
+.hero .bg::after{content:"";position:absolute;inset:0;background:linear-gradient(90deg,#10141bf5 0%,#10141bd9 34%,#10141b66 66%,#10141b1a 100%),linear-gradient(0deg,#10141bf0 0%,#10141b00 46%)}
+.hero .wrap{position:relative;width:100%;padding-block:110px 40px}
+.hero h1{font-size:clamp(50px,9.6vw,172px);margin:20px 0 0;max-width:12em}
+.hero h1 .ln{display:block;overflow:hidden;padding-bottom:.05em}
+.hero h1 .ln>span{display:inline-block}
+.hero h1 .lm{color:var(--lime)}
+.hero .lead{font-size:clamp(17px,1.5vw,21px);line-height:1.55;max-width:33em;margin-top:26px;color:#dde4ee}
+.hero .ctas{display:flex;flex-wrap:wrap;gap:12px;margin-top:30px}
+.proof{display:flex;flex-wrap:wrap;gap:10px 34px;margin-top:44px;padding-top:22px;border-top:1px solid #ffffff2e;font-size:15px;color:#dde4ee}
+.proof b{color:#fff;font:800 22px/1 var(--display);font-stretch:80%;margin-right:8px;letter-spacing:.02em}
+.proof span{display:inline-flex;align-items:baseline}
+.hero .lbl{color:var(--lime)}
+html.motion:not(.ready) .hero h1 .ln>span{transform:translateY(105%)}
+html.motion:not(.ready) [data-intro]{opacity:0}
+
+/* ribbon */
+.strip{background:var(--lime);color:var(--ink);overflow:hidden;white-space:nowrap;padding:15px 0;font:800 20px/1 var(--display);font-stretch:70%;text-transform:uppercase;letter-spacing:.05em}
+.strip .track{display:inline-flex;will-change:transform}
+.strip .track span{padding:0 26px;display:inline-flex;align-items:center;gap:26px}
+.strip .track span::after{content:"";width:9px;height:9px;background:var(--ink);transform:rotate(45deg)}
+
+/* services */
+.services{padding-block:130px 90px}
+.sec-head{display:flex;justify-content:space-between;align-items:end;gap:32px;flex-wrap:wrap;margin-bottom:56px}
+.sec-head p.in{max-width:28em;color:var(--muted);font-size:18px}
+.sgrid{display:grid;grid-template-columns:repeat(12,minmax(0,1fr));gap:18px}
+.svc{position:relative;background:var(--paper);border-radius:10px;padding:30px 28px 28px;display:flex;flex-direction:column;gap:14px;overflow:hidden;min-height:260px;transition:transform .45s var(--ease),box-shadow .45s}
+.svc:hover{transform:translateY(-6px);box-shadow:0 26px 40px -26px #10141b66}
+.svc .n{font:800 15px/1 var(--display);font-stretch:80%;letter-spacing:.14em;color:var(--steel-text)}
+.svc h3{font:800 clamp(30px,3vw,42px)/.95 var(--display);font-stretch:68%;text-transform:uppercase;margin-top:auto}
+.svc p{color:var(--muted);font-size:16px;line-height:1.55;max-width:30em}
+.svc.s1{grid-column:span 5;background:var(--ink);color:#fff}.svc.s1 p{color:#b9c3d1}.svc.s1 .n{color:var(--lime)}
+.svc.s2{grid-column:span 7;display:grid;grid-template-columns:minmax(0,1fr) minmax(0,.8fr);gap:0;padding:0}
+.svc.s2 .tx{padding:30px 28px;display:flex;flex-direction:column;gap:14px}
+.svc.s2 .ph{position:relative;overflow:hidden}
+.svc.s2 .ph img{position:absolute;inset:0;width:100%;height:100%;object-fit:cover}
+.svc.s3{grid-column:span 4}.svc.s4{grid-column:span 4;background:var(--steel);color:#fff}.svc.s4 p{color:#dce6f9}.svc.s4 .n{color:var(--lime)}
+.svc.s5{grid-column:span 4}
+.svc .tag{display:inline-block;margin-top:2px;font:700 12px/1 var(--body);letter-spacing:.14em;text-transform:uppercase;padding:7px 10px;border-radius:99px;background:var(--lime);color:var(--ink);align-self:flex-start}
+@media (max-width:1000px){.svc.s1,.svc.s2,.svc.s3,.svc.s4,.svc.s5{grid-column:span 12}.svc.s2{grid-template-columns:1fr}.svc.s2 .ph{aspect-ratio:4/3}}
+@media (max-width:620px){.services{padding-block:84px 56px}.svc{min-height:0}}
+
+/* the key turns */
+.scene{position:relative;background:var(--ink);color:#fff}
+.scene-pin{min-height:100vh;display:grid;grid-template-rows:auto 1fr;align-content:center;gap:10px;padding-block:90px 40px}
+.scene-top{display:grid;grid-template-columns:minmax(0,1.1fr) minmax(0,1fr);gap:48px;align-items:end}
+.scene h2{color:#fff}
+.scene h2 span{color:var(--lime)}
+.stages{display:grid;gap:14px;max-width:34em}
+.stage{display:grid;grid-template-columns:44px 1fr;gap:12px;opacity:.35;transition:opacity .4s}
+.stage.on{opacity:1}
+.stage .k{font:800 22px/1 var(--display);font-stretch:70%;color:var(--lime);padding-top:3px}
+.stage h3{font:800 24px/1 var(--display);font-stretch:70%;text-transform:uppercase;margin-bottom:5px}
+.stage p{color:#b9c3d1;font-size:16px;line-height:1.5}
+html:not(.motion) .stage{opacity:1}
+.lockfig{margin:0;position:relative}
+.lockfig svg{width:100%;height:auto;display:block;max-height:46vh}
+.lockfig figcaption{position:absolute;left:0;bottom:0;font:700 12px/1 var(--body);letter-spacing:.18em;text-transform:uppercase;color:#8a96a8}
+.state{position:absolute;right:0;top:4%;font:800 clamp(26px,3.4vw,44px)/1 var(--display);font-stretch:68%;text-transform:uppercase;letter-spacing:.02em;color:#8a96a8;transition:color .3s}
+.state.open{color:var(--lime)}
+@media (max-width:900px){.scene-top{grid-template-columns:1fr;gap:22px}.scene-pin{padding-block:70px 40px}.stage p{font-size:15px}}
+
+/* work */
+.work{padding-block:130px 40px}
+.wgrid{display:grid;grid-template-columns:1.15fr .85fr .8fr;gap:16px;margin-top:20px;align-items:start}
+.wgrid figure{margin:0}
+.wgrid .fr{position:relative;overflow:hidden;background:#cfd7e3}
+.wgrid img{width:100%;height:116%;object-fit:cover}
+.wgrid .w1 .fr{aspect-ratio:4/4.6}.wgrid .w2 .fr{aspect-ratio:3/4.4}.wgrid .w3 .fr{aspect-ratio:3/4}
+.wgrid .w2{margin-top:90px}.wgrid .w3{margin-top:30px}
+.wgrid figcaption{font:700 12px/1.4 var(--body);letter-spacing:.14em;text-transform:uppercase;color:var(--muted);margin-top:10px}
+@media (max-width:860px){.wgrid{grid-template-columns:1fr 1fr}.wgrid .w1{grid-column:1/-1}.wgrid .w1 .fr{aspect-ratio:4/3.4}.wgrid .w2{margin-top:0}.wgrid .w3{margin-top:40px}}
+@media (max-width:620px){.work{padding-block:84px 24px}}
+
+/* reviews */
+.reviews{padding-block:100px 110px;overflow:hidden}
+.rv-head{display:flex;align-items:end;justify-content:space-between;gap:24px;flex-wrap:wrap;margin-bottom:44px}
+.big{display:flex;align-items:flex-end;gap:18px}
+.big .num{font:800 clamp(110px,18vw,250px)/.8 var(--display);font-stretch:62%;letter-spacing:-.03em;color:var(--steel-deep);font-variant-numeric:tabular-nums}
+.big .cap{font-size:17px;color:var(--muted);max-width:14em;padding-bottom:10px}
+.big .cap b{display:block;color:var(--ink);font:800 26px/1.05 var(--display);font-stretch:75%;text-transform:uppercase}
+.rv-row{display:inline-flex;gap:18px;white-space:nowrap;will-change:transform;padding-block:6px}
+.rv-wrap{overflow:hidden;white-space:nowrap}
+.rv{white-space:normal;flex:none;width:min(460px,82vw);background:#fff;border-radius:10px;padding:28px;display:flex;flex-direction:column;gap:18px;justify-content:space-between;min-height:220px}
+.rv.dk{background:var(--steel-deep);color:#fff}
+.rv blockquote{margin:0;font:800 clamp(26px,2.6vw,34px)/1.02 var(--display);font-stretch:72%;text-transform:uppercase}
+.rv cite{font:700 13px/1.3 var(--body);letter-spacing:.12em;text-transform:uppercase;font-style:normal;color:var(--muted)}
+.rv.dk cite{color:#c9d6f2}
+.rv .stars{color:var(--lime-deep);letter-spacing:3px;font-size:15px}
+.rv.dk .stars{color:var(--lime)}
+
+/* director */
+.dir{background:var(--steel-deep);color:#fff;padding-block:110px}
+.dir .wrap{display:grid;grid-template-columns:minmax(0,.9fr) minmax(0,1.1fr);gap:60px;align-items:center}
+.yrs{font:800 clamp(150px,24vw,360px)/.78 var(--display);font-stretch:62%;color:var(--lime);letter-spacing:-.03em;display:flex;align-items:flex-start;flex-wrap:wrap}
+.yrs b{font-weight:800}.yrs small{flex-basis:100%;font:700 14px/1 var(--body);letter-spacing:.2em;text-transform:uppercase;color:#dce6f9;margin-top:22px}
+.dir h2{margin-top:18px}
+.dir p.t{font-size:19px;line-height:1.6;color:#dce6f9;max-width:30em;margin-top:26px}
+.dir ul{list-style:none;padding:0;margin:30px 0 0;display:flex;flex-wrap:wrap;gap:10px}
+.dir li{border:1px solid #ffffff44;border-radius:99px;padding:9px 16px;font:600 14px/1 var(--body);letter-spacing:.04em}
+.dir .lbl{color:var(--lime)}
+@media (max-width:860px){.dir{padding-block:80px}.dir .wrap{grid-template-columns:1fr;gap:34px}}
+
+/* quote wizard */
+.quote{background:var(--ink);color:#fff;padding-block:120px}
+.quote .wrap{display:grid;grid-template-columns:minmax(0,.9fr) minmax(0,1.1fr);gap:70px;align-items:start}
+.quote h2{color:#fff}
+.quote h2 span{color:var(--lime)}
+.quote .intro{color:#b9c3d1;font-size:18px;margin-top:24px;max-width:26em}
+.quote .call{margin-top:32px;display:grid;gap:6px}
+.quote .call a.tel{font:800 clamp(34px,4vw,54px)/1 var(--display);font-stretch:72%;color:var(--lime);text-decoration:none;letter-spacing:.01em}
+.quote .call a.tel:hover{color:#fff}
+.quote .call span{color:#b9c3d1;font-size:15px}
+.wiz{background:#fff;color:var(--ink);border-radius:12px;padding:28px 28px 26px;position:relative}
+.wiz :focus-visible{outline-color:var(--steel)}
+.wiz-prog{display:flex;gap:6px;margin-bottom:22px}
+.wiz-prog i{flex:1;height:5px;border-radius:9px;background:#dfe5ee;transition:background-color .3s}
+.wiz-prog i.on{background:var(--steel)}
+.wiz h3{font:800 clamp(30px,3.4vw,40px)/.95 var(--display);font-stretch:68%;text-transform:uppercase;margin-bottom:18px}
+.wiz .step-n{font:700 12px/1 var(--body);letter-spacing:.18em;text-transform:uppercase;color:var(--steel-text);display:block;margin-bottom:12px}
+.opts{display:grid;gap:10px}
+.opt{all:unset;box-sizing:border-box;display:grid;grid-template-columns:1fr auto;gap:2px 14px;padding:15px 18px;border:2px solid #dfe5ee;border-radius:8px;cursor:pointer;background:#fff;transition:border-color .2s,background-color .2s}
+.opt:hover{border-color:var(--steel)}
+.opt[aria-pressed="true"]{border-color:var(--steel);background:#eef3fd}
+.opt:focus-visible{outline:3px solid var(--steel);outline-offset:2px}
+.opt b{font:800 21px/1.1 var(--display);font-stretch:80%;text-transform:uppercase;letter-spacing:.01em}
+.opt span{font-size:14.5px;color:var(--muted);grid-column:1}
+.opt i{grid-column:2;grid-row:1/span 2;align-self:center;width:22px;height:22px;border-radius:50%;border:2px solid #c3ccda;display:grid;place-items:center}
+.opt[aria-pressed="true"] i{background:var(--steel);border-color:var(--steel)}
+.opt[aria-pressed="true"] i::after{content:"";width:7px;height:11px;border:solid #fff;border-width:0 2px 2px 0;transform:rotate(45deg) translate(-1px,-1px)}
+.fld{display:grid;gap:6px;font:700 14px/1.2 var(--body);margin-bottom:14px}
+.fld input,.fld textarea,.fld select{font:inherit;font-weight:500;font-size:17px;border:2px solid #cfd7e3;border-radius:6px;padding:13px 14px;background:#fff;color:var(--ink);width:100%}
+.fld input:focus,.fld textarea:focus{outline:none;border-color:var(--steel)}
+.fld small{font-weight:500;color:var(--muted);font-size:13.5px}
+.cov{margin-top:6px;padding:14px 16px;border-radius:8px;font-size:16px;line-height:1.4;display:flex;gap:10px;align-items:flex-start}
+.cov.yes{background:#eaf7c8;color:#34470a}.cov.no{background:#fdebd6;color:#6b3d05}
+.cov svg{width:22px;height:22px;flex:none;margin-top:1px}
+.drop{display:grid;place-items:center;text-align:center;gap:6px;border:2px dashed #aab6c9;border-radius:10px;padding:26px 16px;cursor:pointer;background:#f7f9fc;transition:background-color .2s,border-color .2s}
+.drop:hover,.drop:focus-within{background:#eef3fd;border-color:var(--steel)}
+.drop b{font:800 20px/1 var(--display);font-stretch:80%;text-transform:uppercase}
+.drop span{color:var(--muted);font-size:14.5px}
+.drop input{position:absolute;opacity:0;width:1px;height:1px}
+.thumbs{display:grid;grid-template-columns:repeat(auto-fill,minmax(84px,1fr));gap:8px;margin-top:12px}
+.thumbs div{position:relative;aspect-ratio:1;border-radius:6px;overflow:hidden;background:#e5eaf2}
+.thumbs img{width:100%;height:100%;object-fit:cover}
+.thumbs button{position:absolute;top:4px;right:4px;width:28px;height:28px;border-radius:50%;border:0;background:#10141bcc;color:#fff;font-size:15px;line-height:1;cursor:pointer}
+.wiz-foot{display:flex;justify-content:space-between;align-items:center;gap:12px;margin-top:22px;padding-top:18px;border-top:1px solid #e5eaf2}
+.wiz-foot .btn{min-height:50px;font-size:15px}
+.wiz-foot .btn[disabled]{opacity:.4;cursor:not-allowed;transform:none}
+.link{all:unset;cursor:pointer;font:700 14px/1 var(--body);letter-spacing:.1em;text-transform:uppercase;color:var(--steel-text);padding:12px 4px;border-bottom:2px solid transparent}
+.link:hover{border-bottom-color:currentColor}
+.link:focus-visible{outline:3px solid var(--steel)}
+.done{text-align:left}
+.done .ref{display:inline-block;font:800 22px/1 var(--display);font-stretch:80%;letter-spacing:.08em;background:var(--lime);padding:10px 14px;border-radius:5px;margin:4px 0 18px}
+.done dl{display:grid;grid-template-columns:auto 1fr;gap:8px 20px;margin:0 0 18px;font-size:16px}
+.done dt{color:var(--muted)}.done dd{margin:0;font-weight:600}
+.done .note{background:#eef3fd;border-radius:8px;padding:14px 16px;font-size:15px;color:var(--steel-deep)}
+@media (max-width:960px){.quote{padding-block:84px}.quote .wrap{grid-template-columns:1fr;gap:40px}}
+@media (max-width:520px){.wiz{padding:20px 16px 18px}}
+
+/* areas */
+.areas{padding-block:120px 70px}
+.arealist{list-style:none;margin:44px 0 0;padding:0;border-top:2px solid var(--ink)}
+.arealist li{display:flex;align-items:baseline;justify-content:space-between;gap:20px;padding:18px 0;border-bottom:2px solid var(--ink);transition:padding-left .4s var(--ease),background-color .3s}
+.arealist li:hover{padding-left:20px;background:#fff}
+.arealist .a{font:800 clamp(44px,8vw,120px)/.95 var(--display);font-stretch:62%;text-transform:uppercase}
+.arealist .p{font:700 14px/1.3 var(--body);letter-spacing:.14em;text-transform:uppercase;color:var(--muted);text-align:right}
+@media (max-width:620px){.areas{padding-block:80px 48px}.arealist .p{display:none}}
+
+/* contact + footer */
+.foot{background:var(--steel-deep);color:#fff;padding-block:90px 36px}
+.foot .row{display:grid;grid-template-columns:minmax(0,1.3fr) repeat(2,minmax(0,1fr));gap:48px}
+.foot .logo svg{height:74px}
+.foot h4{margin:0 0 16px;font:700 13px/1 var(--body);letter-spacing:.2em;text-transform:uppercase;color:var(--lime)}
+.foot p,.foot li{color:#dce6f9;font-size:16px}
+.foot ul{list-style:none;margin:0;padding:0;display:grid;gap:8px}
+.foot a{color:#fff;text-decoration-thickness:1px;text-underline-offset:3px}
+.foot a.tel{font:800 34px/1 var(--display);font-stretch:72%;color:var(--lime);text-decoration:none;display:inline-block;margin-bottom:8px}
+.foot .fine{display:flex;justify-content:space-between;flex-wrap:wrap;gap:14px;border-top:1px solid #ffffff2e;margin-top:64px;padding-top:20px;font-size:14px;color:#b9cbef}
+@media (max-width:860px){.foot .row{grid-template-columns:1fr;gap:34px}}
+
+/* mobile call bar */
+.callbar{display:none}
+@media (max-width:700px){.callbar{display:flex;position:fixed;left:0;right:0;bottom:0;z-index:55;padding:10px 16px calc(10px + env(safe-area-inset-bottom,0px));background:#10141bf2;backdrop-filter:blur(8px);border-top:1px solid #ffffff1f}.callbar .btn{width:100%}body{padding-bottom:72px}}
+@media (prefers-reduced-motion:reduce){*{transition:none!important;animation:none!important}}
+</style>
+</head>
+<body>
+<div class="concept" role="note">Website concept for <b>Interlock Locksmiths Ltd</b> — preview only, not the live site. Designed by Itchen Studio · sam@itchenstudio.co.uk</div>
+
+<svg width="0" height="0" style="position:absolute" aria-hidden="true" focusable="false">
+  <symbol id="logo" viewBox="0 0 420 142">
+    <text x="0" y="62" font-family="Archivo, Arial, sans-serif" font-weight="800" font-size="70" textLength="318" lengthAdjust="spacingAndGlyphs" fill="currentColor" style="font-stretch:100%">INTERLOCK</text>
+    <text x="0" y="124" font-family="Archivo, Arial, sans-serif" font-weight="800" font-size="58" textLength="318" lengthAdjust="spacingAndGlyphs" fill="currentColor" style="font-stretch:100%">LOCKSMITHS</text>
+    <text x="324" y="124" font-family="Archivo, Arial, sans-serif" font-weight="700" font-size="17" fill="currentColor">LTD</text>
+    <g class="keyg">
+      <path d="M386 14c-14 0-25 11-25 25 0 10 6 19 15 23v18l-9 6v9l9 5v6l-8 6v10l9 5 7-5V62c9-4 15-13 15-23 0-14-11-25-25-25z" fill="#c8f23a"/>
+      <circle cx="386" cy="35" r="8" fill="#10141b"/>
+    </g>
+  </symbol>
+</svg>
+
+<header class="top">
+  <div class="wrap">
+    <a class="logo" href="#top" aria-label="Interlock Locksmiths Ltd, home"><svg viewBox="0 0 420 142" role="img" aria-hidden="true"><use href="#logo"/></svg></a>
+    <nav aria-label="Main"><a href="#services">Services</a><a href="#key">How a lock opens</a><a href="#reviews">Reviews</a><a href="#areas">Areas</a></nav>
+    <a class="btn" href="tel:07887512272"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 4h4l2 5-2.5 1.5a11 11 0 0 0 5 5L15 13l5 2v4a2 2 0 0 1-2 2A16 16 0 0 1 3 6a2 2 0 0 1 2-2z"/></svg><span>Call <span class="num">07887 512272</span></span></a>
+  </div>
+</header>
+
+<main id="top">
+<section class="hero" aria-labelledby="h1">
+  <div class="bg"><img src="assets/img/drill-1100.webp" srcset="assets/img/drill-1100.webp 1100w, assets/img/drill-2000.webp 2000w" sizes="100vw" alt="Hands fitting a lock into a door edge with a cordless driver"></div>
+  <div class="wrap">
+    <p class="lbl" data-intro>Locksmith · Southampton</p>
+    <h1 class="cond" id="h1"><span class="ln"><span>Locks that turn.</span></span><span class="ln"><span class="lm">Doors that slide.</span></span></h1>
+    <p class="lead" data-intro>Tim Guille runs Interlock Locksmiths from Southampton. uPVC and composite door locks, bifold and patio door repairs, high-security upgrades and emergency lockouts, from Southampton to Portsmouth, the New Forest and Winchester.</p>
+    <div class="ctas" data-intro><a class="btn" href="tel:07887512272">Call 07887 512272</a><a class="btn ghost" href="#quote">Get a quote</a></div>
+    <p class="proof" data-intro><span><b>10/10</b> on Checkatrade</span><span><b>371</b> reviews</span><span><b>20+</b> years</span><span>Buy With Confidence</span></p>
+  </div>
+</section>
+
+<div class="strip" aria-hidden="true"><div class="track" data-speed="0.7"><span>Lockouts</span><span>uPVC door locks</span><span>Bifold and patio doors</span><span>High-security locks</span><span>Window locks</span><span>Safe locks</span><span>Hinges and hardware</span><span>Lockouts</span><span>uPVC door locks</span><span>Bifold and patio doors</span><span>High-security locks</span><span>Window locks</span><span>Safe locks</span><span>Hinges and hardware</span></div></div>
+
+<section class="services" id="services" aria-labelledby="svc-t">
+  <div class="wrap">
+    <div class="sec-head"><div><p class="lbl" data-reveal>What Interlock does</p><h2 class="cond" id="svc-t" data-split style="margin-top:18px">Five jobs, <br>one number.</h2></div><p class="in" data-reveal>Most calls start with a door that has stopped doing one of three things: locking, opening or closing. Here is what gets fixed.</p></div>
+    <div class="sgrid">
+      <article class="svc s1" data-reveal><span class="n">01</span><h3>Lockouts and emergencies</h3><p>Shut out of your own front door? Ring, give your postcode and find out what happens next.</p><span class="tag">Call first</span></article>
+      <article class="svc s2" data-reveal><div class="tx"><span class="n">02</span><h3>uPVC door locks</h3><p>Handle spinning loose, key stiff, door that will not lock at all. uPVC multipoint locks are the speciality.</p></div><div class="ph"><img src="assets/img/multipoint-1100.webp" alt="A multipoint door lock mechanism laid out on a tool case" loading="lazy"></div></article>
+      <article class="svc s3" data-reveal><span class="n">03</span><h3>Bifold and patio doors</h3><p>Sliding doors that drag, bifolds that will not latch. Repaired and adjusted so they glide again.</p></article>
+      <article class="svc s4" data-reveal><span class="n">04</span><h3>High-security locks</h3><p>Upgrades for front doors and windows, fitted to suit the door you already have.</p></article>
+      <article class="svc s5" data-reveal><span class="n">05</span><h3>Window and safe locks, hinges</h3><p>Window locks, safe locks, hinges and door hardware, fitted or replaced.</p></article>
+    </div>
+  </div>
+</section>
+
+<section class="scene" id="key" aria-labelledby="key-t">
+  <div class="scene-pin">
+    <div class="wrap">
+      <div class="scene-top">
+        <div><p class="lbl" style="color:var(--lime)">How a lock opens</p><h2 class="cond" id="key-t" style="margin-top:18px;font-size:clamp(42px,5.2vw,78px)">The key <span>turns.</span><br>Pins line up.</h2></div>
+        <div class="stages" id="stages">
+          <div class="stage on" data-stage="0"><span class="k">01</span><div><h3>Key goes in</h3><p>Five spring-loaded pin stacks sit in the way. While they block the plug, the lock stays locked.</p></div></div>
+          <div class="stage" data-stage="1"><span class="k">02</span><div><h3>Pins find the line</h3><p>Each cut in the key is a different depth. Together they lift every pin to the shear line.</p></div></div>
+          <div class="stage" data-stage="2"><span class="k">03</span><div><h3>Bolt withdraws</h3><p>Worn pins, wrong cuts, a bolt that sticks: when one of these goes, the door stops working. That is the job.</p></div></div>
+        </div>
+      </div>
+      <figure class="lockfig">
+        <svg id="lock" viewBox="0 0 1000 330" role="img" aria-label="Cutaway of a pin tumbler lock. A key slides in, lifts five pins to the shear line and the bolt withdraws."></svg>
+        <figcaption>Pin tumbler cylinder, simplified</figcaption>
+        <span class="state" id="state" aria-live="polite">Locked</span>
+      </figure>
+    </div>
+  </div>
+</section>
+
+<section class="work" aria-labelledby="work-t">
+  <div class="wrap">
+    <p class="lbl" data-reveal>On the bench</p>
+    <h2 class="cond" id="work-t" data-split style="margin-top:18px">Close up<br>on the work.</h2>
+    <div class="wgrid">
+      <figure class="w1"><div class="fr" data-clip><img src="assets/img/deadlock-1100.webp" alt="A mortice deadlock fitted into the edge of an oak door, with keys in the lock" loading="lazy" data-parallax></div><figcaption>Mortice deadlock on an oak door</figcaption></figure>
+      <figure class="w2"><div class="fr" data-clip><img src="assets/img/multipoint-1100.webp" alt="A multipoint door lock, taken apart, beside a spare gearbox" loading="lazy" data-parallax></div><figcaption>A multipoint mechanism, stripped down</figcaption></figure>
+      <figure class="w3"><div class="fr" data-clip><img src="assets/img/engineer-1100.webp" alt="A member of the Interlock Locksmiths team in a grey company polo shirt" loading="lazy" data-parallax></div><figcaption>Interlock Locksmiths</figcaption></figure>
+    </div>
+  </div>
+</section>
+
+<section class="reviews" id="reviews" aria-labelledby="rv-t">
+  <div class="wrap rv-head">
+    <div class="big"><span class="num" data-count="371" aria-hidden="true">371</span><p class="cap"><b id="rv-t">Reviews on Checkatrade</b>Rated 10 out of 10 across all of them.</p></div>
+    <a class="btn dark" href="#quote">Get a quote</a>
+  </div>
+  <div class="rv-wrap">
+    <div class="rv-row" data-speed="0.55">
+      <figure class="rv" style="margin:0"><span class="stars" aria-hidden="true">★★★★★</span><blockquote>“Brilliant local service — quick to respond and professional.”</blockquote><cite>Checkatrade · Oct 2026</cite></figure>
+      <figure class="rv dk" style="margin:0"><span class="stars" aria-hidden="true">★★★★★</span><blockquote>“Tim was extremely helpful.”</blockquote><cite>Checkatrade · 23 Jul</cite></figure>
+      <figure class="rv" style="margin:0"><span class="stars" aria-hidden="true">★★★★★</span><blockquote>“Brilliant local service — quick to respond and professional.”</blockquote><cite>Checkatrade · Oct 2026</cite></figure>
+      <figure class="rv dk" style="margin:0"><span class="stars" aria-hidden="true">★★★★★</span><blockquote>“Tim was extremely helpful.”</blockquote><cite>Checkatrade · 23 Jul</cite></figure>
+      <figure class="rv" style="margin:0" aria-hidden="true"><span class="stars">★★★★★</span><blockquote>“Brilliant local service — quick to respond and professional.”</blockquote><cite>Checkatrade · Oct 2026</cite></figure>
+      <figure class="rv dk" style="margin:0" aria-hidden="true"><span class="stars">★★★★★</span><blockquote>“Tim was extremely helpful.”</blockquote><cite>Checkatrade · 23 Jul</cite></figure>
+      <figure class="rv" style="margin:0" aria-hidden="true"><span class="stars">★★★★★</span><blockquote>“Brilliant local service — quick to respond and professional.”</blockquote><cite>Checkatrade · Oct 2026</cite></figure>
+      <figure class="rv dk" style="margin:0" aria-hidden="true"><span class="stars">★★★★★</span><blockquote>“Tim was extremely helpful.”</blockquote><cite>Checkatrade · 23 Jul</cite></figure>
+    </div>
+  </div>
+</section>
+
+<section class="dir" aria-labelledby="dir-t">
+  <div class="wrap">
+    <div class="yrs" aria-hidden="true"><span data-count="20">20</span><b>+</b><small>years in the trade</small></div>
+    <div>
+      <p class="lbl" data-reveal>Director-led</p>
+      <h2 class="cond" id="dir-t" data-split style="font-size:clamp(46px,6.4vw,92px)">One firm. <br>One phone line.</h2>
+      <p class="t" data-reveal>Interlock Locksmiths is a limited company run by its director, Tim Guille. Ring the number and you reach the firm that does the work.</p>
+      <ul data-reveal><li>Buy With Confidence</li><li>Checkatrade vetted since 2016</li><li>£1,000 guarantee</li><li>Also on TrustATrader</li></ul>
+    </div>
+  </div>
+</section>
+
+<section class="quote" id="quote" aria-labelledby="q-t">
+  <div class="wrap">
+    <div>
+      <p class="lbl" style="color:var(--lime)" data-reveal>Quote</p>
+      <h2 class="cond" id="q-t" data-split style="margin-top:18px;font-size:clamp(46px,6.6vw,96px)">Tell us what <span>happened.</span></h2>
+      <p class="intro" data-reveal>Four quick steps, with a photo if you have one. Or skip the form and ring.</p>
+      <div class="call" data-reveal><a class="tel" href="tel:07887512272">07887 512272</a><span>Mobile · <a href="mailto:info@interlocklocksmiths.co.uk" style="color:#fff">info@interlocklocksmiths.co.uk</a></span></div>
+    </div>
+    <div class="wiz" id="wiz" role="group" aria-labelledby="wiz-h">
+      <div class="wiz-prog" aria-hidden="true"><i></i><i></i><i></i><i></i></div>
+      <div id="wiz-body" aria-live="polite"></div>
+      <div class="wiz-foot" id="wiz-foot"><button type="button" class="link" id="w-back">Back</button><button type="button" class="btn dark" id="w-next">Next</button></div>
+    </div>
+  </div>
+</section>
+
+<section class="areas" id="areas" aria-labelledby="ar-t">
+  <div class="wrap">
+    <p class="lbl" data-reveal>Where Interlock works</p>
+    <h2 class="cond" id="ar-t" data-split style="margin-top:18px">Four patches.</h2>
+    <ul class="arealist">
+      <li data-reveal><span class="a">Southampton</span><span class="p">Including SO30 and SO50</span></li>
+      <li data-reveal><span class="a">Portsmouth</span><span class="p">PO2 to PO9</span></li>
+      <li data-reveal><span class="a">New Forest</span><span class="p"></span></li>
+      <li data-reveal><span class="a">Winchester</span><span class="p"></span></li>
+    </ul>
+  </div>
+</section>
+</main>
+
+<footer class="foot">
+  <div class="wrap">
+    <div class="row">
+      <div><a class="logo" href="#top" aria-label="Interlock Locksmiths Ltd, back to top"><svg viewBox="0 0 420 142" aria-hidden="true"><use href="#logo"/></svg></a><p style="margin-top:20px;max-width:24em">Locksmith, uPVC and bifold door specialist, Southampton.</p></div>
+      <div><h4>Get in touch</h4><a class="tel" href="tel:07887512272">07887 512272</a><p><a href="mailto:info@interlocklocksmiths.co.uk">info@interlocklocksmiths.co.uk</a></p></div>
+      <div><h4>Covering</h4><ul><li>Southampton</li><li>Portsmouth</li><li>New Forest</li><li>Winchester</li></ul></div>
+    </div>
+    <div class="fine"><span>© 2026 Interlock Locksmiths Ltd</span><span>Concept by <a href="https://itchenstudio.co.uk">Itchen Studio</a></span></div>
+  </div>
+</footer>
+<div class="callbar"><a class="btn" href="tel:07887512272">Call 07887 512272</a></div>
+
+<script src="assets/js/gsap.min.js" defer></script>
+<script src="assets/js/ScrollTrigger.min.js" defer></script>
+<script src="assets/js/lenis.min.js" defer></script>
+<script src="assets/js/concept.js" defer></script>
+<script>
+document.addEventListener('DOMContentLoaded', function () {
+  var api = window.ConceptSite.init();
+  var NS = 'http://www.w3.org/2000/svg';
+  function el(n, a, p) { var e = document.createElementNS(NS, n); for (var k in a) e.setAttribute(k, a[k]); if (p) p.appendChild(e); return e; }
+
+  /* ---------- the lock cutaway ---------- */
+  var svg = document.getElementById('lock'), stateEl = document.getElementById('state');
+  var X = [270, 380, 490, 600, 710], KT = [235, 215, 250, 225, 242], TXF = 760, TX0 = 180, FLOOR = 285, SHEAR = 170, CAP = 22, DTOP = 112;
+  var defs = el('defs', {}, svg);
+  var g = el('g', {}, svg);
+  el('rect', { x: 150, y: 6, width: 680, height: 164, rx: 14, fill: '#232c3a' }, g);          /* housing */
+  el('rect', { x: 150, y: 170, width: 680, height: 138, rx: 14, fill: '#2d3849' }, g);         /* plug */
+  el('rect', { x: 150, y: 170, width: 680, height: 20, fill: '#2d3849' }, g);
+  el('rect', { x: 150, y: 202, width: 680, height: 96, fill: '#0b0e13' }, g);                  /* keyway */
+  var cl = el('clipPath', { id: 'kw' }, defs); el('rect', { x: 150, y: 190, width: 680, height: 118 }, cl);
+  X.forEach(function (x) { el('rect', { x: x - 27, y: 12, width: 54, height: 158, fill: '#1a212c' }, g); el('rect', { x: x - 27, y: 170, width: 54, height: 36, fill: '#242d3b' }, g); el('rect', { x: x - 27, y: 12, width: 54, height: 12, fill: '#10141b' }, g); });
+  var line = el('line', { x1: 150, y1: SHEAR, x2: 830, y2: SHEAR, stroke: '#c8f23a', 'stroke-width': 2, 'stroke-dasharray': '6 8', opacity: .55 }, g);
+  var lt = el('text', { x: 158, y: SHEAR - 6, fill: '#c8f23a', 'font-size': 13, 'font-family': 'Hanken Grotesk, sans-serif', 'font-weight': 700, 'letter-spacing': 2 }, g); lt.textContent = 'SHEAR LINE';
+  /* key */
+  var prof = [[0, 290]]; var cuts = X.map(function (x, i) { return { u: TXF - x, y: KT[i] }; }).sort(function (a, b) { return a.u - b.u; });
+  cuts.forEach(function (c) { prof.push([c.u - 26, c.y]); prof.push([c.u + 26, c.y]); });
+  prof.push([560, 215]);
+  function surf(u) { if (u < 0) return FLOOR; if (u >= 560) return 215; for (var i = 1; i < prof.length; i++) { if (u <= prof[i][0]) { var a = prof[i - 1], b = prof[i], t = (u - a[0]) / (b[0] - a[0] || 1); return a[1] + (b[1] - a[1]) * t; } } return 215; }
+  var kg = el('g', { 'clip-path': 'none' }, g);
+  var d = 'M0 290'; prof.forEach(function (p) { d += ' L' + (-p[0]) + ' ' + p[1]; }); d += ' L-560 190 L-600 190 L-600 290 Z';
+  el('path', { d: d, fill: '#aeb9cb' }, kg);
+  el('path', { d: 'M-540 262 L-8 262', stroke: '#8794a8', 'stroke-width': 3 }, kg);
+  el('circle', { cx: -664, cy: 230, r: 64, fill: '#c8f23a' }, kg);
+  el('rect', { x: -620, y: 218, width: 60, height: 24, fill: '#c8f23a' }, kg);
+  el('circle', { cx: -664, cy: 230, r: 20, fill: '#10141b' }, kg);
+  /* pins */
+  var pins = X.map(function (x, i) {
+    var L = KT[i] - SHEAR, pg = el('g', {}, g);
+    var spring = el('path', { fill: 'none', stroke: '#8794a8', 'stroke-width': 3, 'stroke-linejoin': 'round' }, pg);
+    var drv = el('rect', { x: x - 21, y: DTOP, width: 42, height: FLOOR - L - DTOP, rx: 3, fill: '#d3dbe8' }, pg);
+    var kp = el('rect', { x: x - 21, y: FLOOR - L, width: 42, height: L, rx: 3, fill: '#8aa0c8' }, pg);
+    el('path', { d: 'M' + (x - 21) + ' ' + (FLOOR) + ' l21 11 l21 -11 z', fill: '#8aa0c8' }, pg);
+    return { g: pg, spring: spring, drv: drv, kp: kp, x: x, L: L };
+  });
+  function drawSpring(p, off) {
+    var top = CAP + 2, bot = DTOP + off, n = Math.max(4, Math.min(8, Math.round((bot - top) / 11))), h = (bot - top) / n, s = 'M' + p.x + ' ' + top;
+    for (var k = 0; k < n; k++) s += ' L' + (p.x + (k % 2 ? -15 : 15)) + ' ' + (top + h * (k + .5));
+    s += ' L' + p.x + ' ' + bot; p.spring.setAttribute('d', s);
+  }
+  /* bolt and strike */
+  el('rect', { x: 900, y: 150, width: 70, height: 180, rx: 6, fill: '#1a212c' }, g);
+  var bolt = el('rect', { x: 826, y: 222, width: 120, height: 36, rx: 6, fill: '#aeb9cb' }, g);
+  var boltDot = el('circle', { cx: 842, cy: 240, r: 5, fill: '#10141b' }, g);
+  el('rect', { x: 150, y: 0, width: 1, height: 1, fill: 'none' }, g);
+  var lastState = -1;
+  function render(p) {
+    var tx = TX0 + (TXF - TX0) * Math.min(1, p / 0.62);
+    kg.setAttribute('transform', 'translate(' + tx.toFixed(1) + ',0)');
+    var aligned = 0;
+    pins.forEach(function (pn) {
+      var bottom = Math.min(FLOOR, surf(tx - pn.x)), off = bottom - FLOOR;
+      pn.g.setAttribute('transform', 'translate(0,' + off.toFixed(1) + ')');
+      drawSpring(pn, off);
+      var ok = Math.abs((FLOOR - pn.L + off) - SHEAR) < 1.2; if (ok) aligned++;
+      pn.kp.setAttribute('fill', ok ? '#c8f23a' : '#8aa0c8');
+    });
+    var bp = Math.max(0, Math.min(1, (p - 0.78) / 0.2));
+    bolt.setAttribute('transform', 'translate(' + (-96 * bp).toFixed(1) + ',0)');
+    boltDot.setAttribute('transform', 'translate(' + (-96 * bp).toFixed(1) + ',0)');
+    line.setAttribute('opacity', aligned === 5 ? 1 : .55);
+    var open = bp > .98; stateEl.textContent = open ? 'Open' : 'Locked'; stateEl.classList.toggle('open', open);
+    var st = p < .3 ? 0 : (p < .78 ? 1 : 2);
+    if (st !== lastState) { lastState = st; document.querySelectorAll('.stage').forEach(function (s) { s.classList.toggle('on', +s.dataset.stage === st); }); }
+  }
+  render(1);   /* static, finished state for no-motion and no-JS-animation */
+
+  /* ---------- quote wizard ---------- */
+  var JOBS = [['Locked out', 'I cannot get into my home or property'], ['uPVC door or window lock', 'Handle, cylinder or multipoint lock not working'], ['Bifold or patio door', 'Dragging, sticking or will not latch'], ['Higher-security locks', 'Upgrade the locks on a door or window'], ['Something else', 'Safe locks, hinges, hardware']];
+  var W = { step: 0, job: null, pc: '', files: [], name: '', phone: '', how: 'Phone call', note: '' };
+  var body = document.getElementById('wiz-body'), nextB = document.getElementById('w-next'), backB = document.getElementById('w-back'), prog = document.querySelectorAll('.wiz-prog i');
+  function esc(s) { return String(s).replace(/[&<>"]/g, function (c) { return { '&': '&amp;', '<': '&lt;', '>': '&gt;', '"': '&quot;' }[c]; }); }
+  function area(pc) {
+    var m = String(pc).toUpperCase().replace(/\s+/g, '').match(/^(SO|PO)(\d{1,2})/); if (!m) return null; var n = +m[2];
+    if (m[1] === 'PO' && n >= 2 && n <= 9) return 'Portsmouth';
+    if (m[1] === 'SO') { if ((n >= 14 && n <= 19)) return 'Southampton'; if (n === 30 || n === 50) return 'the Southampton area'; if (n >= 21 && n <= 23) return 'Winchester'; if (n >= 40 && n <= 45) return 'the New Forest'; }
+    return null;
+  }
+  function covHtml() {
+    if (!W.pc.trim()) return '';
+    var a = area(W.pc);
+    return a ? '<div class="cov yes" role="status"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M4 12l5 5L20 6"/></svg><span>Yes, we cover ' + a + '.</span></div>'
+             : '<div class="cov no" role="status"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" aria-hidden="true"><circle cx="12" cy="12" r="9"/><path d="M12 7v6M12 16.5v.5"/></svg><span>That one is outside the usual patch. Give Tim a call on 07887 512272 and ask.</span></div>';
+  }
+  function thumbs() { return W.files.map(function (f, i) { return '<div><img src="' + f.url + '" alt="Photo ' + (i + 1) + ' you added"><button type="button" data-rm="' + i + '" aria-label="Remove photo ' + (i + 1) + '">×</button></div>'; }).join(''); }
+  function render2() {
+    prog.forEach(function (p, i) { p.classList.toggle('on', i <= Math.min(W.step, 3)); });
+    var h = '';
+    if (W.step === 0) {
+      h = '<span class="step-n">Step 1 of 4</span><h3 id="wiz-h" tabindex="-1">What has happened?</h3><div class="opts">' + JOBS.map(function (j, i) { return '<button type="button" class="opt" data-job="' + i + '" aria-pressed="' + (W.job === i) + '"><b>' + j[0] + '</b><span>' + j[1] + '</span><i></i></button>'; }).join('') + '</div>';
+    } else if (W.step === 1) {
+      h = '<span class="step-n">Step 2 of 4</span><h3 id="wiz-h" tabindex="-1">Where is the job?</h3><label class="fld">Postcode<input id="w-pc" autocomplete="postal-code" value="' + esc(W.pc) + '" placeholder="e.g. SO15 or PO4" inputmode="text"><small>We check it against the areas Interlock covers.</small></label><div id="cov">' + covHtml() + '</div>';
+    } else if (W.step === 2) {
+      h = '<span class="step-n">Step 3 of 4</span><h3 id="wiz-h" tabindex="-1">Add a photo</h3><label class="drop"><input type="file" id="w-file" accept="image/*" multiple><b>Choose photos</b><span>The lock, the door, the damage. Optional, but it helps.</span></label><div class="thumbs" id="thumbs">' + thumbs() + '</div>';
+    } else if (W.step === 3) {
+      h = '<span class="step-n">Step 4 of 4</span><h3 id="wiz-h" tabindex="-1">Who should we ring?</h3><label class="fld">Your name<input id="w-n" autocomplete="name" value="' + esc(W.name) + '" required></label><label class="fld">Mobile number<input id="w-p" type="tel" autocomplete="tel" value="' + esc(W.phone) + '" required></label><label class="fld">Anything else? <textarea id="w-x" rows="3" placeholder="Door type, how old the lock is, anything you have already tried">' + esc(W.note) + '</textarea></label>';
+    } else {
+      var ref = 'Q-' + (4000 + Math.floor(Math.random() * 5000));
+      h = '<div class="done" role="status"><span class="step-n">Request received</span><h3 id="wiz-h" tabindex="-1">Thanks, ' + esc(W.name.split(' ')[0] || 'there') + '.</h3><span class="ref">' + ref + '</span><dl><dt>Job</dt><dd>' + esc(JOBS[W.job][0]) + '</dd><dt>Postcode</dt><dd>' + esc(W.pc.toUpperCase()) + '</dd><dt>Photos</dt><dd>' + W.files.length + '</dd><dt>Call on</dt><dd>' + esc(W.phone) + '</dd></dl><p class="note">This is a preview — the form will go live with your new site. Nothing has been sent.</p></div>';
+    }
+    body.innerHTML = h;
+    backB.hidden = W.step === 0 || W.step === 4; nextB.textContent = W.step === 3 ? 'Send request' : (W.step === 4 ? 'Start again' : 'Next');
+    nextB.disabled = (W.step === 0 && W.job === null) || (W.step === 1 && !W.pc.trim());
+    if (api.motion) gsap.from(body.children, { autoAlpha: 0, y: 14, duration: .45, stagger: .05, ease: 'power3.out' });
+  }
+  body.addEventListener('click', function (e) {
+    var b = e.target.closest('button'); if (!b) return;
+    if (b.dataset.job !== undefined) { W.job = +b.dataset.job; render2(); var t = body.querySelector('[aria-pressed="true"]'); if (t) t.focus(); }
+    if (b.dataset.rm !== undefined) { W.files.splice(+b.dataset.rm, 1); document.getElementById('thumbs').innerHTML = thumbs(); }
+  });
+  body.addEventListener('input', function (e) {
+    if (e.target.id === 'w-pc') { W.pc = e.target.value; document.getElementById('cov').innerHTML = covHtml(); nextB.disabled = !W.pc.trim(); }
+  });
+  body.addEventListener('change', function (e) {
+    if (e.target.id === 'w-file') { Array.prototype.forEach.call(e.target.files, function (f) { if (W.files.length < 6) W.files.push({ url: URL.createObjectURL(f) }); }); document.getElementById('thumbs').innerHTML = thumbs(); e.target.value = ''; }
+  });
+  nextB.addEventListener('click', function () {
+    if (W.step === 3) {
+      var n = document.getElementById('w-n'), p = document.getElementById('w-p'), bad = null;
+      [n, p].forEach(function (x) { var ok = x.value.trim() !== ''; x.style.borderColor = ok ? '' : '#b3261e'; x.setAttribute('aria-invalid', String(!ok)); if (!ok && !bad) bad = x; });
+      if (bad) { bad.focus(); return; }
+      W.name = n.value; W.phone = p.value; W.note = document.getElementById('w-x').value;
+    }
+    if (W.step === 4) { W = { step: 0, job: null, pc: '', files: [], name: '', phone: '', how: '', note: '' }; render2(); return; }
+    W.step++; render2(); var h = document.getElementById('wiz-h'); if (h) h.focus({ preventScroll: true });
+  });
+  backB.addEventListener('click', function () { if (W.step > 0) { W.step--; render2(); } });
+  render2();
+
+  if (!api.motion) return;
+
+  /* ---------- signature scene: pinned on desktop, self-playing on phones ---------- */
+  var mm = gsap.matchMedia();
+  mm.add('(min-width: 701px)', function () {
+    var o = { p: 0 }; render(0);
+    gsap.to(o, { p: 1, ease: 'none', onUpdate: function () { render(o.p); }, scrollTrigger: { trigger: '.scene', start: 'top top', end: '+=2400', pin: '.scene-pin', scrub: .6, anticipatePin: 1 } });
+  });
+  mm.add('(max-width: 700px)', function () {
+    var o = { p: 0 }; render(0);
+    ScrollTrigger.create({ trigger: '#lock', start: 'top 80%', once: true, onEnter: function () { gsap.to(o, { p: 1, duration: 4.2, ease: 'power1.inOut', onUpdate: function () { render(o.p); } }); } });
+  });
+});
+</script>
+</body>
+</html>
