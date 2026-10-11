@@ -1,401 +1,637 @@
+<!--
+ART DIRECTION BRIEF - OMN Electrical, v2
+
+ONE IDEA: Lighting you can see being switched on. The business is known for finished lighting schemes, so the whole page is a dark house that is lit one room at a time.
+
+PALETTE (taken from the black-and-gold logo)
+  Ink        #0b0a08  (page dark)
+  Coal       #17140f  (cards on dark)
+  Gold       #e0b04f  (lamp light, accents, big gold blocks)
+  Gold deep  #8a6516  (gold text on light backgrounds, AA)
+  Cream      #f6f1e7  (page light)
+  Paper      #fffdf8  (cards on light)
+  Muted      #5f574a on cream, #b9ae98 on ink
+
+TYPE: Bricolage Grotesque (variable, 800 for display, set big with clamp and tight leading) + Hanken Grotesk for text. Both self-hosted woff2.
+
+HERO: full-bleed night photo of a lit house, huge two-line headline across the lower left, a warm "lamp" that follows the cursor and lifts the light in the photo. Proof line and two calls to action under the headline. Not the two-column template.
+
+SIGNATURE SCROLL MOMENT: "One room at a time". A pinned stage. Three rooms (the house at night, a living room, a walk-in wardrobe) start dark and are switched on in turn as you scroll, while a circuit line on the left fills and its nodes light up. On phones and with reduced motion there is no pin: each room is a card, and on phones each card lights as it passes.
+
+INTERACTIVE FEATURE: a four-step quote builder (job, postcode, photos with thumbnails, contact) that ends on a reference number such as Q-4821. Sends nothing. The EICR section pre-selects the EICR option.
+
+HEADLINE OPTIONS (ten)
+  1. <s>Light where you want it</s>  (any electrician could say it)
+  2. <s>Switch on the whole house</s>  (generic)
+  3. <s>Lighting schemes, wired cleanly</s>  (long, flat)
+  4. <s>Southampton lighting, wired in</s>  (place name only)
+  5. <s>One electrician, since 2019</s>  (could fit anyone)
+  6. <s>Rewires to LED, tested and tidy</s>  (list, not an idea)
+  7. Warm light, tidy wiring.
+  8. <s>From fuse box to feature lighting</s>  (too long)
+  9. <s>Every room switched on</s>  (generic)
+ 10. <s>Dark rooms, lit up</s>  (cute, no specialism)
+PICK: 7, "Warm light, tidy wiring." Four words, says lighting and says tidy (the brief's "precise, tidy"), and the photos back it up.
+
+FACTS USED (all from the lead): Checkatrade 9.97/10, 356 reviews, 97 in the last 12 months, since 2019, NAPIT / EAL / NVQ, free quotes, Southampton and Hampshire, sole trader, owner Marcin Niezgoda, phone 07427 810430, the nine listed services. No review quotes were supplied, so none are shown.
+-->
 <!doctype html>
 <html lang="en-GB">
 <head>
 <meta charset="utf-8">
-<meta name="viewport" content="width=device-width,initial-scale=1">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
 <meta name="robots" content="noindex,nofollow">
-<title>OMN Electrical — Southampton electrician</title>
-<meta name="description" content="Concept: OMN Electrical, Southampton electrician. Rewires, consumer units, EICRs, lighting. Free quotes, no VAT.">
-<link rel="preconnect" href="https://fonts.googleapis.com">
-<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@12..96,500;12..96,700;12..96,800&family=Figtree:wght@400;500;600;700&display=swap" rel="stylesheet">
+<title>OMN Electrical · Website concept</title>
+<meta name="description" content="Website concept for OMN Electrical, a Southampton electrician. Preview only, designed by Itchen Studio.">
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Crect width='32' height='32' rx='7' fill='%230b0a08'/%3E%3Cpath d='M18 4 8 18h7l-2 10 11-15h-7z' fill='%23e0b04f'/%3E%3C/svg%3E">
+<link rel="preload" href="assets/fonts/bricolage.woff2" as="font" type="font/woff2" crossorigin>
+<link rel="preload" href="assets/fonts/hanken.woff2" as="font" type="font/woff2" crossorigin>
+<script>(function(d){if(!matchMedia('(prefers-reduced-motion: reduce)').matches){d.documentElement.classList.add('motion');setTimeout(function(){if(!d.documentElement.classList.contains('ready'))d.documentElement.classList.remove('motion')},3000)}})(document)</script>
 <style>
+@font-face{font-family:"Bricolage Grotesque";src:url("assets/fonts/bricolage.woff2") format("woff2");font-weight:200 800;font-display:swap}
+@font-face{font-family:"Hanken Grotesk";src:url("assets/fonts/hanken.woff2") format("woff2");font-weight:100 900;font-display:swap}
 :root{
-  --ink:#111214;--char:#1b1d21;--char2:#25282d;--gold:#d9b25e;--gold2:#f2dc9b;--gold-d:#8a6a22;
-  --paper:#fff;--mist:#f6f4ee;--line:#e6e2d6;--muted:#5d6068;
-  --r:18px;--shadow:0 20px 50px -24px rgba(17,18,20,.35);
+  --ink:#0b0a08;--coal:#17140f;--coal-2:#211d16;--gold:#e0b04f;--gold-deep:#8a6516;--gold-soft:#f1dba6;
+  --cream:#f6f1e7;--paper:#fffdf8;--line:#ded5c3;--muted:#5f574a;--muted-d:#b9ae98;--line-d:#3a3326;
+  --display:"Bricolage Grotesque","Arial Narrow",Arial,sans-serif;--body:"Hanken Grotesk",Arial,sans-serif;
+  --ease:cubic-bezier(.2,.7,.1,1)
 }
-*{box-sizing:border-box;margin:0}
-html{scroll-behavior:smooth;scroll-padding-top:90px}
-body{font-family:Figtree,system-ui,sans-serif;color:var(--ink);background:var(--paper);line-height:1.6;font-size:17px;-webkit-font-smoothing:antialiased}
+*{box-sizing:border-box}
+html.lenis,html.lenis body{height:auto}
+html{scroll-padding-top:90px}
+body{margin:0;background:var(--cream);color:var(--ink);font:400 17px/1.6 var(--body);-webkit-font-smoothing:antialiased;overflow-x:clip}
 img{max-width:100%;display:block}
 a{color:inherit}
-h1,h2,h3{font-family:'Bricolage Grotesque',Figtree,sans-serif;line-height:1.08;letter-spacing:-.02em}
-.wrap{width:min(1160px,100% - 32px);margin-inline:auto}
-:focus-visible{outline:3px solid var(--gold);outline-offset:3px;border-radius:6px}
-.skip{position:absolute;left:-999px;top:8px;background:var(--gold);color:var(--ink);padding:8px 14px;border-radius:8px;z-index:100}
-.skip:focus{left:8px}
+p{margin:0}
+h1,h2,h3{margin:0;font-family:var(--display);font-weight:800;letter-spacing:-.035em;line-height:.95}
+[hidden]{display:none!important}
+:focus-visible{outline:3px solid var(--gold);outline-offset:3px;border-radius:4px}
+.on-light :focus-visible,.light :focus-visible{outline-color:var(--ink)}
+.wrap{max-width:1240px;margin:0 auto;padding-inline:32px}
+@media(max-width:640px){.wrap{padding-inline:16px}}
+.eyebrow{display:inline-flex;align-items:center;gap:10px;font:700 13px/1 var(--body);letter-spacing:.16em;text-transform:uppercase;color:var(--gold)}
+.eyebrow::before{content:"";width:24px;height:2px;background:currentColor}
+.light .eyebrow{color:var(--gold-deep)}
+h2.big{font-size:clamp(42px,6.6vw,96px)}
+.sw-wrap{display:block}
+
+.btn{display:inline-flex;align-items:center;justify-content:center;gap:10px;min-height:52px;font:700 16px/1 var(--body);text-decoration:none;padding:16px 26px;border-radius:999px;border:2px solid transparent;cursor:pointer;transition:background-color .25s,color .25s,border-color .25s,transform .25s var(--ease)}
+.btn svg{width:18px;height:18px;flex:none}
+.btn-gold{background:var(--gold);color:var(--ink)}
+.btn-gold:hover{background:var(--gold-soft);transform:translateY(-2px)}
+.btn-line{border-color:#ffffff66;color:#fff;background:transparent}
+.btn-line:hover{border-color:var(--gold);color:var(--gold)}
+.btn-ink{background:var(--ink);color:#fff}
+.btn-ink:hover{background:var(--coal-2);transform:translateY(-2px)}
 
 /* preview banner */
-.banner{background:#000;color:#cfcfcf;font-size:13px;text-align:center;padding:7px 16px;border-bottom:1px solid #2a2a2a}
-.banner b{color:var(--gold2);font-weight:600}
+.concept{background:#000;color:#cfc6b2;font-size:13px;line-height:18px;text-align:center;padding:8px 16px;position:relative;z-index:60;border-bottom:1px solid #2a2418}
+.concept b{color:var(--gold);font-weight:700}
+.concept a{color:#fff;display:inline-block;padding:13px 4px;margin:-13px 0}
 
 /* header */
-header.top{position:sticky;top:0;z-index:50;background:rgba(10,10,11,.88);backdrop-filter:blur(14px);-webkit-backdrop-filter:blur(14px);border-bottom:1px solid #2b2b2b}
-.top .wrap{display:flex;align-items:center;justify-content:space-between;gap:16px;height:68px}
-.top img.logo{height:44px;width:auto}
-.top nav{display:none;gap:26px}
-.top nav a{color:#d8d8d8;text-decoration:none;font-weight:500;font-size:15px}
-.top nav a:hover{color:var(--gold2)}
-.btn{display:inline-flex;align-items:center;gap:10px;font:600 16px Figtree,sans-serif;text-decoration:none;border:0;cursor:pointer;border-radius:999px;padding:14px 24px;transition:transform .2s,box-shadow .2s,background .2s}
-.btn-gold{background:linear-gradient(135deg,var(--gold2),var(--gold));color:var(--ink);box-shadow:0 8px 24px -10px rgba(217,178,94,.7)}
-.btn-gold:hover{transform:translateY(-2px);box-shadow:0 14px 30px -10px rgba(217,178,94,.85)}
-.btn-ghost{background:transparent;color:#fff;border:1.5px solid rgba(255,255,255,.35)}
-.btn-ghost:hover{border-color:var(--gold2);color:var(--gold2)}
-.top .btn{padding:10px 18px;font-size:15px}
-@media(min-width:900px){.top nav{display:flex}}
+.top{position:sticky;top:0;z-index:50;background:#0b0a08e6;backdrop-filter:blur(12px);-webkit-backdrop-filter:blur(12px);border-bottom:1px solid #2a2418;color:#fff;transition:transform .5s cubic-bezier(.2,.8,.2,1)}
+.top.away{transform:translateY(-100%)}
+.top .wrap{display:flex;align-items:center;justify-content:space-between;gap:16px;height:72px}
+.brand{display:flex;align-items:center;text-decoration:none;min-height:44px}
+.brand img{height:50px;width:auto;border-radius:6px}
+nav.main{display:flex;align-items:center;gap:6px}
+nav.main a{text-decoration:none;font-weight:600;font-size:15px;padding:12px 14px;border-radius:999px;color:#e8e0cf;min-height:44px;display:inline-flex;align-items:center;transition:color .2s}
+nav.main a:not(.btn):hover{color:var(--gold)}
+nav.main a.btn{padding:12px 20px;min-height:46px;margin-left:8px;color:var(--ink);font-size:15px}
+nav.main a.tel{gap:8px;font-weight:700;color:#fff}
+nav.main a.tel svg{width:17px;height:17px;color:var(--gold)}
+@media(max-width:980px){nav.main a.lnk{display:none}}
+@media(max-width:560px){nav.main a.tel .num{display:none}nav.main a.tel{border:1.5px solid #ffffff44;width:46px;justify-content:center;padding:0}nav.main a.btn{padding:12px 16px}.brand img{height:42px}}
 
 /* hero */
-.hero{background:radial-gradient(900px 500px at 85% 10%,rgba(217,178,94,.22),transparent 60%),var(--ink);color:#fff;padding:56px 0 0;overflow:hidden}
-.hero .grid{display:grid;gap:40px}
-.eyebrow{display:inline-block;font-size:13px;font-weight:700;letter-spacing:.14em;text-transform:uppercase;color:var(--gold2);margin-bottom:18px}
-.hero h1{font-size:clamp(38px,8vw,72px);font-weight:800}
-.hero h1 em{font-style:normal;background:linear-gradient(120deg,var(--gold2),var(--gold));-webkit-background-clip:text;background-clip:text;color:transparent}
-.hero p.lead{font-size:19px;color:#c9cbd0;max-width:540px;margin:22px 0 30px}
-.hero .cta{display:flex;flex-wrap:wrap;gap:12px}
-.hero figure{position:relative;border-radius:var(--r) var(--r) 0 0;overflow:hidden;align-self:end;max-height:520px}
-.hero figure img{width:100%;height:100%;object-fit:cover;aspect-ratio:4/3}
-.hero figcaption{position:absolute;left:14px;bottom:14px;background:rgba(0,0,0,.65);backdrop-filter:blur(8px);color:#eee;font-size:13px;padding:6px 12px;border-radius:999px}
-@media(min-width:900px){.hero{padding-top:84px}.hero .grid{grid-template-columns:1.05fr .95fr;align-items:center}.hero figure{max-height:none}.hero figure img{aspect-ratio:auto;min-height:480px}}
+.hero{position:relative;min-height:min(94vh,900px);color:#fff;display:flex;align-items:flex-end;overflow:hidden;background:var(--ink);isolation:isolate}
+.hero .bg{position:absolute;inset:0;z-index:-2}
+.hero .bg img{width:100%;height:100%;object-fit:cover;object-position:50% 62%;filter:brightness(.78) saturate(1.05)}
+.hero::before{content:"";position:absolute;inset:0;z-index:-1;background:linear-gradient(180deg,#0b0a08cc 0%,#0b0a0800 28%,#0b0a0833 50%,#0b0a08f2 100%),linear-gradient(90deg,#0b0a08cc 0%,#0b0a0800 65%)}
+.hero .lamp{position:absolute;inset:0;z-index:-1;pointer-events:none;background:radial-gradient(520px circle at var(--mx,72%) var(--my,58%),#ffc86a47,#ffc86a00 62%);mix-blend-mode:screen;transition:opacity .6s}
+.hero .wrap{width:100%;padding-block:150px 52px}
+.hero h1{font-size:clamp(58px,12.4vw,196px);margin-top:30px;line-height:.9;max-width:8em}
+.hero h1 .ln{display:block;overflow:hidden;padding-bottom:.08em;margin-bottom:-.08em}
+.hero h1 .ln>span{display:inline-block}
+.hero h1 .gd{color:var(--gold)}
+.hero .lead{font-size:clamp(17px,1.5vw,20px);max-width:30em;margin-top:28px;color:#e6dfcf}
+.hero .ctas{display:flex;flex-wrap:wrap;gap:12px;margin-top:32px}
+.hero .proofline{display:flex;flex-wrap:wrap;gap:8px 26px;margin-top:44px;padding-top:22px;border-top:1px solid #ffffff2e;font-size:15px;color:#e6dfcf}
+.hero .proofline b{color:#fff;font-weight:700}
+.hero .proofline span{display:inline-flex;align-items:center;gap:9px}
+.hero .proofline i{width:8px;height:8px;border-radius:50%;background:var(--gold);box-shadow:0 0 12px 2px #e0b04f99}
+html.motion:not(.ready) .hero h1 .ln>span{transform:translateY(105%)}
+html.motion:not(.ready) [data-intro]{opacity:0}
+@media(max-width:700px){.hero .wrap{padding-block:110px 36px}.hero{min-height:min(88svh,760px)}.hero .bg img{object-position:46% 60%}}
 
-/* proof */
-.proof{background:var(--char);color:#fff;border-top:1px solid #34373d}
-.proof .wrap{display:grid;grid-template-columns:repeat(2,1fr);gap:1px;background:#34373d}
-.proof div.i{background:var(--char);padding:22px 18px}
-.proof strong{display:block;font:800 clamp(26px,5vw,38px)/1 'Bricolage Grotesque',sans-serif;color:var(--gold2)}
-.proof span{font-size:14px;color:#b9bcc3}
-@media(min-width:800px){.proof .wrap{grid-template-columns:repeat(4,1fr)}}
-
-section{padding:76px 0}
-.kicker{font-size:13px;font-weight:700;letter-spacing:.14em;text-transform:uppercase;color:var(--gold-d)}
-h2{font-size:clamp(30px,5vw,48px);margin:10px 0 14px;font-weight:800}
-.sub{color:var(--muted);max-width:620px}
-
-/* no VAT band */
-.vat{background:linear-gradient(135deg,var(--gold2),var(--gold));color:var(--ink);padding:34px 0}
-.vat .wrap{display:flex;flex-wrap:wrap;gap:16px 40px;align-items:center;justify-content:space-between}
-.vat h2{margin:0;font-size:clamp(24px,4vw,36px)}
-.vat p{max-width:520px;font-weight:500}
+/* strip */
+.strip{background:var(--gold);color:var(--ink);overflow:hidden;white-space:nowrap;padding:15px 0;font:800 19px/1 var(--display);letter-spacing:-.01em}
+.strip .track{display:inline-flex;will-change:transform}
+.strip .track span{padding:0 26px;display:inline-flex;align-items:center;gap:52px}
+.strip .track span::after{content:"";width:9px;height:9px;background:var(--ink);transform:rotate(45deg)}
 
 /* services */
-.cards{display:grid;gap:16px;margin-top:38px}
-.card{background:var(--mist);border:1px solid var(--line);border-radius:var(--r);padding:26px;transition:transform .25s,box-shadow .25s,border-color .25s}
-.card:hover{transform:translateY(-4px);box-shadow:var(--shadow);border-color:var(--gold)}
-.card svg{width:34px;height:34px;stroke:var(--gold-d);fill:none;stroke-width:1.7;stroke-linecap:round;stroke-linejoin:round;margin-bottom:14px}
-.card h3{font-size:21px;margin-bottom:6px}
-.card p{color:var(--muted);font-size:15.5px}
-@media(min-width:640px){.cards{grid-template-columns:repeat(2,1fr)}}
-@media(min-width:980px){.cards{grid-template-columns:repeat(3,1fr)}}
+.services{padding-block:130px 110px;background:var(--cream)}
+.sec-head{display:flex;justify-content:space-between;align-items:end;gap:32px;flex-wrap:wrap;margin-bottom:56px}
+.sec-head p{max-width:27em;color:var(--muted);font-size:18px}
+.svc-list{list-style:none;margin:0;padding:0;border-top:1.5px solid var(--ink)}
+.svc{position:relative;display:grid;grid-template-columns:70px minmax(0,1.1fr) minmax(0,1fr) 44px;gap:24px;align-items:center;padding:26px 8px;border-bottom:1px solid var(--line);overflow:hidden;isolation:isolate;transition:padding .45s var(--ease)}
+.svc::before{content:"";position:absolute;inset:0;background:var(--gold);transform:scaleY(0);transform-origin:bottom;transition:transform .5s var(--ease);z-index:-1}
+.svc:hover::before,.svc:focus-within::before{transform:scaleY(1)}
+.svc:hover,.svc:focus-within{padding-inline:22px}
+.svc .n{font:700 15px/1 var(--display);color:var(--gold-deep);transition:color .3s}
+.svc h3{font-size:clamp(28px,3.6vw,50px);letter-spacing:-.03em}
+.svc p{color:var(--muted);font-size:17px;transition:color .3s}
+.svc .go{width:44px;height:44px;border-radius:50%;border:1.5px solid var(--ink);display:grid;place-items:center;text-decoration:none;transition:background-color .3s,color .3s,transform .4s var(--ease)}
+.svc .go svg{width:18px;height:18px}
+.svc:hover .n,.svc:hover p,.svc:focus-within .n,.svc:focus-within p{color:var(--ink)}
+.svc .go:hover,.svc .go:focus-visible{background:var(--ink);color:var(--gold);transform:rotate(-45deg)}
+@media(max-width:820px){.svc{grid-template-columns:34px minmax(0,1fr) 44px;gap:6px 14px;padding-block:22px}.svc p{grid-column:2/3;grid-row:2;font-size:16px}.svc .go{grid-column:3;grid-row:1/3;align-self:center}.svc:hover,.svc:focus-within{padding-inline:8px}.services{padding-block:84px 70px}}
+
+/* signature: one room at a time */
+.lights{background:var(--ink);color:#fff;position:relative;overflow:hidden}
+.lights .l-pin{padding-block:100px 80px}
+.lights .l-grid{display:grid;grid-template-columns:minmax(0,.8fr) minmax(0,1.25fr);gap:56px;align-items:center}
+.lights h2{font-size:clamp(44px,6vw,92px)}
+.lights .l-lead{color:var(--muted-d);font-size:18px;margin-top:22px;max-width:24em}
+.circuit{display:none;list-style:none;margin:44px 0 0;padding:0;position:relative;height:250px;flex-direction:column;justify-content:space-between}
+.circuit::before{content:"";position:absolute;left:11px;top:11px;bottom:11px;width:2px;background:var(--line-d)}
+.circuit .fill{position:absolute;left:11px;top:11px;bottom:11px;width:2px;background:var(--gold);box-shadow:0 0 14px 1px #e0b04fcc;transform:scaleY(0);transform-origin:top}
+.circuit li{position:relative;z-index:1;display:flex;align-items:center;gap:20px;color:#8f8470;font:700 19px/1.1 var(--display);letter-spacing:-.02em;transition:color .4s}
+.circuit li i{width:24px;height:24px;border-radius:50%;background:var(--ink);border:2px solid var(--line-d);flex:none;transition:all .4s}
+.circuit li.on{color:#fff}
+.circuit li.on i{border-color:var(--gold);background:var(--gold);box-shadow:0 0 0 6px #e0b04f2b,0 0 22px 4px #e0b04faa}
+.stage{display:grid;gap:22px}
+.room{position:relative;margin:0;border-radius:14px;overflow:hidden;aspect-ratio:4/3;background:#000}
+.room img{width:100%;height:100%;object-fit:cover}
+.room figcaption{position:absolute;left:0;right:0;bottom:0;padding:70px 26px 24px;background:linear-gradient(0deg,#0b0a08ee,#0b0a0800);display:grid;gap:6px}
+.room figcaption small{font:700 13px/1 var(--body);letter-spacing:.16em;text-transform:uppercase;color:var(--gold)}
+.room figcaption b{font:800 clamp(24px,2.6vw,36px)/1 var(--display);letter-spacing:-.03em}
+.room figcaption span{color:#d8cfbb;font-size:16px;max-width:30em}
+/* pinned (desktop with motion) */
+.lights.pinned .l-pin{min-height:100vh;display:flex;align-items:center;padding-block:76px 40px}
+.lights.pinned .l-grid{width:100%}
+.lights.pinned .circuit{display:flex}
+.lights.pinned .stage{display:block;position:relative;aspect-ratio:4/3;max-height:calc(100vh - 150px);margin-left:auto;width:100%;box-shadow:0 0 calc(var(--glow,0)*120px) calc(var(--glow,0)*8px) #e0b04f33;border-radius:14px}
+.lights.pinned .room{position:absolute;inset:0;aspect-ratio:auto;height:100%}
+.lights.pinned .room figcaption{opacity:0}
+@media(max-width:900px){.lights .l-pin{padding-block:80px 56px}.lights .l-grid{grid-template-columns:1fr;gap:34px}.room figcaption{padding:56px 18px 18px}}
+
+/* about */
+.about{padding-block:120px;background:var(--cream)}
+.about .wrap{display:grid;grid-template-columns:minmax(0,1fr) minmax(0,1.05fr);gap:72px;align-items:center}
+.about .ph{position:relative;border-radius:14px;overflow:hidden;aspect-ratio:4/4.4;background:#222}
+.about .ph img{width:100%;height:118%;object-fit:cover;object-position:62% 50%}
+.about .tag{position:absolute;left:16px;bottom:16px;background:var(--ink);color:#fff;font:700 13px/1 var(--body);letter-spacing:.08em;text-transform:uppercase;padding:11px 14px;border-radius:999px}
+.about h2{font-size:clamp(40px,5.2vw,76px)}
+.about p{font-size:19px;color:#3b352b;margin-top:22px;max-width:30em}
+.facts{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:14px;margin-top:34px;max-width:34em}
+.facts div{border-top:2px solid var(--ink);padding-top:12px}
+.facts b{display:block;font:800 clamp(30px,3.4vw,44px)/1 var(--display);letter-spacing:-.04em}
+.facts span{font-size:14px;color:var(--muted);display:block;margin-top:6px;line-height:1.35}
+@media(max-width:900px){.about{padding-block:80px}.about .wrap{grid-template-columns:1fr;gap:36px}.about .ph{aspect-ratio:4/3.6}}
 
 /* EICR */
-.eicr{background:var(--ink);color:#fff}
-.eicr .grid{display:grid;gap:36px;align-items:center}
-.eicr .kicker{color:var(--gold2)}
-.eicr .sub{color:#bfc2c9}
-.eicr ul{list-style:none;padding:0;margin:22px 0 28px;display:grid;gap:12px}
-.eicr li{display:flex;gap:12px;color:#dfe1e5}
-.eicr li::before{content:"";flex:none;width:22px;height:22px;margin-top:3px;border-radius:50%;background:var(--gold) url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='none' stroke='%23111' stroke-width='3.2' stroke-linecap='round' stroke-linejoin='round'%3E%3Cpath d='M6 12.5l4 4 8-9'/%3E%3C/svg%3E") center/14px no-repeat}
-.eicr .panel{background:var(--char2);border:1px solid #3a3d44;border-radius:var(--r);padding:30px}
-.eicr .panel h3{font-size:26px;margin-bottom:8px}
-.eicr .panel p{color:#bfc2c9;margin-bottom:20px}
-@media(min-width:900px){.eicr .grid{grid-template-columns:1.1fr .9fr}}
-
-/* gallery */
-.gallery{display:grid;gap:14px;margin-top:36px}
-.gallery figure{position:relative;border-radius:var(--r);overflow:hidden;background:#000;cursor:zoom-in}
-.gallery img{width:100%;height:100%;object-fit:cover;transition:transform .6s}
-.gallery figure:hover img{transform:scale(1.04)}
-.gallery figcaption{position:absolute;inset:auto 0 0 0;padding:34px 18px 14px;color:#fff;font-size:14px;background:linear-gradient(transparent,rgba(0,0,0,.75))}
-.gallery button{all:unset;display:block;width:100%;height:100%;cursor:zoom-in}
-@media(min-width:760px){
-  .gallery{grid-template-columns:1.3fr 1fr;grid-template-rows:280px 280px}
-  .gallery figure:nth-child(1){grid-row:span 2}
-}
-@media(max-width:759px){.gallery figure{aspect-ratio:4/3}.gallery figure.tall{aspect-ratio:3/4}}
-dialog.lb{border:0;background:transparent;padding:0;max-width:94vw;max-height:94vh;margin:auto}
-dialog.lb::backdrop{background:rgba(0,0,0,.88)}
-dialog.lb img{max-height:90vh;max-width:94vw;border-radius:12px}
-dialog.lb button{position:absolute;top:8px;right:8px;background:#fff;border:0;border-radius:50%;width:40px;height:40px;font-size:22px;cursor:pointer}
-
-/* why / process */
-.why{background:var(--mist)}
-.why .grid{display:grid;gap:40px;align-items:center}
-.why figure{border-radius:var(--r);overflow:hidden;box-shadow:var(--shadow)}
-.why figure img{width:100%;aspect-ratio:4/3;object-fit:cover}
-.steps{list-style:none;padding:0;margin-top:26px;display:grid;gap:18px;counter-reset:s}
-.steps li{counter-increment:s;display:grid;grid-template-columns:44px 1fr;gap:14px}
-.steps li::before{content:counter(s);width:44px;height:44px;border-radius:50%;background:var(--ink);color:var(--gold2);font:700 18px 'Bricolage Grotesque';display:grid;place-items:center}
-.steps b{display:block;font-size:18px}
-.steps span{color:var(--muted);font-size:15.5px}
-@media(min-width:900px){.why .grid{grid-template-columns:.9fr 1.1fr}}
+.eicr{background:var(--coal);color:#fff;padding-block:120px;position:relative;overflow:hidden}
+.eicr::before{content:"";position:absolute;right:-180px;top:-220px;width:640px;height:640px;border-radius:50%;background:radial-gradient(circle,#e0b04f2e,transparent 66%)}
+.eicr .wrap{position:relative;display:grid;grid-template-columns:minmax(0,1.05fr) minmax(0,1fr);gap:72px;align-items:center}
+.eicr h2{font-size:clamp(42px,5.6vw,84px)}
+.eicr .intro{font-size:19px;color:#d8cfbb;margin-top:22px;max-width:28em}
+.eicr .btn{margin-top:32px}
+.steps{list-style:none;margin:0;padding:0;counter-reset:s;display:grid;gap:0;border-top:1px solid var(--line-d)}
+.steps li{counter-increment:s;display:grid;grid-template-columns:56px 1fr;gap:16px;padding:22px 0;border-bottom:1px solid var(--line-d)}
+.steps li::before{content:"0" counter(s);font:800 26px/1 var(--display);color:var(--gold);letter-spacing:-.03em}
+.steps b{display:block;font:800 24px/1.05 var(--display);letter-spacing:-.025em;margin-bottom:6px}
+.steps span{color:var(--muted-d);font-size:16.5px}
+@media(max-width:900px){.eicr{padding-block:80px}.eicr .wrap{grid-template-columns:1fr;gap:40px}}
 
 /* reviews */
-.rev{text-align:center}
-.score{margin:36px auto 0;max-width:760px;background:var(--ink);color:#fff;border-radius:28px;padding:44px 28px;position:relative;overflow:hidden}
-.score::after{content:"";position:absolute;inset:-40% -10% auto auto;width:360px;height:360px;background:radial-gradient(circle,rgba(217,178,94,.35),transparent 65%)}
-.score .big{font:800 clamp(72px,16vw,128px)/1 'Bricolage Grotesque';background:linear-gradient(120deg,var(--gold2),var(--gold));-webkit-background-clip:text;background-clip:text;color:transparent;position:relative}
-.score .big small{font-size:.35em;color:#9a9da4;-webkit-text-fill-color:#9a9da4}
-.stars{color:var(--gold);letter-spacing:6px;font-size:22px;margin:6px 0 10px;position:relative}
-.score p{color:#cfd1d6;position:relative;max-width:480px;margin:0 auto}
-.score .row{display:flex;justify-content:center;flex-wrap:wrap;gap:12px 36px;margin-top:26px;position:relative}
-.score .row b{display:block;font:700 28px 'Bricolage Grotesque';color:#fff}
-.score .row span{font-size:13px;color:#a8abb2}
+.reviews{padding-block:120px;background:var(--cream);overflow:hidden}
+.score{display:grid;grid-template-columns:auto minmax(0,1fr);gap:20px 64px;align-items:end;margin-top:40px}
+.score .big{font:800 clamp(120px,24vw,340px)/.78 var(--display);letter-spacing:-.07em;display:flex;align-items:flex-start;color:var(--ink)}
+.score .big small{font-size:.22em;letter-spacing:-.03em;margin:.1em 0 0 .06em;color:var(--gold-deep)}
+.score .src{font-size:18px;color:var(--muted);max-width:22em}
+.score .src b{color:var(--ink)}
+.nums{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:14px;margin-top:56px}
+.nums div{background:var(--paper);border:1px solid var(--line);border-radius:12px;padding:26px 24px}
+.nums b{display:block;font:800 clamp(44px,5vw,70px)/1 var(--display);letter-spacing:-.045em}
+.nums span{display:block;margin-top:8px;color:var(--muted);font-size:16px}
+.reviews .more{margin-top:34px;display:flex;flex-wrap:wrap;gap:16px 24px;align-items:center}
+.reviews .more p{color:var(--muted);font-size:16px;max-width:26em}
+@media(max-width:820px){.reviews{padding-block:80px}.score{grid-template-columns:1fr;gap:18px}.nums{grid-template-columns:1fr}.nums div{display:flex;align-items:baseline;gap:16px;padding:18px 20px}.nums span{margin:0}}
 
-/* areas */
-.areas{background:var(--mist)}
-.chips{display:flex;flex-wrap:wrap;gap:10px;margin-top:24px}
-.chip{background:#fff;border:1px solid var(--line);padding:9px 18px;border-radius:999px;font-weight:500}
+/* quote */
+.quote{background:var(--ink);color:#fff;padding-block:120px;position:relative;overflow:hidden}
+.quote::before{content:"";position:absolute;left:-220px;bottom:-260px;width:700px;height:700px;border-radius:50%;background:radial-gradient(circle,#e0b04f26,transparent 66%)}
+.quote .wrap{position:relative;display:grid;grid-template-columns:minmax(0,.9fr) minmax(0,1.1fr);gap:64px;align-items:start}
+.quote h2{font-size:clamp(42px,5.6vw,84px)}
+.quote .intro{color:var(--muted-d);font-size:18px;margin-top:22px;max-width:26em}
+.quote ul{list-style:none;padding:0;margin:30px 0 0;display:grid;gap:12px;color:#e6dfcf}
+.quote li{display:grid;grid-template-columns:26px 1fr;gap:12px;align-items:start}
+.quote li svg{width:22px;height:22px;color:var(--gold);margin-top:2px}
+.wiz{background:var(--coal);border:1px solid var(--line-d);border-radius:18px;padding:30px;position:relative}
+.prog{display:flex;gap:6px;margin-bottom:26px}
+.prog i{flex:1;height:4px;border-radius:9px;background:#3a3326;transition:background-color .4s}
+.prog i.on{background:var(--gold);box-shadow:0 0 10px #e0b04f88}
+.wiz fieldset{border:0;margin:0;padding:0;min-width:0}
+.wiz legend{padding:0;font:800 clamp(26px,3vw,34px)/1.05 var(--display);letter-spacing:-.03em;margin-bottom:6px}
+.wiz .sub{color:var(--muted-d);font-size:16px;margin-bottom:20px}
+.chips{display:flex;flex-wrap:wrap;gap:10px}
+.chip{font:600 16px/1.1 var(--body);color:#eee6d4;background:transparent;border:1.5px solid #4b4331;border-radius:999px;padding:13px 18px;min-height:46px;cursor:pointer;transition:all .2s}
+.chip:hover{border-color:var(--gold)}
+.chip[aria-pressed="true"]{background:var(--gold);border-color:var(--gold);color:var(--ink)}
+.wiz label{display:block;font:700 13px/1 var(--body);letter-spacing:.12em;text-transform:uppercase;color:var(--muted-d);margin:18px 0 8px}
+.wiz input[type=text],.wiz input[type=tel],.wiz input[type=email],.wiz textarea{width:100%;font:500 17px/1.3 var(--body);color:#fff;background:#0f0d09;border:1.5px solid #4b4331;border-radius:10px;padding:14px 14px;min-height:50px}
+.wiz textarea{resize:vertical;min-height:90px}
+.wiz input:focus,.wiz textarea:focus{outline:3px solid var(--gold);outline-offset:1px;border-color:var(--gold)}
+.wiz [aria-invalid=true]{border-color:#ff8a7a!important}
+.hint{font-size:15px;color:var(--gold);margin-top:10px;min-height:22px}
+.drop{display:grid;place-items:center;gap:6px;text-align:center;border:2px dashed #5a503a;border-radius:12px;padding:26px 16px;cursor:pointer;color:#d8cfbb;transition:border-color .2s,background-color .2s;margin:0!important;font:600 16px/1.3 var(--body)!important;letter-spacing:0!important;text-transform:none!important}
+.drop:hover,.drop:focus-within{border-color:var(--gold);background:#e0b04f12}
+.drop svg{width:30px;height:30px;color:var(--gold)}
+.drop input{position:absolute;opacity:0;width:1px;height:1px}
+.drop:focus-within{outline:3px solid var(--gold);outline-offset:2px}
+.thumbs{display:grid;grid-template-columns:repeat(auto-fill,minmax(84px,1fr));gap:10px;margin-top:14px}
+.thumbs img{width:100%;aspect-ratio:1;object-fit:cover;border-radius:8px;border:1px solid #4b4331}
+.wiz .nav{display:flex;justify-content:space-between;gap:12px;margin-top:28px}
+.wiz .nav .btn{min-height:50px}
+.wiz .back{background:transparent;border:0;color:var(--muted-d);padding-inline:6px}
+.wiz .back:hover{color:#fff}
+.wiz .back[disabled]{visibility:hidden}
+.done{text-align:left}
+.done .ref{display:block;font:800 clamp(46px,7vw,76px)/1 var(--display);letter-spacing:-.04em;color:var(--gold);margin:14px 0 6px}
+.done p{color:#d8cfbb}
+.done .note{margin-top:18px;padding:14px 16px;border-left:3px solid var(--gold);background:#e0b04f14;color:#f1e9d6;font-size:16px}
+.done .btn{margin-top:22px}
+@media(max-width:900px){.quote{padding-block:80px}.quote .wrap{grid-template-columns:1fr;gap:38px}.wiz{padding:22px 18px}}
 
-/* contact */
-.contact{background:var(--ink);color:#fff}
-.contact .grid{display:grid;gap:40px}
-.contact .kicker{color:var(--gold2)}
-.contact .sub{color:#bfc2c9}
-.phone{display:inline-block;margin-top:22px;font:800 clamp(30px,6vw,46px) 'Bricolage Grotesque';color:var(--gold2);text-decoration:none}
-.phone:hover{color:#fff}
-form{background:#fff;color:var(--ink);border-radius:24px;padding:28px;display:grid;gap:16px}
-label{display:grid;gap:6px;font-weight:600;font-size:14.5px}
-input,select,textarea{font:inherit;font-weight:400;padding:13px 14px;border:1.5px solid #cfcab9;border-radius:12px;background:#fdfcf9;width:100%}
-input:focus,select:focus,textarea:focus{outline:3px solid rgba(217,178,94,.55);border-color:var(--gold-d)}
-input[type=file]{padding:10px;background:#fff}
-.two{display:grid;gap:16px}
-@media(min-width:560px){.two{grid-template-columns:1fr 1fr}}
-@media(min-width:900px){.contact .grid{grid-template-columns:.85fr 1.15fr;align-items:start}}
-.note{font-size:13px;color:var(--muted)}
-#msg{display:none;background:#fff6dd;border:1px solid var(--gold);padding:14px 16px;border-radius:12px;font-weight:600}
+/* contact / areas */
+.contact{background:var(--gold);color:var(--ink);padding-block:110px 90px;overflow:hidden;position:relative}
+.contact .area{font:800 clamp(56px,13.4vw,210px)/.86 var(--display);letter-spacing:-.06em;margin:22px 0 0}
+.contact .area span{display:block}
+.contact .area .o{color:var(--paper)}
+.contact .row{display:grid;grid-template-columns:minmax(0,1fr) auto;gap:36px 56px;align-items:end;margin-top:54px;padding-top:30px;border-top:2px solid var(--ink)}
+.contact .row p{font-size:19px;max-width:28em}
+.contact .eyebrow{color:var(--ink)}
+.callbig{display:inline-flex;align-items:center;gap:14px;font:800 clamp(32px,4.6vw,60px)/1 var(--display);letter-spacing:-.04em;text-decoration:none;min-height:56px}
+.callbig svg{width:.8em;height:.8em}
+.callbig:hover{text-decoration:underline;text-underline-offset:8px;text-decoration-thickness:3px}
+.contact small{display:block;font-size:15px;margin-top:10px}
+@media(max-width:820px){.contact{padding-block:80px 64px}.contact .row{grid-template-columns:1fr}}
 
-footer{background:#000;color:#9a9da4;padding:34px 0;font-size:14px}
-footer .wrap{display:flex;flex-wrap:wrap;gap:14px 30px;justify-content:space-between;align-items:center}
-footer img{height:38px}
+footer{background:#000;color:#b9ae98;padding-block:36px;font-size:15px}
+footer .wrap{display:flex;flex-wrap:wrap;gap:14px 32px;justify-content:space-between;align-items:center}
+footer img{height:44px;width:auto;border-radius:6px}
+footer a{color:#fff;display:inline-block;padding:13px 4px;margin:-13px 0}
+footer .cr{max-width:40em}
 
-/* motion */
-.rv{opacity:0;transform:translateY(22px);transition:opacity .7s ease,transform .7s ease}
-.rv.in{opacity:1;transform:none}
-@media(prefers-reduced-motion:reduce){
-  html{scroll-behavior:auto}
-  .rv{opacity:1;transform:none;transition:none}
-  *{transition:none!important}
-}
+@media(prefers-reduced-motion:reduce){*{animation:none!important;scroll-behavior:auto!important}}
 </style>
 </head>
 <body>
-<a class="skip" href="#main">Skip to content</a>
-<div class="banner" role="note">Website concept for <b>OMN Electrical</b> — preview only, not the live site.</div>
+
+<div class="concept">Website concept for <b>OMN Electrical</b> &mdash; preview only, not the live site. Designed by Itchen Studio &middot; <a href="mailto:sam@itchenstudio.co.uk">sam@itchenstudio.co.uk</a></div>
 
 <header class="top">
   <div class="wrap">
-    <a href="#top" aria-label="OMN Electrical home"><img class="logo" src="assets/logo.webp" alt="OMN Electrical logo" width="156" height="44"></a>
-    <nav aria-label="Main">
-      <a href="#services">Services</a><a href="#eicr">EICR &amp; landlords</a><a href="#projects">Lighting projects</a><a href="#reviews">Reviews</a>
+    <a class="brand" href="#top" aria-label="OMN Electrical, back to the top"><img src="assets/logo.webp" width="492" height="139" alt="OMN Electrical logo"></a>
+    <nav class="main" aria-label="Main">
+      <a class="lnk" href="#services">Services</a>
+      <a class="lnk" href="#lighting">Lighting</a>
+      <a class="lnk" href="#eicr">EICR</a>
+      <a class="lnk" href="#reviews">Reviews</a>
+      <a class="tel" href="tel:07427810430" aria-label="Call 07427 810430"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M22 16.9v3a2 2 0 0 1-2.2 2 19.8 19.8 0 0 1-8.6-3.1 19.5 19.5 0 0 1-6-6A19.8 19.8 0 0 1 2.1 4.2 2 2 0 0 1 4.1 2h3a2 2 0 0 1 2 1.7c.1 1 .4 1.9.7 2.8a2 2 0 0 1-.5 2.1L8.1 9.9a16 16 0 0 0 6 6l1.3-1.3a2 2 0 0 1 2.1-.4c.9.3 1.8.6 2.8.7a2 2 0 0 1 1.7 2z"/></svg><span class="num">07427 810430</span></a>
+      <a class="btn btn-gold" href="#quote">Free quote</a>
     </nav>
-    <a class="btn btn-gold" href="tel:07427810430" aria-label="Call 07427 810430">
-      <svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M6.6 10.8a15 15 0 006.6 6.6l2.2-2.2a1 1 0 011-.25 11.4 11.4 0 003.6.57 1 1 0 011 1V20a1 1 0 01-1 1A17 17 0 013 4a1 1 0 011-1h3.5a1 1 0 011 1c0 1.25.2 2.45.57 3.6a1 1 0 01-.25 1z"/></svg>
-      07427 810430
-    </a>
   </div>
 </header>
 
-<main id="main">
-<div id="top"></div>
-<section class="hero" style="padding-bottom:0">
-  <div class="wrap grid">
-    <div>
-      <span class="eyebrow">NAPIT registered · Southampton &amp; Hampshire</span>
-      <h1>Southampton’s top-rated electrician — <em>and we don’t charge VAT.</em></h1>
-      <p class="lead">Precise, tidy electrical work for homes and landlords, from a new consumer unit to a full lighting scheme. Quotes are free, and prices are kept honest.</p>
-      <div class="cta">
-        <a class="btn btn-gold" href="#quote">Get a free quote</a>
-        <a class="btn btn-ghost" href="tel:07427810430">Call 07427 810430</a>
+<main id="top">
+<section class="hero" aria-labelledby="h1">
+  <div class="bg"><img src="assets/house-night.webp" width="1024" height="768" alt="A brick house at night with warm lights set into the front steps, walls and windows"></div>
+  <div class="lamp" aria-hidden="true"></div>
+  <div class="wrap">
+    <span class="eyebrow" data-intro>Electrician &middot; Southampton</span>
+    <h1 id="h1"><span class="ln"><span class="gd">Warm light,</span></span><span class="ln"><span>tidy wiring.</span></span></h1>
+    <p class="lead" data-intro>Lighting design and LED, consumer units, rewires and EICRs from a sole trader in Southampton. Quotes are free.</p>
+    <div class="ctas" data-intro>
+      <a class="btn btn-gold" href="#quote">Get a free quote <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12h14M13 6l6 6-6 6"/></svg></a>
+      <a class="btn btn-line" href="tel:07427810430">Call 07427 810430</a>
+    </div>
+    <p class="proofline" data-intro><span><i></i><b>9.97/10</b> on Checkatrade, 356 reviews</span><span>NAPIT &middot; EAL &middot; NVQ</span><span>Since 2019</span></p>
+  </div>
+</section>
+
+<div class="strip" aria-hidden="true"><div class="track" data-speed="0.6">
+  <span>Rewires</span><span>Consumer units</span><span>EICRs</span><span>Lighting design &amp; LED</span><span>Garden lighting</span><span>Hot tub wiring</span><span>Smoke alarms</span><span>Data cabling</span><span>Boiler wiring</span>
+  <span>Rewires</span><span>Consumer units</span><span>EICRs</span><span>Lighting design &amp; LED</span><span>Garden lighting</span><span>Hot tub wiring</span><span>Smoke alarms</span><span>Data cabling</span><span>Boiler wiring</span>
+</div></div>
+
+<section class="services light" id="services" aria-labelledby="sv-h">
+  <div class="wrap">
+    <div class="sec-head">
+      <div><span class="eyebrow" data-reveal>What we wire</span><h2 class="big" id="sv-h" data-split style="margin-top:18px">Nine kinds of job.</h2></div>
+      <p data-reveal>From a full rewire to a single run of cable. Pick the nearest one and the quote builder starts there.</p>
+    </div>
+    <ol class="svc-list" data-reveal>
+      <li class="svc"><span class="n">01</span><h3>Rewires</h3><p>Old wiring out, new circuits in, tested at the end.</p><a class="go" href="#quote" data-job="Rewire" aria-label="Quote for a rewire"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12h14M13 6l6 6-6 6"/></svg></a></li>
+      <li class="svc"><span class="n">02</span><h3>Consumer unit upgrades</h3><p>Swap an old fuse box for a modern board.</p><a class="go" href="#quote" data-job="Consumer unit upgrade" aria-label="Quote for a consumer unit upgrade"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12h14M13 6l6 6-6 6"/></svg></a></li>
+      <li class="svc"><span class="n">03</span><h3>EICRs</h3><p>An electrical installation condition report for landlords, buyers and sellers.</p><a class="go" href="#eicr" aria-label="About EICRs"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12h14M13 6l6 6-6 6"/></svg></a></li>
+      <li class="svc"><span class="n">04</span><h3>Lighting design &amp; LED</h3><p>Shelves, ceilings, wardrobes and walls lit the way you pictured them.</p><a class="go" href="#lighting" aria-label="See the lighting work"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12h14M13 6l6 6-6 6"/></svg></a></li>
+      <li class="svc"><span class="n">05</span><h3>Garden lighting</h3><p>Paths, steps and borders, wired for the outdoors.</p><a class="go" href="#quote" data-job="Garden lighting" aria-label="Quote for garden lighting"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12h14M13 6l6 6-6 6"/></svg></a></li>
+      <li class="svc"><span class="n">06</span><h3>Hot tub wiring</h3><p>A dedicated supply run out to the tub.</p><a class="go" href="#quote" data-job="Hot tub wiring" aria-label="Quote for hot tub wiring"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12h14M13 6l6 6-6 6"/></svg></a></li>
+      <li class="svc"><span class="n">07</span><h3>Smoke alarms</h3><p>Fitted and wired in where they need to be.</p><a class="go" href="#quote" data-job="Smoke alarms" aria-label="Quote for smoke alarms"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12h14M13 6l6 6-6 6"/></svg></a></li>
+      <li class="svc"><span class="n">08</span><h3>Data cabling</h3><p>Network points where the wifi does not reach.</p><a class="go" href="#quote" data-job="Data cabling" aria-label="Quote for data cabling"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12h14M13 6l6 6-6 6"/></svg></a></li>
+      <li class="svc"><span class="n">09</span><h3>Boiler wiring</h3><p>The electrical side of a boiler fitting.</p><a class="go" href="#quote" data-job="Boiler wiring" aria-label="Quote for boiler wiring"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12h14M13 6l6 6-6 6"/></svg></a></li>
+    </ol>
+  </div>
+</section>
+
+<section class="lights" id="lighting" aria-labelledby="lt-h">
+  <div class="l-pin">
+    <div class="wrap l-grid">
+      <div class="l-copy">
+        <span class="eyebrow">Lighting projects</span>
+        <h2 id="lt-h" style="margin-top:18px">One room at a time.</h2>
+        <p class="l-lead">Three finished lighting schemes, from the supplied photos. Scroll to switch each one on.</p>
+        <ol class="circuit" aria-hidden="true"><span class="fill"></span>
+          <li><i></i>Outside</li><li><i></i>Living room</li><li><i></i>Wardrobe</li>
+        </ol>
+      </div>
+      <div class="stage">
+        <figure class="room"><img src="assets/house-night.webp" width="1024" height="768" alt="Front of a brick house at night, lit by lights set into the steps, walls and windows" loading="lazy"><figcaption><small>01 &middot; Outside</small><b>Steps, walls and windows</b><span>Low-level lights along the approach, so the way in is lit and the house stands out.</span></figcaption></figure>
+        <figure class="room"><img src="assets/lounge.webp" width="1024" height="768" alt="A living room with warm LED lighting under and behind floating shelves either side of a television" loading="lazy"><figcaption><small>02 &middot; Living room</small><b>Light behind the shelves</b><span>Concealed LED under and behind each shelf, with spotlights above.</span></figcaption></figure>
+        <figure class="room"><img src="assets/wardrobe.webp" width="768" height="1024" alt="A walk-in wardrobe lit by thin LED strips running along the top of the hanging rails" loading="lazy"><figcaption><small>03 &middot; Wardrobe</small><b>Strips along the rails</b><span>Thin LED lines at the top of each run, so every shelf is lit.</span></figcaption></figure>
       </div>
     </div>
-    <figure class="rv">
-      <img src="assets/house-night.webp" alt="Brick-built house at dusk with warm uplighting on the walls and lit entrance steps" width="1024" height="768" fetchpriority="high">
-      <figcaption>Exterior lighting scheme</figcaption>
-    </figure>
   </div>
 </section>
 
-<div class="proof">
+<section class="about light" id="about" aria-labelledby="ab-h">
   <div class="wrap">
-    <div class="i"><strong>9.97/10</strong><span>Checkatrade score</span></div>
-    <div class="i"><strong>356</strong><span>Customer reviews</span></div>
-    <div class="i"><strong>97</strong><span>Reviews in the last 12 months</span></div>
-    <div class="i"><strong>Since 2019</strong><span>Trading · NAPIT, EAL, NVQ</span></div>
-  </div>
-</div>
-
-<div class="vat">
-  <div class="wrap">
-    <h2>No VAT. Free quotes.</h2>
-    <p>OMN Electrical isn’t VAT registered, so there’s no 20% added on top of your quote. Send the details and get a clear price back.</p>
-    <a class="btn" style="background:var(--ink);color:#fff" href="#quote">Request a quote</a>
-  </div>
-</div>
-
-<section id="services">
-  <div class="wrap">
-    <span class="kicker">What we do</span>
-    <h2>Electrical work, done properly.</h2>
-    <p class="sub">From small fixes to whole-house projects, every job is planned, neat and tested.</p>
-    <div class="cards">
-      <article class="card rv"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M3 11l9-7 9 7M5 10v10h14V10M9 20v-6h6v6"/></svg><h3>Rewires</h3><p>Full and partial rewires that bring your home up to modern standards.</p></article>
-      <article class="card rv"><svg viewBox="0 0 24 24" aria-hidden="true"><rect x="4" y="3" width="16" height="18" rx="2"/><path d="M8 7h3M8 11h3M8 15h3M14 7h2M14 11h2M14 15h2"/></svg><h3>Consumer unit upgrades</h3><p>Safer, modern fuse boards fitted cleanly and certified.</p></article>
-      <article class="card rv"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M9 3h6l4 4v14H5V3h4zM9 13l2 2 4-4"/></svg><h3>EICRs</h3><p>Electrical installation condition reports for homeowners and landlords.</p></article>
-      <article class="card rv"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M9 18h6M10 21h4M12 3a6 6 0 00-3.5 10.9c.6.5 1 1.2 1 2V16h5v-.1c0-.8.4-1.5 1-2A6 6 0 0012 3z"/></svg><h3>Lighting design &amp; LED</h3><p>Warm, layered lighting schemes and LED upgrades that transform a room.</p></article>
-      <article class="card rv"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 2v3M4.2 6.2l2.1 2.1M19.8 6.2l-2.1 2.1M2 14h3M19 14h3M8 22h8M9 18h6a5 5 0 10-6 0z"/></svg><h3>Garden lighting</h3><p>Outdoor lighting for paths, steps, patios and house frontages.</p></article>
-      <article class="card rv"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M13 2L4 14h7l-1 8 9-12h-7z"/></svg><h3>Hot tub wiring</h3><p>Safe, correctly specified supplies for hot tubs.</p></article>
-      <article class="card rv"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 3l9 16H3z M12 10v4M12 17h.01"/></svg><h3>Smoke alarms</h3><p>Fitting and upgrading of smoke alarms for peace of mind.</p></article>
-      <article class="card rv"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M4 8h16M4 12h16M4 16h16M7 4v16M17 4v16"/></svg><h3>Data cabling</h3><p>Tidy network cabling for home offices and connected homes.</p></article>
-      <article class="card rv"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M5 20V9l7-5 7 5v11M9 20v-5h6v5M12 9v2"/></svg><h3>Boiler wiring</h3><p>Electrical connections and controls for boiler installations.</p></article>
+    <div class="ph" data-clip><img data-parallax src="assets/van.webp" width="1024" height="768" alt="An electrician with folded arms standing beside a silver van with a ladder rack" loading="lazy"><span class="tag">Southampton</span></div>
+    <div>
+      <span class="eyebrow" data-reveal>Who you get</span>
+      <h2 id="ab-h" data-split style="margin-top:18px">A sole trader, since 2019.</h2>
+      <p data-reveal>OMN Electrical is Marcin Niezgoda's business. He is the owner, and the quote, the work and the call-back all come from the same place.</p>
+      <p data-reveal style="margin-top:14px">Qualifications and accreditations listed: NAPIT, EAL and NVQ.</p>
+      <div class="facts" data-reveal>
+        <div><b>2019</b><span>Trading since</span></div>
+        <div><b>97</b><span>Reviews in the last 12 months</span></div>
+        <div><b>Free</b><span>Quotes, every time</span></div>
+      </div>
     </div>
   </div>
 </section>
 
-<section class="eicr" id="eicr">
-  <div class="wrap grid">
+<section class="eicr" id="eicr" aria-labelledby="ei-h">
+  <div class="wrap">
     <div>
-      <span class="kicker">EICR &amp; landlords</span>
-      <h2>Landlord certificates, without the faff.</h2>
-      <p class="sub">An EICR checks the safety of your fixed wiring. Book an inspection and get a clear report.</p>
-      <ul>
-        <li>Electrical installation condition reports for rental and private homes</li>
-        <li>NAPIT registered, with EAL and NVQ qualifications</li>
-        <li>Straight answers, plain-English reports and a free quote first</li>
+      <span class="eyebrow" data-reveal>Landlords and home movers</span>
+      <h2 id="ei-h" data-split style="margin-top:18px">Need an EICR?</h2>
+      <p class="intro" data-reveal>An EICR is a report on the condition of the fixed wiring in a property. Landlords, buyers and sellers often ask for one. Tell us the property and we will arrange it.</p>
+      <a class="btn btn-gold" href="#quote" data-job="EICR / landlord certificate" data-reveal>Book an EICR <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12h14M13 6l6 6-6 6"/></svg></a>
+    </div>
+    <ol class="steps" data-reveal>
+      <li><div><b>Tell us the property</b><span>Postcode, type of property and how many circuits you know about.</span></div></li>
+      <li><div><b>We inspect and test</b><span>The fixed wiring and the consumer unit are checked.</span></div></li>
+      <li><div><b>You get the report</b><span>A written EICR, with anything that needs attention listed.</span></div></li>
+    </ol>
+  </div>
+</section>
+
+<section class="reviews light" id="reviews" aria-labelledby="rv-h">
+  <div class="wrap">
+    <span class="eyebrow" data-reveal>Reviews</span>
+    <h2 class="big" id="rv-h" data-split style="margin-top:18px">Scored by customers.</h2>
+    <div class="score">
+      <div class="big" data-reveal aria-label="9.97 out of 10">9.97<small>/10</small></div>
+      <p class="src" data-reveal>Average score on <b>Checkatrade</b>, from <b>356</b> customer reviews.</p>
+    </div>
+    <div class="nums" data-reveal>
+      <div><b data-count="356">356</b><span>Reviews on Checkatrade</span></div>
+      <div><b data-count="97">97</b><span>Of them in the last 12 months</span></div>
+      <div><b>9.97</b><span>Out of 10 on average</span></div>
+    </div>
+    <div class="more" data-reveal>
+      <a class="btn btn-ink" href="https://www.checkatrade.com/trades/omnelectrical" rel="noopener">Read them on Checkatrade <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M7 17 17 7M8 7h9v9"/></svg></a>
+      <p>The live site would show the reviews in full. This concept shows the score only.</p>
+    </div>
+  </div>
+</section>
+
+<section class="quote" id="quote" aria-labelledby="qt-h">
+  <div class="wrap">
+    <div>
+      <span class="eyebrow" data-reveal>Free quote</span>
+      <h2 id="qt-h" data-split style="margin-top:18px">Tell us about the job.</h2>
+      <p class="intro" data-reveal>Four short steps. Add photos of the consumer unit, the room or the run if you have them.</p>
+      <ul data-reveal>
+        <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="m5 12 5 5 9-10"/></svg>Quotes are free</li>
+        <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="m5 12 5 5 9-10"/></svg>Photos help us price it</li>
+        <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="m5 12 5 5 9-10"/></svg>Prefer to talk? Call 07427 810430</li>
       </ul>
-      <a class="btn btn-gold" href="#quote">Book an EICR</a>
     </div>
-    <div class="panel rv">
-      <h3>Not sure what you need?</h3>
-      <p>Tell us about the property and upload a photo of the consumer unit if you can. We’ll point you the right way.</p>
-      <a class="btn btn-ghost" href="tel:07427810430">Call 07427 810430</a>
-    </div>
-  </div>
-</section>
-
-<section id="projects">
-  <div class="wrap">
-    <span class="kicker">Lighting projects</span>
-    <h2>Lighting that changes how a home feels.</h2>
-    <p class="sub">A few finished schemes. Tap an image to enlarge.</p>
-    <div class="gallery">
-      <figure class="rv"><button type="button" data-full="assets/lounge.webp" data-alt="Living room with warm LED lighting under floating shelves and around a wall-mounted television"><img src="assets/lounge.webp" alt="Living room with warm LED lighting under floating shelves and around a wall-mounted television" loading="lazy"></button><figcaption>Living room shelf lighting</figcaption></figure>
-      <figure class="rv"><button type="button" data-full="assets/house-night.webp" data-alt="Brick house at dusk with warm uplighting and lit entrance steps"><img src="assets/house-night.webp" alt="Brick house at dusk with warm uplighting and lit entrance steps" loading="lazy"></button><figcaption>Exterior &amp; step lighting</figcaption></figure>
-      <figure class="rv tall"><button type="button" data-full="assets/wardrobe.webp" data-alt="Walk-in wardrobe with slim LED strip lighting along the ceiling and shelving"><img src="assets/wardrobe.webp" alt="Walk-in wardrobe with slim LED strip lighting along the ceiling and shelving" loading="lazy" style="object-position:center 40%"></button><figcaption>Walk-in wardrobe LED strips</figcaption></figure>
-    </div>
-  </div>
-</section>
-
-<section class="why">
-  <div class="wrap grid">
-    <figure class="rv"><img src="assets/van.webp" alt="OMN Electrical electrician standing beside the company van" loading="lazy" style="object-position:70% center"></figure>
-    <div>
-      <span class="kicker">Why OMN Electrical</span>
-      <h2>Small business care, top-tier results.</h2>
-      <p class="sub">Run by a Southampton sole trader since 2019, with a customer score that speaks for itself.</p>
-      <ol class="steps">
-        <li><div><b>Tell us what you need</b><span>Call or send the form, with photos if it helps.</span></div></li>
-        <li><div><b>Get a free, clear quote</b><span>No VAT added, so the price you’re quoted is the price that counts.</span></div></li>
-        <li><div><b>Neat, tested work</b><span>Done tidily, certified, and left clean.</span></div></li>
-      </ol>
-    </div>
-  </div>
-</section>
-
-<section class="rev" id="reviews">
-  <div class="wrap">
-    <span class="kicker">Reviews</span>
-    <h2>Customers rate us 9.97 out of 10.</h2>
-    <p class="sub" style="margin-inline:auto">Rated on Checkatrade, one of the UK’s best-known trade review sites.</p>
-    <div class="score rv">
-      <div class="big">9.97<small>/10</small></div>
-      <div class="stars" aria-hidden="true">★★★★★</div>
-      <p>Based on 356 reviews on Checkatrade — a very high number for a one-person business.</p>
-      <div class="row">
-        <div><b>356</b><span>total reviews</span></div>
-        <div><b>97</b><span>in the last 12 months</span></div>
-        <div><b>2019</b><span>trading since</span></div>
+    <form class="wiz" id="wiz" novalidate data-reveal aria-label="Quote builder">
+      <div class="prog" aria-hidden="true"><i class="on"></i><i></i><i></i><i></i></div>
+      <fieldset data-step="1">
+        <legend>What is the job?</legend>
+        <p class="sub">Step 1 of 4. Pick the closest.</p>
+        <div class="chips" id="jobs" role="group" aria-label="Job type">
+          <button type="button" class="chip" aria-pressed="false">Rewire</button>
+          <button type="button" class="chip" aria-pressed="false">Consumer unit upgrade</button>
+          <button type="button" class="chip" aria-pressed="false">EICR / landlord certificate</button>
+          <button type="button" class="chip" aria-pressed="false">Lighting design &amp; LED</button>
+          <button type="button" class="chip" aria-pressed="false">Garden lighting</button>
+          <button type="button" class="chip" aria-pressed="false">Hot tub wiring</button>
+          <button type="button" class="chip" aria-pressed="false">Smoke alarms</button>
+          <button type="button" class="chip" aria-pressed="false">Data cabling</button>
+          <button type="button" class="chip" aria-pressed="false">Boiler wiring</button>
+          <button type="button" class="chip" aria-pressed="false">Something else</button>
+        </div>
+        <p class="hint" id="e1" role="alert"></p>
+      </fieldset>
+      <fieldset data-step="2" hidden>
+        <legend>Where is it?</legend>
+        <p class="sub">Step 2 of 4. A postcode is enough.</p>
+        <label for="pc">Postcode</label>
+        <input type="text" id="pc" autocomplete="postal-code" placeholder="SO14 0AA" required>
+        <p class="hint" id="pcmsg" role="status"></p>
+        <label for="det">Anything we should know (optional)</label>
+        <textarea id="det" placeholder="For example: rented flat, three bedrooms, old fuse box"></textarea>
+      </fieldset>
+      <fieldset data-step="3" hidden>
+        <legend>Add photos</legend>
+        <p class="sub">Step 3 of 4. Optional, but they speed things up.</p>
+        <label class="drop" for="ph"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M4 8h3l2-3h6l2 3h3v11H4zM12 17a4 4 0 1 0 0-8 4 4 0 0 0 0 8z"/></svg><span>Choose photos or take one</span><input type="file" id="ph" accept="image/*" multiple></label>
+        <div class="thumbs" id="thumbs" aria-live="polite"></div>
+      </fieldset>
+      <fieldset data-step="4" hidden>
+        <legend>How do we reach you?</legend>
+        <p class="sub">Step 4 of 4.</p>
+        <label for="nm">Name</label>
+        <input type="text" id="nm" autocomplete="name" required>
+        <label for="tl">Phone</label>
+        <input type="tel" id="tl" autocomplete="tel" required>
+        <label for="em">Email (optional)</label>
+        <input type="email" id="em" autocomplete="email">
+      </fieldset>
+      <div class="nav" id="nav">
+        <button type="button" class="btn back" id="back" disabled>Back</button>
+        <button type="submit" class="btn btn-gold" id="next">Next</button>
       </div>
-    </div>
-  </div>
-</section>
-
-<section class="areas">
-  <div class="wrap">
-    <span class="kicker">Areas covered</span>
-    <h2>Southampton and across Hampshire.</h2>
-    <p class="sub">Based in Southampton and working throughout Hampshire. Not sure if you’re covered? Just ask.</p>
-    <div class="chips"><span class="chip">Southampton</span><span class="chip">Hampshire</span></div>
-  </div>
-</section>
-
-<section class="contact" id="quote">
-  <div class="wrap grid">
-    <div>
-      <span class="kicker">Get a free quote</span>
-      <h2>Tell us about the job.</h2>
-      <p class="sub">Send the details, and a photo of the job if you have one. Or just pick up the phone.</p>
-      <a class="phone" href="tel:07427810430">07427 810430</a>
-    </div>
-    <form id="qf" novalidate>
-      <div class="two">
-        <label>Your name<input name="name" autocomplete="name" required></label>
-        <label>Phone<input name="phone" type="tel" autocomplete="tel" required></label>
+      <div class="done" id="done" hidden tabindex="-1">
+        <span class="eyebrow">Quote request received</span>
+        <div class="ref" id="ref">Q-4821</div>
+        <p id="donetxt">Your reference number.</p>
+        <p class="note">This is a preview &mdash; the form will go live with your new site. Nothing was sent.</p>
+        <button type="button" class="btn btn-line" id="again">Start again</button>
       </div>
-      <label>Email<input name="email" type="email" autocomplete="email"></label>
-      <label>What do you need?
-        <select name="job">
-          <option>Free quote — general electrical work</option>
-          <option>EICR / landlord certificate</option>
-          <option>Consumer unit upgrade</option>
-          <option>Rewire</option>
-          <option>Lighting design / LED</option>
-          <option>Garden lighting</option>
-          <option>Something else</option>
-        </select>
-      </label>
-      <label>Tell us a bit more<textarea name="details" rows="4"></textarea></label>
-      <label>Add a photo (optional)<input type="file" name="photo" accept="image/*"></label>
-      <button class="btn btn-gold" type="submit" style="justify-content:center">Send my request</button>
-      <p id="msg" role="status"></p>
-      <p class="note">No VAT added to quotes.</p>
     </form>
+  </div>
+</section>
+
+<section class="contact light" id="contact" aria-labelledby="ct-h">
+  <div class="wrap">
+    <span class="eyebrow" id="ct-h">Areas covered</span>
+    <p class="area" data-reveal><span>Southampton</span><span class="o">&amp; Hampshire</span></p>
+    <div class="row">
+      <p data-reveal>Based in Southampton and working across Hampshire. Not sure if you are in range? Ring and ask.</p>
+      <div data-reveal>
+        <a class="callbig" href="tel:07427810430"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M22 16.9v3a2 2 0 0 1-2.2 2 19.8 19.8 0 0 1-8.6-3.1 19.5 19.5 0 0 1-6-6A19.8 19.8 0 0 1 2.1 4.2 2 2 0 0 1 4.1 2h3a2 2 0 0 1 2 1.7c.1 1 .4 1.9.7 2.8a2 2 0 0 1-.5 2.1L8.1 9.9a16 16 0 0 0 6 6l1.3-1.3a2 2 0 0 1 2.1-.4c.9.3 1.8.6 2.8.7a2 2 0 0 1 1.7 2z"/></svg>07427 810430</a>
+        <small>Marcin Niezgoda, owner</small>
+      </div>
+    </div>
   </div>
 </section>
 </main>
 
 <footer>
   <div class="wrap">
-    <img src="assets/logo.webp" alt="OMN Electrical" width="135" height="38">
-    <span>Southampton &amp; Hampshire · NAPIT registered · <a href="tel:07427810430">07427 810430</a></span>
-    <span>Concept preview only</span>
+    <img src="assets/logo.webp" width="492" height="139" alt="OMN Electrical logo">
+    <p class="cr">OMN Electrical &middot; Southampton &amp; Hampshire &middot; 07427 810430</p>
+    <p class="cr">Website concept by <a href="mailto:sam@itchenstudio.co.uk">Itchen Studio</a>. Preview only, not the live site.</p>
   </div>
 </footer>
 
-<dialog class="lb" id="lb" aria-label="Enlarged image"><img alt=""><button type="button" aria-label="Close">×</button></dialog>
+<script defer src="assets/js/gsap.min.js"></script>
+<script defer src="assets/js/ScrollTrigger.min.js"></script>
+<script defer src="assets/js/lenis.min.js"></script>
+<script defer src="assets/js/concept.js"></script>
+<script defer>
+window.addEventListener('DOMContentLoaded', function () {
+  var api = ConceptSite.init();
 
-<script>
-(function(){
-  var f=document.getElementById('qf'),m=document.getElementById('msg');
-  f.addEventListener('submit',function(e){
-    e.preventDefault();
-    m.style.display='block';
-    m.textContent='This is a preview — the form will go live with your new site.';
-    m.scrollIntoView({block:'nearest',behavior:'smooth'});
-  });
-  var lb=document.getElementById('lb'),li=lb.querySelector('img');
-  document.querySelectorAll('.gallery button').forEach(function(b){
-    b.addEventListener('click',function(){
-      li.src=b.dataset.full;li.alt=b.dataset.alt;
-      if(lb.showModal)lb.showModal();
+  /* hero lamp follows the pointer */
+  var hero = document.querySelector('.hero');
+  if (matchMedia('(pointer: fine)').matches && !matchMedia('(prefers-reduced-motion: reduce)').matches) {
+    hero.addEventListener('pointermove', function (e) {
+      var r = hero.getBoundingClientRect();
+      hero.style.setProperty('--mx', (e.clientX - r.left) + 'px');
+      hero.style.setProperty('--my', (e.clientY - r.top) + 'px');
+    });
+  }
+
+  /* ---------- quote builder ---------- */
+  var wiz = document.getElementById('wiz'), steps = [].slice.call(wiz.querySelectorAll('fieldset')), prog = wiz.querySelectorAll('.prog i');
+  var cur = 0, job = '';
+  var chips = [].slice.call(document.querySelectorAll('#jobs .chip'));
+  function setJob(v) {
+    job = v;
+    chips.forEach(function (c) { c.setAttribute('aria-pressed', String(c.textContent === v)); });
+    document.getElementById('e1').textContent = '';
+  }
+  chips.forEach(function (c) { c.addEventListener('click', function () { setJob(c.textContent); }); });
+  document.querySelectorAll('[data-job]').forEach(function (a) {
+    a.addEventListener('click', function () {
+      var v = a.getAttribute('data-job'), m = chips.filter(function (c) { return c.textContent.indexOf(v.split(' ')[0]) === 0; })[0];
+      if (m) setJob(m.textContent);
     });
   });
-  lb.addEventListener('click',function(){lb.close()});
-  var els=document.querySelectorAll('.rv');
-  if('IntersectionObserver' in window){
-    var io=new IntersectionObserver(function(es){es.forEach(function(x){if(x.isIntersecting){x.target.classList.add('in');io.unobserve(x.target)}})},{threshold:.12});
-    els.forEach(function(e){io.observe(e)});
-  }else{els.forEach(function(e){e.classList.add('in')})}
-})();
+  function show(i) {
+    cur = i;
+    steps.forEach(function (s, k) { s.hidden = k !== i; });
+    prog.forEach(function (p, k) { p.classList.toggle('on', k <= i); });
+    document.getElementById('back').disabled = i === 0;
+    document.getElementById('next').textContent = i === 3 ? 'Send quote request' : (i === 2 ? 'Next' : 'Next');
+  }
+  document.getElementById('back').addEventListener('click', function () { if (cur > 0) show(cur - 1); });
+  var pc = document.getElementById('pc');
+  pc.addEventListener('input', function () {
+    var v = pc.value.trim().toUpperCase(), m = document.getElementById('pcmsg');
+    pc.removeAttribute('aria-invalid');
+    if (v.length < 3) { m.textContent = ''; return; }
+    m.textContent = /^SO\d/.test(v) ? 'Yes, we cover ' + v.split(' ')[0] + '.' : 'We will check this one when we call.';
+  });
+  document.getElementById('ph').addEventListener('change', function (e) {
+    var t = document.getElementById('thumbs'); t.innerHTML = '';
+    [].slice.call(e.target.files).slice(0, 8).forEach(function (f) {
+      var im = document.createElement('img'); im.alt = 'Selected photo: ' + f.name; im.src = URL.createObjectURL(f); t.appendChild(im);
+    });
+  });
+  function bad(el) { el.setAttribute('aria-invalid', 'true'); el.focus(); }
+  wiz.addEventListener('submit', function (e) {
+    e.preventDefault();
+    if (cur === 0) { if (!job) { document.getElementById('e1').textContent = 'Pick the closest job to carry on.'; return; } }
+    if (cur === 1) { if (!pc.value.trim()) { bad(pc); return; } }
+    if (cur === 3) {
+      var nm = document.getElementById('nm'), tl = document.getElementById('tl'), ok = true;
+      [tl, nm].forEach(function (el) { if (!el.value.trim()) { ok = false; bad(el); } else el.removeAttribute('aria-invalid'); });
+      if (!ok) return;
+      document.getElementById('ref').textContent = 'Q-' + (1000 + Math.floor(Math.random() * 9000));
+      document.getElementById('donetxt').textContent = 'Thanks ' + nm.value.trim().split(' ')[0] + '. Your reference number for the ' + job + ' quote at ' + pc.value.trim().toUpperCase() + '.';
+      steps.forEach(function (s) { s.hidden = true; });
+      document.getElementById('nav').hidden = true; wiz.querySelector('.prog').hidden = true;
+      var d = document.getElementById('done'); d.hidden = false; d.focus();
+      return;
+    }
+    show(cur + 1);
+  });
+  document.getElementById('again').addEventListener('click', function () {
+    wiz.reset(); setJob(''); document.getElementById('thumbs').innerHTML = ''; document.getElementById('pcmsg').textContent = '';
+    document.getElementById('done').hidden = true; document.getElementById('nav').hidden = false; wiz.querySelector('.prog').hidden = false; show(0);
+  });
+
+  /* ---------- signature: one room at a time ---------- */
+  if (api.motion) {
+    var sec = document.getElementById('lighting'), rooms = gsap.utils.toArray('#lighting .room'), imgs = rooms.map(function (r) { return r.querySelector('img'); });
+    var caps = rooms.map(function (r) { return r.querySelector('figcaption'); });
+    var dim = 'brightness(.1) saturate(.3)', lit = 'brightness(1) saturate(1)';
+    var mm = gsap.matchMedia();
+
+    mm.add('(min-width: 901px)', function () {
+      sec.classList.add('pinned');
+      var stage = sec.querySelector('.stage'), nodes = gsap.utils.toArray('.circuit li'), fill = sec.querySelector('.circuit .fill');
+      gsap.set(imgs, { filter: dim });
+      gsap.set(rooms[1], { clipPath: 'inset(100% 0% 0% 0%)' });
+      gsap.set(rooms[2], { clipPath: 'inset(100% 0% 0% 0%)' });
+      var g = { v: 0 };
+      var tl = gsap.timeline({ defaults: { ease: 'none' }, scrollTrigger: { trigger: sec, start: 'top top', end: '+=2600', pin: true, scrub: 0.6, anticipatePin: 1, invalidateOnRefresh: true,
+        onUpdate: function (s) { var p = s.progress * 3; nodes.forEach(function (n, i) { n.classList.toggle('on', p >= i + 0.12); }); } } });
+      tl.to(imgs[0], { filter: lit, duration: 0.8 }, 0.1)
+        .to(caps[0], { opacity: 1, duration: 0.4 }, 0.55)
+        .to(g, { v: 1, duration: 0.8, onUpdate: function () { stage.style.setProperty('--glow', g.v); } }, 0.1)
+        .to(caps[0], { opacity: 0, duration: 0.25 }, 0.98)
+        .to(rooms[1], { clipPath: 'inset(0% 0% 0% 0%)', duration: 0.35 }, 1)
+        .to(imgs[1], { filter: lit, duration: 0.7 }, 1.25)
+        .to(caps[1], { opacity: 1, duration: 0.4 }, 1.6)
+        .to(caps[1], { opacity: 0, duration: 0.25 }, 1.98)
+        .to(rooms[2], { clipPath: 'inset(0% 0% 0% 0%)', duration: 0.35 }, 2)
+        .to(imgs[2], { filter: lit, duration: 0.7 }, 2.25)
+        .to(caps[2], { opacity: 1, duration: 0.4 }, 2.6)
+        .to(fill, { scaleY: 1, duration: 3 }, 0)
+        .to({}, { duration: 0.25 }, 3);
+      return function () { sec.classList.remove('pinned'); stage.style.removeProperty('--glow'); gsap.set([imgs, rooms, caps], { clearProps: 'all' }); };
+    });
+
+    mm.add('(max-width: 900px)', function () {
+      rooms.forEach(function (r, i) {
+        gsap.fromTo(imgs[i], { filter: dim }, { filter: lit, ease: 'none', scrollTrigger: { trigger: r, start: 'top 85%', end: 'top 35%', scrub: true } });
+      });
+    });
+  }
+});
 </script>
 </body>
 </html>
