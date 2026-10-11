@@ -1,368 +1,692 @@
 <!doctype html>
+<!--
+ART DIRECTION BRIEF - RDS Painting & Decorating (v2)
+
+IDEA: A painter's work is colour arriving on a surface. The page opens on a hand-finished kitchen and a freshly painted house front, and one scene lets you watch the same front change colour as you scroll.
+
+PALETTE: ink navy #0e1a38 (dark blocks), RDS royal blue #2447c8 (from the logo brush, used sparingly for italics and focus), warm linen #f4efe6 (light ground), paper #fbf8f2, brass #c9a45c on dark / #7a5c1e on light, wash tones green #86a58f, harbour #8da3c9, clay #d19b83.
+
+TYPE: Newsreader (variable, roman + italic) for display, big and calm; Hanken Grotesk for text and labels. Both self-hosted.
+
+HERO: full-bleed exterior photo under a navy fade, headline stacked bottom-left in two lines, a tall arched kitchen photo drifting at right, proof strip on the hero foot. Not the two-column template.
+
+SIGNATURE SCROLL MOMENT: "Same house, other colours". The section pins; as you scroll, three colour washes sweep left to right across the finished house front (multiply layers masked to the painted walls with a pre-cut mask) and the swatches light up in turn. Phone and touch: not pinned, the wash is scrubbed as the photo passes and swatches are tappable. Reduced motion: swatches switch the colour instantly.
+
+INTERACTIVE FEATURE: four-step quote request (job, area, photos with thumbnails, details) ending on a confirmation with a reference like Q-4821. Sends nothing.
+
+TRUTH NOTES: only lead facts. No phone or email on file, so contact is the quote form only. Accreditations are worded as listings (Checkatrade member since 2007, Buy With Confidence, a GBP 1,000 guarantee). The lead's own insurance and background-check claims are left out. Reviews are the three supplied quotes, credited to Checkatrade.
+
+HEADLINE OPTIONS (ten)
+1. ~~Painted by hand.~~ (any decorator)
+2. ~~Twenty years of clean edges.~~ (any decorator with 20 years)
+3. ~~Houses brought back to life.~~ (cliche, generic)
+4. ~~Southampton's painter since 2007.~~ (rival could claim it; the lead only supports Checkatrade membership since 2007)
+5. ~~Every door, drawer and sash.~~ (nice, but no exterior)
+6. ~~Brushwork for south Hampshire.~~ (generic)
+7. ~~Sanded clean, painted slowly.~~ (cute, unsupported)
+8. ~~Kitchens by hand, fronts in colour.~~ (too clever)
+9. ~~Colour, then a clean edge.~~ (any decorator)
+10. Hand-painted kitchens. Fresh exteriors.
+PICK: 10. Four words, names the two things he is known for, and the two photos back it up.
+-->
 <html lang="en-GB">
 <head>
 <meta charset="utf-8">
-<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
 <meta name="robots" content="noindex,nofollow">
-<title>RDS Painting &amp; Decorating | Southampton painter and decorator</title>
-<meta name="description" content="Concept website for RDS Painting &amp; Decorating, Southampton. Interior, exterior and hand-painted kitchens by Richard Scott.">
-<link rel="preconnect" href="https://fonts.googleapis.com">
-<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Young+Serif&family=Instrument+Sans:wght@400;500;600;700&display=swap" rel="stylesheet">
+<title>RDS Painting &amp; Decorating - concept site</title>
+<meta name="description" content="A concept website for RDS Painting &amp; Decorating, Southampton. Preview only, designed by Itchen Studio.">
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Crect width='32' height='32' rx='6' fill='%230e1a38'/%3E%3Ctext x='16' y='21' font-family='Georgia' font-size='11' font-weight='700' fill='%23c9a45c' text-anchor='middle'%3ERDS%3C/text%3E%3C/svg%3E">
+<link rel="preload" href="assets/fonts/newsreader.woff2" as="font" type="font/woff2" crossorigin>
+<link rel="preload" href="assets/fonts/hanken.woff2" as="font" type="font/woff2" crossorigin>
+<script>(function(d){if(!matchMedia('(prefers-reduced-motion: reduce)').matches){d.documentElement.classList.add('motion');setTimeout(function(){if(!d.documentElement.classList.contains('ready'))d.documentElement.classList.remove('motion')},3000)}})(document)</script>
 <style>
-/* Layout: warm off-white paper, deep navy from the logo lettering, royal blue from the brush, a small brass accent. Big serif headlines, tall photo panels, one navy proof band under the hero. */
+@font-face{font-family:"Newsreader";src:url("assets/fonts/newsreader.woff2") format("woff2");font-weight:200 800;font-style:normal;font-display:swap}
+@font-face{font-family:"Newsreader";src:url("assets/fonts/newsreader-italic.woff2") format("woff2");font-weight:200 800;font-style:italic;font-display:swap}
+@font-face{font-family:"Hanken Grotesk";src:url("assets/fonts/hanken.woff2") format("woff2");font-weight:100 900;font-display:swap}
 :root{
-  --navy:#0e1f4d; --navy-2:#16306e; --royal:#1f46b4; --brass:#b88a3e; --brass-l:#e3c27f;
-  --paper:#f7f4ee; --white:#fff; --line:#ddd6c8; --muted:#4d5468; --ink:#0f1630;
-  --display:"Young Serif",Georgia,"Times New Roman",serif; --body:"Instrument Sans",system-ui,Arial,sans-serif;
-  --gutter:clamp(16px,4vw,48px);
+  --ink:#0e1a38; --ink2:#16254c; --royal:#2447c8; --linen:#f4efe6; --paper:#fbf8f2; --line:#ddd4c4;
+  --brass:#c9a45c; --brass-d:#7a5c1e; --muted:#53607c; --cream:#efe8da;
+  --display:"Newsreader",Georgia,"Times New Roman",serif; --body:"Hanken Grotesk",system-ui,sans-serif;
+  --ease:cubic-bezier(.2,.8,.2,1);
 }
 *{box-sizing:border-box}
-html{scroll-behavior:smooth;scroll-padding-top:90px}
-body{margin:0;background:var(--paper);color:var(--ink);font:400 1.0625rem/1.65 var(--body);-webkit-font-smoothing:antialiased}
+html.lenis,html.lenis body{height:auto}
+body{margin:0;background:var(--linen);color:var(--ink);font:400 17px/1.65 var(--body);-webkit-font-smoothing:antialiased;overflow-x:clip}
 img{max-width:100%;display:block}
-a{color:inherit}
-h1,h2,h3{font-family:var(--display);font-weight:400;line-height:1.1;margin:0;text-wrap:balance}
 p{margin:0}
-.wrap{max-width:1180px;margin-inline:auto;padding-inline:var(--gutter)}
-:focus-visible{outline:3px solid var(--brass);outline-offset:3px;border-radius:2px}
-.eyebrow{font-size:.78rem;letter-spacing:.16em;text-transform:uppercase;font-weight:600;color:var(--royal)}
-.btn{display:inline-flex;align-items:center;justify-content:center;gap:.5rem;padding:.9rem 1.5rem;border-radius:999px;font-weight:600;text-decoration:none;border:2px solid transparent;cursor:pointer;font:600 1rem var(--body);transition:transform .2s,background .2s,color .2s}
-.btn-primary{background:var(--brass);color:var(--ink)}
-.btn-primary:hover{background:var(--brass-l);transform:translateY(-2px)}
-.btn-ghost{border-color:rgba(255,255,255,.55);color:#fff}
-.btn-ghost:hover{background:#fff;color:var(--navy)}
+.vh{position:absolute;width:1px;height:1px;overflow:hidden;clip:rect(0 0 0 0);white-space:nowrap}
+.wrap{max-width:1280px;margin:0 auto;padding-inline:36px}
+@media (max-width:640px){.wrap{padding-inline:16px}}
+h1,h2,h3{font-family:var(--display);font-weight:400;margin:0;letter-spacing:-.015em;text-wrap:balance}
+h2{font-size:clamp(42px,5.6vw,88px);line-height:1}
+h2 i,h1 i{font-style:italic}
+.lbl{font:600 12px/1.2 var(--body);letter-spacing:.24em;text-transform:uppercase;color:var(--brass-d)}
+.dark .lbl{color:var(--brass)}
+:focus-visible{outline:3px solid var(--royal);outline-offset:3px;border-radius:3px}
+.dark :focus-visible{outline-color:var(--brass)}
+[hidden]{display:none!important}
+.btn{display:inline-flex;align-items:center;justify-content:center;gap:10px;min-height:52px;font:600 14px/1 var(--body);letter-spacing:.14em;text-transform:uppercase;text-decoration:none;padding:0 28px;border:1.5px solid var(--ink);background:var(--ink);color:var(--linen);cursor:pointer;transition:background-color .3s,color .3s,border-color .3s}
+.btn:hover{background:var(--royal);border-color:var(--royal)}
+.btn.ghost{background:transparent;color:var(--ink)}
+.btn.ghost:hover{background:var(--ink);color:var(--linen);border-color:var(--ink)}
+.btn.brass{background:var(--brass);border-color:var(--brass);color:var(--ink)}
+.btn.brass:hover{background:#dcb870;border-color:#dcb870}
+.btn[disabled]{opacity:.4;cursor:not-allowed}
 
 /* preview banner */
-.banner{background:var(--ink);color:#e9e6dc;font-size:.82rem;padding:.55rem var(--gutter);text-align:center;line-height:1.4}
-.banner b{color:var(--brass-l);font-weight:600}
+.concept{background:#07101f;color:#c7cde0;font-size:13px;line-height:18px;text-align:center;padding:9px 16px}
+.concept a{color:#fff;font-weight:600;display:inline-block;padding:14px 4px;margin:-14px 0}
 
 /* header */
-header.top{position:sticky;top:0;z-index:20;background:rgba(255,255,255,.96);backdrop-filter:blur(8px);border-bottom:1px solid var(--line)}
-.nav{display:flex;align-items:center;justify-content:space-between;gap:1rem;min-height:72px}
-.brand{display:flex;align-items:center;gap:.75rem;text-decoration:none}
-.brand img{width:56px;height:56px;object-fit:contain}
-.brand span{font-family:var(--display);font-size:1.05rem;line-height:1.1;color:var(--navy)}
-.brand small{display:block;font-family:var(--body);font-size:.68rem;letter-spacing:.14em;text-transform:uppercase;color:var(--muted);margin-top:.15rem}
-nav ul{display:flex;gap:1.6rem;list-style:none;margin:0;padding:0}
-nav a{text-decoration:none;font-weight:500;font-size:.95rem;color:var(--navy);padding:.3rem 0;border-bottom:2px solid transparent}
-nav a:hover{border-color:var(--brass)}
-.nav .btn{padding:.65rem 1.2rem;font-size:.95rem;background:var(--navy);color:#fff}
-.nav .btn:hover{background:var(--royal)}
-@media(max-width:860px){nav ul{display:none}.brand small{display:none}}
+.top{position:sticky;top:0;z-index:50;background:var(--linen);border-bottom:1px solid var(--line);transition:transform .5s var(--ease)}
+.top.away{transform:translateY(-100%)}
+.top .wrap{display:flex;align-items:center;justify-content:space-between;gap:20px;height:76px}
+.brand{display:flex;align-items:center;gap:14px;text-decoration:none;color:var(--ink)}
+.brand img{height:56px;width:56px;mix-blend-mode:multiply}
+.brand span{display:flex;flex-direction:column;font:600 11px/1.3 var(--body);letter-spacing:.2em;text-transform:uppercase}
+.brand span b{font:500 20px/1.1 var(--display);letter-spacing:-.01em;text-transform:none}
+.top nav{display:flex;gap:30px}
+.top nav a{font:600 13px/1 var(--body);letter-spacing:.16em;text-transform:uppercase;text-decoration:none;color:var(--ink);padding:14px 0;border-bottom:2px solid transparent}
+.top nav a:hover{border-color:var(--brass)}
+.top .btn{min-height:48px;padding:0 22px;font-size:12px}
+@media (max-width:900px){.top nav{display:none}.brand span{display:none}.brand img{height:50px;width:50px}}
 
 /* hero */
-.hero{background:var(--navy);color:#fff;position:relative;overflow:hidden}
-.hero-grid{display:grid;grid-template-columns:1.05fr .95fr;gap:clamp(24px,5vw,64px);align-items:center;padding-block:clamp(40px,7vw,88px)}
-.hero h1{font-size:clamp(2.3rem,5.6vw,4.3rem);letter-spacing:-.01em}
-.hero h1 em{font-style:normal;color:var(--brass-l)}
-.hero p.lead{margin-top:1.3rem;font-size:1.15rem;color:#d3d9ec;max-width:34rem}
-.hero .actions{display:flex;flex-wrap:wrap;gap:.8rem;margin-top:2rem}
-.hero .eyebrow{color:var(--brass-l)}
-.hero-photo{position:relative}
-.hero-photo img{width:100%;aspect-ratio:4/4.4;object-fit:cover;border-radius:6px 6px 120px 6px;box-shadow:0 30px 60px -20px rgba(0,0,0,.55)}
-.hero-photo figcaption{position:absolute;left:-14px;bottom:28px;background:var(--paper);color:var(--ink);padding:.7rem 1rem;border-radius:4px;font-size:.85rem;box-shadow:0 10px 30px rgba(0,0,0,.25);max-width:230px;line-height:1.35}
-.hero-photo figcaption b{font-family:var(--display);font-weight:400;font-size:1.05rem;color:var(--navy);display:block}
-@media(max-width:860px){.hero-grid{grid-template-columns:1fr}.hero-photo{order:-1}.hero-photo img{aspect-ratio:4/3;border-radius:6px 6px 70px 6px}.hero-photo figcaption{left:12px;bottom:16px}}
+html.motion:not(.ready) .hero h1 .ln>span{transform:translateY(105%)}
+html.motion:not(.ready) [data-intro]{opacity:0}
+.hero h1 .ln{display:block;overflow:hidden;padding-bottom:.12em;margin-bottom:-.12em}
+.hero{position:relative;overflow:hidden;background:var(--ink);color:var(--linen);min-height:max(640px,calc(100svh - 130px));display:flex;flex-direction:column;justify-content:flex-end}
+.hero .bg{position:absolute;inset:-14% 0 0 0}
+.hero .bg img{width:100%;height:100%;object-fit:cover;object-position:22% 38%}
+.hero .veil{position:absolute;inset:0;background:linear-gradient(to top,rgba(14,26,56,.95) 6%,rgba(14,26,56,.6) 48%,rgba(14,26,56,.3) 80%),linear-gradient(to right,rgba(14,26,56,.7),rgba(14,26,56,.15) 65%,transparent)}
+.hero .wrap{position:relative;width:100%}
+.hero-main{display:grid;grid-template-columns:minmax(0,1fr) auto;gap:40px;align-items:end;padding-bottom:40px;padding-top:110px}
+.hero .lbl{color:var(--brass);margin-bottom:22px;display:block}
+.hero h1{font-size:clamp(50px,7.9vw,126px);line-height:.94;font-weight:380;letter-spacing:-.025em}
+.hero h1 .ln:last-child{font-style:italic;color:#e9d6a8}
+.hero .lead{max-width:34em;font-size:clamp(17px,1.4vw,20px);color:#dde2f0;margin-top:30px}
+.hero .ctas{display:flex;gap:12px;flex-wrap:wrap;margin-top:32px}
+.hero .btn.ghost{color:var(--linen);border-color:#ffffff88}
+.hero .btn.ghost:hover{background:var(--linen);color:var(--ink);border-color:var(--linen)}
+.arch{margin:0 0 30px;width:clamp(220px,22vw,320px);aspect-ratio:3/4.3;border-radius:999px 999px 0 0;overflow:hidden;border:1px solid #ffffff55;box-shadow:0 40px 80px -30px #000a;position:relative}
+.arch img{width:100%;height:100%;object-fit:cover;object-position:50% 40%}
+.arch figcaption{position:absolute;left:0;right:0;bottom:0;padding:34px 16px 14px;background:linear-gradient(transparent,#0e1a38dd);font:600 11px/1.3 var(--body);letter-spacing:.2em;text-transform:uppercase;color:#f4efe6;text-align:center}
+@media (max-width:900px){.hero-main{grid-template-columns:1fr;padding-top:70px}.arch{display:none}.hero{min-height:max(600px,calc(100svh - 120px))}}
 
 /* proof strip */
-.proof{background:var(--royal);color:#fff}
-.proof ul{list-style:none;margin:0;padding:0;display:grid;grid-template-columns:repeat(4,1fr)}
-.proof li{padding:1.4rem 1rem;border-left:1px solid rgba(255,255,255,.25);display:flex;flex-direction:column;gap:.15rem}
-.proof li:first-child{border-left:0;padding-left:0}
-.proof strong{font-family:var(--display);font-weight:400;font-size:clamp(1.5rem,3vw,2.1rem);line-height:1;font-variant-numeric:tabular-nums}
-.proof span{font-size:.88rem;color:#dbe4ff}
-@media(max-width:760px){.proof ul{grid-template-columns:1fr 1fr}.proof li{border-left:0;padding-left:0;border-top:1px solid rgba(255,255,255,.25)}.proof li:nth-child(-n+2){border-top:0}}
+.proof{background:var(--ink);color:var(--linen);border-top:1px solid #ffffff22}
+.proof ul{list-style:none;margin:0;padding:0;display:grid;grid-template-columns:repeat(5,auto);justify-content:space-between;gap:12px 28px}
+.proof li{padding:20px 0;display:flex;flex-direction:column;gap:2px;font-size:14px;color:#c4cbe0;line-height:1.35}
+.proof li b{font:400 30px/1.1 var(--display);color:var(--linen);letter-spacing:-.01em}
+.proof li b small{font:600 11px/1 var(--body);letter-spacing:.14em;text-transform:uppercase;color:var(--brass);margin-left:8px}
+.proof li b.sm{font-size:22px;line-height:1.3}
+@media (max-width:980px){.proof ul{grid-template-columns:repeat(2,1fr)}.proof li{padding:14px 0}}
+@media (max-width:520px){.proof li b{font-size:26px}.proof li b.sm{font-size:20px}}
 
-section{padding-block:clamp(56px,8vw,104px)}
-.sec-head{max-width:40rem;display:grid;gap:.9rem;margin-bottom:clamp(28px,4vw,52px)}
-.sec-head h2{font-size:clamp(1.9rem,4vw,3rem);color:var(--navy)}
-.sec-head p{color:var(--muted)}
+/* statement */
+.state{padding-block:150px 130px;background:var(--linen)}
+.state p.big{font:380 clamp(32px,4.2vw,64px)/1.14 var(--display);letter-spacing:-.015em;max-width:21em}
+.state p.big i{color:var(--royal)}
+.state .lbl{display:block;margin-bottom:28px}
+.state .meta{display:flex;gap:40px;flex-wrap:wrap;margin-top:56px;padding-top:24px;border-top:1.5px solid var(--ink)}
+.state .meta div{flex:1 1 220px}
+.state .meta p{max-width:24em;font-size:16px;color:var(--muted)}
+.state .meta b{display:block;font:600 12px/1.2 var(--body);letter-spacing:.2em;text-transform:uppercase;color:var(--ink);margin-bottom:8px}
+@media (max-width:640px){.state{padding-block:90px}}
 
 /* services */
-.svc{display:grid;grid-template-columns:repeat(3,1fr);gap:1px;background:var(--line);border:1px solid var(--line)}
-.svc article{background:var(--paper);padding:1.8rem;display:grid;gap:.8rem;align-content:start;transition:background .25s}
-.svc article:hover{background:#fff}
-.svc h3{font-size:1.45rem;color:var(--navy)}
-.svc ul{margin:0;padding:0;list-style:none;display:grid;gap:.4rem;color:var(--muted);font-size:.98rem}
-.svc li{padding-left:1.1rem;position:relative}
-.svc li::before{content:"";position:absolute;left:0;top:.7em;width:.5rem;height:2px;background:var(--brass)}
-@media(max-width:900px){.svc{grid-template-columns:1fr}}
+.svcs{padding-block:20px 140px;position:relative}
+.svc-list{list-style:none;margin:52px 0 0;padding:0;border-top:1.5px solid var(--ink)}
+.svc-list li{border-bottom:1px solid var(--ink)}
+.svc-list a{display:grid;grid-template-columns:70px minmax(0,1.1fr) minmax(0,1fr) 40px;align-items:center;gap:22px;padding:30px 4px;color:inherit;text-decoration:none;min-height:96px}
+.svc-list .n{font:600 13px/1 var(--body);letter-spacing:.2em;color:var(--brass-d)}
+.svc-list .t{font:380 clamp(32px,4.4vw,64px)/1 var(--display);letter-spacing:-.02em;transition:transform .5s var(--ease),color .3s}
+.svc-list .t i{color:var(--royal)}
+.svc-list .d{font-size:16px;color:var(--muted);max-width:26em}
+.svc-list .go{width:40px;height:40px;border:1.5px solid var(--ink);border-radius:50%;display:grid;place-items:center;transition:background .3s,color .3s,transform .4s var(--ease)}
+.svc-list .go svg{width:16px;height:16px}
+.svc-list a:hover .t{transform:translateX(16px);color:var(--royal)}
+.svc-list a:hover .go,.svc-list a:focus-visible .go{background:var(--ink);color:var(--linen);transform:rotate(-45deg)}
+.cursor-img{position:fixed;left:0;top:0;width:260px;aspect-ratio:3/4;pointer-events:none;z-index:40;overflow:hidden;opacity:0;visibility:hidden;border-radius:140px 140px 0 0;box-shadow:0 30px 60px -20px #0008}
+.cursor-img img{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;opacity:0;transition:opacity .35s}
+.cursor-img img.on{opacity:1}
+@media (max-width:860px){.svc-list a{grid-template-columns:36px minmax(0,1fr) 44px;gap:8px 14px;padding:24px 0}.svc-list .d{grid-column:2;grid-row:2}.svc-list .go{grid-row:1/3;grid-column:3}.cursor-img{display:none}}
 
-/* kitchens */
-.kitchens{background:var(--navy);color:#fff}
-.k-grid{display:grid;grid-template-columns:1fr 1fr;gap:clamp(24px,5vw,64px);align-items:center}
-.kitchens h2{font-size:clamp(1.9rem,4vw,3rem)}
-.kitchens .eyebrow{color:var(--brass-l)}
-.kitchens .copy{display:grid;gap:1.2rem;color:#d3d9ec}
-.kitchens ul{margin:.4rem 0 0;padding:0;list-style:none;display:grid;gap:.6rem}
-.kitchens li{padding-left:1.6rem;position:relative}
-.kitchens li::before{content:"";position:absolute;left:0;top:.55em;width:.9rem;height:2px;background:var(--brass-l)}
-.k-photos{display:grid;grid-template-columns:1fr 1fr;gap:12px}
-.k-photos img{width:100%;height:100%;object-fit:cover;border-radius:4px;aspect-ratio:3/4.2}
-.k-photos img:last-child{margin-top:36px}
-@media(max-width:860px){.k-grid{grid-template-columns:1fr}}
-
-/* why */
-.why{display:grid;grid-template-columns:repeat(4,1fr);gap:clamp(18px,3vw,36px)}
-.why div{display:grid;gap:.6rem;align-content:start;border-top:3px solid var(--brass);padding-top:1rem}
-.why h3{font-size:1.25rem;color:var(--navy)}
-.why p{color:var(--muted);font-size:.98rem}
-@media(max-width:900px){.why{grid-template-columns:1fr 1fr}}
-@media(max-width:520px){.why{grid-template-columns:1fr}}
+/* signature: colour wash */
+.wash{background:var(--ink);color:var(--linen);position:relative}
+.wash .in{max-width:1380px;margin:0 auto;padding:56px 36px 48px;display:grid;grid-template-columns:minmax(0,.78fr) minmax(0,1.5fr);gap:56px;align-items:center;min-height:100svh}
+.wash h2{font-size:clamp(40px,4.6vw,76px);margin-top:18px}
+.wash h2 i{color:#e9d6a8}
+.wash p.sub{color:#c4cbe0;margin-top:22px;max-width:27em;font-size:16.5px}
+.wash .stage{position:relative;aspect-ratio:4/3;width:min(100%,calc((100svh - 150px) * 4 / 3));justify-self:end;overflow:hidden;background:#fff;box-shadow:0 50px 100px -40px #000c;border:1px solid #ffffff30}
+.wash .stage>img,.wash .layer img{position:absolute;inset:0;width:100%;height:100%;object-fit:cover}
+.wash .walls{position:absolute;inset:0;-webkit-mask-image:url(assets/wallmask.webp);mask-image:url(assets/wallmask.webp);-webkit-mask-size:100% 100%;mask-size:100% 100%}
+.wash .layer{position:absolute;inset:0;--p:-6%;-webkit-mask-image:linear-gradient(90deg,#000 var(--p),transparent calc(var(--p) + 6%));mask-image:linear-gradient(90deg,#000 var(--p),transparent calc(var(--p) + 6%))}
+.wash .layer .tone{position:absolute;inset:0;mix-blend-mode:multiply}
+.wash .tag{position:absolute;left:14px;bottom:12px;font:600 11px/1 var(--body);letter-spacing:.2em;text-transform:uppercase;color:#fff;background:#0e1a38cc;padding:9px 12px}
+.swatches{display:flex;gap:10px;margin-top:34px;flex-wrap:wrap}
+.sw-b{all:unset;box-sizing:border-box;cursor:pointer;display:flex;flex-direction:column;align-items:flex-start;gap:8px;min-width:96px;min-height:44px;padding:10px 12px 12px;border:1px solid #ffffff3a;transition:border-color .3s,background .3s}
+.sw-b i{display:block;width:100%;height:38px;border-radius:2px;border:1px solid #ffffff44}
+.sw-b span{font:600 12px/1.2 var(--body);letter-spacing:.1em;text-transform:uppercase;color:#c4cbe0}
+.sw-b:hover{border-color:#ffffff99}
+.sw-b[aria-pressed="true"]{border-color:var(--brass);background:#ffffff12}
+.sw-b[aria-pressed="true"] span{color:#fff}
+.sw-b:focus-visible{outline:3px solid var(--brass);outline-offset:3px}
+.wash .note{font-size:13.5px;color:#a6aecb;margin-top:22px;max-width:30em}
+@media (max-width:860px){.wash .in{grid-template-columns:1fr;gap:26px;padding:80px 16px 70px;min-height:0}.wash .stage{width:100%;justify-self:stretch;order:2}.swatches{margin-top:24px}.wash .copy{display:contents}.wash .c1{order:1}.wash .swatches{order:3}.wash .note{order:4;margin-top:0}.sw-b{flex:1;min-width:0;padding:8px}.sw-b span{font-size:10.5px;letter-spacing:.06em}}
 
 /* gallery */
-.gallery{background:#fff}
-.g-grid{display:grid;grid-template-columns:1.3fr 1fr 1fr;gap:12px}
-.g-grid button{padding:0;border:0;background:none;cursor:zoom-in;overflow:hidden;border-radius:4px;display:block}
-.g-grid img{width:100%;height:100%;object-fit:cover;aspect-ratio:3/4;transition:transform .5s}
-.g-grid button:hover img{transform:scale(1.04)}
-.g-note{margin-top:1.2rem;color:var(--muted);font-size:.92rem}
-@media(max-width:700px){.g-grid{grid-template-columns:1fr 1fr}.g-grid button:first-child{grid-column:1/-1}.g-grid button:first-child img{aspect-ratio:4/3}}
-dialog.lb{border:0;padding:0;background:transparent;max-width:min(94vw,900px)}
-dialog.lb::backdrop{background:rgba(8,12,30,.88)}
-dialog.lb img{max-height:88vh;width:auto;margin:auto;border-radius:4px}
-dialog.lb button{position:absolute;top:8px;right:8px;background:#fff;border:0;border-radius:50%;width:44px;height:44px;font-size:1.4rem;cursor:pointer}
+.gallery{padding-block:150px;overflow:hidden}
+.g-grid{display:grid;grid-template-columns:1.25fr .8fr 1fr;gap:18px;margin-top:56px;align-items:start}
+.g-grid figure{margin:0}
+.g-grid .fr{overflow:hidden;position:relative;background:var(--cream)}
+.g-grid img{width:100%;height:114%;object-fit:cover}
+.g-grid .g1 .fr{aspect-ratio:4/3.1}
+.g-grid .g2 .fr{aspect-ratio:3/4.4;margin-top:110px}
+.g-grid .g3 .fr{aspect-ratio:1/1;margin-top:36px}
+.g-grid figcaption{font-size:14px;color:var(--muted);margin-top:12px;max-width:26em}
+.g-grid figcaption b{display:block;font:600 11px/1.2 var(--body);letter-spacing:.2em;text-transform:uppercase;color:var(--ink);margin-bottom:4px}
+.gallery .src{font-size:14px;color:var(--muted);margin-top:44px}
+@media (max-width:860px){.gallery{padding-block:90px}.g-grid{grid-template-columns:1fr 1fr}.g-grid .g1{grid-column:1/-1}.g-grid .g2 .fr,.g-grid .g3 .fr{margin-top:0}.g-grid .g3 .fr{aspect-ratio:3/4.4}}
+@media (max-width:520px){.g-grid{gap:14px}}
 
 /* reviews */
-.rev-top{display:flex;flex-wrap:wrap;align-items:end;justify-content:space-between;gap:1.5rem;margin-bottom:2.2rem}
-.score{display:flex;align-items:baseline;gap:.7rem}
-.score b{font-family:var(--display);font-weight:400;font-size:clamp(3rem,7vw,5rem);line-height:1;color:var(--navy)}
-.score span{color:var(--muted);max-width:14rem;line-height:1.35;font-size:.95rem}
-.quotes{display:grid;grid-template-columns:repeat(3,1fr);gap:20px}
-.quotes figure{margin:0;background:#fff;border:1px solid var(--line);padding:1.8rem;display:grid;gap:1.2rem;align-content:space-between;border-radius:4px}
-.quotes blockquote{margin:0;font-family:var(--display);font-size:1.2rem;line-height:1.4;color:var(--navy)}
-.quotes blockquote::before{content:"\201C";display:block;font-size:3rem;line-height:.6;color:var(--brass)}
-.quotes figcaption{font-size:.85rem;color:var(--muted)}
-@media(max-width:900px){.quotes{grid-template-columns:1fr}}
+.reviews{background:var(--cream);padding-block:130px 120px;overflow:hidden}
+.rv-head{display:flex;justify-content:space-between;align-items:end;gap:32px;flex-wrap:wrap;margin-bottom:56px}
+.rv-score{display:flex;align-items:baseline;gap:16px}
+.rv-score b{font:380 clamp(70px,9vw,130px)/.85 var(--display);letter-spacing:-.04em;color:var(--ink)}
+.rv-score span{font-size:15px;color:var(--muted);max-width:14em;line-height:1.4}
+.rv-wrap{overflow:hidden}
+.rv-wrap.second{margin-top:22px}
+.rv-row{display:flex;gap:22px;width:max-content;padding-block:6px}
+.rv{flex:0 0 auto;margin:0;width:min(460px,82vw);background:var(--paper);border:1px solid var(--line);padding:34px 34px 28px;display:flex;flex-direction:column;gap:22px}
+.rv q{font:380 clamp(22px,2.1vw,29px)/1.28 var(--display);quotes:"\201C" "\201D";letter-spacing:-.01em}
+.rv footer{font:600 12px/1.3 var(--body);letter-spacing:.16em;text-transform:uppercase;color:var(--brass-d);margin-top:auto}
+html:not(.motion) .rv-row{width:auto;flex-wrap:wrap;max-width:1280px;margin:0 auto;padding-inline:36px}
+html:not(.motion) .rv-row .dup,html:not(.motion) .rv-wrap.second{display:none}
+@media (max-width:640px){.rv{padding:26px 24px 22px}html:not(.motion) .rv-row{padding-inline:16px}}
 
 /* areas */
-.areas{background:#efe9dc}
-.chips{display:flex;flex-wrap:wrap;gap:.6rem;list-style:none;margin:0;padding:0}
-.chips li{padding:.6rem 1.1rem;background:var(--paper);border:1px solid var(--line);border-radius:999px;font-weight:500;color:var(--navy)}
+.areas{padding-block:140px 110px;background:var(--linen)}
+.areas ul{list-style:none;margin:48px 0 0;padding:0;display:flex;flex-wrap:wrap;gap:0 .5em;font-size:clamp(40px,6.6vw,104px)}
+.areas li{font:380 1em/1.1 var(--display);letter-spacing:-.025em;color:var(--ink)}
+.areas li:nth-child(even){font-style:italic;color:var(--royal)}
+.areas p.n{margin-top:40px;color:var(--muted);max-width:34em;font-size:16px}
+@media (max-width:640px){.areas{padding-block:90px}.areas ul{gap:0 .4em}}
 
-/* contact */
-.contact{background:var(--navy);color:#fff}
-.c-grid{display:grid;grid-template-columns:.9fr 1.1fr;gap:clamp(28px,5vw,72px);align-items:start}
-.contact h2{font-size:clamp(1.9rem,4vw,3rem)}
-.contact .eyebrow{color:var(--brass-l)}
-.contact .copy{display:grid;gap:1.2rem;color:#d3d9ec}
-.contact .copy a{color:var(--brass-l)}
-form{background:var(--paper);color:var(--ink);padding:clamp(20px,3vw,34px);border-radius:6px;display:grid;gap:1rem}
-.row{display:grid;grid-template-columns:1fr 1fr;gap:1rem}
-label{display:grid;gap:.35rem;font-weight:600;font-size:.9rem;color:var(--navy)}
-input,select,textarea{font:400 1rem var(--body);padding:.75rem .85rem;border:1.5px solid #b9b2a2;border-radius:4px;background:#fff;color:var(--ink);width:100%}
-input:focus,select:focus,textarea:focus{outline:3px solid var(--royal);outline-offset:1px;border-color:var(--royal)}
-textarea{min-height:110px;resize:vertical}
-.hint{font-weight:400;color:var(--muted);font-size:.82rem}
-.ok{background:#e3efe3;color:#1d4a22;padding:.8rem 1rem;border-radius:4px;font-weight:500}
-@media(max-width:860px){.c-grid{grid-template-columns:1fr}.row{grid-template-columns:1fr}}
+/* quote wizard */
+.quote{background:var(--ink);color:var(--linen);padding-block:130px}
+.quote .grid{display:grid;grid-template-columns:minmax(0,.8fr) minmax(0,1.2fr);gap:70px;align-items:start}
+.quote h2{margin-top:20px;color:var(--linen)}
+.quote h2 i{color:#e9d6a8}
+.quote .side p.t{color:#c4cbe0;margin-top:24px;max-width:25em}
+.quote .side ul{list-style:none;margin:30px 0 0;padding:0;display:grid;gap:10px;color:#dde2f0;font-size:15px}
+.quote .side li{display:flex;gap:12px;align-items:baseline}
+.quote .side li::before{content:"";width:18px;height:1px;background:var(--brass);flex:0 0 auto;transform:translateY(-4px)}
+.panel{background:var(--paper);color:var(--ink);padding:34px;box-shadow:0 50px 90px -40px #000c}
+.prog{display:flex;gap:6px;margin-bottom:14px}
+.prog i{flex:1;height:3px;background:var(--line);transition:background .4s}
+.prog i.on{background:var(--ink)}
+.stepno{display:flex;justify-content:space-between;font:600 12px/1 var(--body);letter-spacing:.2em;text-transform:uppercase;color:var(--muted);margin-bottom:22px}
+.panel fieldset{border:0;margin:0;padding:0;min-width:0}
+.panel legend{font:380 clamp(28px,3vw,40px)/1.08 var(--display);letter-spacing:-.015em;margin-bottom:20px;padding:0}
+.panel legend:focus{outline:none}
+.opts{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:10px}
+.opt{position:relative;display:flex;flex-direction:column;justify-content:center;gap:2px;min-height:68px;padding:14px 18px;border:1.5px solid var(--line);background:#fff;cursor:pointer;transition:border-color .25s,background .25s}
+.opt input{position:absolute;opacity:0;inset:0;cursor:pointer;margin:0;width:100%;height:100%}
+.opt b{font:500 20px/1.2 var(--display)}
+.opt span{font-size:13.5px;color:var(--muted);line-height:1.4}
+.opt:hover{border-color:var(--ink)}
+.opt:has(input:checked){border-color:var(--ink);box-shadow:inset 0 0 0 1.5px var(--ink);background:#f6f1e4}
+.opt:has(input:focus-visible){outline:3px solid var(--royal);outline-offset:2px}
+.opts.areas-o{grid-template-columns:repeat(3,minmax(0,1fr))}
+.opts.areas-o .opt{min-height:56px;padding:10px 14px}
+.opts.areas-o .opt b{font-size:18px}
+.drop{display:grid;place-items:center;align-content:center;text-align:center;gap:6px;min-height:150px;border:1.5px dashed var(--muted);background:#fff;padding:24px;cursor:pointer;position:relative;transition:border-color .25s,background .25s}
+.drop:hover{border-color:var(--ink);background:#f6f1e4}
+.drop input{position:absolute;inset:0;opacity:0;cursor:pointer;width:100%;height:100%}
+.drop b{font:500 22px/1.2 var(--display)}
+.drop span{font-size:14px;color:var(--muted)}
+.drop:has(input:focus-visible){outline:3px solid var(--royal);outline-offset:2px}
+.thumbs{display:grid;grid-template-columns:repeat(auto-fill,minmax(92px,1fr));gap:8px;margin-top:14px}
+.thumbs figure{margin:0;position:relative;aspect-ratio:1;overflow:hidden;background:var(--cream)}
+.thumbs img{width:100%;height:100%;object-fit:cover}
+.thumbs button{all:unset;position:absolute;top:2px;right:2px;width:44px;height:44px;display:grid;place-items:center;cursor:pointer}
+.thumbs button::before{content:"\00d7";width:26px;height:26px;border-radius:50%;background:#0e1a38dd;color:#fff;display:grid;place-items:center;font-size:17px;line-height:1}
+.thumbs button:focus-visible{outline:3px solid var(--royal)}
+.pnote{font-size:13.5px;color:var(--muted);margin-top:12px}
+.fields{display:grid;gap:14px}
+.fields label{display:grid;gap:6px;font-size:14px;font-weight:600}
+.fields label small{font-weight:400;color:var(--muted)}
+.fields input,.fields textarea{font:inherit;font-weight:400;font-size:16px;border:1.5px solid var(--line);background:#fff;padding:14px;color:var(--ink);border-radius:0;min-height:50px;width:100%}
+.fields input:focus,.fields textarea:focus{outline:none;border-color:var(--ink);box-shadow:0 0 0 3px #2447c840}
+.fields .two{display:grid;grid-template-columns:1fr 1fr;gap:14px}
+.err{color:#a3231b;font-size:14px;font-weight:600;min-height:20px}
+.pn-foot{display:flex;justify-content:space-between;align-items:center;gap:16px;margin-top:26px;padding-top:20px;border-top:1px solid var(--line)}
+.pn-foot .sum{font-size:13.5px;color:var(--muted);line-height:1.4}
+.pn-foot .acts{display:flex;gap:8px;margin-left:auto}
+.done{text-align:center;display:grid;gap:14px;justify-items:center;padding:14px 0 6px}
+.done:focus{outline:none}
+.done .seal{width:84px;height:84px;border-radius:50%;background:var(--ink);color:var(--brass);display:grid;place-items:center}
+.done .seal svg{width:38px;height:38px}
+.done .ref{font:600 13px/1 var(--body);letter-spacing:.24em;text-transform:uppercase;color:var(--brass-d)}
+.done h3{font:380 clamp(32px,3.4vw,46px)/1.05 var(--display)}
+.done dl{display:grid;grid-template-columns:auto 1fr;gap:8px 22px;margin:8px 0 0;text-align:left;font-size:16px;max-width:30em}
+.done dt{color:var(--muted)}
+.done dd{margin:0;font-weight:600;overflow-wrap:anywhere}
+.done .note{color:var(--muted);font-size:14.5px;max-width:30em}
+@media (max-width:980px){.quote .grid{grid-template-columns:1fr;gap:44px}.quote{padding-block:90px}}
+@media (max-width:560px){.panel{padding:22px 16px}.opts.areas-o{grid-template-columns:1fr 1fr}.fields .two{grid-template-columns:1fr}.pn-foot{flex-wrap:wrap}.pn-foot .sum{width:100%}.pn-foot .acts{width:100%}.pn-foot .btn{flex:1;padding:0 12px}}
+@media (max-width:380px){.opts{grid-template-columns:1fr}}
 
-footer{background:var(--ink);color:#b9bdd0;padding-block:2rem;font-size:.9rem}
-footer .wrap{display:flex;flex-wrap:wrap;gap:.8rem 2rem;justify-content:space-between}
-
-/* motion */
-@media(prefers-reduced-motion:no-preference){
-  .hero-grid>*{animation:rise .8s cubic-bezier(.2,.7,.2,1) both}
-  .hero-grid>*:nth-child(2){animation-delay:.12s}
-  @keyframes rise{from{opacity:0;transform:translateY(18px)}to{opacity:1;transform:none}}
-}
-@media(prefers-reduced-motion:reduce){html{scroll-behavior:auto}*{transition:none!important}}
+/* footer */
+.foot{background:var(--ink2);color:#c4cbe0;padding-block:70px 36px;overflow:hidden}
+.foot .row{display:grid;grid-template-columns:minmax(0,1.3fr) minmax(0,1fr) minmax(0,1fr);gap:40px}
+.foot h2{font-size:clamp(34px,3.6vw,52px);color:var(--linen)}
+.foot h2 i{color:#e9d6a8}
+.foot .lbl{color:var(--brass)}
+.foot p{margin-top:14px;font-size:15.5px;max-width:26em}
+.foot p.lbl{margin-top:0}
+.foot a{color:#fff}.foot .base a{display:inline-block;padding:13px 4px;margin:-13px 0}
+.foot a.btn{color:var(--ink);margin-top:6px}
+.foot .giant{font:380 italic clamp(150px,46vw,660px)/.78 var(--display);letter-spacing:-.05em;color:#ffffff14;margin:50px 0 0 -.03em;white-space:nowrap;user-select:none;max-width:none}
+.foot .base{display:flex;justify-content:space-between;flex-wrap:wrap;gap:12px;border-top:1px solid #ffffff22;padding-top:20px;font-size:14px;margin-top:20px;position:relative}
+@media (max-width:860px){.foot .row{grid-template-columns:1fr}}
 </style>
 </head>
 <body>
-<div class="banner" role="note">Website concept for <b>RDS Painting &amp; Decorating</b> — preview only, not the live site. Designed by Itchen Studio · sam@itchenstudio.co.uk</div>
+<div class="concept">Website concept for RDS Painting &amp; Decorating &mdash; preview only, not the live site. Designed by Itchen Studio &middot; <a href="mailto:sam@itchenstudio.co.uk">sam@itchenstudio.co.uk</a></div>
 
 <header class="top">
-  <div class="wrap nav">
-    <a class="brand" href="#top" aria-label="RDS Painting &amp; Decorating, home">
-      <img src="assets/logo.webp" alt="RDS paintbrush logo" width="56" height="56">
-      <span>RDS Painting &amp; Decorating<small>Southampton</small></span>
-    </a>
-    <nav aria-label="Main"><ul>
-      <li><a href="#services">Services</a></li>
-      <li><a href="#kitchens">Kitchens</a></li>
-      <li><a href="#gallery">Gallery</a></li>
-      <li><a href="#reviews">Reviews</a></li>
-      <li><a href="#areas">Areas</a></li>
-    </ul></nav>
+  <div class="wrap">
+    <a class="brand" href="#hero" aria-label="RDS Painting &amp; Decorating, back to top"><img src="assets/logo.webp" alt="" width="56" height="56"><span><b>RDS</b>Painting &amp; Decorating</span></a>
+    <nav aria-label="Main"><a href="#services">Services</a><a href="#colour">Colour</a><a href="#work">Work</a><a href="#reviews">Reviews</a><a href="#areas">Areas</a></nav>
     <a class="btn" href="#quote">Get a free quote</a>
   </div>
 </header>
 
-<main id="top">
-<div class="hero">
-  <div class="wrap hero-grid">
-    <div>
-      <p class="eyebrow">Painter &amp; decorator · Southampton</p>
-      <h1>Paintwork that earns <em>531 reviews</em> and keeps them.</h1>
-      <p class="lead">Careful interior and exterior decorating, plus hand-painted kitchens, from Richard Scott and the team. Tidy, dust-controlled and finished to a standard you can see in every edge.</p>
-      <div class="actions">
-        <a class="btn btn-primary" href="#quote">Get a free quote</a>
-        <a class="btn btn-ghost" href="#gallery">See recent work</a>
+<main>
+<section class="hero dark" id="hero" aria-labelledby="h1">
+  <div class="bg"><img src="assets/exterior.webp" alt="A period house front in Southampton painted white, with painted sash windows and gables" width="1024" height="768" fetchpriority="high"></div>
+  <div class="veil"></div>
+  <div class="wrap">
+    <div class="hero-main">
+      <div>
+        <span class="lbl" data-intro>Painter &amp; decorator &middot; Southampton</span>
+        <h1 id="h1"><span class="ln"><span>Hand-painted kitchens.</span></span><span class="ln"><span>Fresh exteriors.</span></span></h1>
+        <p class="lead" data-intro>Richard Scott paints and repairs the inside and outside of houses across Southampton and south Hampshire. Cabinets, sash windows, render and woodwork all get the same close attention.</p>
+        <div class="ctas" data-intro><a class="btn brass" href="#quote">Get a free quote</a><a class="btn ghost" href="#colour">See a colour change</a></div>
       </div>
+      <figure class="arch" data-intro><img src="assets/kitchen-1.webp" alt="Cream painted kitchen cabinets with a black worktop and a glass pass-through window" width="1024" height="1365"><figcaption>Painted kitchen</figcaption></figure>
     </div>
-    <figure class="hero-photo" style="margin:0">
-      <img src="assets/exterior.webp" alt="Period house with freshly painted white brickwork, windows and downpipes" width="1024" height="768">
-      <figcaption><b>Exterior repaint</b>Brickwork, sashes and rainwater goods</figcaption>
-    </figure>
   </div>
-</div>
+</section>
 
-<div class="proof">
+<section class="proof dark" aria-label="Reviews and accreditations">
   <div class="wrap">
     <ul>
-      <li><strong>9.92</strong><span>Checkatrade rating</span></li>
-      <li><strong>531</strong><span>reviews on Checkatrade</span></li>
-      <li><strong>2007</strong><span>Checkatrade member since</span></li>
-      <li><strong>£1,000</strong><span>guarantee · Buy With Confidence</span></li>
+      <li><b><span data-count="531">531</span><small>reviews</small></b>on Checkatrade</li>
+      <li><b>9.92<small>average</small></b>Checkatrade score</li>
+      <li><b>2007<small>member since</small></b>Checkatrade</li>
+      <li><b class="sm">Buy With Confidence</b>Trading Standards scheme</li>
+      <li><b>&pound;1,000<small>guarantee</small></b>listed on his Checkatrade profile</li>
     </ul>
   </div>
-</div>
+</section>
 
-<section id="services">
+<section class="state" aria-labelledby="state-h">
   <div class="wrap">
-    <div class="sec-head">
-      <p class="eyebrow">What we paint</p>
-      <h2>Interior, exterior and everything in between</h2>
-      <p>From a single room to the whole outside of a house, the preparation is as careful as the finish.</p>
-    </div>
-    <div class="svc">
-      <article>
-        <h3>Interior decorating</h3>
-        <ul><li>Interior painting</li><li>Wallpapering</li><li>Dust-controlled sanding</li><li>Murals</li></ul>
-      </article>
-      <article>
-        <h3>Exterior &amp; timber</h3>
-        <ul><li>Exterior painting</li><li>Sash and wooden window painting</li><li>Timber resin repairs and restoration</li></ul>
-      </article>
-      <article>
-        <h3>Kitchens, furniture &amp; spraying</h3>
-        <ul><li>Hand-painted kitchens</li><li>Hand-painted furniture</li><li>Spraying</li></ul>
-      </article>
+    <h2 id="state-h" class="vh">About Richard Scott</h2>
+    <span class="lbl" data-reveal>The painter</span>
+    <p class="big" id="stmt">Richard Scott has painted houses and kitchens in Southampton for more than twenty years. Timber is repaired before it is painted, and <i>sanding is dust-controlled.</i></p>
+    <div class="meta">
+      <div data-reveal><b>Inside and out</b><p>Walls, ceilings, woodwork, render, brick and fascias.</p></div>
+      <div data-reveal><b>Sole trader</b><p>Richard runs the business himself, so you deal with the person doing the work.</p></div>
+      <div data-reveal><b>About 150 job photos</b><p>His Checkatrade album is the best record of what he does. A few are shown below.</p></div>
     </div>
   </div>
 </section>
 
-<section class="kitchens" id="kitchens">
-  <div class="wrap k-grid">
+<section class="svcs" id="services" aria-labelledby="svc-t">
+  <div class="wrap">
+    <p class="lbl" data-reveal>What he paints</p>
+    <h2 id="svc-t" data-split style="margin-top:18px">Six kinds of job</h2>
+    <ul class="svc-list">
+      <li data-reveal><a href="#quote" data-job="Interior painting" data-img="0"><span class="n">01</span><span class="t">Interior <i>painting</i></span><span class="d">Walls, ceilings, doors and skirting. Sanding is dust-controlled, so the rest of the house stays clean.</span><span class="go" aria-hidden="true"><svg viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="1.6"><path d="M2 8h12M9 3l5 5-5 5"/></svg></span></a></li>
+      <li data-reveal><a href="#quote" data-job="Exterior painting" data-img="1"><span class="n">02</span><span class="t">Exterior <i>fronts</i></span><span class="d">Render, brick, fascias and trim, prepared and painted for a clean finish.</span><span class="go" aria-hidden="true"><svg viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="1.6"><path d="M2 8h12M9 3l5 5-5 5"/></svg></span></a></li>
+      <li data-reveal><a href="#quote" data-job="Hand-painted kitchen or furniture" data-img="2"><span class="n">03</span><span class="t">Hand-painted <i>kitchens</i></span><span class="d">Cabinet doors, drawers and furniture painted by hand in the colour you choose.</span><span class="go" aria-hidden="true"><svg viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="1.6"><path d="M2 8h12M9 3l5 5-5 5"/></svg></span></a></li>
+      <li data-reveal><a href="#quote" data-job="Windows and woodwork" data-img="1"><span class="n">04</span><span class="t">Sash &amp; <i>timber</i></span><span class="d">Sash and wooden windows painted. Timber repaired and restored with resin.</span><span class="go" aria-hidden="true"><svg viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="1.6"><path d="M2 8h12M9 3l5 5-5 5"/></svg></span></a></li>
+      <li data-reveal><a href="#quote" data-job="Wallpapering or murals" data-img="0"><span class="n">05</span><span class="t">Wallpaper &amp; <i>murals</i></span><span class="d">Wallpapering, and painted murals when a wall needs something more.</span><span class="go" aria-hidden="true"><svg viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="1.6"><path d="M2 8h12M9 3l5 5-5 5"/></svg></span></a></li>
+      <li data-reveal><a href="#quote" data-job="Spraying or not sure yet" data-img="2"><span class="n">06</span><span class="t">Spraying</span><span class="d">Sprayed finishes where the job calls for one.</span><span class="go" aria-hidden="true"><svg viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="1.6"><path d="M2 8h12M9 3l5 5-5 5"/></svg></span></a></li>
+    </ul>
+  </div>
+  <div class="cursor-img" id="cimg" aria-hidden="true"><img src="assets/kitchen-1.webp" alt=""><img src="assets/exterior.webp" alt=""><img src="assets/kitchen-2.webp" alt=""></div>
+</section>
+
+<section class="wash dark" id="colour" aria-labelledby="wash-t">
+  <div class="in">
     <div class="copy">
-      <p class="eyebrow">Hand-painted kitchens</p>
-      <h2>Keep the kitchen you have. Change how it looks.</h2>
-      <p>If your cabinets are sound but tired, a hand-painted finish can make them look new for far less upheaval than a replacement. Doors, drawers and frames are prepared properly, then painted by hand.</p>
-      <ul>
-        <li>Shaker, panelled and bespoke cabinets</li>
-        <li>Dust-controlled sanding to keep your home clean</li>
-        <li>Furniture and built-in units painted to match</li>
-      </ul>
-      <div><a class="btn btn-primary" href="#quote">Ask about your kitchen</a></div>
+      <div class="c1">
+        <p class="lbl">Colour preview</p>
+        <h2 id="wash-t">Same house, <i>other colours.</i></h2>
+        <p class="sub">The first picture is a finished front: white masonry and painted sashes. Scroll, or tap a swatch, to see the same house in three other colours.</p>
+      </div>
+      <div class="swatches" role="group" aria-label="Choose a colour">
+        <button class="sw-b" type="button" data-i="0" aria-pressed="true"><i style="background:#f1f0ec"></i><span>As finished</span></button>
+        <button class="sw-b" type="button" data-i="1" aria-pressed="false"><i style="background:#86a58f"></i><span>Green</span></button>
+        <button class="sw-b" type="button" data-i="2" aria-pressed="false"><i style="background:#8da3c9"></i><span>Harbour</span></button>
+        <button class="sw-b" type="button" data-i="3" aria-pressed="false"><i style="background:#d19b83"></i><span>Clay</span></button>
+      </div>
+      <p class="note">Illustration only. The colours are added on screen to a job photo from Richard's Checkatrade album.</p>
     </div>
-    <div class="k-photos">
-      <img src="assets/kitchen-1.webp" alt="Hand-painted cream kitchen cabinets with black worktop and steel handles" loading="lazy" width="1024" height="1365">
-      <img src="assets/kitchen-2.webp" alt="Painted panelled kitchen base units with brushed steel handles" loading="lazy" width="1024" height="1040">
-    </div>
-  </div>
-</section>
-
-<section id="why">
-  <div class="wrap">
-    <div class="sec-head">
-      <p class="eyebrow">Why choose RDS</p>
-      <h2>Twenty years of getting the details right</h2>
-    </div>
-    <div class="why">
-      <div><h3>20+ years' experience</h3><p>Richard has been decorating Southampton homes for over two decades.</p></div>
-      <div><h3>Trading Standards approved</h3><p>A Buy With Confidence member, with a £1,000 guarantee on offer.</p></div>
-      <div><h3>Insured and checked</h3><p>Fully insured and DBS checked, as stated on the Checkatrade profile.</p></div>
-      <div><h3>Clean, careful working</h3><p>Dust-controlled sanding and tidy preparation, so your home is left as you'd want it.</p></div>
+    <div class="stage" id="stage" role="img" aria-label="The white painted house front, shown in different colours as you scroll">
+      <img src="assets/exterior.webp" alt="" width="1024" height="768">
+      <div class="walls" aria-hidden="true">
+        <div class="layer"><img src="assets/exterior.webp" alt=""><div class="tone" style="background:#86a58f"></div></div>
+        <div class="layer"><img src="assets/exterior.webp" alt=""><div class="tone" style="background:#8da3c9"></div></div>
+        <div class="layer"><img src="assets/exterior.webp" alt=""><div class="tone" style="background:#d19b83"></div></div>
+      </div>
+      <span class="tag" id="wash-tag" aria-hidden="true">As finished</span>
     </div>
   </div>
 </section>
 
-<section class="gallery" id="gallery">
+<section class="gallery" id="work" aria-labelledby="gal-t">
   <div class="wrap">
-    <div class="sec-head">
-      <p class="eyebrow">Recent work</p>
-      <h2>A closer look at the finish</h2>
-    </div>
+    <p class="lbl" data-reveal>Finished work</p>
+    <h2 id="gal-t" data-split style="margin-top:18px">Cabinets, <i>fronts</i> and edges</h2>
     <div class="g-grid">
-      <button type="button" data-src="assets/exterior.webp" data-alt="Period house with freshly painted white brickwork and windows"><img src="assets/exterior.webp" alt="Period house with freshly painted white brickwork and windows" loading="lazy"></button>
-      <button type="button" data-src="assets/kitchen-1.webp" data-alt="Hand-painted cream kitchen with black worktop"><img src="assets/kitchen-1.webp" alt="Hand-painted cream kitchen with black worktop" loading="lazy"></button>
-      <button type="button" data-src="assets/kitchen-2.webp" data-alt="Painted panelled kitchen base units"><img src="assets/kitchen-2.webp" alt="Painted panelled kitchen base units" loading="lazy"></button>
+      <figure class="g1"><div class="fr" data-clip><img src="assets/exterior.webp" alt="White painted house front with dormer gables and painted sash windows, seen across a gravel garden" loading="lazy" data-parallax></div><figcaption><b>Exterior</b>Masonry, gutters and sash windows in white.</figcaption></figure>
+      <figure class="g2"><div class="fr" data-clip><img src="assets/kitchen-1.webp" alt="Painted cream shaker kitchen units with a black granite worktop and a glass pass-through window" loading="lazy" data-parallax></div><figcaption><b>Kitchen</b>Shaker-style units in a soft cream.</figcaption></figure>
+      <figure class="g3"><div class="fr" data-clip><img src="assets/kitchen-2.webp" alt="Cream painted panelled kitchen doors and drawers with steel bar handles above a wood floor" loading="lazy" data-parallax></div><figcaption><b>Kitchen</b>Panelled doors and drawers, repainted.</figcaption></figure>
     </div>
-    <p class="g-note">Tap a photo to enlarge. More job photos are on the Checkatrade profile.</p>
+    <p class="src" data-reveal>Photos supplied from Richard's Checkatrade album.</p>
   </div>
 </section>
 
-<section id="reviews">
+<section class="reviews" id="reviews" aria-labelledby="rv-t">
   <div class="wrap">
-    <div class="rev-top">
-      <div class="sec-head" style="margin:0"><p class="eyebrow">Customer reviews</p><h2>What customers say</h2></div>
-      <div class="score"><b>9.92</b><span>from 531 reviews on Checkatrade</span></div>
-    </div>
-    <div class="quotes">
-      <figure><blockquote>Reliable, trustworthy and excellent knowledge of work carried out. Fair pricing.</blockquote><figcaption>Customer review · Checkatrade · 21 Sep 2026</figcaption></figure>
-      <figure><blockquote>He consistently produces high quality work, his attention to detail is excellent</blockquote><figcaption>Customer review · Checkatrade · 19 Sep 2026</figcaption></figure>
-      <figure><blockquote>The work itself took four days and was carried out to a very high standard.</blockquote><figcaption>Customer review · Checkatrade · 23 Aug 2026</figcaption></figure>
+    <div class="rv-head">
+      <div><p class="lbl" data-reveal>Customer reviews</p><h2 id="rv-t" data-split style="margin-top:18px">What customers <i>wrote</i></h2></div>
+      <div class="rv-score" data-reveal><b>9.92</b><span>average from 531 reviews on Checkatrade</span></div>
     </div>
   </div>
+  <div class="rv-wrap"><div class="rv-row" data-speed="0.45">
+    <figure class="rv"><q>Reliable &hellip; excellent knowledge of work carried out. Fair pricing.</q><footer>Checkatrade &middot; 21 Sept 2026</footer></figure>
+    <figure class="rv"><q>He consistently produces high quality work, his attention to detail is excellent</q><footer>Checkatrade &middot; 19 Sept 2026</footer></figure>
+    <figure class="rv"><q>The work itself took four days and was carried out to a very high standard.</q><footer>Checkatrade &middot; 23 Aug 2026</footer></figure>
+    <figure class="rv dup" aria-hidden="true"><q>Reliable &hellip; excellent knowledge of work carried out. Fair pricing.</q><footer>Checkatrade &middot; 21 Sept 2026</footer></figure>
+    <figure class="rv dup" aria-hidden="true"><q>He consistently produces high quality work, his attention to detail is excellent</q><footer>Checkatrade &middot; 19 Sept 2026</footer></figure>
+    <figure class="rv dup" aria-hidden="true"><q>The work itself took four days and was carried out to a very high standard.</q><footer>Checkatrade &middot; 23 Aug 2026</footer></figure>
+  </div></div>
+  <div class="rv-wrap second" aria-hidden="true"><div class="rv-row" data-dir="-1" data-speed="0.35">
+    <figure class="rv"><q>The work itself took four days and was carried out to a very high standard.</q><footer>Checkatrade &middot; 23 Aug 2026</footer></figure>
+    <figure class="rv"><q>Reliable &hellip; excellent knowledge of work carried out. Fair pricing.</q><footer>Checkatrade &middot; 21 Sept 2026</footer></figure>
+    <figure class="rv"><q>He consistently produces high quality work, his attention to detail is excellent</q><footer>Checkatrade &middot; 19 Sept 2026</footer></figure>
+    <figure class="rv"><q>The work itself took four days and was carried out to a very high standard.</q><footer>Checkatrade &middot; 23 Aug 2026</footer></figure>
+    <figure class="rv"><q>Reliable &hellip; excellent knowledge of work carried out. Fair pricing.</q><footer>Checkatrade &middot; 21 Sept 2026</footer></figure>
+    <figure class="rv"><q>He consistently produces high quality work, his attention to detail is excellent</q><footer>Checkatrade &middot; 19 Sept 2026</footer></figure>
+  </div></div>
 </section>
 
-<section class="areas" id="areas">
+<section class="areas" id="areas" aria-labelledby="ar-t">
   <div class="wrap">
-    <div class="sec-head">
-      <p class="eyebrow">Areas covered</p>
-      <h2>Based in Southampton, working across the area</h2>
-    </div>
-    <ul class="chips">
-      <li>Southampton</li><li>Winchester</li><li>Chandler's Ford</li><li>Hamble</li><li>New Forest</li><li>Warsash</li><li>Hedge End</li>
+    <p class="lbl" data-reveal>Where he works</p>
+    <h2 id="ar-t" data-split style="margin-top:18px">Across south Hampshire</h2>
+    <ul>
+      <li data-reveal>Southampton</li><li data-reveal>Winchester</li><li data-reveal>Chandler's Ford</li><li data-reveal>Hamble</li><li data-reveal>New Forest</li><li data-reveal>Warsash</li><li data-reveal>Hedge End</li>
     </ul>
+    <p class="n" data-reveal>Based in Southampton. If you are close to one of these places but not in it, say so in the quote form.</p>
   </div>
 </section>
 
-<section class="contact" id="quote">
-  <div class="wrap c-grid">
-    <div class="copy">
-      <p class="eyebrow">Free quote</p>
-      <h2>Tell us about your project</h2>
-      <p>Send a few details and a photo or two of the room or house. Richard will come back to you with a clear quote.</p>
-      <p>Prefer to check us out first? Read the reviews on the <a href="https://www.checkatrade.com/trades/rdspaintinganddecorating" target="_blank" rel="noopener">Checkatrade profile</a>.</p>
+<section class="quote dark" id="quote" aria-labelledby="q-t">
+  <div class="wrap">
+    <div class="grid">
+      <div class="side">
+        <p class="lbl">Free quote</p>
+        <h2 id="q-t" data-split>Describe the job, <i>add a photo.</i></h2>
+        <p class="t" data-reveal>Four short steps. Photos of the room or the front of the house help most.</p>
+        <ul data-reveal><li>Interior, exterior, kitchens and woodwork</li><li>Southampton, Winchester, the New Forest and nearby</li><li>No account needed</li></ul>
+      </div>
+      <div class="panel" data-reveal>
+        <form id="qform" novalidate>
+          <div class="prog" aria-hidden="true"><i class="on"></i><i></i><i></i><i></i></div>
+          <div class="stepno"><span id="stepno" aria-live="polite">Step 1 of 4</span><span>Free quote</span></div>
+
+          <fieldset data-step="0">
+            <legend tabindex="-1">What needs painting?</legend>
+            <div class="opts">
+              <label class="opt"><input type="radio" name="job" value="Interior painting"><b>Interior</b><span>Rooms, ceilings, doors</span></label>
+              <label class="opt"><input type="radio" name="job" value="Exterior painting"><b>Exterior</b><span>Fronts, render, fascias</span></label>
+              <label class="opt"><input type="radio" name="job" value="Hand-painted kitchen or furniture"><b>Kitchen or furniture</b><span>Cabinets painted by hand</span></label>
+              <label class="opt"><input type="radio" name="job" value="Windows and woodwork"><b>Windows &amp; woodwork</b><span>Sash, timber repairs</span></label>
+              <label class="opt"><input type="radio" name="job" value="Wallpapering or murals"><b>Wallpaper or mural</b><span>Hanging or painting</span></label>
+              <label class="opt"><input type="radio" name="job" value="Spraying or not sure yet"><b>Spraying / not sure</b><span>Tell us in the notes</span></label>
+            </div>
+          </fieldset>
+
+          <fieldset data-step="1" hidden>
+            <legend tabindex="-1">Where is the job?</legend>
+            <div class="opts areas-o">
+              <label class="opt"><input type="radio" name="area" value="Southampton"><b>Southampton</b></label>
+              <label class="opt"><input type="radio" name="area" value="Winchester"><b>Winchester</b></label>
+              <label class="opt"><input type="radio" name="area" value="Chandler's Ford"><b>Chandler's Ford</b></label>
+              <label class="opt"><input type="radio" name="area" value="Hamble"><b>Hamble</b></label>
+              <label class="opt"><input type="radio" name="area" value="New Forest"><b>New Forest</b></label>
+              <label class="opt"><input type="radio" name="area" value="Warsash"><b>Warsash</b></label>
+              <label class="opt"><input type="radio" name="area" value="Hedge End"><b>Hedge End</b></label>
+              <label class="opt"><input type="radio" name="area" value="Somewhere nearby"><b>Nearby</b></label>
+            </div>
+          </fieldset>
+
+          <fieldset data-step="2" hidden>
+            <legend tabindex="-1">Any photos?</legend>
+            <label class="drop"><input type="file" id="photos" accept="image/*" multiple><b>Choose photos</b><span>Optional. Rooms, doors, the front of the house.</span></label>
+            <div class="thumbs" id="thumbs"></div>
+            <p class="pnote">In this preview, photos stay on your device and are not uploaded.</p>
+          </fieldset>
+
+          <fieldset data-step="3" hidden>
+            <legend tabindex="-1">How should he reach you?</legend>
+            <div class="fields">
+              <label>Your name<input id="f-n" autocomplete="name" required></label>
+              <div class="two">
+                <label>Phone<input id="f-p" type="tel" autocomplete="tel"></label>
+                <label>Email<input id="f-e" type="email" autocomplete="email"></label>
+              </div>
+              <label>About the job <small>(optional)</small><textarea id="f-x" rows="3" placeholder="Size of the job, colours, anything awkward"></textarea></label>
+              <p class="err" id="err" role="alert"></p>
+            </div>
+          </fieldset>
+
+          <div id="done" class="done" hidden role="status" tabindex="-1">
+            <span class="seal" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12.5l4.5 4.5L19 7.5"/></svg></span>
+            <p class="ref" id="ref">Reference Q-4821</p>
+            <h3>Quote request noted.</h3>
+            <dl id="sumdl"></dl>
+            <p class="note">This is a preview &mdash; the form will go live with your new site. Nothing has been sent.</p>
+            <button class="btn ghost" type="button" id="again">Start again</button>
+          </div>
+
+          <div class="pn-foot" id="foot">
+            <p class="sum" id="sum">Choose a job to continue.</p>
+            <div class="acts"><button class="btn ghost" type="button" id="back" hidden>Back</button><button class="btn" type="button" id="next" disabled>Continue</button></div>
+          </div>
+        </form>
+      </div>
     </div>
-    <form id="qf" novalidate>
-      <div class="row">
-        <label for="n">Your name<input id="n" name="name" autocomplete="name" required></label>
-        <label for="p">Phone or email<input id="p" name="contact" autocomplete="tel" required></label>
-      </div>
-      <div class="row">
-        <label for="t">Type of work
-          <select id="t" name="type"><option>Interior painting</option><option>Exterior painting</option><option>Hand-painted kitchen</option><option>Wallpapering</option><option>Timber repair or restoration</option><option>Something else</option></select>
-        </label>
-        <label for="a">Area<input id="a" name="area" placeholder="e.g. Hedge End"></label>
-      </div>
-      <label for="d">About the job<textarea id="d" name="details"></textarea></label>
-      <label for="f">Photos <span class="hint">(optional)</span><input id="f" name="photos" type="file" accept="image/*" multiple></label>
-      <button class="btn btn-primary" type="submit">Request my free quote</button>
-      <div id="msg" class="ok" role="status" hidden>This is a preview — the form will go live with your new site.</div>
-    </form>
   </div>
 </section>
 </main>
 
-<footer>
+<footer class="foot dark">
   <div class="wrap">
-    <span>© RDS Painting &amp; Decorating · Southampton</span>
-    <span>Concept design by Itchen Studio. Preview only.</span>
+    <div class="row">
+      <div><p class="lbl">RDS Painting &amp; Decorating</p><h2 style="margin-top:16px">Ready when <i>you are.</i></h2><p>Based in Southampton, working across south Hampshire.</p></div>
+      <div><p class="lbl">Get in touch</p><p>Use the quote form. Richard sees the job, the area and your photos in one place.</p><p><a class="btn brass" href="#quote">Get a free quote</a></p></div>
+      <div><p class="lbl">Listed on</p><p>Checkatrade, member since 2007<br>Buy With Confidence, Trading Standards scheme</p></div>
+    </div>
+    <p class="giant" aria-hidden="true">RDS</p>
+    <div class="base"><span>&copy; 2026 RDS Painting &amp; Decorating (concept)</span><span>Designed by <a href="mailto:sam@itchenstudio.co.uk">Itchen Studio</a></span></div>
   </div>
 </footer>
 
-<dialog class="lb" id="lb" aria-label="Photo viewer"><button type="button" aria-label="Close photo" id="lbx">×</button><img id="lbi" alt=""></dialog>
+<script src="assets/js/gsap.min.js" defer></script>
+<script src="assets/js/ScrollTrigger.min.js" defer></script>
+<script src="assets/js/lenis.min.js" defer></script>
+<script src="assets/js/concept.js" defer></script>
+<script defer>
+document.addEventListener('DOMContentLoaded', function(){
+  var site = window.ConceptSite.init();
+  var $ = function(s, r){ return (r || document).querySelector(s); };
+  var $$ = function(s, r){ return Array.prototype.slice.call((r || document).querySelectorAll(s)); };
+  var esc = function(s){ return String(s).replace(/[&<>"]/g, function(c){ return {'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;'}[c]; }); };
 
-<script>
-document.getElementById('qf').addEventListener('submit',function(e){e.preventDefault();document.getElementById('msg').hidden=false;});
-var lb=document.getElementById('lb'),lbi=document.getElementById('lbi');
-document.querySelectorAll('.g-grid button').forEach(function(b){b.addEventListener('click',function(){lbi.src=b.dataset.src;lbi.alt=b.dataset.alt;lb.showModal();});});
-document.getElementById('lbx').addEventListener('click',function(){lb.close();});
-lb.addEventListener('click',function(e){if(e.target===lb)lb.close();});
+  /* ---------- colour wash scene ---------- */
+  var layers = $$('.wash .layer'), sw = $$('.sw-b'), tag = $('#wash-tag');
+  var NAMES = ['As finished', 'Green', 'Harbour blue', 'Clay'];
+  var clamp = function(v){ return Math.max(0, Math.min(1, v)); };
+  var cur = -1;
+  function render(p){
+    var c = p * 3;
+    layers.forEach(function(l, k){ l.style.setProperty('--p', (clamp(c - k) * 106 - 6) + '%'); });
+    var a = Math.round(c);
+    if (a !== cur) {
+      cur = a;
+      sw.forEach(function(b, i){ b.setAttribute('aria-pressed', String(i === a)); });
+      tag.textContent = NAMES[a];
+    }
+  }
+  render(0);
+  var st = null, proxy = { p: 0 };
+  sw.forEach(function(b){
+    b.addEventListener('click', function(){
+      var i = +b.dataset.i, target = i / 3;
+      if (st) {
+        var y = st.start + (st.end - st.start) * target;
+        if (site.lenis) site.lenis.scrollTo(y, { duration: 1.2 }); else window.scrollTo({ top: y, behavior: 'smooth' });
+      } else if (site.motion) {
+        gsap.to(proxy, { p: target, duration: 1.1, ease: 'power2.inOut', overwrite: true, onUpdate: function(){ render(proxy.p); } });
+      } else { proxy.p = target; render(target); }
+    });
+  });
+
+  /* ---------- quote wizard ---------- */
+  var form = $('#qform'), steps = $$('fieldset[data-step]'), bars = $$('.prog i');
+  var step = 0, files = [], urls = [];
+  var next = $('#next'), back = $('#back'), sum = $('#sum');
+  function val(n){ var r = form.querySelector('input[name="' + n + '"]:checked'); return r ? r.value : ''; }
+  function ready(){ return step === 0 ? !!val('job') : step === 1 ? !!val('area') : true; }
+  function summary(){
+    var parts = [val('job'), val('area'), files.length ? files.length + (files.length > 1 ? ' photos' : ' photo') : ''].filter(Boolean);
+    sum.textContent = parts.length ? parts.join(' · ') : 'Choose a job to continue.';
+  }
+  function label(){ next.textContent = step === 3 ? 'Send request' : (step === 2 && !files.length) ? 'Skip photos' : 'Continue'; }
+  function paint(){
+    steps.forEach(function(s, i){ s.hidden = i !== step; });
+    bars.forEach(function(b, i){ b.classList.toggle('on', i <= step); });
+    $('#stepno').textContent = 'Step ' + (step + 1) + ' of 4';
+    back.hidden = step === 0;
+    label(); summary();
+    next.disabled = !ready();
+    if (site.motion) gsap.fromTo(steps[step], { autoAlpha: 0, x: 22 }, { autoAlpha: 1, x: 0, duration: .45, ease: 'power3.out' });
+  }
+  function focusLegend(){ var l = $('legend', steps[step]); if (l) l.focus({ preventScroll: true }); }
+  form.addEventListener('change', function(e){ if (e.target.type === 'radio') { next.disabled = !ready(); summary(); } });
+  next.addEventListener('click', function(){
+    if (step === 3) {
+      var n = $('#f-n'), p = $('#f-p'), em = $('#f-e'), err = $('#err');
+      if (!n.value.trim()) { err.textContent = 'Please add your name.'; n.setAttribute('aria-invalid', 'true'); n.focus(); return; }
+      n.setAttribute('aria-invalid', 'false');
+      if (!p.value.trim() && !em.value.trim()) { err.textContent = 'Add a phone number or an email so Richard can reply.'; p.focus(); return; }
+      if (em.value.trim() && !/^\S+@\S+\.\S+$/.test(em.value.trim())) { err.textContent = 'That email address looks incomplete.'; em.focus(); return; }
+      err.textContent = '';
+      finish(); return;
+    }
+    step++; paint(); focusLegend();
+  });
+  back.addEventListener('click', function(){ if (step > 0) { step--; paint(); focusLegend(); } });
+  function finish(){
+    steps.forEach(function(s){ s.hidden = true; });
+    $('#foot').hidden = true; $('.prog').hidden = true; $('.stepno').hidden = true;
+    var ref = 'Q-' + (2000 + Math.floor(Math.random() * 7999));
+    $('#ref').textContent = 'Reference ' + ref;
+    var rows = [['Job', val('job')], ['Area', val('area')], ['Photos', files.length ? String(files.length) : 'None added'], ['Name', $('#f-n').value.trim()], ['Reply to', $('#f-p').value.trim() || $('#f-e').value.trim()]];
+    $('#sumdl').innerHTML = rows.map(function(r){ return '<dt>' + r[0] + '</dt><dd>' + esc(r[1]) + '</dd>'; }).join('');
+    var d = $('#done'); d.hidden = false; d.focus({ preventScroll: true });
+    if (site.motion) gsap.from(d.children, { autoAlpha: 0, y: 16, duration: .6, stagger: .07, ease: 'power3.out' });
+  }
+  $('#again').addEventListener('click', function(){
+    form.reset(); files = []; urls.forEach(function(u){ URL.revokeObjectURL(u); }); urls = []; thumbs();
+    $('#done').hidden = true; $('#foot').hidden = false; $('.prog').hidden = false; $('.stepno').hidden = false;
+    step = 0; paint(); focusLegend();
+  });
+  form.addEventListener('submit', function(e){ e.preventDefault(); });
+  function thumbs(){
+    var box = $('#thumbs'); box.innerHTML = '';
+    urls.forEach(function(u){ URL.revokeObjectURL(u); }); urls = [];
+    files.forEach(function(f, i){
+      var u = URL.createObjectURL(f); urls.push(u);
+      var fig = document.createElement('figure'), im = document.createElement('img'), b = document.createElement('button');
+      im.src = u; im.alt = 'Selected photo ' + (i + 1) + ': ' + f.name;
+      b.type = 'button'; b.setAttribute('aria-label', 'Remove photo ' + (i + 1));
+      b.addEventListener('click', function(){ files.splice(i, 1); thumbs(); summary(); label(); });
+      fig.appendChild(im); fig.appendChild(b); box.appendChild(fig);
+    });
+  }
+  $('#photos').addEventListener('change', function(e){
+    Array.prototype.forEach.call(e.target.files, function(f){ if (/^image\//.test(f.type) && files.length < 8) files.push(f); });
+    e.target.value = ''; thumbs(); summary(); label();
+  });
+  /* service rows preselect the job */
+  $$('a[data-job]').forEach(function(a){
+    a.addEventListener('click', function(){
+      var r = form.querySelector('input[name="job"][value="' + a.dataset.job + '"]');
+      if (r && $('#done').hidden) { r.checked = true; step = 0; paint(); }
+    });
+  });
+  paint();
+
+  if (!site.motion) return;
+
+  /* ---------- hero extras ---------- */
+  gsap.to('.hero .arch', { yPercent: -12, ease: 'none', scrollTrigger: { trigger: '.hero', start: 'top top', end: 'bottom top', scrub: true } });
+
+  /* ---------- statement: words warm up as you read ---------- */
+  var words = window.ConceptSite.splitWords(document.getElementById('stmt'));
+  gsap.set(words, { opacity: .16 });
+  gsap.to(words, { opacity: 1, stagger: .08, ease: 'none', scrollTrigger: { trigger: '#stmt', start: 'top 82%', end: 'bottom 48%', scrub: true } });
+
+  /* ---------- services: cursor photo ---------- */
+  var cimg = $('#cimg'), imgs = $$('img', cimg);
+  if (matchMedia('(pointer: fine)').matches) {
+    var xTo = gsap.quickTo(cimg, 'x', { duration: .5, ease: 'power3' }), yTo = gsap.quickTo(cimg, 'y', { duration: .5, ease: 'power3' });
+    gsap.set(cimg, { xPercent: -50, yPercent: -50, scale: .8, autoAlpha: 0 });
+    var list = $('.svc-list');
+    list.addEventListener('mousemove', function(e){ xTo(e.clientX); yTo(e.clientY); });
+    $$('a', list).forEach(function(a){
+      a.addEventListener('mouseenter', function(){ imgs.forEach(function(im, k){ im.classList.toggle('on', k === +a.dataset.img); }); gsap.to(cimg, { autoAlpha: 1, scale: 1, rotate: (+a.dataset.img % 2 ? 3 : -3), duration: .4, ease: 'power3.out' }); });
+    });
+    list.addEventListener('mouseleave', function(){ gsap.to(cimg, { autoAlpha: 0, scale: .8, duration: .3 }); });
+  }
+
+  /* ---------- signature: colour wash ---------- */
+  var mm = gsap.matchMedia();
+  mm.add('(min-width: 861px)', function(){
+    st = ScrollTrigger.create({ trigger: '.wash', start: 'top top', end: '+=2400', pin: true, scrub: 0.6, anticipatePin: 1,
+      onUpdate: function(s){ render(s.progress); } });
+    return function(){ st = null; };
+  });
+  mm.add('(max-width: 860px)', function(){
+    var t = ScrollTrigger.create({ trigger: '#stage', start: 'top 72%', end: 'bottom 28%', scrub: 0.5, onUpdate: function(s){ proxy.p = s.progress; render(s.progress); } });
+    return function(){ t.kill(); };
+  });
+
+  /* footer giant */
+  gsap.from('.foot .giant', { yPercent: 30, ease: 'none', scrollTrigger: { trigger: '.foot .giant', start: 'top bottom', end: 'bottom bottom', scrub: true } });
+});
 </script>
 </body>
 </html>
