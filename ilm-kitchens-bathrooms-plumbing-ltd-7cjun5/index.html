@@ -1,392 +1,658 @@
 <!doctype html>
+<!--
+ART DIRECTION BRIEF (Itchen Studio concept, v2)
+
+IDEA: A kitchen is a drawing before it is a room. The page is laid out like a design set: plans, sections, dimension lines. Plumbers who also design, supply and fit. The pipework is part of the drawing, not an afterthought.
+
+PALETTE: charcoal #141517 / #1d1f22, warm oak #c08a52 (text-safe oak on light #7a4e22), off-white #f4f1ec, brushed steel #aab1b6, cabinet sage #9aa39b.
+
+TYPE: Instrument Serif (display, used big, italic for emphasis) + Schibsted Grotesk (text, variable). Self-hosted woff2.
+
+HERO: full-bleed kitchen photo from ILM, charcoal gradient from the left, giant two-line serif headline sitting low, small drawn monogram and a hairline "sheet" frame with plan-style tick marks. Not a two-column template.
+
+SIGNATURE MOMENT (one): pinned, scrubbed drawing of an example kitchen plan. Scroll draws the walls and dimensions (01 Design), fills cabinets and the oak island in sequence (02 Supply), then draws the hot, cold and waste runs to the sink (03 Fit). Phone: same drawing, not pinned, scrubbed as it passes.
+
+INTERACTIVE FEATURE (one): "Book a free design visit" four-step wizard (job, postcode and timing, photos with thumbnails, contact) with progress bar, ending on a confirmation with a reference like Q-4821. Sends nothing.
+
+SECOND GRAPHIC: designed SVG coverage map replacing the pasted radius screenshot: simplified south coast, the reach as an oak arc from Seaton to Newhaven that draws itself, towns as plotted points.
+
+HEADLINE OPTIONS
+1. Kitchens fitted by plumbers.   <- PICK (4 words, specific: design-led fitter whose plumbing is in-house)
+2. Designed, supplied, fitted.    (cut: a showroom across town says this)
+3. Southampton's kitchen fitters. (cut: any rival)
+4. Your kitchen, drawn and plumbed. (cut: longer than the pick)
+5. The plumbers behind the kitchen. (cut: longer, less direct)
+6. Kitchens and bathrooms, plumbed in-house. (cut: 5 words but flat)
+7. In trade since 2002. (cut: that is the proof line, not the offer)
+8. Fitted by plumbers. (cut: no kitchen, no bathroom)
+9. Free design visits. (cut: any rival)
+10. Drawn up, supplied, fitted. (cut: rival-proof fails)
+-->
 <html lang="en-GB">
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Crect width='32' height='32' fill='%23141517'/%3E%3Cpath d='M9 8v16M15 8v16h8' stroke='%23f4f1ec' stroke-width='3' fill='none'/%3E%3Cpath d='M5 27h22' stroke='%23c08a52' stroke-width='3'/%3E%3C/svg%3E">
 <meta name="robots" content="noindex,nofollow">
 <title>ILM Kitchens, Bathrooms &amp; Plumbing | Southampton</title>
-<meta name="description" content="Concept website for ILM Kitchens, Bathrooms &amp; Plumbing Ltd, Southampton. Kitchens and bathrooms designed, supplied and fitted by plumbers.">
-<link rel="preconnect" href="https://fonts.googleapis.com">
-<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,300;0,9..144,500;1,9..144,300;1,9..144,400&family=Hanken+Grotesk:wght@400;500;600;700&display=swap" rel="stylesheet">
+<meta name="description" content="Website concept for ILM Kitchens, Bathrooms &amp; Plumbing Ltd, Southampton: kitchens and bathrooms designed, supplied and fitted by plumbers.">
+<script>(function(d){if(!matchMedia('(prefers-reduced-motion: reduce)').matches){d.documentElement.classList.add('motion');setTimeout(function(){if(!d.documentElement.classList.contains('ready'))d.documentElement.classList.remove('motion')},3000)}})(document)</script>
+<link rel="preload" href="assets/fonts/instrument-serif.woff2" as="font" type="font/woff2" crossorigin>
+<link rel="preload" href="assets/fonts/schibsted-grotesk.woff2" as="font" type="font/woff2" crossorigin>
 <style>
-/* Layout: editorial, design-studio feel. Charcoal canvas, warm oak accent, brushed-steel hairlines. Large light serif headlines, quiet grotesk body, one full-bleed kitchen image. */
+@font-face{font-family:"Instrument Serif";src:url(assets/fonts/instrument-serif.woff2) format("woff2");font-weight:400;font-style:normal;font-display:swap}
+@font-face{font-family:"Instrument Serif";src:url(assets/fonts/instrument-serif-italic.woff2) format("woff2");font-weight:400;font-style:italic;font-display:swap}
+@font-face{font-family:"Schibsted Grotesk";src:url(assets/fonts/schibsted-grotesk.woff2) format("woff2");font-weight:400 900;font-style:normal;font-display:swap}
 :root{
-  --char:#1b1c1e; --char-2:#26282b; --oak:#c08a52; --oak-d:#8a5a28; --oak-l:#e4c49b;
-  --off:#f5f3ef; --white:#fff; --steel:#a9b0b5; --steel-d:#5d666c; --line:#dedad2;
-  --display:"Fraunces",Georgia,serif; --body:"Hanken Grotesk",system-ui,Arial,sans-serif;
-  --gutter:clamp(16px,4vw,48px);
+  --ink:#141517;--ink2:#1d1f22;--ink3:#2a2d31;--oak:#c08a52;--oak-l:#e2c196;--oak-d:#7a4e22;
+  --off:#f4f1ec;--off2:#e9e4db;--steel:#aab1b6;--steel-d:#5b646a;--sage:#9aa39b;
+  --serif:"Instrument Serif",Georgia,"Times New Roman",serif;
+  --sans:"Schibsted Grotesk",system-ui,-apple-system,"Segoe UI",Arial,sans-serif;
+  --g:clamp(16px,4.2vw,64px);--max:1320px;
 }
-*{box-sizing:border-box}
-html{scroll-behavior:smooth;scroll-padding-top:80px}
-body{margin:0;background:var(--off);color:var(--char);font:400 1.0625rem/1.65 var(--body);-webkit-font-smoothing:antialiased}
-img{max-width:100%;display:block}
+*{box-sizing:border-box;margin:0;padding:0}
+html{scroll-behavior:auto;-webkit-text-size-adjust:100%}
+body{font-family:var(--sans);font-size:17px;line-height:1.6;background:var(--off);color:var(--ink);overflow-x:hidden}
+img,svg{display:block;max-width:100%}
 a{color:inherit}
-h1,h2,h3{font-family:var(--display);font-weight:300;line-height:1.05;margin:0;text-wrap:balance;letter-spacing:-.015em}
-h1 em,h2 em{font-style:italic;font-weight:400;color:var(--oak-d)}
-p{margin:0}
-.wrap{width:100%;max-width:1240px;margin-inline:auto;padding-inline:var(--gutter)}
-:focus-visible{outline:3px solid var(--oak);outline-offset:3px;border-radius:3px}
-.skip{position:absolute;left:-999px;top:0;background:var(--oak);color:var(--char);padding:.6rem 1rem;z-index:100}
-.skip:focus{left:8px;top:8px}
-.banner{background:#000;color:#e6e6e6;font-size:.8125rem;line-height:1.4;text-align:center;padding:.5rem var(--gutter)}
-.banner b{color:var(--oak-l);font-weight:600}
+:focus-visible{outline:3px solid var(--oak);outline-offset:3px;border-radius:2px}
+.dark :focus-visible,.top :focus-visible,.hero :focus-visible{outline-color:var(--oak-l)}
+.wrap{width:100%;max-width:var(--max);margin:0 auto;padding-inline:var(--g)}
+.eyebrow{font-size:12.5px;font-weight:600;letter-spacing:.16em;text-transform:uppercase;display:flex;align-items:center;gap:12px}
+.eyebrow::before{content:"";width:34px;height:1px;background:currentColor}
+.sr{position:absolute;width:1px;height:1px;overflow:hidden;clip:rect(0 0 0 0);white-space:nowrap}
 
-header.top{position:sticky;top:0;z-index:50;background:rgba(245,243,239,.92);backdrop-filter:blur(12px);border-bottom:1px solid var(--line)}
-.bar{display:flex;align-items:center;gap:1rem;min-height:70px}
-.brand{display:flex;align-items:center;gap:.7rem;text-decoration:none;min-width:0}
-.brand svg{width:44px;height:44px;flex:none}
-.brand strong{font:500 1.15rem/1 var(--display);letter-spacing:.01em;display:block}
-.brand small{display:block;font-size:.66rem;letter-spacing:.18em;text-transform:uppercase;color:var(--steel-d);margin-top:.25rem;white-space:nowrap}
-nav{margin-left:auto;display:none;gap:1.8rem;font-weight:500;font-size:.95rem}
-nav a{text-decoration:none;color:var(--steel-d);padding:.3rem 0;border-bottom:1.5px solid transparent;transition:color .15s,border-color .15s}
-nav a:hover{color:var(--char);border-color:var(--oak)}
-.call{margin-left:auto;display:inline-flex;align-items:center;gap:.5rem;background:var(--char);color:#fff;text-decoration:none;font-weight:600;padding:.6rem 1.05rem;border-radius:2px;font-size:.95rem;white-space:nowrap;transition:background .15s}
-.call:hover{background:var(--oak-d)}
-.call svg{width:16px;height:16px}
-@media(min-width:960px){nav{display:flex}.call{margin-left:1rem}}
+/* preview banner */
+.banner{background:#0a0a0b;color:#c9ced1;font-size:12.5px;line-height:1.4;text-align:center;padding:8px var(--g)}
+.banner a{color:#fff}
 
-.btn{display:inline-flex;align-items:center;justify-content:center;gap:.6rem;padding:1rem 1.7rem;font:600 1rem var(--body);text-decoration:none;border:1.5px solid transparent;border-radius:2px;cursor:pointer;transition:background .2s,color .2s,border-color .2s,transform .2s;letter-spacing:.01em}
-.btn-oak{background:var(--oak);color:var(--char)}.btn-oak:hover{background:var(--oak-l);transform:translateY(-2px)}
-.btn-dark{background:var(--char);color:#fff}.btn-dark:hover{background:var(--oak-d)}
-.btn-line{border-color:rgba(255,255,255,.4);color:#fff}.btn-line:hover{border-color:#fff;background:rgba(255,255,255,.08)}
-.btn svg{width:18px;height:18px}
+/* header */
+.top{position:sticky;top:0;z-index:50;background:rgba(20,21,23,.94);backdrop-filter:blur(10px);color:#fff;border-bottom:1px solid rgba(255,255,255,.08)}
+.top .in{display:flex;align-items:center;justify-content:space-between;gap:20px;height:72px}
+.logo{display:flex;align-items:center;gap:14px;text-decoration:none}
+.logo svg{width:58px;height:44px}
+.logo b{display:block;font-family:var(--serif);font-weight:400;font-size:25px;line-height:1;letter-spacing:.02em}
+.logo small{display:block;font-size:10.5px;letter-spacing:.2em;text-transform:uppercase;color:var(--steel);margin-top:5px;white-space:nowrap}
+.top nav{display:flex;gap:6px}
+.top nav a{white-space:nowrap;text-decoration:none;font-size:15px;padding:12px 14px;border-radius:99px;color:#dfe2e4;transition:background .25s,color .25s}
+.top nav a:hover{background:rgba(255,255,255,.1);color:#fff}
+.call{display:inline-flex;align-items:center;gap:10px;min-height:46px;padding:0 20px;background:var(--oak);color:var(--ink);font-weight:650;font-size:15.5px;text-decoration:none;border-radius:99px;white-space:nowrap;transition:background .25s,transform .25s}
+.call:hover{background:var(--oak-l)}
+.call svg{width:18px;height:18px}
+.top{transition:transform .5s cubic-bezier(.2,.8,.2,1)} .top.away{transform:translateY(-100%)}
 
 /* hero */
-.hero{background:var(--char);color:#fff;position:relative;overflow:hidden}
-.hero .grid{display:grid;min-height:auto}
-.hero .copy{padding:clamp(3rem,7vw,6rem) var(--gutter);display:flex;flex-direction:column;justify-content:center;gap:1.6rem;max-width:720px}
-.eyebrow{font-size:.78rem;letter-spacing:.22em;text-transform:uppercase;color:var(--oak-l);display:flex;align-items:center;gap:.8rem}
-.eyebrow::before{content:"";width:36px;height:1px;background:var(--oak)}
-.hero h1{font-size:clamp(2.7rem,7.4vw,5.6rem);color:#fff}
-.hero h1 em{color:var(--oak)}
-.hero p.lede{color:#c9ccce;font-size:clamp(1.05rem,2vw,1.2rem);max-width:30rem}
-.cta-row{display:flex;flex-wrap:wrap;gap:.8rem}
-.hero .img{position:relative;min-height:320px;background:#000}
-.hero .img img{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;opacity:.92}
-.hero .img::after{content:"";position:absolute;inset:0;background:linear-gradient(180deg,rgba(27,28,30,.9) 0%,rgba(27,28,30,0) 35%)}
-@media(min-width:960px){.hero .grid{grid-template-columns:minmax(0,1.05fr) minmax(0,1fr)}.hero .copy{padding-left:max(var(--gutter),calc((100vw - 1240px)/2 + var(--gutter)))}.hero .img{min-height:640px}.hero .img::after{background:linear-gradient(90deg,rgba(27,28,30,.9) 0%,rgba(27,28,30,0) 35%)}}
+.hero{position:relative;color:#fff;background:var(--ink);min-height:calc(100svh - 106px);min-height:max(620px,calc(100svh - 106px));display:flex;align-items:flex-end;overflow:hidden;isolation:isolate}
+.hero .bg{position:absolute;inset:0;z-index:-2}
+.hero .bg img{position:absolute;left:0;top:-4%;width:100%;height:120%;object-fit:cover;object-position:62% 50%}
+.hero::before{content:"";position:absolute;inset:0;z-index:-1;background:linear-gradient(90deg,rgba(20,21,23,.93) 0%,rgba(20,21,23,.78) 34%,rgba(20,21,23,.18) 68%,rgba(20,21,23,.1) 100%),linear-gradient(0deg,rgba(20,21,23,.85) 0%,rgba(20,21,23,0) 40%)}
+.sheet{position:absolute;inset:22px var(--g) 22px;border:1px solid rgba(255,255,255,.2);pointer-events:none;z-index:0}
+.sheet i{position:absolute;font-style:normal;font-size:11px;letter-spacing:.18em;text-transform:uppercase;color:rgba(255,255,255,.7);background:transparent}
+.sheet .a{top:-8px;left:28px;padding:0 10px;background:transparent}
+.sheet .b{bottom:-8px;right:28px}
+.hero .in{padding-block:clamp(60px,9vh,110px) clamp(48px,7vh,84px);width:100%}
+.hero h1{font-family:var(--serif);font-weight:400;font-size:clamp(60px,10.4vw,170px);line-height:.92;letter-spacing:-.015em}
+.hero h1 em{color:var(--oak-l)}
+.hero h1 .ln{display:block;overflow:hidden;padding-bottom:.1em;margin-bottom:-.1em}
+.hero h1 .ln>span{display:block}
+.hero .lede{max-width:520px;margin-top:30px;font-size:clamp(17px,1.5vw,20px);color:#e6e8e9}
+.hero .ctas{display:flex;flex-wrap:wrap;gap:14px;margin-top:30px}
+.btn{display:inline-flex;align-items:center;justify-content:center;gap:10px;min-height:52px;padding:0 28px;border-radius:99px;font:600 16px/1 var(--sans);text-decoration:none;border:1.5px solid transparent;cursor:pointer;transition:background .25s,color .25s,border-color .25s,transform .25s}
+.btn.oak{background:var(--oak);color:var(--ink)} .btn.oak:hover{background:var(--oak-l)}
+.btn.line{border-color:rgba(255,255,255,.55);color:#fff;background:transparent} .btn.line:hover{background:#fff;color:var(--ink)}
+.btn.dk{background:var(--ink);color:#fff} .btn.dk:hover{background:var(--ink3)}
+.btn.ghost{border-color:var(--ink);color:var(--ink);background:transparent} .btn.ghost:hover{background:var(--ink);color:#fff}
+.proofline{margin-top:34px;display:flex;flex-wrap:wrap;gap:8px 22px;font-size:13.5px;color:#d3d7d9;letter-spacing:.02em}
+.proofline span{display:inline-flex;align-items:center;gap:8px}
+.proofline span::before{content:"";width:6px;height:6px;border-radius:50%;background:var(--oak)}
+
+/* strip */
+.strip{background:var(--oak);color:var(--ink);overflow:hidden;border-block:1px solid rgba(0,0,0,.2)}
+.strip .track{display:flex;width:max-content;will-change:transform}
+.strip .track span{font-family:var(--serif);font-size:clamp(34px,4.4vw,64px);line-height:1;padding:18px 0;white-space:nowrap}
+.strip .track span::after{content:"/";margin:0 .6em;opacity:.45}
+.strip .track span:nth-child(3n+2){font-style:italic}
+
+/* statement */
+.statement{padding:clamp(80px,12vw,180px) 0 clamp(60px,8vw,110px)}
+.statement .grid{display:grid;grid-template-columns:1fr 1.7fr;gap:var(--g)}
+.statement .eyebrow{color:var(--oak-d);padding-top:14px}
+.statement h2{font-family:var(--serif);font-weight:400;font-size:clamp(34px,4.6vw,76px);line-height:1.04;letter-spacing:-.01em}
+.statement h2 em{color:var(--oak-d)}
+.statement p.sub{margin-top:30px;max-width:560px;color:#3d4247}
+
+/* services */
+.svc{padding:0 0 clamp(80px,10vw,150px)}
+.svc .list{display:grid;grid-template-columns:repeat(3,1fr);gap:18px}
+.card{position:relative;background:var(--ink);color:#fff;border-radius:6px;padding:28px 28px 32px;display:flex;flex-direction:column;overflow:hidden;transition:transform .5s cubic-bezier(.2,.8,.2,1)}
+.card:hover{transform:translateY(-6px)}
+.card .no{font-size:12.5px;letter-spacing:.16em;color:var(--steel)}
+.card .ill{margin:22px -6px 26px;flex:none;height:230px;display:grid;place-items:center}
+.card .ill svg{width:100%;height:auto;max-height:240px}
+.card h3{font-family:var(--serif);font-weight:400;font-size:clamp(36px,3.4vw,50px);line-height:1;margin-bottom:12px}
+.card p{color:#cdd1d4;font-size:16px;max-width:36ch}
+.card.oak{background:var(--oak);color:var(--ink)} .card.oak .no{color:#4a2f12} .card.oak p{color:#2a1c0b}
+.card.light{background:var(--off2)} .card.light{color:var(--ink)} .card.light .no{color:var(--steel-d)} .card.light p{color:#3d4247}
+
+/* signature plan */
+.plan{background:var(--ink);color:#fff;position:relative}
+.plan .stage-wrap{min-height:100svh;display:flex;align-items:center;padding-block:clamp(60px,8vw,100px)}
+.plan .cols{display:grid;grid-template-columns:minmax(300px,.8fr) 1.5fr;gap:clamp(24px,5vw,80px);align-items:center;width:100%}
+.plan h2{font-family:var(--serif);font-weight:400;font-size:clamp(40px,5.2vw,84px);line-height:.98;margin:18px 0 28px}
+.plan .eyebrow{color:var(--oak-l)}
+.steps{list-style:none;display:grid;gap:4px}
+.steps li{display:grid;grid-template-columns:54px 1fr;gap:6px;padding:16px 0;border-top:1px solid rgba(255,255,255,.14);opacity:.42;transition:opacity .5s}
+.steps li.on{opacity:1}
+.steps .n{font-family:var(--serif);font-size:34px;line-height:1;color:var(--oak)}
+.steps h3{font:600 19px/1.2 var(--sans);margin-bottom:5px}
+.steps p{font-size:15.5px;color:#cfd3d5;max-width:42ch}
+.drawing{border:1px solid rgba(255,255,255,.16);border-radius:6px;background:
+  linear-gradient(rgba(255,255,255,.045) 1px,transparent 1px) 0 0/40px 40px,
+  linear-gradient(90deg,rgba(255,255,255,.045) 1px,transparent 1px) 0 0/40px 40px,#17181a;padding:clamp(8px,2vw,24px);position:relative}
+.drawing svg{width:100%;height:auto}
+.drawing figcaption{position:absolute;left:18px;bottom:10px;font-size:11.5px;letter-spacing:.14em;text-transform:uppercase;color:var(--steel)}
+.pl{fill:none;stroke:var(--steel);stroke-width:2;stroke-linecap:round;stroke-linejoin:round;stroke-dasharray:1;stroke-dashoffset:0}
+.pl.th{stroke-width:5}
+.dim{fill:none;stroke:var(--oak-l);stroke-width:1.2}
+.dimt{fill:var(--oak-l);font:500 13px var(--sans);letter-spacing:.08em}
+.unit{fill:var(--sage);stroke:#10110f;stroke-width:1.5}
+.unit.tall{fill:#838c85}
+.island{fill:#2c3036;stroke:#0e0f10;stroke-width:1.5}
+.oakt{fill:var(--oak);stroke:#8a5a28;stroke-width:1.5}
+.fix{fill:none;stroke:#1d211e;stroke-width:2}
+.lbl{font:600 10px var(--sans);letter-spacing:.12em;fill:#1d211e;text-anchor:middle}
+.pipe{fill:none;stroke-width:3.5;stroke-linecap:round;stroke-linejoin:round;stroke-dasharray:1;stroke-dashoffset:0}
+.pipe.c{stroke:#7fb4e6}.pipe.h{stroke:#ff8a63}.pipe.w{stroke:var(--steel);stroke-dasharray:1;stroke-width:5}
+.joint{fill:#fff}
+.plt{font:600 11px var(--sans);letter-spacing:.12em;text-transform:uppercase}
+
+/* gallery */
+.gal{padding:clamp(80px,11vw,170px) 0}
+.gal .head{display:flex;justify-content:space-between;align-items:flex-end;gap:30px;flex-wrap:wrap;margin-bottom:44px}
+.gal h2,.proof h2,.areas h2,.contact h2{font-family:var(--serif);font-weight:400;font-size:clamp(40px,5.6vw,92px);line-height:.98;letter-spacing:-.01em}
+.gal .eyebrow,.areas .eyebrow{color:var(--oak-d)}
+.gal .head p{max-width:380px;color:#3d4247;font-size:16px}
+.gmain{border-radius:8px;overflow:hidden;aspect-ratio:16/8.4;background:var(--ink2);position:relative}
+.gmain img{width:100%;height:116%;object-fit:cover;object-position:60% 50%}
+.gmain figcaption{position:absolute;left:0;bottom:0;background:var(--off);padding:12px 22px 0 18px;font-size:13.5px;border-top-right-radius:10px;color:#3d4247}
+.gtri{display:grid;grid-template-columns:1.25fr .6fr 1fr;gap:16px;margin-top:16px}
+.gtri figure{border-radius:8px;overflow:hidden;position:relative;aspect-ratio:4/5;background:var(--ink2)}
+.gtri figure:first-child{aspect-ratio:auto}
+.gtri img{width:100%;height:100%;object-fit:cover;transition:transform 1.2s cubic-bezier(.2,.8,.2,1)}
+.gtri figure:hover img{transform:scale(1.05)}
+.gtri figcaption{position:absolute;left:14px;bottom:12px;color:#fff;font-size:12.5px;letter-spacing:.06em;text-shadow:0 1px 8px rgba(0,0,0,.7)}
+.note{margin-top:22px;font-size:14px;color:var(--steel-d);display:flex;gap:10px;align-items:center}
+.note::before{content:"";flex:none;width:34px;height:1px;background:currentColor}
 
 /* proof */
-.proof{background:var(--char-2);color:#fff;border-top:1px solid #3a3d41}
-.proof ul{list-style:none;margin:0;padding:0;display:grid;grid-template-columns:1fr 1fr}
-.proof li{padding:1.3rem 0;display:flex;flex-direction:column;gap:.2rem}
-.proof li:nth-child(odd){padding-right:1rem}
-.proof b{font:300 clamp(1.9rem,4.5vw,2.8rem)/1 var(--display);color:var(--oak)}
-.proof span{font-size:.85rem;color:var(--steel);letter-spacing:.04em}
-@media(min-width:800px){.proof ul{grid-template-columns:repeat(4,1fr)}.proof li{padding:1.8rem 1.4rem;border-left:1px solid #3a3d41}.proof li:first-child{border-left:0;padding-left:0}}
-
-section{padding-block:clamp(3.5rem,8vw,7rem)}
-.kicker{font-size:.78rem;letter-spacing:.22em;text-transform:uppercase;color:var(--oak-d);font-weight:600;margin-bottom:1rem}
-h2{font-size:clamp(2.1rem,5vw,3.6rem)}
-.sec-head{max-width:46rem;margin-bottom:3rem}
-.sec-head p{margin-top:1.1rem;color:var(--steel-d);font-size:1.12rem}
-
-/* what we do */
-.pillars{display:grid;gap:1.2rem}
-@media(min-width:800px){.pillars{grid-template-columns:repeat(3,1fr);gap:1.6rem}}
-.pillar{background:var(--white);padding:2rem 1.7rem 2.2rem;border-top:3px solid var(--oak);display:flex;flex-direction:column;gap:1rem;transition:transform .25s,box-shadow .25s}
-.pillar:hover{transform:translateY(-5px);box-shadow:0 24px 40px -24px rgba(0,0,0,.3)}
-.pillar .ic{width:44px;height:44px;color:var(--oak-d)}
-.pillar h3{font-size:1.9rem}
-.pillar p{color:var(--steel-d)}
-.pillar ul{list-style:none;margin:.4rem 0 0;padding:0;display:grid;gap:.4rem;font-size:.97rem;font-weight:500}
-.pillar li{padding-left:1.3rem;position:relative}
-.pillar li::before{content:"";position:absolute;left:0;top:.7em;width:.7rem;height:1px;background:var(--oak-d)}
-
-/* process */
-.dark{background:var(--char);color:#fff}
-.dark .kicker{color:var(--oak-l)}
-.dark h2 em{color:var(--oak)}
-.process{display:grid;gap:2.5rem}
-@media(min-width:900px){.process{grid-template-columns:.9fr 1.1fr;gap:5rem;align-items:start}}
-.stepper{display:grid;gap:0;border-top:1px solid #3a3d41}
-.stepper div{display:grid;grid-template-columns:auto 1fr;gap:0 1.4rem;padding:1.7rem 0;border-bottom:1px solid #3a3d41}
-.stepper .n{font:300 2.4rem/1 var(--display);color:var(--oak);grid-row:span 2;min-width:2.2rem}
-.stepper h3{font-size:1.5rem}
-.stepper p{color:#b9bdc0;margin-top:.4rem}
-
-/* gallery band */
-.band{position:relative;min-height:420px;display:grid;align-items:end}
-.band img{position:absolute;inset:0;width:100%;height:100%;object-fit:cover}
-.band::after{content:"";position:absolute;inset:0;background:linear-gradient(0deg,rgba(27,28,30,.85),rgba(27,28,30,0) 55%)}
-.band .wrap{position:relative;z-index:1;padding-block:2.5rem;color:#fff}
-.band h2{font-size:clamp(1.8rem,4vw,3rem);max-width:30rem}
-.band .kicker{color:var(--oak-l)}
-.projects{display:grid;gap:1.2rem;margin-top:3rem}
-@media(min-width:800px){.projects{grid-template-columns:repeat(3,1fr)}}
-.ph{border:1.5px dashed var(--steel);background:repeating-linear-gradient(135deg,transparent 0 14px,rgba(169,176,181,.14) 14px 15px);aspect-ratio:4/3;display:grid;place-items:center;text-align:center;padding:1.5rem;color:var(--steel-d);font-size:.95rem}
-.ph b{display:block;font:400 1.3rem var(--display);color:var(--char);margin-bottom:.3rem}
-.hint{margin-top:1rem;color:var(--steel-d);font-size:.92rem}
-
-/* reviews */
-.rev{display:grid;gap:2.5rem}
-@media(min-width:900px){.rev{grid-template-columns:1fr 1fr;gap:5rem;align-items:center}}
-.big{font:300 clamp(6rem,18vw,11rem)/.85 var(--display);color:var(--oak-d);letter-spacing:-.04em}
-.big small{font-size:.28em;color:var(--steel-d);letter-spacing:0}
-.rev p{color:var(--steel-d);font-size:1.12rem;max-width:30rem;margin-top:1rem}
-.rev a.src{display:inline-block;margin-top:1.3rem;font-weight:600;color:var(--oak-d)}
-.rev ul{list-style:none;padding:0;margin:0;display:grid;gap:0;border-top:1px solid var(--line)}
-.rev li{display:flex;justify-content:space-between;gap:1rem;padding:1.1rem 0;border-bottom:1px solid var(--line);font-weight:500}
-.rev li span:last-child{font:400 1.3rem var(--display);color:var(--char)}
+.proof{background:var(--oak);color:var(--ink);padding:clamp(70px,9vw,140px) 0;overflow:hidden}
+.proof .grid{display:grid;grid-template-columns:1.1fr 1fr;gap:var(--g);align-items:end}
+.proof .big{font-family:var(--serif);font-size:clamp(130px,25vw,400px);line-height:.8;letter-spacing:-.03em;display:flex;align-items:baseline}
+.proof .big small{font-size:.34em;opacity:.6;letter-spacing:0;margin-left:.06em}
+.proof h2{font-size:clamp(34px,4vw,60px);margin-bottom:18px}
+.proof p{max-width:44ch;color:#2a1c0b;margin-bottom:26px}
+.facts{list-style:none;display:grid;grid-template-columns:1fr 1fr;gap:0 24px;margin-bottom:30px}
+.facts li{border-top:1px solid rgba(20,21,23,.35);padding:14px 0;font-size:15px}
+.facts b{display:block;font-family:var(--serif);font-weight:400;font-size:36px;line-height:1.05}
+.proof .ribbon{margin-top:clamp(50px,6vw,90px);border-block:1px solid rgba(20,21,23,.3);overflow:hidden}
+.rv-row{display:flex;width:max-content;will-change:transform}
+.rv-row span{font-size:clamp(15px,1.4vw,19px);padding:16px 0;white-space:nowrap;font-weight:500}
+.rv-row span::after{content:"\2605";margin:0 1.5em;font-size:.8em}
 
 /* areas */
-.areas{background:var(--white);border-block:1px solid var(--line)}
-.areas .grid{display:grid;gap:2.5rem}
-@media(min-width:900px){.areas .grid{grid-template-columns:.8fr 1.2fr;gap:5rem;align-items:center}}
-.areas p{color:var(--steel-d);margin-top:1.1rem;font-size:1.1rem}
-.mapbox{background:var(--char);border-radius:4px;padding:clamp(.6rem,2vw,1.2rem);position:relative}
-.mapbox svg{width:100%;height:auto;display:block}
-.mapbox .cap{color:var(--steel);font-size:.78rem;letter-spacing:.06em;padding:.5rem .4rem 0}
-.arc{stroke-dasharray:1400;stroke-dashoffset:0;animation:draw 2.6s .3s both ease-out}
-@keyframes draw{from{stroke-dashoffset:1400}}
-.pulse{transform-origin:center;transform-box:fill-box;animation:ping 2.4s infinite}
-@keyframes ping{0%{transform:scale(.6);opacity:.9}100%{transform:scale(2.6);opacity:0}}
+.areas{background:var(--off2);padding:clamp(80px,10vw,150px) 0}
+.areas .grid{display:grid;grid-template-columns:.7fr 2fr;gap:clamp(24px,4vw,70px);align-items:center}
+.areas p{margin-top:22px;max-width:40ch;color:#3d4247}
+.areas ul{margin-top:26px;list-style:none;display:flex;flex-wrap:wrap;gap:8px}
+.areas li{font-size:13.5px;padding:7px 14px;border:1px solid rgba(20,21,23,.28);border-radius:99px}
+.map{background:#dde3e4;border-radius:10px;overflow:hidden;border:1px solid rgba(20,21,23,.12)}
+.map svg{width:100%;height:auto}
+.map .land{fill:#f6f3ee;stroke:#aab1b6;stroke-width:1.5}
+.map .reach{fill:rgba(192,138,82,.2)}
+.map .arc{fill:none;stroke:var(--oak);stroke-width:9;stroke-linecap:round;stroke-dasharray:1;stroke-dashoffset:0;filter:drop-shadow(0 4px 6px rgba(122,78,34,.35))}
+.map .ring{fill:none;stroke:#8e979c;stroke-width:1;stroke-dasharray:3 6}
+.map .town{fill:#2a2d31}
+.map text{font:600 22px var(--sans);fill:#2a2d31;paint-order:stroke;stroke:#f6f3ee;stroke-width:5px}
+.map text.big{font:700 28px var(--sans);letter-spacing:.02em}
+.map text.end{font:700 20px var(--sans);fill:var(--oak-d);letter-spacing:.06em}
+.map .sea{font:italic 30px var(--serif);fill:#7a8a92;stroke:none;letter-spacing:.2em}
 
-/* contact */
-.contact .grid{display:grid;gap:3rem}
-@media(min-width:900px){.contact .grid{grid-template-columns:.8fr 1.2fr;gap:5rem}}
-.big-phone{display:block;font:300 clamp(2rem,6vw,3.2rem)/1 var(--display);text-decoration:none;margin:1.2rem 0 .6rem;color:var(--char);border-bottom:1px solid var(--oak);width:max-content;max-width:100%}
-.big-phone:hover{color:var(--oak-d)}
-.facts{list-style:none;padding:0;margin:1.6rem 0 0;display:grid;gap:.7rem;color:var(--steel-d)}
-.facts b{color:var(--char);font-weight:600}
-.panel{background:var(--white);padding:clamp(1.4rem,3.5vw,2.6rem);border-top:3px solid var(--oak)}
-.panel h3{font-size:1.8rem;margin-bottom:1.4rem}
-label{display:block;font-weight:600;font-size:.88rem;margin-bottom:.35rem;letter-spacing:.02em}
-input,select,textarea{width:100%;font:inherit;color:var(--char);background:var(--off);border:1px solid #c9c5bb;border-radius:2px;padding:.8rem .9rem;transition:border-color .15s,box-shadow .15s,background .15s}
-input:hover,select:hover,textarea:hover{border-color:var(--oak-d)}
-input:focus,select:focus,textarea:focus{outline:none;border-color:var(--oak-d);box-shadow:0 0 0 3px rgba(192,138,82,.35);background:#fff}
-input[type=file]{padding:.6rem}
-.fields{display:grid;gap:1rem}
-@media(min-width:560px){.fields{grid-template-columns:1fr 1fr}.fields .full{grid-column:1/-1}}
-.fields>div{min-width:0}
-.note{display:none;margin-top:1rem;padding:.9rem 1rem;background:#eaf3e6;color:#1d4a17;font-weight:600;border-left:3px solid #4b9a3a}
-.note.show{display:block}
+/* contact + wizard */
+.contact{background:var(--ink);color:#fff;padding:clamp(80px,10vw,150px) 0}
+.contact .grid{display:grid;grid-template-columns:1fr 1.15fr;gap:clamp(28px,5vw,90px);align-items:start}
+.contact .eyebrow{color:var(--oak-l)}
+.contact h2{margin:18px 0 26px}
+.contact p{color:#d0d4d6;max-width:40ch}
+.cl{list-style:none;margin-top:34px;display:grid;gap:0}
+.cl li{border-top:1px solid rgba(255,255,255,.16);padding:16px 0;display:flex;justify-content:space-between;gap:16px;flex-wrap:wrap;align-items:baseline}
+.cl span{font-size:12.5px;letter-spacing:.14em;text-transform:uppercase;color:var(--steel)}
+.cl a{font-family:var(--serif);font-size:clamp(24px,2.4vw,34px);text-decoration:none;overflow-wrap:anywhere}
+.cl a:hover{color:var(--oak-l)}
+.wiz{background:var(--off);color:var(--ink);border-radius:10px;padding:clamp(22px,3vw,40px);position:relative}
+.wiz h3{font-family:var(--serif);font-weight:400;font-size:clamp(30px,3vw,42px);line-height:1;margin-bottom:6px}
+.wiz .tag{font-size:13px;color:var(--steel-d);margin-bottom:18px}
+.prog{height:4px;background:var(--off2);border-radius:4px;overflow:hidden;margin-bottom:8px}
+.prog i{display:block;height:100%;width:25%;background:var(--oak);transition:width .5s cubic-bezier(.2,.8,.2,1)}
+.stepno{font-size:12.5px;letter-spacing:.14em;text-transform:uppercase;color:var(--steel-d);margin-bottom:18px}
+.wiz fieldset{border:0;min-width:0}
+.wiz legend{font:600 19px/1.3 var(--sans);margin-bottom:14px;padding:0}
+.chips{display:grid;grid-template-columns:1fr 1fr;gap:10px}
+.chip{position:relative}
+.chip input{position:absolute;inset:0;opacity:0;cursor:pointer;width:100%;height:100%;margin:0}
+.chip span{display:flex;align-items:center;min-height:56px;padding:12px 16px;border:1.5px solid #c9c4b9;border-radius:8px;background:#fff;font-weight:550;transition:border-color .2s,background .2s}
+.chip input:checked+span{border-color:var(--ink);background:var(--ink);color:#fff}
+.chip input:focus-visible+span{outline:3px solid var(--oak);outline-offset:2px}
+@media (max-width:700px){.map text.minor{display:none}.map text{font-size:26px}.map text.big{font-size:34px}.map text.end{font-size:26px}}
+.chip:hover span{border-color:var(--ink)}
+.fld{display:grid;gap:6px;margin-bottom:14px}
+.fld label{font-size:14px;font-weight:600}
+.fld input,.fld select{min-height:50px;padding:0 14px;font:inherit;border:1.5px solid #bdb8ad;border-radius:8px;background:#fff;color:var(--ink);width:100%}
+.fld input:focus,.fld select:focus{outline:3px solid var(--oak);outline-offset:1px;border-color:var(--ink)}
+.drop{display:block;border:1.5px dashed #9d978a;border-radius:8px;padding:26px 16px;text-align:center;cursor:pointer;background:#fff;transition:background .2s,border-color .2s}
+.drop:hover,.drop:focus-within{background:var(--off2);border-color:var(--ink)}
+.drop input{position:absolute;opacity:0;width:1px;height:1px}
+.drop:focus-within{outline:3px solid var(--oak);outline-offset:2px}
+.thumbs{display:grid;grid-template-columns:repeat(auto-fill,minmax(84px,1fr));gap:8px;margin-top:12px}
+.thumbs img{width:100%;aspect-ratio:1;object-fit:cover;border-radius:6px}
+.nav{display:flex;justify-content:space-between;gap:12px;margin-top:22px}
+.nav .btn{min-height:50px}
+.nav button[hidden]{display:none}
+.hint{font-size:13px;color:var(--steel-d);margin-top:8px}
+.err{color:#a0231b;font-size:13.5px;margin-top:10px;min-height:1.2em}
+.done{text-align:left}
+.done .ref{font-family:var(--serif);font-size:clamp(56px,7vw,96px);line-height:1;color:var(--oak-d);margin:14px 0}
+.done p{color:#3d4247;margin-bottom:12px}
+.preview-note{margin-top:14px;font-size:13.5px;padding:12px 14px;background:var(--off2);border-radius:8px}
 
-footer{background:var(--char);color:var(--steel);padding-block:2.5rem;font-size:.92rem}
-footer .wrap{display:flex;flex-wrap:wrap;gap:1rem 2rem;justify-content:space-between}
-footer b{color:#fff;font-weight:600}
+footer{background:#0b0b0c;color:#aab1b6;padding:48px 0 40px;font-size:14px}
+footer .row{display:flex;justify-content:space-between;gap:24px;flex-wrap:wrap;align-items:center}
+footer a{color:#fff}
 
-.dock{position:fixed;left:0;right:0;bottom:0;z-index:60;padding:.6rem var(--gutter) calc(.6rem + env(safe-area-inset-bottom,0px));background:rgba(27,28,30,.96);backdrop-filter:blur(10px)}
-.dock .btn{width:100%;padding:.85rem}
-body{padding-bottom:70px}
-@media(min-width:900px){.dock{display:none}body{padding-bottom:0}}
-.reveal{animation:rise .9s both cubic-bezier(.2,.8,.2,1)}
-@keyframes rise{from{opacity:0;transform:translateY(16px)}}
-@media(prefers-reduced-motion:reduce){*,*::before,*::after{animation:none!important;transition:none!important;scroll-behavior:auto!important}}
+@media (max-width:1180px){.top nav{display:none}}
+@media (max-width:1020px){
+  .top nav{display:none}
+  .statement .grid,.areas .grid,.contact .grid,.proof .grid,.plan .cols{grid-template-columns:1fr}
+  .svc .list{grid-template-columns:1fr}
+  .card{min-height:0}
+  .card .ill{height:190px}
+  .gtri{grid-template-columns:1fr 1fr}.gtri figure:first-child{grid-column:1/-1;aspect-ratio:16/9}
+  .proof .big{font-size:clamp(120px,40vw,300px)}
+}
+@media (max-width:600px){
+  body{font-size:16.5px}
+  .banner{font-size:11.5px}
+  .top .in{height:64px}
+  .logo svg{width:50px;height:38px}.logo b{font-size:22px}.logo small{display:none}
+  .call{padding:0 16px;font-size:14.5px}
+  .call .txt{display:none}.call{width:48px;padding:0;justify-content:center}
+  .hero{min-height:calc(100svh - 120px)}
+  .hero .in{padding-bottom:70px}
+  .sheet{inset:12px 10px 12px}
+  .hero::before{background:linear-gradient(0deg,rgba(20,21,23,.94) 8%,rgba(20,21,23,.5) 55%,rgba(20,21,23,.45) 100%)}
+  .hero .bg img{object-position:68% 50%}
+  .gmain{aspect-ratio:4/3.4}
+  .gmain img{height:100%}
+  .gtri{grid-template-columns:1fr}.gtri figure,.gtri figure:first-child{aspect-ratio:4/3}
+  .gtri figure:nth-child(2) img{object-position:50% 40%}
+  .chips{grid-template-columns:1fr}
+  .facts{grid-template-columns:1fr 1fr}
+  .steps li{grid-template-columns:44px 1fr}
+  .btn{padding:0 22px}
+}
+html.motion:not(.ready) .hero h1 .ln>span{transform:translateY(105%)}
+html.motion:not(.ready) [data-intro]{opacity:0}
+@media (prefers-reduced-motion:reduce){*{transition:none!important;animation:none!important}.top{transition:none}}
 </style>
 </head>
 <body>
-<a class="skip" href="#main">Skip to content</a>
-<div class="banner">Website concept for <b>ILM Kitchens, Bathrooms &amp; Plumbing Ltd</b> — preview only, not the live site. Designed by Itchen Studio · sam@itchenstudio.co.uk</div>
+
+<svg width="0" height="0" style="position:absolute" aria-hidden="true" focusable="false">
+  <symbol id="mono" viewBox="0 0 64 48">
+    <g fill="none" stroke="currentColor" stroke-width="3.2" stroke-linecap="square" stroke-linejoin="miter">
+      <path d="M9 9v26"/><path d="M20 9v26h12"/><path d="M39 35V9l8.5 15L56 9v26"/>
+    </g>
+    <path d="M4 41.5h56" stroke="#c08a52" stroke-width="3" stroke-linecap="square"/>
+  </symbol>
+</svg>
+
+<div class="banner" role="note">Website concept for ILM Kitchens, Bathrooms &amp; Plumbing Ltd &mdash; preview only, not the live site. Designed by Itchen Studio &middot; <a href="mailto:sam@itchenstudio.co.uk">sam@itchenstudio.co.uk</a></div>
 
 <header class="top">
-  <div class="wrap bar">
-    <a class="brand" href="#top" aria-label="ILM Kitchens, Bathrooms and Plumbing, home">
-      <svg viewBox="0 0 44 44" role="img" aria-label="ILM monogram"><rect width="44" height="44" fill="#1b1c1e"/><path d="M9 11v22M16 11v22M16 33h8M29 33V11l6 14 6-14v22" transform="translate(-6 0) scale(.9 1) translate(3 0)" fill="none" stroke="#c08a52" stroke-width="2.4" stroke-linejoin="miter"/><path d="M8 38h28" stroke="#a9b0b5" stroke-width="1"/></svg>
-      <span><strong>ILM</strong><small>Kitchens · Bathrooms · Plumbing</small></span>
+  <div class="wrap in">
+    <a class="logo" href="#top" aria-label="ILM Kitchens, Bathrooms and Plumbing, back to top">
+      <svg aria-hidden="true"><use href="#mono"/></svg>
+      <span><b>Kitchens &amp; Bathrooms</b><small>Plumbing Ltd &middot; Southampton</small></span>
     </a>
     <nav aria-label="Main">
-      <a href="#what">What we do</a>
-      <a href="#process">Process</a>
-      <a href="#projects">Projects</a>
-      <a href="#reviews">Reviews</a>
-      <a href="#areas">Areas</a>
-      <a href="#contact">Contact</a>
+      <a href="#services">Services</a><a href="#plan">How it works</a><a href="#showroom">Showroom</a><a href="#reviews">Reviews</a><a href="#areas">Areas</a><a href="#visit">Book a visit</a>
     </nav>
-    <a class="call" href="tel:+447775696174" aria-label="Call ILM on 07775 696174">
-      <svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M6.6 10.8a15.1 15.1 0 0 0 6.6 6.6l2.2-2.2a1 1 0 0 1 1-.25 11.4 11.4 0 0 0 3.6.57 1 1 0 0 1 1 1V20a1 1 0 0 1-1 1A17 17 0 0 1 3 4a1 1 0 0 1 1-1h3.5a1 1 0 0 1 1 1c0 1.25.2 2.45.57 3.57a1 1 0 0 1-.25 1z"/></svg>
-      07775 696174
-    </a>
+    <a class="call" href="tel:+447775696174"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 4h4l2 5-2.5 1.5a11 11 0 0 0 5 5L15 13l5 2v4a2 2 0 0 1-2 2A16 16 0 0 1 3 6a2 2 0 0 1 2-2z"/></svg><span class="txt">07775 696174</span><span class="sr">Call 07775 696174</span></a>
   </div>
 </header>
 
-<main id="main">
-<div id="top"></div>
-<section class="hero" style="padding:0">
-  <div class="grid">
-    <div class="copy reveal">
-      <span class="eyebrow">Southampton &amp; Hampshire</span>
-      <h1>Kitchens &amp; bathrooms, <em>designed, supplied and fitted.</em></h1>
-      <p class="lede">By plumbers who do the pipework themselves. One local company takes your room from first sketch to the last tap, with the plumbing handled in-house.</p>
-      <div class="cta-row">
-        <a class="btn btn-oak" href="#contact">Book a free design visit</a>
-        <a class="btn btn-line" href="tel:+447775696174">Call 07775 696174</a>
-      </div>
-    </div>
-    <div class="img">
-      <img src="assets/kitchen.webp" alt="Showroom kitchen with sage shaker cabinets, integrated ovens, a wine cooler and an oak-topped island with dark seating" width="1800" height="1350">
+<main id="top">
+<section class="hero" aria-labelledby="h1">
+  <div class="bg"><img src="assets/kitchen-2000.webp" srcset="assets/kitchen-1100.webp 1100w, assets/kitchen-2000.webp 2000w" sizes="100vw" width="2000" height="1500" alt="Painted shaker kitchen in soft grey with an oak island, steel pendant lights and a tall wine cooler" fetchpriority="high"></div>
+  <div class="sheet" aria-hidden="true"><i class="a">Sheet 01 &middot; Southampton</i><i class="b">Kitchens &middot; Bathrooms &middot; Plumbing</i></div>
+  <div class="wrap in">
+    <h1 id="h1"><span class="ln"><span>Kitchens</span></span><span class="ln"><span>fitted by <em>plumbers.</em></span></span></h1>
+    <p class="lede" data-intro>Kitchens and bathrooms designed, supplied and fitted in Southampton and across Hampshire. The plumbing is done in-house.</p>
+    <div class="ctas" data-intro><a class="btn oak" href="#visit">Book a free design visit</a><a class="btn line" href="#plan">See how a job runs</a></div>
+    <p class="proofline" data-intro><span>Checkatrade 10/10 from 128 reviews</span><span>In trade since 2002</span><span>Limited company</span></p>
+  </div>
+</section>
+
+<div class="strip" aria-hidden="true"><div class="track"><span>Designed</span><span>Supplied</span><span>Fitted</span><span>Kitchens</span><span>Bathrooms</span><span>Plumbing</span><span>Designed</span><span>Supplied</span><span>Fitted</span><span>Kitchens</span><span>Bathrooms</span><span>Plumbing</span></div></div>
+
+<section class="statement">
+  <div class="wrap grid">
+    <p class="eyebrow" data-reveal>The idea</p>
+    <div>
+      <h2 data-split>A new kitchen is mostly pipework nobody sees. Ours is run by <em>the people who fit the sink.</em></h2>
+      <p class="sub" data-reveal>ILM designs and supplies kitchens and bathrooms with Alton Barn Kitchens, then fits them. Plumbing stays in-house, so the drawing and the water supply are agreed by the same people.</p>
     </div>
   </div>
 </section>
 
-<div class="proof">
+<section class="svc" id="services" aria-labelledby="svc-h">
   <div class="wrap">
-    <ul>
-      <li><b>10 / 10</b><span>Checkatrade rating</span></li>
-      <li><b>128</b><span>Customer reviews</span></li>
-      <li><b>2002</b><span>In the trade since</span></li>
-      <li><b>In-house</b><span>Plumbing done in-house</span></li>
-    </ul>
-  </div>
-</div>
-
-<section id="what">
-  <div class="wrap">
-    <div class="sec-head">
-      <div class="kicker">What we do</div>
-      <h2>Three trades, <em>one tidy team.</em></h2>
-      <p>Most room refits go wrong in the gaps between trades. ILM plans, supplies and fits the room so those gaps close.</p>
-    </div>
-    <div class="pillars">
-      <article class="pillar">
-        <svg class="ic" viewBox="0 0 44 44" fill="none" stroke="currentColor" stroke-width="1.6" aria-hidden="true"><rect x="5" y="8" width="34" height="28"/><path d="M5 20h34M22 8v12M12 28h4M28 28h4"/></svg>
+    <h2 id="svc-h" class="sr">Services</h2>
+    <div class="list">
+      <article class="card" data-reveal>
+        <span class="no">01</span>
+        <div class="ill"><svg viewBox="0 0 300 200" fill="none" stroke="#aab1b6" stroke-width="2" role="img" aria-label="Line drawing of a kitchen elevation with wall units, hob and island"><rect x="10" y="20" width="280" height="150" stroke-dasharray="2 5" opacity=".5"/><g fill="#9aa39b" stroke="#141517"><rect x="20" y="30" width="56" height="52"/><rect x="76" y="30" width="56" height="52"/><rect x="190" y="30" width="46" height="52"/><rect x="236" y="30" width="44" height="52"/><rect x="20" y="104" width="56" height="52"/><rect x="76" y="104" width="56" height="52"/><rect x="132" y="104" width="56" height="52"/><rect x="190" y="104" width="90" height="52"/></g><rect x="14" y="98" width="272" height="8" fill="#c08a52" stroke="none"/><rect x="132" y="30" width="58" height="52" fill="#2a2d31" stroke="#aab1b6"/><g stroke="#141517" stroke-width="1.6"><path d="M34 118h28M90 118h28M146 118h28M222 118h28"/></g><path d="M38 170h224" stroke="#c08a52"/></svg></div>
         <h3>Kitchens</h3>
-        <p>Design, supply and installation, in partnership with Alton Barn Kitchens.</p>
-        <ul><li>Design consultation</li><li>Supply and fitting</li><li>Plumbing and appliances connected</li></ul>
+        <p>Layout drawn up, units and worktops supplied, then fitted with the plumbing run by our own team.</p>
       </article>
-      <article class="pillar">
-        <svg class="ic" viewBox="0 0 44 44" fill="none" stroke="currentColor" stroke-width="1.6" aria-hidden="true"><path d="M5 22h34v6a8 8 0 0 1-8 8H13a8 8 0 0 1-8-8zM9 22V11a3 3 0 0 1 6 0M12 36l-2 4M32 36l2 4"/></svg>
+      <article class="card oak" data-reveal>
+        <span class="no">02</span>
+        <div class="ill"><svg viewBox="0 0 300 200" role="img" aria-label="Pattern of bathroom tiles being laid, with a tap and basin"><defs><pattern id="tp" width="30" height="30" patternUnits="userSpaceOnUse"><rect width="30" height="30" fill="none" stroke="#141517" stroke-width="1.5"/></pattern></defs><rect x="10" y="10" width="280" height="120" fill="#e2c196"/><rect x="10" y="10" width="280" height="120" fill="url(#tp)"/><rect x="10" y="10" width="150" height="60" fill="#141517" opacity=".88"/><rect x="10" y="10" width="150" height="60" fill="url(#tp)" stroke="none"/><g stroke="#c08a52" stroke-width="1.5" fill="none"><rect x="10" y="10" width="150" height="60"/></g><path d="M100 150h100l-14 30h-72z" fill="#f4f1ec" stroke="#141517" stroke-width="2"/><path d="M150 150v-24c0-8 8-12 16-12" fill="none" stroke="#141517" stroke-width="5" stroke-linecap="round"/></svg></div>
         <h3>Bathrooms</h3>
-        <p>Complete bathroom design and installation, from the first measure to the last seal.</p>
-        <ul><li>Design consultation</li><li>Supply and fitting</li><li>Showers, baths and basins</li></ul>
+        <p>Tiling, sanitaryware and showers planned together, so the layout works before the first tile goes up.</p>
       </article>
-      <article class="pillar">
-        <svg class="ic" viewBox="0 0 44 44" fill="none" stroke="currentColor" stroke-width="1.6" aria-hidden="true"><path d="M6 14h20v8h12M26 14V6M38 22v16M6 30h14v8"/></svg>
+      <article class="card light" data-reveal>
+        <span class="no">03</span>
+        <div class="ill"><svg viewBox="0 0 300 200" fill="none" role="img" aria-label="Pipework runs with joints, one hot and one cold"><path d="M20 60h110v70h150" stroke="#ff7a4d" stroke-width="7" stroke-linecap="round" stroke-linejoin="round"/><path d="M20 90h60v70h200" stroke="#4d8fd1" stroke-width="7" stroke-linecap="round" stroke-linejoin="round"/><g fill="#141517"><circle cx="130" cy="60" r="8"/><circle cx="130" cy="130" r="8"/><circle cx="80" cy="90" r="8"/><circle cx="80" cy="160" r="8"/><circle cx="280" cy="130" r="8"/><circle cx="280" cy="160" r="8"/></g></svg></div>
         <h3>Plumbing</h3>
-        <p>Non-gas plumbing for homes across Southampton and Hampshire, from repairs to new runs.</p>
-        <ul><li>Repairs and upgrades</li><li>New pipework</li><li>Done by the same in-house team</li></ul>
+        <p>Water, waste and fixtures in homes around Southampton. Non-gas work only.</p>
       </article>
     </div>
   </div>
 </section>
 
-<section class="dark" id="process">
-  <div class="wrap process">
-    <div>
-      <div class="kicker">How it works</div>
-      <h2>From first visit to <em>finished room.</em></h2>
-    </div>
-    <div class="stepper">
-      <div><span class="n">1</span><h3>Free design visit</h3><p>We come to you, look at the space and talk through how you want it to feel and work.</p></div>
-      <div><span class="n">2</span><h3>Design and supply</h3><p>A layout and a clear quote, with the units, fittings and finishes arranged for you.</p></div>
-      <div><span class="n">3</span><h3>Fitted properly</h3><p>Installation and plumbing handled in-house, left clean and working.</p></div>
+<section class="plan dark" id="plan" aria-labelledby="plan-h">
+  <div class="stage-wrap">
+    <div class="wrap cols">
+      <div>
+        <p class="eyebrow">How a job runs</p>
+        <h2 id="plan-h">Drawn first. Then built.</h2>
+        <ol class="steps" id="steps">
+          <li class="on"><span class="n">01</span><div><h3>Design</h3><p>We visit, measure and draw the room. Layout, appliances and worktops are agreed on paper.</p></div></li>
+          <li><span class="n">02</span><div><h3>Supply</h3><p>Cabinets, worktops and fittings are arranged with Alton Barn Kitchens and delivered to suit the fit.</p></div></li>
+          <li><span class="n">03</span><div><h3>Fit</h3><p>Our plumbers run the hot, cold and waste, then fit the kitchen on top. No handover between trades for the water.</p></div></li>
+        </ol>
+      </div>
+      <figure class="drawing">
+        <svg id="plansvg" viewBox="0 0 800 580" role="img" aria-label="Plan view of an example kitchen being drawn, filled with cabinets, then plumbed">
+          <g id="dims">
+            <path class="dim" d="M40 14H760M40 8v12M760 8v12"/><text class="dimt" x="400" y="10" text-anchor="middle">4.8 m</text>
+            <path class="dim" d="M14 40V520M8 40h12M8 520h12"/><text class="dimt" transform="translate(11 290) rotate(-90)" text-anchor="middle">3.2 m</text>
+          </g>
+          <g id="walls">
+            <rect class="pl th" pathLength="1" x="40" y="40" width="720" height="480"/>
+            <path class="pl" pathLength="1" d="M120 520v-80M120 440a80 80 0 0 1 80 80"/>
+            <rect class="pl" pathLength="1" x="754" y="230" width="12" height="130"/>
+          </g>
+          <g id="units">
+            <g class="u1"><rect class="unit" x="40" y="40" width="60" height="60"/><rect class="unit" x="100" y="40" width="60" height="60"/><rect class="unit" x="160" y="40" width="70" height="60"/><rect class="unit" x="230" y="40" width="70" height="60"/><rect class="unit" x="300" y="40" width="100" height="60"/><rect class="unit" x="400" y="40" width="100" height="60"/><rect class="unit" x="500" y="40" width="60" height="60"/></g>
+            <g class="u2"><rect class="unit" x="40" y="100" width="60" height="70"/><rect class="unit" x="40" y="170" width="60" height="70"/><rect class="unit" x="40" y="240" width="60" height="80"/><rect class="unit" x="40" y="320" width="60" height="80"/></g>
+            <g class="u3"><rect class="unit tall" x="560" y="40" width="100" height="60"/><rect class="unit tall" x="660" y="40" width="100" height="60"/><text class="lbl" x="610" y="75">OVENS</text><text class="lbl" x="710" y="75">WINE</text></g>
+            <g class="fixt"><rect class="fix" x="312" y="52" width="76" height="36" rx="4"/><circle class="fix" cx="350" cy="46" r="0"/><text class="lbl" x="350" y="75">SINK</text>
+              <rect class="fix" x="410" y="50" width="80" height="40" rx="3"/><circle class="fix" cx="428" cy="62" r="8"/><circle class="fix" cx="428" cy="80" r="0"/><circle class="fix" cx="472" cy="62" r="8"/><circle class="fix" cx="450" cy="76" r="8"/></g>
+            <g class="isl"><rect class="island" x="250" y="290" width="300" height="100"/><rect class="oakt" x="244" y="384" width="312" height="56" rx="24"/><rect class="oakt" x="244" y="284" width="312" height="12" rx="2"/><circle class="oakt" cx="300" cy="476" r="19"/><circle class="oakt" cx="400" cy="476" r="19"/><circle class="oakt" cx="500" cy="476" r="19"/></g>
+          </g>
+          <g id="pipes">
+            <path class="pipe c" pathLength="1" d="M66 396V66H342"/>
+            <path class="pipe h" pathLength="1" d="M80 396V80H358"/>
+            <path class="pipe w" pathLength="1" d="M376 90V114H760"/>
+            <g id="joints"><circle class="joint" cx="66" cy="396" r="6"/><circle class="joint" cx="80" cy="396" r="6"/><circle class="joint" cx="342" cy="66" r="6"/><circle class="joint" cx="358" cy="80" r="6"/><circle class="joint" cx="376" cy="90" r="6"/></g>
+            <text class="plt" x="120" y="132" fill="#7fb4e6">Cold</text><text class="plt" x="188" y="132" fill="#ff8a63">Hot</text><text class="plt" x="620" y="136" fill="#aab1b6">Waste</text>
+          </g>
+        </svg>
+        <figcaption>Example layout, not a real job</figcaption>
+      </figure>
     </div>
   </div>
 </section>
 
-<section class="band" id="projects" style="padding:0" aria-labelledby="proj-h">
-  <img src="assets/kitchen.webp" alt="" width="1800" height="1350" loading="lazy">
-  <div class="wrap"><div class="kicker">Projects</div><h2 id="proj-h">Rooms that look considered and work hard.</h2></div>
-</section>
-<section style="padding-top:0">
+<section class="gal" id="showroom" aria-labelledby="gal-h">
   <div class="wrap">
-    <div class="projects">
-      <div class="ph"><div><b>Kitchen project</b>Before and after photos go here</div></div>
-      <div class="ph"><div><b>Bathroom project</b>Before and after photos go here</div></div>
-      <div class="ph"><div><b>Plumbing project</b>Photos from recent jobs go here</div></div>
+    <div class="head">
+      <div><p class="eyebrow" data-reveal>The look</p><h2 id="gal-h" data-split>Painted frames, oak and steel</h2></div>
+      <p data-reveal>A display kitchen from ILM's own photos: soft grey shaker cabinets, a dark island with an oak top, and polished fittings.</p>
     </div>
-    <p class="hint">Concept note: placeholder slots for the before-and-after gallery that will be built from ILM's own project photos.</p>
+    <figure class="gmain" data-clip><img src="assets/kitchen-1100.webp" srcset="assets/kitchen-1100.webp 1100w, assets/kitchen-2000.webp 2000w" sizes="(min-width:1320px) 1200px, 92vw" width="2000" height="1500" alt="Grey shaker kitchen with an oak island and a glass-fronted wine cooler" data-parallax loading="lazy"><figcaption>Display kitchen</figcaption></figure>
+    <div class="gtri">
+      <figure data-reveal><img src="assets/island-1100.webp" width="1100" height="726" alt="Oak island worktop with a stainless steel sink and chrome tap" loading="lazy"><figcaption>Oak island top</figcaption></figure>
+      <figure data-reveal><img src="assets/cooler-1100.webp" width="500" height="1275" alt="Glass-fronted wine cooler set into tall grey cabinets" loading="lazy"><figcaption>Built-in wine cooler</figcaption></figure>
+      <figure data-reveal><img src="assets/pendants-1100.webp" width="875" height="775" alt="Polished steel pendant lights over cabinets with glass doors" loading="lazy"><figcaption>Steel pendants</figcaption></figure>
+    </div>
+    <p class="note" data-reveal>Project galleries, kitchens and bathrooms, go here once ILM's own photos are supplied.</p>
   </div>
 </section>
 
-<section id="reviews" style="background:var(--white);border-block:1px solid var(--line)">
-  <div class="wrap rev">
+<section class="proof" id="reviews" aria-labelledby="rv-h">
+  <div class="wrap grid">
+    <div class="big" aria-hidden="true"><span data-count="10">10</span><small>/10</small></div>
     <div>
-      <div class="kicker">Customer reviews</div>
-      <div class="big" aria-label="10 out of 10">10<small>/10</small></div>
-      <p>A perfect score from 128 customers on Checkatrade. Their review feed can sit right here on the new site, updating as new reviews arrive.</p>
-      <a class="src" href="https://www.checkatrade.com/trades/ilmkitchens" rel="noopener">Read the reviews on Checkatrade →</a>
+      <p class="eyebrow" style="margin-bottom:18px">Checkatrade</p>
+      <h2 id="rv-h">Ten out of ten, <em>128 times.</em></h2>
+      <p>Customers rate ILM 10/10 across 128 reviews on Checkatrade. Read them there, in their own words.</p>
+      <ul class="facts"><li><b data-count="128">128</b>Checkatrade reviews</li><li><b>2002</b>In trade since</li></ul>
+      <a class="btn dk" href="https://www.checkatrade.com/trades/ilmkitchens" rel="noopener">Read the reviews on Checkatrade</a>
     </div>
-    <ul>
-      <li><span>Checkatrade rating</span><span>10 / 10</span></li>
-      <li><span>Reviews</span><span>128</span></li>
-      <li><span>In the trade since</span><span>2002</span></li>
-      <li><span>Company type</span><span>Limited company</span></li>
-    </ul>
   </div>
+  <div class="wrap"><div class="ribbon" aria-hidden="true"><div class="rv-row" data-dir="-1" data-speed="0.6"><span>10/10 on Checkatrade</span><span>128 reviews</span><span>Plumbing done in-house</span><span>Limited company</span><span>10/10 on Checkatrade</span><span>128 reviews</span><span>Plumbing done in-house</span><span>Limited company</span><span>10/10 on Checkatrade</span><span>128 reviews</span><span>Plumbing done in-house</span><span>Limited company</span></div></div></div>
 </section>
 
-<section class="areas" id="areas">
+<section class="areas" id="areas" aria-labelledby="ar-h">
   <div class="wrap grid">
     <div>
-      <div class="kicker">Areas covered</div>
-      <h2>Southampton, Hampshire <em>and beyond.</em></h2>
-      <p>Based in Southampton and working right across Hampshire and into the neighbouring counties.</p>
+      <p class="eyebrow">Areas covered</p>
+      <h2 id="ar-h" data-split>Southampton, Hampshire and a long way round</h2>
+      <p data-reveal>Based in Southampton. The reach runs along the coast from Seaton in Devon to Newhaven in East Sussex, and arcs inland past Newbury and Guildford.</p>
+      <ul data-reveal><li>Southampton</li><li>Hampshire</li><li>Dorset coast</li><li>West Sussex</li></ul>
     </div>
-    <div class="mapbox">
-      <svg viewBox="0 0 700 340" role="img" aria-label="Stylised map: an arc of coverage around Southampton, from Seaton in the west through Newbury to Newhaven in the east">
-        <defs><pattern id="dots" width="16" height="16" patternUnits="userSpaceOnUse"><circle cx="2" cy="2" r="1" fill="#3a3d41"/></pattern></defs>
-        <rect width="700" height="340" fill="url(#dots)"/>
-        <!-- sea -->
-        <path d="M0 230 C40 238 80 246 110 262 C140 280 170 296 210 292 C250 288 270 276 300 282 C330 290 345 300 380 296 C400 270 420 262 450 268 C490 276 520 258 560 250 C610 240 650 226 700 226 L700 340 L0 340Z" fill="#23262a" stroke="#4a4e53" stroke-width="1"/>
-        <path d="M335 300 C350 292 380 290 400 296 C395 312 345 316 335 300Z" fill="#1b1c1e" stroke="#4a4e53"/>
-        <!-- arc -->
-        <path class="arc" d="M26 232 C70 110 170 50 270 28 C360 8 450 14 520 50 C600 90 650 150 676 214" fill="none" stroke="#c08a52" stroke-width="3.5" stroke-linecap="round"/>
-        <path d="M26 232 C70 110 170 50 270 28 C360 8 450 14 520 50 C600 90 650 150 676 214 L676 340 L26 340Z" fill="#c08a52" opacity=".06"/>
-        <!-- towns -->
-        <g font-family="Hanken Grotesk,Arial,sans-serif" font-size="12" fill="#a9b0b5">
-          <circle cx="26" cy="232" r="4" fill="#c08a52"/><text x="34" y="250">Seaton</text>
-          <circle cx="676" cy="214" r="4" fill="#c08a52"/><text x="618" y="238">Newhaven</text>
-          <circle cx="388" cy="22" r="4" fill="#c08a52"/><text x="398" y="30">Newbury</text>
-          <circle cx="290" cy="112" r="2.5"/><text x="226" y="106">Salisbury</text>
-          <circle cx="370" cy="132" r="2.5"/><text x="378" y="122">Winchester</text>
-          <circle cx="520" cy="178" r="2.5"/><text x="528" y="176">Chichester</text>
-          <circle cx="470" cy="150" r="2.5"/><text x="476" y="144">Portsmouth</text>
-          <circle cx="270" cy="212" r="2.5"/><text x="226" y="230">Bournemouth</text>
-          <circle cx="580" cy="148" r="2.5"/><text x="560" y="134">Brighton</text>
-          <circle cx="460" cy="62" r="2.5"/><text x="466" y="64">Guildford</text>
+    <figure class="map">
+      <svg id="mapsvg" viewBox="0 0 1191 549" role="img" aria-label="Map of southern England showing ILM's reach as an arc from Seaton in Devon, over Newbury and Guildford, to Newhaven in East Sussex, centred on Southampton">
+        <defs><clipPath id="landclip"><path id="landp" d="M0 0H1191V380L1150 382 1120 372 1060 362 1000 372 950 385 900 410 875 420 830 405 790 392 745 385 735 362 700 378 660 385 650 335 632 335 610 385 600 400 580 408 520 416 470 420 440 425 425 430 440 455 410 478 405 470 390 455 350 455 300 470 270 495 262 478 240 470 150 440 110 420 40 432 0 445Z"/></clipPath></defs>
+        <rect width="1191" height="549" fill="#dde3e4"/>
+        <use href="#landp" class="land"/>
+        <path class="land" d="M590 435 640 410 680 395 740 405 765 440 745 490 700 500 640 470Z"/>
+        <g clip-path="url(#landclip)"><path class="reach" d="M45 420C57 400 94 335 120 300 145 265 171 236 200 210 228 183 258 160 290 140 321 119 355 100 390 85 425 69 465 55 500 45 535 35 560 29 600 25 640 20 701 15 740 18 778 20 803 31 830 40 856 48 878 55 900 70 921 84 938 103 960 125 981 146 1009 174 1030 200 1050 225 1070 256 1085 280 1099 303 1105 322 1115 340 1124 357 1135 377 1140 385L1140 549 45 549Z"/></g>
+        <g><circle class="ring" cx="625" cy="313" r="110"/><circle class="ring" cx="625" cy="313" r="230"/><circle class="ring" cx="625" cy="313" r="360"/></g>
+        <path class="arc" id="arcp" pathLength="1" d="M45 420C57 400 94 335 120 300 145 265 171 236 200 210 228 183 258 160 290 140 321 119 355 100 390 85 425 69 465 55 500 45 535 35 560 29 600 25 640 20 701 15 740 18 778 20 803 31 830 40 856 48 878 55 900 70 921 84 938 103 960 125 981 146 1009 174 1030 200 1050 225 1070 256 1085 280 1099 303 1105 322 1115 340 1124 357 1135 377 1140 385"/>
+        <g class="towns"><circle class="town" cx="505" cy="225" r="5"/><text class="minor" x="518" y="222">Salisbury</text>
+          <circle class="town" cx="672" cy="228" r="5"/><text class="minor" x="684" y="226">Winchester</text>
+          <circle class="town" cx="735" cy="108" r="5"/><text class="minor" x="747" y="106">Basingstoke</text>
+          <circle class="town" cx="660" cy="30" r="5"/><text x="672" y="52">Newbury</text>
+          <circle class="town" cx="925" cy="125" r="5"/><text x="912" y="152" text-anchor="end">Guildford</text>
+          <circle class="town" cx="470" cy="414" r="5"/><text class="minor" x="458" y="404" text-anchor="end">Bournemouth</text>
+          <circle class="town" cx="738" cy="368" r="5"/><text class="minor" x="750" y="346">Portsmouth</text>
+          <circle class="town" cx="870" cy="358" r="5"/><text class="minor" x="862" y="396">Chichester</text>
+          <circle class="town" cx="1068" cy="360" r="5"/><text x="1040" y="344" text-anchor="end">Brighton</text>
+          <circle class="town" cx="250" cy="430" r="5"/><text class="minor" x="236" y="424" text-anchor="end">Dorchester</text>
+          <circle class="town" cx="172" cy="296" r="5"/><text class="minor" x="186" y="294">Yeovil</text>
         </g>
-        <g><circle class="pulse" cx="376" cy="188" r="8" fill="#c08a52"/><circle cx="376" cy="188" r="7" fill="#c08a52" stroke="#1b1c1e" stroke-width="2"/>
-        <text x="390" y="204" font-family="Fraunces,Georgia,serif" font-size="17" fill="#fff">Southampton</text></g>
+        <g><circle cx="625" cy="313" r="22" fill="rgba(192,138,82,.35)"/><circle cx="625" cy="313" r="9" fill="#141517" stroke="#fff" stroke-width="3"/><text class="big" x="595" y="304" text-anchor="end">Southampton</text></g>
+        <text class="end" x="24" y="462">SEATON</text><text class="end" x="1010" y="418">NEWHAVEN</text>
+        <text class="sea" x="450" y="520">English Channel</text>
       </svg>
-      <div class="cap">Stylised coverage map. Edges are approximate.</div>
-    </div>
+    </figure>
   </div>
 </section>
 
-<section class="contact" id="contact">
+<section class="contact dark" id="visit" aria-labelledby="ct-h">
   <div class="wrap grid">
     <div>
-      <div class="kicker">Get in touch</div>
-      <h2>Book a free <em>design visit.</em></h2>
-      <a class="big-phone" href="tel:+447775696174">07775 696174</a>
-      <ul class="facts">
-        <li><b>Email</b><br>ilmkitchensltd@mail.com</li>
-        <li><b>Director</b><br>Mark Osborne</li>
-        <li><b>Area</b><br>Southampton &amp; Hampshire</li>
+      <p class="eyebrow">Free design visit</p>
+      <h2 id="ct-h" data-split>Tell us about the room</h2>
+      <p data-reveal>Answer four quick questions and add a few photos. We come to you, measure up and draw a plan.</p>
+      <ul class="cl" data-reveal>
+        <li><span>Call</span><a href="tel:+447775696174">07775 696174</a></li>
+        <li><span>Email</span><a href="mailto:ilmkitchensltd@mail.com">ilmkitchensltd@mail.com</a></li>
+        <li><span>Based in</span><b style="font-family:var(--serif);font-weight:400;font-size:28px">Southampton</b></li>
       </ul>
     </div>
-    <div class="panel">
-      <h3>Tell us about your room</h3>
-      <form id="enq" novalidate>
-        <div class="fields">
-          <div><label for="f-name">Name</label><input id="f-name" name="name" autocomplete="name" required></div>
-          <div><label for="f-phone">Phone</label><input id="f-phone" name="phone" type="tel" autocomplete="tel" required></div>
-          <div><label for="f-email">Email</label><input id="f-email" name="email" type="email" autocomplete="email"></div>
-          <div><label for="f-room">Room</label><select id="f-room" name="room"><option>Kitchen</option><option>Bathroom</option><option>Plumbing</option><option>Kitchen and bathroom</option></select></div>
-          <div class="full"><label for="f-msg">What do you have in mind?</label><textarea id="f-msg" name="msg" rows="4"></textarea></div>
-          <div class="full"><label for="f-photos">Photos of the room (optional)</label><input id="f-photos" name="photos" type="file" accept="image/*" multiple></div>
-          <div class="full"><button class="btn btn-dark" type="submit" style="width:100%">Request my free design visit</button></div>
-        </div>
-        <p class="note" role="status">This is a preview — the form will go live with your new site.</p>
+    <div class="wiz" data-reveal>
+      <form id="wiz" novalidate>
+        <h3>Book a free design visit</h3>
+        <p class="tag">Preview only. Nothing is sent.</p>
+        <div class="prog" aria-hidden="true"><i id="bar"></i></div>
+        <p class="stepno" id="stepno" aria-live="polite">Step 1 of 4</p>
+
+        <fieldset data-step="1">
+          <legend>What are you planning?</legend>
+          <div class="chips">
+            <label class="chip"><input type="radio" name="job" value="Kitchen" required><span>New kitchen</span></label>
+            <label class="chip"><input type="radio" name="job" value="Bathroom"><span>New bathroom</span></label>
+            <label class="chip"><input type="radio" name="job" value="Kitchen and bathroom"><span>Kitchen and bathroom</span></label>
+            <label class="chip"><input type="radio" name="job" value="Plumbing"><span>Plumbing only</span></label>
+          </div>
+        </fieldset>
+
+        <fieldset data-step="2" hidden>
+          <legend>Where, and when?</legend>
+          <div class="fld"><label for="pc">Postcode</label><input id="pc" name="pc" autocomplete="postal-code" placeholder="SO14" required></div>
+          <div class="fld"><label for="when">Roughly when</label><select id="when" name="when"><option>As soon as possible</option><option>In the next 3 months</option><option>Later this year</option><option>Just looking for ideas</option></select></div>
+          <p class="hint">Plumbing is non-gas only.</p>
+        </fieldset>
+
+        <fieldset data-step="3" hidden>
+          <legend>Add photos of the room</legend>
+          <label class="drop" for="ph"><b>Choose photos</b><br><span style="font-size:14px;color:var(--steel-d)">The room as it is now helps. Optional.</span><input id="ph" type="file" accept="image/*" multiple></label>
+          <div class="thumbs" id="thumbs" aria-live="polite"></div>
+        </fieldset>
+
+        <fieldset data-step="4" hidden>
+          <legend>How do we reach you?</legend>
+          <div class="fld"><label for="nm">Name</label><input id="nm" name="nm" autocomplete="name" required></div>
+          <div class="fld"><label for="tel">Phone</label><input id="tel" name="tel" type="tel" autocomplete="tel" required></div>
+          <div class="fld"><label for="em">Email (optional)</label><input id="em" name="em" type="email" autocomplete="email"></div>
+        </fieldset>
+
+        <p class="err" id="err" role="alert"></p>
+        <div class="nav"><button type="button" class="btn ghost" id="back" hidden>Back</button><button type="button" class="btn dk" id="next" style="margin-left:auto">Next</button></div>
       </form>
+      <div class="done" id="done" hidden tabindex="-1">
+        <p class="eyebrow" style="color:var(--oak-d)">Request received</p>
+        <p class="ref" id="ref">Q-0000</p>
+        <p id="sum">We would be in touch to arrange your design visit.</p>
+        <p class="preview-note">This is a preview &mdash; the form will go live with your new site.</p>
+        <button type="button" class="btn ghost" id="again" style="margin-top:18px">Start again</button>
+      </div>
     </div>
   </div>
 </section>
 </main>
 
 <footer>
-  <div class="wrap">
-    <div><b>ILM Kitchens, Bathrooms &amp; Plumbing Ltd</b><br>Southampton · 07775 696174</div>
-    <div>Concept design by Itchen Studio. Not the live site.</div>
+  <div class="wrap row">
+    <a class="logo" href="#top" aria-label="Back to top" style="color:#fff"><svg aria-hidden="true"><use href="#mono"/></svg><span><b>Kitchens &amp; Bathrooms</b><small>Plumbing Ltd &middot; Southampton</small></span></a>
+    <p>ILM Kitchens, Bathrooms &amp; Plumbing Ltd &middot; Southampton &middot; <a href="tel:+447775696174">07775 696174</a></p>
+    <p>Concept by <a href="mailto:sam@itchenstudio.co.uk">Itchen Studio</a></p>
   </div>
 </footer>
 
-<div class="dock"><a class="btn btn-oak" href="tel:+447775696174">Call 07775 696174</a></div>
+<script src="assets/js/gsap.min.js" defer></script>
+<script src="assets/js/ScrollTrigger.min.js" defer></script>
+<script src="assets/js/lenis.min.js" defer></script>
+<script src="assets/js/concept.js" defer></script>
+<script defer>
+window.addEventListener('DOMContentLoaded',function(){
+var api=ConceptSite.init();
 
-<script>
-document.getElementById('enq').addEventListener('submit',function(e){e.preventDefault();this.querySelector('.note').classList.add('show');});
+/* ---------- signature: the drawing ---------- */
+var steps=[].slice.call(document.querySelectorAll('#steps li'));
+function setStage(n){steps.forEach(function(li,i){li.classList.toggle('on',i===n)})}
+if(api.motion){
+  var q=function(s){return gsap.utils.toArray('#plansvg '+s)};
+  var tl=gsap.timeline({paused:true,defaults:{ease:'none'}});
+  gsap.set(q('.pl'),{strokeDashoffset:1});
+  gsap.set(q('#dims'),{autoAlpha:0});
+  gsap.set(q('.unit,.island,.oakt,.fix,.lbl'),{autoAlpha:0});
+  gsap.set(q('.pipe'),{strokeDashoffset:1});
+  gsap.set(q('.joint,.plt'),{autoAlpha:0});
+  gsap.set(q('.u1 rect'),{y:-14});gsap.set(q('.u2 rect'),{x:-14});gsap.set(q('.u3 rect'),{y:-14});gsap.set(q('.isl > *'),{y:26});
+  tl.to(q('#dims'),{autoAlpha:1,duration:.35},0)
+    .to(q('.pl'),{strokeDashoffset:0,duration:.9,stagger:.12},0)
+    .to(q('.u1 rect'),{autoAlpha:1,y:0,duration:.25,stagger:.06},1)
+    .to(q('.u2 rect'),{autoAlpha:1,x:0,duration:.25,stagger:.06},1.35)
+    .to(q('.u3 rect,.u3 .lbl'),{autoAlpha:1,y:0,duration:.25,stagger:.05},1.6)
+    .to(q('.isl > *'),{autoAlpha:1,y:0,duration:.3,stagger:.07},1.7)
+    .to(q('.fix,.fixt .lbl'),{autoAlpha:1,duration:.3,stagger:.04},1.95)
+    .to(q('.pipe.c'),{strokeDashoffset:0,duration:.7},2.1)
+    .to(q('.pipe.h'),{strokeDashoffset:0,duration:.7},2.25)
+    .to(q('.pipe.w'),{strokeDashoffset:0,duration:.6},2.5)
+    .to(q('.joint'),{autoAlpha:1,duration:.15,stagger:.08},2.7)
+    .to(q('.plt'),{autoAlpha:1,duration:.2,stagger:.1},2.85)
+    .to({}, {duration:.25},3.1);
+  var upd=function(self){tl.progress(self.progress);setStage(Math.min(2,Math.floor(self.progress*3)))};
+  var mm=gsap.matchMedia();
+  mm.add('(min-width:1021px)',function(){
+    ScrollTrigger.create({trigger:'.plan .stage-wrap',start:'top top',end:'+=2600',pin:true,scrub:true,onUpdate:upd,onRefresh:upd});
+  });
+  mm.add('(max-width:1020px)',function(){
+    ScrollTrigger.create({trigger:'#plansvg',start:'top 78%',end:'bottom 38%',scrub:true,onUpdate:upd,onRefresh:upd});
+  });
+  /* coverage arc draws once */
+  var arc=document.getElementById('arcp');
+  gsap.set(arc,{strokeDashoffset:1});
+  gsap.to(arc,{strokeDashoffset:0,duration:2.4,ease:'power2.inOut',scrollTrigger:{trigger:'#mapsvg',start:'top 70%',once:true}});
+}
+
+/* ---------- feature: design visit wizard ---------- */
+(function(){
+  var f=document.getElementById('wiz'),done=document.getElementById('done');
+  var fs=[].slice.call(f.querySelectorAll('fieldset')),i=0;
+  var bar=document.getElementById('bar'),no=document.getElementById('stepno'),err=document.getElementById('err');
+  var next=document.getElementById('next'),back=document.getElementById('back');
+  function show(n){
+    i=n;fs.forEach(function(s,k){s.hidden=k!==n});
+    bar.style.width=((n+1)/fs.length*100)+'%';no.textContent='Step '+(n+1)+' of '+fs.length;
+    back.hidden=n===0;next.textContent=n===fs.length-1?'Send request':'Next';err.textContent='';
+    var t=fs[n].querySelector('input,select,legend');if(t&&t.focus&&n>0)t.focus();
+  }
+  function valid(){
+    if(i===0&&!f.querySelector('input[name=job]:checked')){err.textContent='Choose one to continue.';return false}
+    if(i===1&&!f.pc.value.trim()){err.textContent='Add your postcode.';f.pc.focus();return false}
+    if(i===3){
+      if(!f.nm.value.trim()){err.textContent='Add your name.';f.nm.focus();return false}
+      if(!f.tel.value.trim()){err.textContent='Add a phone number.';f.tel.focus();return false}
+    }
+    err.textContent='';return true;
+  }
+  function finish(){
+    var job=f.querySelector('input[name=job]:checked').value;
+    document.getElementById('ref').textContent='Q-'+(1000+Math.floor(Math.random()*9000));
+    document.getElementById('sum').textContent=job+' in '+f.pc.value.trim().toUpperCase()+'. We would ring '+f.nm.value.trim()+' to arrange a design visit.';
+    f.hidden=true;done.hidden=false;done.focus();
+  }
+  next.addEventListener('click',function(){if(!valid())return;if(i<fs.length-1)show(i+1);else finish()});
+  back.addEventListener('click',function(){show(i-1)});
+  f.addEventListener('submit',function(e){e.preventDefault()});
+  f.addEventListener('keydown',function(e){if(e.key==='Enter'&&e.target.tagName!=='BUTTON'){e.preventDefault();next.click()}});
+  f.addEventListener('change',function(e){if(e.target.name==='job'&&i===0)err.textContent=''});
+  document.getElementById('ph').addEventListener('change',function(e){
+    var box=document.getElementById('thumbs');box.innerHTML='';
+    [].slice.call(e.target.files).slice(0,8).forEach(function(file){
+      var im=document.createElement('img');im.alt='Selected photo: '+file.name;im.src=URL.createObjectURL(file);box.appendChild(im);
+    });
+  });
+  document.getElementById('again').addEventListener('click',function(){f.reset();document.getElementById('thumbs').innerHTML='';done.hidden=true;f.hidden=false;show(0)});
+  show(0);
+})();
+});
 </script>
 </body>
 </html>
