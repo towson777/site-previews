@@ -1,0 +1,368 @@
+<!doctype html>
+<html lang="en-GB">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="robots" content="noindex,nofollow">
+<title>RDS Painting &amp; Decorating | Southampton painter and decorator</title>
+<meta name="description" content="Concept website for RDS Painting &amp; Decorating, Southampton. Interior, exterior and hand-painted kitchens by Richard Scott.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Young+Serif&family=Instrument+Sans:wght@400;500;600;700&display=swap" rel="stylesheet">
+<style>
+/* Layout: warm off-white paper, deep navy from the logo lettering, royal blue from the brush, a small brass accent. Big serif headlines, tall photo panels, one navy proof band under the hero. */
+:root{
+  --navy:#0e1f4d; --navy-2:#16306e; --royal:#1f46b4; --brass:#b88a3e; --brass-l:#e3c27f;
+  --paper:#f7f4ee; --white:#fff; --line:#ddd6c8; --muted:#4d5468; --ink:#0f1630;
+  --display:"Young Serif",Georgia,"Times New Roman",serif; --body:"Instrument Sans",system-ui,Arial,sans-serif;
+  --gutter:clamp(16px,4vw,48px);
+}
+*{box-sizing:border-box}
+html{scroll-behavior:smooth;scroll-padding-top:90px}
+body{margin:0;background:var(--paper);color:var(--ink);font:400 1.0625rem/1.65 var(--body);-webkit-font-smoothing:antialiased}
+img{max-width:100%;display:block}
+a{color:inherit}
+h1,h2,h3{font-family:var(--display);font-weight:400;line-height:1.1;margin:0;text-wrap:balance}
+p{margin:0}
+.wrap{max-width:1180px;margin-inline:auto;padding-inline:var(--gutter)}
+:focus-visible{outline:3px solid var(--brass);outline-offset:3px;border-radius:2px}
+.eyebrow{font-size:.78rem;letter-spacing:.16em;text-transform:uppercase;font-weight:600;color:var(--royal)}
+.btn{display:inline-flex;align-items:center;justify-content:center;gap:.5rem;padding:.9rem 1.5rem;border-radius:999px;font-weight:600;text-decoration:none;border:2px solid transparent;cursor:pointer;font:600 1rem var(--body);transition:transform .2s,background .2s,color .2s}
+.btn-primary{background:var(--brass);color:var(--ink)}
+.btn-primary:hover{background:var(--brass-l);transform:translateY(-2px)}
+.btn-ghost{border-color:rgba(255,255,255,.55);color:#fff}
+.btn-ghost:hover{background:#fff;color:var(--navy)}
+
+/* preview banner */
+.banner{background:var(--ink);color:#e9e6dc;font-size:.82rem;padding:.55rem var(--gutter);text-align:center;line-height:1.4}
+.banner b{color:var(--brass-l);font-weight:600}
+
+/* header */
+header.top{position:sticky;top:0;z-index:20;background:rgba(255,255,255,.96);backdrop-filter:blur(8px);border-bottom:1px solid var(--line)}
+.nav{display:flex;align-items:center;justify-content:space-between;gap:1rem;min-height:72px}
+.brand{display:flex;align-items:center;gap:.75rem;text-decoration:none}
+.brand img{width:56px;height:56px;object-fit:contain}
+.brand span{font-family:var(--display);font-size:1.05rem;line-height:1.1;color:var(--navy)}
+.brand small{display:block;font-family:var(--body);font-size:.68rem;letter-spacing:.14em;text-transform:uppercase;color:var(--muted);margin-top:.15rem}
+nav ul{display:flex;gap:1.6rem;list-style:none;margin:0;padding:0}
+nav a{text-decoration:none;font-weight:500;font-size:.95rem;color:var(--navy);padding:.3rem 0;border-bottom:2px solid transparent}
+nav a:hover{border-color:var(--brass)}
+.nav .btn{padding:.65rem 1.2rem;font-size:.95rem;background:var(--navy);color:#fff}
+.nav .btn:hover{background:var(--royal)}
+@media(max-width:860px){nav ul{display:none}.brand small{display:none}}
+
+/* hero */
+.hero{background:var(--navy);color:#fff;position:relative;overflow:hidden}
+.hero-grid{display:grid;grid-template-columns:1.05fr .95fr;gap:clamp(24px,5vw,64px);align-items:center;padding-block:clamp(40px,7vw,88px)}
+.hero h1{font-size:clamp(2.3rem,5.6vw,4.3rem);letter-spacing:-.01em}
+.hero h1 em{font-style:normal;color:var(--brass-l)}
+.hero p.lead{margin-top:1.3rem;font-size:1.15rem;color:#d3d9ec;max-width:34rem}
+.hero .actions{display:flex;flex-wrap:wrap;gap:.8rem;margin-top:2rem}
+.hero .eyebrow{color:var(--brass-l)}
+.hero-photo{position:relative}
+.hero-photo img{width:100%;aspect-ratio:4/4.4;object-fit:cover;border-radius:6px 6px 120px 6px;box-shadow:0 30px 60px -20px rgba(0,0,0,.55)}
+.hero-photo figcaption{position:absolute;left:-14px;bottom:28px;background:var(--paper);color:var(--ink);padding:.7rem 1rem;border-radius:4px;font-size:.85rem;box-shadow:0 10px 30px rgba(0,0,0,.25);max-width:230px;line-height:1.35}
+.hero-photo figcaption b{font-family:var(--display);font-weight:400;font-size:1.05rem;color:var(--navy);display:block}
+@media(max-width:860px){.hero-grid{grid-template-columns:1fr}.hero-photo{order:-1}.hero-photo img{aspect-ratio:4/3;border-radius:6px 6px 70px 6px}.hero-photo figcaption{left:12px;bottom:16px}}
+
+/* proof strip */
+.proof{background:var(--royal);color:#fff}
+.proof ul{list-style:none;margin:0;padding:0;display:grid;grid-template-columns:repeat(4,1fr)}
+.proof li{padding:1.4rem 1rem;border-left:1px solid rgba(255,255,255,.25);display:flex;flex-direction:column;gap:.15rem}
+.proof li:first-child{border-left:0;padding-left:0}
+.proof strong{font-family:var(--display);font-weight:400;font-size:clamp(1.5rem,3vw,2.1rem);line-height:1;font-variant-numeric:tabular-nums}
+.proof span{font-size:.88rem;color:#dbe4ff}
+@media(max-width:760px){.proof ul{grid-template-columns:1fr 1fr}.proof li{border-left:0;padding-left:0;border-top:1px solid rgba(255,255,255,.25)}.proof li:nth-child(-n+2){border-top:0}}
+
+section{padding-block:clamp(56px,8vw,104px)}
+.sec-head{max-width:40rem;display:grid;gap:.9rem;margin-bottom:clamp(28px,4vw,52px)}
+.sec-head h2{font-size:clamp(1.9rem,4vw,3rem);color:var(--navy)}
+.sec-head p{color:var(--muted)}
+
+/* services */
+.svc{display:grid;grid-template-columns:repeat(3,1fr);gap:1px;background:var(--line);border:1px solid var(--line)}
+.svc article{background:var(--paper);padding:1.8rem;display:grid;gap:.8rem;align-content:start;transition:background .25s}
+.svc article:hover{background:#fff}
+.svc h3{font-size:1.45rem;color:var(--navy)}
+.svc ul{margin:0;padding:0;list-style:none;display:grid;gap:.4rem;color:var(--muted);font-size:.98rem}
+.svc li{padding-left:1.1rem;position:relative}
+.svc li::before{content:"";position:absolute;left:0;top:.7em;width:.5rem;height:2px;background:var(--brass)}
+@media(max-width:900px){.svc{grid-template-columns:1fr}}
+
+/* kitchens */
+.kitchens{background:var(--navy);color:#fff}
+.k-grid{display:grid;grid-template-columns:1fr 1fr;gap:clamp(24px,5vw,64px);align-items:center}
+.kitchens h2{font-size:clamp(1.9rem,4vw,3rem)}
+.kitchens .eyebrow{color:var(--brass-l)}
+.kitchens .copy{display:grid;gap:1.2rem;color:#d3d9ec}
+.kitchens ul{margin:.4rem 0 0;padding:0;list-style:none;display:grid;gap:.6rem}
+.kitchens li{padding-left:1.6rem;position:relative}
+.kitchens li::before{content:"";position:absolute;left:0;top:.55em;width:.9rem;height:2px;background:var(--brass-l)}
+.k-photos{display:grid;grid-template-columns:1fr 1fr;gap:12px}
+.k-photos img{width:100%;height:100%;object-fit:cover;border-radius:4px;aspect-ratio:3/4.2}
+.k-photos img:last-child{margin-top:36px}
+@media(max-width:860px){.k-grid{grid-template-columns:1fr}}
+
+/* why */
+.why{display:grid;grid-template-columns:repeat(4,1fr);gap:clamp(18px,3vw,36px)}
+.why div{display:grid;gap:.6rem;align-content:start;border-top:3px solid var(--brass);padding-top:1rem}
+.why h3{font-size:1.25rem;color:var(--navy)}
+.why p{color:var(--muted);font-size:.98rem}
+@media(max-width:900px){.why{grid-template-columns:1fr 1fr}}
+@media(max-width:520px){.why{grid-template-columns:1fr}}
+
+/* gallery */
+.gallery{background:#fff}
+.g-grid{display:grid;grid-template-columns:1.3fr 1fr 1fr;gap:12px}
+.g-grid button{padding:0;border:0;background:none;cursor:zoom-in;overflow:hidden;border-radius:4px;display:block}
+.g-grid img{width:100%;height:100%;object-fit:cover;aspect-ratio:3/4;transition:transform .5s}
+.g-grid button:hover img{transform:scale(1.04)}
+.g-note{margin-top:1.2rem;color:var(--muted);font-size:.92rem}
+@media(max-width:700px){.g-grid{grid-template-columns:1fr 1fr}.g-grid button:first-child{grid-column:1/-1}.g-grid button:first-child img{aspect-ratio:4/3}}
+dialog.lb{border:0;padding:0;background:transparent;max-width:min(94vw,900px)}
+dialog.lb::backdrop{background:rgba(8,12,30,.88)}
+dialog.lb img{max-height:88vh;width:auto;margin:auto;border-radius:4px}
+dialog.lb button{position:absolute;top:8px;right:8px;background:#fff;border:0;border-radius:50%;width:44px;height:44px;font-size:1.4rem;cursor:pointer}
+
+/* reviews */
+.rev-top{display:flex;flex-wrap:wrap;align-items:end;justify-content:space-between;gap:1.5rem;margin-bottom:2.2rem}
+.score{display:flex;align-items:baseline;gap:.7rem}
+.score b{font-family:var(--display);font-weight:400;font-size:clamp(3rem,7vw,5rem);line-height:1;color:var(--navy)}
+.score span{color:var(--muted);max-width:14rem;line-height:1.35;font-size:.95rem}
+.quotes{display:grid;grid-template-columns:repeat(3,1fr);gap:20px}
+.quotes figure{margin:0;background:#fff;border:1px solid var(--line);padding:1.8rem;display:grid;gap:1.2rem;align-content:space-between;border-radius:4px}
+.quotes blockquote{margin:0;font-family:var(--display);font-size:1.2rem;line-height:1.4;color:var(--navy)}
+.quotes blockquote::before{content:"\201C";display:block;font-size:3rem;line-height:.6;color:var(--brass)}
+.quotes figcaption{font-size:.85rem;color:var(--muted)}
+@media(max-width:900px){.quotes{grid-template-columns:1fr}}
+
+/* areas */
+.areas{background:#efe9dc}
+.chips{display:flex;flex-wrap:wrap;gap:.6rem;list-style:none;margin:0;padding:0}
+.chips li{padding:.6rem 1.1rem;background:var(--paper);border:1px solid var(--line);border-radius:999px;font-weight:500;color:var(--navy)}
+
+/* contact */
+.contact{background:var(--navy);color:#fff}
+.c-grid{display:grid;grid-template-columns:.9fr 1.1fr;gap:clamp(28px,5vw,72px);align-items:start}
+.contact h2{font-size:clamp(1.9rem,4vw,3rem)}
+.contact .eyebrow{color:var(--brass-l)}
+.contact .copy{display:grid;gap:1.2rem;color:#d3d9ec}
+.contact .copy a{color:var(--brass-l)}
+form{background:var(--paper);color:var(--ink);padding:clamp(20px,3vw,34px);border-radius:6px;display:grid;gap:1rem}
+.row{display:grid;grid-template-columns:1fr 1fr;gap:1rem}
+label{display:grid;gap:.35rem;font-weight:600;font-size:.9rem;color:var(--navy)}
+input,select,textarea{font:400 1rem var(--body);padding:.75rem .85rem;border:1.5px solid #b9b2a2;border-radius:4px;background:#fff;color:var(--ink);width:100%}
+input:focus,select:focus,textarea:focus{outline:3px solid var(--royal);outline-offset:1px;border-color:var(--royal)}
+textarea{min-height:110px;resize:vertical}
+.hint{font-weight:400;color:var(--muted);font-size:.82rem}
+.ok{background:#e3efe3;color:#1d4a22;padding:.8rem 1rem;border-radius:4px;font-weight:500}
+@media(max-width:860px){.c-grid{grid-template-columns:1fr}.row{grid-template-columns:1fr}}
+
+footer{background:var(--ink);color:#b9bdd0;padding-block:2rem;font-size:.9rem}
+footer .wrap{display:flex;flex-wrap:wrap;gap:.8rem 2rem;justify-content:space-between}
+
+/* motion */
+@media(prefers-reduced-motion:no-preference){
+  .hero-grid>*{animation:rise .8s cubic-bezier(.2,.7,.2,1) both}
+  .hero-grid>*:nth-child(2){animation-delay:.12s}
+  @keyframes rise{from{opacity:0;transform:translateY(18px)}to{opacity:1;transform:none}}
+}
+@media(prefers-reduced-motion:reduce){html{scroll-behavior:auto}*{transition:none!important}}
+</style>
+</head>
+<body>
+<div class="banner" role="note">Website concept for <b>RDS Painting &amp; Decorating</b> — preview only, not the live site. Designed by Itchen Studio · sam@itchenstudio.co.uk</div>
+
+<header class="top">
+  <div class="wrap nav">
+    <a class="brand" href="#top" aria-label="RDS Painting &amp; Decorating, home">
+      <img src="assets/logo.webp" alt="RDS paintbrush logo" width="56" height="56">
+      <span>RDS Painting &amp; Decorating<small>Southampton</small></span>
+    </a>
+    <nav aria-label="Main"><ul>
+      <li><a href="#services">Services</a></li>
+      <li><a href="#kitchens">Kitchens</a></li>
+      <li><a href="#gallery">Gallery</a></li>
+      <li><a href="#reviews">Reviews</a></li>
+      <li><a href="#areas">Areas</a></li>
+    </ul></nav>
+    <a class="btn" href="#quote">Get a free quote</a>
+  </div>
+</header>
+
+<main id="top">
+<div class="hero">
+  <div class="wrap hero-grid">
+    <div>
+      <p class="eyebrow">Painter &amp; decorator · Southampton</p>
+      <h1>Paintwork that earns <em>531 reviews</em> and keeps them.</h1>
+      <p class="lead">Careful interior and exterior decorating, plus hand-painted kitchens, from Richard Scott and the team. Tidy, dust-controlled and finished to a standard you can see in every edge.</p>
+      <div class="actions">
+        <a class="btn btn-primary" href="#quote">Get a free quote</a>
+        <a class="btn btn-ghost" href="#gallery">See recent work</a>
+      </div>
+    </div>
+    <figure class="hero-photo" style="margin:0">
+      <img src="assets/exterior.webp" alt="Period house with freshly painted white brickwork, windows and downpipes" width="1024" height="768">
+      <figcaption><b>Exterior repaint</b>Brickwork, sashes and rainwater goods</figcaption>
+    </figure>
+  </div>
+</div>
+
+<div class="proof">
+  <div class="wrap">
+    <ul>
+      <li><strong>9.92</strong><span>Checkatrade rating</span></li>
+      <li><strong>531</strong><span>reviews on Checkatrade</span></li>
+      <li><strong>2007</strong><span>Checkatrade member since</span></li>
+      <li><strong>£1,000</strong><span>guarantee · Buy With Confidence</span></li>
+    </ul>
+  </div>
+</div>
+
+<section id="services">
+  <div class="wrap">
+    <div class="sec-head">
+      <p class="eyebrow">What we paint</p>
+      <h2>Interior, exterior and everything in between</h2>
+      <p>From a single room to the whole outside of a house, the preparation is as careful as the finish.</p>
+    </div>
+    <div class="svc">
+      <article>
+        <h3>Interior decorating</h3>
+        <ul><li>Interior painting</li><li>Wallpapering</li><li>Dust-controlled sanding</li><li>Murals</li></ul>
+      </article>
+      <article>
+        <h3>Exterior &amp; timber</h3>
+        <ul><li>Exterior painting</li><li>Sash and wooden window painting</li><li>Timber resin repairs and restoration</li></ul>
+      </article>
+      <article>
+        <h3>Kitchens, furniture &amp; spraying</h3>
+        <ul><li>Hand-painted kitchens</li><li>Hand-painted furniture</li><li>Spraying</li></ul>
+      </article>
+    </div>
+  </div>
+</section>
+
+<section class="kitchens" id="kitchens">
+  <div class="wrap k-grid">
+    <div class="copy">
+      <p class="eyebrow">Hand-painted kitchens</p>
+      <h2>Keep the kitchen you have. Change how it looks.</h2>
+      <p>If your cabinets are sound but tired, a hand-painted finish can make them look new for far less upheaval than a replacement. Doors, drawers and frames are prepared properly, then painted by hand.</p>
+      <ul>
+        <li>Shaker, panelled and bespoke cabinets</li>
+        <li>Dust-controlled sanding to keep your home clean</li>
+        <li>Furniture and built-in units painted to match</li>
+      </ul>
+      <div><a class="btn btn-primary" href="#quote">Ask about your kitchen</a></div>
+    </div>
+    <div class="k-photos">
+      <img src="assets/kitchen-1.webp" alt="Hand-painted cream kitchen cabinets with black worktop and steel handles" loading="lazy" width="1024" height="1365">
+      <img src="assets/kitchen-2.webp" alt="Painted panelled kitchen base units with brushed steel handles" loading="lazy" width="1024" height="1040">
+    </div>
+  </div>
+</section>
+
+<section id="why">
+  <div class="wrap">
+    <div class="sec-head">
+      <p class="eyebrow">Why choose RDS</p>
+      <h2>Twenty years of getting the details right</h2>
+    </div>
+    <div class="why">
+      <div><h3>20+ years' experience</h3><p>Richard has been decorating Southampton homes for over two decades.</p></div>
+      <div><h3>Trading Standards approved</h3><p>A Buy With Confidence member, with a £1,000 guarantee on offer.</p></div>
+      <div><h3>Insured and checked</h3><p>Fully insured and DBS checked, as stated on the Checkatrade profile.</p></div>
+      <div><h3>Clean, careful working</h3><p>Dust-controlled sanding and tidy preparation, so your home is left as you'd want it.</p></div>
+    </div>
+  </div>
+</section>
+
+<section class="gallery" id="gallery">
+  <div class="wrap">
+    <div class="sec-head">
+      <p class="eyebrow">Recent work</p>
+      <h2>A closer look at the finish</h2>
+    </div>
+    <div class="g-grid">
+      <button type="button" data-src="assets/exterior.webp" data-alt="Period house with freshly painted white brickwork and windows"><img src="assets/exterior.webp" alt="Period house with freshly painted white brickwork and windows" loading="lazy"></button>
+      <button type="button" data-src="assets/kitchen-1.webp" data-alt="Hand-painted cream kitchen with black worktop"><img src="assets/kitchen-1.webp" alt="Hand-painted cream kitchen with black worktop" loading="lazy"></button>
+      <button type="button" data-src="assets/kitchen-2.webp" data-alt="Painted panelled kitchen base units"><img src="assets/kitchen-2.webp" alt="Painted panelled kitchen base units" loading="lazy"></button>
+    </div>
+    <p class="g-note">Tap a photo to enlarge. More job photos are on the Checkatrade profile.</p>
+  </div>
+</section>
+
+<section id="reviews">
+  <div class="wrap">
+    <div class="rev-top">
+      <div class="sec-head" style="margin:0"><p class="eyebrow">Customer reviews</p><h2>What customers say</h2></div>
+      <div class="score"><b>9.92</b><span>from 531 reviews on Checkatrade</span></div>
+    </div>
+    <div class="quotes">
+      <figure><blockquote>Reliable, trustworthy and excellent knowledge of work carried out. Fair pricing.</blockquote><figcaption>Customer review · Checkatrade · 21 Sep 2026</figcaption></figure>
+      <figure><blockquote>He consistently produces high quality work, his attention to detail is excellent</blockquote><figcaption>Customer review · Checkatrade · 19 Sep 2026</figcaption></figure>
+      <figure><blockquote>The work itself took four days and was carried out to a very high standard.</blockquote><figcaption>Customer review · Checkatrade · 23 Aug 2026</figcaption></figure>
+    </div>
+  </div>
+</section>
+
+<section class="areas" id="areas">
+  <div class="wrap">
+    <div class="sec-head">
+      <p class="eyebrow">Areas covered</p>
+      <h2>Based in Southampton, working across the area</h2>
+    </div>
+    <ul class="chips">
+      <li>Southampton</li><li>Winchester</li><li>Chandler's Ford</li><li>Hamble</li><li>New Forest</li><li>Warsash</li><li>Hedge End</li>
+    </ul>
+  </div>
+</section>
+
+<section class="contact" id="quote">
+  <div class="wrap c-grid">
+    <div class="copy">
+      <p class="eyebrow">Free quote</p>
+      <h2>Tell us about your project</h2>
+      <p>Send a few details and a photo or two of the room or house. Richard will come back to you with a clear quote.</p>
+      <p>Prefer to check us out first? Read the reviews on the <a href="https://www.checkatrade.com/trades/rdspaintinganddecorating" target="_blank" rel="noopener">Checkatrade profile</a>.</p>
+    </div>
+    <form id="qf" novalidate>
+      <div class="row">
+        <label for="n">Your name<input id="n" name="name" autocomplete="name" required></label>
+        <label for="p">Phone or email<input id="p" name="contact" autocomplete="tel" required></label>
+      </div>
+      <div class="row">
+        <label for="t">Type of work
+          <select id="t" name="type"><option>Interior painting</option><option>Exterior painting</option><option>Hand-painted kitchen</option><option>Wallpapering</option><option>Timber repair or restoration</option><option>Something else</option></select>
+        </label>
+        <label for="a">Area<input id="a" name="area" placeholder="e.g. Hedge End"></label>
+      </div>
+      <label for="d">About the job<textarea id="d" name="details"></textarea></label>
+      <label for="f">Photos <span class="hint">(optional)</span><input id="f" name="photos" type="file" accept="image/*" multiple></label>
+      <button class="btn btn-primary" type="submit">Request my free quote</button>
+      <div id="msg" class="ok" role="status" hidden>This is a preview — the form will go live with your new site.</div>
+    </form>
+  </div>
+</section>
+</main>
+
+<footer>
+  <div class="wrap">
+    <span>© RDS Painting &amp; Decorating · Southampton</span>
+    <span>Concept design by Itchen Studio. Preview only.</span>
+  </div>
+</footer>
+
+<dialog class="lb" id="lb" aria-label="Photo viewer"><button type="button" aria-label="Close photo" id="lbx">×</button><img id="lbi" alt=""></dialog>
+
+<script>
+document.getElementById('qf').addEventListener('submit',function(e){e.preventDefault();document.getElementById('msg').hidden=false;});
+var lb=document.getElementById('lb'),lbi=document.getElementById('lbi');
+document.querySelectorAll('.g-grid button').forEach(function(b){b.addEventListener('click',function(){lbi.src=b.dataset.src;lbi.alt=b.dataset.alt;lb.showModal();});});
+document.getElementById('lbx').addEventListener('click',function(){lb.close();});
+lb.addEventListener('click',function(e){if(e.target===lb)lb.close();});
+</script>
+</body>
+</html>
