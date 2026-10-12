@@ -1,0 +1,414 @@
+<!doctype html>
+<!--
+ART DIRECTION BRIEF — Amy's Beauty Cabin (Hedge End)
+Idea: a small, calm cabin with one therapist in it. The page borrows the gold rings from Amy's logo: they draw themselves, the circle opens like a door, and the one photo of her work fills the screen.
+Palette (from the logo): cream #fbf8f4, mist lilac-grey #e9e5ee, soft mint #86c8b3 / deep #2b6a58, brushed gold #b8963e / text gold #86681a, ink #2a2730, blush #f0d3cf (from the nails photo).
+Type: Cormorant (variable, light to semibold, with italics) for display; Jost for text; Kristi and Mrs Saint Delafield only inside the redrawn logo.
+Hero: headline set large across the page, with a round photo framed by the logo's gold rings (slowly turning) overlapping the end of the headline. Not a two-column split. Proof line along the bottom.
+Signature scroll moment: "The ring opens" — pinned scene. Three gold rings draw themselves, then the circle grows until the nails photo fills the screen and the line "Six treatments. One cabin." arrives. Phones get a self-playing, unpinned version.
+Interactive feature: one-screen booking prototype, built to beat Fresha's step-by-step flow: pick a treatment, pick one of the next 14 days, see the free times (some taken), add name and mobile, and watch a live summary build until a confirmation appears. Shows the "next free" time up front. Sends nothing.
+Headline shortlist: 1 Beauty in a garden cabin. / 2 Nails, massage and waxing, by Amy. / 3 One therapist. One cabin. / 4 A quiet cabin in Hedge End. / 5 Amy's cabin, Hedge End. / 6 Gel nails in a garden cabin. / 7 Treatments, one to one. / 8 Book a seat in the cabin. / 9 Pampering, without the queue. / 10 Calm, in a small cabin.
+Crossed out: 2 (list, not an idea), 3 (loses Hedge End), 5 (just the name), 7 and 9 (any salon), 8 (cute), 10 (vague).
+Pick: "Beauty in a garden cabin." — five plain words and only this business can say them.
+Missing from the lead document, so left out: her Fresha price list, treatment durations, opening hours, review texts. See the build summary.
+-->
+<html lang="en-GB">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<meta name="robots" content="noindex,nofollow">
+<title>Amy's Beauty Cabin · Hedge End</title>
+<meta name="description" content="A website concept for Amy's Beauty Cabin, Hedge End. Preview only.">
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Crect width='32' height='32' rx='16' fill='%23fbf8f4'/%3E%3Ccircle cx='16' cy='16' r='11' fill='none' stroke='%23b8963e' stroke-width='2'/%3E%3Ccircle cx='16' cy='16' r='6' fill='%2386c8b3'/%3E%3C/svg%3E">
+<link rel="preload" href="assets/fonts/cormorant.woff2" as="font" type="font/woff2" crossorigin>
+<link rel="preload" href="assets/fonts/jost.woff2" as="font" type="font/woff2" crossorigin>
+<script>(function(d){if(!matchMedia('(prefers-reduced-motion: reduce)').matches){d.documentElement.classList.add('motion');setTimeout(function(){if(!d.documentElement.classList.contains('ready'))d.documentElement.classList.remove('motion')},3000)}})(document)</script>
+<style>
+@font-face{font-family:"Cormorant";src:url("assets/fonts/cormorant.woff2") format("woff2");font-weight:300 700;font-style:normal;font-display:swap}
+@font-face{font-family:"Cormorant";src:url("assets/fonts/cormorant-italic.woff2") format("woff2");font-weight:300 700;font-style:italic;font-display:swap}
+@font-face{font-family:"Jost";src:url("assets/fonts/jost.woff2") format("woff2");font-weight:100 900;font-display:swap}
+@font-face{font-family:"Kristi";src:url("assets/fonts/kristi.woff2") format("woff2");font-display:swap}
+@font-face{font-family:"Saint";src:url("assets/fonts/script.woff2") format("woff2");font-display:swap}
+:root{
+  --cream:#fbf8f4; --mist:#e9e5ee; --lilac:#cfc9d6; --mint:#86c8b3; --mint-deep:#2b6a58; --gold:#b8963e; --gold-text:#86681a; --ink:#2a2730; --muted:#625d68; --blush:#f0d3cf;
+  --display:"Cormorant",Georgia,serif; --body:"Jost",system-ui,sans-serif; --ease:cubic-bezier(.2,.8,.2,1);
+}
+*{box-sizing:border-box}
+html.lenis,html.lenis body{height:auto}
+body{margin:0;background:var(--cream);color:var(--ink);font:400 17px/1.65 var(--body);-webkit-font-smoothing:antialiased;overflow-x:clip}
+img{max-width:100%;display:block}
+p{margin:0}
+.wrap{max-width:1280px;margin:0 auto;padding-inline:36px}
+@media (max-width:640px){.wrap{padding-inline:18px}}
+.serif{font-family:var(--display);font-weight:500;line-height:.95;letter-spacing:-.01em;margin:0}
+.serif em{font-style:italic;font-weight:400}
+h2.serif{font-size:clamp(46px,6.6vw,100px)}
+h3{margin:0}
+.lbl{font:500 12.5px/1 var(--body);letter-spacing:.24em;text-transform:uppercase;color:var(--gold-text)}
+:focus-visible{outline:3px solid var(--mint-deep);outline-offset:3px;border-radius:3px}
+[hidden]{display:none!important}
+.btn{display:inline-flex;align-items:center;justify-content:center;gap:10px;min-height:52px;padding:0 30px;border-radius:99px;border:1.5px solid var(--ink);background:var(--ink);color:var(--cream);font:500 15px/1 var(--body);letter-spacing:.12em;text-transform:uppercase;text-decoration:none;cursor:pointer;transition:background-color .3s,color .3s,border-color .3s,transform .3s var(--ease)}
+.btn:hover{background:var(--mint-deep);border-color:var(--mint-deep);transform:translateY(-2px)}
+.btn.ghost{background:transparent;color:var(--ink)}
+.btn.ghost:hover{background:var(--ink);color:var(--cream);border-color:var(--ink)}
+.btn.mint{background:var(--mint);border-color:var(--mint);color:var(--ink)}
+.btn.mint:hover{background:var(--ink);border-color:var(--ink);color:var(--cream)}
+
+.concept{background:var(--ink);color:#cdc8d3;font-size:13px;line-height:18px;text-align:center;padding:8px 16px}
+.concept b{color:#fff;font-weight:500}
+
+.top{position:sticky;top:0;z-index:60;background:#fbf8f4ee;backdrop-filter:blur(10px);-webkit-backdrop-filter:blur(10px);border-bottom:1px solid #2a273014;transition:transform .5s var(--ease)}
+.top.away{transform:translateY(-100%)}
+.top .wrap{display:flex;align-items:center;justify-content:space-between;gap:20px;height:100px}
+.logo{display:block;color:var(--ink);text-decoration:none}
+.logo svg{height:66px;width:auto;display:block;overflow:visible}
+.top nav{display:flex;gap:34px}
+.top nav a{color:var(--ink);text-decoration:none;font:400 15px/1 var(--body);letter-spacing:.08em;padding:14px 0;border-bottom:1px solid transparent}
+.top nav a:hover{border-bottom-color:var(--gold)}
+.top .btn{min-height:46px;padding:0 24px;font-size:13.5px}
+@media (max-width:900px){.top nav{display:none}}
+
+/* logo animation: the rings turn very slowly */
+.rings{transform-box:fill-box;transform-origin:center}
+@media (prefers-reduced-motion:no-preference){.r1{animation:spin 90s linear infinite}.r2{animation:spin 120s linear infinite reverse}.r3{animation:spin 150s linear infinite}}
+@keyframes spin{to{transform:rotate(360deg)}}
+
+/* hero */
+.hero{position:relative;min-height:min(92vh,880px);display:flex;align-items:center;overflow:hidden;background:radial-gradient(70% 90% at 82% 40%,#e9e5ee 0%,#e9e5ee00 70%),var(--cream)}
+.hero .wrap{position:relative;width:100%;padding-block:70px 60px}
+.hero h1{font-size:clamp(60px,10.6vw,168px);max-width:8.2em;position:relative;z-index:2}
+.hero h1 .ln{display:block;overflow:hidden;padding-bottom:.1em;margin-bottom:-.1em}
+.hero h1 .ln>span{display:inline-block}
+.hero h1 em{color:var(--mint-deep)}
+.hero .lead{position:relative;z-index:2;font-size:clamp(17px,1.5vw,20px);max-width:27em;margin-top:30px;color:#47424d}
+.hero .ctas{position:relative;z-index:2;display:flex;flex-wrap:wrap;gap:12px;margin-top:30px}
+.orb{position:absolute;right:max(2vw,calc((100vw - 1280px)/2));top:50%;transform:translateY(-52%);width:min(40vw,560px);aspect-ratio:1;z-index:1}
+.orb .bg{position:absolute;inset:9%;border-radius:50%;overflow:hidden;box-shadow:0 40px 80px -40px #2a273066}
+.orb .bg img{width:100%;height:100%;object-fit:cover;object-position:60% 60%}
+.orb svg{position:absolute;inset:0;width:100%;height:100%;overflow:visible}
+.proof{position:relative;z-index:2;display:flex;flex-wrap:wrap;gap:8px 34px;margin-top:48px;padding-top:20px;border-top:1px solid #2a27302e;font-size:15px;color:#47424d;max-width:46em}
+.proof b{font:600 26px/1 var(--display);color:var(--ink);margin-right:8px}
+.proof span{display:inline-flex;align-items:baseline}
+.stars{color:var(--gold);letter-spacing:3px}
+html.motion:not(.ready) .hero h1 .ln>span{transform:translateY(105%)}
+html.motion:not(.ready) [data-intro]{opacity:0}
+@media (max-width:900px){.hero{flex-direction:column;align-items:stretch;min-height:0}.orb{position:relative;right:auto;top:auto;transform:none;width:min(80vw,380px);margin:26px auto 0;order:-1}.hero .wrap{padding-block:30px 50px}.proof{margin-top:34px}}
+
+/* treatments */
+.treat{padding-block:130px 90px}
+.sec-head{display:flex;justify-content:space-between;align-items:end;gap:32px;flex-wrap:wrap;margin-bottom:54px}
+.sec-head p.in{max-width:26em;color:var(--muted);font-size:18px}
+.tl{list-style:none;margin:0;padding:0;border-top:1px solid var(--ink)}
+.tl li{border-bottom:1px solid var(--ink)}
+.tl a{display:grid;grid-template-columns:70px 1fr minmax(0,1fr) 60px;align-items:center;gap:20px;padding:26px 0;color:inherit;text-decoration:none;transition:padding-left .5s var(--ease),background-color .4s}
+.tl a:hover,.tl a:focus-visible{padding-left:22px;background:var(--mist)}
+.tl .n{font:500 14px/1 var(--body);letter-spacing:.16em;color:var(--gold-text)}
+.tl .t{font:500 clamp(34px,5vw,74px)/1 var(--display);letter-spacing:-.01em}
+.tl .t em{font-weight:400}
+.tl .d{font-size:16px;color:var(--muted);max-width:26em}
+.tl .go{justify-self:end;width:50px;height:50px;border-radius:50%;border:1.5px solid var(--ink);display:grid;place-items:center;transition:background-color .3s,color .3s,transform .4s var(--ease)}
+.tl a:hover .go{background:var(--ink);color:var(--cream);transform:rotate(-45deg)}
+.tl .go svg{width:20px;height:20px}
+@media (max-width:860px){.treat{padding-block:84px 60px}.tl a{grid-template-columns:40px 1fr 44px;gap:12px;padding:22px 0}.tl .d{grid-column:2/3;grid-row:2;font-size:15px}.tl .go{grid-row:1/3;grid-column:3;width:42px;height:42px}}
+
+/* the ring opens */
+.scene{position:relative;background:var(--ink);color:var(--cream)}
+.scene-pin{position:relative;height:100vh;min-height:560px;overflow:hidden;display:grid;place-items:center}
+.reveal{position:absolute;inset:0;clip-path:circle(16vmin at 50% 50%);will-change:clip-path}
+.reveal img{width:100%;height:100%;object-fit:cover;object-position:60% 55%}
+.reveal::after{content:"";position:absolute;inset:0;background:linear-gradient(0deg,#2a2730e6 0%,#2a273066 45%,#2a273033 100%)}
+.rg{position:absolute;left:50%;top:50%;width:min(86vmin,760px);aspect-ratio:1;transform:translate(-50%,-50%);pointer-events:none}
+.rg svg{width:100%;height:100%;overflow:visible}
+.scene .copy{position:absolute;left:0;right:0;bottom:0;padding-block:0 9vh;text-align:center}
+.scene .copy h2{color:var(--cream);font-size:clamp(46px,8vw,128px)}
+.scene .copy h2 em{color:var(--mint)}
+.scene .copy .lbl{color:var(--mint);display:block;margin-bottom:18px}
+.scene .copy p{margin:20px auto 0;max-width:28em;color:#e6e1ea;font-size:18px}
+html:not(.motion) .reveal{clip-path:circle(150vmax at 50% 50%)}
+
+/* booking */
+.book{padding-block:130px 120px;background:var(--mist)}
+.book .wrap{display:grid;grid-template-columns:minmax(0,.8fr) minmax(0,1.3fr);gap:70px;align-items:start}
+.book .intro{font-size:18px;color:#47424d;margin-top:24px;max-width:24em}
+.book ul.pts{list-style:none;padding:0;margin:30px 0 0;display:grid;gap:12px;color:#47424d}
+.book ul.pts li{display:flex;gap:12px;align-items:flex-start;font-size:16px}
+.book ul.pts svg{width:20px;height:20px;flex:none;margin-top:3px;color:var(--mint-deep)}
+.panel{background:var(--cream);border-radius:18px;padding:32px;box-shadow:0 40px 70px -50px #2a273099;position:relative}
+.panel h3{font:500 32px/1 var(--display);margin-bottom:6px}
+.panel .sub{font-size:14.5px;color:var(--muted);margin-bottom:18px}
+.blk{padding-block:22px;border-top:1px solid #2a273018}
+.blk:first-of-type{border-top:0;padding-top:4px}
+.blk .k{display:flex;align-items:center;gap:10px;font:500 12.5px/1 var(--body);letter-spacing:.2em;text-transform:uppercase;color:var(--gold-text);margin-bottom:14px}
+.blk .k i{font-style:normal;display:grid;place-items:center;width:24px;height:24px;border-radius:50%;background:var(--ink);color:var(--cream);font-size:12px;letter-spacing:0}
+.chips{display:flex;flex-wrap:wrap;gap:10px}
+.chip{all:unset;box-sizing:border-box;cursor:pointer;padding:12px 18px;border:1.5px solid #2a273033;border-radius:99px;font:400 16px/1.1 var(--body);min-height:46px;display:inline-flex;align-items:center;background:#fff;transition:border-color .2s,background-color .2s,color .2s}
+.chip:hover{border-color:var(--mint-deep)}
+.chip[aria-pressed="true"]{background:var(--ink);color:var(--cream);border-color:var(--ink)}
+.chip:focus-visible,.dayb:focus-visible,.slot:focus-visible{outline:3px solid var(--mint-deep);outline-offset:2px}
+.nextfree{display:inline-flex;gap:8px;align-items:center;margin-bottom:12px;font-size:14.5px;color:var(--mint-deep);font-weight:500}
+.nextfree::before{content:"";width:9px;height:9px;border-radius:50%;background:var(--mint);box-shadow:0 0 0 4px #86c8b340}
+.dayrow{display:flex;gap:8px;overflow-x:auto;padding:4px 2px 12px;scroll-snap-type:x proximity;margin-inline:-2px}
+.dayb{all:unset;box-sizing:border-box;flex:none;scroll-snap-align:start;width:64px;padding:10px 0;text-align:center;border:1.5px solid #2a273026;border-radius:14px;cursor:pointer;background:#fff;display:grid;gap:3px;transition:border-color .2s,background-color .2s}
+.dayb small{font:500 11px/1 var(--body);letter-spacing:.14em;text-transform:uppercase;color:var(--muted)}
+.dayb b{font:600 28px/1 var(--display)}
+.dayb:hover{border-color:var(--mint-deep)}
+.dayb[aria-pressed="true"]{background:var(--ink);border-color:var(--ink);color:var(--cream)}
+.dayb[aria-pressed="true"] small{color:#cdc8d3}
+.slots h4{margin:14px 0 8px;font:500 12px/1 var(--body);letter-spacing:.18em;text-transform:uppercase;color:var(--muted)}
+.slotrow{display:grid;grid-template-columns:repeat(auto-fill,minmax(88px,1fr));gap:8px}
+.slot{all:unset;box-sizing:border-box;text-align:center;padding:12px 6px;border:1.5px solid #2a273026;border-radius:10px;cursor:pointer;font:500 16px/1 var(--body);min-height:46px;background:#fff;transition:border-color .2s,background-color .2s;font-variant-numeric:tabular-nums}
+.slot:hover{border-color:var(--mint-deep)}
+.slot[aria-pressed="true"]{background:var(--mint);border-color:var(--mint);color:var(--ink)}
+.slot[disabled]{opacity:.4;cursor:not-allowed;text-decoration:line-through;background:transparent}
+.eg{font-size:13.5px;color:var(--muted);margin-top:12px}
+.fld{display:grid;gap:6px;font:500 14px/1.2 var(--body);margin-bottom:14px}
+.fld input,.fld textarea{font:inherit;font-weight:400;font-size:17px;border:1.5px solid #2a273033;border-radius:10px;padding:14px 16px;background:#fff;color:var(--ink);width:100%}
+.fld input:focus,.fld textarea:focus{outline:none;border-color:var(--mint-deep)}
+.cols{display:grid;grid-template-columns:1fr 1fr;gap:12px}
+.sum{position:sticky;bottom:10px;margin:22px -10px 0;background:var(--ink);color:var(--cream);border-radius:14px;padding:16px 18px;display:flex;align-items:center;justify-content:space-between;gap:16px;flex-wrap:wrap;box-shadow:0 20px 30px -20px #2a2730}
+.sum .l{font-size:15px;line-height:1.35;min-width:0}
+.sum .l b{display:block;font:600 22px/1.1 var(--display)}
+.sum .l span{color:#cdc8d3}
+.sum .btn{min-height:48px}
+.sum .btn[disabled]{opacity:.45;cursor:not-allowed;transform:none}
+.done .ref{display:inline-block;font:600 24px/1 var(--display);letter-spacing:.12em;background:var(--blush);padding:12px 16px;border-radius:10px;margin:6px 0 18px}
+.done dl{display:grid;grid-template-columns:auto 1fr;gap:8px 22px;margin:0 0 20px}
+.done dt{color:var(--muted)}.done dd{margin:0;font-weight:500}
+.done .note{background:#e1f1ec;border-radius:10px;padding:14px 16px;font-size:15px;color:#1f4c3f}
+.done h3{font-size:clamp(36px,4vw,50px)}
+@media (max-width:960px){.book{padding-block:84px}.book .wrap{grid-template-columns:minmax(0,1fr);gap:40px}}
+@media (max-width:520px){.panel{padding:22px 16px}.cols{grid-template-columns:1fr}.sum{margin-inline:-6px}}
+
+/* rating */
+.rate{padding-block:120px;text-align:center;overflow:hidden}
+.rate .big{font:500 clamp(150px,26vw,380px)/.8 var(--display);letter-spacing:-.03em;color:var(--ink);font-variant-numeric:lining-nums}
+.rate .big em{font-weight:400;color:var(--mint-deep)}
+.rate .st{font-size:clamp(26px,3vw,40px);color:var(--gold);letter-spacing:.3em;margin-top:26px}
+.rate p.t{font:400 clamp(24px,2.6vw,36px)/1.25 var(--display);max-width:22em;margin:22px auto 0}
+.rate .btn{margin-top:34px}
+@media (max-width:620px){.rate{padding-block:84px}}
+
+/* find */
+.find{background:var(--blush);padding-block:100px}
+.find .wrap{display:grid;grid-template-columns:minmax(0,1fr) minmax(0,1fr);gap:60px;align-items:center}
+.find p.t{font-size:19px;max-width:26em;margin-top:22px;color:#443d44}
+.find address{font:500 clamp(30px,3.6vw,48px)/1.1 var(--display);font-style:normal}
+.find address small{display:block;font:400 15px/1.5 var(--body);color:#443d44;margin-top:12px;letter-spacing:.04em}
+@media (max-width:860px){.find{padding-block:70px}.find .wrap{grid-template-columns:1fr;gap:30px}}
+
+.foot{background:var(--ink);color:var(--cream);padding-block:80px 34px}
+.foot .row{display:grid;grid-template-columns:minmax(0,1.2fr) repeat(2,minmax(0,1fr));gap:48px}
+.foot .logo{color:var(--cream)}
+.foot .logo{--lg-wash:0;--lg-sub:#e6e1ea;--lg-amy:#86c8b3}
+.foot h4{margin:0 0 16px;font:500 12.5px/1 var(--body);letter-spacing:.22em;text-transform:uppercase;color:var(--mint)}
+.foot p,.foot li{color:#d8d3de;font-size:16px}
+.foot ul{list-style:none;margin:0;padding:0;display:grid;gap:8px}
+.foot a{color:#fff;text-underline-offset:3px}
+.foot .fine{display:flex;justify-content:space-between;flex-wrap:wrap;gap:14px;border-top:1px solid #ffffff26;margin-top:56px;padding-top:20px;font-size:14px;color:#b9b3c0}
+@media (max-width:860px){.foot .row{grid-template-columns:1fr;gap:30px}}
+.callbar{display:none}
+@media (max-width:700px){.callbar{display:flex;position:fixed;left:0;right:0;bottom:0;z-index:55;padding:10px 16px calc(10px + env(safe-area-inset-bottom,0px));background:#fbf8f4f2;backdrop-filter:blur(8px);border-top:1px solid #2a273018}.callbar .btn{width:100%}body{padding-bottom:74px}}
+@media (prefers-reduced-motion:reduce){*{transition:none!important;animation:none!important}}
+</style>
+</head>
+<body>
+<div class="concept" role="note">Website concept for <b>Amy's Beauty Cabin</b> — preview only, not the live site. Designed by Itchen Studio · sam@itchenstudio.co.uk</div>
+
+<svg width="0" height="0" style="position:absolute" aria-hidden="true" focusable="false">
+  <defs>
+    <radialGradient id="wash" cx="50%" cy="50%" r="50%"><stop offset="0" stop-color="#cfc9d6" stop-opacity=".95"/><stop offset=".7" stop-color="#d9d4df" stop-opacity=".7"/><stop offset="1" stop-color="#e9e5ee" stop-opacity="0"/></radialGradient>
+    <filter id="soft" x="-20%" y="-20%" width="140%" height="140%"><feTurbulence type="fractalNoise" baseFrequency=".012" numOctaves="2" seed="4" result="n"/><feDisplacementMap in="SourceGraphic" in2="n" scale="26"/><feGaussianBlur stdDeviation="6"/></filter>
+  </defs>
+  <symbol id="logo" viewBox="0 0 400 300">
+    <ellipse class="wash" cx="205" cy="150" rx="140" ry="100" fill="url(#wash)" filter="url(#soft)" style="opacity:var(--lg-wash,.7)"/>
+    <g fill="none" stroke="#b8963e" stroke-width="1.3">
+      <g class="rings r1"><ellipse cx="200" cy="150" rx="118" ry="116" transform="rotate(-18 200 150)"/></g>
+      <g class="rings r2"><ellipse cx="204" cy="152" rx="112" ry="119" transform="rotate(24 200 150)"/></g>
+      <g class="rings r3"><ellipse cx="198" cy="148" rx="121" ry="112" transform="rotate(70 200 150)"/></g>
+    </g>
+    <g fill="#b8963e"><circle cx="82" cy="104" r="2.4"/><circle cx="96" cy="212" r="2"/><circle cx="318" cy="92" r="2.6"/><circle cx="300" cy="226" r="2"/><circle cx="268" cy="262" r="1.8"/><circle cx="130" cy="256" r="2.2"/><circle cx="330" cy="150" r="1.6"/><circle cx="64" cy="160" r="1.6"/><circle cx="150" cy="38" r="2"/><circle cx="244" cy="30" r="1.6"/><circle cx="352" cy="190" r="1.4"/><circle cx="52" cy="128" r="1.4"/></g>
+    <text x="200" y="152" text-anchor="middle" font-family="Kristi, cursive" font-size="118" style="fill:var(--lg-amy,#4fae96)">Amy's</text>
+    <g stroke="#7a7480" stroke-width="1"><path d="M84 194h22"/><path d="M294 194h22"/></g>
+    <text x="200" y="204" text-anchor="middle" font-family="Saint, cursive" font-size="38" style="fill:var(--lg-sub,#2f2b35)">Beauty Cabin</text>
+  </symbol>
+</svg>
+
+<header class="top">
+  <div class="wrap">
+    <a class="logo" href="#top" aria-label="Amy's Beauty Cabin, home"><svg viewBox="20 0 360 300" role="img" aria-hidden="true" style="width:132px;height:auto"><use href="#logo"/></svg></a>
+    <nav aria-label="Main"><a href="#treatments">Treatments</a><a href="#ring">The cabin</a><a href="#book">Book</a><a href="#find">Find us</a></nav>
+    <a class="btn" href="#book">Book a visit</a>
+  </div>
+</header>
+
+<main id="top">
+<section class="hero" aria-labelledby="h1">
+  <div class="wrap">
+    <p class="lbl" data-intro style="margin-bottom:22px">Hedge End · One therapist, one cabin</p>
+    <h1 class="serif" id="h1"><span class="ln"><span>Beauty in a</span></span><span class="ln"><span><em>garden cabin.</em></span></span></h1>
+    <p class="lead" data-intro>Amy works alone, so every appointment is just you and her. Structure gel manicures, pedicures, massage, eye treatments, waxing and Hopi ear candles.</p>
+    <div class="ctas" data-intro><a class="btn" href="#book">Book a visit</a><a class="btn ghost" href="#treatments">See treatments</a></div>
+    <p class="proof" data-intro><span><b>5.0</b><span class="stars" aria-hidden="true">★★★★★</span></span><span><b>837</b> reviews on Fresha</span><span>Hedge End, SO30</span></p>
+  </div>
+  <div class="orb" aria-hidden="true">
+    <div class="bg"><img src="assets/img/nails-1100.webp" srcset="assets/img/nails-1100.webp 1100w, assets/img/nails-2000.webp 2000w" sizes="44vw" alt=""></div>
+    <svg viewBox="0 0 400 400"><g fill="none" stroke="#b8963e" stroke-width="1.2"><g class="rings r1"><ellipse cx="200" cy="200" rx="188" ry="184" transform="rotate(-18 200 200)"/></g><g class="rings r2"><ellipse cx="202" cy="201" rx="181" ry="190" transform="rotate(24 200 200)"/></g><g class="rings r3"><ellipse cx="199" cy="199" rx="192" ry="180" transform="rotate(70 200 200)"/></g></g><g fill="#b8963e"><circle cx="30" cy="110" r="3"/><circle cx="372" cy="90" r="3.4"/><circle cx="350" cy="320" r="2.6"/><circle cx="70" cy="350" r="2.8"/><circle cx="210" cy="8" r="2.4"/><circle cx="388" cy="210" r="2"/></g></svg>
+  </div>
+</section>
+
+<section class="treat" id="treatments" aria-labelledby="tr-t">
+  <div class="wrap">
+    <div class="sec-head"><div><p class="lbl" data-reveal>Treatments</p><h2 class="serif" id="tr-t" data-split style="margin-top:18px">Six things,<br><em>done slowly.</em></h2></div><p class="in" data-reveal>Choose one and it carries straight into the booking below.</p></div>
+    <ul class="tl">
+      <li data-reveal><a href="#book" data-svc="Structure gel manicure"><span class="n">01</span><span class="t">Structure gel <em>manicures</em></span><span class="d">A gel overlay that gives the natural nail extra strength and a smooth, glossy finish.</span><span class="go"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12h14M13 6l6 6-6 6"/></svg></span></a></li>
+      <li data-reveal><a href="#book" data-svc="Pedicure"><span class="n">02</span><span class="t">Pedicures</span><span class="d">Feet looked after from toes to heels, finished with polish if you want it.</span><span class="go"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12h14M13 6l6 6-6 6"/></svg></span></a></li>
+      <li data-reveal><a href="#book" data-svc="Massage"><span class="n">03</span><span class="t">Massage</span><span class="d">An hour of quiet in the cabin. Tell Amy where you hold the tension.</span><span class="go"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12h14M13 6l6 6-6 6"/></svg></span></a></li>
+      <li data-reveal><a href="#book" data-svc="Eye treatment"><span class="n">04</span><span class="t">Eye <em>treatments</em></span><span class="d">Careful, close-up work around the eyes.</span><span class="go"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12h14M13 6l6 6-6 6"/></svg></span></a></li>
+      <li data-reveal><a href="#book" data-svc="Waxing"><span class="n">05</span><span class="t">Waxing</span><span class="d">Quick, tidy and done in comfort, with no one else in the room.</span><span class="go"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12h14M13 6l6 6-6 6"/></svg></span></a></li>
+      <li data-reveal><a href="#book" data-svc="Hopi ear candles"><span class="n">06</span><span class="t">Hopi <em>ear candles</em></span><span class="d">A gentle, warm and relaxing treatment.</span><span class="go"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12h14M13 6l6 6-6 6"/></svg></span></a></li>
+    </ul>
+  </div>
+</section>
+
+<section class="scene" id="ring" aria-labelledby="ring-t">
+  <div class="scene-pin">
+    <div class="reveal" id="reveal"><img src="assets/img/nails-2000.webp" srcset="assets/img/nails-1100.webp 1100w, assets/img/nails-2000.webp 2000w" sizes="100vw" alt="Hands with soft pink almond nails and a diagonal band of rose-gold glitter at each tip" loading="lazy"></div>
+    <div class="rg" aria-hidden="true"><svg viewBox="0 0 400 400"><g fill="none" stroke="#b8963e" stroke-width="1.6"><ellipse id="g1" cx="200" cy="200" rx="188" ry="184" transform="rotate(-18 200 200)"/><ellipse id="g2" cx="202" cy="201" rx="181" ry="190" transform="rotate(24 200 200)"/><ellipse id="g3" cx="199" cy="199" rx="192" ry="180" transform="rotate(70 200 200)"/></g></svg></div>
+    <div class="copy wrap">
+      <span class="lbl">The cabin</span>
+      <h2 class="serif" id="ring-t">Six treatments. <em>One cabin.</em></h2>
+      <p>One therapist and a door that closes. Come in, sit down and leave the rest outside.</p>
+    </div>
+  </div>
+</section>
+
+<section class="book" id="book" aria-labelledby="bk-t">
+  <div class="wrap">
+    <div>
+      <p class="lbl" data-reveal>Book a visit</p>
+      <h2 class="serif" id="bk-t" data-split style="margin-top:18px">Pick, tap,<br><em>done.</em></h2>
+      <p class="intro" data-reveal>One screen, no accounts, no steps to click through. Choose a treatment and a time, leave your number, and the summary builds as you go.</p>
+      <ul class="pts" data-reveal>
+        <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M4 12l5 5L20 6"/></svg>See the next free time before you choose a day</li>
+        <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M4 12l5 5L20 6"/></svg>Taken times are crossed out, not hidden</li>
+        <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M4 12l5 5L20 6"/></svg>A live summary and reference at the end</li>
+      </ul>
+    </div>
+    <div class="panel" id="panel">
+      <div id="bk-form">
+        <h3>Your visit</h3>
+        <p class="sub">Three quick choices.</p>
+        <div class="blk"><p class="k"><i>1</i>Treatment</p><div class="chips" id="chips" role="group" aria-label="Treatment"></div></div>
+        <div class="blk"><p class="k"><i>2</i>Day and time</p><p class="nextfree" id="nextfree"></p><div class="dayrow" id="days" role="group" aria-label="Day"></div><div class="slots" id="slots"></div><p class="eg">Example availability. The live site will show Amy's real diary.</p></div>
+        <div class="blk"><p class="k"><i>3</i>Your details</p><div class="cols"><label class="fld">Name<input id="f-n" autocomplete="name" required></label><label class="fld">Mobile<input id="f-p" type="tel" autocomplete="tel" required></label></div><label class="fld">Anything Amy should know? <textarea id="f-x" rows="2" placeholder="Allergies, a design you like, anything else"></textarea></label></div>
+        <div class="sum" aria-live="polite"><div class="l" id="sumtxt"></div><button type="button" class="btn mint" id="confirm" disabled>Confirm booking</button></div>
+      </div>
+      <div class="done" id="done" hidden role="status"></div>
+    </div>
+  </div>
+</section>
+
+<section class="rate" aria-labelledby="rt-t">
+  <div class="wrap">
+    <p class="lbl" data-reveal>On Fresha</p>
+    <div class="big" aria-hidden="true">5<em>.0</em></div>
+    <p class="st" aria-hidden="true">★★★★★</p>
+    <p class="t" id="rt-t" data-reveal>837 five-star reviews, from one therapist and one small cabin.</p>
+    <a class="btn" href="#book">Book a visit</a>
+  </div>
+</section>
+
+<section class="find" id="find" aria-labelledby="fd-t">
+  <div class="wrap">
+    <div><p class="lbl" data-reveal>Find the cabin</p><h2 class="serif" id="fd-t" data-split style="margin-top:18px;font-size:clamp(44px,6vw,88px)">In <em>Hedge End.</em></h2><p class="t" data-reveal>A short drive from Southampton, with the booking details sent once you have chosen your time.</p></div>
+    <address data-reveal>Waters Edge, Hedge End<small>SO30 4AE · Appointments only</small></address>
+  </div>
+</section>
+</main>
+
+<footer class="foot">
+  <div class="wrap">
+    <div class="row">
+      <div><a class="logo" href="#top" aria-label="Amy's Beauty Cabin, back to top"><svg viewBox="20 0 360 300" aria-hidden="true" style="width:260px;height:auto"><use href="#logo"/></svg></a><p style="margin-top:14px;max-width:24em">Beauty therapist in a garden cabin, Hedge End.</p></div>
+      <div><h4>Treatments</h4><ul><li>Structure gel manicures</li><li>Pedicures</li><li>Massage</li><li>Eye treatments</li><li>Waxing</li><li>Hopi ear candles</li></ul></div>
+      <div><h4>Book</h4><p><a href="#book">Book a visit online</a></p><p style="margin-top:8px">Waters Edge, Hedge End, SO30 4AE</p></div>
+    </div>
+    <div class="fine"><span>© 2026 Amy's Beauty Cabin</span><span>Concept by <a href="https://itchenstudio.co.uk">Itchen Studio</a></span></div>
+  </div>
+</footer>
+<div class="callbar"><a class="btn" href="#book">Book a visit</a></div>
+
+<script src="assets/js/gsap.min.js" defer></script>
+<script src="assets/js/ScrollTrigger.min.js" defer></script>
+<script src="assets/js/lenis.min.js" defer></script>
+<script src="assets/js/concept.js" defer></script>
+<script>
+document.addEventListener('DOMContentLoaded', function () {
+  var api = window.ConceptSite.init();
+
+  /* ---------- the ring opens ---------- */
+  var reveal = document.getElementById('reveal'), g = ['g1', 'g2', 'g3'].map(function (i) { return document.getElementById(i); });
+  var lens = g.map(function (e) { var l = e.getTotalLength(); e.style.strokeDasharray = l; return l; });
+  var copy = document.querySelector('.scene .copy'), rgEl = document.querySelector('.rg');
+  function clamp(v) { return Math.max(0, Math.min(1, v)); }
+  function render(p) {
+    g.forEach(function (e, i) { e.style.strokeDashoffset = lens[i] * (1 - clamp(p / .4 - i * .12)); });
+    var r = clamp((p - .25) / .6), e = r * r * (3 - 2 * r);
+    reveal.style.clipPath = 'circle(' + (16 + e * 110).toFixed(1) + 'vmax at 50% 50%)';
+    copy.style.opacity = clamp((p - .72) / .2); copy.style.transform = 'translateY(' + ((1 - clamp((p - .72) / .2)) * 30).toFixed(1) + 'px)';
+    rgEl.style.opacity = 1 - clamp((p - .6) / .3);
+    rgEl.style.transform = 'translate(-50%,-50%) scale(' + (1 + e * .5).toFixed(3) + ')';
+  }
+  if (api.motion) render(0); else { render(1); rgEl.style.opacity = 0; }
+
+  /* ---------- booking prototype ---------- */
+  var SVC = ['Structure gel manicure', 'Pedicure', 'Massage', 'Eye treatment', 'Waxing', 'Hopi ear candles'];
+  var TIMES = [['Morning', ['09:00', '10:00', '11:00']], ['Afternoon', ['12:30', '13:30', '14:30', '15:30']], ['Evening', ['16:30', '17:30']]];
+  var DN = ['Sun', 'Mon', 'Tue', 'Wed', 'Thu', 'Fri', 'Sat'], MN = ['Jan', 'Feb', 'Mar', 'Apr', 'May', 'Jun', 'Jul', 'Aug', 'Sep', 'Oct', 'Nov', 'Dec'];
+  var DAYS = []; (function () { var d = new Date(); for (var i = 1; DAYS.length < 14; i++) DAYS.push(new Date(d.getFullYear(), d.getMonth(), d.getDate() + i)); })();
+  function taken(di, t) { var n = t.charCodeAt(0) + t.charCodeAt(1) * 3 + t.charCodeAt(3); return ((di * 5 + n) % 3) === 0 || (DAYS[di].getDay() === 0 && n % 2); }
+  var S = { svc: null, day: 0, time: null };
+  var chips = document.getElementById('chips'), daysEl = document.getElementById('days'), slotsEl = document.getElementById('slots'), nf = document.getElementById('nextfree'), sumtxt = document.getElementById('sumtxt'), conf = document.getElementById('confirm');
+  function label(d) { return DN[d.getDay()] + ' ' + d.getDate() + ' ' + MN[d.getMonth()]; }
+  function esc(s) { return String(s).replace(/[&<>"]/g, function (c) { return { '&': '&amp;', '<': '&lt;', '>': '&gt;', '"': '&quot;' }[c]; }); }
+  function drawChips() { chips.innerHTML = SVC.map(function (s, i) { return '<button type="button" class="chip" data-s="' + i + '" aria-pressed="' + (S.svc === i) + '">' + s + '</button>'; }).join(''); }
+  function drawDays() { daysEl.innerHTML = DAYS.map(function (d, i) { return '<button type="button" class="dayb" data-d="' + i + '" aria-pressed="' + (S.day === i) + '"><small>' + DN[d.getDay()] + '</small><b>' + d.getDate() + '</b><small>' + MN[d.getMonth()] + '</small></button>'; }).join(''); }
+  function drawSlots() {
+    slotsEl.innerHTML = TIMES.map(function (g) { return '<h4>' + g[0] + '</h4><div class="slotrow">' + g[1].map(function (t) { var tk = taken(S.day, t); return '<button type="button" class="slot" data-t="' + t + '" aria-pressed="' + (S.time === t) + '"' + (tk ? ' disabled aria-label="' + t + ', taken"' : '') + '>' + t + '</button>'; }).join('') + '</div>'; }).join('');
+  }
+  function nextFree() { for (var i = 0; i < DAYS.length; i++) for (var j = 0; j < TIMES.length; j++) for (var k = 0; k < TIMES[j][1].length; k++) if (!taken(i, TIMES[j][1][k])) return { d: i, t: TIMES[j][1][k] }; return null; }
+  function sum() {
+    var ok = S.svc !== null && S.time;
+    sumtxt.innerHTML = ok ? '<b>' + SVC[S.svc] + '</b><span>' + label(DAYS[S.day]) + ' at ' + S.time + '</span>' : '<b>Nothing chosen yet</b><span>Pick a treatment and a time</span>';
+    conf.disabled = !ok;
+  }
+  var nx = nextFree(); nf.textContent = nx ? 'Next free: ' + label(DAYS[nx.d]) + ' at ' + nx.t : '';
+  drawChips(); drawDays(); drawSlots(); sum();
+  chips.addEventListener('click', function (e) { var b = e.target.closest('button'); if (!b) return; S.svc = +b.dataset.s; chips.querySelectorAll('.chip').forEach(function (x) { x.setAttribute('aria-pressed', String(+x.dataset.s === S.svc)); }); sum(); });
+  daysEl.addEventListener('click', function (e) { var b = e.target.closest('button'); if (!b) return; S.day = +b.dataset.d; S.time = null; daysEl.querySelectorAll('.dayb').forEach(function (x) { x.setAttribute('aria-pressed', String(+x.dataset.d === S.day)); }); drawSlots(); sum(); });
+  slotsEl.addEventListener('click', function (e) { var b = e.target.closest('button'); if (!b || b.disabled) return; S.time = b.dataset.t; slotsEl.querySelectorAll('.slot').forEach(function (x) { x.setAttribute('aria-pressed', String(x.dataset.t === S.time)); }); sum(); });
+  document.querySelectorAll('[data-svc]').forEach(function (a) { a.addEventListener('click', function () { S.svc = SVC.indexOf(a.dataset.svc); drawChips(); sum(); }); });
+  conf.addEventListener('click', function () {
+    var n = document.getElementById('f-n'), p = document.getElementById('f-p'), bad = null;
+    [n, p].forEach(function (x) { var ok = x.value.trim() !== ''; x.style.borderColor = ok ? '' : '#b3261e'; x.setAttribute('aria-invalid', String(!ok)); if (!ok && !bad) bad = x; });
+    if (bad) { bad.focus(); return; }
+    var ref = 'AB-' + (4000 + Math.floor(Math.random() * 5000)), done = document.getElementById('done');
+    done.innerHTML = '<p class="lbl">Booking received</p><h3 class="serif" id="done-h" tabindex="-1" style="margin:14px 0 6px">Thank you, ' + esc(n.value.trim().split(' ')[0]) + '.</h3><span class="ref">' + ref + '</span><dl><dt>Treatment</dt><dd>' + SVC[S.svc] + '</dd><dt>When</dt><dd>' + label(DAYS[S.day]) + ' at ' + S.time + '</dd><dt>Mobile</dt><dd>' + esc(p.value) + '</dd></dl><p class="note">This is a preview — the form will go live with your new site. Nothing has been sent.</p><p style="margin-top:20px"><button type="button" class="btn ghost" id="again">Book another</button></p>';
+    document.getElementById('bk-form').hidden = true; done.hidden = false; document.getElementById('done-h').focus({ preventScroll: true });
+    document.getElementById('again').addEventListener('click', function () { S = { svc: null, day: 0, time: null }; n.value = p.value = document.getElementById('f-x').value = ''; drawChips(); drawDays(); drawSlots(); sum(); done.hidden = true; document.getElementById('bk-form').hidden = false; });
+  });
+
+  if (!api.motion) return;
+  var mm = gsap.matchMedia();
+  mm.add('(min-width: 701px)', function () {
+    var o = { p: 0 }; render(0);
+    gsap.to(o, { p: 1, ease: 'none', onUpdate: function () { render(o.p); }, scrollTrigger: { trigger: '.scene', start: 'top top', end: '+=2200', pin: '.scene-pin', scrub: .6, anticipatePin: 1 } });
+  });
+  mm.add('(max-width: 700px)', function () {
+    var o = { p: 0 }; render(0);
+    ScrollTrigger.create({ trigger: '.scene', start: 'top 60%', once: true, onEnter: function () { gsap.to(o, { p: 1, duration: 4.5, ease: 'power1.inOut', onUpdate: function () { render(o.p); } }); } });
+  });
+});
+</script>
+</body>
+</html>
