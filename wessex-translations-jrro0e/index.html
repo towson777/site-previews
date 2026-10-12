@@ -1,0 +1,914 @@
+<!doctype html>
+<!--
+ART DIRECTION · Wessex Translations (concept by Itchen Studio)
+
+The idea: translation means "carrying across". Every moving part of the page shows an original
+becoming a translation, the way Wessex has done it since 1972: carefully, in any language, with
+the layout and the meaning intact.
+
+Palette (from wt-lm.com): navy #13253A / #1B2E46, Wessex blue #017DB2, signal orange #F5A623,
+mist #EEF3F7, ink #1B2E46. Orange is used as a mark (proof marks, highlights, the lens), never as text on white.
+Type: Fraunces (display, optical size 144) with Figtree (text, a close cousin of their Proxima Nova),
+IBM Plex Mono for labels; Noto Sans Arabic for the Arabic samples.
+Hero: full-bleed photo of their Michelmersh office (the speech-bubble sign), navy overlay, their headline
+set big. A speech-bubble lens (their logo mark) follows the cursor and reads the headline in French,
+German, Spanish or Arabic. On touch it drifts by itself; tap to change language.
+Signature scroll moment: a pinned, scrubbed wipe. A typeset leaflet turns from English into French,
+German and then right-to-left Arabic with the layout unchanged (their typesetting service).
+Feature: a four-step quote request (service, languages and subject, files and deadline, details)
+ending on a confirmation. Sends nothing.
+Detail: orange proofreading marks draw themselves under key words, a nod to their QC team.
+Headline: their own, "Quality language solutions for over 50 years". All copy is taken from wt-lm.com;
+the leaflet text, quote reference and file names are illustrative.
+
+WORDPRESS: built as a custom theme. Every section below maps to an editable block or ACF field group:
+hero (eyebrow, headline, lead, buttons, photo), proof strip (repeater), intro + stats (repeater),
+services (repeater, links to service pages), typesetting scene (languages repeater: label, title,
+warning, steps), specialisms (repeater: title, text, list), team (photos, text, names repeater from the
+Team post type), quality (text, badges repeater), testimonials (Testimonial post type), blog (latest
+3 posts, automatic), quote form (Gravity Forms / WPForms styled to match), contact (site options).
+-->
+<html lang="en-GB">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="robots" content="noindex,nofollow">
+<title>Wessex Translations · Quality language solutions for over 50 years</title>
+<meta name="description" content="Website concept for Wessex Translations. Preview only.">
+<script>(function(d){if(!matchMedia('(prefers-reduced-motion: reduce)').matches){d.documentElement.classList.add('motion');setTimeout(function(){if(!d.documentElement.classList.contains('ready'))d.documentElement.classList.remove('motion')},3000)}})(document)</script>
+<link rel="preload" href="assets/fonts/fraunces.woff2" as="font" type="font/woff2" crossorigin>
+<link rel="preload" href="assets/fonts/figtree.woff2" as="font" type="font/woff2" crossorigin>
+<style>
+@font-face{font-family:'Fraunces';src:url(assets/fonts/fraunces.woff2) format('woff2');font-weight:100 900;font-style:normal;font-display:swap}
+@font-face{font-family:'Fraunces';src:url(assets/fonts/fraunces-italic.woff2) format('woff2');font-weight:100 900;font-style:italic;font-display:swap}
+@font-face{font-family:'Figtree';src:url(assets/fonts/figtree.woff2) format('woff2');font-weight:300 900;font-style:normal;font-display:swap}
+@font-face{font-family:'Plex Mono';src:url(assets/fonts/plex-mono-500.woff2) format('woff2');font-weight:500;font-display:swap}
+@font-face{font-family:'Noto Sans Arabic';src:url(assets/fonts/noto-sans-arabic.woff2) format('woff2');font-weight:100 900;font-display:swap;unicode-range:U+0600-06FF,U+0750-077F,U+0870-08FF,U+FB50-FDFF,U+FE70-FEFF}
+
+:root{
+  --navy:#13253A;--navy-2:#1B2E46;--navy-3:#25486B;--blue:#017DB2;--blue-d:#01628C;--blue-l:#7CC4E6;
+  --orange:#F5A623;--orange-d:#C47A00;--mist:#EEF3F7;--mist-2:#E2ECF3;--line:#D5DFE8;--ink:#13253A;--text:#2E3F52;--muted:#53667A;
+  --serif:'Fraunces','Noto Sans Arabic',Georgia,serif;--sans:'Figtree','Noto Sans Arabic',system-ui,-apple-system,'Segoe UI',sans-serif;--mono:'Plex Mono',ui-monospace,Menlo,monospace;
+  --wrap:1280px;--pad:clamp(20px,4vw,56px);--ease:cubic-bezier(.2,.8,.2,1)
+}
+*{box-sizing:border-box}
+html{-webkit-text-size-adjust:100%}
+body{margin:0;background:#fff;color:var(--text);font-family:var(--sans);font-size:17px;line-height:1.6;-webkit-font-smoothing:antialiased;overflow-x:hidden}
+img{display:block;max-width:100%}
+a{color:var(--blue);text-underline-offset:3px}
+a:hover{color:var(--blue-d)}
+h1,h2,h3,h4{font-family:var(--serif);font-weight:400;color:var(--ink);margin:0;font-variation-settings:'opsz' 144;letter-spacing:-0.02em;text-wrap:balance}
+p{margin:0}
+:focus-visible{outline:3px solid var(--orange);outline-offset:3px;border-radius:4px}
+.wrap{max-width:var(--wrap);margin:0 auto;padding-inline:var(--pad)}
+.sr{position:absolute;width:1px;height:1px;overflow:hidden;clip:rect(0 0 0 0);white-space:nowrap}
+.label{font-family:var(--mono)!important;font-size:12px!important;line-height:1.4!important;letter-spacing:.16em;text-transform:uppercase;color:var(--blue-d)!important;display:inline-flex;align-items:center;gap:10px;margin-top:0!important}
+.label::before{content:"";width:22px;height:2px;background:var(--orange)}
+.on-dark .label{color:var(--blue-l)!important}
+.btn{display:inline-flex;align-items:center;gap:10px;min-height:52px;padding:0 26px;border-radius:999px;font-weight:600;font-size:16px;text-decoration:none;transition:background .3s var(--ease),color .3s var(--ease),transform .3s var(--ease),box-shadow .3s var(--ease);cursor:pointer;border:0;font-family:var(--sans)}
+.btn svg{width:18px;height:18px;transition:transform .35s var(--ease)}
+.btn:hover svg{transform:translateX(4px)}
+.btn-primary{background:var(--blue);color:#fff}
+.btn-primary:hover{background:var(--blue-d);color:#fff}
+.btn-orange{background:var(--orange);color:var(--navy)}
+.btn-orange:hover{background:#FFBA45;color:var(--navy)}
+.btn-ghost{background:transparent;color:#fff;box-shadow:inset 0 0 0 1.5px rgba(255,255,255,.45)}
+.btn-ghost:hover{color:#fff;box-shadow:inset 0 0 0 1.5px #fff}
+.btn-line{background:transparent;color:var(--ink);box-shadow:inset 0 0 0 1.5px var(--line)}
+.btn-line:hover{color:var(--ink);box-shadow:inset 0 0 0 1.5px var(--ink)}
+
+/* preview banner */
+.preview{background:#0B1726;color:#C9D6E3;font-size:13px;text-align:center;padding:8px var(--pad);line-height:1.4}
+.preview b{color:#fff;font-weight:600}
+.preview a{color:var(--orange)}
+
+/* header */
+.top{position:sticky;top:0;z-index:50;background:rgba(19,37,58,.92);-webkit-backdrop-filter:saturate(1.4) blur(14px);backdrop-filter:saturate(1.4) blur(14px);border-bottom:1px solid rgba(255,255,255,.08);transition:transform .5s var(--ease)}
+.top.away{transform:translateY(-100%)}
+.top .wrap{display:flex;align-items:center;gap:28px;height:76px}
+.brand{display:block;color:#fff;flex:none}
+.brand svg{display:block;width:154px;height:47px;fill:currentColor}
+.nav{display:flex;gap:28px;margin-left:auto}
+.nav a{color:#DCE6EF;text-decoration:none;font-size:15px;font-weight:500;position:relative;padding:6px 0}
+.nav a::after{content:"";position:absolute;left:0;right:0;bottom:0;height:2px;background:var(--orange);transform:scaleX(0);transform-origin:right;transition:transform .4s var(--ease)}
+.nav a:hover{color:#fff}
+.nav a:hover::after{transform:scaleX(1);transform-origin:left}
+.tools{display:flex;align-items:center;gap:14px}
+.lang-fr{font-family:var(--mono);font-size:12px;letter-spacing:.1em;color:#DCE6EF;text-decoration:none;min-width:44px;min-height:44px;display:inline-flex;align-items:center;justify-content:center;border-radius:999px;box-shadow:inset 0 0 0 1px rgba(255,255,255,.25)}
+.lang-fr:hover{color:#fff;box-shadow:inset 0 0 0 1px #fff}
+.tel{color:#fff;text-decoration:none;font-weight:600;font-size:15px;display:inline-flex;align-items:center;gap:8px;white-space:nowrap}
+.tel:hover{color:var(--orange)}
+.tel svg{width:16px;height:16px}
+.top .btn{min-height:44px;padding:0 20px;font-size:15px}
+.menu-btn{display:none;width:44px;height:44px;border-radius:999px;border:0;background:rgba(255,255,255,.08);color:#fff;align-items:center;justify-content:center;cursor:pointer}
+.menu-btn svg{width:20px;height:20px}
+.mnav{display:none}
+
+/* hero */
+.hero{position:relative;min-height:calc(100svh - 110px);min-height:max(680px,calc(100svh - 110px));color:#fff;overflow:hidden;background:var(--navy);display:flex;isolation:isolate;cursor:default}
+.hero .bg{position:absolute;inset:0;z-index:-2;overflow:hidden}
+.hero .bg img{width:100%;height:118%;object-fit:cover;object-position:28% 70%}
+.hero .shade{position:absolute;inset:0;z-index:-1;background:linear-gradient(180deg,rgba(19,37,58,.94) 0%,rgba(19,37,58,.82) 42%,rgba(19,37,58,.42) 78%,rgba(19,37,58,.62) 100%),linear-gradient(90deg,rgba(19,37,58,.55),rgba(19,37,58,0) 70%)}
+.hero-in{position:relative;width:100%;max-width:var(--wrap);margin:0 auto;padding:clamp(72px,11vh,128px) var(--pad) 56px;display:flex;flex-direction:column}
+.eyebrow{font-family:var(--mono);font-size:12px;letter-spacing:.18em;text-transform:uppercase;color:#BFD3E4;display:flex;flex-wrap:wrap;gap:6px 14px}
+.eyebrow span+span::before{content:"·";margin-right:14px;color:var(--orange)}
+.hero h1{color:#fff;font-size:clamp(50px,7.7vw,122px);line-height:.94;letter-spacing:-0.03em;margin-top:28px;max-width:11.5em}
+.hero h1 .ln{display:block;overflow:hidden;padding-bottom:.08em;margin-bottom:-.08em}
+.hero h1 .ln>span{display:inline-block}
+.hero h1 em{font-style:italic;color:var(--orange);font-weight:350}
+.hero-row{margin-top:auto;padding-top:48px;display:flex;flex-wrap:wrap;align-items:flex-end;justify-content:space-between;gap:32px}
+.hero .lead{font-size:clamp(17px,1.4vw,20px);line-height:1.55;color:#DCE6EF;max-width:520px}
+.hero-ctas{display:flex;flex-wrap:wrap;gap:12px;margin-top:26px}
+.hint{display:flex;align-items:center;gap:10px;max-width:250px;line-height:1.5;font-family:var(--mono);font-size:12px;letter-spacing:.08em;color:#BFD3E4}
+.hint svg{width:22px;height:22px;fill:var(--orange);flex:none}
+.hint .t-touch{display:none}
+.stamp{position:relative;width:148px;height:148px;flex:none}
+.stamp svg.ring{position:absolute;inset:0;width:100%;height:100%;animation:spin 28s linear infinite}
+.stamp svg.ring text{font-family:var(--mono);font-size:9.6px;fill:#DCE6EF}
+.stamp .mk{position:absolute;left:30%;top:29%;width:40%;height:41%;fill:var(--orange)}
+.stamp .yr{position:absolute;inset:0;display:flex;align-items:center;justify-content:center;font-family:var(--serif);font-size:15px;color:var(--navy);padding-bottom:5px;font-weight:600}
+@keyframes spin{to{transform:rotate(360deg)}}
+
+/* the lens */
+.lens{position:absolute;inset:0;z-index:3;background:var(--orange);color:var(--navy);pointer-events:none;-webkit-mask-image:url(assets/img/bubble.svg);mask-image:url(assets/img/bubble.svg);-webkit-mask-repeat:no-repeat;mask-repeat:no-repeat;-webkit-mask-size:0 0;mask-size:0 0;-webkit-mask-position:-999px -999px;mask-position:-999px -999px}
+.lens .hero-in{height:100%}
+.lens .eyebrow{color:var(--navy)}
+.lens .eyebrow span+span::before{color:var(--navy)}
+.lens h1{color:var(--navy)}
+.lens h1 em{color:#fff}
+.lens .tr{display:none}
+.lens .tr.on{display:block}
+.lens .tr[dir=rtl] h1{font-family:'Noto Sans Arabic',sans-serif;font-weight:600;letter-spacing:0;line-height:1.15;font-size:clamp(44px,6.6vw,108px)}
+.lens .tag{position:absolute;left:0;top:0;font-family:var(--mono);font-size:11px;letter-spacing:.14em;text-transform:uppercase;background:var(--navy);color:#fff;padding:5px 10px;border-radius:999px;white-space:nowrap;will-change:transform}
+html:not(.motion) .lens{display:none}
+
+/* proof strip */
+.proof{background:#fff;border-bottom:1px solid var(--line)}
+.proof .wrap{display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:0}
+.proof .it{padding:26px 24px;display:flex;align-items:center;gap:16px;border-left:1px solid var(--line)}
+.proof .it:first-child{border-left:0;padding-left:0}
+.proof .it b{font-family:var(--serif);font-weight:400;font-size:34px;line-height:1;color:var(--ink);letter-spacing:-0.02em;flex:none}
+.proof .it span{font-size:14px;line-height:1.4;color:var(--muted)}
+.proof img{height:46px;width:auto}
+
+/* proof marks */
+.pm{position:relative;white-space:nowrap}
+.pm svg{position:absolute;left:-4%;width:108%;bottom:-.16em;height:.42em;overflow:visible;pointer-events:none}
+.pm path{fill:none;stroke:var(--orange);stroke-width:5;stroke-linecap:round;stroke-linejoin:round;vector-effect:non-scaling-stroke}
+.pm.circle svg{left:-8%;width:116%;top:-14%;height:128%;bottom:auto}
+
+/* intro */
+.intro{padding:clamp(88px,12vw,160px) 0 clamp(72px,9vw,120px)}
+.intro .grid{display:grid;grid-template-columns:minmax(0,7fr) minmax(0,5fr);gap:clamp(40px,6vw,96px);align-items:start}
+.intro h2{font-size:clamp(38px,4.6vw,70px);line-height:1.02;margin-top:22px}
+.intro .copy{padding-top:58px}
+.intro .copy p{font-size:19px;line-height:1.65;color:var(--text)}
+.intro .ctas{display:flex;flex-wrap:wrap;gap:12px;margin-top:30px}
+.intro .photo{margin-top:clamp(48px,6vw,80px);display:grid;grid-template-columns:minmax(0,5fr) minmax(0,7fr);gap:clamp(24px,4vw,56px);align-items:end}
+.frame{position:relative;overflow:hidden;border-radius:18px;background:var(--mist)}
+.frame img{width:100%;height:116%;object-fit:cover}
+.intro .frame{aspect-ratio:4/5}
+.stats{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:0;border-top:1px solid var(--line)}
+.stat{padding:30px 0 28px;border-bottom:1px solid var(--line)}
+.stat:nth-child(odd){padding-right:28px;border-right:1px solid var(--line)}
+.stat:nth-child(even){padding-left:28px}
+.stat .n{font-family:var(--serif);font-size:clamp(46px,5vw,76px);line-height:1;color:var(--ink);letter-spacing:-0.03em;display:flex;align-items:baseline;gap:4px}
+.stat .n small{font-size:.42em;color:var(--blue);letter-spacing:0;font-family:var(--sans);font-weight:600}
+.stat p{margin-top:12px;font-size:15px;line-height:1.5;color:var(--muted);max-width:30ch}
+
+/* services */
+.services{background:var(--mist);padding:clamp(88px,11vw,150px) 0}
+.sv-head{display:grid;grid-template-columns:minmax(0,7fr) minmax(0,5fr);gap:40px;align-items:end}
+.sv-head h2{font-size:clamp(38px,4.6vw,70px);line-height:1.02;margin-top:22px}
+.sv-head p{font-size:19px;color:var(--text)}
+.sv-list{list-style:none;margin:clamp(48px,6vw,80px) 0 0;padding:0;border-top:1px solid #C3D1DD}
+.sv{position:relative;border-bottom:1px solid #C3D1DD;isolation:isolate}
+.sv a{display:grid;grid-template-columns:80px minmax(0,5fr) minmax(0,5fr) 64px;gap:28px;align-items:center;padding:34px 24px;text-decoration:none;color:inherit}
+.sv::before{content:"";position:absolute;inset:0;z-index:-1;background:var(--navy);clip-path:inset(0 100% 0 0);transition:clip-path .7s var(--ease)}
+.sv:hover::before,.sv:focus-within::before{clip-path:inset(0 0 0 0)}
+.sv .no{font-family:var(--mono);font-size:13px;color:var(--blue-d);transition:color .5s}
+.sv h3{font-size:clamp(32px,3.4vw,52px);line-height:1;transition:color .5s var(--ease),transform .7s var(--ease)}
+.sv p{font-size:16px;line-height:1.55;color:var(--text);transition:color .5s}
+.sv .go{width:56px;height:56px;border-radius:50%;display:flex;align-items:center;justify-content:center;box-shadow:inset 0 0 0 1.5px #A8BBCC;color:var(--ink);transition:background .5s,color .5s,box-shadow .5s,transform .7s var(--ease)}
+.sv .go svg{width:20px;height:20px}
+.sv:hover h3,.sv:focus-within h3{color:#fff;transform:translateX(10px)}
+.sv:hover p,.sv:focus-within p{color:#C9D6E3}
+.sv:hover .no,.sv:focus-within .no{color:var(--orange)}
+.sv:hover .go,.sv:focus-within .go{background:var(--orange);color:var(--navy);box-shadow:none;transform:rotate(-45deg)}
+.sv a:focus-visible{outline-offset:-3px}
+
+/* typesetting scene */
+.scene{background:var(--navy);color:#fff;position:relative;overflow:hidden}
+.scene-in{max-width:var(--wrap);margin:0 auto;padding:clamp(80px,9vh,110px) var(--pad);min-height:100vh;display:grid;grid-template-columns:minmax(0,5fr) minmax(0,6fr);gap:clamp(40px,6vw,96px);align-items:center}
+.scene h2{color:#fff;font-size:clamp(36px,3.8vw,58px);line-height:1.04;margin-top:22px}
+.scene .lede{margin-top:22px;color:#C9D6E3;font-size:17px;line-height:1.65;max-width:520px}
+.langs{list-style:none;margin:34px 0 0;padding:0;border-top:1px solid rgba(255,255,255,.14);max-width:520px}
+.langs li{border-bottom:1px solid rgba(255,255,255,.14)}
+.langs button{width:100%;display:grid;grid-template-columns:52px 1fr auto;align-items:center;gap:16px;padding:14px 0;min-height:56px;background:none;border:0;color:#8FA6BC;font:inherit;text-align:left;cursor:pointer;transition:color .4s var(--ease)}
+.langs .code{font-family:var(--mono);font-size:12px;letter-spacing:.14em;color:#8AA2B9;transition:color .4s}
+.langs .nm{font-family:var(--serif);font-size:24px;letter-spacing:-0.01em}
+.langs .nt{font-family:var(--mono);font-size:11px;letter-spacing:.12em;text-transform:uppercase;color:#8AA2B9}
+.langs .bar{grid-column:1/-1;height:2px;background:rgba(255,255,255,.08);position:relative;overflow:hidden;margin-top:2px}
+.langs .bar i{position:absolute;inset:0;background:var(--orange);transform:scaleX(0);transform-origin:left}
+.langs button:hover{color:#DCE6EF}
+.langs button[aria-pressed=true]{color:#fff}
+.langs button[aria-pressed=true] .code{color:var(--orange)}
+.langs button[aria-pressed=true] .nt{color:#BFD3E4}
+.scene .small{margin-top:18px;font-size:13px;color:#8FA6BC}
+.stage{position:relative;width:min(100%,560px);justify-self:center;aspect-ratio:4/5}
+.stage::before{content:"";position:absolute;inset:6% -6% -5% 6%;border-radius:20px;background:rgba(255,255,255,.04);transform:rotate(2.5deg)}
+.doc{position:absolute;inset:0;border-radius:16px;overflow:hidden;box-shadow:0 30px 80px rgba(0,0,0,.35),0 2px 6px rgba(0,0,0,.2)}
+.page{position:absolute;inset:0;background:#fff;color:var(--ink);padding:clamp(22px,7%,40px);display:flex;flex-direction:column;gap:clamp(10px,2.4%,16px);font-family:var(--sans)}
+.page[dir=rtl]{font-family:'Noto Sans Arabic',sans-serif}
+.page .ph{display:flex;justify-content:space-between;align-items:center;font-family:var(--mono);font-size:11px;letter-spacing:.14em;text-transform:uppercase;color:var(--muted);padding-bottom:10px;border-bottom:2px solid var(--orange)}
+.page[dir=rtl] .ph{font-family:'Noto Sans Arabic',sans-serif;letter-spacing:0;font-size:13px}
+.page .ttl{font-family:var(--serif);font-size:clamp(26px,3vw,38px);line-height:1.05;letter-spacing:-0.02em;color:var(--ink)}
+.page[dir=rtl] .ttl{font-family:'Noto Sans Arabic',sans-serif;font-weight:700;letter-spacing:0;line-height:1.3}
+.page .warn{display:flex;gap:12px;align-items:center;background:#FFF4DF;border-radius:10px;padding:10px 14px;font-size:14px;line-height:1.35}
+.page .warn svg{width:28px;height:28px;flex:none}
+.page .warn b{display:block;font-size:11px;letter-spacing:.14em;text-transform:uppercase;color:#8A5600}
+.page[dir=rtl] .warn b{letter-spacing:0;font-size:13px}
+.page .fig{flex:1 1 auto;min-height:0;display:flex;align-items:center;justify-content:center;background:var(--mist);border-radius:10px}
+.page .fig svg{height:78%;width:auto;max-width:90%}
+.page ol{margin:0;padding:0;list-style:none;display:grid;gap:8px}
+.page li{display:flex;gap:10px;align-items:baseline;font-size:clamp(13px,1.15vw,15px);line-height:1.4}
+.page li span:first-child{flex:none;width:22px;height:22px;border-radius:50%;background:var(--navy);color:#fff;font-family:var(--mono);font-size:11px;display:inline-flex;align-items:center;justify-content:center;transform:translateY(-1px)}
+.page .keep{font-size:13px;font-style:italic;color:var(--muted)}
+.page[dir=rtl] .keep{font-style:normal}
+.page .pf{display:flex;justify-content:space-between;font-family:var(--mono);font-size:11px;color:var(--muted);border-top:1px solid var(--line);padding-top:10px}
+.divider{position:absolute;top:-14px;bottom:-14px;left:0;width:2px;background:var(--orange);opacity:0;pointer-events:none;z-index:5;will-change:transform}
+.divider b{position:absolute;top:50%;left:50%;transform:translate(-50%,-50%);font-family:var(--mono);font-size:11px;letter-spacing:.12em;background:var(--orange);color:var(--navy);padding:7px 10px;border-radius:999px;white-space:nowrap}
+
+/* specialisms */
+.spec{padding:clamp(88px,11vw,150px) 0}
+.spec-head{max-width:760px}
+.spec-head h2{font-size:clamp(38px,4.6vw,70px);line-height:1.02;margin-top:22px}
+.spec-head p{margin-top:20px;font-size:19px}
+.tabs{margin-top:clamp(40px,5vw,64px);display:grid;grid-template-columns:minmax(0,4fr) minmax(0,8fr);gap:clamp(28px,5vw,80px);align-items:start}
+.tablist{display:flex;flex-direction:column;border-top:1px solid var(--line)}
+.tablist button{display:flex;align-items:center;justify-content:space-between;gap:12px;min-height:64px;padding:12px 4px;background:none;border:0;border-bottom:1px solid var(--line);font:inherit;font-family:var(--serif);font-size:24px;letter-spacing:-0.01em;color:#7B8EA1;text-align:left;cursor:pointer;transition:color .3s,padding .4s var(--ease)}
+.tablist button::after{content:"";width:10px;height:10px;border-radius:50%;background:var(--orange);transform:scale(0);transition:transform .4s var(--ease);flex:none}
+.tablist button:hover{color:var(--ink)}
+.tablist button[aria-selected=true]{color:var(--ink);padding-left:14px}
+.tablist button[aria-selected=true]::after{transform:scale(1)}
+.panel{background:var(--mist);border-radius:20px;padding:clamp(28px,4vw,52px)}
+.panel[hidden]{display:none}
+.panel h3{font-size:clamp(30px,3vw,44px);line-height:1.05}
+.panel p{margin-top:18px;font-size:17px;line-height:1.65}
+.panel h4{font-family:var(--mono);font-size:12px;letter-spacing:.14em;text-transform:uppercase;color:var(--blue-d);margin-top:30px;font-weight:500}
+.panel ul{margin:14px 0 0;padding:0;list-style:none;columns:2;column-gap:32px}
+.panel li{break-inside:avoid;padding:9px 0 9px 22px;border-bottom:1px solid #D2DDE7;font-size:15px;line-height:1.4;position:relative}
+.panel li::before{content:"";position:absolute;left:2px;top:15px;width:8px;height:8px;border-radius:2px;background:var(--orange)}
+.panel.anim{animation:pin .6s var(--ease)}
+@keyframes pin{from{opacity:0;transform:translateY(14px)}to{opacity:1;transform:none}}
+
+/* team */
+.team{background:var(--mist);padding:clamp(88px,11vw,150px) 0 0;overflow:hidden}
+.team .grid{display:grid;grid-template-columns:minmax(0,7fr) minmax(0,5fr);gap:clamp(40px,6vw,96px);align-items:center}
+.collage{position:relative;padding-bottom:12%}
+.collage .a{aspect-ratio:1200/884}
+.collage .b{position:absolute;width:44%;right:-4%;bottom:0;aspect-ratio:620/413;border:6px solid var(--mist);border-radius:20px}
+.team h2{font-size:clamp(38px,4.6vw,70px);line-height:1.02;margin-top:22px}
+.team .copy p{margin-top:22px;font-size:18px;line-height:1.65}
+.team .copy .btn{margin-top:30px}
+.names{margin-top:clamp(64px,8vw,110px);border-top:1px solid #C3D1DD;border-bottom:1px solid #C3D1DD;overflow:hidden;padding:22px 0;background:#fff}
+.names .track{display:flex;width:max-content;gap:0;will-change:transform}
+.names .p{display:flex;align-items:baseline;gap:12px;padding:0 34px;white-space:nowrap;border-right:1px solid var(--line)}
+.names .p b{font-family:var(--serif);font-weight:400;font-size:26px;color:var(--ink);letter-spacing:-0.01em}
+.names .p span{font-family:var(--mono);font-size:11px;letter-spacing:.12em;text-transform:uppercase;color:var(--muted)}
+
+/* quality */
+.quality{position:relative;background:var(--navy);color:#fff;overflow:hidden;isolation:isolate}
+.quality .bgimg{position:absolute;inset:0;z-index:-2}
+.quality .bgimg img{width:100%;height:116%;object-fit:cover;object-position:75% 50%}
+.quality .shade{position:absolute;inset:0;z-index:-1;background:linear-gradient(90deg,rgba(19,37,58,.97) 0%,rgba(19,37,58,.9) 42%,rgba(19,37,58,.25) 72%,rgba(19,37,58,.05) 100%)}
+.quality .wrap{padding-block:clamp(96px,12vw,170px)}
+.quality .copy{max-width:600px}
+.quality h2{color:#fff;font-size:clamp(42px,5.4vw,84px);line-height:1;margin-top:22px}
+.quality p{margin-top:22px;color:#C9D6E3;font-size:18px;line-height:1.65}
+.quality p strong{color:#fff;font-weight:600}
+.badges{display:flex;flex-wrap:wrap;gap:14px;margin-top:40px}
+.badge{background:#fff;border-radius:14px;padding:12px 16px;display:flex;align-items:center}
+.badge img{height:78px;width:auto}
+.iso{margin-top:44px;padding-top:28px;border-top:1px solid rgba(255,255,255,.16);max-width:600px}
+.iso h3{color:#fff;font-size:26px}
+.iso p{font-size:16px;margin-top:10px}
+
+/* testimonials */
+.voices{background:#fff;padding:clamp(88px,11vw,150px) 0 clamp(72px,9vw,120px);overflow:hidden}
+.voices .head{display:grid;grid-template-columns:minmax(0,7fr) minmax(0,5fr);gap:40px;align-items:end}
+.voices h2{font-size:clamp(36px,4.2vw,64px);line-height:1.04;margin-top:22px}
+.voices .head p{font-size:18px}
+.rv{margin-top:clamp(40px,5vw,64px);display:flex;flex-direction:column;gap:20px}
+.rv-row{display:flex;width:max-content;gap:20px;will-change:transform}
+.q{width:min(460px,82vw);flex:none;background:var(--mist);border-radius:20px;padding:30px 30px 26px;display:flex;flex-direction:column;gap:18px}
+.q svg{width:30px;height:24px;fill:var(--orange)}
+.q blockquote{margin:0;font-family:var(--serif);font-size:20px;line-height:1.4;color:var(--ink);letter-spacing:-0.005em}
+.q cite{font-style:normal;font-family:var(--mono);font-size:11px;letter-spacing:.12em;text-transform:uppercase;color:var(--muted);margin-top:auto}
+
+/* blog */
+.blog{background:var(--mist);padding:clamp(88px,11vw,140px) 0}
+.blog .head{display:flex;justify-content:space-between;align-items:end;gap:24px;flex-wrap:wrap}
+.blog h2{font-size:clamp(36px,4.2vw,64px);line-height:1.04;margin-top:22px}
+.posts{margin-top:44px;display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:20px}
+.post{background:#fff;border-radius:18px;padding:28px;display:flex;flex-direction:column;gap:14px;text-decoration:none;color:inherit;min-height:280px;transition:transform .5s var(--ease),box-shadow .5s var(--ease)}
+.post:hover{transform:translateY(-6px);box-shadow:0 22px 50px rgba(19,37,58,.12);color:inherit}
+.post time{font-family:var(--mono);font-size:12px;letter-spacing:.12em;text-transform:uppercase;color:var(--blue-d)}
+.post h3{font-size:26px;line-height:1.15}
+.post p{font-size:15px;color:var(--muted)}
+.post .more{margin-top:auto;font-weight:600;color:var(--blue);display:inline-flex;gap:8px;align-items:center}
+.post .more svg{width:16px;height:16px;transition:transform .35s var(--ease)}
+.post:hover .more svg{transform:translateX(4px)}
+
+/* quote */
+.quote{padding:clamp(88px,11vw,150px) 0}
+.quote .grid{display:grid;grid-template-columns:minmax(0,5fr) minmax(0,7fr);gap:clamp(40px,6vw,96px);align-items:start}
+.quote h2{font-size:clamp(36px,4.2vw,62px);line-height:1.04;margin-top:22px}
+.quote .copy>p{margin-top:20px;font-size:19px}
+.direct{margin-top:36px;display:grid;gap:0;border-top:1px solid var(--line)}
+.direct a,.direct div{display:flex;justify-content:space-between;align-items:baseline;gap:16px;padding:16px 0;border-bottom:1px solid var(--line);text-decoration:none;color:var(--ink)}
+.direct span{font-family:var(--mono);font-size:11px;letter-spacing:.12em;text-transform:uppercase;color:var(--muted)}
+.direct b{font-weight:600;font-size:17px}
+.direct a:hover b{color:var(--blue)}
+.wiz{background:#fff;border-radius:24px;box-shadow:0 1px 2px rgba(19,37,58,.06),0 30px 70px rgba(19,37,58,.12);padding:clamp(24px,3.5vw,44px);border:1px solid var(--line)}
+.steps-bar{display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:8px}
+.steps-bar div{display:flex;flex-direction:column;gap:8px;font-family:var(--mono);font-size:11px;letter-spacing:.1em;text-transform:uppercase;color:#5F7286}
+.steps-bar i{height:4px;border-radius:4px;background:var(--mist-2);overflow:hidden;position:relative}
+.steps-bar i::after{content:"";position:absolute;inset:0;background:var(--blue);transform:scaleX(0);transform-origin:left;transition:transform .6s var(--ease)}
+.steps-bar .done i::after,.steps-bar .cur i::after{transform:scaleX(1)}
+.steps-bar .cur{color:var(--ink)}
+.wiz fieldset{border:0;margin:30px 0 0;padding:0;min-width:0}
+.wiz fieldset[hidden]{display:none}
+.wiz legend{font-family:var(--serif);font-size:30px;color:var(--ink);letter-spacing:-0.01em;padding:0;line-height:1.1}
+.wiz .sub{margin-top:8px;font-size:15px;color:var(--muted)}
+.opts{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:12px;margin-top:22px}
+.opt{position:relative}
+.opt input{position:absolute;opacity:0;inset:0;width:100%;height:100%;margin:0;cursor:pointer}
+.opt span{display:flex;flex-direction:column;gap:4px;padding:18px 18px;border-radius:14px;box-shadow:inset 0 0 0 1.5px var(--line);transition:box-shadow .25s,background .25s;min-height:84px}
+.opt b{font-family:var(--serif);font-weight:400;font-size:21px;color:var(--ink)}
+.opt small{font-size:13px;color:var(--muted);line-height:1.35}
+.opt input:checked+span{box-shadow:inset 0 0 0 2px var(--blue);background:#F2F9FC}
+.opt input:focus-visible+span{outline:3px solid var(--orange);outline-offset:2px}
+.opt:hover span{box-shadow:inset 0 0 0 1.5px #9FB3C6}
+.field{display:flex;flex-direction:column;gap:7px;margin-top:20px;font-size:14px;font-weight:600;color:var(--ink)}
+.field em{font-style:normal;font-weight:500;color:var(--muted);font-size:13px}
+.field input,.field select,.field textarea{font:400 16px/1.4 var(--sans);color:var(--ink);background:#fff;border:1.5px solid #C3D1DD;border-radius:12px;padding:13px 14px;width:100%;min-height:50px}
+.field textarea{resize:vertical;min-height:96px}
+.field input:focus,.field select:focus,.field textarea:focus{outline:none;border-color:var(--blue);box-shadow:0 0 0 4px rgba(1,125,178,.14)}
+.field [aria-invalid=true]{border-color:#B3261E}
+.row2{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:0 16px}
+.chips{display:flex;flex-wrap:wrap;gap:8px;margin-top:4px}
+.chip{position:relative}
+.chip input{position:absolute;opacity:0;inset:0;margin:0;cursor:pointer;width:100%;height:100%}
+.chip span{display:inline-flex;align-items:center;min-height:44px;padding:0 16px;border-radius:999px;box-shadow:inset 0 0 0 1.5px var(--line);font-size:15px;font-weight:500;color:var(--ink);transition:background .25s,box-shadow .25s,color .25s}
+.chip input:checked+span{background:var(--navy);color:#fff;box-shadow:none}
+.chip input:focus-visible+span{outline:3px solid var(--orange);outline-offset:2px}
+.drop{margin-top:22px;border:2px dashed #B4C5D5;border-radius:16px;padding:26px;text-align:center;background:#F8FAFC;position:relative;transition:border-color .25s,background .25s}
+.drop:hover{border-color:var(--blue);background:#F2F9FC}
+.drop input{position:absolute;inset:0;opacity:0;cursor:pointer;width:100%}
+.drop b{display:block;font-family:var(--serif);font-weight:400;font-size:22px;color:var(--ink)}
+.drop span{font-size:14px;color:var(--muted)}
+.drop:focus-within{outline:3px solid var(--orange);outline-offset:2px}
+.files{list-style:none;margin:12px 0 0;padding:0;display:grid;gap:6px}
+.files li{display:flex;justify-content:space-between;gap:12px;background:var(--mist);border-radius:10px;padding:10px 14px;font-size:14px}
+.files li span{color:var(--muted);font-family:var(--mono);font-size:12px}
+.note{margin-top:12px;font-size:13px;color:var(--muted)}
+.wiz-nav{display:flex;justify-content:space-between;align-items:center;gap:12px;margin-top:32px;padding-top:24px;border-top:1px solid var(--line)}
+.wiz-nav[hidden]{display:none}
+.wiz-nav .back{background:none;border:0;font:600 15px var(--sans);color:var(--muted);cursor:pointer;min-height:44px;padding:0 6px}
+.wiz-nav .back:hover{color:var(--ink)}
+.wiz-nav .back[hidden]{visibility:hidden;display:block}
+.err{color:#B3261E;font-size:14px;margin-top:14px;min-height:1em}
+.done{text-align:center;padding:24px 0 8px}
+.done[hidden]{display:none}
+.done .tick{width:76px;height:76px;margin:0 auto;border-radius:50%;background:var(--mist);display:flex;align-items:center;justify-content:center}
+.done .tick svg{width:36px;height:36px;stroke:var(--blue);fill:none;stroke-width:2.5;stroke-linecap:round;stroke-linejoin:round}
+.done h3{font-size:36px;margin-top:20px}
+.done p{margin-top:12px;font-size:16px;color:var(--text)}
+.done .ref{display:inline-block;margin-top:18px;font-family:var(--mono);font-size:14px;letter-spacing:.1em;background:var(--mist);padding:8px 14px;border-radius:999px;color:var(--ink)}
+.done .pv{margin-top:18px;font-size:13px;color:var(--muted)}
+
+/* contact + footer */
+.contact{background:var(--navy);color:#C9D6E3;padding:clamp(88px,11vw,140px) 0 0}
+.contact h2{color:#fff;font-size:clamp(46px,6vw,96px);line-height:.98}
+.contact .lede{margin-top:22px;font-size:19px;max-width:560px}
+.cgrid{margin-top:clamp(48px,6vw,72px);display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:0;border-top:1px solid rgba(255,255,255,.14)}
+.cgrid>*{padding:28px 28px 30px 0;border-bottom:1px solid rgba(255,255,255,.14)}
+.cgrid>*+*{padding-left:28px;border-left:1px solid rgba(255,255,255,.14)}
+.cgrid span{display:block;font-family:var(--mono);font-size:11px;letter-spacing:.14em;text-transform:uppercase;color:#8FA6BC}
+.cgrid a{display:inline-block;margin-top:10px;color:#fff;font-family:var(--serif);font-size:clamp(24px,2.4vw,34px);text-decoration:none;letter-spacing:-0.01em}
+.cgrid a:hover{color:var(--orange)}
+.where{display:grid;grid-template-columns:minmax(0,6fr) minmax(0,6fr);gap:clamp(32px,5vw,80px);padding:44px 0 56px}
+.where p{font-size:16px;line-height:1.65}
+.where address{font-style:normal;color:#fff;font-size:17px;line-height:1.6}
+.where a{color:var(--orange)}
+.foot{border-top:1px solid rgba(255,255,255,.12);padding:28px 0 34px;display:flex;flex-wrap:wrap;align-items:center;justify-content:space-between;gap:20px;font-size:14px}
+.foot .brand svg{width:132px;height:40px}
+.foot nav{display:flex;flex-wrap:wrap;gap:6px 22px}
+.foot nav a{color:#C9D6E3;text-decoration:none}
+.foot nav a:hover{color:#fff}
+.social{display:flex;gap:8px}
+.social a{width:44px;height:44px;border-radius:50%;display:flex;align-items:center;justify-content:center;color:#fff;box-shadow:inset 0 0 0 1px rgba(255,255,255,.22)}
+.social a:hover{background:#fff;color:var(--navy)}
+.social svg{width:18px;height:18px;fill:currentColor}
+.legal{padding:0 0 30px;font-size:13px;color:#8FA6BC}
+
+/* motion helpers */
+html.motion:not(.ready) .hero h1 .ln>span{transform:translateY(105%)}
+html.motion:not(.ready) [data-intro]{opacity:0}
+
+/* responsive */
+@media (max-width:1100px){
+  .nav{display:none}
+  .menu-btn{display:inline-flex}
+  .tel span{display:none}
+  .mnav{display:block;position:absolute;left:0;right:0;top:100%;background:var(--navy);border-bottom:1px solid rgba(255,255,255,.1);padding:8px var(--pad) 20px}
+  .mnav[hidden]{display:none}
+  .mnav a{display:flex;align-items:center;min-height:52px;color:#fff;text-decoration:none;font-family:var(--serif);font-size:24px;border-bottom:1px solid rgba(255,255,255,.08)}
+  .proof .wrap{grid-template-columns:repeat(2,minmax(0,1fr))}
+  .proof .it:nth-child(3){border-left:0;padding-left:0}
+  .proof .it:nth-child(n+3){border-top:1px solid var(--line)}
+}
+@media (max-width:900px){
+  .intro .grid,.sv-head,.tabs,.team .grid,.voices .head,.quote .grid,.where{grid-template-columns:1fr}
+  .intro .copy{padding-top:0}
+  .intro .photo{grid-template-columns:1fr}
+  .intro .frame{aspect-ratio:4/3}
+  .sv a{grid-template-columns:44px minmax(0,1fr) 48px;gap:16px;padding:26px 8px}
+  .sv p{grid-column:2/3}
+  .sv .go{grid-row:1;grid-column:3;width:48px;height:48px}
+  .scene-in{grid-template-columns:1fr;min-height:0;gap:40px}
+  .stage{width:min(100%,460px)}
+  .tablist{flex-direction:row;overflow-x:auto;border-top:0;gap:8px;padding-bottom:4px;scrollbar-width:none}
+  .tablist button{flex:none;min-height:44px;font-family:var(--sans);font-size:15px;font-weight:600;padding:0 16px;border-radius:999px;border:0;box-shadow:inset 0 0 0 1.5px var(--line)}
+  .tablist button::after{display:none}
+  .tablist button[aria-selected=true]{background:var(--navy);color:#fff;padding-left:16px;box-shadow:none}
+  .panel ul{columns:1}
+  .posts{grid-template-columns:1fr}
+  .quality .shade{background:linear-gradient(180deg,rgba(19,37,58,.92),rgba(19,37,58,.88))}
+  .eyebrow span+span::before{display:none}
+  .eyebrow{gap:4px 16px}
+  .cgrid{grid-template-columns:1fr}
+  .cgrid>*+*{padding-left:0;border-left:0}
+  .hint .t-mouse{display:none}
+  .hint .t-touch{display:inline}
+}
+@media (max-width:640px){
+  body{font-size:16px}
+  .top .wrap{gap:12px;height:68px}
+  .brand svg{width:124px;height:38px}
+  .top .btn{display:none}
+  .lang-fr{display:none}
+  .hero-in{padding-top:56px}
+  .stamp{width:112px;height:112px}
+  .proof .wrap{grid-template-columns:1fr}
+  .proof .it{border-left:0;padding-left:0;border-top:1px solid var(--line)}
+  .proof .it:first-child{border-top:0}
+  .stats{grid-template-columns:1fr}
+  .stat:nth-child(odd){padding-right:0;border-right:0}
+  .stat:nth-child(even){padding-left:0}
+  .opts,.row2{grid-template-columns:1fr}
+  .steps-bar div span{display:none}
+  .collage .b{width:52%;right:0}
+  .badge img{height:52px}
+}
+@media (prefers-reduced-motion:reduce){
+  .stamp svg.ring{animation:none}
+  *{transition-duration:.01ms!important;animation-duration:.01ms!important}
+}
+</style>
+</head>
+<body>
+<svg width="0" height="0" style="position:absolute" aria-hidden="true" focusable="false"><defs><symbol id="logo" viewBox="0 0 234.75 71.81"><path d="M62,6.91C56.58,2.07,48.49,0,34.9,0S13.23,2.06,7.84,6.9C.93,13.1,0,22.77,0,31.41s.93,18.3,7.84,24.5a21.28,21.28,0,0,0,5.46,3.53V69.55a2.26,2.26,0,0,0,3.45,1.93l14.19-8.73q1.9.06,4,.06c13.58,0,21.68-2.06,27.07-6.91,6.89-6.19,7.82-15.85,7.82-24.49S68.86,13.1,62,6.91M53.65,46.65c-2.82,2.53-8.78,3.72-18.75,3.72S19,49.18,16.14,46.64c-2.55-2.29-3.7-7-3.7-15.23s1.15-12.95,3.7-15.24c2.84-2.54,8.79-3.73,18.76-3.73s15.93,1.19,18.75,3.72c2.55,2.3,3.69,7,3.69,15.25S56.2,44.35,53.65,46.65"/><path d="M97.83,23.1h0l2.47-9.4h3.36L99.49,28.39h-3l-2.66-9.65h0l-2.75,9.65H88.18L84.06,13.7h3.36l2.41,9.4h0l2.62-9.4h2.81Z"/><path d="M105.44,28.39V13.7h9.43v2.54h-6.43v3.31h6.43V22.1h-6.43v3.75h6.43v2.54Z"/><path d="M122.55,16c-1,0-1.91.5-1.91,1.47,0,1.13,1.39,1.44,2.52,1.84,2.08.72,4.58,1.68,4.58,4.77s-3,4.56-5.57,4.56a7.6,7.6,0,0,1-5.62-2.46l2-2c1.2,1.15,2.12,1.84,3.65,1.84,1.18,0,2.34-.56,2.34-1.86s-1.35-1.75-2.84-2.29c-1.91-.72-4-1.56-4-4.37s2.37-4.12,4.81-4.12a7.62,7.62,0,0,1,4.87,1.75l-1.72,2.14A5,5,0,0,0,122.55,16Z"/><path d="M135.13,16c-1,0-1.91.5-1.91,1.47,0,1.13,1.39,1.44,2.52,1.84,2.08.72,4.58,1.68,4.58,4.77s-3,4.56-5.57,4.56a7.58,7.58,0,0,1-5.62-2.46l2-2c1.2,1.15,2.12,1.84,3.65,1.84,1.18,0,2.33-.56,2.33-1.86s-1.34-1.75-2.83-2.29c-1.91-.72-4.05-1.56-4.05-4.37s2.37-4.12,4.81-4.12a7.62,7.62,0,0,1,4.87,1.75l-1.72,2.14A5,5,0,0,0,135.13,16Z"/><path d="M142.46,28.39V13.7h9.43v2.54h-6.43v3.31h6.43V22.1h-6.43v3.75h6.43v2.54Z"/><path d="M162.62,20.88l5.44,7.51h-3.95l-3.55-5-3.55,5h-3.78L158.65,21l-5.25-7.3h3.95l3.38,4.83,3.42-4.83h3.76Z"/><path d="M90.63,38.24V50.39h-3V38.24H84.15V35.7h10v2.54Z"/><path d="M100.38,35.7c2.37,0,5.37,1.21,5.37,4.41a4.24,4.24,0,0,1-3.19,4.09c1.3,1.83,3.49,4.83,4.49,6.19h-3.78l-4-5.85h-.52v5.85h-3V35.7ZM98.72,42h1.17c1.52,0,2.65-.55,2.65-1.83a2,2,0,0,0-2.25-1.93H98.72Z"/><path d="M118.35,50.39l-.94-2.73h-5.23l-1,2.73h-3.34l6-14.69h2.43l5.53,14.69Zm-5.29-5.18h3.51l-1.7-4.94h0Z"/><path d="M133.35,50.39l-6.74-9.19v9.19h-3V35.7h2.65l6.8,9.21V35.7h3V50.39Z"/><path d="M144,38c-1,0-1.91.5-1.91,1.47,0,1.13,1.39,1.44,2.52,1.84,2.08.72,4.58,1.68,4.58,4.77s-3,4.56-5.56,4.56A7.62,7.62,0,0,1,138,48.19l2-1.95c1.2,1.15,2.13,1.84,3.66,1.84,1.17,0,2.33-.56,2.33-1.86s-1.35-1.75-2.84-2.29c-1.91-.72-4-1.56-4-4.37s2.37-4.12,4.81-4.12a7.62,7.62,0,0,1,4.87,1.75l-1.72,2.14A5,5,0,0,0,144,38Z"/><path d="M151.26,50.39V35.7h3V47.85h6v2.54Z"/><path d="M171.54,50.39l-.94-2.73h-5.23l-1,2.73h-3.33l6-14.69h2.44L175,50.39Zm-5.29-5.18h3.51l-1.7-4.94h0Z"/><path d="M180.87,38.24V50.39h-3V38.24h-3.49V35.7h10v2.54Z"/><path d="M186,50.39V35.7h3V50.39Z"/><path d="M199.12,50.65a7.61,7.61,0,1,1,7.68-7.6A7.59,7.59,0,0,1,199.12,50.65Zm0-12.58c-2.61,0-4.5,2.18-4.5,5s1.89,5,4.5,5,4.47-2.18,4.47-5S201.7,38.07,199.12,38.07Z"/><path d="M219,50.39l-6.74-9.19v9.19h-3V35.7h2.65l6.8,9.21V35.7h3V50.39Z"/><path d="M229.57,38c-1,0-1.91.5-1.91,1.47,0,1.13,1.38,1.44,2.52,1.84,2.07.72,4.57,1.68,4.57,4.77s-3,4.56-5.56,4.56a7.62,7.62,0,0,1-5.63-2.46l2-1.95c1.19,1.15,2.12,1.84,3.65,1.84,1.18,0,2.33-.56,2.33-1.86s-1.34-1.75-2.83-2.29c-1.91-.72-4.06-1.56-4.06-4.37s2.38-4.12,4.81-4.12a7.62,7.62,0,0,1,4.87,1.75l-1.72,2.14A5,5,0,0,0,229.57,38Z"/></symbol><symbol id="mark" viewBox="0 0 69.8 71.81"><path d="M62,6.91C56.58,2.07,48.49,0,34.9,0S13.23,2.06,7.84,6.9C.93,13.1,0,22.77,0,31.41s.93,18.3,7.84,24.5a21.28,21.28,0,0,0,5.46,3.53V69.55a2.26,2.26,0,0,0,3.45,1.93l14.19-8.73q1.9.06,4,.06c13.58,0,21.68-2.06,27.07-6.91,6.89-6.19,7.82-15.85,7.82-24.49S68.86,13.1,62,6.91M53.65,46.65c-2.82,2.53-8.78,3.72-18.75,3.72S19,49.18,16.14,46.64c-2.55-2.29-3.7-7-3.7-15.23s1.15-12.95,3.7-15.24c2.84-2.54,8.79-3.73,18.76-3.73s15.93,1.19,18.75,3.72c2.55,2.3,3.69,7,3.69,15.25S56.2,44.35,53.65,46.65"/></symbol><symbol id="arr" viewBox="0 0 24 24"><path d="M4 12h15M13 6l6 6-6 6" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></symbol><symbol id="qm" viewBox="0 0 30 24"><path d="M0 24V14C0 5.8 4.6 1.1 12.4 0l1.2 3.4C9 4.6 6.9 7.3 6.7 11.2H12V24H0zm17.6 0V14c0-8.2 4.6-12.9 12.4-14l1.2 3.4c-4.6 1.2-6.7 3.9-6.9 7.8h5.3V24H17.6z"/></symbol></defs></svg>
+
+<div class="preview" role="note">Website concept for <b>Wessex Translations</b>, preview only, not the live site. Designed by Itchen Studio · <a href="https://itchenstudio.co.uk">itchenstudio.co.uk</a></div>
+
+<header class="top">
+  <div class="wrap">
+    <a class="brand" href="#hero" aria-label="Wessex Translations, back to top"><svg role="img" aria-hidden="true"><use href="#logo"/></svg></a>
+    <nav class="nav" aria-label="Main">
+      <a href="#services">Services</a>
+      <a href="#specialisms">Specialisms</a>
+      <a href="#team">Who we are</a>
+      <a href="#quality">Quality</a>
+      <a href="#blog">Blog</a>
+      <a href="#contact">Contact</a>
+    </nav>
+    <div class="tools">
+      <a class="lang-fr" href="#" lang="fr" aria-label="Version française">FR</a>
+      <a class="tel" href="tel:+441794369370"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 4h4l2 5-2.5 1.5a11 11 0 0 0 5 5L15 13l5 2v4a2 2 0 0 1-2 2A16 16 0 0 1 3 6a2 2 0 0 1 2-2"/></svg><span>01794 369 370</span><b class="sr">Call 01794 369 370</b></a>
+      <a class="btn btn-orange" href="#quote">Get a quote</a>
+      <button class="menu-btn" type="button" aria-expanded="false" aria-controls="mnav" aria-label="Menu"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" aria-hidden="true"><path d="M4 7h16M4 12h16M4 17h16"/></svg></button>
+    </div>
+  </div>
+  <nav class="mnav" id="mnav" aria-label="Mobile" hidden>
+    <a href="#services">Services</a><a href="#specialisms">Specialisms</a><a href="#team">Who we are</a><a href="#quality">Quality</a><a href="#blog">Blog</a><a href="#quote">Get a quote</a><a href="#contact">Contact</a>
+  </nav>
+</header>
+
+<main>
+<section class="hero" id="hero" aria-labelledby="hero-title">
+  <div class="bg"><img src="assets/img/office-1200.webp" srcset="assets/img/office-800.webp 800w, assets/img/office-1200.webp 1200w" sizes="100vw" alt="The Wessex Translations office in Michelmersh, with the speech-bubble sign on the brick wall" fetchpriority="high"></div>
+  <div class="shade"></div>
+  <div class="hero-in">
+    <p class="eyebrow" data-intro><span>Translation</span><span>Interpreting</span><span>Typesetting</span><span>Website localisation</span></p>
+    <h1 id="hero-title"><span class="ln"><span>Quality language</span></span><span class="ln"><span>solutions for</span></span><span class="ln"><span>over <em>50 years</em></span></span></h1>
+    <div class="hero-row">
+      <div data-intro>
+        <p class="lead">From translation, interpreting and website localisation to typesetting and other language solutions or just friendly advice.</p>
+        <div class="hero-ctas">
+          <a class="btn btn-orange" href="#quote">Contact us <svg aria-hidden="true"><use href="#arr"/></svg></a>
+          <a class="btn btn-ghost" href="#services">Our services</a>
+        </div>
+      </div>
+      <div style="display:flex;align-items:flex-end;gap:28px" data-intro>
+        <p class="hint" aria-hidden="true"><svg><use href="#mark"/></svg><span class="t-mouse">Move over the headline to read it in another language</span><span class="t-touch">Tap the headline to change language</span></p>
+        <div class="stamp" aria-hidden="true">
+          <svg class="ring" viewBox="0 0 148 148"><defs><path id="circ" d="M74 74m-58 0a58 58 0 1 1 116 0a58 58 0 1 1-116 0"/></defs><text><textPath href="#circ" textLength="362" lengthAdjust="spacing">ESTABLISHED 1972 · QUALITY LANGUAGE SOLUTIONS · </textPath></text></svg>
+          <svg class="mk"><use href="#mark"/></svg>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div class="lens" aria-hidden="true">
+    <div class="tr on" lang="fr" data-name="Français">
+      <div class="hero-in"><p class="eyebrow"><span>Traduction</span><span>Interprétation</span><span>Mise en page</span><span>Localisation de sites web</span></p>
+      <h1><span class="ln"><span>Des solutions</span></span><span class="ln"><span>linguistiques de</span></span><span class="ln"><span>qualité depuis</span></span><span class="ln"><span>plus de <em>50 ans</em></span></span></h1></div>
+    </div>
+    <div class="tr" lang="de" data-name="Deutsch">
+      <div class="hero-in"><p class="eyebrow"><span>Übersetzung</span><span>Dolmetschen</span><span>Satz</span><span>Website-Lokalisierung</span></p>
+      <h1><span class="ln"><span>Hochwertige</span></span><span class="ln"><span>Sprachlösungen</span></span><span class="ln"><span>seit über <em>50 Jahren</em></span></span></h1></div>
+    </div>
+    <div class="tr" lang="es" data-name="Español">
+      <div class="hero-in"><p class="eyebrow"><span>Traducción</span><span>Interpretación</span><span>Maquetación</span><span>Localización web</span></p>
+      <h1><span class="ln"><span>Soluciones</span></span><span class="ln"><span>lingüísticas de</span></span><span class="ln"><span>calidad desde</span></span><span class="ln"><span>hace <em>50 años</em></span></span></h1></div>
+    </div>
+    <div class="tr" lang="ar" dir="rtl" data-name="العربية">
+      <div class="hero-in"><p class="eyebrow" style="font-family:'Noto Sans Arabic',sans-serif;letter-spacing:0;font-size:15px"><span>الترجمة</span><span>الترجمة الفورية</span><span>التنضيد</span><span>توطين المواقع</span></p>
+      <h1><span class="ln"><span>حلول لغوية</span></span><span class="ln"><span>عالية الجودة منذ</span></span><span class="ln"><span>أكثر من <em>50 عامًا</em></span></span></h1></div>
+    </div>
+    <span class="tag">Français</span>
+  </div>
+</section>
+
+<section class="proof" aria-label="At a glance">
+  <div class="wrap">
+    <div class="it"><b>1972</b><span>Established, and one of the first translation companies in the UK</span></div>
+    <div class="it"><img src="assets/img/iti.webp" alt="ITI Corporate Member" width="46" height="46"><span>Three-time winner of the ITI’s Best Translation Company award</span></div>
+    <div class="it"><b>ATC</b><span>The longest-standing member of the Association of Translation Companies</span></div>
+    <div class="it"><b>ISO</b><span>ISO 9001 accredited for quality management</span></div>
+  </div>
+</section>
+
+<section class="intro" id="about" aria-labelledby="intro-title">
+  <div class="wrap">
+    <div class="grid">
+      <div>
+        <p class="label" data-reveal>Who we are</p>
+        <h2 id="intro-title" data-split>We are an experienced translation company working in <span class="pm">all languages<svg viewBox="0 0 200 20" preserveAspectRatio="none" aria-hidden="true"><path d="M3 14 C 40 6, 80 6, 120 11 S 180 16, 197 7"/></svg></span></h2>
+      </div>
+      <div class="copy" data-reveal>
+        <p>Established in 1972, we have a wealth of experience serving the needs of local and international clients from all sectors including corporate, government, EU institutions, not-for-profit organisations and private individuals. With a global network of trusted translators and interpreters, we can provide solutions for any requirement, whatever the language.</p>
+        <div class="ctas"><a class="btn btn-primary" href="#quote">Contact us <svg aria-hidden="true"><use href="#arr"/></svg></a><a class="btn btn-line" href="#team">More about us</a></div>
+      </div>
+    </div>
+    <div class="photo">
+      <div class="frame" data-clip><img data-parallax src="assets/img/books-800.webp" srcset="assets/img/books-800.webp 800w, assets/img/books-1200.webp 1200w" sizes="(max-width:900px) 100vw, 40vw" alt="Two colleagues checking a passage in printed books" loading="lazy"></div>
+      <div class="stats">
+        <div class="stat" data-reveal><p class="n"><span data-count="60">60</span><small>million+</small></p><p>words of translation delivered every year</p></div>
+        <div class="stat" data-reveal><p class="n"><span data-count="2000">2,000</span><small>+</small></p><p>clients in various sectors, and a lot of our business comes from recommendations</p></div>
+        <div class="stat" data-reveal><p class="n"><span data-count="74500">74,500</span><small>pages</small></p><p>translated for the European Institutions since our first European Parliament contract in 1997</p></div>
+        <div class="stat" data-reveal><p class="n"><span data-count="31000">31,000</span><small>hours</small></p><p>of court interpreting for Crown Courts, Magistrates Courts and law firms</p></div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="services" id="services" aria-labelledby="sv-title">
+  <div class="wrap">
+    <div class="sv-head">
+      <div><p class="label" data-reveal>Our services</p><h2 id="sv-title" data-split>We’re more than just a translation company</h2></div>
+      <p data-reveal>At Wessex Translations, we are on hand to help with a range of language requirements.</p>
+    </div>
+    <ul class="sv-list">
+      <li class="sv" data-reveal><a href="#specialisms"><span class="no">01</span><h3>Translation</h3><p>We translate written text between all languages for a wide variety of industries and deliver over 60 million words every year.</p><span class="go" aria-hidden="true"><svg><use href="#arr"/></svg></span><span class="sr">Find out more about translation</span></a></li>
+      <li class="sv" data-reveal><a href="#quote"><span class="no">02</span><h3>Interpreting</h3><p>Our face-to-face or telephone interpreters can help you to communicate easily in numerous situations, from small meetings to large conferences.</p><span class="go" aria-hidden="true"><svg><use href="#arr"/></svg></span><span class="sr">Find out more about interpreting</span></a></li>
+      <li class="sv" data-reveal><a href="#typesetting"><span class="no">03</span><h3>Typesetting</h3><p>We can deliver your translated documents in their native design format, looking just as polished as the original and ready to print.</p><span class="go" aria-hidden="true"><svg><use href="#arr"/></svg></span><span class="sr">Find out more about typesetting</span></a></li>
+      <li class="sv" data-reveal><a href="#quote"><span class="no">04</span><h3>Website Localisation</h3><p>If you’re trying to reach a wider audience, we have a number of solutions to translate and manage your foreign-language website.</p><span class="go" aria-hidden="true"><svg><use href="#arr"/></svg></span><span class="sr">Find out more about website localisation</span></a></li>
+    </ul>
+  </div>
+</section>
+
+<section class="scene on-dark" id="typesetting" aria-labelledby="ts-title">
+  <div class="scene-in">
+    <div>
+      <p class="label">Typesetting</p>
+      <h2 id="ts-title">We have a unique combination of language and typesetting skills</h2>
+      <p class="lede">Unlike many other translation companies, you can send us documents for translation in their original design format, including Adobe InDesign, Illustrator, Photoshop, FrameMaker and PageMaker, as well as QuarkXPress.</p>
+      <ul class="langs" aria-label="Show the leaflet in">
+        <li><button type="button" data-l="0" aria-pressed="true"><span class="code">EN</span><span class="nm">English</span><span class="nt">Original</span><span class="bar"><i></i></span></button></li>
+        <li><button type="button" data-l="1" aria-pressed="false"><span class="code">FR</span><span class="nm" lang="fr">Français</span><span class="nt">Translation</span><span class="bar"><i></i></span></button></li>
+        <li><button type="button" data-l="2" aria-pressed="false"><span class="code">DE</span><span class="nm" lang="de">Deutsch</span><span class="nt">Translation</span><span class="bar"><i></i></span></button></li>
+        <li><button type="button" data-l="3" aria-pressed="false"><span class="code">AR</span><span class="nm" lang="ar">العربية</span><span class="nt">Right to left</span><span class="bar"><i></i></span></button></li>
+      </ul>
+      <p class="small">Example leaflet. Same layout in every language, right down to the page number.</p>
+    </div>
+    <div class="stage">
+      <div class="doc" aria-live="polite" aria-label="Example leaflet">
+        <article class="page" lang="en">
+          <div class="ph"><span>User manual</span><span>p. 4</span></div>
+          <h3 class="ttl">Safety instructions</h3>
+          <div class="warn"><svg viewBox="0 0 32 32" aria-hidden="true"><path d="M16 3 30 28H2z" fill="#F5A623"/><path d="M16 12v8M16 23.5v.5" stroke="#13253A" stroke-width="2.6" stroke-linecap="round"/></svg><div><b>Warning</b>Risk of electric shock.</div></div>
+          <div class="fig"><svg viewBox="0 0 240 130" aria-hidden="true" fill="none" stroke="#13253A" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><rect x="18" y="36" width="44" height="58" rx="8"/><path d="M34.5 55.5a9 9 0 1 0 11 0"/><path d="M40 51v10"/><path d="M70 65h26"/><rect x="96" y="54" width="24" height="22" rx="4"/><path d="M120 60h8M120 70h8"/><path d="M128 65c18 0 22-34 44-34" stroke-dasharray="4 6"/><path d="M196 34c10 13 16 22 16 30a16 16 0 0 1-32 0c0-8 6-17 16-30z" fill="#E2ECF3"/><circle cx="196" cy="62" r="34" stroke="#E0262B" stroke-width="3.4"/><path d="M172 38l48 48" stroke="#E0262B" stroke-width="3.4"/></svg></div>
+          <ol><li><span>1</span><span>Read these instructions before first use.</span></li><li><span>2</span><span>Keep the appliance away from water.</span></li><li><span>3</span><span>Unplug it before cleaning.</span></li><li><span>4</span><span>Children must be supervised at all times.</span></li></ol>
+          <p class="keep">Keep these instructions for future reference.</p>
+          <div class="pf"><span>SI-0423 · Rev. 3</span><span>4</span></div>
+        </article>
+        <article class="page" lang="fr" aria-hidden="true">
+          <div class="ph"><span>Manuel d’utilisation</span><span>p. 4</span></div>
+          <h3 class="ttl">Consignes de sécurité</h3>
+          <div class="warn"><svg viewBox="0 0 32 32" aria-hidden="true"><path d="M16 3 30 28H2z" fill="#F5A623"/><path d="M16 12v8M16 23.5v.5" stroke="#13253A" stroke-width="2.6" stroke-linecap="round"/></svg><div><b>Avertissement</b>Risque de choc électrique.</div></div>
+          <div class="fig"><svg viewBox="0 0 240 130" aria-hidden="true" fill="none" stroke="#13253A" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><rect x="18" y="36" width="44" height="58" rx="8"/><path d="M34.5 55.5a9 9 0 1 0 11 0"/><path d="M40 51v10"/><path d="M70 65h26"/><rect x="96" y="54" width="24" height="22" rx="4"/><path d="M120 60h8M120 70h8"/><path d="M128 65c18 0 22-34 44-34" stroke-dasharray="4 6"/><path d="M196 34c10 13 16 22 16 30a16 16 0 0 1-32 0c0-8 6-17 16-30z" fill="#E2ECF3"/><circle cx="196" cy="62" r="34" stroke="#E0262B" stroke-width="3.4"/><path d="M172 38l48 48" stroke="#E0262B" stroke-width="3.4"/></svg></div>
+          <ol><li><span>1</span><span>Lisez ces instructions avant la première utilisation.</span></li><li><span>2</span><span>Tenez l’appareil à l’écart de l’eau.</span></li><li><span>3</span><span>Débranchez-le avant de le nettoyer.</span></li><li><span>4</span><span>Les enfants doivent être surveillés en permanence.</span></li></ol>
+          <p class="keep">Conservez ces instructions pour pouvoir vous y reporter ultérieurement.</p>
+          <div class="pf"><span>SI-0423 · Rév. 3</span><span>4</span></div>
+        </article>
+        <article class="page" lang="de" aria-hidden="true">
+          <div class="ph"><span>Bedienungsanleitung</span><span>S. 4</span></div>
+          <h3 class="ttl">Sicherheitshinweise</h3>
+          <div class="warn"><svg viewBox="0 0 32 32" aria-hidden="true"><path d="M16 3 30 28H2z" fill="#F5A623"/><path d="M16 12v8M16 23.5v.5" stroke="#13253A" stroke-width="2.6" stroke-linecap="round"/></svg><div><b>Warnung</b>Gefahr eines elektrischen Schlags.</div></div>
+          <div class="fig"><svg viewBox="0 0 240 130" aria-hidden="true" fill="none" stroke="#13253A" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><rect x="18" y="36" width="44" height="58" rx="8"/><path d="M34.5 55.5a9 9 0 1 0 11 0"/><path d="M40 51v10"/><path d="M70 65h26"/><rect x="96" y="54" width="24" height="22" rx="4"/><path d="M120 60h8M120 70h8"/><path d="M128 65c18 0 22-34 44-34" stroke-dasharray="4 6"/><path d="M196 34c10 13 16 22 16 30a16 16 0 0 1-32 0c0-8 6-17 16-30z" fill="#E2ECF3"/><circle cx="196" cy="62" r="34" stroke="#E0262B" stroke-width="3.4"/><path d="M172 38l48 48" stroke="#E0262B" stroke-width="3.4"/></svg></div>
+          <ol><li><span>1</span><span>Lesen Sie diese Anleitung vor dem ersten Gebrauch.</span></li><li><span>2</span><span>Halten Sie das Gerät von Wasser fern.</span></li><li><span>3</span><span>Ziehen Sie vor der Reinigung den Netzstecker.</span></li><li><span>4</span><span>Kinder müssen jederzeit beaufsichtigt werden.</span></li></ol>
+          <p class="keep">Bewahren Sie diese Anleitung zum späteren Nachschlagen auf.</p>
+          <div class="pf"><span>SI-0423 · Rev. 3</span><span>4</span></div>
+        </article>
+        <article class="page" lang="ar" dir="rtl" aria-hidden="true">
+          <div class="ph"><span>دليل المستخدم</span><span>ص. ٤</span></div>
+          <h3 class="ttl">تعليمات السلامة</h3>
+          <div class="warn"><svg viewBox="0 0 32 32" aria-hidden="true"><path d="M16 3 30 28H2z" fill="#F5A623"/><path d="M16 12v8M16 23.5v.5" stroke="#13253A" stroke-width="2.6" stroke-linecap="round"/></svg><div><b>تحذير</b>خطر التعرض لصدمة كهربائية.</div></div>
+          <div class="fig"><svg style="transform:scaleX(-1)" viewBox="0 0 240 130" aria-hidden="true" fill="none" stroke="#13253A" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><rect x="18" y="36" width="44" height="58" rx="8"/><path d="M34.5 55.5a9 9 0 1 0 11 0"/><path d="M40 51v10"/><path d="M70 65h26"/><rect x="96" y="54" width="24" height="22" rx="4"/><path d="M120 60h8M120 70h8"/><path d="M128 65c18 0 22-34 44-34" stroke-dasharray="4 6"/><path d="M196 34c10 13 16 22 16 30a16 16 0 0 1-32 0c0-8 6-17 16-30z" fill="#E2ECF3"/><circle cx="196" cy="62" r="34" stroke="#E0262B" stroke-width="3.4"/><path d="M172 38l48 48" stroke="#E0262B" stroke-width="3.4"/></svg></div>
+          <ol><li><span>١</span><span>اقرأ هذه التعليمات قبل الاستخدام الأول.</span></li><li><span>٢</span><span>أبعد الجهاز عن الماء.</span></li><li><span>٣</span><span>افصل الجهاز عن الكهرباء قبل تنظيفه.</span></li><li><span>٤</span><span>يجب الإشراف على الأطفال في جميع الأوقات.</span></li></ol>
+          <p class="keep">احتفظ بهذه التعليمات للرجوع إليها مستقبلاً.</p>
+          <div class="pf"><span>SI-0423 · الإصدار 3</span><span>٤</span></div>
+        </article>
+      </div>
+      <div class="divider" aria-hidden="true"><b>FR</b></div>
+    </div>
+  </div>
+</section>
+
+<section class="spec" id="specialisms" aria-labelledby="spec-title">
+  <div class="wrap">
+    <div class="spec-head">
+      <p class="label" data-reveal>Translation</p>
+      <h2 id="spec-title" data-split>Our translation <span class="pm">specialisms<svg viewBox="0 0 200 20" preserveAspectRatio="none" aria-hidden="true"><path d="M3 12 C 50 4, 110 16, 197 8"/></svg></span></h2>
+      <p data-reveal>We have extensive knowledge and expertise in a wide range of industries and document types. Whatever your requirement, we have expert linguists on hand to help.</p>
+    </div>
+    <div class="tabs" data-reveal>
+      <div class="tablist" role="tablist" aria-label="Translation specialisms">
+        <button role="tab" id="t-tech" aria-controls="p-tech" aria-selected="true">Technical</button>
+        <button role="tab" id="t-med" aria-controls="p-med" aria-selected="false" tabindex="-1">Medical and pharmaceutical</button>
+        <button role="tab" id="t-legal" aria-controls="p-legal" aria-selected="false" tabindex="-1">Legal</button>
+        <button role="tab" id="t-mkt" aria-controls="p-mkt" aria-selected="false" tabindex="-1">Marketing</button>
+        <button role="tab" id="t-eu" aria-controls="p-eu" aria-selected="false" tabindex="-1">European institutions</button>
+      </div>
+      <div>
+        <div class="panel" role="tabpanel" id="p-tech" aria-labelledby="t-tech" tabindex="0">
+          <h3>Technical</h3>
+          <p>We have decades of experience in translating highly technical material in all fields of technology and engineering. Whether it’s user manuals, safety data sheets or software strings, we provide the highest quality technical translations, which are trusted by some of the world’s leading companies. Our translators have a technical background and, crucially, an understanding of your product – so you can be confident of a flawless job.</p>
+          <h4>We regularly translate</h4>
+          <ul><li>Safety data sheets (SDS)</li><li>Software strings</li><li>Product packaging</li><li>Health and safety documentation</li><li>User manuals</li><li>Technical specifications</li></ul>
+        </div>
+        <div class="panel" role="tabpanel" id="p-med" aria-labelledby="t-med" tabindex="0" hidden>
+          <h3>Medical and pharmaceutical</h3>
+          <p>We have worked with more than 20 clients in the medical and pharmaceutical industry, with our longest relationship spanning over 39 years. Our clients value the expert skills and experience of our medical and pharmaceutical translators, some of whom have previously practised as medical professionals.</p>
+          <p>We offer an additional back-translation service to support our own quality-control process and that of our clients. We can also certify our translations to meet our clients’ internal audit requirements.</p>
+          <h4>We regularly translate</h4>
+          <ul><li>SPC updates</li><li>Labelling and PILs</li><li>Expert medical reports</li><li>Marketing authorisation applications</li><li>Clinical trial documentation</li><li>ICFs and IAFs</li><li>Patient diaries and questionnaires</li><li>Medical equipment manuals</li></ul>
+        </div>
+        <div class="panel" role="tabpanel" id="p-legal" aria-labelledby="t-legal" tabindex="0" hidden>
+          <h3>Legal</h3>
+          <p>Accuracy in legal documentation is essential and the potential consequences of a poor-quality translation don’t bear thinking about. Our translators are experienced legal specialists. They all work into their mother tongue and are familiar with the appropriate legislation in the countries concerned.</p>
+          <p>All of our translators sign non-disclosure agreements with us. We are also happy to provide certification for our translations when required, together with affidavit, notarisation and apostille for documentation required overseas.</p>
+          <h4>We can assist you with</h4>
+          <ul><li>Business contracts and agreements</li><li>Accident and compensation claims</li><li>Incident reports</li><li>Immigration applications</li><li>Conveyancing documents</li><li>Court records</li><li>Intellectual property documents and patents</li><li>Wills and probate material</li></ul>
+        </div>
+        <div class="panel" role="tabpanel" id="p-mkt" aria-labelledby="t-mkt" tabindex="0" hidden>
+          <h3>Marketing</h3>
+          <p>Our marketing translators are hand-picked for their engaging language style and industry know-how – as well as for their foreign-language expertise. This ensures that your advertising material, brochures, websites and press releases retain their potency and always hit the mark.</p>
+          <h4>We offer</h4>
+          <ul><li>Professional translations in all languages</li><li>Free consultancy and quotations</li><li>Experience in all major DTP applications</li><li>Dedicated project managers</li><li>Strict quality control procedures</li><li>In-house typesetting team</li><li>Professional indemnity insurance</li><li>Translation memory tools for consistency and cost savings</li></ul>
+        </div>
+        <div class="panel" role="tabpanel" id="p-eu" aria-labelledby="t-eu" tabindex="0" hidden>
+          <h3>European institutions</h3>
+          <p>Our long-term relationship with the European institutions is a testament to our outstanding quality and professionalism. We won our first contract with the European Parliament in 1997 and over twenty years on we still translate thousands of pages each year for various EU institutions.</p>
+          <h4>Our projects have included</h4>
+          <ul><li>Minutes of meetings for committees and political groups</li><li>Verbatim reports of proceedings in the European Parliament</li><li>Petitions</li><li>European Ombudsmen newsletters</li><li>Reports on delegation visits and electoral observations</li><li>Invitation-to-tender documents</li><li>Speeches</li><li>Written questions to the Commission</li></ul>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="team" id="team" aria-labelledby="team-title">
+  <div class="wrap">
+    <div class="grid">
+      <div class="collage">
+        <div class="frame a" data-clip><img data-parallax src="assets/img/team-800.webp" srcset="assets/img/team-800.webp 800w, assets/img/team-1200.webp 1200w" sizes="(max-width:900px) 100vw, 56vw" alt="Two members of the Wessex team talking in the office" loading="lazy"></div>
+        <div class="frame b" data-reveal><img src="assets/img/colleague-620.webp" alt="A Wessex colleague smiling during a meeting" loading="lazy" style="height:100%"></div>
+      </div>
+      <div class="copy">
+        <p class="label" data-reveal>Our team</p>
+        <h2 id="team-title" data-split>People make the <span class="pm">difference<svg viewBox="0 0 200 20" preserveAspectRatio="none" aria-hidden="true"><path d="M3 9 C 60 15, 130 3, 197 11"/></svg></span></h2>
+        <p data-reveal>We are committed to service excellence and while technology is a great enabler, it’s our team who understand your needs, who meet your deadlines and who strive to solve your urgent, last-minute queries. We pride ourselves on offering a professional and personal service and we couldn’t do it without our hard-working language professionals.</p>
+        <a class="btn btn-primary" href="#team" data-reveal>Meet the team <svg aria-hidden="true"><use href="#arr"/></svg></a>
+      </div>
+    </div>
+  </div>
+  <div class="names" aria-label="The Wessex team">
+    <div class="track" data-marquee data-speed="0.45">
+      <div class="p"><b>Rebecca Beernaert</b><span>Production Manager</span></div><div class="p"><b>Emily Brockman</b><span>Production Manager</span></div><div class="p"><b>Anne-Marie Chaloner</b><span>Project Manager</span></div><div class="p"><b>Delphine Dubreuil</b><span>French Office Manager</span></div><div class="p"><b>David Howard</b><span>Project Coordinator/Reviser</span></div><div class="p"><b>Imogen McAsey</b><span>Project/Quality Control Manager</span></div><div class="p"><b>Eva Mimochodkova</b><span>Interpreting Manager</span></div><div class="p"><b>Jonathan Nater</b><span>Director</span></div><div class="p"><b>Steve Patrick</b><span>Accounts Manager</span></div><div class="p"><b>Daniel Smith</b><span>Lead Production Manager</span></div><div class="p"><b>Paul Stewart</b><span>Director</span></div><div class="p"><b>Robin Weber</b><span>Director</span></div><div class="p"><b>Chitika Wheeler</b><span>Quality Control Coordinator</span></div><div class="p" aria-hidden="true"><b>Rebecca Beernaert</b><span>Production Manager</span></div><div class="p" aria-hidden="true"><b>Emily Brockman</b><span>Production Manager</span></div><div class="p" aria-hidden="true"><b>Anne-Marie Chaloner</b><span>Project Manager</span></div><div class="p" aria-hidden="true"><b>Delphine Dubreuil</b><span>French Office Manager</span></div><div class="p" aria-hidden="true"><b>David Howard</b><span>Project Coordinator/Reviser</span></div><div class="p" aria-hidden="true"><b>Imogen McAsey</b><span>Project/Quality Control Manager</span></div><div class="p" aria-hidden="true"><b>Eva Mimochodkova</b><span>Interpreting Manager</span></div><div class="p" aria-hidden="true"><b>Jonathan Nater</b><span>Director</span></div><div class="p" aria-hidden="true"><b>Steve Patrick</b><span>Accounts Manager</span></div><div class="p" aria-hidden="true"><b>Daniel Smith</b><span>Lead Production Manager</span></div><div class="p" aria-hidden="true"><b>Paul Stewart</b><span>Director</span></div><div class="p" aria-hidden="true"><b>Robin Weber</b><span>Director</span></div><div class="p" aria-hidden="true"><b>Chitika Wheeler</b><span>Quality Control Coordinator</span></div>
+    </div>
+  </div>
+</section>
+
+<section class="quality on-dark" id="quality" aria-labelledby="q-title">
+  <div class="bgimg"><img data-parallax src="assets/img/award-1200.webp" srcset="assets/img/award-800.webp 800w, assets/img/award-1200.webp 1200w" sizes="100vw" alt="The ITI Best Translation Company 2009 award, presented to Wessex Translations Ltd" loading="lazy"></div>
+  <div class="shade"></div>
+  <div class="wrap">
+    <div class="copy">
+      <p class="label" data-reveal>Quality</p>
+      <h2 id="q-title" data-split>Award-winning</h2>
+      <p data-reveal>At Wessex Translations we apply meticulous standards of quality control to ensure that we always deliver professional and accurate services tailored to your needs. While we pride ourselves on our rapid, customer-driven service, we never allow speed to compromise quality.</p>
+      <p data-reveal>As the <strong>longest-standing member of the Association of Translation Companies (ATC)</strong> and one of the first corporate members of the Institute of Translation and Interpreting (ITI), we always ensure that our service upholds the high standards expected in the industry. We are a <strong>three-time winner of the ITI’s biennial Best Translation Company award</strong> and a finalist in the South Coast Business Awards.</p>
+      <div class="badges" data-reveal>
+        <div class="badge"><img src="assets/img/atc-euatc.webp" alt="Wessex Translations Ltd, Association of Translation Companies member 2024, and EUATC network member" loading="lazy"></div>
+        <div class="badge"><img src="assets/img/atc-iso.webp" alt="ATC Certification and ISO 9001 Quality Management certified" loading="lazy"></div>
+        <div class="badge"><img src="assets/img/iti.webp" alt="Institute of Translation and Interpreting corporate member" loading="lazy"></div>
+      </div>
+      <div class="iso" data-reveal>
+        <h3>ISO 9001 accredited</h3>
+        <p>Our long-standing reputation of providing high-quality translations and customer service is now backed up by our ISO 9001 accreditation. It represents our commitment to quality, and demonstrates this to our clients from day one.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="voices" id="clients" aria-labelledby="v-title">
+  <div class="wrap">
+    <div class="head">
+      <div><p class="label" data-reveal>Our clients</p><h2 id="v-title" data-split>A lot of our business comes from <span class="pm">recommendations<svg viewBox="0 0 200 20" preserveAspectRatio="none" aria-hidden="true"><path d="M3 13 C 45 5, 120 6, 197 12"/></svg></span></h2></div>
+      <p data-reveal>We work with clients from a wide range of industries, all of whom place great importance on maintaining privacy. For this reason, we do not list our clients or advertise our contacts.</p>
+    </div>
+  </div>
+  <div class="rv">
+    <div class="rv-row" data-speed="0.35"><figure class="q"><svg aria-hidden="true"><use href="#qm"/></svg><blockquote>“I have worked with Wessex Translations needing regular or certified translations in various languages. The translations are high quality, the staff friendly, easy to work with and we get the translations very fast. We are very pleased with the services provided by Wessex and will continue working with them in the future.”</blockquote><cite>Technical Solutions Manager, Aviation company</cite></figure><figure class="q"><svg aria-hidden="true"><use href="#qm"/></svg><blockquote>“My thanks to the team for the high quality work and response time. It is very much appreciated by us and our clients.”</blockquote><cite>Senior Partner, Financial services provider</cite></figure><figure class="q"><svg aria-hidden="true"><use href="#qm"/></svg><blockquote>“We’ve had great experiences working with Wessex. They’ve been a trusted provider for us for several years. The accuracy of their translations ensures us that our projects are delivered to our stakeholders in a timely fashion. The quality of their work always exceeds expectations.”</blockquote><cite>Compliance Assistant, Paper and packaging manufacturer</cite></figure><figure class="q" aria-hidden="true"><svg aria-hidden="true"><use href="#qm"/></svg><blockquote>“I have worked with Wessex Translations needing regular or certified translations in various languages. The translations are high quality, the staff friendly, easy to work with and we get the translations very fast. We are very pleased with the services provided by Wessex and will continue working with them in the future.”</blockquote><cite>Technical Solutions Manager, Aviation company</cite></figure><figure class="q" aria-hidden="true"><svg aria-hidden="true"><use href="#qm"/></svg><blockquote>“My thanks to the team for the high quality work and response time. It is very much appreciated by us and our clients.”</blockquote><cite>Senior Partner, Financial services provider</cite></figure><figure class="q" aria-hidden="true"><svg aria-hidden="true"><use href="#qm"/></svg><blockquote>“We’ve had great experiences working with Wessex. They’ve been a trusted provider for us for several years. The accuracy of their translations ensures us that our projects are delivered to our stakeholders in a timely fashion. The quality of their work always exceeds expectations.”</blockquote><cite>Compliance Assistant, Paper and packaging manufacturer</cite></figure></div>
+    <div class="rv-row" data-speed="0.35" data-dir="-1"><figure class="q"><svg aria-hidden="true"><use href="#qm"/></svg><blockquote>“Timely, accurate and responsive. Wessex has taken a complex task of translating highly technical manuals into multiple languages and turned it into a seamless process.”</blockquote><cite>Alison, Waterblast tool manufacturer</cite></figure><figure class="q"><svg aria-hidden="true"><use href="#qm"/></svg><blockquote>“We have utilised Wessex regularly over more than 10 years and I can honestly say that every interaction with them is a pleasure! We return to use them because of the excellent delivery and wonderfully prompt timelines. The bonus comes from the lovely staff, who cannot do enough for their clients.”</blockquote><cite>Jonathan, Pharmaceutical learning &amp; development consultancy</cite></figure><figure class="q"><svg aria-hidden="true"><use href="#qm"/></svg><blockquote>“A friendly team that offers a very efficient and professional service that gives us confidence in the information we send out in over 30 languages.”</blockquote><cite>Janice, Finishing technology manufacturer</cite></figure><figure class="q" aria-hidden="true"><svg aria-hidden="true"><use href="#qm"/></svg><blockquote>“Timely, accurate and responsive. Wessex has taken a complex task of translating highly technical manuals into multiple languages and turned it into a seamless process.”</blockquote><cite>Alison, Waterblast tool manufacturer</cite></figure><figure class="q" aria-hidden="true"><svg aria-hidden="true"><use href="#qm"/></svg><blockquote>“We have utilised Wessex regularly over more than 10 years and I can honestly say that every interaction with them is a pleasure! We return to use them because of the excellent delivery and wonderfully prompt timelines. The bonus comes from the lovely staff, who cannot do enough for their clients.”</blockquote><cite>Jonathan, Pharmaceutical learning &amp; development consultancy</cite></figure><figure class="q" aria-hidden="true"><svg aria-hidden="true"><use href="#qm"/></svg><blockquote>“A friendly team that offers a very efficient and professional service that gives us confidence in the information we send out in over 30 languages.”</blockquote><cite>Janice, Finishing technology manufacturer</cite></figure></div>
+  </div>
+</section>
+
+<section class="blog" id="blog" aria-labelledby="b-title">
+  <div class="wrap">
+    <div class="head">
+      <div><p class="label" data-reveal>Blog</p><h2 id="b-title" data-split>Latest from the blog</h2></div>
+      <a class="btn btn-line" href="#blog" data-reveal>All articles <svg aria-hidden="true"><use href="#arr"/></svg></a>
+    </div>
+    <div class="posts">
+      <a class="post" href="#blog" data-reveal><time>05 Dec</time><h3>Reflections on THRIVE 2024: ATC Unconference</h3><p>Key Takeaways from the Conference</p><span class="more">Read article <svg aria-hidden="true"><use href="#arr"/></svg></span></a>
+      <a class="post" href="#blog" data-reveal><time>10 Oct</time><h3>Surrey Translation Bureau transfers its business to Wessex Translations</h3><p>We are pleased to announce the transfer of Surrey Translation Bureau’s business to Wessex Translations.</p><span class="more">Read article <svg aria-hidden="true"><use href="#arr"/></svg></span></a>
+      <a class="post" href="#blog" data-reveal><time>30 Sep</time><h3>An art worth protecting</h3><p>The role of translation and interpreting in preserving language diversity</p><span class="more">Read article <svg aria-hidden="true"><use href="#arr"/></svg></span></a>
+    </div>
+  </div>
+</section>
+
+<section class="quote" id="quote" aria-labelledby="qt-title">
+  <div class="wrap">
+    <div class="grid">
+      <div class="copy">
+        <p class="label" data-reveal>Get a quote</p>
+        <h2 id="qt-title" data-split>We are always happy to help you with any of your language needs</h2>
+        <p data-reveal>Please contact us to discuss your requirements and get a quote. Our project managers are always happy to help.</p>
+        <div class="direct" data-reveal>
+          <a href="tel:01794369370"><span>Call us from the UK</span><b>01794 369 370</b></a>
+          <a href="tel:+441794369370"><span>From outside the UK</span><b>+44 1794 369 370</b></a>
+          <a href="mailto:sales@wt-lm.com"><span>Email us</span><b>sales@wt-lm.com</b></a>
+        </div>
+      </div>
+      <form class="wiz" id="wiz" novalidate data-reveal aria-label="Request a quote">
+        <div class="steps-bar" aria-hidden="true">
+          <div class="cur"><i></i><span>Service</span></div><div><i></i><span>Languages</span></div><div><i></i><span>Files</span></div><div><i></i><span>Details</span></div>
+        </div>
+        <p class="sr" id="wiz-status" aria-live="polite">Step 1 of 4</p>
+
+        <fieldset data-step="1">
+          <legend>What do you need?</legend>
+          <p class="sub">Choose the service and we’ll take it from there.</p>
+          <div class="opts">
+            <label class="opt"><input type="radio" name="service" value="Translation" checked><span><b>Translation</b><small>Written text, any language pair</small></span></label>
+            <label class="opt"><input type="radio" name="service" value="Interpreting"><span><b>Interpreting</b><small>Face to face, remote or telephone</small></span></label>
+            <label class="opt"><input type="radio" name="service" value="Typesetting"><span><b>Typesetting</b><small>Translated and ready to print</small></span></label>
+            <label class="opt"><input type="radio" name="service" value="Website localisation"><span><b>Website localisation</b><small>Your site in more languages</small></span></label>
+          </div>
+        </fieldset>
+
+        <fieldset data-step="2" hidden>
+          <legend>Which languages?</legend>
+          <div class="row2">
+            <label class="field">From<select name="from"><option>English</option><option>French</option><option>German</option><option>Spanish</option><option>Italian</option><option>Other</option></select></label>
+            <label class="field">Subject area<select name="area"><option>Technical</option><option>Medical and pharmaceutical</option><option>Legal</option><option>Marketing</option><option>European institutions</option><option>Something else</option></select></label>
+          </div>
+          <div class="field" role="group" aria-labelledby="to-l"><span id="to-l">Into <em>(choose as many as you need)</em></span>
+            <div class="chips">
+              <label class="chip"><input type="checkbox" name="to" value="French" checked><span>French</span></label>
+              <label class="chip"><input type="checkbox" name="to" value="German"><span>German</span></label>
+              <label class="chip"><input type="checkbox" name="to" value="Spanish"><span>Spanish</span></label>
+              <label class="chip"><input type="checkbox" name="to" value="Italian"><span>Italian</span></label>
+              <label class="chip"><input type="checkbox" name="to" value="Polish"><span>Polish</span></label>
+              <label class="chip"><input type="checkbox" name="to" value="Arabic"><span>Arabic</span></label>
+              <label class="chip"><input type="checkbox" name="to" value="Chinese"><span>Chinese</span></label>
+              <label class="chip"><input type="checkbox" name="to" value="Other"><span>Other</span></label>
+            </div>
+          </div>
+        </fieldset>
+
+        <fieldset data-step="3" hidden>
+          <legend>Your files</legend>
+          <p class="sub">Send your documents in their original format: Word, InDesign, Illustrator, PDF and more.</p>
+          <div class="drop"><input type="file" id="files" multiple aria-describedby="drop-t"><b>Choose files</b><span id="drop-t">or drag them here</span></div>
+          <ul class="files" id="file-list"></ul>
+          <p class="note">Anything over 10 MB? You can send it with our large file upload once you’ve sent this.</p>
+          <label class="field">When do you need it? <em>(optional)</em><input type="date" name="deadline"></label>
+        </fieldset>
+
+        <fieldset data-step="4" hidden>
+          <legend>Your details</legend>
+          <div class="row2">
+            <label class="field">Name<input name="name" autocomplete="name" required></label>
+            <label class="field">Company <em>(optional)</em><input name="company" autocomplete="organization"></label>
+          </div>
+          <div class="row2">
+            <label class="field">Email<input type="email" name="email" autocomplete="email" required></label>
+            <label class="field">Phone <em>(optional)</em><input type="tel" name="phone" autocomplete="tel"></label>
+          </div>
+          <label class="field">Anything else we should know? <em>(optional)</em><textarea name="msg" rows="3"></textarea></label>
+        </fieldset>
+
+        <p class="err" id="wiz-err" role="alert"></p>
+        <div class="wiz-nav" id="wiz-nav">
+          <button type="button" class="back" id="wiz-back" hidden>← Back</button>
+          <button type="submit" class="btn btn-primary" id="wiz-next">Continue <svg aria-hidden="true"><use href="#arr"/></svg></button>
+        </div>
+
+        <div class="done" id="wiz-done" hidden tabindex="-1">
+          <div class="tick"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M5 12.5l4.5 4.5L19 7"/></svg></div>
+          <h3>Thank you</h3>
+          <p>One of our project managers will be in touch to discuss your requirements.</p>
+          <span class="ref" id="wiz-ref">Q-0000</span>
+          <p class="pv">This is a preview — the form will go live with your new site.</p>
+        </div>
+      </form>
+    </div>
+  </div>
+</section>
+</main>
+
+<footer class="contact on-dark" id="contact" aria-labelledby="c-title">
+  <div class="wrap">
+    <p class="label">Contact us</p>
+    <h2 id="c-title" style="margin-top:22px">Contact us today</h2>
+    <p class="lede">Please contact us to discuss your needs and speak about getting a quote. Our project managers are always happy to help.</p>
+    <div class="cgrid">
+      <div><span>Call us from the UK</span><a href="tel:01794369370">01794 369 370</a></div>
+      <div><span>Call us from outside the UK</span><a href="tel:+441794369370">+44 1794 369 370</a></div>
+      <div><span>Email us</span><a href="mailto:sales@wt-lm.com">sales@wt-lm.com</a></div>
+    </div>
+    <div class="where">
+      <div>
+        <address>Wessex Translations Limited<br>Barn 500, The Grange, Romsey Road<br>Michelmersh, Romsey, Hampshire<br>SO51 0AE, UK</address>
+        <p style="margin-top:12px"><a href="https://www.google.com/maps/place/Wessex+Translations+Limited/">View in maps</a></p>
+      </div>
+      <div>
+        <p>Based just outside of Romsey, our office sits in the beautiful Hampshire countryside between the bustling port city of Southampton and the picturesque medieval city of Winchester.</p>
+        <p style="margin-top:14px">While our main office is in Hampshire, UK, we also have a sales office in France to help us meet the needs of our French client base.</p>
+      </div>
+    </div>
+    <div class="foot">
+      <a class="brand" href="#hero" aria-label="Wessex Translations, back to top"><svg aria-hidden="true"><use href="#logo"/></svg></a>
+      <nav aria-label="Footer"><a href="#team">Who we are</a><a href="#team">Careers</a><a href="#blog">Blog</a><a href="#">Privacy Policy</a><a href="#">Terms and Conditions</a></nav>
+      <div class="social">
+        <a href="https://www.linkedin.com/company/wessex-translations-limited/" aria-label="Wessex Translations on LinkedIn"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M4.98 3.5a2.5 2.5 0 1 1 0 5 2.5 2.5 0 0 1 0-5zM3 9.5h4V21H3zM9.5 9.5h3.8v1.6h.06c.53-1 1.83-2.06 3.77-2.06 4.03 0 4.77 2.65 4.77 6.1V21h-4v-5.1c0-1.22-.02-2.78-1.7-2.78-1.7 0-1.96 1.33-1.96 2.7V21h-4z"/></svg></a>
+        <a href="https://www.facebook.com/WessexTranslations/" aria-label="Wessex Translations on Facebook"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M13.5 21v-7.5H16l.4-3h-2.9V8.6c0-.87.25-1.46 1.5-1.46h1.6V4.46A21 21 0 0 0 14.27 4.3c-2.3 0-3.87 1.4-3.87 3.97v2.23H7.8v3h2.6V21z"/></svg></a>
+      </div>
+    </div>
+    <p class="legal">© Wessex Translations Limited</p>
+  </div>
+</footer>
+
+<script src="assets/js/gsap.min.js" defer></script>
+<script src="assets/js/ScrollTrigger.min.js" defer></script>
+<script src="assets/js/lenis.min.js" defer></script>
+<script src="assets/js/concept.js" defer></script>
+<script src="assets/js/site.js" defer></script>
+</body>
+</html>
