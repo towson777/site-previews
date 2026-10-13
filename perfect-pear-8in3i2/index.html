@@ -1,0 +1,575 @@
+<!--
+ART DIRECTION BRIEF — Perfect Pear (Brazilian waxing & aesthetics, Bedford Place, Southampton)
+
+IDEA: Smooth, made visible. The pear in the name is the whole identity: one clean outline that draws itself, then fills to ripeness as you move through the four things they do. Confident, clean, calm.
+
+PALETTE: pear #d3e36f (big blocks), cream #f6f2e4, charcoal #1c221b, leaf #4d6310 (small accents on cream), muted #565c4e.
+TYPE: Instrument Serif (display, upright and italic, used huge) + Hanken Grotesk (text, variable). Self-hosted woff2.
+HERO: full-bleed pear-green panel. Three-line oversized headline ("Smooth / since / 2015.") with a giant cream pear, outline drawn on load, bleeding off the right edge and tilting slowly on scroll. Slim proof line along the bottom. No photos in the brief, so type, colour and illustration carry it.
+SIGNATURE MOMENT: pinned scene. The pear outline draws, then fills from the bottom like it is ripening while the four services step through (Brazilian waxing, Facials, Threading, Brows & lashes). Phones: no pin, the pear fills as the section scrolls past and the list stays fully visible.
+FEATURE: booking drawer (service, women/men, day and time marked "Example availability", details, confirmation with a reference). Sends nothing.
+OTHER: charcoal ribbon of services and pears; counters; word-by-word statement; men/women panels; visit block with click-to-call; preview-only contact form.
+TRUTH: only name, address, phone, email, services, men and women, 5.0 Fresha rating, 1,972 Fresha reviews, since 2015. No prices, hours, quotes or team names (none supplied).
+
+HEADLINE SHORTLIST (competitor test in brackets):
+1. Brazilian waxing, expertly (filler, generic)
+2. Bedford Place's waxing specialists (fine but long, claims "the")
+3. Waxing for men and women (any salon could use it)
+4. Brazilian waxing on Bedford Place (specific, flat)
+5. Smooth, since 2015 (specific, calm)
+6. Brazilian waxing since 2015 (specific, but says less of the feel)
+7. Perfectly smooth (corny, pun on the name)
+8. First floor, Bedford Place (location only)
+9. Brazilian specialists, Southampton (a rival could say it)
+10. Ripe for a booking (pun, rejected)
+PICK: "Smooth since 2015." (3 words; the year is theirs and the word ties to the pear).
+-->
+<!doctype html>
+<html lang="en-GB">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<meta name="robots" content="noindex,nofollow">
+<title>Perfect Pear · Website concept</title>
+<meta name="description" content="A website concept for Perfect Pear, Brazilian waxing and aesthetics on Bedford Place, Southampton. Preview only.">
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Crect width='32' height='32' rx='16' fill='%23d3e36f'/%3E%3Cpath d='M16 8c-2 0-3 2-3 4 0 2-3 3-4 7-1 4 1 7 7 7s8-3 7-7c-1-4-4-5-4-7 0-2-1-4-3-4z' fill='%231c221b'/%3E%3C/svg%3E">
+<link rel="preload" href="assets/fonts/instrument-serif.woff2" as="font" type="font/woff2" crossorigin>
+<link rel="preload" href="assets/fonts/hanken-grotesk.woff2" as="font" type="font/woff2" crossorigin>
+<script>(function(d){if(!matchMedia('(prefers-reduced-motion: reduce)').matches){d.documentElement.classList.add('motion');setTimeout(function(){if(!d.documentElement.classList.contains('ready'))d.documentElement.classList.remove('motion')},3000)}})(document)</script>
+<style>
+@font-face{font-family:"Instrument Serif";src:url("assets/fonts/instrument-serif.woff2") format("woff2");font-weight:400;font-style:normal;font-display:swap}
+@font-face{font-family:"Instrument Serif";src:url("assets/fonts/instrument-serif-italic.woff2") format("woff2");font-weight:400;font-style:italic;font-display:swap}
+@font-face{font-family:"Hanken Grotesk";src:url("assets/fonts/hanken-grotesk.woff2") format("woff2");font-weight:100 900;font-display:swap}
+:root{
+  --pear:#d3e36f; --pear-soft:#e6efae; --cream:#f6f2e4; --paper:#fffdf6; --ink:#1c221b; --leaf:#4d6310; --muted:#565c4e; --line:#d9d6c3;
+  --display:"Instrument Serif", "Iowan Old Style", Georgia, serif; --body:"Hanken Grotesk", system-ui, sans-serif;
+  --ease:cubic-bezier(.2,.7,.1,1);
+}
+*{box-sizing:border-box}
+html.lenis,html.lenis body{height:auto}
+body{margin:0;background:var(--cream);color:var(--ink);font:400 17px/1.6 var(--body);-webkit-font-smoothing:antialiased;overflow-x:clip}
+img,svg{max-width:100%}
+p{margin:0}
+h1,h2,h3{font-family:var(--display);font-weight:400;margin:0;letter-spacing:-.015em;text-wrap:balance}
+h2{font-size:clamp(46px,6.4vw,104px);line-height:.95}
+h2 i,h1 i,h3 i{font-style:italic}
+.wrap{max-width:1320px;margin:0 auto;padding-inline:36px}
+@media (max-width:640px){.wrap{padding-inline:16px}}
+.lbl{font:600 12px/1 var(--body);letter-spacing:.24em;text-transform:uppercase;color:var(--leaf)}
+:focus-visible{outline:3px solid var(--ink);outline-offset:3px;border-radius:3px}
+.on-dark :focus-visible,.drawer :focus-visible{outline-color:var(--pear)}
+[hidden]{display:none!important}
+.sr{position:absolute;width:1px;height:1px;overflow:hidden;clip:rect(0 0 0 0);white-space:nowrap}
+
+.btn{display:inline-flex;align-items:center;justify-content:center;gap:12px;min-height:48px;font:600 14px/1 var(--body);letter-spacing:.14em;text-transform:uppercase;text-decoration:none;padding:16px 28px;border-radius:999px;border:2px solid var(--ink);cursor:pointer;background:var(--ink);color:var(--cream);transition:background-color .3s,color .3s,transform .3s var(--ease)}
+.btn:hover{background:var(--pear);color:var(--ink);transform:translateY(-2px)}
+.btn.ghost{background:transparent;color:var(--ink)}
+.btn.ghost:hover{background:var(--ink);color:var(--pear)}
+.btn.pear{background:var(--pear);border-color:var(--pear);color:var(--ink)}
+.btn.pear:hover{background:var(--cream);border-color:var(--cream)}
+
+/* preview banner */
+.concept{background:var(--ink);color:#d8dccf;font-size:13px;line-height:18px;text-align:center;padding:8px 16px}
+.concept b{color:var(--pear);font-weight:600}
+
+/* header */
+.top{position:sticky;top:0;z-index:50;background:color-mix(in srgb,var(--pear) 92%,transparent);backdrop-filter:blur(10px);-webkit-backdrop-filter:blur(10px);transition:transform .5s var(--ease)}
+.top.away{transform:translateY(-100%)}
+.top .wrap{display:flex;align-items:center;justify-content:space-between;gap:20px;height:76px}
+.logo{display:inline-flex;align-items:center;gap:10px;text-decoration:none;color:var(--ink);font:400 31px/1 var(--display);letter-spacing:-.01em}
+.logo svg{width:26px;height:34px;flex:none}
+.logo span i{font-style:italic}
+.top nav{display:flex;gap:30px}
+.top nav a{font:600 13px/1 var(--body);letter-spacing:.16em;text-transform:uppercase;text-decoration:none;color:var(--ink);padding:14px 0;border-bottom:2px solid transparent}
+.top nav a:hover{border-bottom-color:var(--ink)}
+.top .right{display:flex;align-items:center;gap:18px}
+.tel{font:600 15px/1 var(--body);color:var(--ink);text-decoration:none;display:inline-flex;align-items:center;gap:8px;min-height:44px}
+.tel:hover{text-decoration:underline}
+.top .btn{min-height:44px;padding:13px 22px;font-size:12px}
+@media (max-width:900px){.top nav{display:none}}
+@media (max-width:560px){.tel .num{display:none}.tel{width:44px;justify-content:center;border:2px solid var(--ink);border-radius:50%}.logo{font-size:27px}}
+
+/* hero */
+.hero{position:relative;background:var(--pear);overflow:hidden;margin-top:-76px;padding-top:76px}
+.hero .wrap{position:relative;min-height:min(900px,calc(100svh - 34px));display:flex;flex-direction:column;justify-content:flex-end;padding-block:70px 0}
+.hero h1 .ln:nth-child(3){margin-top:.04em}
+.hero h1{position:relative;z-index:2;font-size:clamp(88px,14vw,240px);line-height:.84;letter-spacing:-.04em;margin-left:-.04em}
+.hero h1 .ln{display:block;overflow:hidden;padding-bottom:.08em;margin-bottom:-.08em}
+.hero h1 .ln>span{display:block}
+.hero h1 .ln:nth-child(2){padding-left:.9em;line-height:.66}
+.hero h1 .ln:nth-child(2) i{font-size:.62em;letter-spacing:-.02em}
+.hero-pear{position:absolute;z-index:1;right:-7vw;top:50%;width:clamp(380px,44vw,700px);aspect-ratio:400/520;transform:translateY(-46%) rotate(6deg);pointer-events:none}
+.hero-pear svg{width:100%;height:100%;display:block;overflow:visible}
+.hero-lede{position:relative;z-index:2;display:grid;grid-template-columns:minmax(0,34em);gap:22px;margin-top:30px;padding-bottom:28px}
+.hero-lede p{font-size:clamp(18px,1.5vw,22px);line-height:1.45}
+.ctas{display:flex;gap:12px;flex-wrap:wrap}
+.hero-proof{position:relative;z-index:2;border-top:2px solid var(--ink);display:flex;justify-content:space-between;gap:10px 24px;flex-wrap:wrap;padding-block:16px 18px;font:600 12px/1.3 var(--body);letter-spacing:.16em;text-transform:uppercase}
+.hero-proof span b{font-weight:800}
+@media (max-width:900px){.hero-lede{grid-template-columns:1fr}.hero-pear{width:84vw;right:-30vw;top:36%}.hero h1 .ln:nth-child(2){padding-left:.5em}}
+@media (max-width:560px){.hero .wrap{padding-top:50px;min-height:calc(100svh - 34px)}.hero h1{font-size:clamp(92px,30vw,160px)}.hero-proof{font-size:11px;letter-spacing:.1em}}
+html.motion:not(.ready) .hero h1 .ln>span{transform:translateY(105%)}
+html.motion:not(.ready) [data-intro]{opacity:0}
+
+/* ribbon */
+.strip{background:var(--ink);color:var(--pear);overflow:hidden;padding-block:20px;white-space:nowrap}
+.strip .track{display:inline-flex;align-items:center;gap:36px;padding-right:36px;will-change:transform}
+.strip .track span{font:italic 400 clamp(30px,3.6vw,52px)/1 var(--display)}
+.strip .track svg{width:20px;height:26px;flex:none;fill:var(--pear)}
+html:not(.motion) .strip{overflow-x:auto}
+
+/* proof */
+.proof{padding-block:110px 90px}
+.proof-grid{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:0}
+.stat{padding:12px 36px 12px 0;border-top:2px solid var(--ink)}
+.stat+.stat{padding-left:36px;border-left:1px solid var(--line)}
+.stat .n{font:400 clamp(86px,12vw,190px)/.9 var(--display);letter-spacing:-.03em;margin-top:22px;font-variant-numeric:lining-nums}
+.stat .n small{font-size:.4em;letter-spacing:0;margin-left:.08em}
+.stat p{font:600 12px/1.4 var(--body);letter-spacing:.2em;text-transform:uppercase;color:var(--muted);margin-top:16px}
+@media (max-width:760px){.proof{padding-block:70px 50px}.proof-grid{grid-template-columns:1fr}.stat,.stat+.stat{padding:12px 0 30px;border-left:0}.stat .n{font-size:110px}}
+
+/* statement */
+.state{background:var(--ink);color:var(--cream);padding-block:150px}
+.state .lbl{color:var(--pear);display:block;margin-bottom:36px}
+.state p.big{font:400 clamp(36px,5.2vw,86px)/1.05 var(--display);max-width:19em;letter-spacing:-.015em}
+.state p.big i{color:var(--pear)}
+html.motion .state .sw{opacity:.2}
+@media (max-width:640px){.state{padding-block:90px}}
+
+/* signature scene */
+.scene{position:relative;background:var(--cream)}
+.scene-pin{min-height:100vh;display:flex;align-items:center;padding-block:60px}
+.scene-grid{display:grid;grid-template-columns:minmax(0,.9fr) minmax(0,1.1fr);gap:60px;align-items:center;width:100%}
+.pearbox{position:relative;justify-self:center;width:min(100%,520px);aspect-ratio:400/540}
+.pearbox svg{width:100%;height:100%;display:block;overflow:visible}
+.pnum{position:absolute;left:0;bottom:-6px;font:400 clamp(60px,7vw,110px)/1 var(--display);font-variant-numeric:lining-nums;letter-spacing:-.03em}
+.pnum small{font-size:.32em;color:var(--muted);letter-spacing:0;margin-left:.2em}
+.scene h2{margin-top:20px}
+.slist{list-style:none;margin:44px 0 0;padding:0;border-top:2px solid var(--ink)}
+.slist li{border-bottom:1px solid var(--line)}
+.slist button{all:unset;box-sizing:border-box;width:100%;display:grid;grid-template-columns:56px minmax(0,1fr) auto;gap:6px 18px;align-items:baseline;padding:22px 4px;cursor:pointer;transition:opacity .5s}
+.slist button:focus-visible{outline:3px solid var(--ink);outline-offset:-3px}
+.slist .n{font:600 12px/1 var(--body);letter-spacing:.2em;color:var(--leaf)}
+.slist .t{font:400 clamp(38px,4.6vw,70px)/1 var(--display);letter-spacing:-.02em;transition:transform .5s var(--ease)}
+.slist .d{grid-column:2;font-size:16px;color:var(--muted)}
+.slist .go{font:600 12px/1 var(--body);letter-spacing:.16em;text-transform:uppercase;grid-row:1;grid-column:3;border-bottom:2px solid var(--ink);padding-bottom:3px}
+.slist button:hover .t{transform:translateX(14px)}
+html.motion .slist li{opacity:.42;transition:opacity .5s}
+html.motion .slist li.on{opacity:1}
+html.motion .slist li:hover,html.motion .slist li:focus-within{opacity:1}
+@media (max-width:900px){
+  .scene-pin{min-height:0;padding-block:80px}
+  .scene-grid{grid-template-columns:1fr;gap:40px}
+  .pearbox{width:min(70%,300px);justify-self:start}
+  html.motion .slist li{opacity:1}
+  .slist button{grid-template-columns:36px minmax(0,1fr)}
+  .slist .go{display:none}
+}
+
+/* for whom */
+.who{padding-block:20px 120px}
+.who-grid{display:grid;grid-template-columns:1fr 1fr;gap:18px}
+.panel{position:relative;overflow:hidden;min-height:440px;padding:40px;display:flex;flex-direction:column;justify-content:space-between;border-radius:28px}
+.panel.w{background:var(--pear)}
+.panel.m{background:var(--ink);color:var(--cream)}
+.panel h3{font-size:clamp(70px,9vw,150px);line-height:.88;letter-spacing:-.035em}
+.panel p{max-width:22em;font-size:18px;margin-top:18px}
+.panel .btn{align-self:flex-start;margin-top:28px}
+.panel.m .btn{background:var(--pear);border-color:var(--pear);color:var(--ink)}
+.panel.m .btn:hover{background:var(--cream);border-color:var(--cream)}
+.panel .ghostpear{position:absolute;right:-60px;bottom:-90px;width:300px;opacity:.28;transform:rotate(-12deg);pointer-events:none}
+@media (max-width:760px){.who{padding-bottom:70px}.who-grid{grid-template-columns:1fr}.panel{min-height:360px;padding:28px}}
+
+/* visit */
+.visit{background:var(--pear);padding-block:110px 0;overflow:hidden}
+.visit-row{display:grid;grid-template-columns:minmax(0,1.15fr) minmax(0,1fr);gap:70px;align-items:start}
+.visit h2{margin-top:20px}
+.visit address{font-style:normal;font:400 clamp(30px,3.2vw,48px)/1.1 var(--display);margin-top:36px;letter-spacing:-.01em}
+.visit .lines{margin-top:30px;display:grid;gap:4px;font-size:18px}
+.visit .lines a{color:var(--ink);font-weight:600}
+.visit .lines a:hover{text-decoration-thickness:3px}
+.vform{background:var(--cream);border-radius:28px;padding:34px;display:grid;gap:14px}
+.vform h3{font-size:38px;line-height:1}
+.vform label{display:grid;gap:6px;font:600 13px/1.2 var(--body);letter-spacing:.04em}
+.vform input,.vform textarea,.fields input,.fields textarea{font:400 16px/1.4 var(--body);border:2px solid var(--line);background:#fff;padding:13px 14px;color:var(--ink);border-radius:12px;min-height:48px;width:100%}
+.vform input:focus,.vform textarea:focus,.fields input:focus,.fields textarea:focus{outline:none;border-color:var(--ink)}
+.vform .okmsg{background:var(--pear-soft);border-radius:14px;padding:16px 18px;font-weight:600}
+.giant{font:400 clamp(110px,24.5vw,400px)/.8 var(--display);letter-spacing:-.05em;white-space:nowrap;margin:90px 0 0;padding-left:max(36px,calc((100vw - 1320px)/2 + 36px));color:var(--ink);padding-bottom:.02em}
+.giant i{font-style:italic}
+.foot{background:var(--ink);color:#c9cdbf;font-size:14px;padding-block:22px}
+.foot .wrap{display:flex;justify-content:space-between;flex-wrap:wrap;gap:10px 24px}
+.foot a{color:var(--pear)}
+@media (max-width:640px){.giant{padding-left:12px;font-size:21.5vw;margin-top:60px}.panel .ghostpear{width:190px;right:-50px;bottom:-60px;opacity:.14}}
+@media (max-width:900px){.visit{padding-top:80px}.visit-row{grid-template-columns:1fr;gap:44px}.vform{padding:24px}}
+
+/* booking drawer */
+.scrim{position:fixed;inset:0;background:#1c221bb0;z-index:80;opacity:0;transition:opacity .35s}
+.scrim.on{opacity:1}
+.drawer{position:fixed;top:0;right:0;bottom:0;width:min(620px,100%);background:var(--paper);z-index:81;display:flex;flex-direction:column;transform:translateX(100%);transition:transform .55s var(--ease);box-shadow:-30px 0 60px -20px #0006}
+.drawer.on{transform:none}
+.dr-head{display:flex;justify-content:space-between;align-items:center;padding:18px 26px;background:var(--pear)}
+.dr-head .logo{font-size:26px}
+.dr-close{all:unset;cursor:pointer;font:600 12px/1 var(--body);letter-spacing:.16em;text-transform:uppercase;padding:14px 10px;min-height:44px;box-sizing:border-box}
+.dr-close:focus-visible{outline:3px solid var(--ink)}
+.prog{display:flex;gap:6px;padding:16px 26px 0}
+.prog i{flex:1;height:4px;border-radius:2px;background:var(--line)}
+.prog i.on{background:var(--ink)}
+.dr-step{padding:12px 26px 0;font:600 12px/1 var(--body);letter-spacing:.2em;text-transform:uppercase;color:var(--leaf)}
+.dr-body{flex:1;overflow-y:auto;padding:14px 26px 26px;overscroll-behavior:contain}
+.dr-body h3{font-size:46px;line-height:1;margin:6px 0 22px}
+.opt{all:unset;box-sizing:border-box;width:100%;display:grid;grid-template-columns:minmax(0,1fr) auto;gap:4px 16px;padding:18px 20px;border:2px solid var(--line);border-radius:16px;margin-bottom:10px;cursor:pointer;background:#fff;min-height:64px;align-items:center}
+.opt:hover{border-color:var(--ink)}
+.opt[aria-pressed="true"]{border-color:var(--ink);background:var(--pear-soft)}
+.opt:focus-visible{outline:3px solid var(--ink);outline-offset:2px}
+.opt b{font:400 28px/1.1 var(--display)}
+.opt span{font-size:14px;color:var(--muted)}
+.opt .tick{width:26px;height:26px;border-radius:50%;border:2px solid var(--ink);grid-row:span 2;display:grid;place-items:center;font-size:14px;color:transparent}
+.opt[aria-pressed="true"] .tick{background:var(--ink);color:var(--pear)}
+.cal{display:grid;grid-template-columns:repeat(7,minmax(0,1fr));gap:6px}
+.cal button{all:unset;box-sizing:border-box;cursor:pointer;text-align:center;padding:10px 0;min-height:56px;border:2px solid var(--line);border-radius:12px;background:#fff;display:grid;gap:2px;align-content:center}
+.cal button small{font:600 10px/1 var(--body);letter-spacing:.12em;text-transform:uppercase;color:var(--muted)}
+.cal button b{font:400 26px/1 var(--display)}
+.cal button[aria-pressed="true"]{background:var(--ink);color:var(--cream);border-color:var(--ink)}
+.cal button[aria-pressed="true"] small{color:var(--pear)}
+.cal button:disabled{opacity:.35;cursor:not-allowed}
+.cal button:focus-visible,.slots button:focus-visible{outline:3px solid var(--ink);outline-offset:2px}
+.slots{display:grid;grid-template-columns:repeat(auto-fill,minmax(84px,1fr));gap:8px;margin-top:20px}
+.slots button{all:unset;box-sizing:border-box;cursor:pointer;text-align:center;padding:14px 0;min-height:48px;border:2px solid var(--line);border-radius:999px;background:#fff;font:600 15px/1 var(--body);font-variant-numeric:tabular-nums}
+.slots button[aria-pressed="true"]{background:var(--pear);border-color:var(--ink)}
+.slots button:disabled{opacity:.35;text-decoration:line-through;cursor:not-allowed}
+.eg{font-size:13px;color:var(--muted);margin-top:14px}
+.fields{display:grid;gap:14px}
+.fields label{display:grid;gap:6px;font:600 14px/1.2 var(--body)}
+.dr-foot{border-top:2px solid var(--ink);padding:16px 26px calc(16px + env(safe-area-inset-bottom,0px));display:flex;justify-content:space-between;align-items:center;gap:16px;background:var(--paper)}
+.dr-foot .sum{font-size:14px;color:var(--muted);line-height:1.35}
+.dr-foot .sum b{display:block;color:var(--ink);font:400 24px/1.1 var(--display)}
+.dr-foot .acts{display:flex;gap:8px}
+.dr-foot .btn{padding:14px 22px;font-size:12px;min-height:46px}
+.dr-foot .btn[disabled]{opacity:.4;cursor:not-allowed;transform:none}
+.done{text-align:left;display:grid;gap:16px;padding-top:18px}
+.done .seal{width:110px;height:140px}
+.done dl{display:grid;grid-template-columns:auto 1fr;gap:10px 28px;margin:6px 0 0;font-size:17px;border-top:2px solid var(--ink);padding-top:16px}
+.done dt{color:var(--muted)}
+.done dd{margin:0;font-weight:600}
+.done .note{color:var(--muted);font-size:14px;max-width:30em}
+@media (max-width:520px){.dr-body h3{font-size:38px}.cal{gap:4px}.dr-foot{flex-direction:column;align-items:stretch}.dr-foot .acts{justify-content:flex-end}}
+
+@media (prefers-reduced-motion: reduce){*{scroll-behavior:auto!important;transition-duration:.01ms!important}}
+</style>
+</head>
+<body>
+<svg width="0" height="0" style="position:absolute" aria-hidden="true" focusable="false">
+  <defs>
+    <symbol id="pear-mark" viewBox="0 0 40 52"><path d="M20 12c-3 0-5 3-5 7 0 4-6 6-8 13-2 8 3 18 13 18s15-10 13-18c-2-7-8-9-8-13 0-4-2-7-5-7z"/><path d="M20 12c0-4 1-7 4-10" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round"/></symbol>
+  </defs>
+</svg>
+<div class="concept" id="banner">Website concept for <b>Perfect Pear</b> — preview only, not the live site. &nbsp;Designed by Itchen Studio · sam@itchenstudio.co.uk</div>
+
+<header class="top">
+  <div class="wrap">
+    <a class="logo" href="#hero" aria-label="Perfect Pear, home">
+      <svg viewBox="0 0 40 52" aria-hidden="true"><path d="M20 12c-3 0-5 3-5 7 0 4-6 6-8 13-2 8 3 18 13 18s15-10 13-18c-2-7-8-9-8-13 0-4-2-7-5-7z" fill="#1c221b"/><path d="M20 12c0-4 1-7 4-10" fill="none" stroke="#1c221b" stroke-width="2.6" stroke-linecap="round"/><path d="M23 7c3-3 8-3 11-1-3 3-8 4-11 1z" fill="#4d6310"/></svg>
+      <span>Perfect <i>Pear</i></span>
+    </a>
+    <nav aria-label="Main"><a href="#services">What we do</a><a href="#who">Women &amp; men</a><a href="#visit">Find us</a></nav>
+    <div class="right">
+      <a class="tel" href="tel:07484142527" aria-label="Call 07484 142527"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 3h4l2 5-2.5 1.5a11 11 0 0 0 6 6L16 13l5 2v4a2 2 0 0 1-2 2A16 16 0 0 1 3 5a2 2 0 0 1 2-2z"/></svg><span class="num">07484 142527</span></a>
+      <button class="btn" type="button" data-book>Book now</button>
+    </div>
+  </div>
+</header>
+
+<main id="main">
+<section class="hero" id="hero" aria-labelledby="h1">
+  <div class="hero-pear" aria-hidden="true">
+    <svg viewBox="0 0 400 540">
+      <path id="hp-body" pathLength="1" d="M200 92c-30 0-50 40-52 90-2 40-48 75-70 140-23 70 7 170 122 178 115-8 145-108 122-178-22-65-68-100-70-140-2-50-22-90-52-90z" fill="#f6f2e4" stroke="#1c221b" stroke-width="3" stroke-linejoin="round"/>
+      <path id="hp-stem" pathLength="1" d="M200 92c0-22 6-40 18-58" fill="none" stroke="#1c221b" stroke-width="5" stroke-linecap="round"/>
+      <path id="hp-leaf" d="M214 62c26-30 72-32 90-12-24 24-66 30-90 12z" fill="#4d6310"/>
+      <path id="hp-shine" pathLength="1" d="M128 330c-8 30-2 62 18 84" fill="none" stroke="#d3e36f" stroke-width="10" stroke-linecap="round"/>
+    </svg>
+  </div>
+  <div class="wrap">
+    <h1 id="h1"><span class="ln"><span>Smooth</span></span><span class="ln"><span><i>since</i></span></span><span class="ln"><span>2015.</span></span></h1>
+    <div class="hero-lede">
+      <p data-intro>Brazilian waxing and aesthetics for women and men, on the first floor at Trinity House, Bedford Place in Southampton.</p>
+      <div class="ctas" data-intro><button class="btn" type="button" data-book>Book now</button><a class="btn ghost" href="#services">What we do</a></div>
+    </div>
+    <div class="hero-proof" data-intro><span><b>5.0</b> from 1,972 Fresha reviews</span><span>Open since 2015</span><span>Bedford Place, SO15</span></div>
+  </div>
+</section>
+
+<div class="strip" aria-hidden="true"><div class="track" data-speed="0.7">
+  <span>Brazilian waxing</span><svg viewBox="0 0 40 52"><use href="#pear-mark"/></svg><span>Facials</span><svg viewBox="0 0 40 52"><use href="#pear-mark"/></svg><span>Threading</span><svg viewBox="0 0 40 52"><use href="#pear-mark"/></svg><span>Brows &amp; lashes</span><svg viewBox="0 0 40 52"><use href="#pear-mark"/></svg><span>Women &amp; men</span><svg viewBox="0 0 40 52"><use href="#pear-mark"/></svg><span>Bedford Place</span><svg viewBox="0 0 40 52"><use href="#pear-mark"/></svg>
+  <span>Brazilian waxing</span><svg viewBox="0 0 40 52"><use href="#pear-mark"/></svg><span>Facials</span><svg viewBox="0 0 40 52"><use href="#pear-mark"/></svg><span>Threading</span><svg viewBox="0 0 40 52"><use href="#pear-mark"/></svg><span>Brows &amp; lashes</span><svg viewBox="0 0 40 52"><use href="#pear-mark"/></svg><span>Women &amp; men</span><svg viewBox="0 0 40 52"><use href="#pear-mark"/></svg><span>Bedford Place</span><svg viewBox="0 0 40 52"><use href="#pear-mark"/></svg>
+</div></div>
+
+<section class="proof" aria-label="Perfect Pear in numbers">
+  <div class="wrap">
+    <div class="proof-grid">
+      <div class="stat" data-reveal><div class="n">5.0</div><p>Rating on Fresha</p></div>
+      <div class="stat" data-reveal><div class="n" data-count="1972">1,972</div><p>Reviews on Fresha</p></div>
+      <div class="stat" data-reveal><div class="n">2015</div><p>Open since</p></div>
+    </div>
+  </div>
+</section>
+
+<section class="state" aria-label="About Perfect Pear">
+  <div class="wrap">
+    <span class="lbl">The salon</span>
+    <p class="big" id="stmt">Brazilian waxing is the speciality. Facials, threading, brows and lashes sit alongside it, for <i>women and men,</i> in a calm room on Bedford Place.</p>
+  </div>
+</section>
+
+<section class="scene" id="services" aria-labelledby="svc-title">
+  <div class="scene-pin">
+    <div class="wrap scene-grid">
+      <div class="pearbox" aria-hidden="true">
+        <svg viewBox="0 0 400 540">
+          <defs><clipPath id="ripe"><rect id="ripe-rect" x="-20" y="80" width="440" height="460"/></clipPath></defs>
+          <path d="M200 92c-30 0-50 40-52 90-2 40-48 75-70 140-23 70 7 170 122 178 115-8 145-108 122-178-22-65-68-100-70-140-2-50-22-90-52-90z" fill="#fffdf6"/>
+          <path clip-path="url(#ripe)" d="M200 92c-30 0-50 40-52 90-2 40-48 75-70 140-23 70 7 170 122 178 115-8 145-108 122-178-22-65-68-100-70-140-2-50-22-90-52-90z" fill="#d3e36f"/>
+          <path id="sc-body" pathLength="1" d="M200 92c-30 0-50 40-52 90-2 40-48 75-70 140-23 70 7 170 122 178 115-8 145-108 122-178-22-65-68-100-70-140-2-50-22-90-52-90z" fill="none" stroke="#1c221b" stroke-width="3.5" stroke-linejoin="round"/>
+          <path id="sc-stem" pathLength="1" d="M200 92c0-22 6-40 18-58" fill="none" stroke="#1c221b" stroke-width="5" stroke-linecap="round"/>
+          <path id="sc-leaf" d="M214 62c26-30 72-32 90-12-24 24-66 30-90 12z" fill="#4d6310"/>
+        </svg>
+        <div class="pnum"><span id="pnum">01</span><small>/ 04</small></div>
+      </div>
+      <div>
+        <p class="lbl" data-reveal>What we do</p>
+        <h2 id="svc-title" data-split>Four things, <i>one</i> standard.</h2>
+        <ol class="slist" id="slist">
+          <li class="on"><button type="button" data-book data-svc="wax"><span class="n">01</span><span class="t">Brazilian <i>waxing</i></span><span class="go">Book</span><span class="d">The speciality, for women and men.</span></button></li>
+          <li><button type="button" data-book data-svc="facial"><span class="n">02</span><span class="t">Facials</span><span class="go">Book</span><span class="d">Face care in a calm treatment room.</span></button></li>
+          <li><button type="button" data-book data-svc="thread"><span class="n">03</span><span class="t">Threading</span><span class="go">Book</span><span class="d">Clean lines for brows and face.</span></button></li>
+          <li><button type="button" data-book data-svc="brows"><span class="n">04</span><span class="t">Brows &amp; <i>lashes</i></span><span class="go">Book</span><span class="d">Shaped and finished to suit you.</span></button></li>
+        </ol>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="who" id="who" aria-labelledby="who-title">
+  <div class="wrap">
+    <h2 id="who-title" class="sr">Women and men</h2>
+    <div class="who-grid">
+      <article class="panel w" data-reveal>
+        <svg class="ghostpear" viewBox="0 0 40 52" aria-hidden="true" fill="#1c221b"><use href="#pear-mark"/></svg>
+        <div><p class="lbl" style="color:var(--ink)">For</p><h3>Women</h3><p>Brazilian waxing at the centre of the menu, with brows, lashes, threading and facials alongside.</p></div>
+        <button class="btn" type="button" data-book data-who="women">Book for women</button>
+      </article>
+      <article class="panel m on-dark" data-reveal>
+        <svg class="ghostpear" viewBox="0 0 40 52" aria-hidden="true" fill="#d3e36f"><use href="#pear-mark"/></svg>
+        <div><p class="lbl" style="color:var(--pear)">For</p><h3>Men</h3><p>The same room and the same standard, with a waxing menu of its own.</p></div>
+        <button class="btn" type="button" data-book data-who="men">Book for men</button>
+      </article>
+    </div>
+  </div>
+</section>
+
+<section class="visit" id="visit" aria-labelledby="visit-title">
+  <div class="wrap">
+    <div class="visit-row">
+      <div>
+        <p class="lbl" style="color:var(--ink)">Find us</p>
+        <h2 id="visit-title" data-split>First floor, <i>Bedford Place.</i></h2>
+        <address>1st Floor, Trinity House<br>77 Bedford Place<br>Southampton SO15 2DY</address>
+        <div class="lines">
+          <p>Call <a href="tel:07484142527">07484 142527</a></p>
+          <p>Email <a href="mailto:info@perfectpear.co">info@perfectpear.co</a></p>
+        </div>
+        <p class="ctas" style="margin-top:34px"><button class="btn" type="button" data-book>Book now</button></p>
+      </div>
+      <form class="vform" id="cform" novalidate>
+        <h3>Send a <i>message</i></h3>
+        <label for="c-n">Name<input id="c-n" autocomplete="name" required></label>
+        <label for="c-p">Phone or email<input id="c-p" autocomplete="email" required></label>
+        <label for="c-m">Your message<textarea id="c-m" rows="4" required></textarea></label>
+        <button class="btn" type="submit">Send message</button>
+        <p class="okmsg" id="cdone" role="status" hidden>This is a preview — the form will go live with your new site.</p>
+      </form>
+    </div>
+  </div>
+  <p class="giant" aria-hidden="true">Perfect <i>Pear</i></p>
+</section>
+</main>
+
+<footer class="foot"><div class="wrap"><span>© Perfect Pear · Brazilian waxing &amp; aesthetics, Southampton</span><span>Website concept by <a href="mailto:sam@itchenstudio.co.uk">Itchen Studio</a> · preview only</span></div></footer>
+
+<div class="scrim" id="scrim" hidden></div>
+<div class="drawer" id="drawer" role="dialog" aria-modal="true" aria-labelledby="dr-title" hidden>
+  <div class="dr-head"><span class="logo"><svg viewBox="0 0 40 52" aria-hidden="true"><path d="M20 12c-3 0-5 3-5 7 0 4-6 6-8 13-2 8 3 18 13 18s15-10 13-18c-2-7-8-9-8-13 0-4-2-7-5-7z" fill="#1c221b"/></svg><span>Perfect <i>Pear</i></span></span><button class="dr-close" type="button" id="dr-close">Close ✕</button></div>
+  <div class="prog" aria-hidden="true"><i></i><i></i><i></i><i></i></div>
+  <p class="dr-step" id="dr-step"></p>
+  <div class="dr-body" id="dr-body"></div>
+  <div class="dr-foot"><div class="sum" id="dr-sum"></div><div class="acts"><button class="btn ghost" type="button" id="dr-back">Back</button><button class="btn" type="button" id="dr-next">Continue</button></div></div>
+</div>
+
+<script src="assets/js/gsap.min.js" defer></script>
+<script src="assets/js/ScrollTrigger.min.js" defer></script>
+<script src="assets/js/lenis.min.js" defer></script>
+<script src="assets/js/concept.js" defer></script>
+<script defer>
+document.addEventListener('DOMContentLoaded', function () {
+  var api = ConceptSite.init();
+  api.fakeForm('cform', 'cdone');
+  var esc = function (s) { return String(s).replace(/[&<>"]/g, function (c) { return { '&': '&amp;', '<': '&lt;', '>': '&gt;', '"': '&quot;' }[c]; }); };
+
+  /* ---------- booking drawer (nothing is sent anywhere) ---------- */
+  var SERVICES = [
+    { id: 'wax', n: 'Brazilian waxing', note: 'The speciality' },
+    { id: 'facial', n: 'Facials', note: 'Face care' },
+    { id: 'thread', n: 'Threading', note: 'Brows and face' },
+    { id: 'brows', n: 'Brows & lashes', note: 'Shaped and finished' }
+  ];
+  var DN = ['Sun', 'Mon', 'Tue', 'Wed', 'Thu', 'Fri', 'Sat'], MN = ['Jan', 'Feb', 'Mar', 'Apr', 'May', 'Jun', 'Jul', 'Aug', 'Sep', 'Oct', 'Nov', 'Dec'];
+  var drawer = document.getElementById('drawer'), scrim = document.getElementById('scrim'), body = document.getElementById('dr-body');
+  var B = { step: 0, svc: null, who: null, day: null, time: null, name: '', phone: '', email: '' }, lastFocus = null;
+  var today = new Date(); today.setHours(0, 0, 0, 0);
+  var days = []; for (var i = 1; i <= 14; i++) days.push(new Date(today.getFullYear(), today.getMonth(), today.getDate() + i));
+  function svc() { return SERVICES.filter(function (s) { return s.id === B.svc; })[0]; }
+  function lab(t) { return String(Math.floor(t)).padStart(2, '0') + ':' + (t % 1 ? '30' : '00'); }
+  function seeded(n) { var x = Math.sin(n) * 10000; return x - Math.floor(x); }
+  function slots(d) {
+    var out = [];
+    for (var t = 10; t <= 17; t += .5) out.push({ t: t, off: seeded(d.getDate() * 13 + t * 5 + (B.svc ? B.svc.length : 0)) < .4 });
+    return out;
+  }
+  function when() { var d = days[B.day]; return DN[d.getDay()] + ' ' + d.getDate() + ' ' + MN[d.getMonth()] + ', ' + lab(B.time); }
+  var PEAR_SEAL = '<svg class="seal" viewBox="0 0 40 52" aria-hidden="true"><path d="M20 12c-3 0-5 3-5 7 0 4-6 6-8 13-2 8 3 18 13 18s15-10 13-18c-2-7-8-9-8-13 0-4-2-7-5-7z" fill="#d3e36f" stroke="#1c221b" stroke-width="1.4"/><path d="M20 12c0-4 1-7 4-10" fill="none" stroke="#1c221b" stroke-width="2.4" stroke-linecap="round"/><path d="m14 30 4 4 8-9" fill="none" stroke="#1c221b" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"/></svg>';
+  function render() {
+    var s = svc(), h = '';
+    document.querySelectorAll('.prog i').forEach(function (p, k) { p.classList.toggle('on', k <= Math.min(B.step, 3)); });
+    document.getElementById('dr-step').textContent = B.step < 4 ? 'Step ' + (B.step + 1) + ' of 4' : 'Booked (example)';
+    if (B.step === 0) {
+      h = '<h3 id="dr-title" tabindex="-1">What are you <i>booking?</i></h3>';
+      SERVICES.forEach(function (x) { h += '<button type="button" class="opt" data-svc="' + x.id + '" aria-pressed="' + (B.svc === x.id) + '"><b>' + esc(x.n) + '</b><span class="tick" aria-hidden="true">✓</span><span>' + esc(x.note) + '</span></button>'; });
+      h += '<h3 style="font-size:32px;margin:26px 0 14px">Who is it <i>for?</i></h3>';
+      ['women', 'men'].forEach(function (w) { h += '<button type="button" class="opt" data-who="' + w + '" aria-pressed="' + (B.who === w) + '"><b>' + (w === 'women' ? 'Women' : 'Men') + '</b><span class="tick" aria-hidden="true">✓</span></button>'; });
+    } else if (B.step === 1) {
+      h = '<h3 id="dr-title" tabindex="-1">Pick a <i>day</i> and time</h3><div class="cal">';
+      days.forEach(function (d, k) {
+        var free = slots(d).some(function (x) { return !x.off; }) && d.getDay() !== 0;
+        h += '<button type="button" data-day="' + k + '" aria-pressed="' + (B.day === k) + '" ' + (free ? '' : 'disabled') + ' aria-label="' + DN[d.getDay()] + ' ' + d.getDate() + ' ' + MN[d.getMonth()] + (free ? '' : ', unavailable') + '"><small>' + DN[d.getDay()] + '</small><b>' + d.getDate() + '</b></button>';
+      });
+      h += '</div><div class="slots" id="slots">';
+      if (B.day !== null) slots(days[B.day]).forEach(function (x) { h += '<button type="button" data-time="' + x.t + '" aria-pressed="' + (B.time === x.t) + '" ' + (x.off ? 'disabled aria-label="' + lab(x.t) + ', taken"' : '') + '>' + lab(x.t) + '</button>'; });
+      else h += '<p style="color:var(--muted);font-size:15px;grid-column:1/-1">Choose a day to see free times.</p>';
+      h += '</div><p class="eg">Example availability. Real times come from the live booking system.</p>';
+    } else if (B.step === 2) {
+      h = '<h3 id="dr-title" tabindex="-1">Your <i>details</i></h3><div class="fields"><label for="f-n">Full name<input id="f-n" autocomplete="name" value="' + esc(B.name) + '" required></label><label for="f-p">Mobile<input id="f-p" type="tel" autocomplete="tel" value="' + esc(B.phone) + '" required></label><label for="f-e">Email <span style="font-weight:400;color:var(--muted)">(optional)</span><input id="f-e" type="email" autocomplete="email" value="' + esc(B.email) + '"></label></div>';
+    } else if (B.step === 3) {
+      h = '<h3 id="dr-title" tabindex="-1">Check and <i>confirm</i></h3><div class="done" style="padding-top:0"><dl><dt>Treatment</dt><dd>' + esc(s.n) + '</dd><dt>For</dt><dd>' + (B.who === 'men' ? 'Men' : 'Women') + '</dd><dt>When</dt><dd>' + when() + '</dd><dt>Name</dt><dd>' + esc(B.name) + '</dd><dt>Mobile</dt><dd>' + esc(B.phone) + '</dd></dl><p class="note">Nothing is sent from this preview. Confirm to see what customers would see.</p></div>';
+    } else {
+      h = '<div class="done" role="status">' + PEAR_SEAL + '<p class="lbl">Reference PP-' + (4000 + Math.floor(Math.random() * 5000)) + '</p><h3 id="dr-title" tabindex="-1">You\'re <i>booked in.</i></h3><dl><dt>Treatment</dt><dd>' + esc(s.n) + '</dd><dt>For</dt><dd>' + (B.who === 'men' ? 'Men' : 'Women') + '</dd><dt>When</dt><dd>' + when() + '</dd><dt>Where</dt><dd>1st Floor, Trinity House, 77 Bedford Place</dd></dl><p class="note">This is a preview, so nothing was booked. On the live site this screen would follow a real confirmation.</p></div>';
+    }
+    body.innerHTML = h;
+    document.getElementById('dr-sum').innerHTML = s ? '<b>' + esc(s.n) + '</b>' + (B.who ? (B.who === 'men' ? 'Men' : 'Women') : 'Choose who it is for') + (B.time !== null && B.day !== null ? ' · ' + when() : '') : 'Nothing chosen yet';
+    var next = document.getElementById('dr-next'), back = document.getElementById('dr-back');
+    back.hidden = B.step === 0 || B.step === 4;
+    next.textContent = B.step === 3 ? 'Confirm booking' : B.step === 4 ? 'Done' : 'Continue';
+    next.disabled = (B.step === 0 && !(B.svc && B.who)) || (B.step === 1 && (B.day === null || B.time === null));
+    if (api.motion && window.gsap) gsap.from(body.children, { autoAlpha: 0, x: 24, duration: .45, stagger: .05, ease: 'power3.out', clearProps: 'all' });
+  }
+  body.addEventListener('click', function (e) {
+    var b = e.target.closest('button'); if (!b || b.disabled) return;
+    if (b.dataset.svc) { B.svc = b.dataset.svc; B.time = null; render(); focusBtn('[data-svc="' + B.svc + '"]'); }
+    else if (b.dataset.who) { B.who = b.dataset.who; render(); focusBtn('[data-who="' + B.who + '"]'); }
+    else if (b.dataset.day) { B.day = +b.dataset.day; B.time = null; render(); var sl = body.querySelector('#slots button:not([disabled])'); if (sl) sl.focus(); }
+    else if (b.dataset.time) { B.time = +b.dataset.time; render(); focusBtn('[data-time="' + B.time + '"]'); }
+  });
+  function focusBtn(sel) { var el = body.querySelector(sel); if (el) el.focus({ preventScroll: true }); }
+  document.getElementById('dr-next').addEventListener('click', function () {
+    if (this.disabled) return;
+    if (B.step === 2) {
+      var n = document.getElementById('f-n'), p = document.getElementById('f-p'), bad = null;
+      [n, p].forEach(function (el) { var ok = el.value.trim() !== ''; el.style.borderColor = ok ? '' : '#b3261e'; el.setAttribute('aria-invalid', ok ? 'false' : 'true'); if (!ok && !bad) bad = el; });
+      if (bad) { bad.focus(); return; }
+      B.name = n.value; B.phone = p.value; B.email = document.getElementById('f-e').value;
+    }
+    if (B.step === 4) { close(); return; }
+    B.step++; render(); var t = body.querySelector('#dr-title'); if (t) t.focus();
+  });
+  document.getElementById('dr-back').addEventListener('click', function () { if (B.step > 0) { B.step--; render(); var t = body.querySelector('#dr-title'); if (t) t.focus(); } });
+  function open(svcId, who) {
+    lastFocus = document.activeElement;
+    B.step = 0; B.time = null; B.day = null;
+    if (svcId) B.svc = svcId;
+    if (who) B.who = who;
+    render();
+    scrim.hidden = false; drawer.hidden = false;
+    requestAnimationFrame(function () { requestAnimationFrame(function () { scrim.classList.add('on'); drawer.classList.add('on'); }); });
+    if (api.lenis) api.lenis.stop();
+    document.body.style.overflow = 'hidden';
+    setTimeout(function () { var t = body.querySelector('#dr-title'); if (t) t.focus(); }, 80);
+  }
+  function close() {
+    scrim.classList.remove('on'); drawer.classList.remove('on');
+    setTimeout(function () { scrim.hidden = true; drawer.hidden = true; }, 520);
+    if (api.lenis) api.lenis.start();
+    document.body.style.overflow = '';
+    if (lastFocus) lastFocus.focus();
+  }
+  document.querySelectorAll('[data-book]').forEach(function (b) { b.addEventListener('click', function () { open(b.dataset.svc, b.dataset.who); }); });
+  document.getElementById('dr-close').addEventListener('click', close);
+  scrim.addEventListener('click', close);
+  document.addEventListener('keydown', function (e) {
+    if (drawer.hidden) return;
+    if (e.key === 'Escape') close();
+    if (e.key === 'Tab') {
+      var f = Array.prototype.filter.call(drawer.querySelectorAll('button:not([disabled]), input, textarea'), function (x) { return x.offsetParent !== null; });
+      if (!f.length) return;
+      if (e.shiftKey && (document.activeElement === f[0] || document.activeElement.id === 'dr-title')) { e.preventDefault(); f[f.length - 1].focus(); }
+      else if (!e.shiftKey && document.activeElement === f[f.length - 1]) { e.preventDefault(); f[0].focus(); }
+    }
+  });
+
+  if (!api.motion) return;
+  var ST = ScrollTrigger, clamp = gsap.utils.clamp(0, 1);
+
+  /* hero pear draws itself, then drifts */
+  var hb = document.getElementById('hp-body'), hs = document.getElementById('hp-stem');
+  [hb, hs, document.getElementById('hp-shine')].forEach(function (p) { p.style.strokeDasharray = 1; p.style.strokeDashoffset = 1; });
+  gsap.set('#hp-leaf', { scale: 0, transformOrigin: '214px 62px' });
+  gsap.set('#hp-body', { fillOpacity: 0 });
+  gsap.timeline({ delay: .2 })
+    .to(hb, { strokeDashoffset: 0, duration: 2.1, ease: 'power2.inOut' }, 0)
+    .to(hs, { strokeDashoffset: 0, duration: .8, ease: 'power2.out' }, 1.5)
+    .to('#hp-body', { fillOpacity: 1, duration: 1.2, ease: 'power1.out' }, 1.2)
+    .to('#hp-leaf', { scale: 1, duration: .9, ease: 'back.out(1.6)' }, 1.8)
+    .to('#hp-shine', { strokeDashoffset: 0, duration: .9, ease: 'power2.out' }, 2);
+  gsap.to('.hero-pear', { rotate: -4, yPercent: -34, ease: 'none', scrollTrigger: { trigger: '.hero', start: 'top top', end: 'bottom top', scrub: true } });
+
+  /* statement: words light up */
+  var words = ConceptSite.splitWords(document.getElementById('stmt'));
+  gsap.set(words, { yPercent: 0 });
+  var sw = document.querySelectorAll('#stmt .sw'); gsap.set(sw, { opacity: .2 });
+  gsap.to(sw, { opacity: 1, stagger: .08, ease: 'none', scrollTrigger: { trigger: '#stmt', start: 'top 80%', end: 'bottom 50%', scrub: true } });
+
+  /* signature scene: the pear draws, then ripens as the four treatments step through */
+  var sBody = document.getElementById('sc-body'), sStem = document.getElementById('sc-stem'), rect = document.getElementById('ripe-rect');
+  var items = gsap.utils.toArray('#slist li'), pnum = document.getElementById('pnum'), cur = -1;
+  [sBody, sStem].forEach(function (p) { p.style.strokeDasharray = 1; });
+  function paint(p) {
+    var draw = clamp(p / .14);
+    sBody.style.strokeDashoffset = 1 - draw; sStem.style.strokeDashoffset = 1 - clamp((p - .08) / .08);
+    var fill = clamp((p - .1) / .76), e = fill * fill * (3 - 2 * fill);
+    rect.setAttribute('y', 560 - e * 480);
+    gsap.set('#sc-leaf', { scale: clamp((p - .14) / .1), transformOrigin: '214px 62px' });
+    var idx = Math.min(3, Math.floor(clamp((p - .05) / .95) * 4));
+    if (idx !== cur) { cur = idx; items.forEach(function (li, k) { li.classList.toggle('on', k === idx); }); pnum.textContent = '0' + (idx + 1); }
+  }
+  paint(0);
+  var mm = gsap.matchMedia();
+  mm.add('(min-width: 901px)', function () {
+    ST.create({ trigger: '.scene-pin', start: 'top top', end: '+=260%', pin: true, scrub: .6, onUpdate: function (s) { paint(s.progress); } });
+  });
+  mm.add('(max-width: 900px)', function () {
+    ST.create({ trigger: '.scene', start: 'top 65%', end: 'bottom 70%', scrub: true, onUpdate: function (s) { paint(s.progress); } });
+  });
+
+  /* closing wordmark rises */
+  gsap.from('.visit .giant', { yPercent: 30, ease: 'none', scrollTrigger: { trigger: '.visit .giant', start: 'top bottom', end: 'bottom bottom', scrub: true } });
+});
+</script>
+</body>
+</html>
