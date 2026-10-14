@@ -1,0 +1,644 @@
+<!doctype html>
+<!--
+ART DIRECTION BRIEF — Thrive Wellness Centre (Peartree, Southampton)
+Idea: a cairn of balanced stones. Each stone is one thing the centre does (massage, skin, needling, red light, coaching) and the stack stands up as you scroll: recovery as balance, in one neighbourhood room.
+Palette: deep teal #0f4a47 (the treatment-room wall, text and buttons) · soft white #f7f6f1 · warm sand #eadfcb · leaf green #8cc063 (big blocks and accents) · mint #dfeadb
+Type: Bricolage Grotesque (large, friendly display, tight) + DM Sans (text).
+Hero: soft-white field, giant "Unwind" across the page with arch-topped photo frames (treatment room, hands, candle tray) drifting at different speeds and a leaf-green disc behind. Open-now chip uses the Fresha hours from the lead.
+Signature moment: pinned cairn. Five stones drop in one by one, each with its service and price; the background moves from sand to mint as the stack finishes. Phones: no pin, same build scrubbed in place.
+Feature: booking drawer (treatment > day and time, labelled example availability > details > confirmation with reference). Sends nothing.
+Headline shortlist: 1 Wellbeing for the whole person (generic, crossed out) · 2 Southampton's wellness centre (generic) · 3 Tension out, energy back (any wellness place could say it) · 4 Relax, release, recover (rhyme-ish, crossed out) · 5 Open seven days in Peartree · 6 Massage to menopause support · 7 One room, many ways to recover · 8 Unwind in Peartree · 9 Your neighbourhood centre (banned-ish) · 10 Deacon Road, open daily.
+Pick: "Unwind in Peartree." (3 words, calm, place-specific, echoes the review "relax & destress".)
+Truth notes: prices and hours are the ones in the lead (Fresha). Phone and email are not in the lead, so booking and enquiries are on-page. Review quotes are the three in the lead (one typo, "realease", corrected to "release").
+-->
+<html lang="en-GB">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<meta name="robots" content="noindex,nofollow">
+<title>Thrive Wellness Centre · Website concept</title>
+<meta name="description" content="A website concept for Thrive Wellness Centre, Peartree, Southampton. Preview only.">
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Crect width='32' height='32' rx='16' fill='%230f4a47'/%3E%3Cellipse cx='16' cy='21' rx='9' ry='4' fill='%238cc063'/%3E%3Cellipse cx='16' cy='14' rx='6' ry='3.4' fill='%23f7f6f1'/%3E%3C/svg%3E">
+<link rel="preload" href="assets/fonts/bricolage-grotesque-latin-wght-normal.woff2" as="font" type="font/woff2" crossorigin>
+<script>(function(d){if(!matchMedia('(prefers-reduced-motion: reduce)').matches){d.documentElement.classList.add('motion');setTimeout(function(){if(!d.documentElement.classList.contains('ready'))d.documentElement.classList.remove('motion')},3000)}})(document)</script>
+<style>
+@font-face{font-family:"Bricolage Grotesque";src:url("assets/fonts/bricolage-grotesque-latin-wght-normal.woff2") format("woff2");font-weight:200 800;font-display:swap}
+@font-face{font-family:"DM Sans";src:url("assets/fonts/dm-sans-latin-wght-normal.woff2") format("woff2");font-weight:100 1000;font-display:swap}
+:root{
+  --teal:#0f4a47; --teal-2:#17625d; --white:#f7f6f1; --paper:#fffefb; --sand:#eadfcb; --sand-2:#dfd0b4; --leaf:#8cc063; --leaf-deep:#4f7f2d; --mint:#dfeadb; --line:#d9d3c3; --muted:#4d5f5b;
+  --display:"Bricolage Grotesque","Arial Narrow",Arial,sans-serif; --body:"DM Sans",Arial,sans-serif;
+  --ease:cubic-bezier(.2,.7,.1,1);
+}
+*{box-sizing:border-box}
+html.lenis,html.lenis body{height:auto}
+body{margin:0;background:var(--white);color:var(--teal);font:400 17px/1.65 var(--body);-webkit-font-smoothing:antialiased;overflow-x:clip}
+img{max-width:100%;display:block}
+a{color:inherit}
+p{margin:0}
+h1,h2,h3{font-weight:600;margin:0}
+.wrap{max-width:1280px;margin:0 auto;padding-inline:36px}
+@media (max-width:640px){.wrap{padding-inline:18px}}
+:focus-visible{outline:3px solid var(--teal);outline-offset:3px;border-radius:6px}
+.on-dark :focus-visible,.dark :focus-visible{outline-color:var(--leaf)}
+[hidden]{display:none!important}
+.eyebrow{font:700 12.5px/1 var(--body);letter-spacing:.18em;text-transform:uppercase;color:var(--leaf-deep);display:inline-flex;align-items:center;gap:10px}
+.eyebrow::before{content:"";width:10px;height:10px;border-radius:50%;background:var(--leaf)}
+.dark .eyebrow{color:var(--leaf)}
+.h2{font:600 clamp(42px,6vw,92px)/.98 var(--display);letter-spacing:-.03em}
+.h2 em{font-style:normal;color:var(--leaf-deep)}
+.dark .h2 em{color:var(--leaf)}
+.btn{display:inline-flex;align-items:center;justify-content:center;gap:10px;min-height:52px;font:600 16px/1 var(--body);text-decoration:none;padding:16px 28px;border-radius:999px;border:1.5px solid transparent;cursor:pointer;transition:background-color .3s,color .3s,border-color .3s,transform .3s var(--ease)}
+.btn-teal{background:var(--teal);color:var(--white)}
+.btn-teal:hover{background:var(--teal-2);transform:translateY(-2px)}
+.btn-leaf{background:var(--leaf);color:var(--teal)}
+.btn-leaf:hover{background:#a0d074;transform:translateY(-2px)}
+.btn-line{border-color:var(--teal);color:var(--teal);background:transparent}
+.btn-line:hover{background:var(--teal);color:var(--white)}
+
+.concept{background:var(--teal);color:#cfe3de;font-size:13px;line-height:18px;text-align:center;padding:8px 16px;position:relative;z-index:60}
+.concept b{color:#fff;font-weight:600}
+
+.top{position:sticky;top:0;z-index:50;background:color-mix(in srgb,var(--white) 90%,transparent);backdrop-filter:blur(12px);-webkit-backdrop-filter:blur(12px);border-bottom:1px solid #0f4a471c;transition:transform .5s cubic-bezier(.2,.8,.2,1)}
+.top.away{transform:translateY(-100%)}
+.top .wrap{display:flex;align-items:center;justify-content:space-between;gap:20px;height:76px}
+.brand{display:flex;align-items:center;gap:12px;text-decoration:none}
+.brand svg{width:44px;height:44px;flex:none}
+.brand b{display:block;font:700 26px/.9 var(--display);letter-spacing:-.03em}
+.brand small{display:block;font:600 10.5px/1 var(--body);letter-spacing:.2em;text-transform:uppercase;color:var(--leaf-deep);margin-top:5px}
+nav.main{display:flex;align-items:center;gap:28px}
+nav.main a{text-decoration:none;font-weight:500;font-size:15px}
+nav.main a:not(.btn):hover{color:var(--leaf-deep)}
+nav.main .btn{padding:12px 22px;min-height:44px;font-size:15px}
+@media (max-width:900px){nav.main a:not(.btn){display:none}}
+@media (max-width:420px){.brand small{display:none}}
+
+/* hero */
+.hero{position:relative;overflow:hidden;min-height:min(94vh,900px);display:grid}
+.hero .disc{position:absolute;right:-8vw;top:6%;width:min(62vw,820px);aspect-ratio:1;border-radius:50%;background:var(--mint);z-index:0}
+.hero .wrap{position:relative;width:100%;display:grid;align-content:start;padding-block:70px 56px;z-index:2}
+.open{display:inline-flex;align-items:center;gap:10px;background:var(--paper);border:1px solid var(--line);border-radius:999px;padding:9px 16px 9px 12px;font-size:14px;font-weight:600;justify-self:start}
+.open i{width:10px;height:10px;border-radius:50%;background:#2e9a5b;box-shadow:0 0 0 0 #2e9a5b80;animation:ping 2s infinite}
+.open.closed i{background:#b0813a;animation:none}
+@keyframes ping{70%{box-shadow:0 0 0 10px #2e9a5b00}100%{box-shadow:0 0 0 0 #2e9a5b00}}
+.hero h1{font:600 clamp(80px,17vw,290px)/.82 var(--display);letter-spacing:-.06em;margin-top:30px}
+.hero h1 .ln:last-child{font-size:.4em;letter-spacing:-.04em;line-height:1.05;color:var(--leaf-deep);margin-top:.12em}
+.hero .lead{font-size:clamp(18px,1.5vw,21px);line-height:1.55;max-width:26em;margin-top:30px;color:#25504c}
+.hero .ctas{display:flex;flex-wrap:wrap;gap:12px;margin-top:30px}
+.proof{display:flex;flex-wrap:wrap;gap:8px 22px;margin-top:34px;padding-top:18px;border-top:1px solid #0f4a4726;font-size:14.5px;max-width:560px;color:#25504c}
+.proof b{color:var(--teal);font-weight:700}
+.arches{position:absolute;inset:0;z-index:1;pointer-events:none}
+.arch{position:absolute;overflow:hidden;background:var(--sand)}
+.arch img{width:100%;height:100%;object-fit:cover}
+.a1{right:max(24px,calc((100vw - 1280px)/2 + 24px));bottom:-2px;width:clamp(180px,24vw,360px);height:clamp(300px,64vh,560px);border-radius:999px 999px 0 0}
+.a2{right:calc(max(24px,calc((100vw - 1280px)/2 + 24px)) + clamp(200px,26vw,390px));bottom:9vh;width:clamp(130px,15vw,230px);height:clamp(130px,15vw,230px);border-radius:50%}
+.a3{right:calc(max(24px,calc((100vw - 1280px)/2 + 24px)) + clamp(60px,8vw,120px));top:11%;width:clamp(110px,12vw,180px);height:clamp(150px,17vw,250px);border-radius:999px 999px 20px 20px}
+@media (max-width:980px){
+  .hero{display:block;min-height:0}
+  .hero .disc{width:110vw;right:-30vw;top:30%}
+  .hero .wrap{padding-block:48px 24px}
+  .arches{position:relative;inset:auto;height:360px;margin-top:6px}
+  .a1{right:6vw;width:44vw;height:340px}
+  .a2{right:auto;left:5vw;bottom:20px;width:34vw;height:34vw}
+  .a3{right:auto;left:22vw;top:6px;width:24vw;height:36vw}
+}
+html.motion:not(.ready) .hero h1 .ln>span{transform:translateY(105%)}
+html.motion:not(.ready) [data-intro]{opacity:0}
+.hero h1 .ln{display:block;overflow:hidden;padding-bottom:.06em}
+.hero h1 .ln>span{display:inline-block}
+
+.strip{background:var(--teal);color:var(--white);overflow:hidden;white-space:nowrap;padding:18px 0;font:600 26px/1 var(--display);letter-spacing:-.02em}
+.strip .track{display:inline-flex;will-change:transform}
+.strip .track span{padding:0 24px;display:inline-flex;align-items:center;gap:48px}
+.strip .track span::after{content:"";width:12px;height:12px;border-radius:50%;background:var(--leaf)}
+
+/* cairn */
+.cairn{position:relative;background:var(--sand)}
+.cairn-pin{min-height:100vh;display:grid;grid-template-columns:minmax(0,.9fr) minmax(0,1.1fr);align-items:center;gap:56px;padding-block:72px}
+.cairn svg{width:100%;height:auto;max-height:78vh;overflow:visible}
+.cairn .h2{font-size:clamp(40px,4.8vw,76px)}
+.stages{display:grid;margin-top:28px}
+.stage{display:grid;grid-template-columns:48px minmax(0,1fr) auto;gap:14px;align-items:baseline;padding:15px 0;border-top:1px solid #0f4a4730;opacity:.4;transition:opacity .4s}
+.stage.on{opacity:1}
+.stage:last-child{border-bottom:1px solid #0f4a4730}
+.stage .n{font:600 15px/1 var(--body);color:var(--leaf-deep)}
+.stage h3{font:600 clamp(24px,2.3vw,32px)/1.05 var(--display);letter-spacing:-.02em}
+.stage p{font-size:15px;color:#2f524e;margin-top:3px}
+.stage .pr{font:600 15px/1.2 var(--body);text-align:right;color:var(--teal);white-space:nowrap}
+html:not(.motion) .stage{opacity:1}
+@media (max-width:900px){.cairn-pin{grid-template-columns:1fr;gap:20px;padding-block:68px 56px}.stage{opacity:1}.cairn svg{max-height:420px}}
+
+/* services */
+.services{padding-block:130px 110px;background:var(--white)}
+.sec-head{display:flex;justify-content:space-between;align-items:end;gap:32px;flex-wrap:wrap;margin-bottom:52px}
+.sec-head p.sub{max-width:27em;color:var(--muted);font-size:18px}
+.tiles{display:grid;grid-template-columns:repeat(12,minmax(0,1fr));gap:16px}
+.tile{position:relative;border-radius:26px;overflow:hidden;padding:30px;display:grid;gap:14px;align-content:start;background:var(--paper);border:1px solid var(--line);transition:transform .5s var(--ease),box-shadow .5s var(--ease)}
+.tile:hover{transform:translateY(-6px);box-shadow:0 30px 50px -34px #0f4a4766}
+.tile h3{font:600 clamp(30px,3vw,44px)/1 var(--display);letter-spacing:-.03em}
+.tile p.d{color:var(--muted);font-size:16px}
+.tile ul{list-style:none;margin:6px 0 0;padding:0;display:grid}
+.tile li{display:flex;justify-content:space-between;gap:14px;align-items:baseline;padding:12px 0;border-top:1px solid #0f4a4720;font-size:16px}
+.tile li span:last-child{font-weight:700;white-space:nowrap}
+.tile li small{display:block;color:var(--muted);font-size:13.5px}
+.tile .pic{margin:-30px -30px 6px;height:190px;overflow:hidden}
+.tile .pic img{width:100%;height:100%;object-fit:cover;transition:transform 1s var(--ease)}
+.tile:hover .pic img{transform:scale(1.05)}
+.t-massage{grid-template-rows:auto auto auto 1fr;grid-column:span 7;background:var(--teal);color:var(--white);border-color:var(--teal)}
+.t-massage p.d,.t-massage li small{color:#bcd6d0}
+.t-massage li{border-color:#ffffff2e}
+.t-skin{grid-column:span 5}
+.t-pick{grid-column:span 5;background:var(--leaf);border-color:var(--leaf)}
+.t-pick p.d{color:#1d4a31}
+.t-ther{grid-column:span 7}
+.t-coach{grid-column:span 12;background:var(--mint);border-color:var(--mint);grid-template-columns:minmax(0,1fr) minmax(0,1fr);gap:8px 48px;align-items:start}
+.t-coach .l{display:grid;gap:14px;align-content:start}
+.tile .go{justify-self:start;margin-top:8px}
+.t-massage .go{align-self:end}
+.pickprice{font:600 clamp(70px,8vw,120px)/.85 var(--display);letter-spacing:-.05em}
+.pickprice small{font:600 15px/1 var(--body);letter-spacing:0;margin-left:8px}
+@media (max-width:980px){.t-massage,.t-skin,.t-pick,.t-ther,.t-coach{grid-column:span 12}.t-coach{grid-template-columns:1fr}.services{padding-block:84px 70px}}
+
+/* inside */
+.inside{padding-block:120px 110px;background:var(--mint)}
+.mosaic{display:grid;grid-template-columns:repeat(12,minmax(0,1fr));gap:16px}
+.ph{position:relative;overflow:hidden;border-radius:26px;background:var(--sand)}
+.ph img{width:100%;height:116%;object-fit:cover}
+.ph figcaption{position:absolute;left:14px;bottom:14px;background:var(--teal);color:var(--white);font-size:13px;line-height:1.35;padding:9px 14px;border-radius:999px;transform:translateY(8px);opacity:0;transition:opacity .4s,transform .4s var(--ease)}
+.ph:hover figcaption{opacity:1;transform:none}
+.i1{grid-column:1/8;height:520px}.i2{grid-column:8/13;height:520px}
+.i3{grid-column:1/5;height:300px}.i4{grid-column:5/9;height:300px}.i5{grid-column:9/13;height:300px}
+@media (max-width:900px){
+  .mosaic{grid-template-columns:repeat(2,minmax(0,1fr));gap:10px}
+  .i1,.i2{grid-column:1/3;height:300px}.i3,.i4,.i5{grid-column:auto;height:200px}.i5{grid-column:1/3}
+  .ph figcaption{display:none}.inside{padding-block:80px 70px}
+  .ph{border-radius:20px}
+}
+
+/* reviews */
+.reviews{padding-block:120px 110px;background:var(--teal);color:var(--white);overflow:hidden}
+.score{display:flex;flex-wrap:wrap;align-items:end;justify-content:space-between;gap:28px;margin-bottom:46px}
+.big{font:600 clamp(110px,16vw,240px)/.8 var(--display);letter-spacing:-.06em;font-variant-numeric:tabular-nums;color:var(--leaf)}
+.stars{color:#f1c24b;letter-spacing:4px;font-size:22px}
+.rv-row{display:flex;gap:18px;width:max-content;will-change:transform}
+.rv{width:min(440px,80vw);flex:none;background:#ffffff12;border:1px solid #ffffff26;border-radius:26px;padding:30px;display:grid;gap:18px;margin:0}
+.rv q{quotes:none;font:500 clamp(24px,2.4vw,32px)/1.18 var(--display);letter-spacing:-.02em}
+.rv figcaption{font-size:14.5px;color:#bcd6d0}
+.rv figcaption b{color:#fff;font-weight:600}
+.rv-note{margin-top:22px;font-size:13.5px;color:#9cbfb8}
+
+/* find us */
+.find{padding-block:120px 110px;background:var(--white)}
+.find .wrap{display:grid;grid-template-columns:minmax(0,1fr) minmax(0,1fr);gap:64px;align-items:start}
+.card{background:var(--paper);border:1px solid var(--line);border-radius:26px;padding:34px;display:grid;gap:22px}
+.card h3{font:600 28px/1 var(--display);letter-spacing:-.02em;margin-bottom:6px}
+.card address{font-style:normal;font-size:19px;line-height:1.5}
+.hours{display:grid;gap:0}
+.hours div{display:flex;justify-content:space-between;padding:11px 0;border-top:1px solid #0f4a4720;font-size:16px}
+.hours div b{font-weight:600}
+.areas{display:flex;flex-wrap:wrap;gap:10px}
+.areas span{border:1.5px solid var(--teal);border-radius:999px;padding:9px 16px;font-weight:600;font-size:15px}
+.find p.sub{margin-top:22px;color:var(--muted);font-size:18px;max-width:26em}
+@media (max-width:900px){.find .wrap{grid-template-columns:1fr;gap:34px}.find{padding-block:80px 70px}}
+
+/* rooms */
+.rooms{padding-block:100px;background:var(--sand)}
+.rooms .wrap{display:grid;grid-template-columns:minmax(0,1fr) minmax(0,1fr);gap:56px;align-items:center}
+.rooms p.sub{margin-top:20px;font-size:18px;color:#2f524e;max-width:25em}
+.enq{background:var(--paper);border-radius:26px;padding:30px;display:grid;gap:14px}
+.enq h3{font:600 28px/1 var(--display);letter-spacing:-.02em}
+.enq label,.dform label{display:grid;gap:6px;font-weight:600;font-size:14px}
+.enq input,.enq textarea,.dform input,.dform textarea{font:inherit;font-size:17px;border:1.5px solid #b9b39f;border-radius:12px;padding:13px 15px;background:#fff;color:var(--teal);min-height:50px;width:100%}
+.enq textarea,.dform textarea{min-height:90px;resize:vertical}
+.enq input:focus,.enq textarea:focus,.dform input:focus,.dform textarea:focus{outline:none;border-color:var(--teal);box-shadow:0 0 0 3px #8cc06366}
+.enq .row{display:grid;grid-template-columns:1fr 1fr;gap:12px}
+.done{background:#e3f1dd;border-radius:12px;padding:14px;color:#21491c;font-size:15px}
+@media (max-width:900px){.rooms .wrap{grid-template-columns:1fr;gap:30px}.enq .row{grid-template-columns:1fr}.rooms{padding-block:70px}}
+
+.close{background:var(--leaf);color:var(--teal);padding-block:100px}
+.close .h2{font-size:clamp(52px,9vw,150px);max-width:9em}
+.close .h2 em{color:var(--teal);opacity:.7}
+.close .btn{margin-top:32px}
+footer{background:var(--teal);color:#a9c9c2;padding-block:38px;font-size:14px}
+footer .wrap{display:flex;flex-wrap:wrap;justify-content:space-between;gap:14px 28px;align-items:center}
+footer a{color:#fff}
+
+/* drawer */
+.scrim{position:fixed;inset:0;background:#0b2a28a8;z-index:90;opacity:0;transition:opacity .4s}
+.drawer{position:fixed;top:0;right:0;bottom:0;width:min(560px,100vw);background:var(--paper);z-index:100;transform:translateX(102%);transition:transform .6s var(--ease);display:flex;flex-direction:column;box-shadow:-30px 0 60px -30px #0007}
+body.dopen .scrim{opacity:1}
+body.dopen .drawer{transform:none}
+.dhead{display:flex;justify-content:space-between;align-items:center;padding:20px 26px;border-bottom:1px solid var(--line)}
+.dhead h2{font:600 28px/1 var(--display);letter-spacing:-.03em}
+.dclose{width:44px;height:44px;border-radius:50%;border:1.5px solid var(--teal);background:transparent;color:var(--teal);cursor:pointer;font-size:22px;line-height:1}
+.dclose:hover{background:var(--teal);color:#fff}
+.dprog{display:flex;gap:6px;padding:16px 26px 0}
+.dprog i{flex:1;height:5px;border-radius:3px;background:var(--line);position:relative;overflow:hidden}
+.dprog i::after{content:"";position:absolute;inset:0;background:var(--teal);transform:scaleX(0);transform-origin:left;transition:transform .5s var(--ease)}
+.dprog i.done::after{transform:scaleX(1)}
+.dbody{flex:1;overflow:auto;padding:22px 26px 10px}
+.dbody h3{font:600 clamp(28px,3vw,36px)/1.05 var(--display);letter-spacing:-.03em;margin-bottom:6px}
+.dbody .hint{color:var(--muted);font-size:15px;margin-bottom:18px}
+.opts{display:grid;gap:10px}
+.opt{display:flex;justify-content:space-between;gap:16px;align-items:center;text-align:left;font:500 16px/1.3 var(--body);color:var(--teal);background:#fff;border:1.5px solid var(--line);border-radius:16px;padding:15px 18px;cursor:pointer;min-height:56px;transition:border-color .2s,background-color .2s}
+.opt:hover{border-color:var(--teal)}
+.opt[aria-pressed="true"],.opt[aria-checked="true"]{background:var(--teal);border-color:var(--teal);color:#fff}
+.opt small{display:block;font-size:13px;opacity:.75;margin-top:2px}
+.opt b{font-weight:700;white-space:nowrap}
+.days{display:flex;gap:8px;overflow-x:auto;padding-bottom:10px;margin:0 -2px 14px;scroll-snap-type:x proximity}
+.day{flex:none;scroll-snap-align:start;width:64px;border:1.5px solid var(--line);border-radius:16px;background:#fff;padding:10px 0;text-align:center;cursor:pointer;color:var(--teal);font:600 13px/1.2 var(--body);min-height:64px}
+.day b{display:block;font:600 22px/1.1 var(--display)}
+.day[aria-pressed="true"]{background:var(--teal);color:#fff;border-color:var(--teal)}
+.slots{display:grid;grid-template-columns:repeat(3,1fr);gap:8px}
+.slot{border:1.5px solid var(--line);background:#fff;border-radius:12px;padding:12px 0;font:600 15px/1 var(--body);color:var(--teal);cursor:pointer;min-height:46px}
+.slot:hover:not(:disabled){border-color:var(--teal)}
+.slot[aria-pressed="true"]{background:var(--leaf);border-color:var(--leaf)}
+.slot:disabled{opacity:.4;text-decoration:line-through;cursor:not-allowed}
+.dform{display:grid;gap:14px}
+.sum{background:var(--mint);border-radius:16px;padding:14px 16px;font-size:15px;margin-bottom:16px}
+.dfoot{display:flex;justify-content:space-between;align-items:center;gap:12px;padding:16px 26px 22px;border-top:1px solid var(--line)}
+.btn-ghost{background:transparent;border:0;color:var(--muted);font:600 15px/1 var(--body);cursor:pointer;padding:14px 6px;min-height:48px;text-decoration:underline;text-underline-offset:4px}
+.ref{font:600 clamp(64px,10vw,96px)/.9 var(--display);letter-spacing:-.05em;color:var(--leaf-deep);margin:14px 0}
+body.dopen{overflow:hidden}
+@media (max-width:520px){.slots{grid-template-columns:repeat(3,1fr)}.dhead,.dbody,.dfoot,.dprog{padding-inline:18px}}
+</style>
+</head>
+<body>
+
+<div class="concept" id="banner"></div>
+
+<header class="top" id="top">
+  <div class="wrap">
+    <a class="brand" href="#hero" aria-label="Thrive Wellness Centre, back to top">
+      <svg viewBox="0 0 48 48" aria-hidden="true"><circle cx="24" cy="24" r="24" fill="#0f4a47"/><ellipse cx="24" cy="32" rx="14" ry="6" fill="#8cc063"/><ellipse cx="24" cy="22" rx="10" ry="5" fill="#eadfcb"/><ellipse cx="24" cy="14" rx="6" ry="3.4" fill="#f7f6f1"/></svg>
+      <span><b>Thrive</b><small>Wellness Centre</small></span>
+    </a>
+    <nav class="main" aria-label="Main">
+      <a href="#cairn">What we do</a><a href="#services">Prices</a><a href="#reviews">Reviews</a><a href="#find">Find us</a>
+      <button class="btn btn-teal" type="button" data-book>Book</button>
+    </nav>
+  </div>
+</header>
+
+<main>
+<section class="hero" id="hero" aria-labelledby="h1">
+  <div class="disc" aria-hidden="true"></div>
+  <div class="arches">
+    <div class="arch a3" data-intro><img data-pp src="assets/img/candle.webp" alt="Candle, oils and dried flowers on a marble tray" width="768" height="511"></div>
+    <div class="arch a2" data-intro><img data-pp src="assets/img/hands.webp" alt="A therapist's hands working on a client's back" width="768" height="512"></div>
+    <div class="arch a1" data-intro><img data-pp src="assets/img/room-bed-1100.webp" srcset="assets/img/room-bed-1100.webp 1100w, assets/img/room-bed-2000.webp 2000w" sizes="360px" alt="Treatment room with a made-up couch, green towels and a teal wall" width="1100" height="751" style="object-position:35% 50%"></div>
+  </div>
+  <div class="wrap">
+    <p class="open" id="open" data-intro><i aria-hidden="true"></i><span id="opentxt">Open daily</span></p>
+    <h1 id="h1"><span class="ln"><span>Unwind</span></span><span class="ln"><span>in Peartree.</span></span></h1>
+    <p class="lead" data-intro>Massage, facials, dry needling, red light and coaching, all under one roof on Deacon Road, Southampton.</p>
+    <div class="ctas" data-intro>
+      <button class="btn btn-teal" type="button" data-book>Book a treatment</button>
+      <a class="btn btn-line" href="#cairn">See what we do</a>
+    </div>
+    <p class="proof" data-intro><span><b>5.0</b> from 151 Fresha reviews</span><span>Open seven days</span><span>Peartree, SO19</span></p>
+  </div>
+</section>
+
+<div class="strip" aria-label="Massage, facials, microneedling, dry needling, red light therapy, nutrition, exercise and menopause coaching, room rental"><div class="track" aria-hidden="true"><span>Massage</span><span>Facials</span><span>Microneedling</span><span>Dry needling</span><span>Red light</span><span>Nutrition</span><span>Exercise</span><span>Menopause support</span><span>Massage</span><span>Facials</span><span>Microneedling</span><span>Dry needling</span><span>Red light</span><span>Nutrition</span><span>Exercise</span><span>Menopause support</span></div></div>
+
+<section class="cairn" id="cairn" aria-labelledby="cairn-title">
+  <div class="wrap cairn-pin">
+    <div><svg id="stack" viewBox="0 0 480 580" role="img" aria-label="Five balanced stones stacked into a cairn, labelled Massage, Skin, Needling, Red light and Coaching"></svg></div>
+    <div>
+      <p class="eyebrow">One centre, five ways in</p>
+      <h2 class="h2" id="cairn-title" style="margin-top:16px">Stacked up for <em>balance.</em></h2>
+      <div class="stages">
+        <div class="stage" data-s="0"><span class="n">01</span><div><h3>Massage</h3><p>Half body, Swedish or full body.</p></div><span class="pr">£50 – £75</span></div>
+        <div class="stage" data-s="1"><span class="n">02</span><div><h3>Skin</h3><p>The Utopia facial and microneedling.</p></div><span class="pr">from £45</span></div>
+        <div class="stage" data-s="2"><span class="n">03</span><div><h3>Dry needling</h3><p>For muscles that stay tight.</p></div><span class="pr">Ask us</span></div>
+        <div class="stage" data-s="3"><span class="n">04</span><div><h3>Red light</h3><p>Pay by the minute.</p></div><span class="pr">from £1/min</span></div>
+        <div class="stage" data-s="4"><span class="n">05</span><div><h3>Coaching</h3><p>Nutrition, exercise and menopause support.</p></div><span class="pr">Plans £50</span></div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="services" id="services" aria-labelledby="svc-title">
+  <div class="wrap">
+    <div class="sec-head">
+      <div><p class="eyebrow" data-reveal>Treatments and prices</p><h2 class="h2" id="svc-title" data-split style="margin-top:16px">Pick what you<br><em>need today.</em></h2></div>
+      <p class="sub" data-reveal>Every treatment books in a few taps. Prices are as listed on Fresha.</p>
+    </div>
+    <div class="tiles">
+      <article class="tile t-massage" data-reveal>
+        <h3>Massage</h3>
+        <p class="d">Hands-on work for tight shoulders, tired legs and a busy head.</p>
+        <ul>
+          <li><span>Half body / Swedish massage<small>1 hour</small></span><span>£50</span></li>
+          <li><span>Full body massage<small>80 minutes</small></span><span>£75</span></li>
+        </ul>
+        <button class="btn btn-leaf go" type="button" data-book="massage">Book massage</button>
+      </article>
+      <article class="tile t-skin" data-reveal>
+        <div class="pic"><img src="assets/img/tool.webp" alt="Gold skin treatment tools on a mirrored tray with polished stones" loading="lazy" width="768" height="512"></div>
+        <h3>Skin</h3>
+        <ul>
+          <li><span>Utopia facial</span><span>£45</span></li>
+          <li><span>Microneedling</span><span>from £85</span></li>
+        </ul>
+        <button class="btn btn-line go" type="button" data-book="skin">Book skin</button>
+      </article>
+      <article class="tile t-pick" data-reveal>
+        <h3>Pick &amp; Mix</h3>
+        <p class="pickprice">£60<small>for three</small></p>
+        <p class="d">Can't choose just one? Pick three treatments and mix them.</p>
+        <button class="btn btn-teal go" type="button" data-book="pick">Build yours</button>
+      </article>
+      <article class="tile t-ther" data-reveal>
+        <h3>Therapies</h3>
+        <ul>
+          <li><span>Dry needling<small>Price on request</small></span><span>Ask us</span></li>
+          <li><span>Red light therapy<small>Pay for the minutes you use</small></span><span>from £1/min</span></li>
+        </ul>
+        <button class="btn btn-line go" type="button" data-book="ther">Book a therapy</button>
+      </article>
+      <article class="tile t-coach" data-reveal>
+        <div class="l">
+          <h3>Lifestyle coaching</h3>
+          <p class="d">Nutrition, exercise and menopause support, built around your week. Exercise coaching can come to your home, within ten miles.</p>
+          <button class="btn btn-teal go" type="button" data-book="coach">Book coaching</button>
+        </div>
+        <ul>
+          <li><span>Exercise plan</span><span>£50</span></li>
+          <li><span>Nutrition coaching</span><span>Ask us</span></li>
+          <li><span>Menopause support</span><span>Ask us</span></li>
+        </ul>
+      </article>
+    </div>
+  </div>
+</section>
+
+<section class="inside" id="inside" aria-labelledby="in-title">
+  <div class="wrap">
+    <div class="sec-head">
+      <div><p class="eyebrow" data-reveal>Inside</p><h2 class="h2" id="in-title" data-split style="margin-top:16px">Green walls,<br><em>soft light.</em></h2></div>
+      <p class="sub" data-reveal>A quiet room on Deacon Road, set up for you to switch off.</p>
+    </div>
+    <div class="mosaic">
+      <figure class="ph i1" data-clip><img data-parallax src="assets/img/room-bed-1100.webp" srcset="assets/img/room-bed-1100.webp 1100w, assets/img/room-bed-2000.webp 2000w" sizes="(max-width:900px) 100vw, 58vw" alt="Treatment room with a couch, folded green towels, a plant on the windowsill and a glass basin" loading="lazy" width="1100" height="751"><figcaption>The treatment room</figcaption></figure>
+      <figure class="ph i2" data-clip><img data-parallax src="assets/img/room-teal-1100.webp" srcset="assets/img/room-teal-1100.webp 1100w, assets/img/room-teal-2000.webp 2000w" sizes="(max-width:900px) 100vw, 40vw" alt="A teal wall with a glass-fronted cabinet, a plant, a lamp and green cushions" loading="lazy" width="1100" height="751"><figcaption>Teal walls, warm lamps</figcaption></figure>
+      <figure class="ph i3" data-clip><img data-parallax src="assets/img/hands.webp" alt="A therapist's hands working on a client's shoulders" loading="lazy" width="768" height="512"><figcaption>Hands-on massage</figcaption></figure>
+      <figure class="ph i4" data-clip><img data-parallax src="assets/img/redlight.webp" alt="Close-up of a red light therapy panel" loading="lazy" width="768" height="512"><figcaption>Red light therapy</figcaption></figure>
+      <figure class="ph i5" data-clip><img data-parallax src="assets/img/stones.webp" alt="A stack of smooth grey stones against a pale sky" loading="lazy" width="768" height="768" style="object-position:50% 40%"><figcaption>Balance</figcaption></figure>
+    </div>
+  </div>
+</section>
+
+<section class="reviews dark" id="reviews" aria-labelledby="rv-title">
+  <div class="wrap">
+    <div class="score">
+      <div><p class="eyebrow" data-reveal>On Fresha</p><div class="big" id="big" aria-label="5.0 out of 5" style="margin-top:18px"><span id="bigv">5.0</span></div></div>
+      <div><span class="stars" aria-hidden="true">★★★★★</span><h2 class="h2" id="rv-title" data-split style="font-size:clamp(34px,4vw,60px);margin-top:10px">From <em>151</em> clients.</h2></div>
+    </div>
+  </div>
+  <div class="rv-row" data-speed=".6">
+    <figure class="rv"><q>The perfect way to relax &amp; destress.</q><figcaption><b>Juliet P</b> · Fresha · c. late Sep 2026</figcaption></figure>
+    <figure class="rv"><q>Deeply relaxing and therapeutic. Louise knows how to release the tension built up in my muscles and joints.</q><figcaption><b>Antony C</b> · Fresha · c. late Sep 2026</figcaption></figure>
+    <figure class="rv"><q>Have pic 'n' mix and love the variety that offers.</q><figcaption><b>Jayne I</b> · Fresha · c. Sep 2026</figcaption></figure>
+    <figure class="rv" aria-hidden="true"><q>The perfect way to relax &amp; destress.</q><figcaption><b>Juliet P</b> · Fresha · c. late Sep 2026</figcaption></figure>
+    <figure class="rv" aria-hidden="true"><q>Deeply relaxing and therapeutic. Louise knows how to release the tension built up in my muscles and joints.</q><figcaption><b>Antony C</b> · Fresha · c. late Sep 2026</figcaption></figure>
+    <figure class="rv" aria-hidden="true"><q>Have pic 'n' mix and love the variety that offers.</q><figcaption><b>Jayne I</b> · Fresha · c. Sep 2026</figcaption></figure>
+  </div>
+  <div class="wrap"><p class="rv-note">Quotes from the centre's Fresha page.</p></div>
+</section>
+
+<section class="find" id="find" aria-labelledby="find-title">
+  <div class="wrap">
+    <div>
+      <p class="eyebrow" data-reveal>Find us</p>
+      <h2 class="h2" id="find-title" data-split style="margin-top:16px">Deacon Road,<br><em>Peartree.</em></h2>
+      <p class="sub" data-reveal>We look after people across east Southampton. Exercise coaching can also visit your home, within ten miles.</p>
+      <div class="areas" style="margin-top:24px" data-reveal><span>Peartree</span><span>Woolston</span><span>Bitterne</span><span>Sholing</span></div>
+    </div>
+    <div class="card" data-reveal>
+      <div><h3>Address</h3><address>Thrive Wellness Centre<br>4 Deacon Road, Peartree<br>Southampton SO19 7PZ</address></div>
+      <div><h3>Opening hours</h3>
+        <div class="hours"><div><b>Monday to Saturday</b><span>9am – 8pm</span></div><div><b>Sunday</b><span>10am – 8pm</span></div></div>
+      </div>
+      <button class="btn btn-teal" type="button" data-book>Book a treatment</button>
+    </div>
+  </div>
+</section>
+
+<section class="rooms" id="rooms" aria-labelledby="rooms-title">
+  <div class="wrap">
+    <div>
+      <p class="eyebrow" data-reveal>For therapists</p>
+      <h2 class="h2" id="rooms-title" data-split style="margin-top:16px;font-size:clamp(40px,4.8vw,72px)">Rooms to <em>rent.</em></h2>
+      <p class="sub" data-reveal>Practise from a calm, well-kept room on Deacon Road. Tell us what you do and when you'd like to start.</p>
+    </div>
+    <form class="enq" id="enq" novalidate>
+      <h3>Room enquiry</h3>
+      <div class="row"><label>Name<input name="name" autocomplete="name" required></label><label>Phone or email<input name="contact" autocomplete="email" required></label></div>
+      <label>Your therapy<input name="therapy" placeholder="e.g. sports massage"></label>
+      <button class="btn btn-teal" type="submit">Send enquiry</button>
+      <p class="done" id="enqdone" hidden role="status">This is a preview — the form will go live with your new site.</p>
+    </form>
+  </div>
+</section>
+
+<section class="close" aria-labelledby="close-title">
+  <div class="wrap">
+    <h2 class="h2" id="close-title" data-split>Ready when <em>you are.</em></h2>
+    <button class="btn btn-teal" type="button" data-book>Book a treatment</button>
+  </div>
+</section>
+</main>
+
+<footer><div class="wrap"><span>© 2026 Thrive Wellness Centre · 4 Deacon Road, Peartree, Southampton SO19 7PZ</span><span>Website concept by <a href="https://itchenstudio.co.uk">Itchen Studio</a></span></div></footer>
+
+<div class="scrim" id="scrim" hidden></div>
+<aside class="drawer" id="drawer" role="dialog" aria-modal="true" aria-labelledby="dtitle" hidden>
+  <div class="dhead"><h2 id="dtitle">Book a treatment</h2><button class="dclose" type="button" id="dclose" aria-label="Close booking">×</button></div>
+  <div class="dprog" aria-hidden="true"><i></i><i></i><i></i></div>
+  <form class="dbody" id="dform" novalidate>
+    <div class="dpane" data-p="0">
+      <h3>What would you like?</h3><p class="hint">Prices as listed on Fresha.</p>
+      <div class="opts" id="tx" role="radiogroup" aria-label="Treatment"></div>
+    </div>
+    <div class="dpane" data-p="1" hidden>
+      <h3>Pick a day and time</h3><p class="hint">Example availability for this preview.</p>
+      <div class="days" id="days" role="group" aria-label="Day"></div>
+      <div class="slots" id="slots" role="group" aria-label="Time"></div>
+    </div>
+    <div class="dpane dform" data-p="2" hidden>
+      <h3>Your details</h3>
+      <p class="sum" id="sum"></p>
+      <label>Name<input id="dn" name="name" autocomplete="name" required></label>
+      <label>Phone<input id="dp" name="phone" type="tel" autocomplete="tel" required></label>
+      <label>Anything we should know?<textarea name="note"></textarea></label>
+    </div>
+    <div class="dpane" data-p="3" hidden role="status" aria-live="polite">
+      <span class="eyebrow">Booking requested</span>
+      <div class="ref" id="dref">B-0000</div>
+      <p id="dsum"></p>
+      <p style="margin-top:14px;color:var(--muted)">This is a preview — the form will go live with your new site. Nothing was sent, and the reference is an example.</p>
+    </div>
+  </form>
+  <div class="dfoot"><button type="button" class="btn-ghost" id="dback">Back</button><button type="button" class="btn btn-teal" id="dnext">Next</button></div>
+</aside>
+
+<script src="assets/js/gsap.min.js" defer></script>
+<script src="assets/js/ScrollTrigger.min.js" defer></script>
+<script src="assets/js/lenis.min.js" defer></script>
+<script src="assets/js/concept.js" defer></script>
+<script defer>
+document.addEventListener('DOMContentLoaded', function(){
+  var BIZ = 'Thrive Wellness Centre';
+  document.getElementById('banner').innerHTML = 'Website concept for <b>' + BIZ + '</b> — preview only, not the live site. · Designed by Itchen Studio · sam@itchenstudio.co.uk';
+
+  /* open now, London time, hours from the lead: Mon–Sat 9–20, Sun 10–20 */
+  (function(){
+    var f = new Intl.DateTimeFormat('en-GB', { timeZone:'Europe/London', weekday:'short', hour:'numeric', minute:'numeric', hour12:false }).formatToParts(new Date());
+    var o = {}; f.forEach(function(p){ o[p.type] = p.value; });
+    var h = (+o.hour % 24) + (+o.minute) / 60, sun = o.weekday === 'Sun', open = sun ? 10 : 9, close = 20;
+    var el = document.getElementById('open'), t = document.getElementById('opentxt');
+    if (h >= open && h < close) t.textContent = 'Open now · until 8pm';
+    else { el.classList.add('closed'); var nextSun = o.weekday === 'Sat'; t.textContent = h < open ? 'Closed · opens ' + (open === 10 ? '10am' : '9am') + ' today' : 'Closed · opens ' + (nextSun ? '10am tomorrow' : '9am tomorrow'); }
+  })();
+
+  /* cairn drawing */
+  var NS = 'http://www.w3.org/2000/svg', svg = document.getElementById('stack');
+  function el(n, a, p){ var e = document.createElementNS(NS, n); for (var k in a) e.setAttribute(k, a[k]); (p || svg).appendChild(e); return e; }
+  var defs = el('defs', {});
+  var sh = el('radialGradient', { id:'sh', cx:.5, cy:.5, r:.5 }, defs);
+  el('stop', { offset:0, 'stop-color':'#0f4a47', 'stop-opacity':.28 }, sh); el('stop', { offset:1, 'stop-color':'#0f4a47', 'stop-opacity':0 }, sh);
+  el('ellipse', { cx:240, cy:548, rx:230, ry:22, fill:'url(#sh)' });
+  var S = [
+    { n:'Massage', rx:196, ry:56, c:'#0f4a47', t:'#f7f6f1', r:-2 },
+    { n:'Skin', rx:158, ry:48, c:'#4f8f55', t:'#f7f6f1', r:2.5 },
+    { n:'Needling', rx:124, ry:42, c:'#8cc063', t:'#0f4a47', r:-3 },
+    { n:'Red light', rx:94, ry:36, c:'#c9b48c', t:'#0f4a47', r:2 },
+    { n:'Coaching', rx:68, ry:31, c:'#f7f6f1', t:'#0f4a47', r:-2 }
+  ], stones = [], y = 540;
+  S.forEach(function(s, i){
+    y -= s.ry; var cy = y; y -= s.ry - 10;
+    var g = el('g', {}), inner = el('g', { transform:'translate(240 ' + cy + ') rotate(' + s.r + ')' }, g);
+    el('ellipse', { rx:s.rx, ry:s.ry, fill:s.c }, inner);
+    el('ellipse', { rx:s.rx * .8, ry:s.ry * .55, cy:-s.ry * .3, fill:'#ffffff', opacity:.12 }, inner);
+    var tx = el('text', { 'text-anchor':'middle', y:6, fill:s.t, 'font-family':'Bricolage Grotesque, Arial, sans-serif', 'font-weight':600, 'font-size': i < 3 ? 24 : 19 }, inner); tx.textContent = s.n;
+    stones.push(g);
+  });
+  var stageEls = Array.prototype.slice.call(document.querySelectorAll('.stage'));
+  function setStage(k){ stageEls.forEach(function(e, i){ e.classList.toggle('on', i === k); }); }
+
+  /* booking drawer */
+  var TX = [
+    ['massage-half', 'Half body / Swedish massage', '1 hour', '£50'],
+    ['massage-full', 'Full body massage', '80 minutes', '£75'],
+    ['pick', 'Pick & Mix ×3', 'Three treatments of your choosing', '£60'],
+    ['facial', 'Utopia facial', '', '£45'],
+    ['micro', 'Microneedling', '', 'from £85'],
+    ['red', 'Red light therapy', 'Pay by the minute', 'from £1/min'],
+    ['needle', 'Dry needling', '', 'Ask us'],
+    ['exercise', 'Exercise plan', '', '£50'],
+    ['coach', 'Nutrition or menopause coaching', '', 'Ask us']
+  ], GROUP = { massage:'massage-half', skin:'facial', pick:'pick', ther:'red', coach:'exercise' };
+  var drawer = document.getElementById('drawer'), scrim = document.getElementById('scrim'), pane = 0, st = { tx:null, day:null, slot:null }, lastFocus = null;
+  var panes = Array.prototype.slice.call(drawer.querySelectorAll('.dpane')), bars = drawer.querySelectorAll('.dprog i');
+  var tx = document.getElementById('tx');
+  TX.forEach(function(t){
+    var b = document.createElement('button'); b.type = 'button'; b.className = 'opt'; b.setAttribute('role', 'radio'); b.setAttribute('aria-checked', 'false'); b.dataset.k = t[0];
+    b.innerHTML = '<span>' + t[1].replace('&', '&amp;') + (t[2] ? '<small>' + t[2] + '</small>' : '') + '</span><b>' + t[3] + '</b>'; tx.appendChild(b);
+  });
+  tx.addEventListener('click', function(e){ var b = e.target.closest('.opt'); if (!b) return; st.tx = b.dataset.k; tx.querySelectorAll('.opt').forEach(function(o){ o.setAttribute('aria-checked', String(o === b)); }); });
+  function label(k){ return TX.filter(function(t){ return t[0] === k; })[0]; }
+  function hash(s){ var h = 0; for (var i = 0; i < s.length; i++) h = (h * 31 + s.charCodeAt(i)) | 0; return Math.abs(h); }
+  var DN = ['Sun', 'Mon', 'Tue', 'Wed', 'Thu', 'Fri', 'Sat'], MN = ['Jan', 'Feb', 'Mar', 'Apr', 'May', 'Jun', 'Jul', 'Aug', 'Sep', 'Oct', 'Nov', 'Dec'];
+  var days = document.getElementById('days'), slots = document.getElementById('slots'), dayList = [];
+  var now = new Date();
+  for (var i = 0; i < 14; i++) { var d = new Date(now.getFullYear(), now.getMonth(), now.getDate() + i); dayList.push(d); var b = document.createElement('button'); b.type = 'button'; b.className = 'day'; b.setAttribute('aria-pressed', 'false'); b.dataset.i = i; b.setAttribute('aria-label', DN[d.getDay()] + ' ' + d.getDate() + ' ' + MN[d.getMonth()]); b.innerHTML = DN[d.getDay()] + '<b>' + d.getDate() + '</b>' + MN[d.getMonth()]; days.appendChild(b); }
+  function fmtH(h){ return (h > 12 ? h - 12 : h) + ':00' + (h >= 12 ? 'pm' : 'am'); }
+  function drawSlots(i){
+    var d = dayList[i], open = d.getDay() === 0 ? 10 : 9; slots.innerHTML = ''; st.slot = null;
+    for (var h = open; h < 19; h++) {
+      var b = document.createElement('button'); b.type = 'button'; b.className = 'slot'; b.setAttribute('aria-pressed', 'false'); b.textContent = fmtH(h);
+      if (hash(d.toDateString() + h) % 100 < 38 || (i === 0 && h <= now.getHours())) { b.disabled = true; b.setAttribute('aria-label', fmtH(h) + ', taken'); }
+      slots.appendChild(b);
+    }
+  }
+  days.addEventListener('click', function(e){ var b = e.target.closest('.day'); if (!b) return; st.day = +b.dataset.i; days.querySelectorAll('.day').forEach(function(x){ x.setAttribute('aria-pressed', String(x === b)); }); drawSlots(st.day); });
+  slots.addEventListener('click', function(e){ var b = e.target.closest('.slot'); if (!b || b.disabled) return; st.slot = b.textContent; slots.querySelectorAll('.slot').forEach(function(x){ x.setAttribute('aria-pressed', String(x === b)); }); });
+  var next = document.getElementById('dnext'), back = document.getElementById('dback');
+  function dayLabel(){ var d = dayList[st.day]; return DN[d.getDay()] + ' ' + d.getDate() + ' ' + MN[d.getMonth()]; }
+  function show(n){
+    pane = n; panes.forEach(function(p, i){ p.hidden = i !== n; });
+    bars.forEach(function(b, i){ b.classList.toggle('done', i < n || n === 3); });
+    back.style.visibility = n === 0 || n === 3 ? 'hidden' : 'visible';
+    next.textContent = n === 2 ? 'Request booking' : n === 3 ? 'Close' : 'Next';
+    if (n === 2) document.getElementById('sum').textContent = label(st.tx)[1] + ' · ' + dayLabel() + ' at ' + st.slot;
+    drawer.querySelector('.dbody').scrollTop = 0;
+  }
+  function openD(k){
+    lastFocus = document.activeElement; st = { tx:k ? GROUP[k] : null, day:null, slot:null };
+    tx.querySelectorAll('.opt').forEach(function(o){ o.setAttribute('aria-checked', String(o.dataset.k === st.tx)); });
+    days.querySelectorAll('.day').forEach(function(x){ x.setAttribute('aria-pressed', 'false'); }); slots.innerHTML = '';
+    document.getElementById('dform').reset(); show(0);
+    drawer.hidden = false; scrim.hidden = false; void drawer.offsetWidth;
+    requestAnimationFrame(function(){ document.body.classList.add('dopen'); document.getElementById('dclose').focus(); });
+    if (window.__lenis) window.__lenis.stop();
+  }
+  function closeD(){
+    document.body.classList.remove('dopen');
+    setTimeout(function(){ drawer.hidden = true; scrim.hidden = true; }, 600);
+    if (window.__lenis) window.__lenis.start();
+    if (lastFocus) lastFocus.focus();
+  }
+  document.querySelectorAll('[data-book]').forEach(function(b){ b.addEventListener('click', function(){ openD(b.dataset.book || null); }); });
+  document.getElementById('dclose').addEventListener('click', closeD); scrim.addEventListener('click', closeD);
+  drawer.addEventListener('keydown', function(e){
+    if (e.key === 'Escape') { closeD(); return; }
+    if (e.key === 'Tab') { var f = drawer.querySelectorAll('button:not([disabled]):not([hidden]),input,textarea'), vis = Array.prototype.filter.call(f, function(x){ return x.offsetParent !== null && getComputedStyle(x).visibility !== 'hidden'; }); if (!vis.length) return; var a = vis[0], z = vis[vis.length - 1]; if (e.shiftKey && document.activeElement === a) { e.preventDefault(); z.focus(); } else if (!e.shiftKey && document.activeElement === z) { e.preventDefault(); a.focus(); } }
+  });
+  back.addEventListener('click', function(){ show(Math.max(0, pane - 1)); });
+  next.addEventListener('click', function(){
+    if (pane === 0) { if (!st.tx) { tx.querySelector('.opt').focus(); return; } show(1); }
+    else if (pane === 1) { if (st.day === null || !st.slot) { (st.day === null ? days : slots).querySelector('button:not(:disabled)').focus(); return; } show(2); }
+    else if (pane === 2) {
+      var bad = null; ['dn', 'dp'].forEach(function(id){ var x = document.getElementById(id), ok = x.value.trim() !== ''; x.style.borderColor = ok ? '' : '#b3261e'; x.setAttribute('aria-invalid', ok ? 'false' : 'true'); if (!ok && !bad) bad = x; });
+      if (bad) { bad.focus(); return; }
+      document.getElementById('dref').textContent = 'B-' + (3000 + Math.floor(Math.random() * 6000));
+      document.getElementById('dsum').textContent = label(st.tx)[1] + ', ' + dayLabel() + ' at ' + st.slot + '.';
+      show(3);
+    } else closeD();
+  });
+  document.getElementById('dform').addEventListener('submit', function(e){ e.preventDefault(); });
+
+  var api = window.ConceptSite.init();
+  api.fakeForm('enq', 'enqdone');
+  window.__lenis = api.lenis;
+
+  if (api.motion) {
+    gsap.utils.toArray('.arch').forEach(function(a, i){
+      gsap.from(a, { yPercent:20 + i * 12, duration:1.4, delay:.25 + i * .12, ease:'expo.out' });
+      gsap.to(a, { y:-30 - i * 24, ease:'none', scrollTrigger:{ trigger:'.hero', start:'top top', end:'bottom top', scrub:true } });
+      gsap.fromTo(a.querySelector('img'), { scale:1.18 }, { scale:1, ease:'none', scrollTrigger:{ trigger:'.hero', start:'top top', end:'bottom top', scrub:true } });
+    });
+    var bo = { v:0 }, bv = document.getElementById('bigv');
+    gsap.to(bo, { v:5, duration:1.6, ease:'power2.out', scrollTrigger:{ trigger:'#big', start:'top 85%', once:true }, onUpdate:function(){ bv.textContent = bo.v.toFixed(1); } });
+
+    var mm = gsap.matchMedia();
+    function scene(pin, endLen){
+      gsap.set(stones, { autoAlpha:0, y:-320 });
+      gsap.set('.cairn', { backgroundColor:'#eadfcb' });
+      var tl = gsap.timeline({ scrollTrigger:{ trigger:'.cairn-pin', start: pin ? 'top top' : 'top 70%', end: pin ? '+=' + endLen : 'bottom 55%', pin:pin, scrub:.6, anticipatePin:1 },
+        onUpdate:function(){ var p = this.progress(); setStage(Math.min(4, Math.floor(p / .18))); } });
+      stones.forEach(function(s, i){ tl.to(s, { autoAlpha:1, y:0, duration:.17, ease:'power3.out' }, i * .18); });
+      tl.to('.cairn', { backgroundColor:'#dfeadb', duration:.2, ease:'none' }, .72).to({}, { duration:.08 }, .92);
+      setStage(0);
+      return function(){ gsap.set(stones, { clearProps:'all' }); };
+    }
+    mm.add('(min-width: 901px)', function(){ return scene(true, 2000); });
+    mm.add('(max-width: 900px)', function(){ return scene(false); });
+  } else {
+    stageEls.forEach(function(e){ e.classList.add('on'); });
+  }
+});
+</script>
+</body>
+</html>
