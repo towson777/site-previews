@@ -9,7 +9,7 @@ Signature scroll moment: "The pipe run" — pinned scene. A copper pipe draws it
 Interactive feature: booking drawer-style wizard — what do you need (boiler service, landlord gas safety certificate, repair, bathroom or kitchen plumbing, emergency) > postcode (checked against SO14 to SO40) > example day and time (next 14 days, some taken) > details > confirmation reference. Sends nothing.
 Headline shortlist: 1 One engineer, every job. / 2 Vivek does every job. / 3 Start to finish, one pair of hands. / 4 Pipes to polish. / 5 From first fix to final tap. / 6 Answered by the man who fixes it. / 7 Same engineer, every stage. / 8 Hot water, any hour. / 9 One man, one number. / 10 Southampton pipework, personally.
 Crossed out: 1 and 7 (a generic sole trader could say it), 3 (too long and vague), 4 (corny), 6 (clumsy), 8 (any boiler firm), 9 (generic), 10 ("personally" is filler).
-Pick: "Vivek does every job." — four words, names the owner and says the one thing the business is about; no other firm in Southampton can print it.
+Pick (v2): "Vivek does every job." Replaced in v3 at Sam's request with his own line: "Quality Plumbing and Heating in Southampton." (six words). The one-engineer idea carries on in the lead paragraph, the pipe-run scene and the booking wizard.
 -->
 <html lang="en-GB">
 <head>
@@ -80,7 +80,7 @@ h3{margin:0}
 .hero .p3{right:2%;bottom:20%;width:min(15vw,220px);aspect-ratio:3/4}
 .hero .shade{position:absolute;inset:0;z-index:-1;background:linear-gradient(90deg,#0c0c0ef5 0%,#0c0c0eb8 46%,#0c0c0e26 78%,#0c0c0e00 100%),linear-gradient(0deg,#0c0c0ef2 0%,#0c0c0e00 42%)}
 .hero .wrap{position:relative;width:100%;padding-block:110px 40px}
-.hero h1{font-size:clamp(58px,12.2vw,200px);margin:20px 0 0;max-width:12em}
+.hero h1{font-size:clamp(52px,8.6vw,150px);margin:20px 0 0;max-width:12em;line-height:.98}
 .hero h1 .ln{display:block;overflow:hidden;padding-bottom:.06em}
 .hero h1 .ln>span{display:inline-block}
 .hero h1 .fl{background:linear-gradient(90deg,var(--blue) 0%,var(--orange) 55%,var(--red) 100%);-webkit-background-clip:text;background-clip:text;color:transparent;-webkit-text-fill-color:transparent}
@@ -92,7 +92,7 @@ h3{margin:0}
 .hero .lbl{color:var(--orange)}
 html.motion:not(.ready) .hero h1 .ln>span{transform:translateY(105%)}
 html.motion:not(.ready) [data-intro]{opacity:0}
-@media (max-width:900px){.hero .p1{display:none}.hero .p2{right:-6%;top:5%;width:60vw}.hero .p3{right:46%;top:12%;bottom:auto;width:32vw}.hero .shade{background:linear-gradient(0deg,#0c0c0efa 0%,#0c0c0ee8 50%,#0c0c0e30 100%)}.hero h1{font-size:17.5vw}.hero .wrap{padding-top:230px}}
+@media (max-width:900px){.hero .p1{display:none}.hero .p2{right:-6%;top:5%;width:60vw}.hero .p3{right:46%;top:12%;bottom:auto;width:32vw}.hero .shade{background:linear-gradient(0deg,#0c0c0efa 0%,#0c0c0ee8 50%,#0c0c0e30 100%)}.hero h1{font-size:12.2vw}.hero .wrap{padding-top:230px}}
 
 /* ribbon */
 .strip{background:var(--orange);color:var(--ink);overflow:hidden;white-space:nowrap;padding:15px 0;font:800 20px/1 var(--display);font-stretch:70%;text-transform:uppercase;letter-spacing:.05em}
@@ -294,8 +294,8 @@ html:not(.motion) .stage{opacity:1}
   </div>
   <div class="shade"></div>
   <div class="wrap">
-    <p class="lbl" data-intro>Plumbing and heating · Southampton</p>
-    <h1 class="cond" id="h1"><span class="ln"><span>Vivek does</span></span><span class="ln"><span class="fl">every job.</span></span></h1>
+    <p class="lbl" data-intro>VK Plumbing &amp; Heating · Vivek Kakiya</p>
+    <h1 class="cond" id="h1"><span class="ln"><span>Quality Plumbing</span></span><span class="ln"><span>and Heating in</span></span><span class="ln"><span class="fl">Southampton.</span></span></h1>
     <p class="lead" data-intro>Vivek Kakiya runs VK Plumbing &amp; Heating on his own. Boilers, central heating, landlord gas certificates and bathroom pipework across Southampton, with the same engineer from the first call to the last tap. Ring any hour.</p>
     <div class="ctas" data-intro><a class="btn" href="tel:07893933298">Call 07893 933298</a><a class="btn ghost" href="#quote">Book a visit</a></div>
     <p class="proof" data-intro><span><b>9.9/10</b> on Checkatrade</span><span><b>165</b> reviews</span><span><b>2020</b> trading since</span><span>City &amp; Guilds L2</span></p>
