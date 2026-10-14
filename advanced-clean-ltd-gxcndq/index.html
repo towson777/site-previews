@@ -1,0 +1,561 @@
+<!doctype html>
+<!--
+ART DIRECTION BRIEF — Advanced Clean Ltd (Southampton)
+Idea: the cleaners who go the distance, and clean every surface in the room. Advanced Clean is based in Southampton but works from Chichester to Poole and inland to Basingstoke, Salisbury and Andover, on six kinds of fabric: carpet, upholstery, rugs, leather, curtains and mattresses. The page is built as a rail map of that long coast, and a rug that is cleaned one pass at a time.
+Palette: crisp white and pale aqua #e8f6f7 as the ground, deep navy #0a1f44 for type and the big dark blocks, bright aqua #19c7d1 as the accent (text version #0a7a82 on light), warm sand #d9cbb6 used only inside the dirty-rug scene. No logo supplied, so the mark is a drawn wordmark: a navy tile with an aqua stripe, like a clean pass over a carpet.
+Type: Familjen Grotesk (variable, set large and tight) for display; Onest for text.
+Hero: pale field, a three-line headline across the left two thirds with six drifting fabric swatches (carpet, sofa, rug, leather, curtain, mattress) in circles behind and to the right; a rail-map strip runs along the foot of the hero with Chichester, Portsmouth, Fareham, Southampton, the New Forest, Bournemouth and Poole as stops, drawing itself on load. Not a two-column split, and no photos because none were supplied.
+Signature scroll moment: "One pass at a time" — a pinned scene. A big dirty rug sits in the middle; as you scroll a cleaning head works across it row by row, back and forth, leaving clean pile behind. The six fabric names below light up in turn as the pass goes. Phones get a self-playing version when it scrolls into view.
+Interactive feature: quote wizard — which fabrics (tick any of six) > how much (a few items, a few rooms, the whole home, not sure) > postcode checked against the SO, PO, BH, SP and RG21-29 areas > contact details > confirmation reference. Sends nothing.
+Copy note: Sam's note asked for copy from the current website and a Checkatrade review feed. The old site couldn't be reached from the builder, so copy is written from the lead document and the three Checkatrade review quotes on file; swap in their own wording where better.
+Headline shortlist: 1 Every fabric in your home. / 2 Six fabrics, one clean team. / 3 Carpets, sofas, rugs, curtains. / 4 Clean from floor to curtain. / 5 The whole room, cleaned. / 6 Chichester to Poole, cleaned. / 7 Clean from Chichester to Poole. / 8 Dominique and Chris clean it. / 9 Stains out, fibres kept. / 10 From the New Forest to Chichester.
+Crossed out: 1, 3, 4 and 5 (any carpet cleaner with a van could print them), 2 (cute but empty), 8 (a bit odd as a hero), 9 (claims a result and a method we don't know), 10 (misses Poole).
+Pick: "Clean from Chichester to Poole." — five words, built on the real coverage list; no cleaner who stops at the city boundary can say it.
+-->
+<html lang="en-GB">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<meta name="robots" content="noindex,nofollow">
+<title>Advanced Clean Ltd · Southampton</title>
+<meta name="description" content="A website concept for Advanced Clean Ltd, carpet, upholstery and rug cleaners in Southampton. Preview only.">
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Crect width='32' height='32' rx='7' fill='%230a1f44'/%3E%3Crect x='6' y='13' width='20' height='6' rx='3' fill='%2319c7d1'/%3E%3C/svg%3E">
+<link rel="preload" href="assets/fonts/familjen.woff2" as="font" type="font/woff2" crossorigin>
+<link rel="preload" href="assets/fonts/onest.woff2" as="font" type="font/woff2" crossorigin>
+<script>(function(d){if(!matchMedia('(prefers-reduced-motion: reduce)').matches){d.documentElement.classList.add('motion');setTimeout(function(){if(!d.documentElement.classList.contains('ready'))d.documentElement.classList.remove('motion')},3000)}})(document)</script>
+<style>
+@font-face{font-family:"Familjen Grotesk";src:url("assets/fonts/familjen.woff2") format("woff2");font-weight:400 700;font-display:swap}
+@font-face{font-family:"Onest";src:url("assets/fonts/onest.woff2") format("woff2");font-weight:100 900;font-display:swap}
+:root{
+  --navy:#0a1f44; --navy2:#12306a; --aqua:#19c7d1; --aqua-d:#0a7a82; --pale:#e8f6f7; --white:#fff; --ink:#0a1f44; --muted:#46566f; --line:#c9dfe2; --soft:#b5c6e0; --sand:#d9cbb6;
+  --display:"Familjen Grotesk","Helvetica Neue",Arial,sans-serif; --body:"Onest",system-ui,sans-serif; --ease:cubic-bezier(.2,.8,.2,1);
+}
+*{box-sizing:border-box}
+html.lenis,html.lenis body{height:auto}
+body{margin:0;background:var(--white);color:var(--ink);font:400 17px/1.62 var(--body);-webkit-font-smoothing:antialiased;overflow-x:clip}
+img,svg{max-width:100%}
+p{margin:0}
+h1,h2,h3{margin:0;font-family:var(--display);font-weight:600;letter-spacing:-.035em;line-height:.95}
+h2{font-size:clamp(44px,6.4vw,100px)}
+.wrap{max-width:1280px;margin:0 auto;padding-inline:36px}
+@media (max-width:640px){.wrap{padding-inline:18px}}
+.lbl{font:600 13px/1.4 var(--body);letter-spacing:.18em;text-transform:uppercase;color:var(--aqua-d)}
+.dark .lbl{color:var(--aqua)}
+:focus-visible{outline:3px solid var(--navy2);outline-offset:3px;border-radius:3px}
+.dark :focus-visible{outline-color:var(--aqua)}
+[hidden]{display:none!important}
+.btn{display:inline-flex;align-items:center;justify-content:center;gap:10px;min-height:54px;padding:0 28px;border-radius:12px;border:2px solid var(--navy);background:var(--navy);color:#fff;font:600 16px/1 var(--body);text-decoration:none;cursor:pointer;transition:background-color .25s,color .25s,border-color .25s,transform .25s var(--ease)}
+.btn:hover{background:var(--aqua);border-color:var(--aqua);color:var(--navy);transform:translateY(-2px)}
+.btn.a{background:var(--aqua);border-color:var(--aqua);color:var(--navy)}
+.btn.a:hover{background:#fff;border-color:#fff}
+.btn.o{background:transparent;color:var(--navy)}
+.btn.o:hover{background:var(--navy);color:#fff;border-color:var(--navy)}
+.btn svg{width:19px;height:19px;flex:none}
+
+/* preview banner */
+.concept{background:var(--navy);color:#c3d0ea;font-size:13px;line-height:18px;text-align:center;padding:8px 16px;border-bottom:1px solid #ffffff1f}
+.concept b{color:#fff;font-weight:600}
+
+/* header */
+.top{position:sticky;top:0;z-index:60;background:#ffffffee;backdrop-filter:blur(12px);-webkit-backdrop-filter:blur(12px);border-bottom:1px solid var(--line);transition:transform .5s var(--ease)}
+.top.away{transform:translateY(-100%)}
+.top .wrap{display:flex;align-items:center;justify-content:space-between;gap:20px;height:76px}
+.logo{display:inline-flex;align-items:center;gap:12px;text-decoration:none;color:var(--navy)}
+.logo svg{width:46px;height:46px;flex:none}
+.logo b{display:block;font:600 23px/1 var(--display);letter-spacing:-.03em}
+.logo small{display:block;font:600 11px/1 var(--body);letter-spacing:.18em;text-transform:uppercase;color:var(--muted);margin-top:5px}
+.top nav{display:flex;gap:30px}
+.top nav a{color:var(--navy);text-decoration:none;font:500 15px/1 var(--body);padding:14px 0;border-bottom:2px solid transparent}
+.top nav a:hover{border-bottom-color:var(--aqua)}
+.top .btn{min-height:46px;padding:0 20px;font-size:15px}
+.top .btn svg{stroke:var(--aqua)}
+.top .btn:hover svg{stroke:var(--navy)}
+@media (max-width:960px){.top nav{display:none}}
+@media (max-width:420px){.top .btn .num{display:none}.logo small{display:none}}
+
+/* hero */
+.hero{position:relative;background:var(--pale);overflow:hidden;isolation:isolate;display:flex;flex-direction:column;min-height:min(94vh,940px)}
+.hero .swatches{position:absolute;inset:0;z-index:-1;pointer-events:none}
+.swt{position:absolute;border-radius:50%;box-shadow:0 30px 50px -30px #0a1f4466,inset 0 0 0 6px #fff}
+.swt::after{content:attr(data-n);position:absolute;left:50%;bottom:-12px;transform:translateX(-50%);background:var(--navy);color:#fff;font:600 11px/1 var(--body);letter-spacing:.14em;text-transform:uppercase;padding:7px 11px;border-radius:99px;white-space:nowrap}
+.swt.s1{right:20%;top:9%;width:min(15vw,200px);aspect-ratio:1;background:repeating-linear-gradient(0deg,#9fb4c9 0 2px,#b6c8da 2px 5px)}
+.swt.s2{right:4%;top:6%;width:min(21vw,300px);aspect-ratio:1;background:repeating-linear-gradient(45deg,#19c7d1 0 3px,#4ad8e0 3px 7px),#19c7d1;background-blend-mode:multiply}
+.swt.s3{right:30%;top:42%;width:min(12vw,170px);aspect-ratio:1;background:repeating-linear-gradient(90deg,#0a1f44 0 14px,#fff 14px 20px,#12306a 20px 34px)}
+.swt.s4{right:12%;top:42%;width:min(16vw,220px);aspect-ratio:1;background:radial-gradient(circle at 30% 25%,#b07a52,#7a4b2c 70%)}
+.swt.s5{right:1%;top:48%;width:min(13vw,180px);aspect-ratio:1;background:repeating-linear-gradient(90deg,#fff 0 6px,#cde9eb 6px 14px),#fff}
+.hero .wrap{width:100%;padding-block:92px 20px;flex:1;display:flex;flex-direction:column;justify-content:flex-end}
+.hero h1{font-size:clamp(54px,11.4vw,196px);margin:22px 0 0;max-width:7.6em;line-height:.9}
+.hero h1 .ln{display:block;overflow:hidden;padding-bottom:.08em;margin-bottom:-.06em}
+.hero h1 .ln>span{display:inline-block}
+.hero h1 .ac{color:var(--aqua-d)}
+.hero .lead{font-size:clamp(17px,1.5vw,21px);line-height:1.55;max-width:31em;margin:26px 0 0;color:#2c3e5e}
+.hero .ctas{display:flex;flex-wrap:wrap;gap:12px;margin-top:30px}
+.proof{display:flex;flex-wrap:wrap;gap:8px 30px;margin-top:36px;font-size:15px;color:#2c3e5e}
+.proof b{color:var(--navy);font:600 24px/1 var(--display);letter-spacing:-.02em;margin-right:8px}
+.proof span{display:inline-flex;align-items:baseline}
+/* rail map */
+.rail{position:relative;background:var(--navy);color:#fff;padding:26px 0 24px}
+.rail .wrap{padding-block:0}
+.rail .cap{display:flex;justify-content:space-between;gap:16px;flex-wrap:wrap;font:600 12px/1.4 var(--body);letter-spacing:.16em;text-transform:uppercase;color:var(--soft);margin-bottom:34px}
+.rail .line{position:relative;height:4px;background:#ffffff26;border-radius:4px;margin-inline:8px}
+.rail .line i{position:absolute;inset:0;background:var(--aqua);border-radius:4px;transform-origin:left}
+.rail ol{list-style:none;margin:0;padding:0;position:absolute;inset:0}
+.rail li{position:absolute;top:50%;transform:translate(-50%,-50%);text-align:center}
+.rail li::before{content:"";display:block;width:14px;height:14px;border-radius:50%;background:var(--navy);border:3px solid var(--aqua);margin:0 auto}
+.rail li.home::before{width:26px;height:26px;background:var(--aqua);border-color:#fff}
+.rail li span{position:absolute;top:26px;left:50%;transform:translateX(-50%);font:600 14px/1.2 var(--body);white-space:nowrap}
+.rail li.home span{top:34px;color:var(--aqua)}
+.rail .inland{margin-top:62px;font-size:14px;color:var(--soft)}
+.rail .inland b{color:#fff;font-weight:600}
+html.motion:not(.ready) .hero h1 .ln>span{transform:translateY(105%)}
+html.motion:not(.ready) [data-intro]{opacity:0}
+@media (max-width:900px){.swt{opacity:.55}.swt.s1{right:48%;top:4%;width:30vw}.swt.s2{right:-6%;top:3%;width:44vw}.swt.s3{display:none}.swt.s4{display:none}.swt.s5{display:none}.swt::after{display:none}.hero .wrap{padding-top:230px}.hero h1{font-size:16.6vw}.rail li span{font-size:12px}.rail li.hide-m span{display:none}}
+
+/* ribbon */
+.strip{background:var(--aqua);color:var(--navy);overflow:hidden;white-space:nowrap;padding:15px 0;font:600 24px/1 var(--display);letter-spacing:-.02em}
+.strip .track{display:inline-flex;will-change:transform}
+.strip .track span{padding:0 26px;display:inline-flex;align-items:center;gap:26px}
+.strip .track span::after{content:"";width:22px;height:5px;background:var(--navy);border-radius:3px}
+
+/* fabrics */
+.fabrics{padding-block:140px 90px}
+.sec-head{display:flex;justify-content:space-between;align-items:end;gap:32px;flex-wrap:wrap;margin-bottom:56px}
+.sec-head p.in{max-width:26em;color:var(--muted);font-size:18px}
+.fgrid{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:18px}
+.fab{position:relative;border:1px solid var(--line);border-radius:22px;overflow:hidden;background:#fff;display:flex;flex-direction:column;transition:transform .45s var(--ease),box-shadow .45s var(--ease),border-color .3s}
+.fab:hover{transform:translateY(-6px);box-shadow:0 30px 40px -30px #0a1f4455;border-color:var(--aqua)}
+.fab .tex{height:150px;position:relative}
+.fab .tex::after{content:"";position:absolute;inset:0;background:linear-gradient(180deg,#0000 50%,#fff 100%)}
+.fab .bd{padding:6px 26px 28px;display:grid;gap:10px}
+.fab .n{font:600 13px/1 var(--body);letter-spacing:.14em;color:var(--aqua-d)}
+.fab h3{font-size:clamp(32px,3vw,44px)}
+.fab p{color:var(--muted);font-size:16px;line-height:1.5}
+.t-carpet{background:repeating-linear-gradient(0deg,#9fb4c9 0 2px,#b6c8da 2px 5px)}
+.t-sofa{background:repeating-linear-gradient(45deg,#19c7d1 0 3px,#4ad8e0 3px 7px)}
+.t-rug{background:repeating-linear-gradient(90deg,#0a1f44 0 14px,#fff 14px 20px,#12306a 20px 34px)}
+.t-leather{background:radial-gradient(circle at 30% 25%,#b07a52,#7a4b2c 70%)}
+.t-curtain{background:repeating-linear-gradient(90deg,#fff 0 6px,#cde9eb 6px 14px),#fff}
+.t-mattress{background:repeating-linear-gradient(135deg,#e8f6f7 0 10px,#d3eaed 10px 12px)}
+.fnote{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:18px;margin-top:18px}
+.fnote div{border-radius:22px;padding:30px 30px 28px;display:grid;gap:8px}
+.fnote .a{background:var(--navy);color:#fff}.fnote .b{background:var(--aqua);color:var(--navy)}
+.fnote h3{font-size:clamp(30px,3vw,42px)}
+.fnote p{font-size:16px;max-width:26em}.fnote .a p{color:var(--soft)}
+@media (max-width:980px){.fgrid{grid-template-columns:repeat(2,minmax(0,1fr))}}
+@media (max-width:620px){.fgrid,.fnote{grid-template-columns:1fr}.fabrics{padding-block:90px 50px}.fab .tex{height:110px}}
+
+/* signature: one pass at a time */
+.scene{position:relative;background:var(--navy);color:#fff}
+.scene-pin{min-height:100vh;display:grid;align-content:center;padding-block:92px 36px}
+.scene-pin>.wrap{width:100%}
+.scene h2{color:#fff;margin-top:18px;font-size:clamp(44px,6vw,92px)}
+.scene h2 em{font-style:normal;color:var(--aqua)}
+.scene-top{display:flex;justify-content:space-between;align-items:end;gap:30px;flex-wrap:wrap}
+.scene-top p.t{max-width:24em;color:var(--soft);font-size:17px}
+.rugwrap{margin-top:26px;position:relative}
+.rug{position:relative;width:min(100%,calc(50vh*2.1));aspect-ratio:2.1/1;margin-inline:auto;border:6px solid #fff;border-radius:6px;overflow:hidden;background:var(--sand);box-shadow:0 40px 70px -30px #000}
+.rug::before,.rug::after{content:"";position:absolute;top:0;bottom:0;width:100%;pointer-events:none}
+.rug .dirt{position:absolute;inset:0;background:
+  radial-gradient(ellipse 12% 22% at 18% 30%,#8a6c4d99,#0000),radial-gradient(ellipse 10% 18% at 62% 22%,#6d563f88,#0000),radial-gradient(ellipse 15% 20% at 80% 70%,#7a5d3f99,#0000),radial-gradient(ellipse 9% 16% at 36% 76%,#59432f88,#0000),radial-gradient(ellipse 22% 30% at 50% 50%,#9d8566aa,#0000),
+  repeating-linear-gradient(90deg,#0000 0 3px,#00000012 3px 5px),#cdbba0}
+.rug .clean{position:absolute;inset:0}
+.rug .row{position:absolute;left:0;right:0;transform-origin:left center;background:
+  repeating-linear-gradient(90deg,#ffffff55 0 2px,#0000 2px 6px),linear-gradient(90deg,#d9f5f7,#fff 50%,#d9f5f7)}
+.rug .row:nth-child(even){transform-origin:right center}
+.rug .row::after{content:"";position:absolute;top:0;bottom:0;right:0;width:2px;background:var(--aqua)}
+.rug .row:nth-child(even)::after{right:auto;left:0}
+.rug .head{position:absolute;width:44px;height:11.5%;margin:0;background:var(--navy);border:3px solid var(--aqua);border-radius:8px;box-shadow:0 8px 18px #0008;z-index:3;display:flex;align-items:center;justify-content:center}
+.rug .head::after{content:"";width:60%;height:3px;background:var(--aqua);border-radius:2px}
+.pills{display:flex;flex-wrap:wrap;gap:10px;justify-content:center;margin-top:26px}
+.pills span{font:600 14px/1 var(--body);letter-spacing:.04em;padding:12px 18px;border-radius:99px;border:1px solid #ffffff44;color:var(--soft);transition:background-color .3s,color .3s,border-color .3s}
+.pills span.on{background:var(--aqua);border-color:var(--aqua);color:var(--navy)}
+html:not(.motion) .pills span{color:#fff}
+@media (max-width:900px){.scene-pin{padding-block:70px 40px}.rug{width:100%;aspect-ratio:1.5/1}.pills{gap:8px}.pills span{font-size:13px;padding:11px 14px}}
+
+/* reviews */
+.record{padding-block:130px 120px;overflow:hidden}
+.rv-head{display:flex;align-items:end;justify-content:space-between;gap:24px;flex-wrap:wrap;margin-bottom:48px}
+.big{display:flex;align-items:flex-end;gap:20px}
+.big .num{font:600 clamp(120px,19vw,270px)/.78 var(--display);letter-spacing:-.07em;color:var(--navy)}
+.big .num small{font-size:.3em;letter-spacing:-.02em;color:var(--aqua-d)}
+.big .cap{font-size:17px;color:var(--muted);max-width:15em;padding-bottom:10px}
+.big .cap b{display:block;color:var(--navy);font:600 27px/1.05 var(--display);letter-spacing:-.02em;margin-bottom:6px}
+.rv-wrap{overflow:hidden;white-space:nowrap}
+.rv-row{display:inline-flex;gap:18px;white-space:nowrap;will-change:transform;padding-block:6px}
+.rv{white-space:normal;flex:none;width:min(400px,80vw);background:var(--pale);border-radius:22px;padding:30px;display:flex;flex-direction:column;gap:24px;justify-content:space-between;min-height:250px;margin:0}
+.rv blockquote{margin:0;font:600 clamp(24px,2.1vw,30px)/1.1 var(--display);letter-spacing:-.025em}
+.rv figcaption{font:600 12.5px/1.4 var(--body);letter-spacing:.13em;text-transform:uppercase;color:var(--muted)}
+.rv.n{background:var(--navy);color:#fff}.rv.n figcaption{color:var(--soft)}
+.rv.a{background:var(--aqua)}.rv.a figcaption{color:var(--navy)}
+.rv.st{justify-content:flex-end}
+.rv.st strong{font:600 clamp(66px,6.6vw,100px)/.85 var(--display);letter-spacing:-.06em}
+.rv.st span{font:600 13px/1.35 var(--body);letter-spacing:.12em;text-transform:uppercase}
+
+/* people */
+.people{background:var(--pale);padding-block:120px}
+.people .wrap{display:grid;grid-template-columns:minmax(0,.9fr) minmax(0,1.1fr);gap:70px;align-items:center}
+.amp{font:600 clamp(200px,30vw,440px)/.7 var(--display);letter-spacing:-.06em;color:var(--aqua);text-align:center}
+.people h2{margin-top:18px;font-size:clamp(44px,5.8vw,88px)}
+.people p.t{font-size:19px;line-height:1.6;color:#2c3e5e;max-width:29em;margin-top:24px}
+.people ul{list-style:none;padding:0;margin:30px 0 0;display:flex;flex-wrap:wrap;gap:10px}
+.people li{background:#fff;border:1px solid var(--line);border-radius:99px;padding:10px 18px;font:600 14px/1 var(--body)}
+@media (max-width:860px){.people{padding-block:84px}.people .wrap{grid-template-columns:1fr;gap:20px}.amp{font-size:48vw;text-align:left}}
+
+/* quote */
+.quote{background:var(--navy);color:#fff;padding-block:130px}
+.quote .wrap{display:grid;grid-template-columns:minmax(0,.9fr) minmax(0,1.1fr);gap:72px;align-items:start}
+.quote h2{margin-top:18px;font-size:clamp(46px,6vw,92px);color:#fff}
+.quote h2 em{font-style:normal;color:var(--aqua)}
+.quote .intro{color:var(--soft);font-size:18px;margin-top:24px;max-width:26em}
+.quote .call{margin-top:34px;display:grid;gap:8px}
+.quote .call a.tel{font:600 clamp(36px,4.2vw,58px)/1 var(--display);letter-spacing:-.035em;color:var(--aqua);text-decoration:none}
+.quote .call a.tel:hover{color:#fff}
+.quote .call span{color:var(--soft);font-size:15px}
+.wiz{background:#fff;color:var(--ink);border-radius:24px;padding:30px 30px 26px}
+.wiz-prog{display:flex;gap:6px;margin-bottom:24px}
+.wiz-prog i{flex:1;height:6px;border-radius:9px;background:#dbe9ec;transition:background-color .3s}
+.wiz-prog i.on{background:var(--aqua)}
+.wiz h3{font-size:clamp(32px,3.4vw,44px);margin-bottom:20px}
+.wiz .step-n{font:600 12px/1 var(--body);letter-spacing:.18em;text-transform:uppercase;color:var(--aqua-d);display:block;margin-bottom:12px}
+.opts{display:grid;gap:10px;grid-template-columns:repeat(2,minmax(0,1fr))}
+.opt{all:unset;box-sizing:border-box;display:grid;grid-template-columns:1fr auto;gap:2px 12px;align-items:center;min-height:62px;padding:12px 16px;border:2px solid #d7e5e8;border-radius:14px;cursor:pointer;background:#fff;transition:border-color .2s,background-color .2s}
+.opt:hover{border-color:var(--navy)}
+.opt[aria-pressed="true"]{border-color:var(--navy);background:#e1f7f9}
+.opt:focus-visible{outline:3px solid var(--navy2);outline-offset:2px}
+.opt b{font:600 20px/1.1 var(--display);letter-spacing:-.02em}
+.opt span{font-size:13.5px;color:var(--muted);grid-column:1}
+.opt i{grid-column:2;grid-row:1/span 2;width:22px;height:22px;border-radius:6px;border:2px solid #a9c1c6;display:grid;place-items:center}
+.opt[aria-pressed="true"] i{background:var(--navy);border-color:var(--navy)}
+.opt[aria-pressed="true"] i::after{content:"";width:6px;height:10px;border:solid #fff;border-width:0 2px 2px 0;transform:rotate(45deg) translate(-1px,-1px)}
+.opts.one .opt{grid-column:1/-1}
+.fld{display:grid;gap:6px;font:600 14px/1.2 var(--body);margin-bottom:14px}
+.fld input,.fld textarea{font:inherit;font-weight:500;font-size:17px;border:2px solid #d0e0e3;border-radius:12px;padding:13px 14px;background:#fff;color:var(--ink);width:100%}
+.fld input:focus,.fld textarea:focus{outline:none;border-color:var(--navy)}
+.fld small{font-weight:500;color:var(--muted);font-size:13.5px}
+.cov{margin-top:6px;padding:14px 16px;border-radius:12px;font-size:16px;line-height:1.4;display:flex;gap:10px;align-items:flex-start}
+.cov.yes{background:#d7f5ea;color:#0b4a33}.cov.no{background:#fdeccf;color:#5c3a05}
+.cov svg{width:22px;height:22px;flex:none;margin-top:1px}
+.wiz-foot{display:flex;justify-content:space-between;align-items:center;gap:12px;margin-top:22px;padding-top:18px;border-top:1px solid #dbe9ec}
+.wiz-foot .btn{min-height:50px;font-size:15px;margin-left:auto}
+.wiz-foot .btn[disabled]{opacity:.4;cursor:not-allowed;transform:none}
+.link{all:unset;cursor:pointer;font:600 14px/1 var(--body);letter-spacing:.1em;text-transform:uppercase;color:var(--navy);padding:14px 4px;border-bottom:2px solid transparent}
+.link:hover{border-bottom-color:var(--aqua)}
+.link:focus-visible{outline:3px solid var(--navy2)}
+.done .ref{display:inline-block;font:600 30px/1 var(--display);letter-spacing:-.01em;background:var(--aqua);padding:10px 16px;border-radius:12px;margin:4px 0 18px}
+.done dl{display:grid;grid-template-columns:auto 1fr;gap:8px 20px;margin:0 0 18px;font-size:16px}
+.done dt{color:var(--muted)}.done dd{margin:0;font-weight:600}
+.done .note{background:var(--pale);border-radius:12px;padding:14px 16px;font-size:15px}
+@media (max-width:960px){.quote{padding-block:90px}.quote .wrap{grid-template-columns:1fr;gap:42px}}
+@media (max-width:520px){.wiz{padding:22px 16px 18px}.opts{grid-template-columns:1fr}}
+
+/* areas */
+.areas{padding-block:130px 90px}
+.cloud{display:flex;flex-wrap:wrap;gap:12px;margin-top:52px}
+.cloud span{font:600 clamp(30px,5vw,74px)/1 var(--display);letter-spacing:-.04em;padding:.16em .42em .2em;border-radius:999px;border:2px solid var(--navy);transition:background-color .3s,color .3s,transform .4s var(--ease)}
+.cloud span:hover{background:var(--navy);color:var(--aqua);transform:rotate(-2deg) scale(1.03)}
+.cloud span.h{background:var(--aqua);border-color:var(--aqua)}
+.cloud span.h:hover{background:var(--navy);border-color:var(--navy)}
+.areas .note{margin-top:30px;color:var(--muted);font-size:18px}
+@media (max-width:620px){.areas{padding-block:84px 60px}}
+
+/* footer */
+.foot{background:var(--navy);color:#fff;padding-block:90px 36px}
+.foot .row{display:grid;grid-template-columns:minmax(0,1.3fr) repeat(2,minmax(0,1fr));gap:48px}
+.foot .logo{color:#fff}.foot .logo small{color:var(--soft)}
+.foot h4{margin:0 0 16px;font:600 13px/1 var(--body);letter-spacing:.2em;text-transform:uppercase;color:var(--aqua)}
+.foot p,.foot li{color:#d3deef;font-size:16px}
+.foot ul{list-style:none;margin:0;padding:0;display:grid;gap:8px}
+.foot a{color:#fff;text-decoration-thickness:1px;text-underline-offset:3px}
+.foot a.tel{font:600 34px/1 var(--display);letter-spacing:-.03em;color:var(--aqua);text-decoration:none;display:inline-block;margin-bottom:8px}
+.foot .fine{display:flex;justify-content:space-between;flex-wrap:wrap;gap:14px;border-top:1px solid #ffffff2e;margin-top:64px;padding-top:20px;font-size:14px;color:var(--soft)}
+@media (max-width:860px){.foot .row{grid-template-columns:1fr;gap:34px}}
+
+.callbar{display:none}
+@media (max-width:700px){.callbar{display:flex;gap:10px;position:fixed;left:0;right:0;bottom:0;z-index:55;padding:10px 16px calc(10px + env(safe-area-inset-bottom,0px));background:#0a1f44f5;backdrop-filter:blur(8px);border-top:1px solid #ffffff1f}.callbar .btn{flex:1;padding:0 12px;border-color:var(--aqua)}.callbar .btn:not(.a){background:transparent;color:#fff}body{padding-bottom:76px}}
+@media (prefers-reduced-motion:reduce){*{transition:none!important;animation:none!important}}
+</style>
+</head>
+<body>
+<div class="concept" role="note">Website concept for <b>Advanced Clean Ltd</b> — preview only, not the live site. Designed by Itchen Studio · sam@itchenstudio.co.uk</div>
+
+<header class="top">
+  <div class="wrap">
+    <a class="logo" href="#top" aria-label="Advanced Clean Ltd, home">
+      <svg viewBox="0 0 48 48" aria-hidden="true"><rect width="48" height="48" rx="12" fill="#0a1f44"/><rect x="9" y="12" width="30" height="5" rx="2.5" fill="#19c7d1"/><rect x="9" y="21.5" width="30" height="5" rx="2.5" fill="#fff" opacity=".35"/><rect x="9" y="31" width="30" height="5" rx="2.5" fill="#19c7d1"/></svg>
+      <span><b>Advanced Clean</b><small>Carpets · Upholstery · Rugs</small></span>
+    </a>
+    <nav aria-label="Main"><a href="#fabrics">What we clean</a><a href="#pass">How it goes</a><a href="#reviews">Reviews</a><a href="#quote">Quote</a><a href="#areas">Areas</a></nav>
+    <a class="btn" href="tel:02380331032"><svg viewBox="0 0 24 24" fill="none" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 4h4l2 5-2.5 1.5a11 11 0 0 0 5 5L15 13l5 2v4a2 2 0 0 1-2 2A16 16 0 0 1 3 6a2 2 0 0 1 2-2z"/></svg><span>Call <span class="num">023 8033 1032</span></span></a>
+  </div>
+</header>
+
+<main id="top">
+<section class="hero" aria-labelledby="h1">
+  <div class="swatches" aria-hidden="true">
+    <div class="swt s1" data-n="Carpet"></div><div class="swt s2" data-n="Sofa"></div><div class="swt s3" data-n="Rug"></div><div class="swt s4" data-n="Leather"></div><div class="swt s5" data-n="Curtain"></div>
+  </div>
+  <div class="wrap">
+    <p class="lbl" data-intro>Carpet, upholstery and rug cleaning · Southampton</p>
+    <h1 id="h1"><span class="ln"><span>Clean from</span></span><span class="ln"><span class="ac">Chichester</span></span><span class="ln"><span>to Poole.</span></span></h1>
+    <p class="lead" data-intro>Carpets, sofas, rugs, leather, curtains and mattresses, cleaned across the south coast and inland to Basingstoke, Salisbury and Andover. Dominique and Chris run it from Southampton.</p>
+    <div class="ctas" data-intro><a class="btn" href="#quote">Get a quote</a><a class="btn o" href="tel:02380331032">Call 023 8033 1032</a></div>
+    <p class="proof" data-intro><span><b>10/10</b> on Checkatrade</span><span><b>1,276</b> reviews</span><span>NCCA member</span><span>Checkatrade member since 2009</span></p>
+  </div>
+  <div class="rail dark">
+    <div class="wrap">
+      <p class="cap"><span>The patch, west to east</span><span>Schematic, not to scale</span></p>
+      <div class="line" id="rail"><i id="rail-i"></i>
+        <ol>
+          <li style="left:4%"><span>Chichester</span></li>
+          <li class="hide-m" style="left:16%"><span>Portsmouth</span></li>
+          <li class="hide-m" style="left:31%"><span>Fareham</span></li>
+          <li class="home" style="left:47%"><span>Southampton, home base</span></li>
+          <li class="hide-m" style="left:64%"><span>New Forest</span></li>
+          <li class="hide-m" style="left:82%"><span>Bournemouth</span></li>
+          <li style="left:96%"><span>Poole</span></li>
+        </ol>
+      </div>
+      <p class="inland" data-intro>Also inland: <b>Winchester</b> · <b>Basingstoke</b> · <b>Andover</b> · <b>Salisbury</b> and more.</p>
+    </div>
+  </div>
+</section>
+
+<div class="strip" aria-hidden="true"><div class="track" data-speed="0.7"><span>Carpets</span><span>Upholstery</span><span>Rugs</span><span>Leather</span><span>Curtains</span><span>Mattresses</span><span>Stain removal</span><span>Stain protection</span><span>Emergency cleans</span><span>Carpets</span><span>Upholstery</span><span>Rugs</span><span>Leather</span><span>Curtains</span><span>Mattresses</span><span>Stain removal</span><span>Stain protection</span><span>Emergency cleans</span></div></div>
+
+<section class="fabrics" id="fabrics" aria-labelledby="fb-t">
+  <div class="wrap">
+    <div class="sec-head"><div><p class="lbl" data-reveal>What we clean</p><h2 id="fb-t" data-split style="margin-top:18px">Six fabrics.<br>One phone call.</h2></div><p class="in" data-reveal>Floor, furniture and bedroom, all from the same team. Tell us what you have and we will quote for the lot.</p></div>
+    <div class="fgrid">
+      <article class="fab" data-reveal><div class="tex t-carpet"></div><div class="bd"><span class="n">01</span><h3>Carpets</h3><p>Stairs, hallways, lounges and bedrooms, with stains treated as part of the clean.</p></div></article>
+      <article class="fab" data-reveal><div class="tex t-sofa"></div><div class="bd"><span class="n">02</span><h3>Upholstery</h3><p>Sofas, armchairs and dining chairs.</p></div></article>
+      <article class="fab" data-reveal><div class="tex t-rug"></div><div class="bd"><span class="n">03</span><h3>Rugs</h3><p>Rugs of every size, small to large.</p></div></article>
+      <article class="fab" data-reveal><div class="tex t-leather"></div><div class="bd"><span class="n">04</span><h3>Leather</h3><p>Leather sofas and chairs.</p></div></article>
+      <article class="fab" data-reveal><div class="tex t-curtain"></div><div class="bd"><span class="n">05</span><h3>Curtains</h3><p>Curtains cleaned, lounge to bedroom.</p></div></article>
+      <article class="fab" data-reveal><div class="tex t-mattress"></div><div class="bd"><span class="n">06</span><h3>Mattresses</h3><p>Mattress cleaning, for beds of any size.</p></div></article>
+    </div>
+    <div class="fnote">
+      <div class="a" data-reveal><h3>Stain removal and protection</h3><p>Stains treated, and protection to help with the next spill.</p></div>
+      <div class="b" data-reveal><h3>Emergency cleans</h3><p>When it cannot wait. Ring 023 8033 1032 and say what has happened.</p></div>
+    </div>
+  </div>
+</section>
+
+<section class="scene dark" id="pass" aria-labelledby="ps-t">
+  <div class="scene-pin">
+    <div class="wrap">
+      <div class="scene-top">
+        <div><p class="lbl">How it goes</p><h2 id="ps-t">One pass<br><em>at a time.</em></h2></div>
+        <p class="t">Scroll and the dirty rug is cleaned, row by row, back and forth, the way a careful clean goes.</p>
+      </div>
+      <div class="rugwrap">
+        <div class="rug" id="rug" role="img" aria-label="A dirty rug being cleaned row by row until it is clean">
+          <div class="dirt"></div>
+          <div class="clean" id="clean"></div>
+          <span class="head" id="head"></span>
+        </div>
+        <div class="pills" id="pills" aria-hidden="true"><span class="on">Carpets</span><span>Upholstery</span><span>Rugs</span><span>Leather</span><span>Curtains</span><span>Mattresses</span></div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="record" id="reviews" aria-labelledby="rec-t">
+  <div class="wrap rv-head">
+    <div class="big"><span class="num" aria-hidden="true">10<small>/10</small></span><p class="cap"><b id="rec-t">On Checkatrade</b>From 1,276 reviews.</p></div>
+    <a class="btn" href="#quote">Get a quote</a>
+  </div>
+  <div class="rv-wrap">
+    <div class="rv-row" data-speed="0.55">
+      <figure class="rv"><blockquote>“Chris was brilliant.”</blockquote><figcaption>Checkatrade · Oct 2026</figcaption></figure>
+      <p class="rv n st"><strong>1,276</strong><span>Checkatrade reviews</span></p>
+      <figure class="rv a"><blockquote>“prompt, polite, friendly and professional.”</blockquote><figcaption>Checkatrade · Oct 2026</figcaption></figure>
+      <p class="rv st"><strong>2009</strong><span>On Checkatrade since</span></p>
+      <figure class="rv n"><blockquote>“Chris managed to come to my house at very short notice.”</blockquote><figcaption>Checkatrade · 7 Nov 2025</figcaption></figure>
+      <p class="rv a st"><strong>NCCA</strong><span>Member</span></p>
+      <figure class="rv" aria-hidden="true"><blockquote>“Chris was brilliant.”</blockquote><figcaption>Checkatrade · Oct 2026</figcaption></figure>
+      <p class="rv n st" aria-hidden="true"><strong>1,276</strong><span>Checkatrade reviews</span></p>
+      <figure class="rv a" aria-hidden="true"><blockquote>“prompt, polite, friendly and professional.”</blockquote><figcaption>Checkatrade · Oct 2026</figcaption></figure>
+      <p class="rv st" aria-hidden="true"><strong>2009</strong><span>On Checkatrade since</span></p>
+      <figure class="rv n" aria-hidden="true"><blockquote>“Chris managed to come to my house at very short notice.”</blockquote><figcaption>Checkatrade · 7 Nov 2025</figcaption></figure>
+      <p class="rv a st" aria-hidden="true"><strong>NCCA</strong><span>Member</span></p>
+    </div>
+  </div>
+</section>
+
+<section class="people" aria-labelledby="pp-t">
+  <div class="wrap">
+    <div class="amp" aria-hidden="true">&amp;</div>
+    <div>
+      <p class="lbl" data-reveal>Who you'll meet</p>
+      <h2 id="pp-t" data-split>Dominique<br>and Chris.</h2>
+      <p class="t" data-reveal>Advanced Clean Ltd is run by Dominique Meacher and Chris Hann, from Southampton. Ring and you will speak to the people who run the business.</p>
+      <ul data-reveal><li>NCCA member</li><li>Checkatrade member since 2009</li><li>Southampton</li></ul>
+    </div>
+  </div>
+</section>
+
+<section class="quote dark" id="quote" aria-labelledby="q-t">
+  <div class="wrap">
+    <div>
+      <p class="lbl" data-reveal>Get a quote</p>
+      <h2 id="q-t" data-split>Tell us what<br><em>needs cleaning.</em></h2>
+      <p class="intro" data-reveal>Four quick steps and we know what you have. Or skip the form and ring.</p>
+      <div class="call" data-reveal><a class="tel" href="tel:02380331032">023 8033 1032</a><span>Southampton</span></div>
+    </div>
+    <div class="wiz" id="wiz" role="group" aria-labelledby="wiz-h">
+      <div class="wiz-prog" aria-hidden="true"><i></i><i></i><i></i><i></i></div>
+      <div id="wiz-body" aria-live="polite"></div>
+      <div class="wiz-foot" id="wiz-foot"><button type="button" class="link" id="w-back">Back</button><button type="button" class="btn" id="w-next">Next</button></div>
+    </div>
+  </div>
+</section>
+
+<section class="areas" id="areas" aria-labelledby="ar-t">
+  <div class="wrap">
+    <p class="lbl" data-reveal>Where we work</p>
+    <h2 id="ar-t" data-split style="margin-top:18px">The whole<br>south coast, and more.</h2>
+    <div class="cloud" data-reveal>
+      <span class="h">Southampton</span><span>Winchester</span><span>Portsmouth</span><span>Fareham</span><span>New Forest</span><span>Bournemouth</span><span>Poole</span><span>Chichester</span><span>Basingstoke</span><span>Salisbury</span><span>Andover</span>
+    </div>
+    <p class="note" data-reveal>And more besides. Ring with your postcode and we will tell you.</p>
+  </div>
+</section>
+</main>
+
+<footer class="foot">
+  <div class="wrap">
+    <div class="row">
+      <div><a class="logo" href="#top" aria-label="Advanced Clean Ltd, back to top"><svg viewBox="0 0 48 48" aria-hidden="true"><rect width="48" height="48" rx="12" fill="#19c7d1"/><rect x="9" y="12" width="30" height="5" rx="2.5" fill="#0a1f44"/><rect x="9" y="21.5" width="30" height="5" rx="2.5" fill="#fff" opacity=".6"/><rect x="9" y="31" width="30" height="5" rx="2.5" fill="#0a1f44"/></svg><span><b>Advanced Clean</b><small>Southampton</small></span></a><p style="margin-top:20px;max-width:24em">Carpet, upholstery and rug cleaning, run by Dominique Meacher and Chris Hann.</p></div>
+      <div><h4>Get in touch</h4><a class="tel" href="tel:02380331032">023 8033 1032</a><p>Southampton</p></div>
+      <div><h4>Covering</h4><ul><li>Southampton, Winchester, Portsmouth, Fareham</li><li>New Forest, Bournemouth, Poole, Chichester</li><li>Basingstoke, Salisbury, Andover and more</li></ul></div>
+    </div>
+    <div class="fine"><span>© 2026 Advanced Clean Ltd</span><span>Concept by <a href="https://itchenstudio.co.uk">Itchen Studio</a></span></div>
+  </div>
+</footer>
+<div class="callbar"><a class="btn a" href="tel:02380331032">Call now</a><a class="btn" href="#quote">Get a quote</a></div>
+
+<script src="assets/js/gsap.min.js" defer></script>
+<script src="assets/js/ScrollTrigger.min.js" defer></script>
+<script src="assets/js/lenis.min.js" defer></script>
+<script src="assets/js/concept.js" defer></script>
+<script>
+document.addEventListener('DOMContentLoaded', function () {
+  var api = window.ConceptSite.init();
+
+  /* ---------- the pass: a rug cleaned row by row ---------- */
+  var ROWS = 8, clean = document.getElementById('clean'), head = document.getElementById('head'), rug = document.getElementById('rug');
+  var rows = [];
+  for (var i = 0; i < ROWS; i++) {
+    var r = document.createElement('div'); r.className = 'row';
+    r.style.top = (i * 100 / ROWS) + '%'; r.style.height = (100 / ROWS + .4) + '%';
+    clean.appendChild(r); rows.push(r);
+  }
+  var pills = document.querySelectorAll('#pills span'), lastP = -1;
+  function clamp(v) { return Math.max(0, Math.min(1, v)); }
+  function renderPass(p) {
+    var pos = p * ROWS, cur = Math.min(ROWS - 1, Math.floor(pos)), frac = pos - cur;
+    rows.forEach(function (r, i) {
+      var v = i < cur ? 1 : (i === cur ? (p >= 1 ? 1 : frac) : 0);
+      r.style.transform = 'scaleX(' + v.toFixed(3) + ')';
+    });
+    var w = rug.clientWidth, hw = head.offsetWidth || 44, even = cur % 2 === 1;
+    var x = (p >= 1) ? (ROWS % 2 === 0 ? 0 : w - hw) : (even ? w - frac * w : frac * w) - hw / 2;
+    head.style.left = Math.max(0, Math.min(w - hw, x)) + 'px';
+    head.style.top = ((cur * 100 / ROWS) + .2) + '%';
+    head.style.opacity = (p <= 0 ? 0 : 1);
+    var k = Math.min(pills.length - 1, Math.floor(p * pills.length));
+    if (p >= 1) k = pills.length - 1;
+    if (k !== lastP) { lastP = k; pills.forEach(function (el, j) { el.classList.toggle('on', j === k); }); }
+  }
+  renderPass(1);
+  window.addEventListener('resize', function () { renderPass(window.__p == null ? 1 : window.__p); });
+  function setP(p) { window.__p = p; renderPass(p); }
+
+  /* ---------- quote wizard ---------- */
+  var FAB = [['Carpets', 'Stairs, rooms, hallways'], ['Upholstery', 'Sofas and chairs'], ['Rugs', 'Any size'], ['Leather', 'Sofas and chairs'], ['Curtains', 'Hung or off the rail'], ['Mattresses', 'Any size bed']];
+  var SIZES = [['A few items', 'One or two things'], ['A few rooms', 'Some carpets and furniture'], ['The whole home', 'Top to bottom'], ['Not sure yet', 'We will talk it through']];
+  var W = { step: 0, fab: [], size: null, pc: '', name: '', phone: '', email: '' };
+  var wbody = document.getElementById('wiz-body'), nextB = document.getElementById('w-next'), backB = document.getElementById('w-back'), prog = document.querySelectorAll('.wiz-prog i');
+  function esc(s) { return String(s).replace(/[&<>"]/g, function (c) { return { '&': '&amp;', '<': '&lt;', '>': '&gt;', '"': '&quot;' }[c]; }); }
+  function covered(pc) {
+    var m = String(pc).toUpperCase().replace(/\s+/g, '').match(/^([A-Z]{1,2})(\d{1,2})/); if (!m) return false;
+    if (['SO', 'PO', 'BH', 'SP'].indexOf(m[1]) > -1) return true;
+    return m[1] === 'RG' && +m[2] >= 21 && +m[2] <= 29;
+  }
+  function covHtml() {
+    if (!W.pc.trim()) return '';
+    return covered(W.pc) ? '<div class="cov yes" role="status"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M4 12l5 5L20 6"/></svg><span>Yes, we cover that area.</span></div>'
+      : '<div class="cov no" role="status"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" aria-hidden="true"><circle cx="12" cy="12" r="9"/><path d="M12 7v6M12 16.5v.5"/></svg><span>That one is outside the usual patch. Give us a call on 023 8033 1032 and ask.</span></div>';
+  }
+  function stepRender() {
+    prog.forEach(function (p, i) { p.classList.toggle('on', i <= Math.min(W.step, 3)); });
+    var h = '';
+    if (W.step === 0) {
+      h = '<span class="step-n">Step 1 of 4</span><h3 id="wiz-h" tabindex="-1">What needs cleaning?</h3><div class="opts">' + FAB.map(function (j, i) { return '<button type="button" class="opt" data-fab="' + i + '" aria-pressed="' + (W.fab.indexOf(i) > -1) + '"><b>' + j[0] + '</b><span>' + j[1] + '</span><i></i></button>'; }).join('') + '</div><p style="margin-top:12px;font-size:14px;color:#46566f">Tick as many as you like.</p>';
+    } else if (W.step === 1) {
+      h = '<span class="step-n">Step 2 of 4</span><h3 id="wiz-h" tabindex="-1">How much is there?</h3><div class="opts one">' + SIZES.map(function (j, i) { return '<button type="button" class="opt" data-size="' + i + '" aria-pressed="' + (W.size === i) + '"><b>' + j[0] + '</b><span>' + j[1] + '</span><i></i></button>'; }).join('') + '</div>';
+    } else if (W.step === 2) {
+      h = '<span class="step-n">Step 3 of 4</span><h3 id="wiz-h" tabindex="-1">Where are you?</h3><label class="fld">Postcode<input id="w-pc" autocomplete="postal-code" value="' + esc(W.pc) + '" placeholder="e.g. SO15 2AA" inputmode="text"><small>We check it against the areas we cover.</small></label><div id="cov">' + covHtml() + '</div>';
+    } else if (W.step === 3) {
+      h = '<span class="step-n">Step 4 of 4</span><h3 id="wiz-h" tabindex="-1">Who should we ring?</h3><label class="fld">Your name<input id="w-n" autocomplete="name" value="' + esc(W.name) + '" required></label><label class="fld">Phone number<input id="w-p" type="tel" autocomplete="tel" value="' + esc(W.phone) + '" required></label><label class="fld">Email (optional)<input id="w-e" type="email" autocomplete="email" value="' + esc(W.email) + '"></label>';
+    } else {
+      var ref = 'Q-' + (4000 + Math.floor(Math.random() * 5000));
+      h = '<div class="done" role="status"><span class="step-n">Request received</span><h3 id="wiz-h" tabindex="-1">Thanks, ' + esc(W.name.split(' ')[0] || 'there') + '.</h3><span class="ref">' + ref + '</span><dl><dt>Cleaning</dt><dd>' + W.fab.map(function (i) { return FAB[i][0]; }).join(', ') + '</dd><dt>Amount</dt><dd>' + esc(SIZES[W.size][0]) + '</dd><dt>Postcode</dt><dd>' + esc(W.pc.toUpperCase()) + '</dd><dt>Call on</dt><dd>' + esc(W.phone) + '</dd></dl><p class="note">This is a preview — the form will go live with your new site. Nothing has been sent.</p></div>';
+    }
+    wbody.innerHTML = h;
+    backB.hidden = W.step === 0 || W.step === 4; nextB.textContent = W.step === 3 ? 'Send request' : (W.step === 4 ? 'Start again' : 'Next');
+    nextB.disabled = (W.step === 0 && !W.fab.length) || (W.step === 1 && W.size === null) || (W.step === 2 && !W.pc.trim());
+    if (api.motion) gsap.from(wbody.children, { autoAlpha: 0, y: 14, duration: .45, stagger: .05, ease: 'power3.out' });
+  }
+  wbody.addEventListener('click', function (e) {
+    var b = e.target.closest('button'); if (!b) return;
+    if (b.dataset.fab !== undefined) {
+      var i = +b.dataset.fab, at = W.fab.indexOf(i); if (at > -1) W.fab.splice(at, 1); else W.fab.push(i);
+      W.fab.sort(function (a, c) { return a - c; });
+      b.setAttribute('aria-pressed', String(W.fab.indexOf(i) > -1)); nextB.disabled = !W.fab.length;
+    }
+    if (b.dataset.size !== undefined) {
+      W.size = +b.dataset.size;
+      wbody.querySelectorAll('.opt').forEach(function (x) { x.setAttribute('aria-pressed', String(+x.dataset.size === W.size)); }); nextB.disabled = false;
+    }
+  });
+  wbody.addEventListener('input', function (e) {
+    if (e.target.id === 'w-pc') { W.pc = e.target.value; document.getElementById('cov').innerHTML = covHtml(); nextB.disabled = !W.pc.trim(); }
+  });
+  nextB.addEventListener('click', function () {
+    if (W.step === 3) {
+      var n = document.getElementById('w-n'), p = document.getElementById('w-p'), bad = null;
+      [n, p].forEach(function (x) { var ok = x.value.trim() !== ''; x.style.borderColor = ok ? '' : '#b3261e'; x.setAttribute('aria-invalid', String(!ok)); if (!ok && !bad) bad = x; });
+      if (bad) { bad.focus(); return; }
+      W.name = n.value; W.phone = p.value; W.email = document.getElementById('w-e').value;
+    }
+    if (W.step === 4) { W = { step: 0, fab: [], size: null, pc: '', name: '', phone: '', email: '' }; stepRender(); return; }
+    W.step++; stepRender(); var h = document.getElementById('wiz-h'); if (h) h.focus({ preventScroll: true });
+  });
+  backB.addEventListener('click', function () { if (W.step > 0) { W.step--; stepRender(); } });
+  stepRender();
+
+  if (!api.motion) return;
+
+  /* rail map draws itself, swatches drift */
+  gsap.fromTo('#rail-i', { scaleX: 0 }, { scaleX: 1, duration: 2.4, ease: 'power2.inOut', delay: .5 });
+  gsap.from('.rail li', { scale: 0, autoAlpha: 0, duration: .5, stagger: .32, ease: 'back.out(2)', delay: .6 });
+  gsap.utils.toArray('.swt').forEach(function (el, i) {
+    gsap.from(el, { scale: .6, autoAlpha: 0, duration: 1.1, delay: .25 + i * .12, ease: 'power3.out' });
+    gsap.to(el, { y: (i % 2 ? -1 : 1) * (50 + i * 22), ease: 'none', scrollTrigger: { trigger: '.hero', start: 'top top', end: 'bottom top', scrub: true } });
+  });
+
+  /* ---------- signature scene: pinned on desktop, self-playing on phones ---------- */
+  var mm = gsap.matchMedia();
+  mm.add('(min-width: 901px)', function () {
+    var o = { p: 0 }; setP(0);
+    gsap.to(o, { p: 1, ease: 'none', onUpdate: function () { setP(o.p); }, scrollTrigger: { trigger: '.scene', start: 'top top', end: '+=2200', pin: '.scene-pin', scrub: .6, anticipatePin: 1 } });
+  });
+  mm.add('(max-width: 900px)', function () {
+    var o = { p: 0 }; setP(0);
+    ScrollTrigger.create({ trigger: '#rug', start: 'top 80%', once: true, onEnter: function () { gsap.to(o, { p: 1, duration: 5, ease: 'power1.inOut', delay: .3, onUpdate: function () { setP(o.p); } }); } });
+  });
+});
+</script>
+</body>
+</html>
