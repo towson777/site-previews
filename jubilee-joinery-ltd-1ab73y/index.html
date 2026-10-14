@@ -1,0 +1,575 @@
+<!doctype html>
+<!--
+ART DIRECTION BRIEF — Jubilee Joinery Ltd (Fareham)
+Idea: a staircase is built in front of you, piece by piece. Oak treads, posts, handrail, then glass, the way Tony's photos show them.
+Palette: walnut #1b1511 (dark) · cream #f3ecdf (light) · oak #c08a4b (accent, deep #8a5a24 for text on cream) · glass #cfe1dd (cool counterweight)
+Type: Instrument Serif (giant display, italic for emphasis) + Hanken Grotesk (text).
+Hero: walnut field, huge two-line headline on the left, three tall photo panels climbing in a staircase rhythm on the right, bleeding off the bottom. Proof line sits under the CTAs, small.
+Signature moment: pinned scene. Twelve oak treads rise one by one with a step counter, then newels, handrail draws in one line, glass panels fade in; background cools from cream to glass-green. Phones: no pin, same build scrubbed in place.
+Feature: quote wizard (job > postcode > photos with thumbnails > details > confirmation with reference). Sends nothing.
+Headline shortlist: 1 Stairs worth the climb (corny, crossed out) · 2 Staircases made in Fareham (any Fareham firm could say it, crossed out) · 3 Oak, glass and good stairs (generic, crossed out) · 4 Thirty years of stairs (kept) · 5 From staircases to boats (true but photos are stairs) · 6 Thirty years at the bench · 7 Hardwood, softwood, glass · 8 Made to fit your hall · 9 Joinery that climbs · 10 Stairs, windows and boats.
+Pick: "Thirty years of stairs." (4 words, from the lead's 30 years' experience and the staircase work in the photos.)
+Reviews: lead holds a score and count only, no quotes, so the page shows the Checkatrade score, not invented testimonials.
+-->
+<html lang="en-GB">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<meta name="robots" content="noindex,nofollow">
+<title>Jubilee Joinery · Website concept</title>
+<meta name="description" content="A website concept for Jubilee Joinery Ltd, Fareham. Preview only.">
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Crect width='32' height='32' rx='6' fill='%231b1511'/%3E%3Cpath d='M7 24h6v-5h6v-5h6V9' fill='none' stroke='%23c08a4b' stroke-width='3'/%3E%3C/svg%3E">
+<link rel="preload" href="assets/fonts/instrument-serif-latin-400-normal.woff2" as="font" type="font/woff2" crossorigin>
+<script>(function(d){if(!matchMedia('(prefers-reduced-motion: reduce)').matches){d.documentElement.classList.add('motion');setTimeout(function(){if(!d.documentElement.classList.contains('ready'))d.documentElement.classList.remove('motion')},3000)}})(document)</script>
+<style>
+@font-face{font-family:"Instrument Serif";src:url("assets/fonts/instrument-serif-latin-400-normal.woff2") format("woff2");font-weight:400;font-style:normal;font-display:swap}
+@font-face{font-family:"Instrument Serif";src:url("assets/fonts/instrument-serif-latin-400-italic.woff2") format("woff2");font-weight:400;font-style:italic;font-display:swap}
+@font-face{font-family:"Hanken Grotesk";src:url("assets/fonts/hanken-grotesk-latin-wght-normal.woff2") format("woff2");font-weight:100 900;font-display:swap}
+:root{
+  --walnut:#1b1511; --walnut-2:#2a2019; --cream:#f3ecdf; --paper:#fbf7ef; --line:#ddd2bf; --muted:#65584a;
+  --oak:#c08a4b; --oak-deep:#8a5a24; --oak-soft:#ead7bb; --glass:#cfe1dd; --glass-deep:#9fc0b9;
+  --display:"Instrument Serif","Times New Roman",serif; --body:"Hanken Grotesk",Arial,sans-serif;
+  --ease:cubic-bezier(.2,.7,.1,1);
+}
+*{box-sizing:border-box}
+html.lenis,html.lenis body{height:auto}
+body{margin:0;background:var(--cream);color:var(--walnut);font:400 17px/1.65 var(--body);-webkit-font-smoothing:antialiased;overflow-x:clip}
+img{max-width:100%;display:block}
+a{color:inherit}
+p{margin:0}
+h1,h2,h3{font-weight:400;margin:0}
+.wrap{max-width:1280px;margin:0 auto;padding-inline:36px}
+@media (max-width:640px){.wrap{padding-inline:18px}}
+:focus-visible{outline:3px solid var(--oak);outline-offset:3px;border-radius:4px}
+[hidden]{display:none!important}
+.eyebrow{font:700 12.5px/1 var(--body);letter-spacing:.2em;text-transform:uppercase;color:var(--oak-deep);display:inline-flex;align-items:center;gap:12px}
+.eyebrow::before{content:"";width:28px;height:2px;background:currentColor}
+.on-dark .eyebrow,.eyebrow.lt{color:var(--oak)}
+.h2{font:400 clamp(46px,6.6vw,104px)/.95 var(--display);letter-spacing:-.015em}
+.h2 em{font-style:italic;color:var(--oak-deep)}
+.h2 .sw{padding-right:.14em;margin-right:-.14em}
+.on-dark .h2 em{color:var(--oak)}
+.btn{display:inline-flex;align-items:center;justify-content:center;gap:10px;min-height:52px;font:600 16px/1 var(--body);text-decoration:none;padding:16px 28px;border-radius:999px;border:1.5px solid transparent;cursor:pointer;transition:background-color .3s,color .3s,border-color .3s,transform .3s var(--ease)}
+.btn-oak{background:var(--oak);color:var(--walnut)}
+.btn-oak:hover{background:#d39b58;transform:translateY(-2px)}
+.btn-line{border-color:#f3ecdf66;color:var(--cream);background:transparent}
+.btn-line:hover{border-color:var(--cream);background:#f3ecdf14}
+.btn svg{width:18px;height:18px}
+
+/* preview banner */
+.concept{background:#0f0b08;color:#e4d9c6;font-size:13px;line-height:18px;text-align:center;padding:8px 16px;position:relative;z-index:60}
+.concept b{font-weight:600;color:#fff}
+
+/* header */
+.top{position:sticky;top:0;z-index:50;background:color-mix(in srgb,var(--walnut) 88%,transparent);backdrop-filter:blur(12px);-webkit-backdrop-filter:blur(12px);color:var(--cream);border-bottom:1px solid #f3ecdf1f;transition:transform .5s cubic-bezier(.2,.8,.2,1)}
+.top.away{transform:translateY(-100%)}
+.top .wrap{display:flex;align-items:center;justify-content:space-between;gap:20px;height:76px}
+.brand{display:flex;align-items:center;gap:14px;text-decoration:none;color:var(--cream)}
+.brand svg{width:46px;height:46px;flex:none}
+.brand b{display:block;font:400 28px/.9 var(--display);letter-spacing:.005em}
+.brand small{display:block;font:600 10.5px/1 var(--body);letter-spacing:.24em;text-transform:uppercase;color:var(--oak);margin-top:5px}
+nav.main{display:flex;align-items:center;gap:30px}
+nav.main a{text-decoration:none;font-weight:500;font-size:15px;color:#e7dccb}
+nav.main a:not(.btn):hover{color:var(--oak)}
+nav.main .btn{padding:12px 22px;min-height:44px;font-size:15px;color:var(--walnut)}
+@media (max-width:860px){nav.main a:not(.btn){display:none}}
+@media (max-width:420px){.brand small{display:none}.brand b{font-size:25px}}
+
+/* hero */
+.hero{position:relative;background:var(--walnut);color:var(--cream);min-height:min(94vh,900px);overflow:hidden;display:grid}
+.hero::before{content:"";position:absolute;inset:0;background:radial-gradient(60% 70% at 78% 60%,#3a2b1f 0%,transparent 70%);pointer-events:none}
+.hero .wrap{position:relative;width:100%;display:grid;grid-template-columns:minmax(0,1fr);align-content:start;padding-block:96px 56px}
+.hero h1{font:400 clamp(72px,11.6vw,196px)/.86 var(--display);letter-spacing:-.025em;margin-top:26px}
+.hero h1 .ln{padding-bottom:.06em}
+.hero h1 .ln:last-child{font-style:italic;color:var(--oak)}
+.hero .lead{font-size:clamp(18px,1.5vw,21px);line-height:1.55;max-width:26em;margin-top:34px;color:#dccfba}
+.hero .ctas{display:flex;flex-wrap:wrap;gap:12px;margin-top:32px}
+.proof{display:flex;flex-wrap:wrap;gap:8px 22px;margin-top:38px;padding-top:20px;border-top:1px solid #f3ecdf29;font-size:14.5px;color:#cdbfa8;max-width:560px}
+.proof b{color:var(--cream);font-weight:600}
+.panels{position:absolute;right:max(24px,calc((100vw - 1280px)/2 + 24px));bottom:0;display:flex;align-items:flex-end;gap:14px;z-index:1}
+.panels figure{margin:0;overflow:hidden;border-radius:6px 6px 0 0;background:var(--walnut-2);width:clamp(116px,14vw,214px)}
+.panels figure:nth-child(1){height:clamp(210px,36vh,340px)}
+.panels figure:nth-child(2){height:clamp(290px,50vh,470px)}
+.panels figure:nth-child(3){height:clamp(380px,66vh,610px)}
+.panels img{width:100%;height:118%;object-fit:cover}
+@media (max-width:980px){
+  .panels{position:relative;right:auto;bottom:auto;justify-content:center;padding-inline:18px;margin-top:8px;gap:10px}
+  .panels figure{width:calc((100vw - 56px)/3)}
+  .panels figure:nth-child(1){height:190px}.panels figure:nth-child(2){height:250px}.panels figure:nth-child(3){height:310px}
+  .hero{display:block;min-height:0}
+  .hero .wrap{padding-block:64px 36px}
+}
+html.motion:not(.ready) .hero h1 .ln>span{transform:translateY(105%)}
+html.motion:not(.ready) [data-intro]{opacity:0}
+.hero h1 .ln{display:block;overflow:hidden}
+.hero h1 .ln>span{display:inline-block}
+
+/* strip */
+.strip{background:var(--oak);color:var(--walnut);overflow:hidden;white-space:nowrap;padding:16px 0;font:400 28px/1 var(--display);font-style:italic}
+.strip .track{display:inline-flex;will-change:transform}
+.strip .track span{padding:0 26px;display:inline-flex;align-items:center;gap:52px}
+.strip .track span::after{content:"";width:9px;height:9px;background:var(--walnut);transform:rotate(45deg)}
+
+/* build scene */
+.build{position:relative;background:var(--cream)}
+.build-pin{min-height:100vh;display:grid;grid-template-columns:minmax(0,1.15fr) minmax(0,.85fr);align-items:center;gap:48px;padding-block:72px}
+.stairs-svg{width:100%;height:auto;max-height:72vh;overflow:visible}
+.build .h2{font-size:clamp(40px,4.6vw,76px)}
+.counter{font:400 clamp(88px,12vw,190px)/.8 var(--display);letter-spacing:-.03em;font-variant-numeric:tabular-nums;color:var(--walnut);margin-top:26px;display:flex;align-items:baseline;gap:14px}
+.counter small{font:700 12.5px/1 var(--body);letter-spacing:.2em;text-transform:uppercase;color:var(--oak-deep)}
+.bsteps{display:grid;gap:4px;margin-top:30px}
+.bstep{display:grid;grid-template-columns:44px 1fr;gap:12px;padding:14px 0;border-top:1px solid #1b15112e;opacity:.38;transition:opacity .45s}
+.bstep.on{opacity:1}
+.bstep .n{font:400 22px/1.2 var(--display);font-style:italic;color:var(--oak-deep)}
+.bstep h3{font:400 30px/1 var(--display);margin-bottom:5px}
+.bstep p{font-size:15.5px;color:#4a3f33;line-height:1.5}
+html:not(.motion) .bstep{opacity:1}
+@media (max-width:900px){
+  .build-pin{grid-template-columns:1fr;gap:20px;padding-block:72px 56px}
+  .bstep{opacity:1}
+  .stairs-svg{max-height:none}
+}
+
+/* services */
+.services{padding-block:130px 110px;background:var(--paper)}
+.sec-head{display:flex;justify-content:space-between;align-items:end;gap:32px;flex-wrap:wrap;margin-bottom:56px}
+.sec-head p.sub{max-width:28em;color:var(--muted);font-size:18px}
+.svc-list{list-style:none;margin:0;padding:0;border-bottom:1px solid var(--line)}
+.svc{display:grid;grid-template-columns:70px minmax(0,1.1fr) minmax(0,1fr) 40px;gap:24px;align-items:baseline;padding:28px 0;border-top:1px solid var(--line);position:relative;transition:padding .5s var(--ease),background-color .4s}
+.svc::before{content:"";position:absolute;left:-36px;right:-36px;top:0;bottom:0;background:var(--oak-soft);opacity:0;transition:opacity .4s;z-index:0}
+.svc>*{position:relative;z-index:1}
+.svc:hover{padding-left:14px}
+.svc:hover::before{opacity:.55}
+.svc .n{font:400 22px/1 var(--display);font-style:italic;color:var(--oak-deep)}
+.svc h3{font:400 clamp(34px,4.2vw,62px)/1 var(--display);letter-spacing:-.01em}
+.svc p{color:var(--muted);font-size:16.5px;line-height:1.5}
+.svc .ar{justify-self:end;width:26px;height:26px;color:var(--oak-deep);transition:transform .4s var(--ease)}
+.svc:hover .ar{transform:translateX(6px)}
+@media (max-width:820px){
+  .svc{grid-template-columns:40px 1fr 24px;gap:6px 14px;padding:22px 0}
+  .svc p{grid-column:2/3;grid-row:2}
+  .svc .ar{grid-row:1;grid-column:3}
+  .svc::before{left:-18px;right:-18px}
+  .services{padding-block:84px 70px}
+}
+
+/* work */
+.work{padding-block:120px 110px;background:var(--cream)}
+.mosaic{display:grid;grid-template-columns:repeat(12,minmax(0,1fr));gap:16px}
+.ph{position:relative;overflow:hidden;border-radius:10px;background:var(--walnut-2)}
+.ph img{width:100%;height:116%;object-fit:cover}
+.ph figcaption{position:absolute;left:14px;bottom:14px;right:14px;background:var(--walnut);color:var(--cream);font-size:13px;line-height:1.35;padding:10px 14px;border-radius:6px;width:fit-content;max-width:calc(100% - 28px);transform:translateY(8px);opacity:0;transition:opacity .4s,transform .4s var(--ease)}
+.ph:hover figcaption,.ph:focus-within figcaption{opacity:1;transform:none}
+.m1{grid-column:1/6;height:640px}.m2{grid-column:6/9;height:640px}.m3{grid-column:9/13;height:640px}
+.m4{grid-column:1/8;height:380px}.m5{grid-column:8/13;height:380px}
+.m1 img{object-position:50% 40%}.m2 img{object-position:50% 55%}.m5 img{object-position:50% 38%}
+@media (max-width:900px){
+  .mosaic{grid-template-columns:repeat(2,minmax(0,1fr));gap:10px}
+  .m1,.m4{grid-column:1/3;height:360px}.m2,.m3,.m5{grid-column:auto;height:300px}
+  .m5{grid-column:1/3;height:260px}
+  .ph figcaption{display:none}
+  .work{padding-block:80px 70px}
+}
+
+/* score */
+.score{background:var(--walnut);color:var(--cream);padding-block:120px;position:relative;overflow:hidden}
+.score::after{content:"";position:absolute;right:-12%;top:-30%;width:70vw;height:70vw;border-radius:50%;background:radial-gradient(circle,#c08a4b26,transparent 62%);pointer-events:none}
+.score .wrap{position:relative;display:grid;grid-template-columns:minmax(0,1.1fr) minmax(0,.9fr);gap:64px;align-items:end;z-index:1}
+.big{font:400 clamp(150px,26vw,400px)/.78 var(--display);letter-spacing:-.04em;font-variant-numeric:tabular-nums;color:var(--cream)}
+.big small{font-size:.26em;letter-spacing:0;color:var(--oak);margin-left:.08em}
+.meter{display:grid;grid-template-columns:repeat(10,1fr);gap:6px;margin-top:34px;max-width:560px}
+.meter i{height:12px;border-radius:3px;background:#f3ecdf22;overflow:hidden;position:relative}
+.meter i::after{content:"";position:absolute;inset:0;background:var(--oak);transform:scaleX(var(--f,1));transform-origin:left}
+.score p.lead{font-size:20px;line-height:1.55;color:#dccfba;max-width:24em;margin-top:22px}
+.badges{display:flex;flex-wrap:wrap;gap:10px;margin-top:28px}
+.badge{border:1px solid #f3ecdf40;border-radius:999px;padding:11px 18px;font-size:14.5px;font-weight:500;display:inline-flex;gap:10px;align-items:center}
+.badge svg{width:18px;height:18px;color:var(--oak)}
+.score a.link{display:inline-block;margin-top:26px;font-weight:600;color:var(--oak);text-underline-offset:5px}
+@media (max-width:900px){.score .wrap{grid-template-columns:1fr;gap:34px}.score{padding-block:84px}}
+
+/* quote wizard */
+.quote{padding-block:130px;background:var(--glass);position:relative}
+.quote .wrap{display:grid;grid-template-columns:minmax(0,.85fr) minmax(0,1.15fr);gap:64px;align-items:start}
+.quote .intro{font-size:19px;color:#2f3b38;margin-top:24px;max-width:25em}
+.wiz{background:var(--paper);border-radius:18px;padding:34px;box-shadow:0 40px 70px -40px #1b151166;border:1px solid #fff}
+.prog{display:flex;gap:6px;margin-bottom:26px}
+.prog i{flex:1;height:5px;border-radius:3px;background:var(--line);position:relative;overflow:hidden}
+.prog i::after{content:"";position:absolute;inset:0;background:var(--oak-deep);transform:scaleX(0);transform-origin:left;transition:transform .5s var(--ease)}
+.prog i.done::after{transform:scaleX(1)}
+.wiz fieldset{border:0;margin:0;padding:0;min-width:0}
+.wiz legend,.wiz .lab{font:400 clamp(30px,3vw,40px)/1.05 var(--display);margin-bottom:6px;padding:0;display:block}
+.wiz .hint{color:var(--muted);font-size:15px;margin-bottom:20px}
+.chips{display:flex;flex-wrap:wrap;gap:10px}
+.chip{font:500 16px/1 var(--body);color:var(--walnut);background:transparent;border:1.5px solid #b8aa92;border-radius:999px;padding:14px 20px;min-height:48px;cursor:pointer;transition:all .2s}
+.chip:hover{border-color:var(--oak-deep)}
+.chip[aria-pressed="true"]{background:var(--walnut);border-color:var(--walnut);color:var(--cream)}
+.wiz input[type=text],.wiz input[type=tel],.wiz input[type=email],.wiz textarea{width:100%;font:inherit;font-size:17px;border:1.5px solid #b8aa92;border-radius:10px;padding:14px 16px;background:#fff;color:var(--walnut);min-height:50px}
+.wiz textarea{min-height:96px;resize:vertical}
+.wiz input:focus,.wiz textarea:focus{outline:none;border-color:var(--oak-deep);box-shadow:0 0 0 3px #c08a4b44}
+.wiz label.f{display:grid;gap:6px;font-weight:600;font-size:14px;margin-bottom:14px}
+.wiz .row{display:grid;grid-template-columns:1fr 1fr;gap:14px}
+.pcres{margin-top:14px;padding:14px 16px;border-radius:10px;background:#e8efe6;color:#26452f;font-size:15px;min-height:50px}
+.pcres.no{background:var(--oak-soft);color:#5a3b12}
+.drop{display:block;border:2px dashed #b8aa92;border-radius:12px;padding:26px;text-align:center;cursor:pointer;color:var(--muted);transition:border-color .2s,background-color .2s}
+.drop:hover,.drop:focus-within{border-color:var(--oak-deep);background:#fff}
+.drop input{position:absolute;opacity:0;width:1px;height:1px}
+.thumbs{display:grid;grid-template-columns:repeat(auto-fill,minmax(84px,1fr));gap:10px;margin-top:14px}
+.thumbs img{width:100%;aspect-ratio:1;object-fit:cover;border-radius:8px}
+.nav{display:flex;justify-content:space-between;align-items:center;gap:12px;margin-top:26px}
+.btn-ghost{background:transparent;border:0;color:var(--muted);font:600 15px/1 var(--body);cursor:pointer;padding:14px 6px;min-height:48px;text-decoration:underline;text-underline-offset:4px}
+.btn-dark{background:var(--walnut);color:var(--cream)}
+.btn-dark:hover{background:#3a2d22;transform:translateY(-2px)}
+.done-panel{text-align:left}
+.done-panel .ref{font:400 clamp(60px,8vw,96px)/.9 var(--display);color:var(--oak-deep);margin:14px 0 12px;font-style:italic}
+.done-panel p{color:#3d332a}
+.note-p{font-size:13.5px;color:var(--muted);margin-top:16px}
+@media (max-width:900px){.quote .wrap{grid-template-columns:1fr;gap:36px}.quote{padding-block:84px}.wiz{padding:22px}.wiz .row{grid-template-columns:1fr}}
+
+/* areas */
+.areas{padding-block:120px 110px;background:var(--cream)}
+.areas .wrap{display:grid;grid-template-columns:minmax(0,1fr) minmax(0,1fr);gap:64px;align-items:center}
+.pcs{display:flex;flex-wrap:wrap;gap:14px}
+.pcs span{font:400 clamp(44px,6vw,84px)/1 var(--display);border:1.5px solid var(--walnut);border-radius:999px;padding:.12em .42em .16em;letter-spacing:-.01em}
+.pcs span:nth-child(odd){background:var(--walnut);color:var(--cream)}
+.areas p.sub{margin-top:22px;color:var(--muted);font-size:18px;max-width:27em}
+@media (max-width:860px){.areas .wrap{grid-template-columns:1fr;gap:34px}.areas{padding-block:80px 70px}}
+
+/* close */
+.close{background:var(--oak);color:var(--walnut);padding-block:96px;text-align:left}
+.close .h2{font-size:clamp(52px,8.6vw,150px);max-width:11em}
+.close .h2 em{color:var(--walnut)}
+.close .btn{margin-top:34px;background:var(--walnut);color:var(--cream)}
+.close .btn:hover{background:#3a2d22}
+footer{background:var(--walnut);color:#b9ab95;padding-block:38px;font-size:14px}
+footer .wrap{display:flex;flex-wrap:wrap;justify-content:space-between;gap:14px 28px;align-items:center}
+footer a{color:var(--cream)}
+</style>
+</head>
+<body>
+
+<div class="concept" id="banner"></div>
+
+<header class="top" id="top">
+  <div class="wrap">
+    <a class="brand" href="#hero" aria-label="Jubilee Joinery, back to top">
+      <svg viewBox="0 0 48 48" aria-hidden="true"><rect width="48" height="48" rx="10" fill="#c08a4b"/><path d="M9 38h9V29h9V20h9V10" fill="none" stroke="#1b1511" stroke-width="4.5" stroke-linejoin="miter"/></svg>
+      <span><b>Jubilee Joinery</b><small>Fareham · Hampshire</small></span>
+    </a>
+    <nav class="main" aria-label="Main">
+      <a href="#build">How stairs are made</a><a href="#work">Work</a><a href="#score">Reviews</a><a href="#areas">Areas</a>
+      <a class="btn btn-oak" href="#quote">Get a quote</a>
+    </nav>
+  </div>
+</header>
+
+<main>
+<section class="hero" id="hero" aria-labelledby="h1">
+  <div class="wrap">
+    <p class="eyebrow lt" data-intro>Joiners in Fareham</p>
+    <h1 id="h1"><span class="ln"><span>Thirty years</span></span><span class="ln"><span>of stairs.</span></span></h1>
+    <p class="lead" data-intro>Staircases, windows, doors and gates, made in hardwood or softwood. Tony Lipsham has been at it for thirty years.</p>
+    <div class="ctas" data-intro>
+      <a class="btn btn-oak" href="#quote">Start a quote</a>
+      <a class="btn btn-line" href="#build">Watch one go up</a>
+    </div>
+    <p class="proof" data-intro><span><b>9.82 / 10</b> from 314 Checkatrade reviews</span><span>City &amp; Guilds</span><span>Checkatrade vetted since 2010</span></p>
+  </div>
+  <div class="panels" aria-hidden="false">
+    <figure data-intro><img data-pp="0.35" src="assets/img/landing.webp" alt="Oak handrail and glass panels on a first-floor landing, with brass clamps" width="1024" height="1365"></figure>
+    <figure data-intro><img data-pp="0.6" src="assets/img/glass-stair.webp" alt="Softwood staircase with glass panels and chrome clamps" width="1024" height="1365"></figure>
+    <figure data-intro><img data-pp="0.9" src="assets/img/oak-treads.webp" alt="Open oak treads with glass and small step lights" width="1024" height="2274"></figure>
+  </div>
+</section>
+
+<div class="strip" aria-label="Staircases, windows, doors, gates, joinery repairs, kitchen and bedroom fitting, decking, boat building and repairs"><div class="track" aria-hidden="true"><span>Staircases</span><span>Windows</span><span>Doors</span><span>Gates</span><span>Joinery repairs</span><span>Kitchen &amp; bedroom fitting</span><span>Decking</span><span>Boat building &amp; repairs</span><span>Staircases</span><span>Windows</span><span>Doors</span><span>Gates</span><span>Joinery repairs</span><span>Kitchen &amp; bedroom fitting</span><span>Decking</span><span>Boat building &amp; repairs</span></div></div>
+
+<section class="build" id="build" aria-labelledby="build-title">
+  <div class="wrap build-pin">
+    <div>
+      <svg class="stairs-svg" id="stairs" viewBox="0 0 640 440" role="img" aria-label="A staircase drawn in oak and glass, built up from treads to newel posts, handrail and glass panels"></svg>
+    </div>
+    <div>
+      <p class="eyebrow">How a staircase goes up</p>
+      <h2 class="h2" id="build-title" style="margin-top:16px">Built up, <em>piece by piece.</em></h2>
+      <div class="counter" aria-hidden="true"><span id="cnt">12</span><small>treads</small></div>
+      <div class="bsteps">
+        <div class="bstep" data-s="0"><span class="n">i.</span><div><h3>Treads</h3><p>Hardwood or softwood, cut to your rise and going, then set one by one.</p></div></div>
+        <div class="bstep" data-s="1"><span class="n">ii.</span><div><h3>Newels</h3><p>The posts at the foot and the top. Everything else hangs from them.</p></div></div>
+        <div class="bstep" data-s="2"><span class="n">iii.</span><div><h3>Handrail</h3><p>One clean run from bottom to top, shaped to meet each post.</p></div></div>
+        <div class="bstep" data-s="3"><span class="n">iv.</span><div><h3>Glass</h3><p>Clamped panels that keep the stairwell open and full of light.</p></div></div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="services" id="services" aria-labelledby="svc-title">
+  <div class="wrap">
+    <div class="sec-head">
+      <div><p class="eyebrow" data-reveal>What gets made</p><h2 class="h2" id="svc-title" data-split style="margin-top:16px">Stairs first,<br><em>then the rest.</em></h2></div>
+      <p class="sub" data-reveal>Joinery for the whole house, and boats too.</p>
+    </div>
+    <ul class="svc-list">
+      <li class="svc" data-reveal><span class="n">01</span><h3>Staircases</h3><p>Made to the shape of your hall, in hardwood or softwood, with glass or timber.</p><svg class="ar" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12h14M13 6l6 6-6 6"/></svg></li>
+      <li class="svc" data-reveal><span class="n">02</span><h3>Windows</h3><p>Made to measure, in hardwood or softwood.</p><svg class="ar" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12h14M13 6l6 6-6 6"/></svg></li>
+      <li class="svc" data-reveal><span class="n">03</span><h3>Doors &amp; gates</h3><p>Doors and gates, built to fit the opening.</p><svg class="ar" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12h14M13 6l6 6-6 6"/></svg></li>
+      <li class="svc" data-reveal><span class="n">04</span><h3>Repairs</h3><p>Mending joinery that has seen better days.</p><svg class="ar" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12h14M13 6l6 6-6 6"/></svg></li>
+      <li class="svc" data-reveal><span class="n">05</span><h3>Kitchens &amp; bedrooms</h3><p>Fitting for kitchens and bedrooms.</p><svg class="ar" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12h14M13 6l6 6-6 6"/></svg></li>
+      <li class="svc" data-reveal><span class="n">06</span><h3>Decking</h3><p>Decking, built and fitted.</p><svg class="ar" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12h14M13 6l6 6-6 6"/></svg></li>
+      <li class="svc" data-reveal><span class="n">07</span><h3>Boats</h3><p>Boat building and boat repairs.</p><svg class="ar" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12h14M13 6l6 6-6 6"/></svg></li>
+    </ul>
+  </div>
+</section>
+
+<section class="work" id="work" aria-labelledby="work-title">
+  <div class="wrap">
+    <div class="sec-head">
+      <div><p class="eyebrow" data-reveal>Portfolio</p><h2 class="h2" id="work-title" data-split style="margin-top:16px">Oak, glass,<br><em>and daylight.</em></h2></div>
+      <p class="sub" data-reveal>A few staircases from the portfolio.</p>
+    </div>
+    <div class="mosaic">
+      <figure class="ph m1" data-clip><img data-parallax src="assets/img/glass-stair.webp" alt="Softwood staircase with glass panels and chrome clamps" loading="lazy" width="1024" height="1365"><figcaption>Softwood stairs, glass panels, chrome clamps</figcaption></figure>
+      <figure class="ph m2" data-clip><img data-parallax src="assets/img/oak-rail.webp" alt="Oak newel posts and handrail with a glass balustrade on a turning staircase" loading="lazy" width="1024" height="2274"><figcaption>Oak posts, handrail and glass on a turn</figcaption></figure>
+      <figure class="ph m3" data-clip><img data-parallax src="assets/img/landing.webp" alt="Oak handrail and glass panels with brass clamps on a landing" loading="lazy" width="1024" height="1365"><figcaption>Oak handrail, glass and brass clamps</figcaption></figure>
+      <figure class="ph m4" data-clip><img data-parallax src="assets/img/upper-landing.webp" alt="Oak posts and tinted glass panels around an upper landing" loading="lazy" width="1024" height="461"><figcaption>Oak posts and tinted glass round a landing</figcaption></figure>
+      <figure class="ph m5" data-clip><img data-parallax src="assets/img/oak-treads.webp" alt="Open oak treads with glass risers and small step lights" loading="lazy" width="1024" height="2274"><figcaption>Open oak treads with step lights</figcaption></figure>
+    </div>
+  </div>
+</section>
+
+<section class="score on-dark" id="score" aria-labelledby="score-title">
+  <div class="wrap">
+    <div>
+      <p class="eyebrow" data-reveal>On Checkatrade</p>
+      <div class="big" style="margin-top:18px" id="bigscore" aria-label="9.82 out of 10"><span id="bigval">9.82</span><small>/10</small></div>
+      <div class="meter" id="meter" aria-hidden="true"></div>
+    </div>
+    <div>
+      <h2 class="h2" id="score-title" data-split style="font-size:clamp(40px,4.6vw,72px)">From <em>314</em> customers.</h2>
+      <p class="lead" data-reveal>Scores and comments from customers, all public on Checkatrade for anyone to read.</p>
+      <div class="badges" data-reveal>
+        <span class="badge"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/><path d="m9 12 2 2 4-4"/></svg>Checkatrade vetted since 2010</span>
+        <span class="badge"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M3 8l9-5 9 5-9 5z"/><path d="M7 11v5c0 1.5 2.2 3 5 3s5-1.5 5-3v-5"/></svg>City &amp; Guilds</span>
+      </div>
+      <a class="link" href="https://www.checkatrade.com/trades/jubileejoinery" rel="noopener" data-reveal>Read the reviews on Checkatrade</a>
+    </div>
+  </div>
+</section>
+
+<section class="quote" id="quote" aria-labelledby="q-title">
+  <div class="wrap">
+    <div>
+      <p class="eyebrow" data-reveal>Start a quote</p>
+      <h2 class="h2" id="q-title" data-split style="margin-top:16px">Tell us about<br><em>the stairs.</em></h2>
+      <p class="intro" data-reveal>Four quick questions. Photos help, even rough ones from your phone. Tony replies with next steps.</p>
+    </div>
+    <form class="wiz" id="wiz" novalidate>
+      <div class="prog" aria-hidden="true"><i></i><i></i><i></i><i></i></div>
+      <div class="pane" data-pane="0">
+        <fieldset><legend>What do you need?</legend><p class="hint">Pick as many as you like.</p>
+          <div class="chips" id="jobs">
+            <button type="button" class="chip" aria-pressed="false">Staircase</button>
+            <button type="button" class="chip" aria-pressed="false">Windows</button>
+            <button type="button" class="chip" aria-pressed="false">Doors or gates</button>
+            <button type="button" class="chip" aria-pressed="false">Joinery repair</button>
+            <button type="button" class="chip" aria-pressed="false">Kitchen or bedroom fitting</button>
+            <button type="button" class="chip" aria-pressed="false">Decking</button>
+            <button type="button" class="chip" aria-pressed="false">Boat work</button>
+          </div></fieldset>
+        <div class="nav"><span></span><button type="button" class="btn btn-dark" data-next>Next</button></div>
+      </div>
+      <div class="pane" data-pane="1" hidden>
+        <label class="lab" for="pc">Where's the job?</label><p class="hint">Postcode, so we can check it's in range.</p>
+        <input type="text" id="pc" name="pc" autocomplete="postal-code" placeholder="e.g. PO15 5xx" aria-describedby="pcres">
+        <div class="pcres" id="pcres" role="status" aria-live="polite">Type your postcode and we'll tell you straight away.</div>
+        <div class="nav"><button type="button" class="btn-ghost" data-back>Back</button><button type="button" class="btn btn-dark" data-next>Next</button></div>
+      </div>
+      <div class="pane" data-pane="2" hidden>
+        <span class="lab" id="phl">Any photos?</span><p class="hint">Of the space, the old stairs, anything. Optional, and they stay on your device in this preview.</p>
+        <label class="drop"><input type="file" id="photos" accept="image/*" multiple aria-labelledby="phl"><strong>Choose photos</strong><br>or take them now</label>
+        <div class="thumbs" id="thumbs"></div>
+        <div class="nav"><button type="button" class="btn-ghost" data-back>Back</button><button type="button" class="btn btn-dark" data-next>Next</button></div>
+      </div>
+      <div class="pane" data-pane="3" hidden>
+        <span class="lab">Who are we talking to?</span><p class="hint">Just enough to get back to you.</p>
+        <div class="row"><label class="f">Name<input type="text" name="name" id="nm" autocomplete="name" required></label><label class="f">Phone<input type="tel" name="phone" id="ph" autocomplete="tel" required></label></div>
+        <label class="f">Anything else?<textarea name="msg" placeholder="Rough sizes, timing, the look you want"></textarea></label>
+        <div class="nav"><button type="button" class="btn-ghost" data-back>Back</button><button type="submit" class="btn btn-oak">Send request</button></div>
+      </div>
+      <div class="pane done-panel" data-pane="4" hidden role="status" aria-live="polite">
+        <span class="eyebrow">Request received</span>
+        <div class="ref" id="ref">Q-0000</div>
+        <p id="donetxt">This is a preview — the form will go live with your new site.</p>
+        <p class="note-p">Nothing has been sent. The reference above is an example.</p>
+        <div class="nav"><button type="button" class="btn-ghost" id="again">Start again</button><span></span></div>
+      </div>
+    </form>
+  </div>
+</section>
+
+<section class="areas" id="areas" aria-labelledby="ar-title">
+  <div class="wrap">
+    <div>
+      <p class="eyebrow" data-reveal>Where the work is</p>
+      <h2 class="h2" id="ar-title" data-split style="margin-top:16px">Fareham, and<br><em>across Hampshire.</em></h2>
+      <p class="sub" data-reveal>Based in Fareham. Jobs have included these postcode areas. Further afield in Hampshire? Ask.</p>
+    </div>
+    <div class="pcs" aria-label="Recent job postcodes: SO31, SO32, PO12, PO14"><span data-reveal>SO31</span><span data-reveal>SO32</span><span data-reveal>PO12</span><span data-reveal>PO14</span></div>
+  </div>
+</section>
+
+<section class="close" aria-labelledby="close-title">
+  <div class="wrap">
+    <h2 class="h2" id="close-title" data-split>Got a stairwell<br><em>that needs doing?</em></h2>
+    <a class="btn" href="#quote">Start a quote</a>
+  </div>
+</section>
+</main>
+
+<footer><div class="wrap"><span>© 2026 Jubilee Joinery Ltd · Fareham, Hampshire</span><span>Website concept by <a href="https://itchenstudio.co.uk">Itchen Studio</a></span></div></footer>
+
+<script src="assets/js/gsap.min.js" defer></script>
+<script src="assets/js/ScrollTrigger.min.js" defer></script>
+<script src="assets/js/lenis.min.js" defer></script>
+<script src="assets/js/concept.js" defer></script>
+<script defer>
+document.addEventListener('DOMContentLoaded', function(){
+  /* preview banner */
+  var BIZ = 'Jubilee Joinery Ltd';
+  document.getElementById('banner').innerHTML = 'Website concept for <b>' + BIZ + '</b> — preview only, not the live site. · Designed by Itchen Studio · sam@itchenstudio.co.uk';
+
+  /* ---- staircase drawing ---- */
+  var NS = 'http://www.w3.org/2000/svg', svg = document.getElementById('stairs');
+  function el(n, a, p){ var e = document.createElementNS(NS, n); for (var k in a) e.setAttribute(k, a[k]); (p || svg).appendChild(e); return e; }
+  var N = 12, X0 = 70, Y0 = 392, DX = 44, DY = 22;
+  var defs = el('defs', {});
+  var gr = el('linearGradient', { id:'oakg', x1:0, y1:0, x2:0, y2:1 }, defs);
+  el('stop', { offset:0, 'stop-color':'#d9a766' }, gr); el('stop', { offset:1, 'stop-color':'#b5803f' }, gr);
+  var gl = el('linearGradient', { id:'glg', x1:0, y1:0, x2:1, y2:1 }, defs);
+  el('stop', { offset:0, 'stop-color':'#ffffff', 'stop-opacity':.75 }, gl); el('stop', { offset:1, 'stop-color':'#8fb8b0', 'stop-opacity':.45 }, gl);
+  var ground = el('line', { x1:20, y1:Y0 + 30, x2:620, y2:Y0 + 30, stroke:'#1b1511', 'stroke-width':2, opacity:.8 });
+  var gTreads = el('g', {}), treads = [];
+  for (var i = 0; i < N; i++) {
+    var g = el('g', {}, gTreads), x = X0 + DX * i, y = Y0 - DY * i;
+    el('rect', { x:x + 3, y:y + 14, width:6, height:DY - 14 + 14, fill:'#6b4219' }, g);
+    el('rect', { x:x, y:y, width:DX + 16, height:14, rx:2.5, fill:'url(#oakg)', stroke:'#8a5a24', 'stroke-width':1 }, g);
+    el('line', { x1:x + 8, y1:y + 7, x2:x + DX + 8, y2:y + 7, stroke:'#8a5a24', 'stroke-width':.8, opacity:.5 }, g);
+    treads.push(g);
+  }
+  /* string (the sloped board under the treads) */
+  var xe = X0 + DX * (N - 1) + DX + 16, ye = Y0 - DY * (N - 1);
+  var string = el('polygon', { points: X0 + ',' + (Y0 + 30) + ' ' + X0 + ',' + (Y0 + 16) + ' ' + xe + ',' + (ye + 16) + ' ' + xe + ',' + (ye + 30), fill:'#7a4f20', opacity:.0 });
+  /* newels */
+  var nh = 130, nw = 16;
+  var nA = el('rect', { x:X0 - 6, y:Y0 - nh + 14, width:nw, height:nh + 16, rx:2, fill:'url(#oakg)', stroke:'#8a5a24' });
+  var nB = el('rect', { x:xe - 28, y:ye - nh + 14, width:nw, height:nh + 16, rx:2, fill:'url(#oakg)', stroke:'#8a5a24' });
+  /* handrail */
+  var hx1 = X0 + 1, hy1 = Y0 - nh + 18, hx2 = xe - 20, hy2 = ye - nh + 18;
+  var rail = el('line', { x1:hx1, y1:hy1, x2:hx2, y2:hy2, stroke:'url(#oakg)', 'stroke-width':12, 'stroke-linecap':'butt' });
+  var railL = Math.hypot(hx2 - hx1, hy2 - hy1);
+  rail.style.strokeDasharray = railL; rail.style.strokeDashoffset = 0;
+  /* glass */
+  var gGlass = el('g', {}), panels = [], PAN = 3;
+  for (var p = 0; p < PAN; p++) {
+    var t0 = p / PAN, t1 = (p + 1) / PAN, gap = .012;
+    var ax = hx1 + (hx2 - hx1) * (t0 + gap), ay = hy1 + (hy2 - hy1) * (t0 + gap) + 7;
+    var bx = hx1 + (hx2 - hx1) * (t1 - gap), by = hy1 + (hy2 - hy1) * (t1 - gap) + 7;
+    var base0 = Y0 + 8 - DY * (N - 1) * (t0 + gap), base1 = Y0 + 8 - DY * (N - 1) * (t1 - gap);
+    var gg = el('g', {}, gGlass);
+    el('polygon', { points: ax + ',' + ay + ' ' + bx + ',' + by + ' ' + bx + ',' + base1 + ' ' + ax + ',' + base0, fill:'url(#glg)', stroke:'#7fa8a0', 'stroke-width':1.2 }, gg);
+    el('line', { x1:ax + 10, y1:ay + 14, x2:ax + 34, y2:ay + 4, stroke:'#fff', 'stroke-width':2, opacity:.7 }, gg);
+    [ax + 6, bx - 6].forEach(function(cx, k){ var cy = (k ? by : ay) + 12; el('rect', { x:cx - 4, y:cy - 4, width:8, height:8, rx:1.5, fill:'#d8d8d8', stroke:'#777' }, gg); });
+    panels.push(gg);
+  }
+  var cnt = document.getElementById('cnt'), bsteps = Array.prototype.slice.call(document.querySelectorAll('.bstep'));
+  function setStage(s){ bsteps.forEach(function(b, i){ b.classList.toggle('on', i === s); }); }
+
+  /* ---- wizard ---- */
+  var panes = Array.prototype.slice.call(document.querySelectorAll('#wiz .pane')), bars = document.querySelectorAll('.prog i'), cur = 0;
+  function go(n){
+    cur = n;
+    panes.forEach(function(p, i){ p.hidden = i !== n; });
+    bars.forEach(function(b, i){ b.classList.toggle('done', i < n); });
+    var f = panes[n].querySelector('input:not([type=file]),textarea,.chip,.btn,.btn-ghost'); if (f && n > 0 && n < 4) f.focus({ preventScroll:true });
+  }
+  document.querySelectorAll('[data-next]').forEach(function(b){ b.addEventListener('click', function(){ go(Math.min(cur + 1, 3)); }); });
+  document.querySelectorAll('[data-back]').forEach(function(b){ b.addEventListener('click', function(){ go(Math.max(cur - 1, 0)); }); });
+  document.getElementById('jobs').addEventListener('click', function(e){ var b = e.target.closest('.chip'); if (b) b.setAttribute('aria-pressed', String(b.getAttribute('aria-pressed') !== 'true')); });
+  var pc = document.getElementById('pc'), pcres = document.getElementById('pcres'), AREAS = ['SO31', 'SO32', 'PO12', 'PO14'];
+  pc.addEventListener('input', function(){
+    var v = pc.value.replace(/\s+/g, '').toUpperCase(), out = v.match(/^[A-Z]{1,2}\d{1,2}/);
+    pcres.classList.remove('no');
+    if (!out) { pcres.textContent = 'Type your postcode and we\'ll tell you straight away.'; return; }
+    var o = out[0];
+    if (AREAS.indexOf(o) > -1) pcres.textContent = 'Yes, we\'ve worked in ' + o + '.';
+    else if (/^(SO|PO)/.test(o)) pcres.textContent = o + ' is in Hampshire, so most likely. Tony will confirm.';
+    else { pcres.classList.add('no'); pcres.textContent = o + ' is outside our usual area. Send the request anyway and Tony will let you know.'; }
+  });
+  document.getElementById('photos').addEventListener('change', function(e){
+    var t = document.getElementById('thumbs'); t.innerHTML = '';
+    Array.prototype.slice.call(e.target.files, 0, 8).forEach(function(f){
+      var i = new Image(); i.alt = 'Your photo: ' + f.name; i.src = URL.createObjectURL(f); t.appendChild(i);
+    });
+  });
+  var wiz = document.getElementById('wiz');
+  wiz.addEventListener('submit', function(e){
+    e.preventDefault();
+    var bad = null;
+    ['nm', 'ph'].forEach(function(id){ var x = document.getElementById(id), ok = x.value.trim() !== ''; x.style.borderColor = ok ? '' : '#b3261e'; x.setAttribute('aria-invalid', ok ? 'false' : 'true'); if (!ok && !bad) bad = x; });
+    if (bad) { bad.focus(); return; }
+    document.getElementById('ref').textContent = 'Q-' + (4000 + Math.floor(Math.random() * 5000));
+    bars.forEach(function(b){ b.classList.add('done'); });
+    panes.forEach(function(p, i){ p.hidden = i !== 4; });
+  });
+  document.getElementById('again').addEventListener('click', function(){ wiz.reset(); document.getElementById('thumbs').innerHTML = ''; document.querySelectorAll('#jobs .chip').forEach(function(c){ c.setAttribute('aria-pressed', 'false'); }); pc.dispatchEvent(new Event('input')); go(0); });
+  wiz.addEventListener('keydown', function(e){ if (e.key === 'Enter' && e.target.tagName === 'INPUT' && cur < 3) { e.preventDefault(); go(cur + 1); } });
+
+  /* score meter */
+  var meter = document.getElementById('meter');
+  for (var m = 0; m < 10; m++) { var i = document.createElement('i'); i.style.setProperty('--f', m < 9 ? 1 : .82); meter.appendChild(i); }
+
+  var api = window.ConceptSite.init();
+
+  if (api.motion) {
+    /* hero panels: climb and drift */
+    gsap.utils.toArray('.panels figure').forEach(function(f, i){
+      gsap.from(f, { yPercent:30 + i * 14, duration:1.5, delay:.3 + i * .14, ease:'expo.out' });
+      var img = f.querySelector('img');
+      gsap.fromTo(img, { yPercent:0 }, { yPercent:-8 - i * 3, ease:'none', scrollTrigger:{ trigger:'.hero', start:'top top', end:'bottom top', scrub:true } });
+      gsap.to(f, { y:-20 - i * 26, ease:'none', scrollTrigger:{ trigger:'.hero', start:'top top', end:'bottom top', scrub:true } });
+    });
+
+    /* score count-up and meter */
+    var bv = document.getElementById('bigval'), bo = { v:0 };
+    gsap.to(bo, { v:9.82, duration:2, ease:'power2.out', scrollTrigger:{ trigger:'#bigscore', start:'top 85%', once:true }, onUpdate:function(){ bv.textContent = bo.v.toFixed(2); } });
+    gsap.fromTo('#meter i', { '--f':0 }, { '--f':function(i){ return i < 9 ? 1 : .82; }, duration:.6, stagger:.12, ease:'power2.out', scrollTrigger:{ trigger:'#meter', start:'top 90%', once:true } });
+
+    /* signature: build the staircase */
+    var mm = gsap.matchMedia();
+    function scene(pin, endLen){
+      var o = { s:0 };
+      gsap.set(treads, { autoAlpha:0, y:-26 });
+      gsap.set([nA, nB], { autoAlpha:0, scaleY:.2, transformOrigin:'50% 100%' });
+      gsap.set(string, { opacity:0 });
+      gsap.set(panels, { autoAlpha:0, x:-10 });
+      rail.style.strokeDashoffset = railL;
+      var tl = gsap.timeline({ scrollTrigger:{ trigger:'.build-pin', start: pin ? 'top top' : 'top 70%', end: pin ? '+=' + endLen : 'bottom 55%', pin:pin, scrub:.6, anticipatePin:1 },
+        onUpdate:function(){ var p = this.progress(); cnt.textContent = Math.max(0, Math.min(N, Math.round(p / .5 * N))); setStage(p < .5 ? 0 : p < .66 ? 1 : p < .83 ? 2 : 3); } });
+      tl.to(treads, { autoAlpha:1, y:0, duration:.5, stagger:{ each:.5 / N }, ease:'power2.out' }, 0)
+        .to(string, { opacity:1, duration:.1 }, .46)
+        .to([nA, nB], { autoAlpha:1, scaleY:1, duration:.16, stagger:.04, ease:'power2.out' }, .5)
+        .to(rail, { strokeDashoffset:0, duration:.17, ease:'none' }, .66)
+        .to(panels, { autoAlpha:1, x:0, duration:.17, stagger:.06, ease:'power2.out' }, .83)
+        .to('.build', { backgroundColor:'#cfe1dd', duration:.17, ease:'none' }, .83)
+        .to({}, { duration:.04 }, 1);
+      gsap.set('.build', { backgroundColor:'#f3ecdf' });
+      cnt.textContent = '0'; setStage(0);
+    }
+    mm.add('(min-width: 901px)', function(){ scene(true, 2000); });
+    mm.add('(max-width: 900px)', function(){ scene(false); });
+  } else {
+    cnt.textContent = String(N); bsteps.forEach(function(b){ b.classList.add('on'); });
+  }
+});
+</script>
+</body>
+</html>
