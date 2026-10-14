@@ -1,33 +1,33 @@
 <!doctype html>
 <!--
-ART DIRECTION BRIEF - RDS Painting & Decorating (v2)
+ART DIRECTION BRIEF - RDS Painting & Decorating (v3)
 
-IDEA: A painter's work is colour arriving on a surface. The page opens on a hand-finished kitchen and a freshly painted house front, and one scene lets you watch the same front change colour as you scroll.
+IDEA: A hand-painted kitchen is painted door by door, one brush stroke at a time. The page opens on a finished kitchen and a freshly painted exterior, and one scene lets you watch a run of bare cabinet doors get painted by brush as you scroll. (v3: the v2 house-front colour wash and all house-colour interactivity are gone, per Sam's feedback.)
 
-PALETTE: ink navy #0e1a38 (dark blocks), RDS royal blue #2447c8 (from the logo brush, used sparingly for italics and focus), warm linen #f4efe6 (light ground), paper #fbf8f2, brass #c9a45c on dark / #7a5c1e on light, wash tones green #86a58f, harbour #8da3c9, clay #d19b83.
+PALETTE: ink navy #0e1a38 (dark blocks), RDS royal blue #2447c8 (from the logo brush, used sparingly for italics and focus), warm linen #f4efe6 (light ground), paper #fbf8f2, brass #c9a45c on dark / #7a5c1e on light, illustration paint green #54705f / #4a6554 on bare timber #c9b693.
 
 TYPE: Newsreader (variable, roman + italic) for display, big and calm; Hanken Grotesk for text and labels. Both self-hosted.
 
 HERO: full-bleed exterior photo under a navy fade, headline stacked bottom-left in two lines, a tall arched kitchen photo drifting at right, proof strip on the hero foot. Not the two-column template.
 
-SIGNATURE SCROLL MOMENT: "Same house, other colours". The section pins; as you scroll, three colour washes sweep left to right across the finished house front (multiply layers masked to the painted walls with a pre-cut mask) and the swatches light up in turn. Phone and touch: not pinned, the wash is scrubbed as the photo passes and swatches are tappable. Reduced motion: swatches switch the colour instantly.
+SIGNATURE SCROLL MOMENT: "Ten doors, one stroke at a time". The section pins; a drawn kitchen elevation (four wall doors, three drawers, three base doors, all bare timber) is painted in sequence by a brush that zig-zags across each door in alternating strokes, with a door counter and a stage word (Bare, Brushing, Finished). Brass handles appear when the last door is done. Labelled as an illustration, not a job photo. Phone and touch: not pinned, the same painting is scrubbed as the drawing passes through the viewport. Reduced motion: the finished kitchen is shown, no animation.
 
 INTERACTIVE FEATURE: four-step quote request (job, area, photos with thumbnails, details) ending on a confirmation with a reference like Q-4821. Sends nothing.
 
 TRUTH NOTES: only lead facts. No phone or email on file, so contact is the quote form only. Accreditations are worded as listings (Checkatrade member since 2007, Buy With Confidence, a GBP 1,000 guarantee). The lead's own insurance and background-check claims are left out. Reviews are the three supplied quotes, credited to Checkatrade.
 
-HEADLINE OPTIONS (ten)
+HEADLINE OPTIONS (ten) - unchanged from v2, still passes the rules
 1. ~~Painted by hand.~~ (any decorator)
 2. ~~Twenty years of clean edges.~~ (any decorator with 20 years)
 3. ~~Houses brought back to life.~~ (cliche, generic)
-4. ~~Southampton's painter since 2007.~~ (rival could claim it; the lead only supports Checkatrade membership since 2007)
+4. ~~Southampton's painter since 2007.~~ (rival could claim it; lead only supports Checkatrade membership since 2007)
 5. ~~Every door, drawer and sash.~~ (nice, but no exterior)
 6. ~~Brushwork for south Hampshire.~~ (generic)
 7. ~~Sanded clean, painted slowly.~~ (cute, unsupported)
 8. ~~Kitchens by hand, fronts in colour.~~ (too clever)
 9. ~~Colour, then a clean edge.~~ (any decorator)
 10. Hand-painted kitchens. Fresh exteriors.
-PICK: 10. Four words, names the two things he is known for, and the two photos back it up.
+PICK: 10. Four words, names the two things he is known for, and the photos back it up.
 -->
 <html lang="en-GB">
 <head>
@@ -153,28 +153,23 @@ html.motion:not(.ready) [data-intro]{opacity:0}
 .cursor-img img.on{opacity:1}
 @media (max-width:860px){.svc-list a{grid-template-columns:36px minmax(0,1fr) 44px;gap:8px 14px;padding:24px 0}.svc-list .d{grid-column:2;grid-row:2}.svc-list .go{grid-row:1/3;grid-column:3}.cursor-img{display:none}}
 
-/* signature: colour wash */
-.wash{background:var(--ink);color:var(--linen);position:relative}
-.wash .in{max-width:1380px;margin:0 auto;padding:56px 36px 48px;display:grid;grid-template-columns:minmax(0,.78fr) minmax(0,1.5fr);gap:56px;align-items:center;min-height:100svh}
-.wash h2{font-size:clamp(40px,4.6vw,76px);margin-top:18px}
-.wash h2 i{color:#e9d6a8}
-.wash p.sub{color:#c4cbe0;margin-top:22px;max-width:27em;font-size:16.5px}
-.wash .stage{position:relative;aspect-ratio:4/3;width:min(100%,calc((100svh - 150px) * 4 / 3));justify-self:end;overflow:hidden;background:#fff;box-shadow:0 50px 100px -40px #000c;border:1px solid #ffffff30}
-.wash .stage>img,.wash .layer img{position:absolute;inset:0;width:100%;height:100%;object-fit:cover}
-.wash .walls{position:absolute;inset:0;-webkit-mask-image:url(assets/wallmask.webp);mask-image:url(assets/wallmask.webp);-webkit-mask-size:100% 100%;mask-size:100% 100%}
-.wash .layer{position:absolute;inset:0;--p:-6%;-webkit-mask-image:linear-gradient(90deg,#000 var(--p),transparent calc(var(--p) + 6%));mask-image:linear-gradient(90deg,#000 var(--p),transparent calc(var(--p) + 6%))}
-.wash .layer .tone{position:absolute;inset:0;mix-blend-mode:multiply}
-.wash .tag{position:absolute;left:14px;bottom:12px;font:600 11px/1 var(--body);letter-spacing:.2em;text-transform:uppercase;color:#fff;background:#0e1a38cc;padding:9px 12px}
-.swatches{display:flex;gap:10px;margin-top:34px;flex-wrap:wrap}
-.sw-b{all:unset;box-sizing:border-box;cursor:pointer;display:flex;flex-direction:column;align-items:flex-start;gap:8px;min-width:96px;min-height:44px;padding:10px 12px 12px;border:1px solid #ffffff3a;transition:border-color .3s,background .3s}
-.sw-b i{display:block;width:100%;height:38px;border-radius:2px;border:1px solid #ffffff44}
-.sw-b span{font:600 12px/1.2 var(--body);letter-spacing:.1em;text-transform:uppercase;color:#c4cbe0}
-.sw-b:hover{border-color:#ffffff99}
-.sw-b[aria-pressed="true"]{border-color:var(--brass);background:#ffffff12}
-.sw-b[aria-pressed="true"] span{color:#fff}
-.sw-b:focus-visible{outline:3px solid var(--brass);outline-offset:3px}
-.wash .note{font-size:13.5px;color:#a6aecb;margin-top:22px;max-width:30em}
-@media (max-width:860px){.wash .in{grid-template-columns:1fr;gap:26px;padding:80px 16px 70px;min-height:0}.wash .stage{width:100%;justify-self:stretch;order:2}.swatches{margin-top:24px}.wash .copy{display:contents}.wash .c1{order:1}.wash .swatches{order:3}.wash .note{order:4;margin-top:0}.sw-b{flex:1;min-width:0;padding:8px}.sw-b span{font-size:10.5px;letter-spacing:.06em}}
+/* signature: doors painted */
+.doors{background:var(--ink);color:var(--linen);position:relative}
+.doors .in{max-width:1380px;margin:0 auto;padding:56px 36px 48px;display:grid;grid-template-columns:minmax(0,.78fr) minmax(0,1.5fr);gap:56px;align-items:center;min-height:100svh}
+.doors h2{font-size:clamp(40px,4.6vw,76px);margin-top:18px}
+.doors h2 i{color:#e9d6a8}
+.doors p.sub{color:#c4cbe0;margin-top:22px;max-width:27em;font-size:16.5px}
+.doors .stage{position:relative;aspect-ratio:1200/760;width:min(100%,calc((100svh - 150px) * 1200 / 760));justify-self:end;overflow:hidden;background:#e6dfd0;box-shadow:0 50px 100px -40px #000c;border:1px solid #ffffff30}
+.doors svg{position:absolute;inset:0;width:100%;height:100%;display:block}
+.doors .tag{position:absolute;left:14px;bottom:12px;font:600 11px/1 var(--body);letter-spacing:.2em;text-transform:uppercase;color:#fff;background:#0e1a38cc;padding:9px 12px}
+.count{display:flex;align-items:baseline;gap:14px;margin-top:34px;padding-top:20px;border-top:1px solid #ffffff33}
+.count b{font:380 clamp(54px,5vw,84px)/.9 var(--display);letter-spacing:-.03em;color:var(--linen);min-width:1.1em}
+.count span{font:600 12px/1.3 var(--body);letter-spacing:.2em;text-transform:uppercase;color:#c4cbe0}
+.count em{font:italic 380 22px/1 var(--display);color:#e9d6a8;margin-left:auto}
+.bar{height:3px;background:#ffffff26;margin-top:16px}
+.bar i{display:block;height:100%;width:100%;background:var(--brass);transform-origin:left;transform:scaleX(var(--pp,1))}
+.doors .note{font-size:13.5px;color:#a6aecb;margin-top:22px;max-width:30em}
+@media (max-width:860px){.doors .in{grid-template-columns:1fr;gap:26px;padding:80px 16px 70px;min-height:0}.doors .stage{width:100%;justify-self:stretch;order:2}.doors .copy{display:contents}.doors .c1{order:1}.doors .count{order:3;margin-top:0}.doors .note{order:4;margin-top:0}}
 
 /* gallery */
 .gallery{padding-block:150px;overflow:hidden}
@@ -301,7 +296,7 @@ html:not(.motion) .rv-row .dup,html:not(.motion) .rv-wrap.second{display:none}
 <header class="top">
   <div class="wrap">
     <a class="brand" href="#hero" aria-label="RDS Painting &amp; Decorating, back to top"><img src="assets/logo.webp" alt="" width="56" height="56"><span><b>RDS</b>Painting &amp; Decorating</span></a>
-    <nav aria-label="Main"><a href="#services">Services</a><a href="#colour">Colour</a><a href="#work">Work</a><a href="#reviews">Reviews</a><a href="#areas">Areas</a></nav>
+    <nav aria-label="Main"><a href="#services">Services</a><a href="#doors">Kitchens</a><a href="#work">Work</a><a href="#reviews">Reviews</a><a href="#areas">Areas</a></nav>
     <a class="btn" href="#quote">Get a free quote</a>
   </div>
 </header>
@@ -316,7 +311,7 @@ html:not(.motion) .rv-row .dup,html:not(.motion) .rv-wrap.second{display:none}
         <span class="lbl" data-intro>Painter &amp; decorator &middot; Southampton</span>
         <h1 id="h1"><span class="ln"><span>Hand-painted kitchens.</span></span><span class="ln"><span>Fresh exteriors.</span></span></h1>
         <p class="lead" data-intro>Richard Scott paints and repairs the inside and outside of houses across Southampton and south Hampshire. Cabinets, sash windows, render and woodwork all get the same close attention.</p>
-        <div class="ctas" data-intro><a class="btn brass" href="#quote">Get a free quote</a><a class="btn ghost" href="#colour">See a colour change</a></div>
+        <div class="ctas" data-intro><a class="btn brass" href="#quote">Get a free quote</a><a class="btn ghost" href="#doors">Watch a kitchen painted</a></div>
       </div>
       <figure class="arch" data-intro><img src="assets/kitchen-1.webp" alt="Cream painted kitchen cabinets with a black worktop and a glass pass-through window" width="1024" height="1365"><figcaption>Painted kitchen</figcaption></figure>
     </div>
@@ -364,30 +359,21 @@ html:not(.motion) .rv-row .dup,html:not(.motion) .rv-wrap.second{display:none}
   <div class="cursor-img" id="cimg" aria-hidden="true"><img src="assets/kitchen-1.webp" alt=""><img src="assets/exterior.webp" alt=""><img src="assets/kitchen-2.webp" alt=""></div>
 </section>
 
-<section class="wash dark" id="colour" aria-labelledby="wash-t">
+<section class="doors dark" id="doors" aria-labelledby="doors-t">
   <div class="in">
     <div class="copy">
       <div class="c1">
-        <p class="lbl">Colour preview</p>
-        <h2 id="wash-t">Same house, <i>other colours.</i></h2>
-        <p class="sub">The first picture is a finished front: white masonry and painted sashes. Scroll, or tap a swatch, to see the same house in three other colours.</p>
+        <p class="lbl">Hand-painted kitchens</p>
+        <h2 id="doors-t">Ten doors, <i>one stroke at a time.</i></h2>
+        <p class="sub">Richard paints cabinet doors, drawers and furniture by hand, in the colour you choose. Scroll to watch a run of bare doors get their coat of paint.</p>
       </div>
-      <div class="swatches" role="group" aria-label="Choose a colour">
-        <button class="sw-b" type="button" data-i="0" aria-pressed="true"><i style="background:#f1f0ec"></i><span>As finished</span></button>
-        <button class="sw-b" type="button" data-i="1" aria-pressed="false"><i style="background:#86a58f"></i><span>Green</span></button>
-        <button class="sw-b" type="button" data-i="2" aria-pressed="false"><i style="background:#8da3c9"></i><span>Harbour</span></button>
-        <button class="sw-b" type="button" data-i="3" aria-pressed="false"><i style="background:#d19b83"></i><span>Clay</span></button>
-      </div>
-      <p class="note">Illustration only. The colours are added on screen to a job photo from Richard's Checkatrade album.</p>
+      <div class="count" aria-hidden="true"><b id="dn">10</b><span>of 10 doors<br>and drawers</span><em id="dw">Finished</em></div>
+      <div class="bar" aria-hidden="true" style="order:3"><i id="dbar"></i></div>
+      <p class="note">Illustration only. This drawing is not one of Richard's jobs; the kitchens he has painted are in the photos below.</p>
     </div>
-    <div class="stage" id="stage" role="img" aria-label="The white painted house front, shown in different colours as you scroll">
-      <img src="assets/exterior.webp" alt="" width="1024" height="768">
-      <div class="walls" aria-hidden="true">
-        <div class="layer"><img src="assets/exterior.webp" alt=""><div class="tone" style="background:#86a58f"></div></div>
-        <div class="layer"><img src="assets/exterior.webp" alt=""><div class="tone" style="background:#8da3c9"></div></div>
-        <div class="layer"><img src="assets/exterior.webp" alt=""><div class="tone" style="background:#d19b83"></div></div>
-      </div>
-      <span class="tag" id="wash-tag" aria-hidden="true">As finished</span>
+    <div class="stage" id="stage" role="img" aria-label="Drawing of a kitchen with four wall cabinet doors, three drawers and three base doors being painted green by a brush, stroke by stroke, as you scroll">
+      <svg id="kit" viewBox="0 0 1200 760" aria-hidden="true" focusable="false"></svg>
+      <span class="tag" aria-hidden="true">Illustration</span>
     </div>
   </div>
 </section>
@@ -544,34 +530,66 @@ document.addEventListener('DOMContentLoaded', function(){
   var $$ = function(s, r){ return Array.prototype.slice.call((r || document).querySelectorAll(s)); };
   var esc = function(s){ return String(s).replace(/[&<>"]/g, function(c){ return {'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;'}[c]; }); };
 
-  /* ---------- colour wash scene ---------- */
-  var layers = $$('.wash .layer'), sw = $$('.sw-b'), tag = $('#wash-tag');
-  var NAMES = ['As finished', 'Green', 'Harbour blue', 'Clay'];
+  /* ---------- doors painted scene ---------- */
+  var NS = 'http://www.w3.org/2000/svg', kit = $('#kit');
+  function el(n, at, par){ var e = document.createElementNS(NS, n); for (var k in at) e.setAttribute(k, at[k]); (par || kit).appendChild(e); return e; }
   var clamp = function(v){ return Math.max(0, Math.min(1, v)); };
-  var cur = -1;
-  function render(p){
-    var c = p * 3;
-    layers.forEach(function(l, k){ l.style.setProperty('--p', (clamp(c - k) * 106 - 6) + '%'); });
-    var a = Math.round(c);
-    if (a !== cur) {
-      cur = a;
-      sw.forEach(function(b, i){ b.setAttribute('aria-pressed', String(i === a)); });
-      tag.textContent = NAMES[a];
+  el('rect', { x: 0, y: 0, width: 1200, height: 760, fill: '#e6dfd0' });
+  el('rect', { x: 0, y: 300, width: 1200, height: 140, fill: '#ddd5c3' });
+  el('rect', { x: 0, y: 440, width: 1200, height: 34, fill: '#25262b' });
+  el('rect', { x: 0, y: 690, width: 1200, height: 22, fill: '#33343a' });
+  el('rect', { x: 0, y: 712, width: 1200, height: 48, fill: '#b99a74' });
+  el('rect', { x: 80, y: 60, width: 1040, height: 248, fill: '#a99573' });
+  el('rect', { x: 80, y: 474, width: 1040, height: 216, fill: '#a99573' });
+  var panels = [], x0 = 91, i, j;
+  for (i = 0; i < 4; i++) panels.push({ x: x0 + i * 256, y: 70, w: 250, h: 230, t: 'u' });
+  for (i = 0; i < 3; i++) { panels.push({ x: x0 + i * 341, y: 482, w: 335, h: 78, t: 'd' }); panels.push({ x: x0 + i * 341, y: 566, w: 335, h: 118, t: 'b' }); }
+  var strokes = [], P = panels.length, dir = 1;
+  var greens = ['#54705f', '#4d6958', '#587562'];
+  panels.forEach(function(pn, pi){
+    var g = el('g', {}), cid = 'c' + pi;
+    var cp = el('clipPath', { id: cid }, g); el('rect', { x: pn.x, y: pn.y, width: pn.w, height: pn.h, rx: 2 }, cp);
+    el('rect', { x: pn.x, y: pn.y, width: pn.w, height: pn.h, rx: 2, fill: '#c9b693' }, g);
+    var inset = 22;
+    el('rect', { x: pn.x + inset, y: pn.y + inset * .8, width: pn.w - inset * 2, height: pn.h - inset * 1.6, fill: 'none', stroke: '#ad9a76', 'stroke-width': 3 }, g);
+    var n = Math.max(2, Math.round(pn.h / 42)), sh = pn.h / n, sg = el('g', { 'clip-path': 'url(#' + cid + ')' }, g);
+    pn.rs = [];
+    for (j = 0; j < n; j++) {
+      var r = el('rect', { x: pn.x - 4, y: pn.y + j * sh - .5, width: pn.w + 8, height: sh + 1.5, fill: greens[(j + pi) % 3] }, sg);
+      var st = { el: r, x: pn.x - 4, w: pn.w + 8, cy: pn.y + j * sh + sh / 2, dir: dir, pi: pi };
+      dir = -dir; strokes.push(st); pn.rs.push(st);
     }
-  }
-  render(0);
-  var st = null, proxy = { p: 0 };
-  sw.forEach(function(b){
-    b.addEventListener('click', function(){
-      var i = +b.dataset.i, target = i / 3;
-      if (st) {
-        var y = st.start + (st.end - st.start) * target;
-        if (site.lenis) site.lenis.scrollTo(y, { duration: 1.2 }); else window.scrollTo({ top: y, behavior: 'smooth' });
-      } else if (site.motion) {
-        gsap.to(proxy, { p: target, duration: 1.1, ease: 'power2.inOut', overwrite: true, onUpdate: function(){ render(proxy.p); } });
-      } else { proxy.p = target; render(target); }
-    });
+    pn.line = el('rect', { x: pn.x + inset, y: pn.y + inset * .8, width: pn.w - inset * 2, height: pn.h - inset * 1.6, fill: 'none', stroke: '#2f4538', 'stroke-opacity': .5, 'stroke-width': 3 }, g);
+    pn.hd = el('rect', pn.t === 'd' ? { x: pn.x + pn.w / 2 - 36, y: pn.y + pn.h / 2 - 4, width: 72, height: 8, rx: 4, fill: '#c9a45c' } : pn.t === 'u' ? { x: pn.x + pn.w / 2 - 4, y: pn.y + pn.h - 62, width: 8, height: 44, rx: 4, fill: '#c9a45c' } : { x: pn.x + pn.w / 2 - 4, y: pn.y + 16, width: 8, height: 44, rx: 4, fill: '#c9a45c' }, g);
   });
+  var N = strokes.length;
+  var brush = el('g', {});
+  var bi = el('g', { transform: 'rotate(26)' }, brush);
+  el('path', { d: 'M-15 -2 L15 -2 L15 -34 L-15 -34 Z', fill: '#efe3c4' }, bi);
+  el('path', { d: 'M-15 -2 Q0 8 15 -2 L15 -14 L-15 -14 Z', fill: '#54705f' }, bi);
+  el('rect', { x: -16, y: -54, width: 32, height: 22, fill: '#c9a45c' }, bi);
+  el('path', { d: 'M-9 -54 L9 -54 L6 -150 Q0 -156 -6 -150 Z', fill: '#2447c8' }, bi);
+  var dn = $('#dn'), dw = $('#dw'), dbar = $('#dbar'), last = -1;
+  function render(p){
+    var c = p * N, done = 0;
+    strokes.forEach(function(s, k){
+      var f = clamp(c - k);
+      s.el.setAttribute('transform', 'translate(' + (s.dir > 0 ? s.x : s.x + s.w) + ' 0) scale(' + (f || 0.0001) + ' 1) translate(' + (s.dir > 0 ? -s.x : -(s.x + s.w)) + ' 0)');
+    });
+    panels.forEach(function(pn){
+      var a = pn.rs.reduce(function(m, s){ return m + clamp(c - strokes.indexOf(s)); }, 0) / pn.rs.length;
+      pn.line.setAttribute('opacity', a); pn.hd.setAttribute('opacity', p >= .995 ? 1 : 0);
+      if (a >= .999) done++;
+    });
+    var k = Math.min(N - 1, Math.floor(c)), f = c - k, s = strokes[k];
+    if (p <= 0.001 || p >= .995) brush.setAttribute('opacity', 0);
+    else { brush.setAttribute('opacity', 1); brush.setAttribute('transform', 'translate(' + (s.dir > 0 ? s.x + f * s.w : s.x + s.w - f * s.w) + ' ' + s.cy + ')'); }
+    dn.textContent = done; dbar.style.setProperty('--pp', p);
+    var w = p <= .001 ? 'Bare' : p >= .995 ? 'Finished' : 'Brushing';
+    if (w !== last) { last = w; dw.textContent = w; }
+  }
+  render(1);
+  var proxy = { p: 1 };
 
   /* ---------- quote wizard ---------- */
   var form = $('#qform'), steps = $$('fieldset[data-step]'), bars = $$('.prog i');
@@ -672,16 +690,19 @@ document.addEventListener('DOMContentLoaded', function(){
     list.addEventListener('mouseleave', function(){ gsap.to(cimg, { autoAlpha: 0, scale: .8, duration: .3 }); });
   }
 
-  /* ---------- signature: colour wash ---------- */
+  /* ---------- signature: doors painted ---------- */
   var mm = gsap.matchMedia();
   mm.add('(min-width: 861px)', function(){
-    st = ScrollTrigger.create({ trigger: '.wash', start: 'top top', end: '+=2400', pin: true, scrub: 0.6, anticipatePin: 1,
-      onUpdate: function(s){ render(s.progress); } });
-    return function(){ st = null; };
+    proxy.p = 0; render(0);
+    gsap.to(proxy, { p: 1, ease: 'none', onUpdate: function(){ render(proxy.p); },
+      scrollTrigger: { trigger: '.doors', start: 'top top', end: '+=3000', pin: true, scrub: 0.6, anticipatePin: 1 } });
+    return function(){ render(1); };
   });
   mm.add('(max-width: 860px)', function(){
-    var t = ScrollTrigger.create({ trigger: '#stage', start: 'top 72%', end: 'bottom 28%', scrub: 0.5, onUpdate: function(s){ proxy.p = s.progress; render(s.progress); } });
-    return function(){ t.kill(); };
+    proxy.p = 0; render(0);
+    gsap.to(proxy, { p: 1, ease: 'none', onUpdate: function(){ render(proxy.p); },
+      scrollTrigger: { trigger: '#stage', start: 'top 78%', end: 'bottom 40%', scrub: 0.5 } });
+    return function(){ render(1); };
   });
 
   /* footer giant */
