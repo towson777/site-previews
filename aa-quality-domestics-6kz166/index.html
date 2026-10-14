@@ -1,0 +1,551 @@
+<!doctype html>
+<!--
+ART DIRECTION BRIEF — AA Quality Domestics (Southampton)
+Idea: fix it, or say so. Carl Hanley has repaired Southampton's washing machines, ovens and fridges since 2006 and also sells appliances, so the page is built on the one question every broken appliance raises: repair it or replace it? The answer comes from the same man, and customers' reviews keep saying he turns up when he said, explains what he is doing and leaves the place as he found it.
+Palette: warm yellow #ffc82e (big flat blocks, the page's loudest colour), deep navy #0e1b3d, white, pale blue-grey #eef2fa, signal red #e5483a used only for the "error" state. No logo supplied: the mark is a yellow AA tile with the name beside it.
+Type: Bricolage Grotesque (variable weight and width, set heavy, tight and condensed) for display; Figtree for text.
+Hero: a flat yellow field. A giant two-line headline fills the left; a huge washing-machine porthole bleeds off the right edge with a drum that turns slowly. Chunky call button, then a proof line along the bottom. No photo, no two-column split, because there are no photos of Carl's work yet.
+Signature scroll moment: "From E21 to fixed" — a pinned scene with a big drawn washing machine. As you scroll, the drum spins up, the dial turns and the display goes from a red E21 to a green OK, while four steps down the left light up in turn: he turns up when he said, finds the fault, fixes it or tells you straight, leaves it as he found it. Phones get a self-playing version.
+Interactive feature: "Book a repair" wizard — which appliance (seven types) > what it is doing > postcode checked against Southampton, Winchester, Romsey, Eastleigh and the SO postcodes > contact details > confirmation reference. Sends nothing.
+Headline shortlist: 1 Appliances fixed since 2006. / 2 Carl fixes it. Or says so. / 3 Fix it or replace it. / 4 Repair first. Replace second. / 5 Your washing machine, mended. / 6 Broken appliance? Ring Carl. / 7 Southampton's appliance engineer. / 8 Fixed by Carl since 2006. / 9 Straight answers on broken appliances. / 10 Repairs, and a good replacement.
+Crossed out: 5 and 7 (any repairer could print them), 3 (a slogan, no name or place), 6 (the call to action, not an idea), 9 and 10 (vague), 1 and 8 (true, but they only say how long).
+Pick: "Repair first. Replace second." — four words, says what Carl does that a repair-only or sales-only shop cannot, and sets up the whole page.
+-->
+<html lang="en-GB">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<meta name="robots" content="noindex,nofollow">
+<title>AA Quality Domestics · Southampton</title>
+<meta name="description" content="A website concept for AA Quality Domestics, appliance repair and sales in Southampton. Preview only.">
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Crect width='32' height='32' rx='7' fill='%23ffc82e'/%3E%3Ctext x='16' y='22' font-family='Arial' font-weight='900' font-size='15' fill='%230e1b3d' text-anchor='middle'%3EAA%3C/text%3E%3C/svg%3E">
+<link rel="preload" href="assets/fonts/bricolage.woff2" as="font" type="font/woff2" crossorigin>
+<link rel="preload" href="assets/fonts/figtree.woff2" as="font" type="font/woff2" crossorigin>
+<script>(function(d){if(!matchMedia('(prefers-reduced-motion: reduce)').matches){d.documentElement.classList.add('motion');setTimeout(function(){if(!d.documentElement.classList.contains('ready'))d.documentElement.classList.remove('motion')},3000)}})(document)</script>
+<style>
+@font-face{font-family:"Bricolage Grotesque";src:url("assets/fonts/bricolage.woff2") format("woff2");font-weight:200 800;font-stretch:75% 100%;font-display:swap}
+@font-face{font-family:"Figtree";src:url("assets/fonts/figtree.woff2") format("woff2");font-weight:300 900;font-display:swap}
+:root{
+  --navy:#0e1b3d; --navy2:#16295a; --yellow:#ffc82e; --yellow-d:#e6ac00; --white:#fff; --pale:#eef2fa; --line:#cfd8ea; --muted:#46506b; --soft:#b8c3de; --red:#e5483a; --green:#33c27a;
+  --display:"Bricolage Grotesque","Arial Narrow",system-ui,sans-serif; --body:"Figtree",system-ui,sans-serif; --ease:cubic-bezier(.2,.8,.2,1);
+}
+*{box-sizing:border-box}
+html.lenis,html.lenis body{height:auto}
+body{margin:0;background:var(--white);color:var(--navy);font:400 17px/1.6 var(--body);-webkit-font-smoothing:antialiased;overflow-x:clip}
+img,svg{max-width:100%}
+p{margin:0}
+h1,h2,h3{margin:0;font-family:var(--display);font-weight:800;font-stretch:84%;letter-spacing:-.02em;line-height:.92;font-variant-ligatures:none}
+h2{font-size:clamp(46px,7vw,108px)}
+.wrap{max-width:1280px;margin:0 auto;padding-inline:36px}
+@media (max-width:640px){.wrap{padding-inline:16px}}
+.lbl{font:800 13px/1.4 var(--body);letter-spacing:.18em;text-transform:uppercase;color:var(--navy)}
+.lbl::before{content:"";display:inline-block;width:26px;height:4px;background:var(--yellow);margin-right:12px;vertical-align:middle;border-radius:2px}
+:focus-visible{outline:3px solid var(--navy);outline-offset:3px;border-radius:3px}
+.dark :focus-visible,.hero :focus-visible,.top :focus-visible{outline-color:var(--white)}
+.hero :focus-visible{outline-color:var(--navy)}
+[hidden]{display:none!important}
+.btn{display:inline-flex;align-items:center;justify-content:center;gap:12px;min-height:58px;padding:0 30px;border-radius:14px;border:3px solid var(--navy);background:var(--navy);color:var(--white);font:800 18px/1 var(--body);text-decoration:none;cursor:pointer;box-shadow:0 5px 0 0 #0006;transition:transform .2s var(--ease),box-shadow .2s var(--ease),background-color .2s,color .2s}
+.btn:hover{transform:translateY(3px);box-shadow:0 2px 0 0 #0006}
+.btn:active{transform:translateY(5px);box-shadow:0 0 0 0 #0006}
+.btn.y{background:var(--yellow);border-color:var(--navy);color:var(--navy)}
+.btn.o{background:transparent;color:var(--navy);box-shadow:none}
+.btn.o:hover{background:var(--navy);color:#fff;box-shadow:none}
+.btn svg{width:22px;height:22px;flex:none}
+
+/* preview banner */
+.concept{background:#060d22;color:#c3cde6;font-size:13px;line-height:18px;text-align:center;padding:8px 16px}
+.concept b{color:#fff;font-weight:700}
+
+/* header */
+.top{position:sticky;top:0;z-index:60;background:var(--navy);color:#fff;transition:transform .5s var(--ease)}
+.top.away{transform:translateY(-100%)}
+.top .wrap{display:flex;align-items:center;justify-content:space-between;gap:20px;height:78px}
+.logo{display:inline-flex;align-items:center;gap:12px;text-decoration:none;color:#fff}
+.logo svg{width:48px;height:48px;flex:none}
+.logo b{display:block;font:800 22px/1 var(--display);font-stretch:80%;letter-spacing:-.01em}
+.logo small{display:block;font:700 11px/1 var(--body);letter-spacing:.16em;text-transform:uppercase;color:var(--soft);margin-top:5px}
+.top nav{display:flex;gap:30px}
+.top nav a{color:#dce4f6;text-decoration:none;font:600 15px/1 var(--body);padding:14px 0;border-bottom:3px solid transparent}
+.top nav a:hover{color:var(--yellow);border-bottom-color:var(--yellow)}
+.top .btn{min-height:50px;padding:0 22px;font-size:17px;box-shadow:0 4px 0 0 #0008;border-color:var(--yellow)}
+.top .btn.y:hover{background:#fff;border-color:#fff}
+@media (max-width:960px){.top nav{display:none}}
+@media (max-width:420px){.top .btn .num{display:none}.logo small{display:none}}
+
+/* hero */
+.hero{position:relative;background:var(--yellow);color:var(--navy);overflow:hidden;isolation:isolate;min-height:min(92vh,900px);display:flex;align-items:flex-end}
+.hero::before{content:"";position:absolute;inset:0;z-index:-2;background:radial-gradient(circle at 1px 1px,#0e1b3d1f 1.5px,#0000 1.6px) 0 0/26px 26px}
+.hero .port{position:absolute;right:-11vw;top:50%;width:min(46vw,680px);aspect-ratio:1;transform:translateY(-52%);z-index:-1}
+.hero .port svg{width:100%;height:100%;display:block;overflow:visible}
+.hero .drum{transform-origin:300px 300px;animation:spin 18s linear infinite}
+@keyframes spin{to{transform:rotate(360deg)}}
+.hero .wrap{position:relative;width:100%;padding-block:100px 38px}
+.hero .lbl{color:var(--navy)}.hero .lbl::before{background:var(--navy)}
+.hero h1{font-size:clamp(60px,9.4vw,164px);margin:22px 0 0;line-height:.86}
+.hero h1 .ln{display:block;overflow:hidden;padding-bottom:.1em;margin-bottom:-.06em}
+.hero h1 .ln>span{display:inline-block}
+.hero h1 .w{color:var(--navy)}
+.hero .lead{font-size:clamp(18px,1.6vw,22px);line-height:1.5;max-width:27em;margin:28px 0 0;font-weight:500}
+.hero .ctas{display:flex;flex-wrap:wrap;gap:14px;margin-top:32px}
+.proof{display:flex;flex-wrap:wrap;gap:8px 30px;margin-top:46px;padding-top:20px;border-top:3px solid var(--navy);font-size:15.5px;font-weight:600}
+.proof b{font:800 26px/1 var(--display);font-stretch:80%;margin-right:8px;letter-spacing:-.01em}
+.proof span{display:inline-flex;align-items:baseline}
+html.motion:not(.ready) .hero h1 .ln>span{transform:translateY(105%)}
+html.motion:not(.ready) [data-intro]{opacity:0}
+@media (max-width:900px){.hero .port{width:96vw;right:-38vw;top:30%;opacity:.25}.hero .wrap{padding-top:130px}.hero h1{font-size:15.6vw}}
+
+/* ribbon */
+.strip{background:var(--navy);color:var(--yellow);overflow:hidden;white-space:nowrap;padding:15px 0;font:800 24px/1 var(--display);font-stretch:75%;text-transform:uppercase;letter-spacing:.02em}
+.strip .track{display:inline-flex;will-change:transform}
+.strip .track span{padding:0 24px;display:inline-flex;align-items:center;gap:24px}
+.strip .track span::after{content:"";width:12px;height:12px;border:3px solid var(--yellow);border-radius:50%}
+
+/* repairs */
+.repairs{padding-block:130px 90px;background:var(--pale)}
+.sec-head{display:flex;justify-content:space-between;align-items:end;gap:32px;flex-wrap:wrap;margin-bottom:54px}
+.sec-head p.in{max-width:26em;color:var(--muted);font-size:18px}
+.tiles{display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:16px}
+.tile{position:relative;background:var(--white);border:3px solid var(--navy);border-radius:20px;padding:26px 24px 24px;min-height:250px;display:flex;flex-direction:column;gap:12px;box-shadow:0 7px 0 0 var(--navy);transition:transform .25s var(--ease),box-shadow .25s var(--ease),background-color .25s}
+.tile:hover{transform:translateY(4px);box-shadow:0 3px 0 0 var(--navy);background:var(--yellow)}
+.tile svg{width:64px;height:64px;stroke:var(--navy);fill:none;stroke-width:1.6;stroke-linecap:round;stroke-linejoin:round;transition:transform .45s var(--ease)}
+.tile:hover svg{transform:rotate(-8deg) scale(1.08)}
+.tile h3{font-size:clamp(30px,2.6vw,38px);margin-top:auto;line-height:.92}
+.tile p{font-size:15.5px;color:var(--muted);line-height:1.45}
+.tile:hover p{color:var(--navy)}
+.tile.em{background:var(--navy);color:#fff}.tile.em svg{stroke:var(--yellow)}.tile.em p{color:var(--soft)}.tile.em:hover{background:var(--yellow);color:var(--navy)}.tile.em:hover svg{stroke:var(--navy)}.tile.em:hover p{color:var(--navy)}
+@media (max-width:1000px){.tiles{grid-template-columns:repeat(2,minmax(0,1fr))}}
+@media (max-width:560px){.tiles{grid-template-columns:1fr}.tile{min-height:0}.repairs{padding-block:84px 56px}}
+
+/* signature: E21 to fixed */
+.scene{position:relative;background:var(--navy);color:#fff}
+.scene-pin{min-height:100vh;display:grid;align-content:center;padding-block:96px 40px}
+.scene .grid{display:grid;grid-template-columns:minmax(0,1.05fr) minmax(0,.95fr);gap:60px;align-items:center}
+.scene .lbl{color:#fff}
+.scene h2{color:#fff;margin-top:20px;font-size:clamp(48px,6.4vw,100px)}
+.scene h2 span{color:var(--yellow)}
+.steps{display:grid;gap:10px;margin-top:34px;max-width:30em;counter-reset:s}
+.step{display:grid;grid-template-columns:52px 1fr;gap:14px;opacity:.5;transition:opacity .4s}
+.step.on{opacity:1}
+.step .k{font:800 30px/1 var(--display);font-stretch:78%;color:var(--yellow);padding-top:2px}
+.step h3{font-size:25px;line-height:1;margin-bottom:5px;letter-spacing:-.01em}
+.step p{color:var(--soft);font-size:16px;line-height:1.45}
+html:not(.motion) .step{opacity:1}
+.machine{margin:0;display:grid;justify-items:center}
+.machine svg{width:min(100%,calc(min(70vh,640px)*.8));height:auto;overflow:visible}
+.machine figcaption{margin-top:10px;font:700 12px/1 var(--body);letter-spacing:.16em;text-transform:uppercase;color:var(--soft)}
+.lcd{font-family:var(--display);font-weight:800}
+@media (max-width:900px){.scene .grid{grid-template-columns:1fr;gap:26px}.scene-pin{padding-block:72px 40px}.machine svg{width:min(78vw,340px)}.step p{font-size:15px}}
+
+/* two ways */
+.ways{padding-block:130px 0}
+.ways .row{display:grid;grid-template-columns:minmax(0,1.15fr) minmax(0,.85fr);gap:0;margin-top:52px;border:3px solid var(--navy);border-radius:28px;overflow:hidden}
+.way{padding:50px 46px 46px;display:flex;flex-direction:column;gap:18px;min-height:380px}
+.way.r{background:var(--yellow)}
+.way.b{background:var(--navy);color:#fff}
+.way .n{font:800 15px/1 var(--body);letter-spacing:.18em;text-transform:uppercase}
+.way h3{font-size:clamp(46px,5.6vw,84px)}
+.way p{font-size:18px;max-width:27em;line-height:1.5}
+.way.b p{color:#d4dcf0}
+.way ul{list-style:none;padding:0;margin:auto 0 0;display:flex;flex-wrap:wrap;gap:8px}
+.way li{border:2px solid currentColor;border-radius:99px;padding:8px 14px;font:700 14px/1 var(--body)}
+@media (max-width:860px){.ways{padding-block:84px 0}.ways .row{grid-template-columns:1fr}.way{padding:34px 24px;min-height:0}}
+
+/* record */
+.record{padding-block:130px 120px;overflow:hidden}
+.rv-head{display:flex;align-items:end;justify-content:space-between;gap:24px;flex-wrap:wrap;margin-bottom:48px}
+.big{display:flex;align-items:flex-end;gap:20px}
+.big .num{font:800 clamp(120px,19vw,270px)/.78 var(--display);font-stretch:70%;letter-spacing:-.05em;color:var(--navy);position:relative;font-variant-numeric:tabular-nums}
+.big .num::after{content:"";position:absolute;left:0;right:0;bottom:-6px;height:.1em;background:var(--yellow);border-radius:4px;z-index:-1}
+.big .cap{font-size:17px;color:var(--muted);max-width:15em;padding-bottom:10px}
+.big .cap b{display:block;color:var(--navy);font:800 28px/1 var(--display);font-stretch:78%;margin-bottom:6px}
+.rv-wrap{overflow:hidden;white-space:nowrap}
+.rv-row{display:inline-flex;gap:18px;white-space:nowrap;will-change:transform;padding-block:6px}
+.rv{white-space:normal;flex:none;width:min(410px,80vw);background:var(--pale);border:3px solid var(--navy);border-radius:22px;padding:30px;display:flex;flex-direction:column;gap:24px;justify-content:space-between;min-height:260px;margin:0;box-shadow:0 6px 0 0 var(--navy)}
+.rv blockquote{margin:0;font:700 clamp(23px,2vw,28px)/1.12 var(--display);font-stretch:85%;letter-spacing:-.015em}
+.rv figcaption{font:700 12.5px/1.4 var(--body);letter-spacing:.12em;text-transform:uppercase;color:var(--muted)}
+.rv.y{background:var(--yellow)}.rv.y figcaption{color:var(--navy)}
+.rv.n{background:var(--navy);color:#fff}.rv.n figcaption{color:var(--soft)}
+.rv.st{justify-content:flex-end}
+.rv.st strong{font:800 clamp(64px,6.4vw,94px)/.85 var(--display);font-stretch:68%;letter-spacing:-.04em}
+.rv.st span{font:700 13px/1.35 var(--body);letter-spacing:.12em;text-transform:uppercase}
+
+/* carl */
+.carl{background:var(--yellow);padding-block:110px;position:relative;overflow:hidden}
+.carl .wrap{display:grid;grid-template-columns:minmax(0,.9fr) minmax(0,1.1fr);gap:60px;align-items:center}
+.yrs{font:800 clamp(150px,23vw,360px)/.78 var(--display);font-stretch:66%;letter-spacing:-.05em;color:var(--navy)}
+.yrs small{display:block;font:800 14px/1 var(--body);letter-spacing:.2em;text-transform:uppercase;margin-top:22px}
+.carl h2{margin-top:20px;font-size:clamp(46px,6vw,90px)}
+.carl p.t{font-size:19px;line-height:1.55;max-width:29em;margin-top:24px;font-weight:500}
+.carl ul{list-style:none;padding:0;margin:30px 0 0;display:flex;flex-wrap:wrap;gap:10px}
+.carl li{border:3px solid var(--navy);border-radius:99px;padding:9px 16px;font:700 14.5px/1 var(--body);background:#ffffff55}
+@media (max-width:860px){.carl{padding-block:80px}.carl .wrap{grid-template-columns:1fr;gap:30px}}
+
+/* wizard */
+.book{background:var(--pale);padding-block:130px}
+.book .wrap{display:grid;grid-template-columns:minmax(0,.9fr) minmax(0,1.1fr);gap:64px;align-items:start}
+.book h2{margin-top:20px;font-size:clamp(48px,6.4vw,98px)}
+.book h2 span{text-decoration:underline;text-decoration-color:var(--yellow);text-decoration-thickness:.09em;text-underline-offset:.08em}
+.book .intro{color:var(--muted);font-size:18px;margin-top:26px;max-width:25em}
+.book .call{margin-top:34px;display:grid;gap:8px;justify-items:start}
+.book .call a.tel{font:800 clamp(40px,4.6vw,66px)/1 var(--display);font-stretch:76%;letter-spacing:-.02em;color:var(--navy);text-decoration:none;border-bottom:6px solid var(--yellow)}
+.book .call a.tel:hover{background:var(--yellow)}
+.book .call span{color:var(--muted);font-size:15px}
+.wiz{background:var(--white);border:3px solid var(--navy);border-radius:26px;padding:30px 30px 26px;box-shadow:0 8px 0 0 var(--navy)}
+.wiz-prog{display:flex;gap:6px;margin-bottom:24px}
+.wiz-prog i{flex:1;height:8px;border-radius:9px;background:var(--line);transition:background-color .3s}
+.wiz-prog i.on{background:var(--navy)}
+.wiz h3{font-size:clamp(34px,3.6vw,48px);margin-bottom:20px}
+.wiz .step-n{font:800 12px/1 var(--body);letter-spacing:.18em;text-transform:uppercase;color:var(--muted);display:block;margin-bottom:12px}
+.opts{display:grid;gap:10px;grid-template-columns:repeat(2,minmax(0,1fr))}
+.opts.one{grid-template-columns:1fr}
+.opt{all:unset;box-sizing:border-box;display:flex;align-items:center;gap:12px;min-height:58px;padding:10px 14px;border:3px solid var(--line);border-radius:14px;cursor:pointer;background:#fff;font:700 16px/1.15 var(--body);transition:border-color .2s,background-color .2s}
+.opt svg{width:30px;height:30px;stroke:var(--navy);fill:none;stroke-width:1.7;stroke-linecap:round;stroke-linejoin:round;flex:none}
+.opt:hover{border-color:var(--navy)}
+.opt[aria-pressed="true"]{border-color:var(--navy);background:var(--yellow)}
+.opt:focus-visible{outline:3px solid var(--navy);outline-offset:2px}
+.fld{display:grid;gap:6px;font:700 14px/1.2 var(--body);margin-bottom:14px}
+.fld input,.fld textarea{font:inherit;font-weight:500;font-size:17px;border:3px solid var(--line);border-radius:12px;padding:13px 14px;background:#fff;color:var(--navy);width:100%}
+.fld input:focus,.fld textarea:focus{outline:none;border-color:var(--navy)}
+.fld small{font-weight:500;color:var(--muted);font-size:13.5px}
+.cov{margin-top:6px;padding:14px 16px;border-radius:14px;font-size:16px;line-height:1.4;display:flex;gap:10px;align-items:flex-start;font-weight:600}
+.cov.yes{background:#d8f4e5;color:#0c4528}.cov.no{background:#ffe9bd;color:#5b3a00}
+.cov svg{width:22px;height:22px;flex:none;margin-top:1px}
+.wiz-foot{display:flex;justify-content:space-between;align-items:center;gap:12px;margin-top:22px;padding-top:18px;border-top:3px solid var(--pale)}
+.wiz-foot .btn{min-height:52px;font-size:16px;padding:0 24px;margin-left:auto}
+.wiz-foot .btn[disabled]{opacity:.4;cursor:not-allowed;transform:none;box-shadow:0 5px 0 0 #0006}
+.link{all:unset;cursor:pointer;font:800 14px/1 var(--body);letter-spacing:.1em;text-transform:uppercase;color:var(--navy);padding:14px 4px;border-bottom:3px solid transparent}
+.link:hover{border-bottom-color:var(--yellow)}
+.link:focus-visible{outline:3px solid var(--navy)}
+.done .ref{display:inline-block;font:800 32px/1 var(--display);font-stretch:80%;letter-spacing:.04em;background:var(--yellow);border:3px solid var(--navy);padding:10px 16px;border-radius:12px;margin:4px 0 18px}
+.done dl{display:grid;grid-template-columns:auto 1fr;gap:8px 20px;margin:0 0 18px;font-size:16px}
+.done dt{color:var(--muted)}.done dd{margin:0;font-weight:700}
+.done .note{background:var(--pale);border-radius:14px;padding:14px 16px;font-size:15px}
+@media (max-width:960px){.book{padding-block:84px}.book .wrap{grid-template-columns:1fr;gap:40px}}
+@media (max-width:520px){.wiz{padding:22px 16px 18px}.opts{grid-template-columns:1fr}}
+
+/* areas */
+.areas{background:var(--navy);color:#fff;padding-block:130px 100px}
+.areas .lbl{color:#fff}
+.areas h2{margin-top:20px}
+.areas h2 span{color:var(--yellow)}
+.area-list{list-style:none;margin:54px 0 0;padding:0}
+.area-list li{border-top:3px solid #ffffff30;padding:6px 0;display:flex;align-items:baseline;justify-content:space-between;gap:20px}
+.area-list li:last-child{border-bottom:3px solid #ffffff30}
+.area-list .a{font:800 clamp(52px,11vw,170px)/.98 var(--display);font-stretch:72%;letter-spacing:-.03em;color:transparent;-webkit-text-stroke:2px #fff;transition:color .3s,-webkit-text-stroke-color .3s}
+.area-list li:hover .a{color:var(--yellow);-webkit-text-stroke-color:var(--yellow)}
+.area-list .p{font:700 13px/1.3 var(--body);letter-spacing:.14em;text-transform:uppercase;color:var(--soft);text-align:right}
+.areas .note{margin-top:28px;color:var(--soft);font-size:17px}
+@media (max-width:620px){.areas{padding-block:84px 60px}.area-list .p{display:none}.area-list .a{-webkit-text-stroke-width:1.5px}}
+
+/* footer */
+.foot{background:var(--yellow);color:var(--navy);padding-block:80px 34px}
+.foot .row{display:grid;grid-template-columns:minmax(0,1.3fr) repeat(2,minmax(0,1fr));gap:48px}
+.foot .logo{color:var(--navy)}.foot .logo small{color:#3a4468}
+.foot h4{margin:0 0 16px;font:800 13px/1 var(--body);letter-spacing:.2em;text-transform:uppercase}
+.foot p,.foot li{font-size:16.5px;font-weight:500}
+.foot ul{list-style:none;margin:0;padding:0;display:grid;gap:8px}
+.foot a{color:var(--navy);text-decoration-thickness:2px;text-underline-offset:3px}
+.foot a.tel{font:800 38px/1 var(--display);font-stretch:76%;text-decoration:none;display:inline-block;margin-bottom:8px;border-bottom:5px solid var(--navy)}
+.foot .fine{display:flex;justify-content:space-between;flex-wrap:wrap;gap:14px;border-top:3px solid var(--navy);margin-top:60px;padding-top:20px;font-size:14px;font-weight:600}
+@media (max-width:860px){.foot .row{grid-template-columns:1fr;gap:34px}}
+
+.callbar{display:none}
+@media (max-width:700px){.callbar{display:flex;gap:10px;position:fixed;left:0;right:0;bottom:0;z-index:55;padding:10px 16px calc(10px + env(safe-area-inset-bottom,0px));background:var(--navy);border-top:3px solid var(--yellow)}.callbar .btn{flex:1;padding:0 12px;border-color:var(--yellow)}.callbar .btn.y{background:var(--yellow);color:var(--navy)}.callbar .btn:not(.y){background:transparent;color:#fff}body{padding-bottom:80px}}
+@media (prefers-reduced-motion:reduce){*{transition:none!important;animation:none!important}}
+</style>
+</head>
+<body>
+<svg width="0" height="0" style="position:absolute" aria-hidden="true" focusable="false">
+  <defs>
+    <symbol id="i-washer" viewBox="0 0 24 24"><rect x="4" y="2" width="16" height="20" rx="2.5"/><circle cx="12" cy="14" r="5"/><path d="M7 5.5h.01M10 5.5h.01M15 5.5h2"/></symbol>
+    <symbol id="i-dish" viewBox="0 0 24 24"><rect x="3" y="3" width="18" height="18" rx="2.5"/><path d="M3 8h18M6 5.5h.01M9 5.5h.01M7 12h10M7 16h10"/></symbol>
+    <symbol id="i-oven" viewBox="0 0 24 24"><rect x="4" y="2" width="16" height="20" rx="2.5"/><path d="M4 7.5h16M7.5 4.8h.01M10.5 4.8h.01M13.5 4.8h.01"/><rect x="7" y="11" width="10" height="7" rx="1.5"/></symbol>
+    <symbol id="i-fridge" viewBox="0 0 24 24"><rect x="6" y="2" width="12" height="20" rx="2.5"/><path d="M6 10h12M9 5v2M9 13v4"/></symbol>
+    <symbol id="i-dryer" viewBox="0 0 24 24"><rect x="4" y="2" width="16" height="20" rx="2.5"/><circle cx="12" cy="14" r="5"/><path d="M9.5 14c.8-1.5 1.7 1.5 2.5 0s1.7 1.5 2.5 0M7 5.5h.01M10 5.5h.01M15 5.5h2"/></symbol>
+    <symbol id="i-vac" viewBox="0 0 24 24"><circle cx="9" cy="16" r="5"/><path d="M13.5 14.5H21M9 11V5a2 2 0 0 1 2-2h3M9 16h.01"/></symbol>
+    <symbol id="i-cater" viewBox="0 0 24 24"><path d="M3 19h18M5 19a7 7 0 0 1 14 0M12 9V6.5M10 6.5h4"/></symbol>
+    <symbol id="i-bolt" viewBox="0 0 24 24"><path d="M13 2 5 14h6l-1 8 9-12h-6z"/></symbol>
+  </defs>
+</svg>
+<div class="concept" role="note">Website concept for <b>AA Quality Domestics</b> — preview only, not the live site. Designed by Itchen Studio · sam@itchenstudio.co.uk</div>
+
+<header class="top">
+  <div class="wrap">
+    <a class="logo" href="#top" aria-label="AA Quality Domestics, home">
+      <svg viewBox="0 0 48 48" aria-hidden="true"><rect width="48" height="48" rx="12" fill="#ffc82e"/><text x="24" y="33" text-anchor="middle" font-family="Bricolage Grotesque,Arial Narrow,sans-serif" font-weight="800" font-size="25" letter-spacing="-1" fill="#0e1b3d">AA</text></svg>
+      <span><b>Quality Domestics</b><small>Appliance repair &amp; sales</small></span>
+    </a>
+    <nav aria-label="Main"><a href="#repairs">Repairs</a><a href="#fixed">How it goes</a><a href="#ways">Buy</a><a href="#reviews">Reviews</a><a href="#book">Book</a><a href="#areas">Areas</a></nav>
+    <a class="btn y" href="tel:02380491088"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 4h4l2 5-2.5 1.5a11 11 0 0 0 5 5L15 13l5 2v4a2 2 0 0 1-2 2A16 16 0 0 1 3 6a2 2 0 0 1 2-2z"/></svg><span>Call <span class="num">023 8049 1088</span></span></a>
+  </div>
+</header>
+
+<main id="top">
+<section class="hero" aria-labelledby="h1">
+  <div class="port" aria-hidden="true">
+    <svg viewBox="0 0 600 600">
+      <circle cx="300" cy="300" r="296" fill="#0e1b3d"/>
+      <circle cx="300" cy="300" r="262" fill="#fff"/>
+      <circle cx="300" cy="300" r="236" fill="#cfe0f7"/>
+      <g class="drum">
+        <circle cx="300" cy="300" r="190" fill="#16295a"/>
+        <path d="M300 110v380M110 300h380M165 165l270 270M435 165 165 435" stroke="#0e1b3d" stroke-width="14"/>
+        <circle cx="228" cy="232" r="44" fill="#ffc82e"/><circle cx="372" cy="360" r="52" fill="#fff"/><circle cx="352" cy="214" r="30" fill="#ffc82e"/><circle cx="238" cy="378" r="34" fill="#e5483a"/>
+        <circle cx="300" cy="300" r="26" fill="#0e1b3d"/>
+      </g>
+      <path d="M130 200a190 190 0 0 1 120-90" stroke="#fff" stroke-opacity=".7" stroke-width="16" stroke-linecap="round" fill="none"/>
+    </svg>
+  </div>
+  <div class="wrap">
+    <p class="lbl" data-intro>Appliance repairs and sales · Southampton</p>
+    <h1 id="h1"><span class="ln"><span>Repair first.</span></span><span class="ln"><span class="w">Replace second.</span></span></h1>
+    <p class="lead" data-intro>Carl Hanley fixes washing machines, dishwashers, cookers, fridges and dryers across Southampton and Hampshire. If yours isn't worth saving, he sells appliances too.</p>
+    <div class="ctas" data-intro><a class="btn" href="#book">Book a repair</a><a class="btn o" href="tel:02380491088">Call 023 8049 1088</a></div>
+    <p class="proof" data-intro><span><b>9.9/10</b> on Checkatrade</span><span><b>1,020</b> reviews</span><span><b>2006</b> trading since</span><span>Checkatrade vetted</span></p>
+  </div>
+</section>
+
+<div class="strip" aria-hidden="true"><div class="track" data-speed="0.7"><span>Washing machines</span><span>Dishwashers</span><span>Ovens and cookers</span><span>Fridges and freezers</span><span>Tumble dryers</span><span>Vacuums</span><span>Catering equipment</span><span>Emergency repairs</span><span>Washing machines</span><span>Dishwashers</span><span>Ovens and cookers</span><span>Fridges and freezers</span><span>Tumble dryers</span><span>Vacuums</span><span>Catering equipment</span><span>Emergency repairs</span></div></div>
+
+<section class="repairs" id="repairs" aria-labelledby="rp-t">
+  <div class="wrap">
+    <div class="sec-head"><div><p class="lbl" data-reveal>What Carl repairs</p><h2 id="rp-t" data-split style="margin-top:20px">If it plugs in,<br>ask him.</h2></div><p class="in" data-reveal>Seven kinds of appliance, in homes and in catering kitchens. Not on the list? Ring and ask.</p></div>
+    <div class="tiles">
+      <article class="tile" data-reveal><svg aria-hidden="true"><use href="#i-washer"/></svg><h3>Washing machines</h3><p>Won't drain, won't spin, leaking or throwing an error code.</p></article>
+      <article class="tile" data-reveal><svg aria-hidden="true"><use href="#i-dish"/></svg><h3>Dishwashers</h3><p>Dishes still dirty, water left standing, or no start at all.</p></article>
+      <article class="tile" data-reveal><svg aria-hidden="true"><use href="#i-oven"/></svg><h3>Ovens and cookers</h3><p>An oven that won't heat or a hob that won't light.</p></article>
+      <article class="tile" data-reveal><svg aria-hidden="true"><use href="#i-fridge"/></svg><h3>Fridges and freezers</h3><p>Not cold enough, too cold, or making a noise.</p></article>
+      <article class="tile" data-reveal><svg aria-hidden="true"><use href="#i-dryer"/></svg><h3>Tumble dryers</h3><p>Damp clothes, no heat, or a drum that won't turn.</p></article>
+      <article class="tile" data-reveal><svg aria-hidden="true"><use href="#i-vac"/></svg><h3>Vacuums</h3><p>Lost suction or a motor that has given up.</p></article>
+      <article class="tile" data-reveal><svg aria-hidden="true"><use href="#i-cater"/></svg><h3>Catering equipment</h3><p>Commercial kitchen kit, repaired so the work carries on.</p></article>
+      <article class="tile em" data-reveal><svg aria-hidden="true"><use href="#i-bolt"/></svg><h3>Emergency repairs</h3><p>Something has just stopped and cannot wait. Ring Carl.</p></article>
+    </div>
+  </div>
+</section>
+
+<section class="scene dark" id="fixed" aria-labelledby="fx-t">
+  <div class="scene-pin">
+    <div class="wrap grid">
+      <div>
+        <p class="lbl">How a repair goes</p>
+        <h2 id="fx-t">From E21<br>to <span>fixed.</span></h2>
+        <div class="steps" id="steps">
+          <div class="step on" data-step="0"><span class="k">01</span><div><h3>He turns up when he said</h3><p>A time is agreed and Carl keeps to it, as customers keep pointing out.</p></div></div>
+          <div class="step" data-step="1"><span class="k">02</span><div><h3>He finds the fault</h3><p>Quickly, and he explains what he is doing while he does it.</p></div></div>
+          <div class="step" data-step="2"><span class="k">03</span><div><h3>He fixes it, or says so</h3><p>If it is worth repairing, he repairs it. If it isn't, he says, and can find you a replacement.</p></div></div>
+          <div class="step" data-step="3"><span class="k">04</span><div><h3>He leaves it tidy</h3><p>The place is left as he found it.</p></div></div>
+        </div>
+      </div>
+      <figure class="machine">
+        <svg viewBox="0 0 400 500" role="img" aria-label="A drawn washing machine. Its display changes from the error code E21 to OK as the repair progresses." id="mach">
+          <rect x="14" y="470" width="50" height="22" rx="6" fill="#06102c"/><rect x="336" y="470" width="50" height="22" rx="6" fill="#06102c"/>
+          <rect x="14" y="8" width="372" height="468" rx="30" fill="#fff" stroke="#ffc82e" stroke-width="8"/>
+          <rect x="14" y="8" width="372" height="112" rx="30" fill="#eef2fa"/>
+          <path d="M14 120h372" stroke="#ffc82e" stroke-width="8"/>
+          <g id="dial"><circle cx="86" cy="64" r="34" fill="#0e1b3d"/><circle cx="86" cy="64" r="24" fill="#16295a"/><path d="M86 64V36" stroke="#ffc82e" stroke-width="6" stroke-linecap="round"/></g>
+          <rect x="150" y="34" width="150" height="58" rx="10" fill="#0e1b3d"/>
+          <text id="lcd" x="225" y="76" text-anchor="middle" class="lcd" font-size="38" fill="#e5483a">E21</text>
+          <circle cx="338" cy="50" r="9" fill="#0e1b3d"/><circle cx="338" cy="82" r="9" fill="#0e1b3d"/>
+          <circle cx="200" cy="300" r="140" fill="#0e1b3d"/>
+          <circle cx="200" cy="300" r="118" fill="#cfe0f7"/>
+          <g id="drum">
+            <circle cx="200" cy="300" r="104" fill="#16295a"/>
+            <path d="M200 196v208M96 300h208M127 227l146 146M273 227 127 373" stroke="#0e1b3d" stroke-width="9"/>
+            <circle cx="160" cy="260" r="26" fill="#ffc82e"/><circle cx="246" cy="338" r="30" fill="#fff"/><circle cx="238" cy="252" r="18" fill="#ffc82e"/><circle cx="154" cy="344" r="20" fill="#e5483a"/>
+          </g>
+          <path d="M104 248a104 104 0 0 1 70-60" stroke="#fff" stroke-opacity=".75" stroke-width="10" stroke-linecap="round" fill="none"/>
+          <circle id="led" cx="338" cy="438" r="9" fill="#e5483a"/>
+        </svg>
+        <figcaption id="mcap">Fault code showing</figcaption>
+      </figure>
+    </div>
+  </div>
+</section>
+
+<section class="ways" id="ways" aria-labelledby="wy-t">
+  <div class="wrap">
+    <p class="lbl" data-reveal>Two ways to leave happy</p>
+    <h2 id="wy-t" data-split style="margin-top:20px">Fix it, or<br>find a good one.</h2>
+    <div class="row">
+      <article class="way r" data-reveal><span class="n">Repairs</span><h3>Most things are worth fixing.</h3><p>Carl will tell you what is wrong and what it costs to put right before you decide anything.</p><ul><li>Washing machines</li><li>Dishwashers</li><li>Ovens</li><li>Fridges</li><li>Dryers</li></ul></article>
+      <article class="way b" data-reveal><span class="n">Appliances for sale</span><h3>Not this one?</h3><p>Carl sells appliances as well, so if a repair doesn't add up you can swap straight to a replacement.</p><ul><li>Ask about stock</li><li>Ring Carl</li></ul></article>
+    </div>
+  </div>
+</section>
+
+<section class="record" id="reviews" aria-labelledby="rec-t">
+  <div class="wrap rv-head">
+    <div class="big"><span class="num" aria-hidden="true">9.9</span><p class="cap"><b id="rec-t">Out of 10 on Checkatrade</b>From 1,020 reviews, 37 of them in the last 12 months.</p></div>
+    <a class="btn" href="#book">Book a repair</a>
+  </div>
+  <div class="rv-wrap">
+    <div class="rv-row" data-speed="0.55">
+      <figure class="rv"><blockquote>“Excellent communication and quickly identified the problem, left the place as he found it.”</blockquote><figcaption>Checkatrade · 25 Aug 2026</figcaption></figure>
+      <p class="rv n st"><strong>1,020</strong><span>Checkatrade reviews</span></p>
+      <figure class="rv y"><blockquote>“Arrived when he said, explained what he was doing and sorted it”</blockquote><figcaption>Checkatrade · 19 Jul 2026</figcaption></figure>
+      <p class="rv st"><strong>2006</strong><span>Trading since</span></p>
+      <figure class="rv n"><blockquote>“Communication and delivery spot on. Carl was helpful throughout”</blockquote><figcaption>Checkatrade · 25 Jun 2026</figcaption></figure>
+      <p class="rv y st"><strong>37</strong><span>Reviews in the last 12 months</span></p>
+      <figure class="rv" aria-hidden="true"><blockquote>“Excellent communication and quickly identified the problem, left the place as he found it.”</blockquote><figcaption>Checkatrade · 25 Aug 2026</figcaption></figure>
+      <p class="rv n st" aria-hidden="true"><strong>1,020</strong><span>Checkatrade reviews</span></p>
+      <figure class="rv y" aria-hidden="true"><blockquote>“Arrived when he said, explained what he was doing and sorted it”</blockquote><figcaption>Checkatrade · 19 Jul 2026</figcaption></figure>
+      <p class="rv st" aria-hidden="true"><strong>2006</strong><span>Trading since</span></p>
+      <figure class="rv n" aria-hidden="true"><blockquote>“Communication and delivery spot on. Carl was helpful throughout”</blockquote><figcaption>Checkatrade · 25 Jun 2026</figcaption></figure>
+      <p class="rv y st" aria-hidden="true"><strong>37</strong><span>Reviews in the last 12 months</span></p>
+    </div>
+  </div>
+</section>
+
+<section class="carl" aria-labelledby="carl-t">
+  <div class="wrap">
+    <div class="yrs" aria-hidden="true">2006<small>Trading since</small></div>
+    <div>
+      <p class="lbl" data-reveal>Carl Hanley</p>
+      <h2 id="carl-t" data-split>One engineer.<br>Straight answers.</h2>
+      <p class="t" data-reveal>AA Quality Domestics is Carl's business. He has been repairing and selling appliances in Hampshire since 2006, and on Checkatrade since 2011.</p>
+      <ul data-reveal><li>Checkatrade vetted</li><li>£1,000 Checkatrade guarantee</li><li>Repairs and sales</li></ul>
+    </div>
+  </div>
+</section>
+
+<section class="book" id="book" aria-labelledby="b-t">
+  <div class="wrap">
+    <div>
+      <p class="lbl" data-reveal>Book a repair</p>
+      <h2 id="b-t" data-split>Tell Carl <span>what's broken.</span></h2>
+      <p class="intro" data-reveal>Four quick steps and Carl has what he needs. Or skip the form and ring.</p>
+      <div class="call" data-reveal><a class="tel" href="tel:02380491088">023 8049 1088</a><span>Southampton, SO16</span></div>
+    </div>
+    <div class="wiz" id="wiz" role="group" aria-labelledby="wiz-h">
+      <div class="wiz-prog" aria-hidden="true"><i></i><i></i><i></i><i></i></div>
+      <div id="wiz-body" aria-live="polite"></div>
+      <div class="wiz-foot" id="wiz-foot"><button type="button" class="link" id="w-back">Back</button><button type="button" class="btn" id="w-next">Next</button></div>
+    </div>
+  </div>
+</section>
+
+<section class="areas" id="areas" aria-labelledby="ar-t">
+  <div class="wrap">
+    <p class="lbl" data-reveal>Where Carl works</p>
+    <h2 id="ar-t" data-split>Southampton <span>and round about.</span></h2>
+    <ul class="area-list">
+      <li data-reveal><span class="a">Southampton</span><span class="p">Home base, SO16</span></li>
+      <li data-reveal><span class="a">Winchester</span><span class="p">Hampshire</span></li>
+      <li data-reveal><span class="a">Romsey</span><span class="p">Hampshire</span></li>
+      <li data-reveal><span class="a">Eastleigh</span><span class="p">Hampshire</span></li>
+    </ul>
+    <p class="note" data-reveal>And the villages and towns in between. Ring Carl with your postcode.</p>
+  </div>
+</section>
+</main>
+
+<footer class="foot">
+  <div class="wrap">
+    <div class="row">
+      <div><a class="logo" href="#top" aria-label="AA Quality Domestics, back to top"><svg viewBox="0 0 48 48" aria-hidden="true"><rect width="48" height="48" rx="12" fill="#0e1b3d"/><text x="24" y="33" text-anchor="middle" font-family="Bricolage Grotesque,Arial Narrow,sans-serif" font-weight="800" font-size="25" letter-spacing="-1" fill="#ffc82e">AA</text></svg><span><b>Quality Domestics</b><small>Appliance repair &amp; sales</small></span></a><p style="margin-top:20px;max-width:24em">Appliance repairs and sales from Carl Hanley, Southampton.</p></div>
+      <div><h4>Get in touch</h4><a class="tel" href="tel:02380491088">023 8049 1088</a><p>Southampton, SO16</p></div>
+      <div><h4>Covering</h4><ul><li>Southampton</li><li>Winchester and Romsey</li><li>Eastleigh and surrounding Hampshire</li></ul></div>
+    </div>
+    <div class="fine"><span>© 2026 AA Quality Domestics</span><span>Concept by <a href="https://itchenstudio.co.uk">Itchen Studio</a></span></div>
+  </div>
+</footer>
+<div class="callbar"><a class="btn y" href="tel:02380491088">Call Carl</a><a class="btn" href="#book">Book a repair</a></div>
+
+<script src="assets/js/gsap.min.js" defer></script>
+<script src="assets/js/ScrollTrigger.min.js" defer></script>
+<script src="assets/js/lenis.min.js" defer></script>
+<script src="assets/js/concept.js" defer></script>
+<script>
+document.addEventListener('DOMContentLoaded', function () {
+  var api = window.ConceptSite.init();
+
+  /* ---------- E21 to fixed ---------- */
+  var drum = document.getElementById('drum'), dial = document.getElementById('dial'), lcd = document.getElementById('lcd'), led = document.getElementById('led'), mcap = document.getElementById('mcap');
+  var steps = document.querySelectorAll('.step'), lastSt = -1;
+  var CAPS = ['Fault code showing', 'Checking the fault', 'Repaired and testing', 'Fixed'];
+  function render(p) {
+    drum.setAttribute('transform', 'rotate(' + (p * 900).toFixed(1) + ' 200 300)');
+    dial.setAttribute('transform', 'rotate(' + (p * 270 - 90).toFixed(1) + ' 86 64)');
+    var st = p < .25 ? 0 : (p < .5 ? 1 : (p < .8 ? 2 : 3));
+    if (st !== lastSt) {
+      lastSt = st;
+      var t = ['E21', '...', 'TEST', 'OK'][st], col = st === 3 ? '#33c27a' : (st === 0 ? '#e5483a' : '#ffc82e');
+      lcd.textContent = t; lcd.setAttribute('fill', col); led.setAttribute('fill', col);
+      steps.forEach(function (s) { s.classList.toggle('on', +s.dataset.step === st); });
+      mcap.textContent = CAPS[st];
+    }
+  }
+  render(1);
+
+  /* ---------- booking wizard ---------- */
+  var APPS = [['Washing machine', 'washer'], ['Dishwasher', 'dish'], ['Oven or cooker', 'oven'], ['Fridge or freezer', 'fridge'], ['Tumble dryer', 'dryer'], ['Vacuum', 'vac'], ['Catering equipment', 'cater']];
+  var FAULTS = ['Won\'t start or turn on', 'Won\'t drain or spin', 'Leaking', 'Noisy or shaking', 'Not heating or not cold', 'Showing an error code', 'Something else'];
+  var W = { step: 0, app: null, fault: null, pc: '', name: '', phone: '', note: '' };
+  var wbody = document.getElementById('wiz-body'), nextB = document.getElementById('w-next'), backB = document.getElementById('w-back'), prog = document.querySelectorAll('.wiz-prog i');
+  function esc(s) { return String(s).replace(/[&<>"]/g, function (c) { return { '&': '&amp;', '<': '&lt;', '>': '&gt;', '"': '&quot;' }[c]; }); }
+  function covered(pc) { return /^SO\d{1,2}/.test(String(pc).toUpperCase().replace(/\s+/g, '')); }
+  function covHtml() {
+    if (!W.pc.trim()) return '';
+    var ok = covered(W.pc);
+    return ok ? '<div class="cov yes" role="status"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M4 12l5 5L20 6"/></svg><span>Yes, Carl covers ' + esc(W.pc.toUpperCase().replace(/\s+/g, '').match(/^SO\d{1,2}/)[0]) + '.</span></div>'
+      : '<div class="cov no" role="status"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" aria-hidden="true"><circle cx="12" cy="12" r="9"/><path d="M12 7v6M12 16.5v.5"/></svg><span>That one is outside the usual patch. Give Carl a call on 023 8049 1088 and ask.</span></div>';
+  }
+  function stepRender() {
+    prog.forEach(function (p, i) { p.classList.toggle('on', i <= Math.min(W.step, 3)); });
+    var h = '';
+    if (W.step === 0) {
+      h = '<span class="step-n">Step 1 of 4</span><h3 id="wiz-h" tabindex="-1">What needs repairing?</h3><div class="opts">' + APPS.map(function (a, i) { return '<button type="button" class="opt" data-app="' + i + '" aria-pressed="' + (W.app === i) + '"><svg aria-hidden="true"><use href="#i-' + a[1] + '"/></svg>' + a[0] + '</button>'; }).join('') + '</div>';
+    } else if (W.step === 1) {
+      h = '<span class="step-n">Step 2 of 4</span><h3 id="wiz-h" tabindex="-1">What is it doing?</h3><div class="opts one">' + FAULTS.map(function (f, i) { return '<button type="button" class="opt" data-fault="' + i + '" aria-pressed="' + (W.fault === i) + '">' + f + '</button>'; }).join('') + '</div>';
+    } else if (W.step === 2) {
+      h = '<span class="step-n">Step 3 of 4</span><h3 id="wiz-h" tabindex="-1">Where are you?</h3><label class="fld">Postcode<input id="w-pc" autocomplete="postal-code" value="' + esc(W.pc) + '" placeholder="e.g. SO16 9EH" inputmode="text"><small>We check it against the areas Carl covers.</small></label><div id="cov">' + covHtml() + '</div>';
+    } else if (W.step === 3) {
+      h = '<span class="step-n">Step 4 of 4</span><h3 id="wiz-h" tabindex="-1">Who should Carl ring?</h3><label class="fld">Your name<input id="w-n" autocomplete="name" value="' + esc(W.name) + '" required></label><label class="fld">Phone number<input id="w-p" type="tel" autocomplete="tel" value="' + esc(W.phone) + '" required></label><label class="fld">Make, model or age <textarea id="w-x" rows="3" placeholder="Optional, but it helps">' + esc(W.note) + '</textarea></label>';
+    } else {
+      var ref = 'R-' + (4000 + Math.floor(Math.random() * 5000));
+      h = '<div class="done" role="status"><span class="step-n">Request received</span><h3 id="wiz-h" tabindex="-1">Thanks, ' + esc(W.name.split(' ')[0] || 'there') + '.</h3><span class="ref">' + ref + '</span><dl><dt>Appliance</dt><dd>' + esc(APPS[W.app][0]) + '</dd><dt>Problem</dt><dd>' + esc(FAULTS[W.fault]) + '</dd><dt>Postcode</dt><dd>' + esc(W.pc.toUpperCase()) + '</dd><dt>Call on</dt><dd>' + esc(W.phone) + '</dd></dl><p class="note">This is a preview — the form will go live with your new site. Nothing has been sent.</p></div>';
+    }
+    wbody.innerHTML = h;
+    backB.hidden = W.step === 0 || W.step === 4; nextB.textContent = W.step === 3 ? 'Send request' : (W.step === 4 ? 'Start again' : 'Next');
+    nextB.disabled = (W.step === 0 && W.app === null) || (W.step === 1 && W.fault === null) || (W.step === 2 && !W.pc.trim());
+    if (api.motion) gsap.from(wbody.children, { autoAlpha: 0, y: 14, duration: .45, stagger: .05, ease: 'power3.out' });
+  }
+  wbody.addEventListener('click', function (e) {
+    var b = e.target.closest('button'); if (!b) return;
+    var key = b.dataset.app !== undefined ? 'app' : (b.dataset.fault !== undefined ? 'fault' : null); if (!key) return;
+    W[key] = +b.dataset[key];
+    wbody.querySelectorAll('.opt').forEach(function (x) { x.setAttribute('aria-pressed', String(+x.dataset[key] === W[key])); });
+    nextB.disabled = false;
+  });
+  wbody.addEventListener('input', function (e) {
+    if (e.target.id === 'w-pc') { W.pc = e.target.value; document.getElementById('cov').innerHTML = covHtml(); nextB.disabled = !W.pc.trim(); }
+  });
+  nextB.addEventListener('click', function () {
+    if (W.step === 3) {
+      var n = document.getElementById('w-n'), p = document.getElementById('w-p'), bad = null;
+      [n, p].forEach(function (x) { var ok = x.value.trim() !== ''; x.style.borderColor = ok ? '' : '#b3261e'; x.setAttribute('aria-invalid', String(!ok)); if (!ok && !bad) bad = x; });
+      if (bad) { bad.focus(); return; }
+      W.name = n.value; W.phone = p.value; W.note = document.getElementById('w-x').value;
+    }
+    if (W.step === 4) { W = { step: 0, app: null, fault: null, pc: '', name: '', phone: '', note: '' }; stepRender(); return; }
+    W.step++; stepRender(); var h = document.getElementById('wiz-h'); if (h) h.focus({ preventScroll: true });
+  });
+  backB.addEventListener('click', function () { if (W.step > 0) { W.step--; stepRender(); } });
+  stepRender();
+
+  if (!api.motion) return;
+
+  /* ---------- signature scene: pinned on desktop, self-playing on phones ---------- */
+  var mm = gsap.matchMedia();
+  mm.add('(min-width: 901px)', function () {
+    var o = { p: 0 }; render(0);
+    gsap.to(o, { p: 1, ease: 'none', onUpdate: function () { render(o.p); }, scrollTrigger: { trigger: '.scene', start: 'top top', end: '+=2200', pin: '.scene-pin', scrub: .6, anticipatePin: 1 } });
+  });
+  mm.add('(max-width: 900px)', function () {
+    var o = { p: 0 }; render(0);
+    ScrollTrigger.create({ trigger: '#mach', start: 'top 80%', once: true, onEnter: function () { gsap.to(o, { p: 1, duration: 5, ease: 'power1.inOut', onUpdate: function () { render(o.p); } }); } });
+  });
+});
+</script>
+</body>
+</html>
