@@ -1,0 +1,528 @@
+<!doctype html>
+<!--
+ART DIRECTION BRIEF — HB Cleaning Ltd (Bedhampton, Havant)
+Idea: one man, one stair carpet at a time. Gary Hounsome has cleaned carpets and upholstery since 1987, and the proof is the thing customers see: a grey stair carpet and the same stairs after. The page is a long, calm wipe from grey to clean, with Gary's name on it.
+Palette: forest ink #10241f, deep green #1f4a3d, warm cream #f5f1e8, sand #e7dfcc, fresh lime #cfe95a (used in big blocks and on dark, never as small text on cream). No logo was supplied, so the mark is a drawn HB wordmark in Fraunces.
+Type: Fraunces (variable, soft optical-size axes, set large and light, with italics for the one word that matters) for display; Instrument Sans for text.
+Hero: full-bleed close-up of an upholstery wand on a grey sofa, tinted deep green, the headline set huge and low-left across it, a second photo floating in an arch shape top-right that drifts on scroll. Proof line along the bottom. Not a two-column split.
+Signature scroll moment: "Grey out, clean in" — a pinned scene. Gary's real before-and-after stair carpet sits in a tall frame; as you scroll a lime line sweeps across and the grey carpet becomes the clean one. A "before / after" legend follows it and a compare slider underneath works by keyboard. On phones the wipe plays once when it scrolls into view.
+Interactive feature: quote wizard — what needs cleaning (carpets, upholstery, emergency, not sure) > postcode checked against Gary's coverage > photo picker with thumbnails (kept on the device) > contact details > reference number. Sends nothing.
+Copy note: Sam's note asked for copy from the current website, which can't be reached from the builder; all copy here is written from the lead document (services, coverage, since 1987, Checkatrade facts) and should be swapped for their wording where it's better.
+Headline shortlist: 1 Carpets cleaned since 1987. / 2 Thirty-nine years of clean carpets. / 3 Gary cleans your carpets himself. / 4 Stairs, sofas and hallways, cleaned. / 5 Cleaned by Gary since 1987. / 6 Carpet and upholstery, since 1987. / 7 Havant's carpet cleaner since 1987. / 8 Gary Hounsome cleans carpets. / 9 Clean carpets, Havant to Chichester. / 10 One man. Every carpet. Since 1987.
+Crossed out: 2 (long, and does the maths for them), 4 and 6 (any cleaner could print them), 8 (flat), 1 (good, but anonymous), 7 (map claim we can't back), 10 (reads like a slogan).
+Pick: "Cleaned by Gary since 1987." — five words, names the owner, carries the 1987 start date; no one else can use it.
+-->
+<html lang="en-GB">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<meta name="robots" content="noindex,nofollow">
+<title>HB Cleaning Ltd · Havant</title>
+<meta name="description" content="A website concept for HB Cleaning Ltd, carpet and upholstery cleaners in Havant. Preview only.">
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Crect width='32' height='32' rx='8' fill='%2310241f'/%3E%3Ccircle cx='16' cy='16' r='9' fill='%23cfe95a'/%3E%3C/svg%3E">
+<link rel="preload" href="assets/fonts/fraunces.woff2" as="font" type="font/woff2" crossorigin>
+<link rel="preload" href="assets/fonts/instrument-sans.woff2" as="font" type="font/woff2" crossorigin>
+<link rel="preload" href="assets/img/wand-2000.webp" as="image">
+<script>(function(d){if(!matchMedia('(prefers-reduced-motion: reduce)').matches){d.documentElement.classList.add('motion');setTimeout(function(){if(!d.documentElement.classList.contains('ready'))d.documentElement.classList.remove('motion')},3000)}})(document)</script>
+<style>
+@font-face{font-family:"Fraunces";src:url("assets/fonts/fraunces.woff2") format("woff2");font-weight:100 900;font-style:normal;font-display:swap}
+@font-face{font-family:"Fraunces";src:url("assets/fonts/fraunces-italic.woff2") format("woff2");font-weight:100 900;font-style:italic;font-display:swap}
+@font-face{font-family:"Instrument Sans";src:url("assets/fonts/instrument-sans.woff2") format("woff2");font-weight:400 700;font-display:swap}
+:root{
+  --ink:#10241f; --deep:#1f4a3d; --mid:#2f5d4e; --cream:#f5f1e8; --sand:#e7dfcc; --lime:#cfe95a; --white:#fff; --muted:#4d5a55; --soft:#b9c7bf;
+  --display:"Fraunces",Georgia,serif; --body:"Instrument Sans",system-ui,sans-serif; --ease:cubic-bezier(.2,.8,.2,1);
+}
+*{box-sizing:border-box}
+html.lenis,html.lenis body{height:auto}
+body{margin:0;background:var(--cream);color:var(--ink);font:400 17px/1.62 var(--body);-webkit-font-smoothing:antialiased;overflow-x:clip}
+img{max-width:100%;display:block}
+p{margin:0}
+h1,h2,h3{margin:0;font-family:var(--display);font-weight:340;font-variation-settings:"opsz" 144,"SOFT" 60;letter-spacing:-.02em;line-height:.96}
+h2{font-size:clamp(44px,6.6vw,104px)}
+h2 em,h1 em{font-style:italic;font-weight:300}
+.wrap{max-width:1280px;margin:0 auto;padding-inline:36px}
+@media (max-width:640px){.wrap{padding-inline:18px}}
+.lbl{font:600 13px/1.4 var(--body);letter-spacing:.2em;text-transform:uppercase;color:var(--mid)}
+.dark .lbl,.lbl.on-dark{color:var(--lime)}
+:focus-visible{outline:3px solid var(--mid);outline-offset:3px;border-radius:3px}
+.dark :focus-visible{outline-color:var(--lime)}
+[hidden]{display:none!important}
+.btn{display:inline-flex;align-items:center;justify-content:center;gap:10px;min-height:54px;padding:0 28px;border-radius:99px;border:2px solid var(--lime);background:var(--lime);color:var(--ink);font:600 16px/1 var(--body);letter-spacing:.01em;text-decoration:none;cursor:pointer;transition:background-color .25s,color .25s,border-color .25s,transform .25s var(--ease)}
+.btn:hover{background:#fff;border-color:#fff;transform:translateY(-2px)}
+.btn.ghost{background:transparent;color:#fff;border-color:#ffffff80}
+.btn.ghost:hover{background:#fff;color:var(--ink);border-color:#fff}
+.btn.solid{background:var(--ink);border-color:var(--ink);color:#fff}
+.btn.solid:hover{background:var(--deep);border-color:var(--deep)}
+.btn svg{width:19px;height:19px;flex:none}
+
+/* preview banner */
+.concept{background:#000;color:#c9d1cd;font-size:13px;line-height:18px;text-align:center;padding:8px 16px}
+.concept b{color:#fff;font-weight:600}
+
+/* header */
+.top{position:sticky;top:0;z-index:60;background:#10241ff0;backdrop-filter:blur(10px);-webkit-backdrop-filter:blur(10px);color:#fff;border-bottom:1px solid #ffffff14;transition:transform .5s var(--ease)}
+.top.away{transform:translateY(-100%)}
+.top .wrap{display:flex;align-items:center;justify-content:space-between;gap:20px;height:74px}
+.logo{display:inline-flex;align-items:center;gap:12px;text-decoration:none;color:#fff}
+.logo svg{width:46px;height:46px;flex:none}
+.logo b{font:400 24px/1 var(--display);font-variation-settings:"opsz" 72,"SOFT" 100;letter-spacing:-.01em;display:block}
+.logo small{display:block;font:600 11px/1 var(--body);letter-spacing:.2em;text-transform:uppercase;color:var(--soft);margin-top:5px}
+.top nav{display:flex;gap:30px}
+.top nav a{color:#dbe5df;text-decoration:none;font:500 15px/1 var(--body);padding:14px 0}
+.top nav a:hover{color:var(--lime)}
+.top .btn{min-height:46px;padding:0 22px;font-size:15px}
+@media (max-width:900px){.top nav{display:none}}
+@media (max-width:420px){.top .btn .num{display:none}.logo small{display:none}}
+
+/* hero */
+.hero{position:relative;min-height:min(96vh,940px);display:flex;align-items:flex-end;background:var(--ink);color:#fff;overflow:hidden;isolation:isolate}
+.hero .bg{position:absolute;inset:0;z-index:-2}
+.hero .bg img{width:100%;height:112%;object-fit:cover;object-position:50% 40%}
+.hero .shade{position:absolute;inset:0;z-index:-1;background:linear-gradient(90deg,#10241ff2 0%,#10241fc4 42%,#1f4a3d55 78%,#1f4a3d33 100%),linear-gradient(0deg,#10241ff5 0%,#10241f00 46%)}
+.hero .arch{position:absolute;right:max(36px,calc(50vw - 604px));top:70px;width:min(23vw,320px);aspect-ratio:3/4.1;border-radius:999px 999px 14px 14px;overflow:hidden;box-shadow:0 40px 70px -30px #000;border:6px solid #ffffff22}
+.hero .arch img{width:100%;height:118%;object-fit:cover;object-position:30% 50%}
+.hero .wrap{position:relative;width:100%;padding-block:150px 40px}
+.hero h1{font-size:clamp(54px,9.2vw,156px);margin:22px 0 0;max-width:9.5em;font-weight:320}
+.hero h1 .ln{display:block;overflow:hidden;padding-bottom:.08em;margin-bottom:-.04em}
+.hero h1 .ln>span{display:inline-block}
+.hero h1 em{color:var(--lime)}
+.hero .lead{font-size:clamp(17px,1.5vw,21px);line-height:1.55;max-width:30em;margin:28px 0 0;color:#e1eae5}
+.hero .ctas{display:flex;flex-wrap:wrap;gap:12px;margin-top:32px}
+.proof{display:flex;flex-wrap:wrap;gap:8px 32px;margin-top:48px;padding-top:22px;border-top:1px solid #ffffff30;font-size:15px;color:#e1eae5}
+.proof b{color:#fff;font:400 24px/1 var(--display);font-variation-settings:"opsz" 48;margin-right:8px}
+.proof span{display:inline-flex;align-items:baseline}
+html.motion:not(.ready) .hero h1 .ln>span{transform:translateY(105%)}
+html.motion:not(.ready) [data-intro]{opacity:0}
+@media (max-width:900px){.hero .arch{width:38vw;right:18px;top:26px}.hero .shade{background:linear-gradient(0deg,#10241ffa 0%,#10241fe6 52%,#10241f55 100%)}.hero .wrap{padding-top:240px}.hero h1{font-size:15.4vw}}
+
+/* ribbon */
+.strip{background:var(--lime);color:var(--ink);overflow:hidden;white-space:nowrap;padding:16px 0;font:400 26px/1 var(--display);font-variation-settings:"opsz" 36;font-style:italic}
+.strip .track{display:inline-flex;will-change:transform}
+.strip .track span{padding:0 28px;display:inline-flex;align-items:center;gap:28px}
+.strip .track span::after{content:"";width:9px;height:9px;background:var(--ink);border-radius:50%}
+
+/* services */
+.services{padding-block:140px 90px}
+.sec-head{display:flex;justify-content:space-between;align-items:end;gap:32px;flex-wrap:wrap;margin-bottom:60px}
+.sec-head p.in{max-width:26em;color:var(--muted);font-size:18px}
+.svlist{list-style:none;margin:0;padding:0;border-top:1px solid var(--ink)}
+.sv{display:grid;grid-template-columns:70px minmax(0,1.3fr) minmax(0,1fr) 150px;gap:30px;align-items:center;padding:34px 0;border-bottom:1px solid var(--ink);position:relative;transition:padding-left .45s var(--ease),background-color .3s}
+.sv:hover{padding-left:22px;background:var(--sand)}
+.sv .n{font:600 14px/1 var(--body);letter-spacing:.14em;color:var(--mid)}
+.sv h3{font-size:clamp(34px,4.6vw,68px);font-weight:330}
+.sv p{color:var(--muted);font-size:17px;max-width:24em}
+.sv .ph{width:150px;aspect-ratio:1;border-radius:999px;overflow:hidden;justify-self:end;transition:transform .6s var(--ease)}
+.sv .ph img{width:100%;height:100%;object-fit:cover}
+.sv:hover .ph{transform:rotate(-6deg) scale(1.06)}
+@media (max-width:900px){.sv{grid-template-columns:44px 1fr 90px;gap:16px;padding:26px 0}.sv p{grid-column:2/3;grid-row:2}.sv .ph{width:90px;grid-column:3;grid-row:1/3}}
+@media (max-width:620px){.services{padding-block:90px 50px}.sv:hover{padding-left:0}}
+
+/* signature: grey out, clean in */
+.scene{position:relative;background:var(--ink);color:#fff}
+.scene-pin{min-height:100vh;display:grid;align-content:center;padding-block:96px 48px}
+.scene .grid{display:grid;grid-template-columns:minmax(0,1.1fr) minmax(0,.9fr);gap:72px;align-items:center}
+.scene h2{font-size:clamp(50px,7vw,112px);margin-top:20px}
+.scene h2 em{color:var(--lime)}
+.scene .copy p.t{font-size:19px;color:#cfdad4;max-width:28em;margin-top:28px}
+.legend{display:flex;gap:10px;margin-top:34px;flex-wrap:wrap}
+.legend span{font:600 13px/1 var(--body);letter-spacing:.16em;text-transform:uppercase;padding:12px 18px;border-radius:99px;border:1px solid #ffffff44;color:#cfdad4;transition:background-color .3s,color .3s,border-color .3s}
+.legend span.on{background:var(--lime);border-color:var(--lime);color:var(--ink)}
+.wipe{margin:0;display:grid;gap:14px;justify-items:center}
+.wipe .fr{position:relative;width:min(100%,calc(min(72vh,660px)*616/1020));aspect-ratio:616/1020;border-radius:12px;overflow:hidden;background:#222;box-shadow:0 40px 80px -40px #000}
+.wipe .fr img{position:absolute;inset:0;width:100%;height:100%;object-fit:cover}
+.wipe .aft{clip-path:inset(0 50% 0 0)}
+.wipe .edge{position:absolute;top:0;bottom:0;left:50%;width:3px;margin-left:-1.5px;background:var(--lime);box-shadow:0 0 24px 4px #cfe95a99}
+.wipe .tag{position:absolute;bottom:14px;font:600 12px/1 var(--body);letter-spacing:.16em;text-transform:uppercase;background:#10241fcc;color:#fff;padding:9px 12px;border-radius:99px}
+.wipe .tag.b{right:14px}.wipe .tag.a{left:14px;background:var(--lime);color:var(--ink)}
+.wipe figcaption{font-size:14px;color:var(--soft);text-align:center}
+.cmp{display:grid;gap:6px;width:min(100%,360px);font:600 12px/1 var(--body);letter-spacing:.14em;text-transform:uppercase;color:var(--soft)}
+.cmp input{width:100%;accent-color:var(--lime);height:28px;margin:0}
+@media (max-width:900px){.scene .grid{grid-template-columns:1fr;gap:30px}.scene-pin{padding-block:80px 50px}.wipe .fr{width:min(100%,calc(58vh*616/1020))}.scene .copy p.t{font-size:17px;margin-top:20px}.legend{margin-top:22px}}
+
+/* gallery */
+.work{padding-block:140px 40px}
+.wg{display:grid;grid-template-columns:repeat(12,minmax(0,1fr));gap:18px;margin-top:56px;align-items:start}
+.wg figure{margin:0}
+.wg .fr{overflow:hidden;background:var(--sand);border-radius:12px}
+.wg img{width:100%;height:114%;object-fit:cover}
+.wg .w1{grid-column:1/8}.wg .w1 .fr{aspect-ratio:3/2}
+.wg .w2{grid-column:8/13;margin-top:110px}.wg .w2 .fr{aspect-ratio:3/3.6}
+.wg figcaption{font:600 12px/1.4 var(--body);letter-spacing:.14em;text-transform:uppercase;color:var(--muted);margin-top:12px}
+@media (max-width:860px){.wg .w1,.wg .w2{grid-column:1/-1;margin-top:0}.work{padding-block:90px 20px}}
+
+/* on the record */
+.record{padding-block:120px 120px;overflow:hidden}
+.rv-head{display:flex;align-items:end;justify-content:space-between;gap:24px;flex-wrap:wrap;margin-bottom:48px}
+.big{display:flex;align-items:flex-end;gap:20px}
+.big .num{font:300 clamp(120px,19vw,270px)/.78 var(--display);font-variation-settings:"opsz" 144,"SOFT" 40;letter-spacing:-.05em;color:var(--deep);font-variant-numeric:lining-nums}
+.big .num small{font-size:.32em;letter-spacing:0;color:var(--mid);font-style:italic}
+.big .cap{font-size:17px;color:var(--muted);max-width:15em;padding-bottom:12px}
+.big .cap b{display:block;color:var(--ink);font:400 27px/1.05 var(--display);font-variation-settings:"opsz" 36;margin-bottom:6px}
+.rv-wrap{overflow:hidden;white-space:nowrap}
+.rv-row{display:inline-flex;gap:18px;white-space:nowrap;will-change:transform;padding-block:6px}
+.rv{white-space:normal;flex:none;width:min(420px,80vw);background:#fff;border-radius:14px;padding:32px;display:flex;flex-direction:column;gap:26px;justify-content:space-between;min-height:260px;margin:0}
+.rv blockquote{margin:0;font:340 clamp(24px,2.2vw,30px)/1.18 var(--display);font-variation-settings:"opsz" 48,"SOFT" 60;letter-spacing:-.01em}
+.rv figcaption{font:600 12px/1.4 var(--body);letter-spacing:.14em;text-transform:uppercase;color:var(--muted)}
+.rv.dk{background:var(--deep);color:#fff}.rv.dk figcaption{color:var(--soft)}
+.rv.lm{background:var(--lime)}.rv.lm figcaption{color:#2d3a00}
+.rv.st{justify-content:flex-end}
+.rv.st strong{font:300 clamp(70px,7vw,104px)/.85 var(--display);font-variation-settings:"opsz" 144;letter-spacing:-.04em}
+.rv.st span{font:600 13px/1.35 var(--body);letter-spacing:.12em;text-transform:uppercase;color:var(--muted)}
+.rv.dk.st span{color:var(--soft)}.rv.lm.st span{color:#2d3a00}
+
+/* gary */
+.gary{background:var(--deep);color:#fff;padding-block:120px}
+.gary .wrap{display:grid;grid-template-columns:minmax(0,.9fr) minmax(0,1.1fr);gap:70px;align-items:center}
+.yrs{font:300 clamp(150px,24vw,370px)/.8 var(--display);font-variation-settings:"opsz" 144,"SOFT" 40;letter-spacing:-.05em;color:var(--lime);font-variant-numeric:lining-nums}
+.yrs small{display:block;font:600 14px/1 var(--body);letter-spacing:.2em;text-transform:uppercase;color:#cfe0d6;margin-top:22px}
+.gary h2{margin-top:20px;font-size:clamp(46px,6vw,88px)}
+.gary p.t{font-size:19px;line-height:1.62;color:#d6e3db;max-width:30em;margin-top:26px}
+.gary ul{list-style:none;padding:0;margin:30px 0 0;display:flex;flex-wrap:wrap;gap:10px}
+.gary li{border:1px solid #ffffff55;border-radius:99px;padding:10px 18px;font:500 14px/1 var(--body);letter-spacing:.02em}
+@media (max-width:860px){.gary{padding-block:84px}.gary .wrap{grid-template-columns:1fr;gap:34px}}
+
+/* quote wizard */
+.quote{background:var(--ink);color:#fff;padding-block:130px}
+.quote .wrap{display:grid;grid-template-columns:minmax(0,.9fr) minmax(0,1.1fr);gap:72px;align-items:start}
+.quote h2{margin-top:20px;font-size:clamp(46px,6vw,88px)}
+.quote h2 em{color:var(--lime)}
+.quote .intro{color:#cfdad4;font-size:18px;margin-top:26px;max-width:26em}
+.quote .call{margin-top:34px;display:grid;gap:8px}
+.quote .call a.tel{font:300 clamp(34px,3.8vw,52px)/1 var(--display);font-variation-settings:"opsz" 72;color:var(--lime);text-decoration:none}
+.quote .call a.tel:hover{color:#fff}
+.quote .call span{color:#cfdad4;font-size:15px}
+.quote .call span a{color:#fff}
+.wiz{background:var(--cream);color:var(--ink);border-radius:20px;padding:30px 30px 26px;position:relative}
+.wiz :focus-visible{outline-color:var(--deep)}
+.wiz-prog{display:flex;gap:6px;margin-bottom:24px}
+.wiz-prog i{flex:1;height:5px;border-radius:9px;background:#dcd5c3;transition:background-color .3s}
+.wiz-prog i.on{background:var(--deep)}
+.wiz h3{font-size:clamp(32px,3.4vw,44px);margin-bottom:20px;font-weight:360}
+.wiz .step-n{font:600 12px/1 var(--body);letter-spacing:.18em;text-transform:uppercase;color:var(--mid);display:block;margin-bottom:12px}
+.opts{display:grid;gap:10px}
+.opt{all:unset;box-sizing:border-box;display:grid;grid-template-columns:1fr auto;gap:2px 14px;padding:15px 18px;border:2px solid #dcd5c3;border-radius:12px;cursor:pointer;background:#fff;transition:border-color .2s,background-color .2s}
+.opt:hover{border-color:var(--deep)}
+.opt[aria-pressed="true"]{border-color:var(--deep);background:#eef6d3}
+.opt:focus-visible{outline:3px solid var(--deep);outline-offset:2px}
+.opt b{font:400 23px/1.1 var(--display);font-variation-settings:"opsz" 36}
+.opt span{font-size:14.5px;color:var(--muted);grid-column:1}
+.opt i{grid-column:2;grid-row:1/span 2;align-self:center;width:24px;height:24px;border-radius:50%;border:2px solid #b8b09c;display:grid;place-items:center}
+.opt[aria-pressed="true"] i{background:var(--deep);border-color:var(--deep)}
+.opt[aria-pressed="true"] i::after{content:"";width:7px;height:11px;border:solid #fff;border-width:0 2px 2px 0;transform:rotate(45deg) translate(-1px,-1px)}
+.fld{display:grid;gap:6px;font:600 14px/1.2 var(--body);margin-bottom:14px}
+.fld input,.fld textarea{font:inherit;font-weight:500;font-size:17px;border:2px solid #d3ccb9;border-radius:10px;padding:13px 14px;background:#fff;color:var(--ink);width:100%}
+.fld input:focus,.fld textarea:focus{outline:none;border-color:var(--deep)}
+.fld small{font-weight:500;color:var(--muted);font-size:13.5px}
+.cov{margin-top:6px;padding:14px 16px;border-radius:12px;font-size:16px;line-height:1.4;display:flex;gap:10px;align-items:flex-start}
+.cov.yes{background:#dff0c6;color:#1e3d0c}.cov.no{background:#f7e7cc;color:#5c3503}
+.cov svg{width:22px;height:22px;flex:none;margin-top:1px}
+.drop{display:grid;place-items:center;gap:4px;text-align:center;border:2px dashed #b8b09c;border-radius:14px;padding:26px 16px;cursor:pointer;background:#fff;font-weight:600;transition:border-color .2s,background-color .2s}
+.drop:hover,.drop:focus-within{border-color:var(--deep);background:#f4f9e6}
+.drop input{position:absolute;opacity:0;width:1px;height:1px}
+.drop small{font-weight:500;color:var(--muted);font-size:13.5px}
+.thumbs{display:grid;grid-template-columns:repeat(auto-fill,minmax(84px,1fr));gap:8px;margin-top:12px}
+.thumbs img{width:100%;aspect-ratio:1;object-fit:cover;border-radius:10px}
+.wiz-foot{display:flex;justify-content:space-between;align-items:center;gap:12px;margin-top:22px;padding-top:18px;border-top:1px solid #dcd5c3}
+.wiz-foot .btn{min-height:50px;font-size:15px}
+.wiz-foot .btn[disabled]{opacity:.4;cursor:not-allowed;transform:none}
+.link{all:unset;cursor:pointer;font:600 14px/1 var(--body);letter-spacing:.1em;text-transform:uppercase;color:var(--deep);padding:14px 4px;border-bottom:2px solid transparent}
+.link:hover{border-bottom-color:currentColor}
+.link:focus-visible{outline:3px solid var(--deep)}
+.done .ref{display:inline-block;font:400 28px/1 var(--display);letter-spacing:.04em;background:var(--lime);padding:10px 16px;border-radius:99px;margin:4px 0 18px}
+.done dl{display:grid;grid-template-columns:auto 1fr;gap:8px 20px;margin:0 0 18px;font-size:16px}
+.done dt{color:var(--muted)}.done dd{margin:0;font-weight:600}
+.done .note{background:#e9efe0;border-radius:12px;padding:14px 16px;font-size:15px;color:#254033}
+@media (max-width:960px){.quote{padding-block:90px}.quote .wrap{grid-template-columns:1fr;gap:42px}}
+@media (max-width:520px){.wiz{padding:22px 16px 18px}}
+
+/* areas */
+.areas{padding-block:130px 70px}
+.arealist{list-style:none;margin:48px 0 0;padding:0;border-top:1px solid var(--ink)}
+.arealist li{display:flex;align-items:baseline;justify-content:space-between;gap:20px;padding:12px 0;border-bottom:1px solid var(--ink);transition:padding-left .4s var(--ease),background-color .3s}
+.arealist li:hover{padding-left:20px;background:var(--sand)}
+.arealist .a{font:320 clamp(40px,7vw,104px)/1.02 var(--display);font-variation-settings:"opsz" 144,"SOFT" 60;letter-spacing:-.025em}
+.arealist .p{font:600 13px/1.3 var(--body);letter-spacing:.14em;text-transform:uppercase;color:var(--muted);text-align:right}
+.areas .note{margin-top:26px;color:var(--muted);font-size:17px}
+@media (max-width:620px){.areas{padding-block:84px 48px}.arealist .p{display:none}}
+
+/* footer */
+.foot{background:var(--ink);color:#fff;padding-block:90px 36px}
+.foot .row{display:grid;grid-template-columns:minmax(0,1.3fr) repeat(2,minmax(0,1fr));gap:48px}
+.foot h4{margin:0 0 16px;font:600 13px/1 var(--body);letter-spacing:.2em;text-transform:uppercase;color:var(--lime)}
+.foot p,.foot li{color:#d3ded8;font-size:16px}
+.foot ul{list-style:none;margin:0;padding:0;display:grid;gap:8px}
+.foot a{color:#fff;text-decoration-thickness:1px;text-underline-offset:3px}
+.foot a.tel{font:300 32px/1.1 var(--display);font-variation-settings:"opsz" 72;color:var(--lime);text-decoration:none;display:block;margin-bottom:6px}
+.foot .fine{display:flex;justify-content:space-between;flex-wrap:wrap;gap:14px;border-top:1px solid #ffffff2e;margin-top:64px;padding-top:20px;font-size:14px;color:#b9c7bf}
+@media (max-width:860px){.foot .row{grid-template-columns:1fr;gap:34px}}
+
+.callbar{display:none}
+@media (max-width:700px){.callbar{display:flex;gap:10px;position:fixed;left:0;right:0;bottom:0;z-index:55;padding:10px 16px calc(10px + env(safe-area-inset-bottom,0px));background:#10241ff5;backdrop-filter:blur(8px);border-top:1px solid #ffffff1f}.callbar .btn{flex:1;padding:0 12px}body{padding-bottom:76px}}
+@media (prefers-reduced-motion:reduce){*{transition:none!important;animation:none!important}}
+</style>
+</head>
+<body>
+<div class="concept" role="note">Website concept for <b>HB Cleaning Ltd</b> — preview only, not the live site. Designed by Itchen Studio · sam@itchenstudio.co.uk</div>
+
+<header class="top">
+  <div class="wrap">
+    <a class="logo" href="#top" aria-label="HB Cleaning Ltd, home">
+      <svg viewBox="0 0 48 48" aria-hidden="true"><circle cx="24" cy="24" r="23" fill="#cfe95a"/><text x="24" y="31" text-anchor="middle" font-family="Fraunces,Georgia,serif" font-size="21" font-weight="500" font-style="italic" fill="#10241f">HB</text></svg>
+      <span><b>HB Cleaning</b><small>Carpets · Upholstery</small></span>
+    </a>
+    <nav aria-label="Main"><a href="#services">Cleaning</a><a href="#stairs">Before and after</a><a href="#reviews">Reviews</a><a href="#quote">Quote</a><a href="#areas">Areas</a></nav>
+    <a class="btn" href="tel:02392470542"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 4h4l2 5-2.5 1.5a11 11 0 0 0 5 5L15 13l5 2v4a2 2 0 0 1-2 2A16 16 0 0 1 3 6a2 2 0 0 1 2-2z"/></svg><span>Call <span class="num">023 9247 0542</span></span></a>
+  </div>
+</header>
+
+<main id="top">
+<section class="hero" aria-labelledby="h1">
+  <div class="bg" aria-hidden="true"><img src="assets/img/wand-2000.webp" srcset="assets/img/wand-1100.webp 1100w, assets/img/wand-2000.webp 2000w" sizes="100vw" alt="" fetchpriority="high"></div>
+  <div class="shade"></div>
+  <div class="arch" aria-hidden="true"><img src="assets/img/sofa-1100.webp" alt="" data-parallax></div>
+  <div class="wrap">
+    <p class="lbl on-dark" data-intro>Carpet and upholstery cleaning · Havant</p>
+    <h1 id="h1"><span class="ln"><span>Cleaned by Gary</span></span><span class="ln"><span>since <em>1987.</em></span></span></h1>
+    <p class="lead" data-intro>Gary Hounsome runs HB Cleaning on his own. Carpets, stairs, sofas and chairs, from Havant out to Chichester, Petersfield and Fareham. Ring him, or ask for a quote below.</p>
+    <div class="ctas" data-intro><a class="btn" href="#quote">Ask for a quote</a><a class="btn ghost" href="tel:02392470542">Call 023 9247 0542</a></div>
+    <p class="proof" data-intro><span><b>10/10</b> on Checkatrade</span><span><b>336</b> reviews</span><span><b>1987</b> trading since</span><span>Checkatrade vetted</span></p>
+  </div>
+</section>
+
+<div class="strip" aria-hidden="true"><div class="track" data-speed="0.7"><span>Carpet cleaning</span><span>Upholstery cleaning</span><span>Emergency cleans</span><span>Stairs and hallways</span><span>Lounges</span><span>Sofas and chairs</span><span>Carpet cleaning</span><span>Upholstery cleaning</span><span>Emergency cleans</span><span>Stairs and hallways</span><span>Lounges</span><span>Sofas and chairs</span></div></div>
+
+<section class="services" id="services" aria-labelledby="svc-t">
+  <div class="wrap">
+    <div class="sec-head"><div><p class="lbl" data-reveal>What Gary cleans</p><h2 id="svc-t" data-split style="margin-top:20px">Floors and<br><em>furniture.</em></h2></div><p class="in" data-reveal>Three kinds of job, one phone number. The person who answers is the person who turns up with the machine.</p></div>
+    <ol class="svlist">
+      <li class="sv" data-reveal><span class="n">01</span><h3>Carpet cleaning</h3><p>Lounges, hallways and stairs, the places that take the most feet. Ask for a quote and add a photo if you like.</p><span class="ph"><img src="assets/img/stairs-after-616.webp" alt="A clean stair carpet" loading="lazy"></span></li>
+      <li class="sv" data-reveal><span class="n">02</span><h3>Upholstery cleaning</h3><p>Sofas, armchairs and dining chairs, brought back to a clean, even finish.</p><span class="ph"><img src="assets/img/sofa-1100.webp" alt="A hose and hand tool cleaning the arm of a grey sofa" loading="lazy" style="object-position:20% 50%"></span></li>
+      <li class="sv" data-reveal><span class="n">03</span><h3>Emergency cleans</h3><p>A spill that cannot wait. Ring either number and say what has happened.</p><span class="ph"><img src="assets/img/wand-1100.webp" alt="A cleaning tool being worked over a grey fabric sofa" loading="lazy" style="object-position:40% 50%"></span></li>
+    </ol>
+  </div>
+</section>
+
+<section class="scene dark" id="stairs" aria-labelledby="st-t">
+  <div class="scene-pin">
+    <div class="wrap grid">
+      <div class="copy">
+        <p class="lbl">Stair carpet, before and after</p>
+        <h2 id="st-t">Grey out.<br><em>Clean</em> in.</h2>
+        <p class="t">Stair carpets show every trip up and down. These are the same stairs, before and after Gary has been. Scroll to wipe it clean, or drag the slider.</p>
+        <div class="legend" aria-hidden="true"><span class="on" data-k="0">Before</span><span data-k="1">After</span></div>
+      </div>
+      <figure class="wipe">
+        <div class="fr" id="fr">
+          <img src="assets/img/stairs-before-616.webp" width="616" height="1020" alt="A stair carpet before cleaning, dark grey marks across the middle of every step" loading="lazy">
+          <img class="aft" id="aft" src="assets/img/stairs-after-616.webp" width="616" height="1020" alt="The same stair carpet after cleaning, even and pale" loading="lazy">
+          <i class="edge" id="edge" aria-hidden="true"></i>
+          <span class="tag b">Before</span><span class="tag a">After</span>
+        </div>
+        <label class="cmp">Drag to compare<input type="range" id="cmp" min="0" max="100" value="50" aria-label="Compare before and after"></label>
+        <figcaption>Stair carpet cleaned by HB Cleaning</figcaption>
+      </figure>
+    </div>
+  </div>
+</section>
+
+<section class="work" id="work" aria-labelledby="work-t">
+  <div class="wrap">
+    <p class="lbl" data-reveal>At work</p>
+    <h2 id="work-t" data-split style="margin-top:20px">Hands on,<br><em>start to finish.</em></h2>
+    <div class="wg">
+      <figure class="w1"><div class="fr" data-clip><img src="assets/img/wand-2000.webp" srcset="assets/img/wand-1100.webp 1100w, assets/img/wand-2000.webp 2000w" sizes="(max-width:860px) 100vw, 58vw" alt="A hand tool with a yellow collar cleaning the back of a grey fabric sofa" loading="lazy" data-parallax></div><figcaption>Upholstery cleaning</figcaption></figure>
+      <figure class="w2"><div class="fr" data-clip><img src="assets/img/sofa-1100.webp" srcset="assets/img/sofa-1100.webp 1100w, assets/img/sofa-2000.webp 2000w" sizes="(max-width:860px) 100vw, 40vw" alt="A cleaner in a green polo shirt and black gloves working a hose and hand tool over a grey cushion" loading="lazy" data-parallax style="object-position:24% 50%"></div><figcaption>Sofa cleaning</figcaption></figure>
+    </div>
+  </div>
+</section>
+
+<section class="record" id="reviews" aria-labelledby="rec-t">
+  <div class="wrap rv-head">
+    <div class="big"><span class="num" aria-hidden="true">10<small>/10</small></span><p class="cap"><b id="rec-t">On Checkatrade</b>From 336 reviews, 27 of them in the last 12 months.</p></div>
+    <a class="btn solid" href="#quote">Ask for a quote</a>
+  </div>
+  <div class="rv-wrap">
+    <div class="rv-row" data-speed="0.5">
+      <figure class="rv"><blockquote>“All work carried out to excellent standard and exceeding our expectations.”</blockquote><figcaption>Checkatrade · 17 Aug</figcaption></figure>
+      <p class="rv dk st"><strong>336</strong><span>Checkatrade reviews</span></p>
+      <figure class="rv lm"><blockquote>“Exceptional service and perfect clean”</blockquote><figcaption>Checkatrade · 22 Jul</figcaption></figure>
+      <p class="rv st"><strong>1987</strong><span>Trading since</span></p>
+      <figure class="rv dk"><blockquote>“All work carried out to excellent standard and exceeding our expectations.”</blockquote><figcaption>Checkatrade · 17 Aug</figcaption></figure>
+      <p class="rv lm st"><strong>27</strong><span>Reviews in the last 12 months</span></p>
+      <figure class="rv"><blockquote>“Exceptional service and perfect clean”</blockquote><figcaption>Checkatrade · 22 Jul</figcaption></figure>
+      <p class="rv dk st"><strong>12</strong><span>Up to 12 checks to be Checkatrade vetted</span></p>
+      <figure class="rv" aria-hidden="true"><blockquote>“All work carried out to excellent standard and exceeding our expectations.”</blockquote><figcaption>Checkatrade · 17 Aug</figcaption></figure>
+      <p class="rv dk st" aria-hidden="true"><strong>336</strong><span>Checkatrade reviews</span></p>
+      <figure class="rv lm" aria-hidden="true"><blockquote>“Exceptional service and perfect clean”</blockquote><figcaption>Checkatrade · 22 Jul</figcaption></figure>
+      <p class="rv st" aria-hidden="true"><strong>1987</strong><span>Trading since</span></p>
+      <figure class="rv dk" aria-hidden="true"><blockquote>“All work carried out to excellent standard and exceeding our expectations.”</blockquote><figcaption>Checkatrade · 17 Aug</figcaption></figure>
+      <p class="rv lm st" aria-hidden="true"><strong>27</strong><span>Reviews in the last 12 months</span></p>
+      <figure class="rv" aria-hidden="true"><blockquote>“Exceptional service and perfect clean”</blockquote><figcaption>Checkatrade · 22 Jul</figcaption></figure>
+      <p class="rv dk st" aria-hidden="true"><strong>12</strong><span>Up to 12 checks to be Checkatrade vetted</span></p>
+    </div>
+  </div>
+</section>
+
+<section class="gary dark" aria-labelledby="gary-t">
+  <div class="wrap">
+    <div class="yrs" aria-hidden="true">1987<small>Trading since</small></div>
+    <div>
+      <p class="lbl" data-reveal>Owner-run</p>
+      <h2 id="gary-t" data-split>One man.<br><em>Every clean.</em></h2>
+      <p class="t" data-reveal>HB Cleaning Ltd is Gary Hounsome. He quotes the job, does the cleaning and picks up the phone. Based in Bedhampton, working across south-east Hampshire and West Sussex.</p>
+      <ul data-reveal><li>Checkatrade vetted</li><li>£1,000 Checkatrade guarantee</li><li>Facebook: hbcleaninglimited</li></ul>
+    </div>
+  </div>
+</section>
+
+<section class="quote dark" id="quote" aria-labelledby="q-t">
+  <div class="wrap">
+    <div>
+      <p class="lbl" data-reveal>Ask for a quote</p>
+      <h2 id="q-t" data-split>Tell Gary<br><em>what needs cleaning.</em></h2>
+      <p class="intro" data-reveal>Four short steps, with room for a photo. Or skip the form and ring.</p>
+      <div class="call" data-reveal><a class="tel" href="tel:02392470542">023 9247 0542</a><span>or mobile <a href="tel:07836712732">07836 712732</a> · <a href="mailto:hbcleaninglimited@btinternet.com">hbcleaninglimited@btinternet.com</a></span></div>
+    </div>
+    <div class="wiz" id="wiz" role="group" aria-labelledby="wiz-h">
+      <div class="wiz-prog" aria-hidden="true"><i></i><i></i><i></i><i></i></div>
+      <div id="wiz-body" aria-live="polite"></div>
+      <div class="wiz-foot" id="wiz-foot"><button type="button" class="link" id="w-back">Back</button><button type="button" class="btn solid" id="w-next">Next</button></div>
+    </div>
+  </div>
+</section>
+
+<section class="areas" id="areas" aria-labelledby="ar-t">
+  <div class="wrap">
+    <p class="lbl" data-reveal>Where Gary works</p>
+    <h2 id="ar-t" data-split style="margin-top:20px">Havant, and<br><em>round about.</em></h2>
+    <ul class="arealist">
+      <li data-reveal><span class="a">Havant</span><span class="p">Home base, Bedhampton</span></li>
+      <li data-reveal><span class="a">Hayling Island</span><span class="p">PO11</span></li>
+      <li data-reveal><span class="a">Emsworth</span><span class="p">PO10</span></li>
+      <li data-reveal><span class="a">Chichester</span><span class="p">PO19, PO20</span></li>
+      <li data-reveal><span class="a">Petersfield</span><span class="p">GU31, GU32</span></li>
+      <li data-reveal><span class="a">Portsmouth</span><span class="p">PO1 to PO6</span></li>
+      <li data-reveal><span class="a">Waterlooville</span><span class="p">PO7, PO8</span></li>
+      <li data-reveal><span class="a">Fareham and Locks Heath</span><span class="p">PO14 to PO17, SO31</span></li>
+    </ul>
+    <p class="note" data-reveal>Somewhere else nearby? Ring Gary and ask.</p>
+  </div>
+</section>
+</main>
+
+<footer class="foot">
+  <div class="wrap">
+    <div class="row">
+      <div><a class="logo" href="#top" aria-label="HB Cleaning Ltd, back to top"><svg viewBox="0 0 48 48" aria-hidden="true"><circle cx="24" cy="24" r="23" fill="#cfe95a"/><text x="24" y="31" text-anchor="middle" font-family="Fraunces,Georgia,serif" font-size="21" font-weight="500" font-style="italic" fill="#10241f">HB</text></svg><span><b>HB Cleaning</b><small>Bedhampton, Havant</small></span></a><p style="margin-top:20px;max-width:24em">Carpet and upholstery cleaning, run by Gary Hounsome.</p></div>
+      <div><h4>Get in touch</h4><a class="tel" href="tel:02392470542">023 9247 0542</a><p><a href="tel:07836712732">07836 712732</a></p><p><a href="mailto:hbcleaninglimited@btinternet.com">hbcleaninglimited@btinternet.com</a></p></div>
+      <div><h4>Covering</h4><ul><li>Havant and Hayling Island</li><li>Emsworth and Chichester</li><li>Petersfield, Portsmouth, Waterlooville</li><li>Fareham and Locks Heath</li></ul></div>
+    </div>
+    <div class="fine"><span>© 2026 HB Cleaning Ltd</span><span>Concept by <a href="https://itchenstudio.co.uk">Itchen Studio</a></span></div>
+  </div>
+</footer>
+<div class="callbar"><a class="btn" href="tel:02392470542">Call Gary</a><a class="btn ghost" href="#quote">Get a quote</a></div>
+
+<script src="assets/js/gsap.min.js" defer></script>
+<script src="assets/js/ScrollTrigger.min.js" defer></script>
+<script src="assets/js/lenis.min.js" defer></script>
+<script src="assets/js/concept.js" defer></script>
+<script>
+document.addEventListener('DOMContentLoaded', function () {
+  var api = window.ConceptSite.init();
+
+  /* ---------- before / after wipe ---------- */
+  var aft = document.getElementById('aft'), edge = document.getElementById('edge'), cmp = document.getElementById('cmp');
+  var legend = document.querySelectorAll('.legend span'), lastK = -1;
+  function setWipe(p) { /* p: share of the frame already cleaned, sweeping in from the left */
+    var pct = Math.round(p * 1000) / 10;
+    aft.style.clipPath = 'inset(0 ' + (100 - pct) + '% 0 0)';
+    edge.style.left = pct + '%';
+    cmp.value = Math.round(pct);
+    var k = p > .5 ? 1 : 0;
+    if (k !== lastK) { lastK = k; legend.forEach(function (l) { l.classList.toggle('on', +l.dataset.k === k); }); }
+  }
+  /* slider value = how much of the frame is cleaned, from the left */
+  cmp.addEventListener('input', function () { setWipe(cmp.value / 100); });
+  setWipe(.5);
+
+  /* ---------- quote wizard ---------- */
+  var JOBS = [['Carpets', 'Lounge, hallway, stairs or bedrooms'], ['Upholstery', 'Sofas, armchairs, dining chairs'], ['Emergency clean', 'A spill that cannot wait. Ring if you can'], ['Not sure yet', 'Describe it and Gary will say what he would do']];
+  var W = { step: 0, job: null, pc: '', files: [], name: '', phone: '', note: '' };
+  var wbody = document.getElementById('wiz-body'), nextB = document.getElementById('w-next'), backB = document.getElementById('w-back'), prog = document.querySelectorAll('.wiz-prog i');
+  function esc(s) { return String(s).replace(/[&<>"]/g, function (c) { return { '&': '&amp;', '<': '&lt;', '>': '&gt;', '"': '&quot;' }[c]; }); }
+  function covered(pc) {
+    var m = String(pc).toUpperCase().replace(/\s+/g, '').match(/^(PO|GU|SO)(\d{1,2})/); if (!m) return false;
+    var n = +m[2];
+    if (m[1] === 'PO') return n >= 1 && n <= 20;
+    if (m[1] === 'GU') return n === 31 || n === 32;
+    return n === 31;
+  }
+  function covHtml() {
+    if (!W.pc.trim()) return '';
+    return covered(W.pc) ? '<div class="cov yes" role="status"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M4 12l5 5L20 6"/></svg><span>Yes, Gary covers that area.</span></div>'
+      : '<div class="cov no" role="status"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" aria-hidden="true"><circle cx="12" cy="12" r="9"/><path d="M12 7v6M12 16.5v.5"/></svg><span>That one is outside the usual patch. Give Gary a call on 023 9247 0542 and ask.</span></div>';
+  }
+  function thumbsHtml() { return W.files.length ? '<div class="thumbs">' + W.files.map(function (f) { return '<img src="' + f.url + '" alt="Photo you picked: ' + esc(f.name) + '">'; }).join('') + '</div>' : ''; }
+  function stepRender() {
+    prog.forEach(function (p, i) { p.classList.toggle('on', i <= Math.min(W.step, 3)); });
+    var h = '';
+    if (W.step === 0) {
+      h = '<span class="step-n">Step 1 of 4</span><h3 id="wiz-h" tabindex="-1">What needs cleaning?</h3><div class="opts">' + JOBS.map(function (j, i) { return '<button type="button" class="opt" data-job="' + i + '" aria-pressed="' + (W.job === i) + '"><b>' + j[0] + '</b><span>' + j[1] + '</span><i></i></button>'; }).join('') + '</div>';
+    } else if (W.step === 1) {
+      h = '<span class="step-n">Step 2 of 4</span><h3 id="wiz-h" tabindex="-1">Where is the job?</h3><label class="fld">Postcode<input id="w-pc" autocomplete="postal-code" value="' + esc(W.pc) + '" placeholder="e.g. PO9" inputmode="text"><small>We check it against the areas Gary covers.</small></label><div id="cov">' + covHtml() + '</div>';
+    } else if (W.step === 2) {
+      h = '<span class="step-n">Step 3 of 4</span><h3 id="wiz-h" tabindex="-1">Add a photo or two</h3><label class="drop"><input id="w-f" type="file" accept="image/*" multiple><span>Choose photos</span><small>Optional. In this preview they stay on your device.</small></label><div id="thumbs">' + thumbsHtml() + '</div>';
+    } else if (W.step === 3) {
+      h = '<span class="step-n">Step 4 of 4</span><h3 id="wiz-h" tabindex="-1">Who should Gary ring?</h3><label class="fld">Your name<input id="w-n" autocomplete="name" value="' + esc(W.name) + '" required></label><label class="fld">Phone number<input id="w-p" type="tel" autocomplete="tel" value="' + esc(W.phone) + '" required></label><label class="fld">Anything else? <textarea id="w-x" rows="3" placeholder="Rooms, stairs, stains, pets">' + esc(W.note) + '</textarea></label>';
+    } else {
+      var ref = 'Q-' + (4000 + Math.floor(Math.random() * 5000));
+      h = '<div class="done" role="status"><span class="step-n">Request received</span><h3 id="wiz-h" tabindex="-1">Thanks, ' + esc(W.name.split(' ')[0] || 'there') + '.</h3><span class="ref">' + ref + '</span><dl><dt>Job</dt><dd>' + esc(JOBS[W.job][0]) + '</dd><dt>Postcode</dt><dd>' + esc(W.pc.toUpperCase()) + '</dd><dt>Photos</dt><dd>' + W.files.length + '</dd><dt>Call on</dt><dd>' + esc(W.phone) + '</dd></dl><p class="note">This is a preview — the form will go live with your new site. Nothing has been sent.</p></div>';
+    }
+    wbody.innerHTML = h;
+    backB.hidden = W.step === 0 || W.step === 4; nextB.textContent = W.step === 3 ? 'Send request' : (W.step === 4 ? 'Start again' : (W.step === 2 && !W.files.length ? 'Skip' : 'Next'));
+    nextB.disabled = (W.step === 0 && W.job === null) || (W.step === 1 && !W.pc.trim());
+    if (api.motion) gsap.from(wbody.children, { autoAlpha: 0, y: 14, duration: .45, stagger: .05, ease: 'power3.out' });
+  }
+  wbody.addEventListener('click', function (e) {
+    var b = e.target.closest('button'); if (!b) return;
+    if (b.dataset.job !== undefined) { W.job = +b.dataset.job; stepRender(); var t = wbody.querySelector('[aria-pressed="true"]'); if (t) t.focus(); }
+  });
+  wbody.addEventListener('input', function (e) {
+    if (e.target.id === 'w-pc') { W.pc = e.target.value; document.getElementById('cov').innerHTML = covHtml(); nextB.disabled = !W.pc.trim(); }
+  });
+  wbody.addEventListener('change', function (e) {
+    if (e.target.id === 'w-f') {
+      W.files.forEach(function (f) { URL.revokeObjectURL(f.url); });
+      W.files = Array.prototype.slice.call(e.target.files, 0, 6).map(function (f) { return { name: f.name, url: URL.createObjectURL(f) }; });
+      document.getElementById('thumbs').innerHTML = thumbsHtml(); nextB.textContent = W.files.length ? 'Next' : 'Skip';
+    }
+  });
+  nextB.addEventListener('click', function () {
+    if (W.step === 3) {
+      var n = document.getElementById('w-n'), p = document.getElementById('w-p'), bad = null;
+      [n, p].forEach(function (x) { var ok = x.value.trim() !== ''; x.style.borderColor = ok ? '' : '#b3261e'; x.setAttribute('aria-invalid', String(!ok)); if (!ok && !bad) bad = x; });
+      if (bad) { bad.focus(); return; }
+      W.name = n.value; W.phone = p.value; W.note = document.getElementById('w-x').value;
+    }
+    if (W.step === 4) { W = { step: 0, job: null, pc: '', files: [], name: '', phone: '', note: '' }; stepRender(); return; }
+    W.step++; stepRender(); var h = document.getElementById('wiz-h'); if (h) h.focus({ preventScroll: true });
+  });
+  backB.addEventListener('click', function () { if (W.step > 0) { W.step--; stepRender(); } });
+  stepRender();
+
+  if (!api.motion) return;
+
+  /* ---------- signature scene: pinned on desktop, self-playing on phones ---------- */
+  var mm = gsap.matchMedia();
+  mm.add('(min-width: 901px)', function () {
+    var o = { p: 0 }; setWipe(0);
+    gsap.to(o, { p: 1, ease: 'none', onUpdate: function () { setWipe(o.p); }, scrollTrigger: { trigger: '.scene', start: 'top top', end: '+=1600', pin: '.scene-pin', scrub: .6, anticipatePin: 1 } });
+  });
+  mm.add('(max-width: 900px)', function () {
+    var o = { p: 0 }; setWipe(0);
+    ScrollTrigger.create({ trigger: '#fr', start: 'top 80%', once: true, onEnter: function () { gsap.to(o, { p: 1, duration: 3.6, ease: 'power1.inOut', delay: .4, onUpdate: function () { setWipe(o.p); } }); } });
+  });
+});
+</script>
+</body>
+</html>
