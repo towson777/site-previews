@@ -125,4 +125,5 @@ Self-host. Get the font from npm, for example `npm pack @fontsource-variable/fra
 - [ ] With reduced motion, everything is visible and usable
 - [ ] Every fact can be traced to the lead document
 - [ ] Preview banner and `noindex` present; forms send nothing
+- [ ] Sam's Umami visitor-stats tag is in the `<head>` exactly as given in the builder instructions, and the link to itchenstudio.co.uk has `data-umami-event="Itchen Studio link"`. It's the only third-party script allowed
 - [ ] Images WebP and under 300 KB each; whole page under about 3 MB
