@@ -1,11 +1,11 @@
 <!DOCTYPE html>
 <!--
 ART DIRECTION BRIEF - Ta-Dah Beauty Room (Totton)
-Idea: "Hair by hair." A solo therapist whose clients praise her for being meticulous. The whole site is a close-up: a lens motif (ring with fine tick marks) runs through the logo, the hero and the one pinned scene, which zooms into the treatment room until you are looking at the work itself.
+Idea: Close attention. A solo therapist whose clients praise her for being meticulous. The whole site is a close-up: a lens motif (ring with fine tick marks) runs through the logo, the hero and the one pinned scene, which zooms into the treatment room until you are looking at the work itself.
 Palette: deep teal #0f3a3a (dark), cream #f6f0e6 / paper #fbf7f0 (light), mist teal #d7e8e3 (soft block), rose gold #a45d4f (text accent, AA on cream) and #d9a595 (accent on dark). Drawn from the teal apron in the photos and the soft palette in the brief.
 Type: Instrument Serif (display, roman + italic, used huge) with Hanken Grotesk (text). Self-hosted woff2.
-Logo: custom SVG monogram (T and D ligature inside a thin lens ring) plus a serif wordmark. Ring and letters draw on when the page loads, then a small rose-gold glint travels round the ring now and then. Static with reduced motion. No tagline.
-Hero: no two-column template. Giant two-line headline across the full width, a circular "lens" photo overlapping the second line, a rotating tick ring and the animated monogram as a badge.
+Logo: custom SVG monogram (T and D ligature inside a thin lens ring) plus a serif wordmark (no logo file supplied, so this is built from the mark already on the page). Ring and letters draw on when the page loads, then a small rose-gold glint travels round the ring now and then. Static with reduced motion. No tagline.
+Hero: the headline is replaced by the logo, at the owner's request (Sam: "remove slogan and replace with logo"). No text headline and no slogan anywhere. A large stacked logo lockup (TD monogram in a ticked lens ring over the serif wordmark, drawn on at load, inside the h1 with an accessible name) is the centrepiece, with the circular "lens" photo with its rotating tick ring beside it. The same lockup, set horizontally, is used in the header and footer.
 Signature scroll moment: "Close up" - a pinned, scrubbed scene. A lens ring opens on the treatment-room photo, the picture zooms toward the treatment and the lens widens until the whole frame is sharp. Three captions step through. Phones get a static version with the same ring.
 Interactive feature: booking drawer. Treatment, then day and time (next 14 days, labelled Example availability), then details, then a confirmation with a reference such as B-4821. Sends nothing.
 Headline options (ten):
@@ -19,7 +19,7 @@ Headline options (ten):
  8. Precise work in a quiet room          (generic)
  9. Hair by hair.                         (specific to electrolysis, IPL, brows and waxing; shortest)
 10. Brows, skin and a steady hand         (generic)
-PICK: "Hair by hair."
+PICK: none. The hero headline was removed at the owner's request and replaced by the logo ("Hair by hair." was the earlier pick). The h1 is the logo, named "Ta-Dah Beauty Room".
 -->
 <html lang="en-GB">
 <head>
@@ -83,11 +83,11 @@ h2 i,h1 i{font-style:italic;color:var(--rose)}
 .dark .logo{color:var(--cream)}
 .logo .lt{display:grid;line-height:1}
 .logo .lt b{font:400 31px/1 var(--display);letter-spacing:.005em}
-.logo .lt small{font:600 9.5px/1 var(--body);letter-spacing:.34em;text-transform:uppercase;margin-top:5px;color:var(--rose)}
+.logo .lt small{font:italic 400 19px/1 var(--display);letter-spacing:.02em;margin-top:3px;color:var(--rose)}
 .dark .logo .lt small{color:var(--rose-lt)}
-.logo.big svg{width:clamp(84px,12vw,150px);height:auto}
-.logo.big .lt b{font-size:clamp(60px,10vw,150px)}
-.logo.big .lt small{font-size:clamp(11px,1.2vw,15px);margin-top:10px}
+.logo.big svg{width:clamp(84px,9vw,130px);height:auto}
+.logo.big .lt b{font-size:clamp(60px,8vw,120px)}
+.logo.big .lt small{font-size:clamp(24px,3.6vw,52px);margin-top:6px}
 .logo.big{gap:clamp(16px,2.4vw,34px)}
 html.motion .logo .ring,html.motion .logo .t,html.motion .logo .d{stroke-dasharray:1;stroke-dashoffset:1}
 html.motion .logo.in .ring{animation:draw 1.7s var(--ease) .1s forwards}
@@ -102,21 +102,26 @@ html.motion .logo.in .glint{animation:glint 9s linear 3s infinite}
 @keyframes glint{0%{stroke-dashoffset:0;opacity:0}4%{opacity:1}34%{opacity:1}40%{stroke-dashoffset:-1;opacity:0}100%{stroke-dashoffset:-1;opacity:0}}
 
 /* hero */
-.hero{position:relative;padding-block:clamp(28px,5vw,64px) clamp(40px,6vw,88px);overflow:hidden}
-.hero .eyebrow{display:flex;gap:14px;align-items:center;margin-bottom:clamp(18px,3vw,36px)}
+.hero{position:relative;padding-block:clamp(20px,2.4vw,32px) clamp(40px,6vw,88px);overflow:hidden}
+.hero .eyebrow{display:flex;gap:14px;align-items:center;margin-bottom:clamp(10px,1.4vw,18px)}
 .hero .eyebrow::before{content:"";width:44px;height:1px;background:var(--rose)}
-.hero h1{font-size:clamp(104px,21vw,330px);line-height:.82;letter-spacing:-.035em;position:relative;z-index:2;pointer-events:none}
-.hero h1 .ln{display:block;overflow:hidden;padding:.06em .1em .1em 0;margin:-.06em 0 -.1em}
-.hero h1 .ln:nth-child(2){padding-left:clamp(0px,5vw,90px)}
-.hero h1 .ln:nth-child(2) span{font-style:italic;color:var(--rose)}
-.lens{position:absolute;z-index:1;right:calc(var(--pad) - 3vw);top:clamp(40px,5vw,90px);width:clamp(260px,37vw,600px);aspect-ratio:1}
+.hero h1.hero-logo{display:block;width:clamp(260px,44vw,620px);position:relative;z-index:2;color:var(--ink);line-height:0}
+.hero-logo svg{width:100%;height:auto;display:block;overflow:visible}
+.hero-logo .wm{font-family:var(--display);text-anchor:middle}
+.hero-logo .wm.a{font-size:180px;fill:var(--ink);letter-spacing:-.01em}
+.hero-logo .wm.b{font-size:68px;font-style:italic;fill:var(--rose);letter-spacing:.02em}
+.hero-logo .tk{fill:none;stroke:var(--rose);stroke-width:.5;stroke-dasharray:.1 .9}
+.logo .wm{opacity:1}
+html.motion .logo .wm{opacity:0}
+html.motion .logo.in .wm.a{animation:fadeup .9s var(--ease) 1.5s forwards}
+html.motion .logo.in .wm.b{animation:fadeup .9s var(--ease) 1.8s forwards}
+html.motion .logo .tk{opacity:0}
+html.motion .logo.in .tk{animation:fadeup .8s ease 1.2s forwards}
+.lens{position:absolute;z-index:1;right:calc(var(--pad) - 3vw);top:clamp(30px,3vw,60px);width:clamp(260px,37vw,600px);aspect-ratio:1}
 .lens .pic{position:absolute;inset:7%;border-radius:50%;overflow:hidden;background:var(--mist)}
 .lens .pic img{width:100%;height:116%;object-fit:cover;object-position:50% 22%}
 .lens .ticks{position:absolute;inset:0;width:100%;height:100%;overflow:visible;animation:spin 90s linear infinite}
 .lens .ticks circle{fill:none}
-.badge{position:absolute;right:-1%;bottom:4%;width:clamp(82px,10vw,140px);aspect-ratio:1;border-radius:50%;background:var(--ink);color:var(--cream);display:grid;place-items:center;box-shadow:0 18px 40px -16px #0f3a3a88}
-.badge .logo svg{width:56%;height:auto;margin:0}.badge .logo{justify-content:center;color:var(--cream)}
-.badge .logo .dot{fill:var(--rose-lt)}
 @media (prefers-reduced-motion:reduce){.lens .ticks{animation:none}}
 @keyframes spin{to{transform:rotate(360deg)}}
 .hero-bottom{display:grid;grid-template-columns:minmax(0,34em) auto;gap:32px;align-items:end;margin-top:clamp(28px,4vw,56px);position:relative;z-index:3}
@@ -125,14 +130,12 @@ html.motion .logo.in .glint{animation:glint 9s linear 3s infinite}
 .ctas{display:flex;gap:12px;flex-wrap:wrap;margin-top:26px}
 .hero-small{width:clamp(150px,17vw,250px);aspect-ratio:4/5;border-radius:999px 999px 0 0;overflow:hidden;justify-self:end;margin-right:clamp(0px,8vw,130px)}
 .hero-small img{width:100%;height:100%;object-fit:cover;object-position:50% 40%}
-@media (min-width:1000px){.hero .wrap{position:relative}.hero-bottom{position:absolute;left:calc(var(--pad) + 31vw);top:clamp(70px,6vw,100px);width:clamp(300px,26vw,380px);display:block;margin:0}.hero-bottom .ctas{flex-wrap:nowrap}.hero-bottom .btn{padding:0 20px;font-size:12px;letter-spacing:.12em;white-space:nowrap}.hero-bottom p{font-size:17px}.hero-small{display:none}}
+@media (min-width:1000px){.hero .wrap{position:relative}.hero-bottom{display:block;margin:clamp(24px,3vw,44px) 0 0;max-width:clamp(300px,44vw,620px)}.hero-bottom .ctas{flex-wrap:nowrap}.hero-bottom .btn{padding:0 20px;font-size:12px;letter-spacing:.12em;white-space:nowrap}.hero-bottom p{font-size:17px}.hero-small{display:none}}
 @media (min-width:1000px) and (max-width:1320px){.hero-bottom .btn.ghost{display:none}}
 @media (max-width:860px){
- .hero h1{font-size:clamp(92px,31vw,180px)}
- .hero h1 .ln:nth-child(2){padding-left:12vw}
- .lens{position:relative;right:auto;top:auto;width:min(88vw,420px);margin:-8vw 0 0 auto}
+ .hero h1.hero-logo{width:min(80vw,380px);margin-inline:auto}
+ .lens{position:relative;right:auto;top:auto;width:min(80vw,380px);margin:28px auto 0}
  .hero-bottom{grid-template-columns:1fr;margin-top:28px}.hero-small{display:none}
- .badge{left:-4%}
 }
 
 /* proof */
@@ -289,9 +292,7 @@ textarea{min-height:130px;resize:vertical}
 .drawer form label{color:var(--ink)}.drawer input,.drawer textarea{background:#fff;border-color:#9fb5af}
 @media (max-width:480px){.cal button b{font-size:20px}.slots{grid-template-columns:repeat(3,1fr)}}
 
-html.motion:not(.ready) .hero h1 .ln>span{transform:translateY(105%)}
 html.motion:not(.ready) [data-intro]{opacity:0}
-.hero h1 .ln{display:block;overflow:hidden;padding:.04em .08em .26em 0;margin-bottom:-.26em}
 @media (prefers-reduced-motion:reduce){*{scroll-behavior:auto!important;transition-duration:.01ms!important}}
 </style>
 </head>
@@ -316,11 +317,10 @@ html.motion:not(.ready) [data-intro]{opacity:0}
 <section class="hero" id="top" aria-labelledby="h1">
   <div class="wrap">
     <p class="lbl eyebrow" data-intro>Beauty therapist · Totton</p>
-    <h1 id="h1"><span class="ln"><span>Hair</span></span><span class="ln"><span>by hair.</span></span></h1>
+    <h1 id="h1" class="logo hero-logo"><svg viewBox="0 0 600 610" role="img" aria-label="Ta-Dah Beauty Room" focusable="false"><g transform="translate(143.2 28.2) scale(4.9)"><circle class="tk" cx="32" cy="32" r="31.4" pathLength="72"/><circle class="ring" cx="32" cy="32" r="29" pathLength="1"/><path class="t" pathLength="1" d="M15 22H33M24 22V46"/><path class="d" pathLength="1" d="M33 22V46M33 22H36.5C48.5 22 48.5 46 36.5 46H33"/><circle class="glint" cx="32" cy="32" r="29" pathLength="1" transform="rotate(-90 32 32)"/></g><text class="wm a" x="300" y="515">Ta-Dah</text><text class="wm b" x="300" y="590">Beauty Room</text></svg><span class="sr">Beauty therapist in Totton</span></h1>
     <div class="lens" data-intro>
       <div class="pic"><img data-parallax src="assets/img/portrait-800.webp" srcset="assets/img/portrait-800.webp 800w, assets/img/portrait-1300.webp 1300w" sizes="(max-width:860px) 88vw, 38vw" width="1300" height="1950" alt="The therapist smiling in the treatment room holding two skincare bottles" fetchpriority="high"></div>
       <svg class="ticks" viewBox="0 0 100 100" aria-hidden="true"><circle cx="50" cy="50" r="49" stroke="#a45d4f" stroke-width=".18" /><circle cx="50" cy="50" r="48.4" pathLength="120" stroke="#a45d4f" stroke-width="1.6" stroke-dasharray=".14 .86" transform="rotate(-90 50 50)"/><circle cx="50" cy="50" r="46.6" pathLength="24" stroke="#a45d4f" stroke-width="2.6" stroke-dasharray=".07 .93"/></svg>
-      <div class="badge" aria-hidden="true"><span class="logo" data-logo><svg viewBox="0 0 64 64" aria-hidden="true" focusable="false"><circle class="ring" cx="32" cy="32" r="29" pathLength="1"/><path class="t" pathLength="1" d="M15 22H33M24 22V46"/><path class="d" pathLength="1" d="M33 22V46M33 22H36.5C48.5 22 48.5 46 36.5 46H33"/><circle class="dot" cx="50.5" cy="32" r="0"/><circle class="glint" cx="32" cy="32" r="29" pathLength="1" transform="rotate(-90 32 32)"/></svg></span></div>
     </div>
     <div class="hero-bottom">
       <div data-intro>

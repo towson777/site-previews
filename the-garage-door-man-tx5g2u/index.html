@@ -1,0 +1,558 @@
+<!doctype html>
+<html lang="en-GB">
+<head>
+<!--
+ART DIRECTION BRIEF - The Garage Door Man (Portsmouth, working across Hampshire) - concept by Itchen Studio
+
+IDEA: A garage door is a wall that moves. The whole page behaves like a roller door: it rolls up to open the site, and one scroll scene lowers a new door over a tired pair. Black, white and the butter yellow of the owner's own wordmark, with fine slat lines as the only decoration.
+PALETTE: ink #111111 (dark), coal #1b1b1b, butter #f6ee9b (the yellow in the logo, used in big blocks and on dark), paper #f4f1ea (light), line #d9d4c8, muted #5c5a54 (AA on paper).
+TYPE: Big Shoulders Display (variable, upper case, used huge) for display, Schibsted Grotesk for text. Both self-hosted woff2.
+LOGO: the uploaded logo is not used (Sam's note). Recreated as SVG: "The Garage Door Man" with the G and D in butter, and three slat lines.
+HERO: full-bleed photo of the oak-framed garage with two timber-effect roller doors, dark gradient from the left, giant three-line headline bottom left. On load a curtain of slats rolls up like a shutter to reveal it (motion only).
+SIGNATURE SCROLL MOMENT: "The swap". Pinned scene: the photo of a pair of tired purple and maroon doors; as you scroll, a new white door pair rolls down over them from the top with a slat edge, using two genuine photos of the same building. Phones: same wipe, not pinned. No motion: the two photos sit side by side.
+FEATURE: quote wizard: what's the job, which door, postcode check against "Hampshire", contact details and optional photos, then a Q-xxxx confirmation. Sends nothing.
+NO REVIEW QUOTES in the lead, so no quote ribbon: the reviews section is the Checkatrade score and count as big numbers, nothing invented.
+HEADLINE OPTIONS (ten):
+ 1. Garage doors, start to finish   (any firm could say it)
+ 2. Fixed, fitted or replaced   (generic)
+ 3. Repair it, or replace it   (generic, any door firm)
+ 4. Up, down and working   (generic)
+ 5. Doors that open first time   (a claim we can't support)
+ 6. One man, one door at a time   (team size unknown)
+ 7. Portsmouth garage doors   (any local firm)
+ 8. The Garage Door Man   (just the name)
+ 9. Your garage door, sorted   (generic, tone)
+ 10. Twenty years of garage doors   (20+ years is in the lead; a newer firm couldn't say it)
+PICK: "Twenty years of garage doors." (5 words).
+-->
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<meta name="robots" content="noindex,nofollow">
+<title>The Garage Door Man · Concept site by Itchen Studio</title>
+<meta name="description" content="A website concept for The Garage Door Man, garage door supply, installation and repair from Portsmouth across Hampshire. Preview only.">
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Crect width='32' height='32' rx='5' fill='%23111'/%3E%3Cpath d='M6 10h20M6 15h20M6 20h20M6 25h20' stroke='%23f6ee9b' stroke-width='2'/%3E%3C/svg%3E">
+<script defer src="https://cloud.umami.is/script.js" data-website-id="8df92b2d-e60b-4f9e-afc7-61b78ad1a912"></script>
+<link rel="preload" href="assets/fonts/big-shoulders.woff2" as="font" type="font/woff2" crossorigin>
+<link rel="preload" href="assets/img/oak-1920.webp" as="image" imagesrcset="assets/img/oak-1100.webp 1100w, assets/img/oak-1920.webp 1920w" imagesizes="100vw">
+<script>(function(d){if(!matchMedia('(prefers-reduced-motion: reduce)').matches){d.documentElement.classList.add('motion');setTimeout(function(){if(!d.documentElement.classList.contains('ready'))d.documentElement.classList.remove('motion')},3000)}})(document)</script>
+<style>
+@font-face{font-family:"Big Shoulders Display";src:url("assets/fonts/big-shoulders.woff2") format("woff2");font-weight:100 900;font-display:swap}
+@font-face{font-family:"Schibsted Grotesk";src:url("assets/fonts/schibsted.woff2") format("woff2");font-weight:400 900;font-display:swap}
+:root{
+  --ink:#111; --coal:#1b1b1b; --coal-2:#262626; --butter:#f6ee9b; --butter-deep:#e6db63; --paper:#f4f1ea; --white:#fffefb; --line:#d9d4c8; --muted:#5c5a54;
+  --display:"Big Shoulders Display","Arial Narrow",Arial,sans-serif; --body:"Schibsted Grotesk",Arial,sans-serif;
+  --ease:cubic-bezier(.2,.7,.1,1);
+}
+*{box-sizing:border-box}
+html.lenis,html.lenis body{height:auto}
+body{margin:0;background:var(--paper);color:var(--ink);font:400 17px/1.6 var(--body);-webkit-font-smoothing:antialiased;overflow-x:clip}
+img{max-width:100%;display:block}
+a{color:inherit}
+p{margin:0}
+.wrap{max-width:1240px;margin:0 auto;padding-inline:32px}
+@media (max-width:640px){.wrap{padding-inline:16px}}
+:focus-visible{outline:3px solid var(--ink);outline-offset:3px;border-radius:3px}
+.dark :focus-visible,.top :focus-visible,.hero :focus-visible,.concept :focus-visible,footer :focus-visible,.nums :focus-visible{outline-color:var(--butter)}
+.nums :focus-visible{outline-color:var(--ink)}
+[hidden]{display:none!important}
+.vh{position:absolute;width:1px;height:1px;overflow:hidden;clip:rect(0 0 0 0);white-space:nowrap}
+.d{font-family:var(--display);font-weight:800;text-transform:uppercase;line-height:.88;letter-spacing:-.005em}
+h2.d{font-size:clamp(46px,7vw,104px);margin:0}
+.eyebrow{display:inline-flex;align-items:center;gap:12px;font:700 13px/1 var(--body);letter-spacing:.16em;text-transform:uppercase}
+.eyebrow::before{content:"";width:26px;height:10px;background:repeating-linear-gradient(180deg,currentColor 0 2px,transparent 2px 5px)}
+.btn{display:inline-flex;align-items:center;justify-content:center;gap:10px;min-height:52px;font:700 16px/1 var(--body);text-decoration:none;padding:16px 26px;border-radius:4px;border:2px solid transparent;cursor:pointer;transition:background-color .25s,color .25s,border-color .25s,transform .25s var(--ease)}
+.btn-y{background:var(--butter);color:var(--ink)}
+.btn-y:hover{background:#fff}
+.btn-line{border-color:#ffffff88;color:#fff;background:transparent}
+.btn-line:hover{border-color:#fff;background:#ffffff1c}
+.btn-k{background:var(--ink);color:#fff}
+.btn-k:hover{background:#333}
+.btn svg{width:18px;height:18px;flex:none}.btn span{line-height:1}
+
+/* concept banner */
+.concept{background:#000;color:#d8d6cf;font-size:13px;line-height:18px;text-align:center;padding:8px 16px;position:relative;z-index:60}
+.concept a{color:var(--butter);font-weight:700}
+
+/* header */
+.top{position:sticky;top:0;z-index:50;background:#111111f2;backdrop-filter:blur(10px);-webkit-backdrop-filter:blur(10px);color:#fff;border-bottom:1px solid #ffffff1f;transition:transform .5s cubic-bezier(.2,.8,.2,1)}
+.top.away{transform:translateY(-100%)}
+.top .wrap{display:flex;align-items:center;justify-content:space-between;gap:20px;height:72px}
+.logo{display:block;text-decoration:none;line-height:0}
+.logo svg{height:50px;width:auto;overflow:visible}
+nav.main{display:flex;align-items:center;gap:26px}
+nav.main a{text-decoration:none;font-weight:600;font-size:15px}
+nav.main a:not(.btn):hover{color:var(--butter)}
+nav.main .btn{padding:12px 18px;min-height:46px;font-size:15px}
+nav.main .short{display:none}
+@media (max-width:900px){nav.main a:not(.btn){display:none}}
+@media (max-width:560px){nav.main .num{display:none}nav.main .short{display:inline}.logo svg{height:34px}}
+
+/* hero */
+.hero{position:relative;min-height:min(90vh,900px);display:flex;align-items:flex-end;color:#fff;background:var(--ink);overflow:hidden;isolation:isolate}
+.hero .bg{position:absolute;inset:0;z-index:-2}
+.hero .bg img{width:100%;height:100%;object-fit:cover;object-position:60% 68%}
+.hero::before{content:"";position:absolute;inset:0;z-index:-1;background:linear-gradient(90deg,#111 4%,#111c 36%,#1112 74%,#1110),linear-gradient(0deg,#111e,#1110 46%)}
+.hero .wrap{width:100%;padding-block:110px 48px}
+.hero h1{font-size:clamp(56px,11.6vw,184px);margin:22px 0 0}
+.hero h1 .ln{display:block;overflow:hidden;padding-bottom:.03em}
+.hero h1 .ln>span{display:inline-block}
+.hero h1 .y{color:var(--butter)}
+.hero .lead{font-size:clamp(17px,1.5vw,20px);line-height:1.55;max-width:31em;margin-top:24px;color:#e8e6df}
+.hero .ctas{display:flex;flex-wrap:wrap;gap:12px;margin-top:30px}
+.proof{display:flex;flex-wrap:wrap;gap:8px 26px;margin-top:38px;padding-top:20px;border-top:1px solid #ffffff30;font-size:15px;color:#e8e6df}
+.proof b{color:var(--butter);font-weight:700}
+.shutter{position:absolute;inset:0;z-index:5;pointer-events:none;overflow:hidden}
+.shutter i{position:absolute;left:0;right:0;background:linear-gradient(180deg,#3a3a3a,#1c1c1c 70%,#0c0c0c);border-bottom:2px solid #000}
+html.motion:not(.ready) .hero h1 .ln>span{transform:translateY(105%)}
+html.motion:not(.ready) [data-intro]{opacity:0}
+
+/* ribbon */
+.strip{background:var(--butter);color:var(--ink);overflow:hidden;white-space:nowrap;padding:15px 0;font:800 24px/1 var(--display);text-transform:uppercase;letter-spacing:.03em}
+.strip .track{display:inline-flex;will-change:transform}
+.strip .track span{padding:0 26px;display:inline-flex;align-items:center;gap:26px}
+.strip .track span::after{content:"";width:22px;height:11px;background:repeating-linear-gradient(180deg,var(--ink) 0 2px,transparent 2px 4px)}
+
+/* services */
+.services{padding-block:120px}
+.sec-head{display:flex;justify-content:space-between;align-items:end;gap:32px;flex-wrap:wrap;margin-bottom:54px}
+.sec-head p{max-width:29em;color:var(--muted);font-size:18px}
+.grid4{display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:16px}
+.svc{position:relative;background:var(--white);border:1px solid var(--line);border-radius:6px;padding:26px 24px 28px;display:grid;gap:14px;align-content:start;overflow:hidden;transition:transform .45s var(--ease),box-shadow .45s var(--ease),background-color .3s}
+.svc:hover{transform:translateY(-6px);box-shadow:0 26px 40px -26px #1118;background:var(--butter)}
+.svc svg{width:100%;height:auto;max-height:120px;color:var(--ink)}
+.svc h3{font:800 34px/.95 var(--display);text-transform:uppercase;margin:6px 0 0}
+.svc p{font-size:16px;line-height:1.55;color:#3d3b36}
+.also{margin-top:22px;display:flex;flex-wrap:wrap;gap:6px 18px;align-items:baseline;border-top:2px solid var(--ink);padding-top:16px;font-size:17px}
+.also b{font:800 22px/1 var(--display);text-transform:uppercase;letter-spacing:.02em}
+@media (max-width:1040px){.grid4{grid-template-columns:repeat(2,minmax(0,1fr))}}
+@media (max-width:620px){.grid4{grid-template-columns:1fr}.services{padding-block:80px}}
+
+/* the swap */
+.swap{background:var(--coal);color:#fff}
+.swap-pin{min-height:100vh;display:grid;align-content:center;gap:26px;padding-block:96px 44px}
+.swap-head{display:grid;grid-template-columns:minmax(0,1.2fr) minmax(0,.8fr);gap:40px;align-items:end}
+.swap h2.d{font-size:clamp(48px,7.4vw,112px)}
+.swap h2 .t2{display:block;color:var(--butter)}
+html.motion .swap h2{display:grid}
+html.motion .swap h2 span{grid-area:1/1}
+html.motion .swap h2 .t2{display:block;opacity:0}
+.swap-head p{color:#cfcdc6;font-size:18px;max-width:26em}
+.frame{display:grid;grid-template-columns:1fr 1fr;gap:12px;width:100%}
+.frame figure{margin:0;border-radius:6px;overflow:hidden;aspect-ratio:16/10}
+.frame img{width:100%;height:100%;object-fit:cover}
+html.motion .frame{display:block;position:relative;aspect-ratio:16/9;width:min(100%,calc(58vh*1.7778));margin-inline:auto;border-radius:6px;overflow:hidden}
+html.motion .frame figure{position:absolute;inset:0;border-radius:0;aspect-ratio:auto}
+html.motion .frame .new{clip-path:inset(0 0 100% 0)}
+.edge{display:none}
+html.motion .edge{display:block;position:absolute;left:0;right:0;top:0;height:26px;margin-top:-1px;background:repeating-linear-gradient(180deg,#f1efe6 0 3px,#8d8b83 3px 5px);box-shadow:0 8px 14px -6px #0009;z-index:3;transform:translateY(0)}
+.bar{display:none}
+html.motion .bar{display:block;height:3px;background:#ffffff26;width:min(100%,calc(58vh*1.7778));margin:0 auto;border-radius:3px;overflow:hidden}
+html.motion .bar i{display:block;height:100%;width:100%;background:var(--butter);transform:scaleX(0);transform-origin:left}
+@media (max-width:860px){.swap-head{grid-template-columns:1fr;gap:16px}.swap-pin{min-height:0;padding-block:84px 70px}.frame{grid-template-columns:1fr}html.motion .frame{width:100%}html.motion .bar{width:100%}}
+
+/* gallery */
+.work{padding-block:120px 110px}
+.mosaic{display:grid;grid-template-columns:repeat(12,minmax(0,1fr));gap:16px}
+.mosaic .ph{position:relative;overflow:hidden;border-radius:6px;background:#ddd8cb}
+.mosaic .ph img{width:100%;height:100%;object-fit:cover}
+html.motion .mosaic .ph img{height:116%}
+.m1{grid-column:1/8;aspect-ratio:16/10}
+.m2{grid-column:8/13;aspect-ratio:auto}
+.m3{grid-column:1/6;aspect-ratio:4/3}
+.m4{grid-column:6/13;aspect-ratio:auto}
+.m5{grid-column:1/8;aspect-ratio:16/9}
+.m6{grid-column:8/13;aspect-ratio:auto}
+.m2,.m4,.m6{min-height:100%}
+@media (max-width:800px){.mosaic{gap:10px}.m1,.m3,.m5{grid-column:1/-1}.m2,.m4,.m6{grid-column:1/-1;aspect-ratio:16/9;min-height:0}.work{padding-block:80px}}
+
+/* numbers */
+.nums{background:var(--butter);color:var(--ink);padding-block:110px;position:relative;overflow:hidden}
+.nums::before{content:"";position:absolute;inset:0;background:repeating-linear-gradient(180deg,#11111210 0 2px,transparent 2px 22px);pointer-events:none}
+.nums .wrap{position:relative}
+.nums-grid{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:20px;margin-top:48px;border-top:3px solid var(--ink)}
+.num{padding-top:22px}
+.num .big{font:800 clamp(86px,13vw,200px)/.82 var(--display);letter-spacing:-.01em;font-variant-numeric:tabular-nums}
+.num .big small{font-size:.38em;letter-spacing:0}
+.num p{margin-top:12px;font-weight:600;font-size:17px;max-width:15em}
+.nums-note{margin-top:34px;max-width:34em;font-size:18px}
+@media (max-width:760px){.nums-grid{grid-template-columns:1fr;gap:6px}.nums{padding-block:80px}.num{border-bottom:2px solid #1113;padding-bottom:20px}}
+
+/* quote wizard */
+.quote{background:var(--ink);color:#fff;padding-block:120px}
+.quote .wrap{display:grid;grid-template-columns:minmax(0,.85fr) minmax(0,1.15fr);gap:64px;align-items:start}
+.quote .intro{color:#cfcdc6;font-size:18px;margin-top:22px;max-width:27em}
+.quote .eyebrow{color:var(--butter)}
+.qbox{background:var(--coal);border:1px solid #ffffff1f;border-radius:10px;padding:30px}
+.prog{display:flex;align-items:center;justify-content:space-between;gap:12px;font-size:13px;font-weight:700;letter-spacing:.12em;text-transform:uppercase;color:#bdbbb3;margin-bottom:14px}
+.prog-bar{height:4px;background:#ffffff22;border-radius:4px;overflow:hidden;margin-bottom:26px}
+.prog-bar i{display:block;height:100%;width:25%;background:var(--butter);transition:width .5s var(--ease)}
+.qs{border:0;margin:0;padding:0;min-width:0}
+.qs legend{font:800 clamp(34px,4vw,48px)/.95 var(--display);text-transform:uppercase;padding:0;margin-bottom:20px;color:#fff}
+.chips{display:flex;flex-wrap:wrap;gap:10px}
+.chip{position:relative}
+.chip input{position:absolute;opacity:0;inset:0;width:100%;height:100%;cursor:pointer;margin:0}
+.chip span{display:flex;align-items:center;min-height:48px;font:600 16px/1.2 var(--body);color:#eceae3;border:1.5px solid #ffffff44;border-radius:999px;padding:12px 20px;transition:all .2s}
+.chip:hover span{border-color:#fff}
+.chip input:checked+span{background:var(--butter);border-color:var(--butter);color:var(--ink)}
+.chip input:focus-visible+span{outline:3px solid var(--butter);outline-offset:3px}
+.fld{display:grid;gap:8px;margin-bottom:16px}
+.fld label{font-size:13px;font-weight:700;letter-spacing:.1em;text-transform:uppercase;color:#bdbbb3}
+.fld input,.fld textarea{font:500 17px/1.3 var(--body);color:#fff;background:#0c0c0c;border:1.5px solid #ffffff44;border-radius:6px;padding:14px 16px;min-height:50px;width:100%}
+.fld input:focus,.fld textarea:focus{outline:none;border-color:var(--butter)}
+.fld input[type=file]{padding:12px;font-size:15px}
+.fld input[type=file]::file-selector-button{font:700 14px var(--body);background:var(--butter);border:0;border-radius:4px;padding:10px 14px;margin-right:12px;cursor:pointer;color:var(--ink)}
+.row2{display:grid;grid-template-columns:1fr 1fr;gap:14px}
+.thumbs{display:flex;gap:8px;flex-wrap:wrap}
+.thumbs img{width:64px;height:64px;object-fit:cover;border-radius:5px;border:1px solid #ffffff33}
+.pcres{margin-top:4px;min-height:24px;font-size:16px}
+.pcres.ok{color:var(--butter)}
+.qnav{display:flex;justify-content:space-between;gap:12px;margin-top:26px}
+.qnav .btn-line{min-width:96px}
+.qerr{color:#ffb4a8;font-size:15px;margin-top:12px;min-height:22px}
+.qdone{text-align:left}
+.qdone .ref{font:800 clamp(64px,9vw,120px)/.9 var(--display);color:var(--butter);margin:10px 0 14px}
+.qdone p{color:#d6d4cc}
+@media (max-width:920px){.quote .wrap{grid-template-columns:1fr;gap:40px}.quote{padding-block:84px}.qbox{padding:22px}.row2{grid-template-columns:1fr}}
+
+/* area + contact */
+.area{padding-block:110px 40px}
+.area-big{font:800 clamp(64px,13vw,210px)/.84 var(--display);text-transform:uppercase;letter-spacing:-.01em}
+.area-big span{display:block}
+.area-big .o{color:transparent;-webkit-text-stroke:2px var(--ink)}
+.area p.t{margin-top:30px;max-width:34em;font-size:19px;color:#3d3b36}
+.contact{padding-block:60px 120px}
+.contact .wrap{display:grid;grid-template-columns:minmax(0,1fr) minmax(0,1fr);gap:64px;align-items:start}
+.contact h2.d{font-size:clamp(46px,6vw,88px)}
+.ctable{margin-top:26px;display:grid;gap:0;border-top:2px solid var(--ink)}
+.ctable a,.ctable div{display:flex;justify-content:space-between;gap:16px;flex-wrap:wrap;padding:16px 0;border-bottom:1px solid var(--line);text-decoration:none;font-size:18px}
+.ctable b{font:700 13px/1.6 var(--body);letter-spacing:.12em;text-transform:uppercase;color:var(--muted)}
+.ctable a:hover span{background:var(--butter)}
+.cform{background:var(--white);border:1px solid var(--line);border-radius:10px;padding:28px;display:grid;gap:16px}
+.cform .fld label{color:var(--muted)}
+.cform .fld input,.cform .fld textarea{color:var(--ink);background:var(--paper);border-color:#b9b4a6}
+.cform .fld input:focus,.cform .fld textarea:focus{border-color:var(--ink);outline:2px solid var(--ink)}
+.cform .fld{margin:0}
+.cdone{background:var(--butter);padding:14px 16px;border-radius:6px;font-weight:600}
+@media (max-width:860px){.contact .wrap{grid-template-columns:1fr;gap:40px}.contact{padding-block:40px 80px}.area{padding-block:80px 30px}}
+
+footer{background:var(--ink);color:#cfcdc6;padding-block:34px;font-size:14px}
+footer .wrap{display:flex;justify-content:space-between;gap:12px 28px;flex-wrap:wrap;align-items:center}
+footer a{color:var(--butter);font-weight:600}
+</style>
+</head>
+<body>
+<svg width="0" height="0" style="position:absolute" aria-hidden="true" focusable="false">
+  <symbol id="logo" viewBox="0 0 390 78">
+    <text x="0" y="52" font-family="'Schibsted Grotesk',Arial,sans-serif" font-weight="600" font-size="34" fill="#fff" letter-spacing="-.3">The <tspan font-size="62" font-weight="500" fill="#f6ee9b">G</tspan>arage <tspan font-size="62" font-weight="500" fill="#f6ee9b">D</tspan>oor Man</text>
+    <path d="M2 62h386M2 69h386M2 76h386" stroke="#f6ee9b" stroke-width="2.2" stroke-linecap="round" opacity=".9"/>
+  </symbol>
+</svg>
+
+<div class="concept" id="concept">Website concept for The Garage Door Man — preview only, not the live site. Designed by <a href="https://itchenstudio.co.uk" data-umami-event="Itchen Studio link">Itchen Studio</a> · <a href="mailto:sam@itchenstudio.co.uk">sam@itchenstudio.co.uk</a></div>
+
+<header class="top" id="top">
+  <div class="wrap">
+    <a class="logo" href="#main" aria-label="The Garage Door Man, home"><svg viewBox="0 0 390 78" role="img" aria-label="The Garage Door Man"><use href="#logo"/></svg></a>
+    <nav class="main" aria-label="Main">
+      <a href="#services">What we do</a>
+      <a href="#swap">New doors</a>
+      <a href="#work">Our work</a>
+      <a href="#quote">Quote</a>
+      <a class="btn btn-y" href="tel:+442392642726"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 4h4l2 5-2.5 1.5a11 11 0 0 0 5 5L15 13l5 2v4a2 2 0 0 1-2 2A16 16 0 0 1 3 6a2 2 0 0 1 2-2z"/></svg><span class="num">023 9264 2726</span><span class="short">Call</span></a>
+    </nav>
+  </div>
+</header>
+
+<main id="main">
+<section class="hero" aria-labelledby="h1">
+  <div class="bg"><img src="assets/img/oak-1920.webp" srcset="assets/img/oak-1100.webp 1100w, assets/img/oak-1920.webp 1920w" sizes="100vw" alt="Two timber-effect roller doors fitted in an oak-framed garage with a slate roof" width="1920" height="1080" fetchpriority="high"></div>
+  <div class="wrap">
+    <span class="eyebrow" data-intro>Portsmouth · across Hampshire</span>
+    <h1 class="d" id="h1"><span class="ln"><span>Twenty years of</span></span><span class="ln"><span class="y">garage doors.</span></span></h1>
+    <p class="lead" data-intro>Garage doors supplied, fitted and repaired. Roller, sectional or up-and-over, and emergency callouts for the day one won't budge.</p>
+    <div class="ctas" data-intro>
+      <a class="btn btn-y" href="#quote">Start a quote</a>
+      <a class="btn btn-line" href="tel:+442392642726">Call 023 9264 2726</a>
+    </div>
+    <p class="proof" data-intro><span><b>9.99 out of 10</b> on Checkatrade</span><span><b>1,701</b> reviews</span><span><b>20+</b> years' experience</span></p>
+  </div>
+</section>
+
+<div class="strip" aria-hidden="true"><div class="track" data-speed="0.7"><span>Roller doors</span><span>Sectional doors</span><span>Up-and-over doors</span><span>Electric doors</span><span>Repairs</span><span>Emergency callouts</span><span>Roller doors</span><span>Sectional doors</span><span>Up-and-over doors</span><span>Electric doors</span><span>Repairs</span><span>Emergency callouts</span></div></div>
+
+<section class="services" id="services" aria-labelledby="svc-h">
+  <div class="wrap">
+    <div class="sec-head">
+      <div><span class="eyebrow" data-reveal>What we do</span><h2 class="d" id="svc-h" data-split style="margin-top:18px">Fixed, fitted<br>or replaced.</h2></div>
+      <p data-reveal>Four things, done every day. If it's a garage door, it's probably in here.</p>
+    </div>
+    <div class="grid4">
+      <article class="svc" data-reveal>
+        <svg viewBox="0 0 160 110" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" aria-hidden="true"><rect x="22" y="8" width="116" height="96" rx="3"/><path d="M30 20h100M30 30h100M30 40h100M30 50h100M30 60h100M30 70h100M30 80h100M30 90h100"/></svg>
+        <h3>New doors, supplied and fitted</h3>
+        <p>Roller, sectional or up-and-over. Pick a style and a colour. The photos below run from white and navy to anthracite, sky blue and woodgrain.</p>
+      </article>
+      <article class="svc" data-reveal>
+        <svg viewBox="0 0 160 110" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="22" y="8" width="116" height="96" rx="3"/><path d="M30 32h100M30 56h100M30 80h100"/><path d="M84 16 70 44h14l-6 22 20-30H84z" fill="currentColor"/></svg>
+        <h3>Electric doors</h3>
+        <p>Open and close from the driver's seat. Ask about electric operation when you get your quote.</p>
+      </article>
+      <article class="svc" data-reveal>
+        <svg viewBox="0 0 160 110" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="22" y="8" width="116" height="96" rx="3"/><path d="M34 22h92v34H34zM34 62h92v32H34z"/><path d="M72 78h16"/></svg>
+        <h3>Repairs</h3>
+        <p>Stuck, sagging, noisy or won't stay up. Tell us what it does and we'll say whether it's worth mending.</p>
+      </article>
+      <article class="svc" data-reveal>
+        <svg viewBox="0 0 160 110" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="22" y="8" width="116" height="96" rx="3"/><path d="M80 24 52 78h56z"/><path d="M80 44v16M80 68v.5"/></svg>
+        <h3>Emergency callouts</h3>
+        <p>Door jammed shut with the car inside? Ring and talk it through with us.</p>
+      </article>
+    </div>
+    <p class="also" data-reveal><b>Also</b> <span>block paving, patios and extensions.</span></p>
+  </div>
+</section>
+
+<section class="swap dark" id="swap" aria-labelledby="swap-h">
+  <div class="swap-pin">
+    <div class="wrap" style="display:grid;gap:26px;width:100%">
+      <div class="swap-head">
+        <h2 class="d" id="swap-h"><span class="t1">Out with<br>the tired.</span><span class="t2" aria-hidden="true">In with<br>the new.</span></h2>
+        <p>Same garage, same brick. A pair of faded doors on one side, a pair of white doors on the other.</p>
+      </div>
+      <div class="frame">
+        <figure class="old"><img src="assets/img/old-1024.webp" alt="A garage with two faded doors, one lilac and one maroon, between red brick piers" width="1024" height="576"></figure>
+        <figure class="new"><img src="assets/img/new-1024.webp" alt="The same garage with two new white up-and-over doors" width="1024" height="576"><span class="edge" aria-hidden="true"></span></figure>
+      </div>
+      <div class="bar" aria-hidden="true"><i></i></div>
+    </div>
+  </div>
+</section>
+
+<section class="work" id="work" aria-labelledby="work-h">
+  <div class="wrap">
+    <div class="sec-head">
+      <div><span class="eyebrow" data-reveal>Our work</span><h2 class="d" id="work-h" data-split style="margin-top:18px">Some of the<br>doors.</h2></div>
+      <p data-reveal>Colours, styles and a few very different houses.</p>
+    </div>
+    <div class="mosaic">
+      <div class="ph m1" data-clip><img data-parallax src="assets/img/oak-1100.webp" alt="Two woodgrain roller doors in an oak garage" loading="lazy" width="1100" height="619"></div>
+      <div class="ph m2" data-clip><img data-parallax src="assets/img/anthracite-729.webp" alt="An anthracite roller door in a white frame beside a dark front door" loading="lazy" width="729" height="500"></div>
+      <div class="ph m3" data-clip><img data-parallax src="assets/img/blue-1024.webp" alt="A sky blue roller door beside a matching blue front door" loading="lazy" width="1024" height="768"></div>
+      <div class="ph m4" data-clip><img data-parallax src="assets/img/navy-1100.webp" alt="A navy blue roller door set in a white frame between red brick" loading="lazy" width="1100" height="451"></div>
+      <div class="ph m5" data-clip><img data-parallax src="assets/img/wide-1100.webp" alt="A wide white garage door with a centre join on a red brick wall" loading="lazy" width="1100" height="688"></div>
+      <div class="ph m6" data-clip><img data-parallax src="assets/img/pair-1100.webp" alt="Two white up-and-over doors in a brick double garage" loading="lazy" width="1100" height="451"></div>
+    </div>
+  </div>
+</section>
+
+<section class="nums" aria-labelledby="nums-h">
+  <div class="wrap">
+    <span class="eyebrow" data-reveal>Checkatrade</span>
+    <h2 class="d" id="nums-h" data-split style="margin-top:18px">What customers score us.</h2>
+    <div class="nums-grid">
+      <div class="num"><div class="big"><span id="score">9.99</span><small>/10</small></div><p>Average score on Checkatrade</p></div>
+      <div class="num"><div class="big" data-count="1701">1,701</div><p>Reviews behind that score</p></div>
+      <div class="num"><div class="big"><span data-count="20">20</span><small>+</small></div><p>Years' experience in the trade</p></div>
+    </div>
+    <p class="nums-note" data-reveal>You can read every one of them on Checkatrade before you pick up the phone.</p>
+  </div>
+</section>
+
+<section class="quote dark" id="quote" aria-labelledby="quote-h">
+  <div class="wrap">
+    <div>
+      <span class="eyebrow" data-reveal>Get a quote</span>
+      <h2 class="d" id="quote-h" data-split style="margin-top:18px">Tell us about the door.</h2>
+      <p class="intro" data-reveal>Four quick questions. Photos help if you have them. We'll come back to you to talk it through and arrange a visit.</p>
+    </div>
+    <div class="qbox" data-reveal>
+      <form id="qf" novalidate>
+        <div class="prog"><span id="qstep">Step 1 of 4</span><span>Takes a minute</span></div>
+        <div class="prog-bar" role="progressbar" aria-label="Quote progress" aria-valuemin="1" aria-valuemax="4" aria-valuenow="1"><i id="qbar"></i></div>
+
+        <fieldset class="qs" data-step="1">
+          <legend>What do you need?</legend>
+          <div class="chips">
+            <label class="chip"><input type="radio" name="job" value="New door"><span>A new door</span></label>
+            <label class="chip"><input type="radio" name="job" value="Repair"><span>A repair</span></label>
+            <label class="chip"><input type="radio" name="job" value="Electric"><span>Electric operation</span></label>
+            <label class="chip"><input type="radio" name="job" value="Emergency"><span>It's an emergency</span></label>
+            <label class="chip"><input type="radio" name="job" value="Not sure"><span>Not sure yet</span></label>
+          </div>
+        </fieldset>
+
+        <fieldset class="qs" data-step="2" hidden>
+          <legend>Which kind of door?</legend>
+          <div class="chips">
+            <label class="chip"><input type="radio" name="kind" value="Roller"><span>Roller</span></label>
+            <label class="chip"><input type="radio" name="kind" value="Sectional"><span>Sectional</span></label>
+            <label class="chip"><input type="radio" name="kind" value="Up-and-over"><span>Up-and-over</span></label>
+            <label class="chip"><input type="radio" name="kind" value="Other"><span>Something else</span></label>
+            <label class="chip"><input type="radio" name="kind" value="Not sure"><span>Not sure</span></label>
+          </div>
+        </fieldset>
+
+        <fieldset class="qs" data-step="3" hidden>
+          <legend>Where is it?</legend>
+          <div class="fld"><label for="pc">Postcode</label><input id="pc" name="pc" autocomplete="postal-code" inputmode="text" placeholder="e.g. PO5 3AB" maxlength="9" style="text-transform:uppercase"></div>
+          <p class="pcres" id="pcres" role="status" aria-live="polite"></p>
+        </fieldset>
+
+        <fieldset class="qs" data-step="4" hidden>
+          <legend>How do we reach you?</legend>
+          <div class="row2">
+            <div class="fld"><label for="nm">Name</label><input id="nm" name="nm" autocomplete="name"></div>
+            <div class="fld"><label for="ph">Phone</label><input id="ph" name="ph" type="tel" autocomplete="tel"></div>
+          </div>
+          <div class="fld"><label for="pics">Photos of the door (optional)</label><input id="pics" type="file" accept="image/*" multiple></div>
+          <div class="thumbs" id="thumbs" aria-live="polite"></div>
+        </fieldset>
+
+        <p class="qerr" id="qerr" role="alert"></p>
+        <div class="qnav">
+          <button type="button" class="btn btn-line" id="qback" hidden>Back</button>
+          <button type="button" class="btn btn-y" id="qnext" style="margin-left:auto">Next</button>
+        </div>
+      </form>
+      <div class="qdone" id="qdone" hidden role="status" tabindex="-1">
+        <span class="eyebrow" style="color:var(--butter)">Quote request</span>
+        <p class="ref" id="qref">Q-0000</p>
+        <p id="qsum"></p>
+        <p style="margin-top:14px;color:#bdbbb3;font-size:15px">This is a preview — the form will go live with your new site.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="area" aria-labelledby="area-h">
+  <div class="wrap">
+    <h2 class="vh" id="area-h">Where we work</h2>
+    <div class="area-big" aria-hidden="true"><span data-reveal>Portsmouth.</span><span class="o" data-reveal>Hampshire.</span></div>
+    <p class="t" data-reveal>Based in Portsmouth and working across Hampshire. Not sure if we reach you? Put your postcode in the quote form, or just ring.</p>
+  </div>
+</section>
+
+<section class="contact" id="contact" aria-labelledby="contact-h">
+  <div class="wrap">
+    <div>
+      <span class="eyebrow" data-reveal>Contact</span>
+      <h2 class="d" id="contact-h" data-split style="margin-top:18px">Talk to Daniel.</h2>
+      <div class="ctable" data-reveal>
+        <a href="tel:+442392642726"><b>Phone</b><span>023 9264 2726</span></a>
+        <a href="mailto:info@garagedoor-man.co.uk"><b>Email</b><span>info@garagedoor-man.co.uk</span></a>
+        <div><b>Based in</b><span>Portsmouth</span></div>
+        <div><b>Covering</b><span>Hampshire</span></div>
+      </div>
+    </div>
+    <div>
+      <form class="cform" id="cf" novalidate data-reveal>
+        <div class="fld"><label for="cn">Your name</label><input id="cn" required autocomplete="name"></div>
+        <div class="fld"><label for="cp">Phone or email</label><input id="cp" required autocomplete="tel"></div>
+        <div class="fld"><label for="cm">What's the door doing?</label><textarea id="cm" rows="4" required></textarea></div>
+        <button class="btn btn-k" type="submit">Send message</button>
+        <p class="cdone" id="cdone" hidden role="status">This is a preview — the form will go live with your new site.</p>
+      </form>
+    </div>
+  </div>
+</section>
+</main>
+
+<footer><div class="wrap"><span>© The Garage Door Man · Portsmouth, Hampshire · Concept site</span><span>Designed by <a href="https://itchenstudio.co.uk" data-umami-event="Itchen Studio link">Itchen Studio</a></span></div></footer>
+
+<script src="assets/js/gsap.min.js" defer></script>
+<script src="assets/js/ScrollTrigger.min.js" defer></script>
+<script src="assets/js/lenis.min.js" defer></script>
+<script src="assets/js/concept.js" defer></script>
+<script defer>
+window.addEventListener('DOMContentLoaded', function () {
+  var api = ConceptSite.init();
+  api.fakeForm('cf', 'cdone');
+
+  /* shutter rolls up on load, the swap lowers a new door */
+  if (api.motion) {
+    var hero = document.querySelector('.hero'), N = 14, sh = document.createElement('div');
+    sh.className = 'shutter'; sh.setAttribute('aria-hidden', 'true');
+    for (var i = 0; i < N; i++) { var s = document.createElement('i'); s.style.top = (i * 100 / N) + '%'; s.style.height = (100 / N + .4) + '%'; sh.appendChild(s); }
+    hero.appendChild(sh);
+    gsap.to(sh.children, { yPercent: -110, duration: 1.15, ease: 'power3.in', stagger: { each: 0.045, from: 'end' }, delay: 0.1,
+      onComplete: function () { sh.remove(); } });
+
+    var mm = gsap.matchMedia();
+    mm.add('(min-width: 861px)', function () {
+      var tl = gsap.timeline({ scrollTrigger: { trigger: '.swap', start: 'top top', end: '+=150%', pin: '.swap-pin', scrub: 0.6, anticipatePin: 1 } });
+      tl.fromTo('.swap .new', { clipPath: 'inset(0% 0% 100% 0%)' }, { clipPath: 'inset(0% 0% 0% 0%)', ease: 'none', duration: 1 }, 0)
+        .fromTo('.swap .edge', { top: '0%' }, { top: '100%', ease: 'none', duration: 1 }, 0)
+        .to('.swap .t1', { opacity: 0, duration: 0.12 }, 0.4)
+        .to('.swap .t2', { opacity: 1, duration: 0.12 }, 0.5)
+        .fromTo('.swap .bar i', { scaleX: 0 }, { scaleX: 1, ease: 'none', duration: 1 }, 0);
+    });
+    mm.add('(max-width: 860px)', function () {
+      var tl = gsap.timeline({ scrollTrigger: { trigger: '.swap .frame', start: 'top 80%', end: 'bottom 40%', scrub: 0.5 } });
+      tl.fromTo('.swap .new', { clipPath: 'inset(0% 0% 100% 0%)' }, { clipPath: 'inset(0% 0% 0% 0%)', ease: 'none', duration: 1 }, 0)
+        .fromTo('.swap .edge', { top: '0%' }, { top: '100%', ease: 'none', duration: 1 }, 0)
+        .to('.swap .t1', { opacity: 0, duration: 0.12 }, 0.4)
+        .to('.swap .t2', { opacity: 1, duration: 0.12 }, 0.5)
+        .fromTo('.swap .bar i', { scaleX: 0 }, { scaleX: 1, ease: 'none', duration: 1 }, 0);
+    });
+  }
+
+  /* score counts up to two decimals */
+  var sc = document.getElementById('score');
+  if (api.motion && sc) {
+    var o = { v: 0 }; sc.textContent = '0.00';
+    gsap.to(o, { v: 9.99, duration: 1.8, ease: 'power2.out', scrollTrigger: { trigger: sc, start: 'top 90%', once: true }, onUpdate: function () { sc.textContent = o.v.toFixed(2); } });
+  }
+
+  /* quote wizard */
+  var form = document.getElementById('qf'), steps = [].slice.call(form.querySelectorAll('.qs')), cur = 0;
+  var back = document.getElementById('qback'), next = document.getElementById('qnext'), err = document.getElementById('qerr');
+  var bar = document.getElementById('qbar'), lab = document.getElementById('qstep'), pc = document.getElementById('pc'), res = document.getElementById('pcres');
+  var covered = /^(PO|SO|GU|RG|SP)\d/i;
+  function pcState() {
+    var v = pc.value.replace(/\s+/g, '').toUpperCase();
+    if (!v) { res.textContent = ''; res.className = 'pcres'; return null; }
+    if (covered.test(v)) { res.textContent = 'Yes, that looks like Hampshire. We can come to you.'; res.className = 'pcres ok'; return true; }
+    res.textContent = 'That might be outside our patch. Call 023 9264 2726 and we\'ll tell you.'; res.className = 'pcres'; return false;
+  }
+  pc.addEventListener('input', pcState);
+  function show(n) {
+    cur = n;
+    steps.forEach(function (s, i) { s.hidden = i !== n; });
+    bar.style.width = ((n + 1) * 25) + '%';
+    lab.textContent = 'Step ' + (n + 1) + ' of 4';
+    bar.parentNode.setAttribute('aria-valuenow', n + 1);
+    back.hidden = n === 0;
+    next.textContent = n === 3 ? 'Send my quote request' : 'Next';
+    err.textContent = '';
+    var f = steps[n].querySelector('input:not([type=file]),textarea');
+    if (f && n > 1) f.focus({ preventScroll: true });
+  }
+  function ok() {
+    var s = steps[cur];
+    if (cur === 0 && !form.job.value) { err.textContent = 'Pick the closest one to carry on.'; return false; }
+    if (cur === 1 && !form.kind.value) { err.textContent = 'Pick a door type, or "Not sure".'; return false; }
+    if (cur === 2 && !pc.value.trim()) { err.textContent = 'Add your postcode to carry on.'; pc.focus(); return false; }
+    if (cur === 3 && (!form.nm.value.trim() || !form.ph.value.trim())) { err.textContent = 'We need a name and a phone number.'; return false; }
+    return true;
+  }
+  next.addEventListener('click', function () {
+    if (!ok()) return;
+    if (cur < 3) { show(cur + 1); return; }
+    var ref = 'Q-' + (1000 + Math.floor(Math.random() * 9000));
+    document.getElementById('qref').textContent = ref;
+    document.getElementById('qsum').textContent = form.job.value + ' · ' + form.kind.value + ' door · ' + pc.value.toUpperCase() + '. Thanks ' + form.nm.value.split(' ')[0] + ', this is where Daniel would call you back.';
+    form.hidden = true;
+    var d = document.getElementById('qdone'); d.hidden = false; d.focus();
+  });
+  back.addEventListener('click', function () { if (cur > 0) show(cur - 1); });
+  form.addEventListener('submit', function (e) { e.preventDefault(); });
+  document.getElementById('pics').addEventListener('change', function (e) {
+    var t = document.getElementById('thumbs'); t.innerHTML = '';
+    [].slice.call(e.target.files).slice(0, 6).forEach(function (f) {
+      var im = document.createElement('img'); im.alt = 'Selected photo ' + f.name; im.src = URL.createObjectURL(f); t.appendChild(im);
+    });
+  });
+});
+</script>
+</body>
+</html>

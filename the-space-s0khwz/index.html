@@ -5,7 +5,7 @@ ART DIRECTION BRIEF - The Space Hair Studio, Southampton (concept by Itchen Stud
 IDEA: The studio is a bright room painted in the logo's colours (pink, yellow, sky blue) plus the walls' teal, mustard and lilac. The whole site is that room: colour first, one swatch at a time.
 PALETTE: sky #AEDCEB (logo background), pink #EE7FB0 (logo brush), yellow #F6E62B (logo frame), teal #27B3B0, lilac #D8C7EC, mustard #F7B928 (walls), ink #2A1F3D (text and dark blocks), paper #FFFAF3.
 TYPE: Bricolage Grotesque (variable, condensed to full width) for display, used huge; DM Sans for text. Both self-hosted.
-HERO: full-bleed sky blue. A big pink brush stroke with a yellow frame behind the headline (the logo's own shapes), with an arch, a round "mirror" and a landscape photo drifting at different speeds on the right, plus wall-mural shapes (triangle outline, semicircle, block).
+HERO: full-bleed sky blue (the logo's own background, so the artwork sits straight on the page). At the owner's request the hero headline is replaced by the large logo, clamp(260px,38vw,560px), as the centrepiece (its pink brush and yellow frame are the logo's own); it is the h1 (alt text The Space Hair Studio) and rises in on load. Under it sit the purpose line and buttons, with an arch, a round "mirror" and a landscape photo drifting at different speeds on the right, plus wall-mural shapes (triangle outline, semicircle, block).
 SIGNATURE SCROLL MOMENT: "The colour list". The section pins and the price list becomes a colour wash: £30 on sky blue, then yellow, pink, teal and lilac sweep across on a slanted edge as you scroll, each with its price and service. On phones and with reduced motion it is five stacked colour blocks.
 FEATURE: colour consultation / booking drawer. Service, stylist, day and time (labelled Example availability), details, confirmation reference like B-4821. Sends nothing.
 HEADLINE OPTIONS (ten):
@@ -18,7 +18,8 @@ HEADLINE OPTIONS (ten):
  7. Bold colour, Southampton   (a rival could use it)
  8. Where the colour happens   (a rival could use it)
  9. Colour, mixed at The Polygon   (decent)
-10. A bright room for colour   (PICK: shortest that is specific; says colour-first and the decor)
+10. A bright room for colour   (was the pick; REPLACED by the large logo as the hero headline, at the owner's request. No text slogan in the hero now.)
+OWNER FEEDBACK APPLIED: image labels removed (gallery captions); slogan changed to a larger logo.
 -->
 <html lang="en-GB">
 <head>
@@ -89,12 +90,11 @@ h2{font-size:clamp(44px,6.6vw,104px);line-height:.94}
 /* hero */
 .hero{position:relative;background:var(--sky);overflow:hidden;padding-bottom:0}
 .hero .stage{position:relative;max-width:1440px;margin:0 auto;min-height:min(780px,calc(100svh - 112px));min-height:clamp(640px,calc(100svh - 112px),820px)}
-.brush{position:absolute;left:-5%;top:7%;width:66%;height:80%;background:var(--pink);clip-path:polygon(2% 14%,10% 6%,26% 9%,44% 3%,66% 8%,84% 2%,100% 10%,93% 24%,99% 38%,92% 52%,100% 66%,90% 80%,96% 96%,74% 90%,52% 98%,30% 91%,12% 97%,4% 84%,0 62%,5% 44%,0 28%);transform:rotate(-3deg)}
-.brush::after{content:"";position:absolute;inset:0;background:linear-gradient(100deg,transparent 30%,#ffffff2e 50%,transparent 70%)}
-.frame{position:absolute;left:4%;top:12%;width:55%;height:68%;border:10px solid var(--yellow);transform:rotate(-1deg)}
-.hero-copy{position:relative;z-index:3;padding:clamp(56px,9vw,120px) var(--gut) 0;max-width:min(62%,900px)}
-.hero h1{font-size:clamp(60px,10.6vw,170px);line-height:.88;font-weight:800;font-stretch:75%;letter-spacing:-.025em}
-.hero .lead{font-size:clamp(17px,1.5vw,21px);max-width:27em;margin-top:clamp(26px,3vw,44px);font-weight:500}
+.hero-copy{position:relative;z-index:3;padding:clamp(8px,1.5vw,24px) var(--gut) 0;max-width:min(62%,900px)}
+.hero h1{line-height:0;margin-left:calc(var(--gut) * -.6)}
+.hero h1 .ln>span{display:block}
+.hero-logo{width:clamp(260px,38vw,560px);height:auto;aspect-ratio:1;max-width:none}
+.hero .lead{font-size:clamp(17px,1.5vw,21px);max-width:27em;margin-top:clamp(8px,1vw,16px);font-weight:500}
 .hero .ctas{display:flex;gap:12px;flex-wrap:wrap;margin-top:28px}
 .hero .eyebrow{display:block;margin-bottom:22px}
 .ph{position:absolute;margin:0;overflow:hidden;z-index:2;background:var(--sky-soft)}
@@ -113,12 +113,11 @@ h2{font-size:clamp(44px,6.6vw,104px);line-height:.94}
 .proof i{font-style:normal;opacity:.55}
 @media (max-width:900px){
   .hero .stage{min-height:0;padding-bottom:30px}
-  .brush{left:-14%;top:2%;width:122%;height:360px;transform:rotate(-4deg)}
-  .frame{left:6%;top:40px;width:88%;height:236px}
-  .hero-copy{max-width:none;padding-top:62px}
-  .hero h1{font-size:clamp(60px,17.5vw,120px)}
-  .hero .lead{margin-top:64px}
-  .photos{position:relative;height:410px;margin-top:34px}
+  .hero-copy{max-width:none;padding-top:10px}
+  .hero h1{margin-left:0;display:flex;justify-content:center}
+  .hero-logo{width:min(78vw,520px)}
+  .hero .lead{margin-top:6px}
+  .photos{position:relative;height:290px;margin-top:30px}
   .ph.a{left:5%;right:auto;top:0;width:46%}
   .ph.b{right:5%;top:70px;width:40%}
   .ph.c{display:none}
@@ -251,8 +250,6 @@ html.motion:not(.ready) [data-intro]{opacity:0}
 .g-grid .g2{aspect-ratio:3/3.6}
 .g-grid .g3{aspect-ratio:3/3.6}
 .g-grid .g4{grid-column:2/4;aspect-ratio:16/8.2}
-.g-grid figcaption{position:absolute;left:12px;bottom:12px;z-index:2;background:var(--paper);font:700 11px/1 var(--body);letter-spacing:.14em;text-transform:uppercase;padding:9px 12px;border-radius:999px}
-.g-grid .g1 figcaption{left:50%;transform:translateX(-50%)}
 @media (max-width:900px){.g-grid{grid-template-columns:1fr 1fr}.g-grid .g1{grid-column:1/-1;grid-row:auto;min-height:0;aspect-ratio:4/4.6}.g-grid .g4{grid-column:1/-1;aspect-ratio:16/10}}
 
 /* visit */
@@ -348,14 +345,11 @@ html.motion:not(.ready) [data-intro]{opacity:0}
 <main id="top">
 <section class="hero" aria-labelledby="h1">
   <div class="stage">
-    <div class="brush" aria-hidden="true"></div>
-    <div class="frame" aria-hidden="true"></div>
     <span class="shape s-block" aria-hidden="true" data-drift="-30"></span>
     <span class="shape s-tri" aria-hidden="true" data-drift="-50"></span>
     <span class="shape s-semi" aria-hidden="true" data-drift="-20"></span>
     <div class="hero-copy">
-      <span class="lbl eyebrow" data-intro>The Space Hair Studio · Southampton</span>
-      <h1 id="h1"><span class="ln"><span>A bright room</span></span><span class="ln"><span>for colour</span></span></h1>
+      <h1 id="h1"><span class="ln"><span><img class="hero-logo" src="assets/img/logo-480.webp" srcset="assets/img/logo-480.webp 480w, assets/img/logo-960.webp 960w" sizes="(max-width:900px) 78vw, 38vw" width="960" height="960" alt="The Space Hair Studio" fetchpriority="high"></span></span></h1>
       <p class="lead" data-intro>A colour-led hair studio at The Polygon. Five stylists, painted walls and a colour list that starts at £30.</p>
       <div class="ctas" data-intro><button class="btn yellow" type="button" data-book data-cat="consult">Book a colour consultation</button><a class="btn ghost" href="#colour">See the colour list</a></div>
     </div>
@@ -477,10 +471,10 @@ html.motion:not(.ready) [data-intro]{opacity:0}
   <div class="wrap">
     <div class="head"><div><p class="lbl" data-reveal>Gallery</p><h2 id="gal-h" data-split style="margin-top:18px">The colour, and the room</h2></div><a class="link" href="https://www.instagram.com/thespacesouthampton/" rel="noopener" target="_blank" data-reveal>More on Instagram ↗</a></div>
     <div class="g-grid">
-      <figure class="g1" data-clip><img src="assets/img/vivid-620.webp" alt="Long blonde hair with pink and green colour sections and a pink paper fan behind" loading="lazy" data-parallax width="572" height="810"><figcaption>Pink and green</figcaption></figure>
-      <figure class="g2" data-clip><img src="assets/img/blue-620.webp" alt="Blonde hair fading into deep blue at the ends against a lilac wall" loading="lazy" data-parallax width="610" height="802"><figcaption>Blue at the ends</figcaption></figure>
-      <figure class="g3" data-clip><img src="assets/img/salon-828.webp" alt="Row of pink styling chairs facing round lit mirrors on a lilac and teal wall" loading="lazy" data-parallax width="828" height="960"><figcaption>Chairs and mirrors</figcaption></figure>
-      <figure class="g4" data-clip><img src="assets/img/decor-1100.webp" srcset="assets/img/decor-1100.webp 1100w, assets/img/decor-2000.webp 2000w" sizes="(max-width:900px) 100vw, 50vw" alt="Pastel rocking chairs and a lilac coffee table with flowers on a patterned rug" loading="lazy" data-parallax width="1100" height="573"><figcaption>The waiting corner</figcaption></figure>
+      <figure class="g1" data-clip><img src="assets/img/vivid-620.webp" alt="Long blonde hair with pink and green colour sections and a pink paper fan behind" loading="lazy" data-parallax width="572" height="810"></figure>
+      <figure class="g2" data-clip><img src="assets/img/blue-620.webp" alt="Blonde hair fading into deep blue at the ends against a lilac wall" loading="lazy" data-parallax width="610" height="802"></figure>
+      <figure class="g3" data-clip><img src="assets/img/salon-828.webp" alt="Row of pink styling chairs facing round lit mirrors on a lilac and teal wall" loading="lazy" data-parallax width="828" height="960"></figure>
+      <figure class="g4" data-clip><img src="assets/img/decor-1100.webp" srcset="assets/img/decor-1100.webp 1100w, assets/img/decor-2000.webp 2000w" sizes="(max-width:900px) 100vw, 50vw" alt="Pastel rocking chairs and a lilac coffee table with flowers on a patterned rug" loading="lazy" data-parallax width="1100" height="573"></figure>
     </div>
   </div>
 </section>
@@ -646,8 +640,6 @@ document.addEventListener('DOMContentLoaded', function(){
     gsap.to(el, {yPercent:+el.dataset.drift, ease:'none', scrollTrigger:{trigger:'.hero', start:'top top', end:'bottom top', scrub:true}});
   });
   gsap.from('.hero .ph', {scale:.85, autoAlpha:0, duration:1.3, stagger:.12, ease:'expo.out', delay:.25});
-  gsap.from('.brush', {xPercent:-30, duration:1.4, ease:'expo.out'});
-  gsap.from('.frame', {autoAlpha:0, scale:.94, duration:1.2, ease:'expo.out', delay:.3});
 
   /* statement words */
   var words = window.ConceptSite.splitWords(document.getElementById('stmt'));
