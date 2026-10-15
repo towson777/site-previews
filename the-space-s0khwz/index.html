@@ -1,0 +1,690 @@
+<!doctype html>
+<!--
+ART DIRECTION BRIEF - The Space Hair Studio, Southampton (concept by Itchen Studio)
+
+IDEA: The studio is a bright room painted in the logo's colours (pink, yellow, sky blue) plus the walls' teal, mustard and lilac. The whole site is that room: colour first, one swatch at a time.
+PALETTE: sky #AEDCEB (logo background), pink #EE7FB0 (logo brush), yellow #F6E62B (logo frame), teal #27B3B0, lilac #D8C7EC, mustard #F7B928 (walls), ink #2A1F3D (text and dark blocks), paper #FFFAF3.
+TYPE: Bricolage Grotesque (variable, condensed to full width) for display, used huge; DM Sans for text. Both self-hosted.
+HERO: full-bleed sky blue. A big pink brush stroke with a yellow frame behind the headline (the logo's own shapes), with an arch, a round "mirror" and a landscape photo drifting at different speeds on the right, plus wall-mural shapes (triangle outline, semicircle, block).
+SIGNATURE SCROLL MOMENT: "The colour list". The section pins and the price list becomes a colour wash: £30 on sky blue, then yellow, pink, teal and lilac sweep across on a slanted edge as you scroll, each with its price and service. On phones and with reduced motion it is five stacked colour blocks.
+FEATURE: colour consultation / booking drawer. Service, stylist, day and time (labelled Example availability), details, confirmation reference like B-4821. Sends nothing.
+HEADLINE OPTIONS (ten):
+ 1. Colour is the whole point   (any colourist could say it)
+ 2. Hair colour, five specialists   (not true: specialists not confirmed for all five)
+ 3. Vivid colour at The Polygon   (decent)
+ 4. A studio painted in colour   (decent)
+ 5. Colour-first, since 2020   (decent, dry)
+ 6. Five stylists, one bright room   (decent)
+ 7. Bold colour, Southampton   (a rival could use it)
+ 8. Where the colour happens   (a rival could use it)
+ 9. Colour, mixed at The Polygon   (decent)
+10. A bright room for colour   (PICK: shortest that is specific; says colour-first and the decor)
+-->
+<html lang="en-GB">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<meta name="robots" content="noindex,nofollow">
+<title>The Space Hair Studio · Concept</title>
+<meta name="description" content="A website concept for The Space Hair Studio, a colour-led hair studio at The Polygon in Southampton. Preview only, not the live site.">
+<link rel="icon" type="image/webp" href="assets/img/logo-96.webp">
+<link rel="preload" href="assets/fonts/bricolage.woff2" as="font" type="font/woff2" crossorigin>
+<link rel="preload" href="assets/fonts/dm-sans.woff2" as="font" type="font/woff2" crossorigin>
+<script>(function(d){if(!matchMedia('(prefers-reduced-motion: reduce)').matches){d.documentElement.classList.add('motion');setTimeout(function(){if(!d.documentElement.classList.contains('ready'))d.documentElement.classList.remove('motion')},3000)}})(document)</script>
+<script defer src="https://cloud.umami.is/script.js" data-website-id="8df92b2d-e60b-4f9e-afc7-61b78ad1a912"></script>
+<style>
+@font-face{font-family:"Bricolage";src:url("assets/fonts/bricolage.woff2") format("woff2");font-weight:200 800;font-stretch:75% 100%;font-display:swap}
+@font-face{font-family:"DM Sans";src:url("assets/fonts/dm-sans.woff2") format("woff2");font-weight:100 1000;font-display:swap}
+:root{
+  --sky:#aedceb; --sky-soft:#d7eef6; --pink:#ee7fb0; --pink-deep:#b8326f; --yellow:#f6e62b; --teal:#27b3b0; --lilac:#d8c7ec; --mustard:#f7b928;
+  --ink:#2a1f3d; --ink-2:#4a3f5e; --paper:#fffaf3; --line:#e6dccf;
+  --display:"Bricolage","Arial Narrow",Arial,sans-serif; --body:"DM Sans",system-ui,sans-serif;
+  --ease:cubic-bezier(.2,.7,.1,1); --gut:clamp(16px,3.2vw,48px);
+}
+*{box-sizing:border-box}
+html{scroll-behavior:auto}
+html.lenis,html.lenis body{height:auto}
+body{margin:0;background:var(--paper);color:var(--ink);font:400 17px/1.6 var(--body);-webkit-font-smoothing:antialiased;overflow-x:clip}
+img{max-width:100%;display:block}
+p{margin:0}
+a{color:inherit}
+.wrap{max-width:1360px;margin:0 auto;padding-inline:var(--gut)}
+h1,h2,h3{font-family:var(--display);margin:0;font-weight:800;font-stretch:80%;letter-spacing:-.015em;text-wrap:balance}
+h2{font-size:clamp(44px,6.6vw,104px);line-height:.94}
+.lbl{font:700 12px/1 var(--body);letter-spacing:.2em;text-transform:uppercase}
+:focus-visible{outline:3px solid var(--ink);outline-offset:3px;border-radius:4px}
+.dark :focus-visible,.dark:focus-visible{outline-color:var(--yellow)}
+[hidden]{display:none!important}
+.sr{position:absolute;width:1px;height:1px;overflow:hidden;clip:rect(0 0 0 0);white-space:nowrap}
+.btn{display:inline-flex;align-items:center;justify-content:center;gap:10px;min-height:48px;font:700 14px/1 var(--body);letter-spacing:.12em;text-transform:uppercase;text-decoration:none;padding:16px 26px;border-radius:999px;border:2px solid var(--ink);cursor:pointer;background:var(--ink);color:var(--paper);transition:background-color .25s,color .25s,transform .25s var(--ease)}
+.btn:hover{background:var(--pink);color:var(--ink);transform:translateY(-2px)}
+.btn.yellow{background:var(--yellow);color:var(--ink)}
+.btn.yellow:hover{background:var(--paper)}
+.btn.ghost{background:transparent;color:var(--ink)}
+.btn.ghost:hover{background:var(--ink);color:var(--paper)}
+.dark .btn.ghost{color:var(--paper);border-color:var(--paper)}
+.dark .btn.ghost:hover{background:var(--paper);color:var(--ink)}
+.dark .btn{border-color:var(--yellow)}
+.link{font:700 13px/1.2 var(--body);letter-spacing:.12em;text-transform:uppercase;text-underline-offset:5px;text-decoration-thickness:2px;cursor:pointer;background:none;border:0;padding:12px 0;color:inherit}
+.link:hover{color:var(--pink-deep)}
+.dark .link:hover{color:var(--yellow)}
+
+/* preview banner */
+.concept{background:var(--ink);color:#e9e2f2;font-size:13px;line-height:19px;text-align:center;padding:9px 16px}
+.concept a{color:#fff;font-weight:700;text-underline-offset:3px}
+.concept span{display:inline-block}
+
+/* header */
+.top{position:sticky;top:0;z-index:50;background:color-mix(in srgb,var(--sky) 92%,transparent);backdrop-filter:blur(10px);-webkit-backdrop-filter:blur(10px);transition:transform .5s cubic-bezier(.2,.8,.2,1)}
+.top.away{transform:translateY(-100%)}
+.top .wrap{display:flex;align-items:center;gap:28px;height:80px}
+.brand{display:block;line-height:0;border-radius:14px;flex:none}
+.brand img{width:60px;height:60px;border-radius:16px}
+.top nav{display:flex;gap:28px;margin-left:auto}
+.top nav a{font:700 13px/1 var(--body);letter-spacing:.14em;text-transform:uppercase;text-decoration:none;padding:14px 2px;border-bottom:2px solid transparent}
+.top nav a:hover{border-bottom-color:var(--ink)}
+.top .btn{padding:13px 22px;min-height:44px;font-size:12px}
+@media (max-width:860px){.top nav{display:none}.top .btn{margin-left:auto}}
+
+/* hero */
+.hero{position:relative;background:var(--sky);overflow:hidden;padding-bottom:0}
+.hero .stage{position:relative;max-width:1440px;margin:0 auto;min-height:min(780px,calc(100svh - 112px));min-height:clamp(640px,calc(100svh - 112px),820px)}
+.brush{position:absolute;left:-5%;top:7%;width:66%;height:80%;background:var(--pink);clip-path:polygon(2% 14%,10% 6%,26% 9%,44% 3%,66% 8%,84% 2%,100% 10%,93% 24%,99% 38%,92% 52%,100% 66%,90% 80%,96% 96%,74% 90%,52% 98%,30% 91%,12% 97%,4% 84%,0 62%,5% 44%,0 28%);transform:rotate(-3deg)}
+.brush::after{content:"";position:absolute;inset:0;background:linear-gradient(100deg,transparent 30%,#ffffff2e 50%,transparent 70%)}
+.frame{position:absolute;left:4%;top:12%;width:55%;height:68%;border:10px solid var(--yellow);transform:rotate(-1deg)}
+.hero-copy{position:relative;z-index:3;padding:clamp(56px,9vw,120px) var(--gut) 0;max-width:min(62%,900px)}
+.hero h1{font-size:clamp(60px,10.6vw,170px);line-height:.88;font-weight:800;font-stretch:75%;letter-spacing:-.025em}
+.hero .lead{font-size:clamp(17px,1.5vw,21px);max-width:27em;margin-top:clamp(26px,3vw,44px);font-weight:500}
+.hero .ctas{display:flex;gap:12px;flex-wrap:wrap;margin-top:28px}
+.hero .eyebrow{display:block;margin-bottom:22px}
+.ph{position:absolute;margin:0;overflow:hidden;z-index:2;background:var(--sky-soft)}
+.ph img{width:100%;height:100%;object-fit:cover}
+.ph.a{right:15%;top:5%;width:21%;aspect-ratio:3/4.2;border-radius:999px 999px 14px 14px;border:6px solid var(--paper)}
+.ph.b{right:3%;top:38%;width:19%;aspect-ratio:1;border-radius:50%;border:6px solid var(--paper)}
+.ph.c{right:22%;bottom:4%;width:25%;aspect-ratio:16/10;border-radius:14px;border:6px solid var(--paper)}
+.shape{position:absolute;z-index:1;pointer-events:none}
+.s-tri{right:6%;top:6%;width:120px;height:104px;background:var(--pink-deep);clip-path:polygon(50% 0,100% 100%,0 100%)}
+.s-tri::after{content:"";position:absolute;inset:12px 22px 10px;background:var(--sky);clip-path:polygon(50% 0,100% 100%,0 100%)}
+.s-semi{right:2%;bottom:7%;width:130px;height:65px;background:var(--mustard);border-radius:130px 130px 0 0}
+.s-block{right:39%;top:4%;width:70px;height:70px;background:var(--lilac)}
+.proof{background:var(--yellow);border-block:2px solid var(--ink)}
+.proof .wrap{display:flex;gap:6px 30px;justify-content:center;align-items:center;flex-wrap:wrap;padding-block:14px;font:700 14px/1.3 var(--body);letter-spacing:.06em;text-align:center}
+.proof svg{width:14px;height:14px;fill:var(--ink);vertical-align:-1px}
+.proof i{font-style:normal;opacity:.55}
+@media (max-width:900px){
+  .hero .stage{min-height:0;padding-bottom:30px}
+  .brush{left:-14%;top:2%;width:122%;height:360px;transform:rotate(-4deg)}
+  .frame{left:6%;top:40px;width:88%;height:236px}
+  .hero-copy{max-width:none;padding-top:62px}
+  .hero h1{font-size:clamp(60px,17.5vw,120px)}
+  .hero .lead{margin-top:64px}
+  .photos{position:relative;height:410px;margin-top:34px}
+  .ph.a{left:5%;right:auto;top:0;width:46%}
+  .ph.b{right:5%;top:70px;width:40%}
+  .ph.c{display:none}
+  .shape{display:none}
+  .s-semi{display:block;right:44%;bottom:0;width:90px;height:45px}
+}
+@media (min-width:901px){.photos{display:contents}}
+html.motion:not(.ready) .hero h1 .ln>span{transform:translateY(105%)}
+html.motion:not(.ready) [data-intro]{opacity:0}
+.hero h1 .ln{display:block;overflow:hidden;padding-bottom:.06em;margin-bottom:-.06em}
+
+/* statement */
+.state{background:var(--ink);color:var(--paper);padding-block:clamp(90px,12vw,170px);position:relative;overflow:hidden}
+.state .lbl{color:var(--yellow);display:block;margin-bottom:30px}
+.state p.big{font:700 clamp(34px,5vw,76px)/1.06 var(--display);font-stretch:80%;max-width:17em;letter-spacing:-.015em}
+.state p.big em{font-style:normal;color:var(--pink)}
+.state .dots{position:absolute;right:-60px;top:-60px;width:260px;height:260px;border-radius:50%;background:var(--teal);opacity:.9}
+.state .dots2{position:absolute;right:120px;bottom:-30px;width:120px;height:60px;border-radius:120px 120px 0 0;background:var(--mustard)}
+
+/* signature: the colour list */
+.ladder{position:relative;background:var(--sky)}
+.panels{list-style:none;margin:0;padding:0}
+.panel{position:relative;display:grid;grid-template-columns:minmax(0,1.15fr) minmax(0,1fr);gap:clamp(20px,4vw,64px);align-items:center;padding:clamp(70px,9vw,120px) var(--gut);min-height:70svh;color:var(--ink);overflow:hidden;isolation:isolate}
+.panel .pr{font:800 clamp(130px,25vw,400px)/.8 var(--display);font-stretch:75%;letter-spacing:-.05em;white-space:nowrap}
+.panel .pr .from{font:700 clamp(15px,1.4vw,20px)/1 var(--body);letter-spacing:.2em;text-transform:uppercase;display:block;margin-bottom:22px}
+.panel .pn{font:700 12px/1 var(--body);letter-spacing:.2em;text-transform:uppercase}
+.panel h3{font-size:clamp(38px,4.6vw,72px);line-height:.95;margin:16px 0 18px}
+.panel .pd{font-size:clamp(17px,1.35vw,20px);max-width:24em;font-weight:500}
+.panel .pb{margin-top:26px}
+.panel .art{position:absolute;pointer-events:none}
+.panel .pimg{width:min(300px,36%);aspect-ratio:3/4;border-radius:999px 999px 16px 16px;overflow:hidden;border:6px solid var(--paper);position:absolute;right:clamp(16px,6vw,110px);bottom:clamp(20px,6vw,80px);transform:rotate(3deg)}
+.panel .pimg img{width:100%;height:100%;object-fit:cover}
+.p1{background:var(--sky)}
+.p2{background:var(--yellow)}
+.p3{background:var(--pink)}
+.p4{background:var(--teal)}
+.p5{background:var(--lilac)}
+.panel .pr{position:relative}
+.panel .txt{position:relative;z-index:2;padding-right:min(30%,300px)}
+.p1 .art{right:8%;top:14%;width:150px;height:130px;background:var(--pink-deep);clip-path:polygon(50% 0,100% 100%,0 100%)}
+.p2 .art{right:10%;bottom:10%;width:220px;height:110px;border-radius:220px 220px 0 0;background:var(--pink)}
+.p4 .art{right:12%;top:16%;width:150px;height:150px;border-radius:50%;background:var(--yellow)}
+.p4 .art2{right:22%;bottom:14%;width:120px;height:120px;background:var(--lilac)}
+.lad-top{position:absolute;z-index:5;left:var(--gut);right:var(--gut);top:calc(72px + 18px);display:none;justify-content:space-between;align-items:center;pointer-events:none}
+.lad-top h2{font:800 15px/1 var(--body);letter-spacing:.2em;text-transform:uppercase;font-stretch:100%}
+.lad-top .cnt{font:700 14px/1 var(--body);letter-spacing:.14em;font-variant-numeric:tabular-nums}
+.lad-top .rail{display:flex;gap:6px;margin-top:12px}
+.lad-top .rail i{width:34px;height:4px;border-radius:2px;background:#2a1f3d33;transition:background-color .3s}
+.lad-top .rail i.on{background:var(--ink)}
+.lad-head{padding:clamp(70px,8vw,110px) var(--gut) 0;background:var(--sky)}
+.lad-head h2{max-width:10em}
+.lad-head p{max-width:30em;margin-top:22px;font-weight:500;font-size:19px}
+.ladder.pinned .lad-head{display:none}
+.ladder.pinned{height:100svh;overflow:hidden}
+.ladder.pinned .panels{position:relative;height:100%}
+.ladder.pinned .panel{position:absolute;inset:0;min-height:0;padding-top:100px}
+.ladder.pinned .lad-top{display:flex}
+.ladder.pinned .lad-top .l{display:block}
+.ladnote{background:var(--paper);padding-block:clamp(60px,7vw,100px)}
+.ladnote .wrap{display:grid;grid-template-columns:1fr 1fr;gap:40px 80px;align-items:start}
+.ladnote p{font-size:19px;max-width:30em}
+.ladnote .also{display:flex;flex-direction:column;gap:14px;align-items:flex-start}
+@media (max-width:900px){
+  .panel{grid-template-columns:1fr;min-height:0;padding-top:96px;padding-bottom:56px;gap:14px}
+  .panel .pr{font-size:clamp(130px,42vw,230px)}
+  .panel .txt{padding-right:0}
+  .panel .pimg{position:relative;right:auto;bottom:auto;width:min(220px,58%);margin:18px 0 0 auto;transform:rotate(3deg)}
+  .panel .art{opacity:.7}
+  .p1 .art{width:90px;height:78px;right:16px;top:22px}
+  .p2 .art{width:150px;height:75px;right:-10px;bottom:auto;top:28px;border-radius:150px 150px 0 0}
+  .p4 .art{width:90px;height:90px;right:16px;top:22px}
+  .p4 .art2{display:none}
+  .ladnote .wrap{grid-template-columns:1fr}
+}
+
+/* reviews */
+.reviews{background:var(--yellow);padding-block:clamp(70px,9vw,130px) 0;position:relative;overflow:hidden}
+.rv-top{display:grid;grid-template-columns:auto 1fr;gap:20px clamp(24px,5vw,80px);align-items:end}
+.rv-score{font:800 clamp(110px,18vw,260px)/.78 var(--display);font-stretch:75%;letter-spacing:-.05em}
+.rv-meta .stars{display:flex;gap:6px;margin-bottom:14px}
+.stars svg{width:30px;height:30px;fill:var(--ink)}
+.rv-meta p{font-size:19px;font-weight:500;max-width:22em}
+.rv-meta b{font-variant-numeric:tabular-nums}
+.reviews h2{margin-top:56px;max-width:11em}
+.rv-cards{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:20px;margin-top:48px;padding-bottom:70px;align-items:start}
+.rv{margin:0;padding:clamp(26px,3vw,40px);border:2px solid var(--ink);border-radius:26px;display:flex;flex-direction:column;gap:26px;min-height:340px;justify-content:space-between;box-shadow:8px 8px 0 var(--ink)}
+.rv:nth-child(1){background:var(--pink)}
+.rv:nth-child(2){background:var(--paper);margin-top:44px}
+.rv:nth-child(3){background:var(--teal);margin-top:14px}
+.rv blockquote{margin:0;font:700 clamp(26px,2.6vw,40px)/1.08 var(--display);font-stretch:85%;letter-spacing:-.01em}
+.rv .stars svg{width:20px;height:20px}
+.rv figcaption{font-size:15px;font-weight:700;display:flex;justify-content:space-between;gap:12px;flex-wrap:wrap;align-items:center}
+.rv figcaption span{font-weight:500}
+.rv .stars{margin:0}
+.ribbon{background:var(--ink);color:var(--paper);border-top:2px solid var(--ink);overflow:hidden;padding-block:20px}
+.ribbon .rv-row{display:flex;width:max-content;gap:0;will-change:transform}
+.ribbon .it{display:flex;align-items:center;gap:22px;padding-right:22px;font:700 clamp(22px,2.4vw,34px)/1 var(--display);font-stretch:80%;white-space:nowrap}
+.ribbon .it svg{width:22px;height:22px;fill:var(--yellow);flex:none}
+.ribbon .it span{font:500 15px/1 var(--body);color:var(--sky)}
+.rv-more{background:var(--ink);padding:6px var(--gut) 40px;text-align:center}
+.rv-more .link{color:var(--paper)}
+@media (max-width:900px){
+  .rv-top{grid-template-columns:1fr}
+  .rv-cards{grid-template-columns:1fr;gap:18px}
+  .rv:nth-child(n){margin-top:0;min-height:0}
+  .reviews h2{margin-top:40px}
+}
+
+/* team */
+.team{padding-block:clamp(80px,10vw,150px);background:var(--paper)}
+.team .intro{display:flex;justify-content:space-between;align-items:end;gap:30px;flex-wrap:wrap}
+.team .intro p{max-width:24em;font-size:19px}
+.team-grid{display:grid;grid-template-columns:repeat(5,minmax(0,1fr));gap:18px;margin-top:60px;align-items:start}
+.member{display:grid;gap:14px;justify-items:start}
+.member:nth-child(even){margin-top:46px}
+.member .mono{width:100%;aspect-ratio:3/4;border-radius:999px 999px 18px 18px;display:grid;place-items:center;font:800 clamp(110px,12vw,190px)/1 var(--display);font-stretch:75%;color:var(--ink);transition:transform .5s var(--ease)}
+.member:hover .mono{transform:rotate(-2deg) scale(1.02)}
+.m1 .mono{background:var(--pink)} .m2 .mono{background:var(--yellow)} .m3 .mono{background:var(--teal)} .m4 .mono{background:var(--lilac)} .m5 .mono{background:var(--sky)}
+.member h3{font-size:34px;line-height:1}
+.member p{font-size:15.5px;color:var(--ink-2)}
+@media (max-width:1000px){.team-grid{grid-template-columns:repeat(2,minmax(0,1fr));gap:30px 16px}.member:nth-child(even){margin-top:30px}.member:last-child{grid-column:1/-1;max-width:48%}.member .mono{font-size:clamp(100px,26vw,170px)}}
+
+/* gallery */
+.gallery{padding-block:0 clamp(80px,10vw,150px);background:var(--paper);overflow:hidden}
+.gallery .head{display:flex;justify-content:space-between;align-items:end;gap:24px;flex-wrap:wrap}
+.g-grid{display:grid;grid-template-columns:1.5fr 1fr 1fr;grid-template-rows:auto auto;gap:18px;margin-top:50px}
+.g-grid figure{margin:0;overflow:hidden;position:relative;background:var(--sky-soft);border-radius:18px}
+.g-grid img{width:100%;height:116%;object-fit:cover}
+.g-grid .g1{grid-row:span 2;aspect-ratio:auto;min-height:560px;border-radius:999px 999px 18px 18px}
+.g-grid .g2{aspect-ratio:3/3.6}
+.g-grid .g3{aspect-ratio:3/3.6}
+.g-grid .g4{grid-column:2/4;aspect-ratio:16/8.2}
+.g-grid figcaption{position:absolute;left:12px;bottom:12px;z-index:2;background:var(--paper);font:700 11px/1 var(--body);letter-spacing:.14em;text-transform:uppercase;padding:9px 12px;border-radius:999px}
+.g-grid .g1 figcaption{left:50%;transform:translateX(-50%)}
+@media (max-width:900px){.g-grid{grid-template-columns:1fr 1fr}.g-grid .g1{grid-column:1/-1;grid-row:auto;min-height:0;aspect-ratio:4/4.6}.g-grid .g4{grid-column:1/-1;aspect-ratio:16/10}}
+
+/* visit */
+.visit{background:var(--ink);color:var(--paper);padding-block:clamp(80px,10vw,140px) 36px;position:relative;overflow:hidden}
+.visit .row{display:grid;grid-template-columns:minmax(0,1.3fr) minmax(0,1fr) minmax(0,1fr);gap:48px;align-items:start}
+.visit .lbl{color:var(--yellow)}
+.visit h2{margin-top:20px;font-size:clamp(46px,6vw,92px)}
+.visit h2 em{font-style:normal;color:var(--pink)}
+.visit address{font-style:normal;margin-top:24px;font-size:20px;line-height:1.5}
+.visit dl{display:grid;grid-template-columns:auto auto;gap:12px 24px;margin:18px 0 0;font-size:18px;justify-content:start}
+.visit dd{margin:0;font-variant-numeric:tabular-nums}
+.visit .small{font-size:15px;color:#cfc6dd;margin-top:16px;max-width:24em}
+.visit .acts{display:flex;flex-direction:column;gap:12px;align-items:flex-start;margin-top:18px}
+.visit .base{display:flex;justify-content:space-between;flex-wrap:wrap;gap:12px 24px;border-top:1px solid #4a3f5e;padding-top:20px;margin-top:70px;font-size:14px;color:#cfc6dd;position:relative;z-index:2}
+.visit .base a{color:#fff}
+.visit .logo-big{width:min(300px,60%);border-radius:28px;margin-top:70px;display:block}
+.giantword{font:800 clamp(90px,24vw,380px)/.78 var(--display);font-stretch:75%;letter-spacing:-.05em;margin:60px 0 0 -.03em;white-space:nowrap;color:var(--pink)}
+@media (max-width:900px){.visit .row{grid-template-columns:1fr;gap:40px}}
+
+/* drawer */
+.scrim{position:fixed;inset:0;background:#2a1f3dbf;z-index:80;opacity:0;transition:opacity .35s}
+.scrim.on{opacity:1}
+.drawer{position:fixed;top:0;right:0;bottom:0;width:min(660px,100%);background:var(--paper);color:var(--ink);z-index:81;display:flex;flex-direction:column;transform:translateX(100%);transition:transform .55s var(--ease);box-shadow:-30px 0 60px -20px #0006}
+.drawer.on{transform:none}
+.dr-head{display:flex;justify-content:space-between;align-items:center;gap:12px;padding:16px 24px;background:var(--sky)}
+.dr-head img{width:44px;height:44px;border-radius:12px}
+.dr-close{cursor:pointer;font:700 12px/1 var(--body);letter-spacing:.16em;text-transform:uppercase;padding:14px 16px;min-height:44px;background:var(--ink);color:var(--paper);border:0;border-radius:999px}
+.dr-close:hover{background:var(--pink);color:var(--ink)}
+.prog{display:flex;gap:6px;padding:14px 24px 0}
+.prog i{flex:1;height:4px;border-radius:2px;background:var(--line)}
+.prog i.on{background:var(--pink)}
+.dr-body{flex:1;overflow-y:auto;padding:22px 24px 28px;overscroll-behavior:contain}
+.dr-body h3{font-size:clamp(34px,5vw,46px);line-height:.98;margin:6px 0 20px}
+.dr-body h3:focus{outline:none}
+.opt{display:grid;grid-template-columns:minmax(0,1fr) auto;gap:4px 16px;width:100%;text-align:left;font:inherit;color:inherit;padding:16px 18px;border:2px solid var(--line);border-radius:16px;margin-bottom:10px;cursor:pointer;background:#fff;min-height:56px}
+.opt:hover{border-color:var(--ink)}
+.opt[aria-pressed="true"]{border-color:var(--ink);background:var(--yellow);box-shadow:4px 4px 0 var(--ink)}
+.opt b{font:700 20px/1.2 var(--display);font-stretch:85%}
+.opt span{font-size:14px;color:var(--ink-2)}
+.opt[aria-pressed="true"] span{color:var(--ink)}
+.opt .pp{font:700 18px/1 var(--display);font-stretch:85%;color:var(--ink);align-self:center;grid-row:span 2;white-space:nowrap}
+.ocat{font:700 11px/1 var(--body);letter-spacing:.2em;text-transform:uppercase;color:var(--pink-deep);margin:22px 0 10px}
+.ocat:first-of-type{margin-top:0}
+.styl{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:10px}
+.styl .opt{grid-template-columns:1fr;text-align:center;justify-items:center;padding:18px 8px;margin:0}
+.styl .av{width:60px;height:60px;border-radius:50%;display:grid;place-items:center;font:800 30px/1 var(--display);margin-bottom:6px;color:var(--ink)}
+.cal{display:grid;grid-template-columns:repeat(7,minmax(0,1fr));gap:6px}
+.cal button{cursor:pointer;text-align:center;padding:10px 0;min-height:56px;border:2px solid var(--line);border-radius:12px;background:#fff;display:grid;gap:2px;font:inherit;color:inherit}
+.cal button small{font:700 10px/1 var(--body);letter-spacing:.1em;text-transform:uppercase;color:var(--ink-2)}
+.cal button b{font:800 21px/1 var(--display)}
+.cal button[aria-pressed="true"]{background:var(--ink);color:var(--paper);border-color:var(--ink)}
+.cal button[aria-pressed="true"] small{color:var(--yellow)}
+.cal button:disabled{opacity:.35;cursor:not-allowed}
+.slots{display:grid;grid-template-columns:repeat(auto-fill,minmax(82px,1fr));gap:6px;margin-top:18px}
+.slots button{cursor:pointer;text-align:center;padding:12px 0;min-height:48px;border:2px solid var(--line);border-radius:12px;background:#fff;font:700 15px/1 var(--body);font-variant-numeric:tabular-nums;color:inherit}
+.slots button[aria-pressed="true"]{background:var(--pink);border-color:var(--ink)}
+.slots button:disabled{opacity:.35;text-decoration:line-through;cursor:not-allowed}
+.eg{font:700 11px/1.3 var(--body);letter-spacing:.14em;text-transform:uppercase;color:var(--pink-deep);margin:0 0 12px}
+.fields{display:grid;gap:14px}
+.fields label{display:grid;gap:6px;font-size:14px;font-weight:700}
+.fields input,.fields textarea{font:inherit;font-size:16px;font-weight:400;border:2px solid var(--line);background:#fff;padding:13px 14px;color:var(--ink);border-radius:12px;min-height:48px}
+.fields input:focus,.fields textarea:focus{outline:3px solid var(--ink);outline-offset:1px;border-color:var(--ink)}
+.dr-foot{border-top:2px solid var(--line);padding:16px 24px calc(16px + env(safe-area-inset-bottom,0px));display:flex;justify-content:space-between;align-items:center;gap:16px;background:var(--paper)}
+.dr-foot .sum{font-size:13.5px;color:var(--ink-2);line-height:1.35;min-width:0}
+.dr-foot .sum b{display:block;color:var(--ink);font:700 18px/1.2 var(--display);font-stretch:85%}
+.dr-foot .acts{display:flex;gap:8px;flex:none}
+.dr-foot .btn{padding:14px 20px;font-size:12px;min-height:46px}
+.dr-foot .btn:disabled{opacity:.4;cursor:not-allowed;transform:none}
+.done{text-align:center;display:grid;gap:14px;justify-items:center;padding-top:16px}
+.done .seal{width:96px;height:96px;border-radius:50%;background:var(--yellow);border:2px solid var(--ink);display:grid;place-items:center;font:800 48px/1 var(--display);color:var(--ink)}
+.done dl{display:grid;grid-template-columns:auto auto;gap:8px 24px;margin:8px 0 0;text-align:left;font-size:16px}
+.done dt{color:var(--ink-2)}
+.done dd{margin:0;font-weight:700}
+.done .note{color:var(--ink-2);font-size:14.5px;max-width:28em}
+.done .note.pv{color:var(--ink);font-weight:700}
+@media (max-width:520px){.styl{grid-template-columns:1fr 1fr}.cal{gap:4px}.dr-foot{flex-direction:column;align-items:stretch}.dr-foot .acts{justify-content:flex-end}}
+@media (prefers-reduced-motion:reduce){*{transition-duration:.01ms!important;scroll-behavior:auto!important}}
+</style>
+</head>
+<body>
+<svg width="0" height="0" style="position:absolute" aria-hidden="true" focusable="false"><symbol id="star" viewBox="0 0 24 24"><path d="M12 1.8l3 6.8 7.4.7-5.6 4.9 1.7 7.2L12 17.6l-6.5 3.8 1.7-7.2L1.6 9.3 9 8.6z"/></symbol></svg>
+
+<div class="concept" role="note"><span>Website concept for The Space — preview only, not the live site.</span> <span>Designed by <a href="https://itchenstudio.co.uk" data-umami-event="Itchen Studio link">Itchen Studio</a> · <a href="mailto:sam@itchenstudio.co.uk">sam@itchenstudio.co.uk</a></span></div>
+
+<header class="top">
+  <div class="wrap">
+    <a class="brand" href="#top" aria-label="The Space Hair Studio, home"><img src="assets/img/logo-96.webp" srcset="assets/img/logo-96.webp 1x, assets/img/logo-480.webp 3x" width="60" height="60" alt="The Space Hair Studio logo"></a>
+    <nav aria-label="Main"><a href="#colour">Colour</a><a href="#reviews">Reviews</a><a href="#team">Team</a><a href="#gallery">Gallery</a><a href="#visit">Visit</a></nav>
+    <button class="btn" type="button" data-book>Book</button>
+  </div>
+</header>
+
+<main id="top">
+<section class="hero" aria-labelledby="h1">
+  <div class="stage">
+    <div class="brush" aria-hidden="true"></div>
+    <div class="frame" aria-hidden="true"></div>
+    <span class="shape s-block" aria-hidden="true" data-drift="-30"></span>
+    <span class="shape s-tri" aria-hidden="true" data-drift="-50"></span>
+    <span class="shape s-semi" aria-hidden="true" data-drift="-20"></span>
+    <div class="hero-copy">
+      <span class="lbl eyebrow" data-intro>The Space Hair Studio · Southampton</span>
+      <h1 id="h1"><span class="ln"><span>A bright room</span></span><span class="ln"><span>for colour</span></span></h1>
+      <p class="lead" data-intro>A colour-led hair studio at The Polygon. Five stylists, painted walls and a colour list that starts at £30.</p>
+      <div class="ctas" data-intro><button class="btn yellow" type="button" data-book data-cat="consult">Book a colour consultation</button><a class="btn ghost" href="#colour">See the colour list</a></div>
+    </div>
+    <div class="photos">
+      <figure class="ph a" data-drift="-26"><img src="assets/img/vivid-620.webp" width="572" height="810" alt="Long blonde hair with vivid pink and green sections, seen from behind" fetchpriority="high"></figure>
+      <figure class="ph b" data-drift="-60"><img src="assets/img/salon-828.webp" width="828" height="960" alt="Pink styling chairs facing round lit mirrors on a lilac wall" style="object-position:50% 40%"></figure>
+      <figure class="ph c" data-drift="-14"><img src="assets/img/decor-1100.webp" srcset="assets/img/decor-1100.webp 1100w, assets/img/decor-2000.webp 2000w" sizes="25vw" width="1100" height="573" alt="Pastel rocking chairs, a lilac table and a patterned rug against a yellow wall"></figure>
+    </div>
+  </div>
+</section>
+
+<div class="proof">
+  <div class="wrap"><span><svg aria-hidden="true"><use href="#star"/></svg> 5.0 on Fresha</span><i aria-hidden="true">/</i><span>535 reviews</span><i aria-hidden="true">/</i><span>Five stylists</span><i aria-hidden="true">/</i><span>The Polygon, since 2020</span></div>
+</div>
+
+<section class="state dark" aria-label="About the studio">
+  <span class="dots" aria-hidden="true"></span><span class="dots2" aria-hidden="true"></span>
+  <div class="wrap">
+    <span class="lbl">The room</span>
+    <p class="big" id="stmt">Pink chairs. Round mirrors. Walls in yellow, teal and lilac. <em>Five stylists, and colour first.</em></p>
+  </div>
+</section>
+
+<section class="ladder" id="colour" aria-labelledby="lad-h">
+  <div class="lad-head">
+    <p class="lbl">The colour list</p>
+    <h2 id="lad-h" style="margin-top:18px">Five ways into colour</h2>
+    <p>Each one starts from a price. Every stylist sets their own, so your consultation settles yours.</p>
+  </div>
+  <div class="lad-top" aria-hidden="true"><div><span class="l lbl">The colour list</span><div class="rail"><i class="on"></i><i></i><i></i><i></i><i></i></div></div><span class="cnt">01 / 05</span></div>
+  <ol class="panels">
+    <li class="panel p1">
+      <span class="art" aria-hidden="true"></span>
+      <div class="pr"><span class="from">From</span>£30</div>
+      <div class="txt"><p class="pn">01 · Reset</p><h3>Colour cleanse</h3><p class="pd">The lightest way in. A clean start before you change direction.</p><p class="pb"><button class="btn" type="button" data-book data-svc="cleanse">Book this</button></p></div>
+    </li>
+    <li class="panel p2">
+      <span class="art" aria-hidden="true"></span>
+      <div class="pr"><span class="from">From</span>£35</div>
+      <div class="txt"><p class="pn">02 · Highlights</p><h3>A few foils</h3><p class="pd">Just a few, for a little light around the face or through the top.</p><p class="pb"><button class="btn" type="button" data-book data-svc="foils">Book this</button></p></div>
+    </li>
+    <li class="panel p3">
+      <div class="pr"><span class="from">From</span>£50</div>
+      <div class="txt"><p class="pn">03 · Creative</p><h3>Vivid and creative colour</h3><p class="pd">Pinks, greens, blues and anything else on the shade chart.</p><p class="pb"><button class="btn" type="button" data-book data-svc="vivid">Book this</button></p></div>
+      <div class="pimg" aria-hidden="true"><img src="assets/img/vivid-620.webp" alt="" loading="lazy"></div>
+    </li>
+    <li class="panel p4">
+      <span class="art" aria-hidden="true"></span><span class="art art2" aria-hidden="true"></span>
+      <div class="pr"><span class="from">From</span>£150</div>
+      <div class="txt"><p class="pn">04 · Lived-in light</p><h3>Balayage and foilyage</h3><p class="pd">Painted or foiled lightness, with root colour done in the same visit.</p><p class="pb"><button class="btn" type="button" data-book data-svc="balayage">Book this</button></p></div>
+    </li>
+    <li class="panel p5">
+      <div class="pr"><span class="from">From</span>£150</div>
+      <div class="txt"><p class="pn">05 · Blank canvas</p><h3>Full-head bleach</h3><p class="pd">Every strand lifted, root to tip, ready for whatever comes next.</p><p class="pb"><button class="btn" type="button" data-book data-svc="bleach">Book this</button></p></div>
+      <div class="pimg" aria-hidden="true"><img src="assets/img/blue-620.webp" alt="" loading="lazy"></div>
+    </li>
+  </ol>
+</section>
+<section class="ladnote" aria-label="Price notes">
+  <div class="wrap">
+    <p data-reveal>Prices are where each service starts. They depend on you and on the stylist you book, so ask when you come in for a chat first.</p>
+    <div class="also" data-reveal><p>Cuts and extensions are here too, priced by each stylist.</p><button class="btn" type="button" data-book data-cat="consult">Book a colour consultation</button></div>
+  </div>
+</section>
+
+<section class="reviews" id="reviews" aria-labelledby="rv-h">
+  <div class="wrap">
+    <div class="rv-top">
+      <div class="rv-score" aria-hidden="true" data-reveal>5.0</div>
+      <div class="rv-meta" data-reveal>
+        <div class="stars" role="img" aria-label="Five out of five stars"><svg aria-hidden="true"><use href="#star"/></svg><svg aria-hidden="true"><use href="#star"/></svg><svg aria-hidden="true"><use href="#star"/></svg><svg aria-hidden="true"><use href="#star"/></svg><svg aria-hidden="true"><use href="#star"/></svg></div>
+        <p>Rated 5.0 on Fresha, from <b data-count="535">535</b> client reviews.</p>
+      </div>
+    </div>
+    <h2 id="rv-h" data-split>What clients write on Fresha</h2>
+    <div class="rv-cards">
+      <figure class="rv" data-reveal>
+        <blockquote>“Lovely hair salon and friendly atmosphere”</blockquote>
+        <figcaption><span class="stars" aria-hidden="true"><svg><use href="#star"/></svg><svg><use href="#star"/></svg><svg><use href="#star"/></svg><svg><use href="#star"/></svg><svg><use href="#star"/></svg></span>Fresha - Kerrie M <span>Oct 2026</span></figcaption>
+      </figure>
+      <figure class="rv" data-reveal>
+        <blockquote>“Nicole understood what I wanted perfectly”</blockquote>
+        <figcaption><span class="stars" aria-hidden="true"><svg><use href="#star"/></svg><svg><use href="#star"/></svg><svg><use href="#star"/></svg><svg><use href="#star"/></svg><svg><use href="#star"/></svg></span>Fresha - Zoe F <span>Oct 2026</span></figcaption>
+      </figure>
+      <figure class="rv" data-reveal>
+        <blockquote>“Lovely hair colour and cut with Rose.”</blockquote>
+        <figcaption><span class="stars" aria-hidden="true"><svg><use href="#star"/></svg><svg><use href="#star"/></svg><svg><use href="#star"/></svg><svg><use href="#star"/></svg><svg><use href="#star"/></svg></span>Fresha - Ann H <span>Sep 2026</span></figcaption>
+      </figure>
+    </div>
+  </div>
+  <div class="ribbon dark" aria-hidden="true">
+    <div class="rv-row" data-speed="0.7">
+      <div class="it"><svg><use href="#star"/></svg>Lovely hair salon and friendly atmosphere <span>Fresha - Kerrie M</span><svg><use href="#star"/></svg>Nicole understood what I wanted perfectly <span>Fresha - Zoe F</span><svg><use href="#star"/></svg>Lovely hair colour and cut with Rose. <span>Fresha - Ann H</span></div>
+      <div class="it"><svg><use href="#star"/></svg>Lovely hair salon and friendly atmosphere <span>Fresha - Kerrie M</span><svg><use href="#star"/></svg>Nicole understood what I wanted perfectly <span>Fresha - Zoe F</span><svg><use href="#star"/></svg>Lovely hair colour and cut with Rose. <span>Fresha - Ann H</span></div>
+      <div class="it"><svg><use href="#star"/></svg>Lovely hair salon and friendly atmosphere <span>Fresha - Kerrie M</span><svg><use href="#star"/></svg>Nicole understood what I wanted perfectly <span>Fresha - Zoe F</span><svg><use href="#star"/></svg>Lovely hair colour and cut with Rose. <span>Fresha - Ann H</span></div>
+      <div class="it"><svg><use href="#star"/></svg>Lovely hair salon and friendly atmosphere <span>Fresha - Kerrie M</span><svg><use href="#star"/></svg>Nicole understood what I wanted perfectly <span>Fresha - Zoe F</span><svg><use href="#star"/></svg>Lovely hair colour and cut with Rose. <span>Fresha - Ann H</span></div>
+    </div>
+  </div>
+  <div class="rv-more dark"><a class="link" href="https://www.fresha.com/a/the-space-southampton-30-lower-banister-street-mcvq7uax" rel="noopener" target="_blank">Read all reviews on Fresha ↗</a></div>
+</section>
+
+<section class="team" id="team" aria-labelledby="team-h">
+  <div class="wrap">
+    <div class="intro">
+      <div><p class="lbl" data-reveal>The team</p><h2 id="team-h" data-split style="margin-top:18px">Five stylists, one room</h2></div>
+      <p data-reveal>Colour and extension specialists are part of the team. Each stylist sets their own prices.</p>
+    </div>
+    <div class="team-grid">
+      <article class="member m1" data-reveal><div class="mono" aria-hidden="true">F</div><h3>Frankie</h3><p>Stylist</p><button class="link" type="button" data-book data-sty="frankie">Book with Frankie</button></article>
+      <article class="member m2" data-reveal><div class="mono" aria-hidden="true">G</div><h3>Georgia</h3><p>Stylist</p><button class="link" type="button" data-book data-sty="georgia">Book with Georgia</button></article>
+      <article class="member m3" data-reveal><div class="mono" aria-hidden="true">R</div><h3>Rose</h3><p>Stylist</p><button class="link" type="button" data-book data-sty="rose">Book with Rose</button></article>
+      <article class="member m4" data-reveal><div class="mono" aria-hidden="true">H</div><h3>Hannah</h3><p>Stylist</p><button class="link" type="button" data-book data-sty="hannah">Book with Hannah</button></article>
+      <article class="member m5" data-reveal><div class="mono" aria-hidden="true">N</div><h3>Nicole</h3><p>Stylist</p><button class="link" type="button" data-book data-sty="nicole">Book with Nicole</button></article>
+    </div>
+  </div>
+</section>
+
+<section class="gallery" id="gallery" aria-labelledby="gal-h">
+  <div class="wrap">
+    <div class="head"><div><p class="lbl" data-reveal>Gallery</p><h2 id="gal-h" data-split style="margin-top:18px">The colour, and the room</h2></div><a class="link" href="https://www.instagram.com/thespacesouthampton/" rel="noopener" target="_blank" data-reveal>More on Instagram ↗</a></div>
+    <div class="g-grid">
+      <figure class="g1" data-clip><img src="assets/img/vivid-620.webp" alt="Long blonde hair with pink and green colour sections and a pink paper fan behind" loading="lazy" data-parallax width="572" height="810"><figcaption>Pink and green</figcaption></figure>
+      <figure class="g2" data-clip><img src="assets/img/blue-620.webp" alt="Blonde hair fading into deep blue at the ends against a lilac wall" loading="lazy" data-parallax width="610" height="802"><figcaption>Blue at the ends</figcaption></figure>
+      <figure class="g3" data-clip><img src="assets/img/salon-828.webp" alt="Row of pink styling chairs facing round lit mirrors on a lilac and teal wall" loading="lazy" data-parallax width="828" height="960"><figcaption>Chairs and mirrors</figcaption></figure>
+      <figure class="g4" data-clip><img src="assets/img/decor-1100.webp" srcset="assets/img/decor-1100.webp 1100w, assets/img/decor-2000.webp 2000w" sizes="(max-width:900px) 100vw, 50vw" alt="Pastel rocking chairs and a lilac coffee table with flowers on a patterned rug" loading="lazy" data-parallax width="1100" height="573"><figcaption>The waiting corner</figcaption></figure>
+    </div>
+  </div>
+</section>
+</main>
+
+<footer class="visit dark" id="visit" aria-labelledby="visit-h">
+  <div class="wrap">
+    <div class="row">
+      <div><p class="lbl">Find us</p><h2 id="visit-h">At <em>The Polygon</em></h2><address>The Space Hair Studio<br>30 Lower Banister Street<br>Southampton SO15 2EH</address><p class="small">In the Polygon area of Southampton.</p></div>
+      <div><p class="lbl">Opening hours</p><dl><dt>Tue–Wed</dt><dd>10am – 6pm</dd><dt>Thu</dt><dd>10am – 8pm</dd><dt>Fri</dt><dd>10am – 7pm</dd><dt>Sat</dt><dd>10am – 5:30pm</dd></dl><p class="small">Tuesday to Saturday.</p></div>
+      <div><p class="lbl">Book or follow</p><div class="acts"><button class="btn yellow" type="button" data-book>Book a colour consultation</button><a class="link" href="https://www.instagram.com/thespacesouthampton/" rel="noopener" target="_blank">Instagram ↗</a><a class="link" href="https://www.facebook.com/p/The-Space-Southampton-Hair-Studio-100076043224674/" rel="noopener" target="_blank">Facebook ↗</a><a class="link" href="https://www.google.com/maps/search/?api=1&amp;query=30+Lower+Banister+Street+Southampton+SO15+2EH" rel="noopener" target="_blank">Open in maps ↗</a></div></div>
+    </div>
+    <p class="giantword" aria-hidden="true">The Space</p>
+    <div class="base"><span>Concept mock-up for The Space Hair Studio, not the live site.</span><span>Designed by <a href="https://itchenstudio.co.uk" data-umami-event="Itchen Studio link">Itchen Studio</a> · <a href="mailto:sam@itchenstudio.co.uk">sam@itchenstudio.co.uk</a></span></div>
+  </div>
+</footer>
+
+<div class="scrim" id="scrim" hidden></div>
+<aside class="drawer" id="drawer" role="dialog" aria-modal="true" aria-labelledby="dr-title" hidden>
+  <div class="dr-head"><img src="assets/img/logo-96.webp" width="44" height="44" alt=""><span class="lbl" id="dr-step">Step 1 of 4</span><button class="dr-close" type="button" id="dr-close">Close</button></div>
+  <div class="prog" aria-hidden="true"><i></i><i></i><i></i><i></i></div>
+  <div class="dr-body" id="dr-body"></div>
+  <div class="dr-foot" id="dr-foot"><div class="sum" id="dr-sum">Nothing chosen yet</div><div class="acts"><button class="btn ghost" type="button" id="dr-back">Back</button><button class="btn" type="button" id="dr-next">Continue</button></div></div>
+</aside>
+
+<script src="assets/js/gsap.min.js" defer></script>
+<script src="assets/js/ScrollTrigger.min.js" defer></script>
+<script src="assets/js/lenis.min.js" defer></script>
+<script src="assets/js/concept.js" defer></script>
+<script>
+document.addEventListener('DOMContentLoaded', function(){
+  var site = window.ConceptSite.init();
+  var esc = function(s){ return String(s).replace(/[&<>"]/g, function(c){ return {'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;'}[c]; }); };
+
+  /* ---------- booking drawer (sends nothing) ---------- */
+  var SERVICES = [
+    {id:'consult', c:'Start here', n:'Colour consultation', note:'Talk through colour before you commit', p:''},
+    {id:'cleanse', c:'Colour', n:'Colour cleanse', note:'', p:'from £30'},
+    {id:'foils', c:'Colour', n:'A few foils', note:'', p:'from £35'},
+    {id:'vivid', c:'Colour', n:'Vivid and creative colour', note:'', p:'from £50'},
+    {id:'balayage', c:'Colour', n:'Balayage and foilyage', note:'With root colour', p:'from £150'},
+    {id:'bleach', c:'Colour', n:'Full-head bleach', note:'', p:'from £150'},
+    {id:'cut', c:'Also here', n:'Cut', note:'Price set by your stylist', p:''},
+    {id:'ext', c:'Also here', n:'Extensions', note:'Price set by your stylist', p:''}
+  ];
+  var STYLISTS = [{id:'any',n:'Anyone',r:'First available',a:'✦',c:'#fffaf3'},{id:'frankie',n:'Frankie',r:'Stylist',a:'F',c:'#ee7fb0'},{id:'georgia',n:'Georgia',r:'Stylist',a:'G',c:'#f6e62b'},{id:'rose',n:'Rose',r:'Stylist',a:'R',c:'#27b3b0'},{id:'hannah',n:'Hannah',r:'Stylist',a:'H',c:'#d8c7ec'},{id:'nicole',n:'Nicole',r:'Stylist',a:'N',c:'#aedceb'}];
+  var OPEN = {2:[10,18],3:[10,18],4:[10,20],5:[10,19],6:[10,17.5]};
+  var DN = ['Sun','Mon','Tue','Wed','Thu','Fri','Sat'], MN = ['Jan','Feb','Mar','Apr','May','Jun','Jul','Aug','Sep','Oct','Nov','Dec'];
+  var drawer = document.getElementById('drawer'), scrim = document.getElementById('scrim'), body = document.getElementById('dr-body');
+  var B = {step:0, svc:null, sty:'any', day:null, time:null, name:'', phone:'', email:'', notes:'', ref:''}, lastFocus = null;
+  var today = new Date(); today.setHours(0,0,0,0);
+  var days = []; for (var i = 1; i <= 14; i++) days.push(new Date(today.getFullYear(), today.getMonth(), today.getDate() + i));
+  function svc(){ return SERVICES.find(function(s){ return s.id === B.svc; }); }
+  function lab(t){ return String(Math.floor(t)).padStart(2,'0') + ':' + (t % 1 ? '30' : '00'); }
+  function seeded(n){ var x = Math.sin(n) * 10000; return x - Math.floor(x); }
+  function slots(d){
+    var o = OPEN[d.getDay()]; if (!o) return [];
+    var out = []; for (var t = o[0]; t + 1 <= o[1]; t += .5) out.push({t:t, off: seeded(d.getDate() * 13 + t * 5 + B.sty.length * 3) < .38});
+    return out;
+  }
+  function when(){ var d = days[B.day]; return DN[d.getDay()] + ' ' + d.getDate() + ' ' + MN[d.getMonth()] + ', ' + lab(B.time); }
+  function render(){
+    var s = svc();
+    document.querySelectorAll('.prog i').forEach(function(p,k){ p.classList.toggle('on', k <= Math.min(B.step,3)); });
+    document.getElementById('dr-step').textContent = B.step < 4 ? 'Step ' + (B.step + 1) + ' of 4' : 'Booked';
+    var h = '';
+    if (B.step === 0) {
+      h = '<h3 id="dr-title" tabindex="-1">What would you like?</h3>';
+      var last = '';
+      SERVICES.forEach(function(x){
+        if (x.c !== last) { h += '<p class="ocat">' + x.c + '</p>'; last = x.c; }
+        h += '<button type="button" class="opt" data-svc="' + x.id + '" aria-pressed="' + (B.svc === x.id) + '"><b>' + esc(x.n) + '</b><span class="pp">' + esc(x.p) + '</span><span>' + esc(x.note) + '</span></button>';
+      });
+    } else if (B.step === 1) {
+      h = '<h3 id="dr-title" tabindex="-1">Who would you like?</h3><div class="styl">';
+      STYLISTS.forEach(function(x){ h += '<button type="button" class="opt" data-sty="' + x.id + '" aria-pressed="' + (B.sty === x.id) + '"><span class="av" aria-hidden="true" style="background:' + x.c + ';border:2px solid #2a1f3d">' + x.a + '</span><b>' + x.n + '</b><span>' + x.r + '</span></button>'; });
+      h += '</div>';
+    } else if (B.step === 2) {
+      h = '<h3 id="dr-title" tabindex="-1">Pick a day and time</h3><p class="eg">Example availability, not live</p><div class="cal">';
+      days.forEach(function(d,k){
+        var free = slots(d).some(function(x){ return !x.off; });
+        h += '<button type="button" data-day="' + k + '" aria-pressed="' + (B.day === k) + '" ' + (free ? '' : 'disabled') + ' aria-label="' + DN[d.getDay()] + ' ' + d.getDate() + ' ' + MN[d.getMonth()] + (free ? '' : ', not available') + '"><small>' + DN[d.getDay()] + '</small><b>' + d.getDate() + '</b></button>';
+      });
+      h += '</div><div class="slots" id="slots">';
+      if (B.day !== null) slots(days[B.day]).forEach(function(x){ h += '<button type="button" data-time="' + x.t + '" aria-pressed="' + (B.time === x.t) + '" ' + (x.off ? 'disabled aria-label="' + lab(x.t) + ', taken"' : '') + '>' + lab(x.t) + '</button>'; });
+      else h += '<p style="color:var(--ink-2);font-size:15px;grid-column:1/-1">Choose a day to see example times.</p>';
+      h += '</div>';
+    } else if (B.step === 3) {
+      h = '<h3 id="dr-title" tabindex="-1">Your details</h3><form class="fields" id="bk-form" novalidate><label>Full name<input id="f-n" autocomplete="name" value="' + esc(B.name) + '" required></label><label>Mobile<input id="f-p" type="tel" autocomplete="tel" value="' + esc(B.phone) + '" required></label><label>Email (optional)<input id="f-e" type="email" autocomplete="email" value="' + esc(B.email) + '"></label><label>Colour you have in mind, or what is on your hair now (optional)<textarea id="f-x" rows="3">' + esc(B.notes) + '</textarea></label></form>';
+    } else {
+      var st = STYLISTS.find(function(x){ return x.id === B.sty; });
+      h = '<div class="done" role="status"><span class="seal" aria-hidden="true">✓</span><p class="lbl">Reference ' + B.ref + '</p><h3 id="dr-title" tabindex="-1">You are booked in.</h3><dl><dt>Service</dt><dd>' + esc(s.n) + '</dd><dt>With</dt><dd>' + esc(st.n) + '</dd><dt>When</dt><dd>' + when() + '</dd></dl><p class="note pv">This is a preview — the form will go live with your new site.</p><p class="note">Nothing was sent or booked. The times above are examples.</p></div>';
+    }
+    body.innerHTML = h;
+    var sumEl = document.getElementById('dr-sum');
+    sumEl.innerHTML = s ? '<b>' + esc(s.n) + '</b>' + (s.p ? esc(s.p) : '') + (B.time !== null && B.day !== null ? (s.p ? ' · ' : '') + when() : '') : 'Nothing chosen yet';
+    var next = document.getElementById('dr-next'), back = document.getElementById('dr-back');
+    back.hidden = B.step === 0 || B.step === 4;
+    next.textContent = B.step === 3 ? 'Confirm booking' : B.step === 4 ? 'Done' : 'Continue';
+    next.disabled = (B.step === 0 && !B.svc) || (B.step === 2 && (B.day === null || B.time === null));
+    if (site.motion) gsap.from(body.children, {autoAlpha:0, x:24, duration:.45, stagger:.05, ease:'power3.out'});
+    var f = document.getElementById('bk-form'); if (f) f.addEventListener('submit', function(e){ e.preventDefault(); next.click(); });
+  }
+  body.addEventListener('click', function(e){
+    var b = e.target.closest('button'); if (!b || b.disabled) return;
+    if (b.dataset.svc) { B.svc = b.dataset.svc; render(); }
+    else if (b.dataset.sty) { B.sty = b.dataset.sty; B.time = null; render(); }
+    else if (b.dataset.day) { B.day = +b.dataset.day; B.time = null; render(); var sl = document.getElementById('slots'); if (sl && sl.firstElementChild && sl.firstElementChild.tagName === 'BUTTON') sl.firstElementChild.focus(); }
+    else if (b.dataset.time) { B.time = +b.dataset.time; render(); }
+  });
+  document.getElementById('dr-next').addEventListener('click', function(){
+    if (B.step === 3) {
+      var n = document.getElementById('f-n'), p = document.getElementById('f-p'), bad = null;
+      [n,p].forEach(function(el){ var ok = el.value.trim() !== ''; el.style.borderColor = ok ? '' : '#b3261e'; el.setAttribute('aria-invalid', ok ? 'false' : 'true'); if (!ok && !bad) bad = el; });
+      if (bad) { bad.focus(); return; }
+      B.name = n.value; B.phone = p.value; B.email = document.getElementById('f-e').value; B.notes = document.getElementById('f-x').value;
+      B.ref = 'B-' + (1000 + Math.floor(Math.random() * 9000));
+    }
+    if (B.step === 4) { close(); return; }
+    B.step++; render(); var t = body.querySelector('#dr-title'); if (t) t.focus();
+  });
+  document.getElementById('dr-back').addEventListener('click', function(){ if (B.step > 0) { B.step--; render(); var t = body.querySelector('#dr-title'); if (t) t.focus(); } });
+  function open(svcId, styId){
+    lastFocus = document.activeElement;
+    B = {step:0, svc:null, sty:'any', day:null, time:null, name:'', phone:'', email:'', notes:'', ref:''};
+    if (styId) B.sty = styId;
+    if (svcId) { B.svc = svcId; B.step = 1; if (styId) B.step = 1; }
+    else if (styId) { B.step = 0; }
+    render();
+    scrim.hidden = false; drawer.hidden = false;
+    requestAnimationFrame(function(){ scrim.classList.add('on'); drawer.classList.add('on'); });
+    if (site.lenis) site.lenis.stop();
+    document.body.style.overflow = 'hidden';
+    setTimeout(function(){ var t = body.querySelector('#dr-title'); if (t) t.focus(); }, 80);
+  }
+  function close(){
+    scrim.classList.remove('on'); drawer.classList.remove('on');
+    setTimeout(function(){ scrim.hidden = true; drawer.hidden = true; }, 500);
+    if (site.lenis) site.lenis.start();
+    document.body.style.overflow = '';
+    if (lastFocus) lastFocus.focus();
+  }
+  document.querySelectorAll('[data-book]').forEach(function(b){
+    b.addEventListener('click', function(){ open(b.dataset.svc || b.dataset.cat, b.dataset.sty); });
+  });
+  document.getElementById('dr-close').addEventListener('click', close);
+  scrim.addEventListener('click', close);
+  document.addEventListener('keydown', function(e){
+    if (drawer.hidden) return;
+    if (e.key === 'Escape') close();
+    if (e.key === 'Tab') {
+      var f = Array.prototype.filter.call(drawer.querySelectorAll('button:not([disabled]), input, textarea'), function(x){ return x.offsetParent !== null; });
+      if (!f.length) return;
+      if (e.shiftKey && document.activeElement === f[0]) { e.preventDefault(); f[f.length-1].focus(); }
+      else if (!e.shiftKey && document.activeElement === f[f.length-1]) { e.preventDefault(); f[0].focus(); }
+    }
+  });
+
+  if (!site.motion) return;
+
+  /* hero drift */
+  document.querySelectorAll('[data-drift]').forEach(function(el){
+    gsap.to(el, {yPercent:+el.dataset.drift, ease:'none', scrollTrigger:{trigger:'.hero', start:'top top', end:'bottom top', scrub:true}});
+  });
+  gsap.from('.hero .ph', {scale:.85, autoAlpha:0, duration:1.3, stagger:.12, ease:'expo.out', delay:.25});
+  gsap.from('.brush', {xPercent:-30, duration:1.4, ease:'expo.out'});
+  gsap.from('.frame', {autoAlpha:0, scale:.94, duration:1.2, ease:'expo.out', delay:.3});
+
+  /* statement words */
+  var words = window.ConceptSite.splitWords(document.getElementById('stmt'));
+  gsap.set(words, {opacity:.2, yPercent:0});
+  gsap.to(words, {opacity:1, stagger:.08, ease:'none', scrollTrigger:{trigger:'#stmt', start:'top 80%', end:'bottom 50%', scrub:true}});
+
+  /* signature: the colour list */
+  var lad = document.getElementById('colour');
+  var panels = gsap.utils.toArray('#colour .panel');
+  var mm = gsap.matchMedia();
+  mm.add('(min-width: 901px)', function(){
+    lad.classList.add('pinned');
+    var cnt = lad.querySelector('.cnt'), rail = lad.querySelectorAll('.rail i');
+    var START = 'polygon(0% 125%,100% 100%,100% 100%,0% 125%)', END = 'polygon(0% 0%,100% 0%,100% 100%,0% 100%)';
+    var tl = gsap.timeline({defaults:{ease:'none'}, scrollTrigger:{trigger:lad, start:'top top', end:function(){ return '+=' + Math.round(window.innerHeight * 4.2); }, pin:true, scrub:.5, anticipatePin:1, invalidateOnRefresh:true,
+      onUpdate:function(self){ var k = Math.min(4, Math.round(self.progress * 4)); cnt.textContent = '0' + (k + 1) + ' / 05'; rail.forEach(function(r,j){ r.classList.toggle('on', j <= k); }); }}});
+    panels.forEach(function(p,i){
+      var inner = p.querySelectorAll('.pr, .txt > *, .pimg, .art');
+      if (i === 0) { gsap.from(inner, {y:50, autoAlpha:0, duration:1, stagger:.06, ease:'power3.out', scrollTrigger:{trigger:lad, start:'top 70%', once:true}}); return; }
+      gsap.set(p, {clipPath:START});
+      gsap.set(inner, {autoAlpha:0, y:60});
+      tl.to(p, {clipPath:END, duration:1, ease:'power2.inOut'}, i - 1 + .35);
+      tl.to(inner, {autoAlpha:1, y:0, duration:.6, stagger:.04, ease:'power2.out'}, i - 1 + .85);
+      if (i < panels.length) tl.to(panels[i-1].querySelectorAll('.pr,.txt'), {y:-50, duration:1, ease:'power1.in'}, i - 1 + .35);
+    });
+    tl.to({}, {duration:.5});
+    return function(){ lad.classList.remove('pinned'); panels.forEach(function(p){ gsap.set(p, {clearProps:'clipPath'}); }); };
+  });
+  mm.add('(max-width: 900px)', function(){
+    panels.forEach(function(p){
+      gsap.from(p.querySelectorAll('.pr, .txt > *, .pimg'), {y:40, autoAlpha:0, duration:.9, stagger:.07, ease:'power3.out', scrollTrigger:{trigger:p, start:'top 75%', once:true}});
+    });
+  });
+
+  gsap.from('.visit .giantword', {yPercent:40, ease:'none', scrollTrigger:{trigger:'.visit .giantword', start:'top bottom', end:'bottom bottom', scrub:true}});
+  window.addEventListener('load', function(){ ScrollTrigger.refresh(); });
+});
+</script>
+</body>
+</html>
