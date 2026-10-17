@@ -4,11 +4,11 @@
 <!--
 ART DIRECTION BRIEF - The Garage Door Man (Portsmouth, working across Hampshire) - concept by Itchen Studio
 
-IDEA: A garage door is a wall that moves. The whole page behaves like a roller door: it rolls up to open the site, and one scroll scene lowers a new door over a tired pair. Black, white and the butter yellow of the owner's own wordmark, with fine slat lines as the only decoration.
+IDEA: A garage door is a wall that moves. One scroll scene lowers a new door over a tired pair. Black, white and the butter yellow of the owner's own wordmark, with fine slat lines as the only decoration.
 PALETTE: ink #111111 (dark), coal #1b1b1b, butter #f6ee9b (the yellow in the logo, used in big blocks and on dark), paper #f4f1ea (light), line #d9d4c8, muted #5c5a54 (AA on paper).
 TYPE: Big Shoulders Display (variable, upper case, used huge) for display, Schibsted Grotesk for text. Both self-hosted woff2.
 LOGO: the uploaded logo is not used (Sam's note). Recreated as SVG: "The Garage Door Man" with the G and D in butter, and three slat lines.
-HERO: full-bleed photo of the oak-framed garage with two timber-effect roller doors, dark gradient from the left, giant three-line headline bottom left. On load a curtain of slats rolls up like a shutter to reveal it (motion only).
+HERO: full-bleed photo of the oak-framed garage with two timber-effect roller doors, dark gradient from the left, giant three-line headline bottom left.
 SIGNATURE SCROLL MOMENT: "The swap". Pinned scene: the photo of a pair of tired purple and maroon doors; as you scroll, a new white door pair rolls down over them from the top with a slat edge, using two genuine photos of the same building. Phones: same wipe, not pinned. No motion: the two photos sit side by side.
 FEATURE: quote wizard: what's the job, which door, postcode check against "Hampshire", contact details and optional photos, then a Q-xxxx confirmation. Sends nothing.
 NO REVIEW QUOTES in the lead, so no quote ribbon: the reviews section is the Checkatrade score and count as big numbers, nothing invented.
@@ -101,8 +101,6 @@ nav.main .short{display:none}
 .hero .ctas{display:flex;flex-wrap:wrap;gap:12px;margin-top:30px}
 .proof{display:flex;flex-wrap:wrap;gap:8px 26px;margin-top:38px;padding-top:20px;border-top:1px solid #ffffff30;font-size:15px;color:#e8e6df}
 .proof b{color:var(--butter);font-weight:700}
-.shutter{position:absolute;inset:0;z-index:5;pointer-events:none;overflow:hidden}
-.shutter i{position:absolute;left:0;right:0;background:linear-gradient(180deg,#3a3a3a,#1c1c1c 70%,#0c0c0c);border-bottom:2px solid #000}
 html.motion:not(.ready) .hero h1 .ln>span{transform:translateY(105%)}
 html.motion:not(.ready) [data-intro]{opacity:0}
 
@@ -468,15 +466,8 @@ window.addEventListener('DOMContentLoaded', function () {
   var api = ConceptSite.init();
   api.fakeForm('cf', 'cdone');
 
-  /* shutter rolls up on load, the swap lowers a new door */
+  /* the swap lowers a new door */
   if (api.motion) {
-    var hero = document.querySelector('.hero'), N = 14, sh = document.createElement('div');
-    sh.className = 'shutter'; sh.setAttribute('aria-hidden', 'true');
-    for (var i = 0; i < N; i++) { var s = document.createElement('i'); s.style.top = (i * 100 / N) + '%'; s.style.height = (100 / N + .4) + '%'; sh.appendChild(s); }
-    hero.appendChild(sh);
-    gsap.to(sh.children, { yPercent: -110, duration: 1.15, ease: 'power3.in', stagger: { each: 0.045, from: 'end' }, delay: 0.1,
-      onComplete: function () { sh.remove(); } });
-
     var mm = gsap.matchMedia();
     mm.add('(min-width: 861px)', function () {
       var tl = gsap.timeline({ scrollTrigger: { trigger: '.swap', start: 'top top', end: '+=150%', pin: '.swap-pin', scrub: 0.6, anticipatePin: 1 } });
