@@ -1,0 +1,632 @@
+<!doctype html>
+<html lang="en-GB">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>Jobbi — website concept</title>
+<meta name="robots" content="noindex,nofollow">
+<meta name="description" content="A website concept for Jobbi. Preview only, not the live site.">
+<script defer src="https://cloud.umami.is/script.js" data-website-id="8df92b2d-e60b-4f9e-afc7-61b78ad1a912"></script>
+<style>
+@font-face{font-family:"Gabarito";src:url("assets/fonts/gabarito.woff2") format("woff2");font-weight:400 900;font-display:swap}
+@font-face{font-family:"Instrument Sans";src:url("assets/fonts/instrument-sans.woff2") format("woff2");font-weight:400 700;font-display:swap}
+@font-face{font-family:"Instrument Sans";src:url("assets/fonts/instrument-sans-italic.woff2") format("woff2");font-weight:400 700;font-style:italic;font-display:swap}
+/* Layout: a solid brand-blue opening band with the real app bleeding off its bottom edge,
+   then alternating white / mist bands. Left-aligned copy, wide gutters, one animated moment:
+   the verification card ticking through its checks and earning the Jobbi Verified stamp.
+   Single light look by choice: the brand and the app screenshots are light. */
+:root{
+  color-scheme: light;
+  --blue:#1E6FD9;        /* brand */
+  --blue-deep:#0B3B80;   /* tradesperson band, hover */
+  --blue-night:#082A5C;  /* deepest ground */
+  --ink:#0E1A2B;         /* text */
+  --muted:#4A5B72;       /* secondary text */
+  --paper:#FFFFFF;
+  --mist:#EEF4FC;        /* tinted section ground */
+  --line:#D5E1F1;
+  --go:#0B9A68;          /* verified green, as in the app */
+  --go-soft:#E2F5EC;
+  --on-blue:#FFFFFF;
+  --on-blue-soft:rgba(255,255,255,.78);
+  --display:"Gabarito", "Avenir Next", "Segoe UI", system-ui, sans-serif;
+  --body:"Instrument Sans", "Helvetica Neue", Arial, system-ui, sans-serif;
+  --s-hero:clamp(2.6rem, 6.4vw, 5.6rem);
+  --s-h2:clamp(2rem, 3.8vw, 3.25rem);
+  --s-h3:1.3rem;
+  --s-lead:clamp(1.08rem, 1.4vw, 1.25rem);
+  --wrap:1180px;
+  --gutter-l:max(16px, env(safe-area-inset-left, 0px));
+  --gutter-r:max(16px, env(safe-area-inset-right, 0px));
+}
+*{box-sizing:border-box}
+body{margin:0}
+.concept{background:#0A0F18;color:#C9D6EA;font:500 .82rem/1.4 var(--body);text-align:center;padding:9px max(16px,env(safe-area-inset-right,0px)) 9px max(16px,env(safe-area-inset-left,0px))}
+.concept a{color:#fff}
+.credit a{color:var(--blue)}
+html{scroll-behavior:smooth}
+@media (prefers-reduced-motion: reduce){html{scroll-behavior:auto}}
+body{
+  background:var(--paper); color:var(--ink);
+  font:400 1.0625rem/1.6 var(--body);
+  -webkit-font-smoothing:antialiased; text-rendering:optimizeLegibility;
+  overflow-x:hidden;
+}
+body::before{content:"";position:fixed;inset:0 0 auto;height:env(safe-area-inset-top,0px);z-index:60;background:var(--blue)}
+img{max-width:100%;height:auto;display:block}
+a{color:inherit}
+h1,h2,h3{font-family:var(--display);line-height:1.02;letter-spacing:-.02em;text-wrap:balance;margin:0}
+h2{font-size:var(--s-h2);font-weight:800}
+h3{font-size:var(--s-h3);font-weight:700;letter-spacing:-.01em;line-height:1.2}
+p{margin:0;text-wrap:pretty}
+:focus-visible{outline:3px solid #FFC93C;outline-offset:3px;border-radius:6px}
+.skip{position:absolute;left:-999px;top:8px;background:var(--ink);color:#fff;padding:10px 14px;border-radius:8px;z-index:100}
+.skip:focus{left:16px}
+
+.band{padding-left:var(--gutter-l);padding-right:var(--gutter-r)}
+.wrap{max-width:var(--wrap);margin:0 auto}
+.section{padding-block:clamp(72px, 10vw, 128px)}
+.lead{font-size:var(--s-lead);color:var(--muted);max-width:34em}
+
+/* ---------- buttons ---------- */
+.btn{display:inline-flex;align-items:center;justify-content:center;gap:.55em;font:700 1rem/1 var(--body);
+  text-decoration:none;padding:1em 1.4em;border-radius:999px;border:2px solid transparent;transition:background .15s, color .15s, border-color .15s, transform .15s}
+.btn:active{transform:translateY(1px)}
+.btn-white{background:#fff;color:var(--blue)}
+.btn-white:hover{background:var(--mist)}
+.btn-ghost{border-color:rgba(255,255,255,.55);color:#fff}
+.btn-ghost:hover{border-color:#fff;background:rgba(255,255,255,.08)}
+.btn-blue{background:var(--blue);color:#fff}
+.btn-blue:hover{background:var(--blue-deep)}
+.btn-green{background:var(--go);color:#fff}
+.btn-green:hover{background:#087A52}
+
+.stores{display:flex;flex-wrap:wrap;gap:12px}
+.store{display:inline-flex;align-items:center;gap:10px;background:#0A0F18;color:#fff;text-decoration:none;
+  border-radius:12px;padding:9px 18px 9px 14px;border:1px solid rgba(255,255,255,.18);min-width:168px}
+.store:hover{background:#000}
+.store svg{width:24px;height:24px;flex:none}
+.store span{display:flex;flex-direction:column;line-height:1.05}
+.store small{font-size:.68rem;letter-spacing:.02em;opacity:.85}
+.store strong{font:700 1.18rem/1.1 var(--display);letter-spacing:-.01em}
+
+/* ---------- header ---------- */
+.top{position:sticky;top:env(safe-area-inset-top,0px);z-index:50;background:var(--blue);color:#fff;
+  padding-left:var(--gutter-l);padding-right:var(--gutter-r);transition:box-shadow .2s}
+.top.scrolled{box-shadow:0 1px 0 rgba(255,255,255,.12), 0 8px 24px rgba(8,42,92,.18)}
+.top-in{max-width:var(--wrap);margin:0 auto;display:flex;align-items:center;gap:28px;height:72px}
+.brand{display:flex;align-items:center;gap:10px;text-decoration:none;margin-right:auto}
+.brand .m{height:38px;width:auto}
+.brand .w{height:24px;width:auto;margin-top:4px}
+.nav{display:flex;gap:26px}
+.nav a{text-decoration:none;font-weight:600;font-size:.98rem;color:var(--on-blue-soft)}
+.nav a:hover{color:#fff}
+.top .btn{padding:.72em 1.15em;font-size:.95rem}
+@media (max-width: 900px){ .nav{display:none} }
+
+/* ---------- hero ---------- */
+.hero{background:var(--blue);color:#fff;overflow:hidden;position:relative}
+.hero::after{ /* faint map-grid texture, nods to the job map */
+  content:"";position:absolute;inset:0;pointer-events:none;opacity:.08;
+  background-image:linear-gradient(rgba(255,255,255,.9) 1px, transparent 1px),linear-gradient(90deg, rgba(255,255,255,.9) 1px, transparent 1px);
+  background-size:56px 56px;mask-image:linear-gradient(100deg, transparent 30%, #000 75%);-webkit-mask-image:linear-gradient(100deg, transparent 30%, #000 75%)}
+.hero-in{max-width:var(--wrap);margin:0 auto;display:grid;grid-template-columns:minmax(0,1.15fr) minmax(0,.85fr);gap:40px;position:relative;z-index:1}
+.hero-copy{padding-block:clamp(56px,8vw,104px) clamp(56px,7vw,96px);display:flex;flex-direction:column;gap:30px;min-width:0}
+.hero h1{font-size:var(--s-hero);font-weight:900;letter-spacing:-.035em;line-height:.95}
+.hero h1 span{display:block}
+.hero h1 .l2{font-weight:600;color:var(--on-blue-soft)}
+.trust{list-style:none;margin:0;padding:0;display:flex;flex-wrap:wrap;gap:10px 22px}
+.trust li{display:flex;align-items:center;gap:8px;font-weight:600;font-size:.98rem}
+.trust svg{width:20px;height:20px;flex:none}
+.hero-ctas{display:flex;flex-wrap:wrap;gap:12px;padding-top:4px;border-top:1px solid rgba(255,255,255,.22);padding-top:26px}
+.hero-phone{align-self:end;display:flex;justify-content:center;min-width:0}
+.hero-phone img{width:min(400px, 100%);margin-bottom:-2px;filter:drop-shadow(0 30px 40px rgba(4,25,60,.35))}
+@media (max-width: 860px){
+  .hero-in{grid-template-columns:1fr;gap:0}
+  .hero-copy{padding-bottom:40px}
+  .hero-phone{height:340px;overflow:hidden;align-items:flex-start}
+  .hero-phone img{width:300px}
+}
+
+/* ---------- how it works ---------- */
+.how-head{display:flex;flex-wrap:wrap;justify-content:space-between;align-items:end;gap:20px 40px;margin-bottom:clamp(40px,6vw,64px)}
+.steps{list-style:none;margin:0;padding:0;display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:32px;position:relative;counter-reset:step}
+.steps::before{content:"";position:absolute;left:0;right:0;top:27px;border-top:2px dashed var(--line);z-index:0}
+.steps li{position:relative;z-index:1;display:flex;flex-direction:column;gap:14px;min-width:0}
+.num{width:56px;height:56px;border-radius:50%;background:var(--paper);border:2px solid var(--blue);color:var(--blue);
+  display:grid;place-items:center;font:800 1.45rem/1 var(--display)}
+.steps li:nth-child(3) .num{background:var(--go);border-color:var(--go);color:#fff}
+.steps p{color:var(--muted)}
+.steps a{color:var(--blue);font-weight:600}
+@media (max-width: 900px){
+  .steps{grid-template-columns:repeat(2,minmax(0,1fr));gap:40px 28px}
+  .steps::before{display:none}
+}
+@media (max-width: 520px){ .steps{grid-template-columns:1fr} }
+
+/* ---------- verified (signature) ---------- */
+.verified{background:var(--mist)}
+.ver-in{display:grid;grid-template-columns:minmax(0,1fr) minmax(0,1fr);gap:clamp(40px,6vw,88px);align-items:center}
+.ver-copy{display:flex;flex-direction:column;gap:22px;min-width:0}
+.ver-copy p{color:var(--muted);max-width:34em}
+.ver-copy .certs{display:flex;flex-wrap:wrap;gap:8px}
+.ver-copy .certs span{font-weight:600;font-size:.92rem;background:var(--paper);border:1px solid var(--line);padding:.35em .8em;border-radius:8px;color:var(--ink)}
+.card{background:var(--paper);border-radius:28px;padding:clamp(22px,3vw,34px);position:relative;
+  box-shadow:0 1px 0 var(--line), 0 30px 60px -30px rgba(11,59,128,.35);min-width:0}
+.card-top{display:flex;align-items:center;gap:14px;padding-bottom:20px;border-bottom:1px solid var(--line)}
+.avatar{width:56px;height:56px;border-radius:16px;background:var(--blue);display:grid;place-items:center;flex:none}
+.avatar svg{width:30px;height:30px}
+.card-top strong{display:block;font:700 1.2rem/1.2 var(--display)}
+.card-top small{color:var(--muted);font-size:.9rem}
+.checks{list-style:none;margin:0;padding:18px 0 6px;display:flex;flex-direction:column;gap:4px}
+.checks li{display:grid;grid-template-columns:30px 1fr;gap:12px;align-items:start;padding:10px 0}
+.tick{width:30px;height:30px;border-radius:50%;background:var(--go-soft);display:grid;place-items:center}
+.tick svg{width:18px;height:18px}
+.tick path{stroke:var(--go);stroke-width:3;fill:none;stroke-linecap:round;stroke-linejoin:round;stroke-dasharray:24;stroke-dashoffset:0}
+.checks b{display:block;font-weight:700}
+.checks span{color:var(--muted);font-size:.92rem}
+.ratings{display:flex;flex-wrap:wrap;gap:6px;padding-top:16px;border-top:1px solid var(--line)}
+.ratings p{width:100%;font-weight:700;font-size:.92rem;margin-bottom:4px}
+.ratings span{font-size:.84rem;font-weight:600;color:var(--blue-deep);background:var(--mist);border-radius:999px;padding:.3em .75em}
+.stamp{position:absolute;right:clamp(14px,3vw,28px);top:-26px;width:118px;height:118px;border-radius:50%;
+  background:var(--go);color:#fff;display:grid;place-items:center;text-align:center;transform:rotate(-10deg);
+  box-shadow:0 12px 26px -10px rgba(11,154,104,.7);border:4px solid var(--paper)}
+.stamp::before{content:"";position:absolute;inset:6px;border-radius:50%;border:1.5px dashed rgba(255,255,255,.6)}
+.stamp span{font:800 .98rem/1.05 var(--display);letter-spacing:.01em}
+.stamp svg{width:22px;height:22px;margin:0 auto 3px}
+.card-note{margin-top:14px;font-size:.8rem;color:var(--muted)}
+/* armed = set by JS only when the card starts below the fold, so the resting page is always complete */
+.card.armed .tick path{stroke-dashoffset:24}
+.card.armed .tick{background:var(--mist)}
+.card.armed .stamp{opacity:0;transform:rotate(-10deg) scale(1.6)}
+.card.play .tick{transition:background .3s}
+.card.play .tick path{transition:stroke-dashoffset .45s cubic-bezier(.6,0,.2,1)}
+.card.play .checks li:nth-child(1) *{transition-delay:.15s}
+.card.play .checks li:nth-child(2) *{transition-delay:.55s}
+.card.play .checks li:nth-child(3) *{transition-delay:.95s}
+.card.play .checks li:nth-child(4) *{transition-delay:1.35s}
+.card.play .stamp{transition:opacity .25s 1.85s, transform .45s 1.85s cubic-bezier(.2,1.4,.4,1)}
+@media (max-width: 900px){ .ver-in{grid-template-columns:1fr} .card{margin-top:30px} }
+@media (max-width: 560px){
+  .card-top{padding-right:84px}
+  .stamp{width:92px;height:92px;top:-30px;right:12px}
+  .stamp span{font-size:.82rem}
+  .stamp svg{width:18px;height:18px}
+}
+
+/* ---------- post a job ---------- */
+.split{display:grid;grid-template-columns:minmax(0,.9fr) minmax(0,1.1fr);gap:clamp(40px,6vw,96px);align-items:center}
+.split-img{display:flex;justify-content:center;min-width:0}
+.split-img img{width:min(460px,100%)}
+.split-copy{display:flex;flex-direction:column;gap:26px;min-width:0}
+.ticks{list-style:none;margin:0;padding:0;display:flex;flex-direction:column;gap:16px}
+.ticks li{display:grid;grid-template-columns:26px 1fr;gap:12px;align-items:start}
+.ticks svg{width:22px;height:22px;margin-top:3px}
+.note{font-size:.95rem;color:var(--muted);padding:14px 16px;background:var(--mist);border-radius:14px;max-width:34em}
+@media (max-width: 860px){ .split{grid-template-columns:1fr} .split-img{order:2} }
+
+/* ---------- trades ---------- */
+.trades{background:var(--paper);border-top:1px solid var(--line)}
+.trade-grid{list-style:none;margin:40px 0 0;padding:0;display:grid;grid-template-columns:repeat(5,minmax(0,1fr));gap:14px}
+.trade-grid a{display:flex;flex-direction:column;justify-content:space-between;gap:36px;min-height:180px;padding:22px;
+  border-radius:20px;background:var(--mist);text-decoration:none;transition:background .15s, color .15s}
+.trade-grid a:hover{background:var(--blue);color:#fff}
+.trade-grid a:hover svg{stroke:#fff}
+.trade-grid svg{width:40px;height:40px;stroke:var(--blue);fill:none;stroke-width:1.8;stroke-linecap:round;stroke-linejoin:round;transition:stroke .15s}
+.trade-grid strong{font:700 1.2rem/1.15 var(--display)}
+.trades .lead{margin-top:16px}
+@media (max-width: 980px) and (min-width: 561px){ .trade-grid{grid-template-columns:repeat(6,minmax(0,1fr))} .trade-grid li{grid-column:span 2} .trade-grid li:nth-child(n+4){grid-column:span 3} }
+@media (max-width: 560px){ .trade-grid{grid-template-columns:repeat(2,minmax(0,1fr))} .trade-grid a{min-height:140px} .trade-grid li:last-child{grid-column:span 2} }
+
+/* ---------- tradespeople ---------- */
+.trade-band{background:var(--blue-night);color:#fff;overflow:hidden}
+.tp-in{display:grid;grid-template-columns:minmax(0,1fr) minmax(0,1fr);gap:clamp(40px,6vw,80px);align-items:start}
+.tp-copy{display:flex;flex-direction:column;gap:26px;min-width:0}
+.tp-copy .lead{color:var(--on-blue-soft)}
+.trade-band .ticks li{font-size:1.08rem;font-weight:500}
+.tp-more{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:22px 28px;padding-top:26px;border-top:1px solid rgba(255,255,255,.16)}
+.tp-more h3{font-size:1.08rem;margin-bottom:6px}
+.tp-more p{color:var(--on-blue-soft);font-size:.95rem}
+.tp-side{display:flex;flex-direction:column;gap:28px;min-width:0}
+.tp-img{margin:0 -40px 0 0}
+.calc{background:rgba(255,255,255,.06);border:1px solid rgba(255,255,255,.14);border-radius:24px;padding:clamp(20px,3vw,30px)}
+.calc label{display:flex;justify-content:space-between;align-items:baseline;gap:12px;font-weight:600}
+.calc output.big{font:800 2.2rem/1 var(--display);letter-spacing:-.02em;font-variant-numeric:tabular-nums}
+.calc input[type=range]{width:100%;margin:18px 0 20px;accent-color:#4FA0FF;height:28px}
+.calc dl{display:grid;grid-template-columns:1fr auto;gap:10px 16px;margin:0;font-variant-numeric:tabular-nums}
+.calc dt{color:var(--on-blue-soft)}
+.calc dd{margin:0;text-align:right;font-weight:700}
+.calc .total{font:800 1.5rem/1 var(--display);color:#6EE7B7}
+.calc .sub{margin-top:16px;font-size:.88rem;color:var(--on-blue-soft)}
+@media (max-width: 900px){ .tp-in{grid-template-columns:1fr} .tp-img{margin:0} }
+@media (max-width: 520px){ .tp-more{grid-template-columns:1fr} }
+
+/* ---------- faq ---------- */
+.faq-in{display:grid;grid-template-columns:minmax(0,.7fr) minmax(0,1.3fr);gap:clamp(32px,6vw,88px);align-items:start}
+.faq-head{display:flex;flex-direction:column;gap:18px;position:sticky;top:110px}
+.tabs{display:inline-flex;background:var(--mist);border-radius:999px;padding:5px;gap:4px;width:max-content;max-width:100%}
+.tabs button{font:700 .95rem/1 var(--body);border:0;background:transparent;color:var(--muted);padding:.8em 1.15em;border-radius:999px;cursor:pointer}
+.tabs button[aria-selected="true"]{background:var(--paper);color:var(--blue);box-shadow:0 2px 8px rgba(11,59,128,.12)}
+.qa{border-top:1px solid var(--line)}
+.qa details{border-bottom:1px solid var(--line)}
+.qa summary{list-style:none;cursor:pointer;display:flex;justify-content:space-between;align-items:center;gap:20px;
+  padding:22px 0;font:700 1.15rem/1.3 var(--display);letter-spacing:-.005em}
+.qa summary::-webkit-details-marker{display:none}
+.qa summary::after{content:"";flex:none;width:28px;height:28px;border-radius:50%;background:var(--mist) url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='none' stroke='%231E6FD9' stroke-width='2.5' stroke-linecap='round'%3E%3Cpath d='M12 6v12M6 12h12'/%3E%3C/svg%3E") center/16px no-repeat;transition:transform .2s}
+.qa details[open] summary::after{transform:rotate(45deg)}
+.qa summary:hover{color:var(--blue)}
+.qa details p{padding:0 0 24px;color:var(--muted);max-width:40em}
+@media (max-width: 900px){ .faq-in{grid-template-columns:1fr} .faq-head{position:static} }
+
+/* ---------- download ---------- */
+.download{background:var(--blue);color:#fff;position:relative;overflow:hidden}
+.dl-in{display:flex;flex-wrap:wrap;justify-content:space-between;align-items:center;gap:28px 40px;padding-block:clamp(56px,8vw,88px)}
+.dl-in .m{height:84px;width:auto}
+.dl-left{display:flex;align-items:center;gap:22px;min-width:0}
+.dl-left p{color:var(--on-blue-soft);margin-top:8px}
+
+/* ---------- footnotes + footer ---------- */
+.notes{padding-block:36px;border-bottom:1px solid var(--line)}
+.notes p{font-size:.86rem;color:var(--muted);max-width:60em}
+.notes p+p{margin-top:8px}
+.foot{padding-block:40px 48px}
+.foot-in{display:flex;flex-wrap:wrap;justify-content:space-between;gap:28px;align-items:flex-start}
+.foot .brand .m{height:34px}.foot .brand .w{height:21px}
+.foot nav{display:flex;flex-wrap:wrap;gap:12px 26px}
+.foot a{text-decoration:none;color:var(--muted);font-weight:500;font-size:.95rem}
+.foot a:hover{color:var(--blue)}
+.legal{display:flex;flex-wrap:wrap;justify-content:space-between;gap:12px 24px;margin-top:32px;padding-top:22px;border-top:1px solid var(--line);font-size:.88rem;color:var(--muted)}
+.legal nav{gap:10px 20px}
+.legal a{font-size:.88rem}
+
+@media (prefers-reduced-motion: reduce){
+  *,*::before,*::after{transition:none!important;animation:none!important}
+  .card.armed .tick path{stroke-dashoffset:0}
+  .card.armed .stamp{opacity:1;transform:rotate(-10deg)}
+}
+</style>
+</head>
+<body>
+<a class="skip" href="#main">Skip to content</a>
+<div class="concept">Website concept for Jobbi — preview only, not the live site. Designed by <a href="https://itchenstudio.co.uk" data-umami-event="Itchen Studio link">Itchen Studio</a> · sam@itchenstudio.co.uk</div>
+
+
+<header class="top" id="top">
+  <div class="top-in">
+    <a class="brand" href="#top" aria-label="Jobbi home">
+      <img class="m" src="assets/img/mark-white.png" alt="" width="171" height="200">
+      <img class="w" src="assets/img/word-white.png" alt="Jobbi" width="416" height="120">
+    </a>
+    <nav class="nav" aria-label="Main">
+      <a href="#how">How it works</a>
+      <a href="#trades">Trades</a>
+      <a href="#tradespeople">For tradespeople</a>
+      <a href="#faq">FAQ</a>
+      <a href="https://www.jobbi.uk/guides">Help &amp; Guides</a>
+    </nav>
+    <a class="btn btn-white" href="#download">Download the App</a>
+  </div>
+</header>
+
+<main id="main">
+
+<!-- HERO -->
+<section class="hero band" aria-labelledby="hero-title">
+  <div class="hero-in">
+    <div class="hero-copy">
+      <h1 id="hero-title"><span>Trusted local tradespeople.</span> <span class="l2">Verified before they knock.</span></h1>
+      <div class="stores" aria-label="Get the app">
+        <a class="store" href="#download">
+          <svg viewBox="0 0 24 24" fill="none" stroke="#fff" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="6" y="2.5" width="12" height="19" rx="2.5"/><path d="M10.5 18.5h3"/></svg>
+          <span><small>Download on the</small><strong>App Store</strong></span>
+        </a>
+        <a class="store" href="#download">
+          <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M5 3.2v17.6c0 .5.5.8.9.6l15-8.8a.7.7 0 0 0 0-1.2l-15-8.8c-.4-.2-.9.1-.9.6Z" fill="#fff"/></svg>
+          <span><small>GET IT ON</small><strong>Google Play</strong></span>
+        </a>
+      </div>
+      <ul class="trust">
+        <li><svg viewBox="0 0 24 24" fill="none" aria-hidden="true"><circle cx="12" cy="12" r="11" fill="#fff"/><path d="m7 12.5 3.2 3.2L17.2 8.8" stroke="#1E6FD9" stroke-width="2.6" stroke-linecap="round" stroke-linejoin="round"/></svg>Identity verified</li>
+        <li><svg viewBox="0 0 24 24" fill="none" aria-hidden="true"><circle cx="12" cy="12" r="11" fill="#fff"/><path d="m7 12.5 3.2 3.2L17.2 8.8" stroke="#1E6FD9" stroke-width="2.6" stroke-linecap="round" stroke-linejoin="round"/></svg>Rated and reviewed</li>
+        <li><svg viewBox="0 0 24 24" fill="none" aria-hidden="true"><circle cx="12" cy="12" r="11" fill="#fff"/><path d="m7 12.5 3.2 3.2L17.2 8.8" stroke="#1E6FD9" stroke-width="2.6" stroke-linecap="round" stroke-linejoin="round"/></svg>Insurance and qualifications validated</li>
+      </ul>
+      <div class="hero-ctas">
+        <a class="btn btn-white" href="#post">Post a Job</a>
+        <a class="btn btn-ghost" href="#tradespeople">Join as a Tradesperson</a>
+      </div>
+    </div>
+    <div class="hero-phone">
+      <img src="assets/img/hero-phone.webp" width="760" height="1227" alt="The Jobbi app showing a map of verified tradespeople near Eastleigh, filtered by trade">
+    </div>
+  </div>
+</section>
+
+<!-- HOW IT WORKS -->
+<section class="section band" id="how" aria-labelledby="how-title">
+  <div class="wrap">
+    <div class="how-head">
+      <h2 id="how-title">How Jobbi works</h2>
+      <p class="lead">Describe your job, receive quotes from verified local tradespeople, choose who to hire, and pay securely through the app once the job is done.</p>
+    </div>
+    <ol class="steps">
+      <li><div class="num" aria-hidden="true">1</div><h3>Describe your job</h3><p>Tell us what needs doing. Jobbi summarises the work and uses market insight data to provide a typical guide price<a href="#note-1" aria-label="See note on estimates">*</a></p></li>
+      <li><div class="num" aria-hidden="true">2</div><h3>Compare estimates</h3><p>Receive estimates from verified tradespeople in your area. Review their profile, credentials and ratings before booking.</p></li>
+      <li><div class="num" aria-hidden="true">3</div><h3>No cowboys</h3><p>All tradespeople on Jobbi are ID verified, insured and have the right qualifications for the job<a href="#note-2" aria-label="See note on qualifications">**</a></p></li>
+      <li><div class="num" aria-hidden="true">4</div><h3>Pay securely</h3><p>Pay your tradesperson directly through the app when the job is done.</p></li>
+    </ol>
+  </div>
+</section>
+
+<!-- VERIFIED (signature moment) -->
+<section class="verified section band" aria-labelledby="ver-title">
+  <div class="wrap ver-in">
+    <div class="ver-copy">
+      <h2 id="ver-title">What the Jobbi Verified badge means</h2>
+      <p>Every tradesperson goes through a multi-stage verification process before their profile goes live. We check identity documents, Right to Work status and Public Liability Insurance as standard.</p>
+      <p>Trade-specific certifications are verified for relevant job types. For trade-specific jobs, the relevant certification must be verified before the tradesperson can quote.</p>
+      <div class="certs" aria-label="Examples of certifications we verify"><span>Gas Safe</span><span>Part P</span><span>OFTEC</span><span>CSCS</span></div>
+      <p><strong style="color:var(--ink)">The Jobbi Verified badge means we have done the checks so you do not have to.</strong></p>
+    </div>
+
+    <div class="card" id="vcard" aria-label="Example of a Jobbi Verified tradesperson profile">
+      <div class="stamp" aria-hidden="true"><div><svg viewBox="0 0 24 24" fill="none" stroke="#fff" stroke-width="2.6" stroke-linecap="round" stroke-linejoin="round"><path d="m5 12.5 4.5 4.5L19 7.5"/></svg><span>Jobbi<br>Verified</span></div></div>
+      <div class="card-top">
+        <div class="avatar" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="#fff" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 3.5c3 3.6 5.5 6.6 5.5 9.7a5.5 5.5 0 0 1-11 0c0-3.1 2.5-6.1 5.5-9.7Z"/></svg></div>
+        <div><strong>Your tradesperson</strong><small>Plumbing &amp; Heating</small></div>
+      </div>
+      <ul class="checks">
+        <li><span class="tick"><svg viewBox="0 0 24 24"><path d="m5 12.5 4.5 4.5L19 7.5"/></svg></span><div><b>Identity confirmed</b><span>Photo ID and a selfie taken in the app</span></div></li>
+        <li><span class="tick"><svg viewBox="0 0 24 24"><path d="m5 12.5 4.5 4.5L19 7.5"/></svg></span><div><b>Right to Work verified</b><span>UK or Irish passport, or a Home Office Share Code</span></div></li>
+        <li><span class="tick"><svg viewBox="0 0 24 24"><path d="m5 12.5 4.5 4.5L19 7.5"/></svg></span><div><b>Public Liability Insurance on file</b><span>A current certificate, checked by our team</span></div></li>
+        <li><span class="tick"><svg viewBox="0 0 24 24"><path d="m5 12.5 4.5 4.5L19 7.5"/></svg></span><div><b>Trade certification verified</b><span>Gas Safe for gas work, Part P for electrical, and more</span></div></li>
+      </ul>
+      <div class="ratings">
+        <p>Rated by customers after every job on</p>
+        <span>Quality</span><span>Punctuality</span><span>Cleanliness</span><span>Professionalism</span><span>Communication</span><span>Value</span>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- POST A JOB -->
+<section class="section band" id="post" aria-labelledby="post-title">
+  <div class="wrap split">
+    <div class="split-img">
+      <img src="assets/img/post-a-job.webp" width="820" height="1125" loading="lazy" alt="Posting a job on the Jobbi app: choosing the trade, describing a leaking overflow pipe, then the AI review with a 1–2 hour duration and a £70–£150 fair price guide">
+    </div>
+    <div class="split-copy">
+      <h2 id="post-title">Post a job in minutes</h2>
+      <ul class="ticks">
+        <li><svg viewBox="0 0 24 24" fill="none" aria-hidden="true"><circle cx="12" cy="12" r="11" fill="#E2F5EC"/><path d="m7 12.5 3.2 3.2L17.2 8.8" stroke="#0B9A68" stroke-width="2.6" stroke-linecap="round" stroke-linejoin="round"/></svg><span>Open the Jobbi app, tap Post a Job, and describe what you need doing in your own words. Add photos or a short video if it helps.</span></li>
+        <li><svg viewBox="0 0 24 24" fill="none" aria-hidden="true"><circle cx="12" cy="12" r="11" fill="#E2F5EC"/><path d="m7 12.5 3.2 3.2L17.2 8.8" stroke="#0B9A68" stroke-width="2.6" stroke-linecap="round" stroke-linejoin="round"/></svg><span>Our AI reads your description, suggests the right trade type and gives you a rough price estimate before anyone's even been in touch.</span></li>
+        <li><svg viewBox="0 0 24 24" fill="none" aria-hidden="true"><circle cx="12" cy="12" r="11" fill="#E2F5EC"/><path d="m7 12.5 3.2 3.2L17.2 8.8" stroke="#0B9A68" stroke-width="2.6" stroke-linecap="round" stroke-linejoin="round"/></svg><span>Verified tradespeople in your area are notified and can send quotes directly to you.</span></li>
+        <li><svg viewBox="0 0 24 24" fill="none" aria-hidden="true"><circle cx="12" cy="12" r="11" fill="#E2F5EC"/><path d="m7 12.5 3.2 3.2L17.2 8.8" stroke="#0B9A68" stroke-width="2.6" stroke-linecap="round" stroke-linejoin="round"/></svg><span>View each profile, verified credentials, star rating and written reviews. You are never automatically matched. You choose, you confirm, the job begins.</span></li>
+      </ul>
+      <p class="note">Jobbi does not charge customers a call out fee. You only pay when a job is completed, by card or Apple Pay, processed securely by Stripe. There are no hidden fees — you pay exactly what was quoted.</p>
+      <div><a class="btn btn-blue" href="#download">Post a Job</a></div>
+    </div>
+  </div>
+</section>
+
+<!-- TRADES -->
+<section class="trades section band" id="trades" aria-labelledby="trades-title">
+  <div class="wrap">
+    <h2 id="trades-title">Trades we cover</h2>
+    <p class="lead">We are expanding over time. If your job type is not listed, post it under the closest trade and describe the work in detail.</p>
+    <ul class="trade-grid">
+      <li><a href="https://www.jobbi.uk/guides?trade=plumbing">
+        <svg viewBox="0 0 40 40" aria-hidden="true"><path d="M20 5c5.5 6.6 10 12 10 17.6a10 10 0 0 1-20 0C10 17 14.5 11.6 20 5Z"/><path d="M15.5 23.5a4.6 4.6 0 0 0 4.5 4.3"/></svg>
+        <strong>Plumbing</strong></a></li>
+      <li><a href="https://www.jobbi.uk/guides?trade=electrical">
+        <svg viewBox="0 0 40 40" aria-hidden="true"><path d="M22.5 4 9 23h10l-2 13 14-20H21l1.5-12Z"/></svg>
+        <strong>Electrical</strong></a></li>
+      <li><a href="https://www.jobbi.uk/guides?trade=carpentry">
+        <svg viewBox="0 0 40 40" aria-hidden="true"><path d="M6 27 27 6l7 7-21 21H6v-7Z"/><path d="m11 22 2 2M15 18l2 2M19 14l2 2M23 10l2 2"/></svg>
+        <strong>Carpentry</strong></a></li>
+      <li><a href="https://www.jobbi.uk/guides?trade=building">
+        <svg viewBox="0 0 40 40" aria-hidden="true"><rect x="5" y="9" width="30" height="24" rx="1.5"/><path d="M5 17h30M5 25h30M14 9v8M26 9v8M20 17v8M10 25v8M30 25v8"/></svg>
+        <strong>Building</strong></a></li>
+      <li><a href="https://www.jobbi.uk/guides?trade=general">
+        <svg viewBox="0 0 40 40" aria-hidden="true"><path d="M17 15 7 33.5a2.3 2.3 0 0 0 3.5 2L23 19"/><path d="M14 9.5c3.5-3 8.5-4 12.5-2.5l7 7-4.5 4.5-3-3-5 5-6-6 3-3c-1.5-1.5-3-2-4-2Z"/></svg>
+        <strong>General Maintenance</strong></a></li>
+    </ul>
+  </div>
+</section>
+
+<!-- TRADESPEOPLE -->
+<section class="trade-band section band" id="tradespeople" aria-labelledby="tp-title">
+  <div class="wrap tp-in">
+    <div class="tp-copy">
+      <h2 id="tp-title">Are you a tradesperson?</h2>
+      <p class="lead">Receive jobs matched to your trade and location. Jobbi does not set or cap your prices. When you submit a quote you decide what to charge.</p>
+      <ul class="ticks">
+        <li><svg viewBox="0 0 24 24" fill="none" aria-hidden="true"><circle cx="12" cy="12" r="11" fill="#0B9A68"/><path d="m7 12.5 3.2 3.2L17.2 8.8" stroke="#fff" stroke-width="2.6" stroke-linecap="round" stroke-linejoin="round"/></svg><span>Join for free — no subscription fees</span></li>
+        <li><svg viewBox="0 0 24 24" fill="none" aria-hidden="true"><circle cx="12" cy="12" r="11" fill="#0B9A68"/><path d="m7 12.5 3.2 3.2L17.2 8.8" stroke="#fff" stroke-width="2.6" stroke-linecap="round" stroke-linejoin="round"/></svg><span>Receive jobs matched to your trade and location</span></li>
+        <li><svg viewBox="0 0 24 24" fill="none" aria-hidden="true"><circle cx="12" cy="12" r="11" fill="#0B9A68"/><path d="m7 12.5 3.2 3.2L17.2 8.8" stroke="#fff" stroke-width="2.6" stroke-linecap="round" stroke-linejoin="round"/></svg><span>Get paid instantly when each job is done — we take just 5%</span></li>
+      </ul>
+      <div class="tp-more">
+        <div><h3>Verified in about a day</h3><p>Sign up with photo ID, proof of Right to Work and your Public Liability Insurance certificate. Our team typically reviews your documents within one working day.</p></div>
+        <div><h3>On Call mode</h3><p>Signal that you are available for urgent jobs right now. Verified On Call tradespeople get an instant notification when a matching emergency job is posted.</p></div>
+        <div><h3>Paid straight to your bank</h3><p>The moment a customer approves and pays their invoice, the money is transferred to your connected bank account via Stripe.</p></div>
+        <div><h3>No exclusivity</h3><p>Use Jobbi alongside other platforms. We simply ask that jobs sourced through Jobbi are completed and paid through the app.</p></div>
+      </div>
+      <div><a class="btn btn-green" href="#download">Join Jobbi as a Tradesperson</a></div>
+    </div>
+    <div class="tp-side">
+      <img class="tp-img" src="assets/img/tradesperson-app.webp" width="1300" height="936" loading="lazy" alt="The Jobbi tradesperson app: an earnings summary on one phone and a dashboard with booked jobs, On Call toggle and a route map on the other">
+      <form class="calc" id="calc" aria-labelledby="calc-title">
+        <label for="job-value"><span id="calc-title">If the job is worth</span><output class="big" id="out-value" for="job-value">£200</output></label>
+        <input type="range" id="job-value" name="job-value" min="50" max="2000" step="10" value="200">
+        <dl>
+          <dt>Jobbi takes 5%</dt><dd id="out-fee">£10.00</dd>
+          <dt>You receive, paid instantly</dt><dd class="total" id="out-take">£190.00</dd>
+        </dl>
+        <p class="sub">No subscription fees, no listing fees, no monthly charges. The commission is deducted automatically before payment is transferred to you.</p>
+      </form>
+    </div>
+  </div>
+</section>
+
+<!-- FAQ -->
+<section class="section band" id="faq" aria-labelledby="faq-title">
+  <div class="wrap faq-in">
+    <div class="faq-head">
+      <h2 id="faq-title">Frequently asked questions</h2>
+      <p class="lead">Everything you need to know about how Jobbi works.</p>
+      <div class="tabs" role="tablist" aria-label="Questions for">
+        <button type="button" role="tab" id="tab-c" aria-controls="faq-c" aria-selected="true">For Customers</button>
+        <button type="button" role="tab" id="tab-t" aria-controls="faq-t" aria-selected="false" tabindex="-1">For Tradespeople</button>
+      </div>
+    </div>
+
+    <div>
+      <div class="qa" id="faq-c" role="tabpanel" aria-labelledby="tab-c">
+        <details><summary>How does Jobbi work?</summary><p>Jobbi connects homeowners and tenants with verified local tradespeople — quickly, safely and transparently. Describe your job, receive quotes from verified local tradespeople, choose who to hire, and pay securely through the app once the job is done. Our AI summarises your job and provides a price estimate before anyone's even been in touch.</p></details>
+        <details><summary>How do I post a job?</summary><p>Open the Jobbi app, tap Post a Job, and describe what you need doing in your own words. Add photos or a short video if it helps. Our AI will read your description, suggest the right trade type and give you a rough price estimate. Once live, verified tradespeople in your area will be notified and can send quotes directly to you.</p></details>
+        <details><summary>How are tradespeople verified on Jobbi?</summary><p>Every tradesperson goes through a multi-stage verification process before their profile goes live. We check identity documents, Right to Work status and Public Liability Insurance as standard. Trade-specific certifications — Gas Safe, Part P, OFTEC and more — are verified for relevant job types. The Jobbi Verified badge means we have done the checks so you do not have to.</p></details>
+        <details><summary>How does payment work?</summary><p>Payment is handled entirely within the app. Once your tradesperson marks a job as complete, you will receive a notification to review and pay. Payment is processed securely by Stripe. You can pay by card or Apple Pay. There are no hidden fees — you pay exactly what was quoted.</p></details>
+        <details><summary>What if I am not happy with the work?</summary><p>Raise it directly with your tradesperson through the Jobbi chat. Most issues are resolved quickly this way. If you cannot reach a resolution, contact Jobbi Support through the app and we will step in to help mediate. Your statutory consumer rights under the Consumer Rights Act 2015 apply to the contract between you and the tradesperson.</p></details>
+        <details><summary>Can I choose my tradesperson?</summary><p>Yes — you are always in control. When tradespeople send quotes, you can view their full profile, verified credentials, star rating and written reviews before deciding. You are never automatically matched. You choose, you confirm, the job begins.</p></details>
+        <details><summary>What trades does Jobbi cover?</summary><p>Jobbi currently covers plumbing, electrical, carpentry, building and general maintenance. We are expanding over time. If your job type is not listed, post it under the closest trade and describe the work in detail.</p></details>
+        <details><summary>Is there a call out fee?</summary><p>Jobbi does not charge customers a call out fee. You only pay when a job is completed and you are happy to proceed with payment. Individual tradespeople may include a call out charge within their quote — this will be clearly itemised before you accept.</p></details>
+        <details><summary>How do I cancel or reschedule a booking?</summary><p>Message your tradesperson directly through the Jobbi chat. We ask that you give as much notice as possible. Jobbi does not currently charge cancellation fees.</p></details>
+        <details><summary>What is the Jobbi Verified badge?</summary><p>The Jobbi Verified badge appears on profiles that have passed our full verification process — identity confirmed, Right to Work verified, and valid Public Liability Insurance on file. For trade-specific jobs, the relevant certification must also be verified before the tradesperson can quote.</p></details>
+      </div>
+
+      <div class="qa" id="faq-t" role="tabpanel" aria-labelledby="tab-t" hidden>
+        <details><summary>How do I join Jobbi as a tradesperson?</summary><p>Download the app, select I am a Tradesperson and follow the sign-up flow. You will need photo ID, proof of Right to Work, and your Public Liability Insurance certificate. Once submitted, our team reviews and verifies your documents — typically within one working day. Once approved your profile goes live.</p></details>
+        <details><summary>What documents do I need to sign up?</summary><p>A valid photo ID (passport or UK driving licence), a selfie taken in the app, proof of Right to Work (UK or Irish passport, or a Home Office Share Code), and a current Public Liability Insurance certificate. Trade certifications such as Gas Safe, Part P and CSCS are required for relevant job types.</p></details>
+        <details><summary>How and when do I get paid?</summary><p>You get paid the moment a customer approves and pays their invoice through the app. Payments are transferred directly to your connected bank account via Stripe. You will need to complete a short Stripe onboarding process during sign-up to connect your bank account.</p></details>
+        <details><summary>What is Jobbi's commission?</summary><p>Jobbi charges a 5% commission on each completed job, deducted automatically before payment is transferred to your account. On a £200 job, Jobbi takes £10 and you receive £190 — paid instantly. No subscription fees, no listing fees, no monthly charges.</p></details>
+        <details><summary>How does job matching work?</summary><p>When a customer posts a job, Jobbi notifies verified tradespeople in the local area whose trade matches the job type. You receive a push notification with the job details. If interested, submit a quote through the app. The customer reviews all quotes and chooses who to hire.</p></details>
+        <details><summary>Can I set my own prices?</summary><p>Yes — entirely. Jobbi does not set or cap your prices. When you submit a quote you decide what to charge based on the job and your own rates.</p></details>
+        <details><summary>What is On Call mode?</summary><p>On Call mode lets you signal that you are available for urgent and emergency jobs right now. When a customer posts an emergency job, all verified On Call tradespeople matching that trade in the area receive an instant notification. Toggle it on and off from your dashboard.</p></details>
+        <details><summary>How do I build my reputation on Jobbi?</summary><p>After every completed job, the customer leaves a rating across six dimensions — quality, punctuality, cleanliness, professionalism, communication and value. Your overall rating and reviews are visible on your profile to all potential customers.</p></details>
+        <details><summary>What happens if a customer disputes a job?</summary><p>Jobbi acts as a neutral mediator. We encourage resolution through direct conversation first. Where work has genuinely fallen short of what was agreed, we may ask you to return to remedy it.</p></details>
+        <details><summary>Can I use Jobbi alongside other platforms?</summary><p>Yes — there are no exclusivity requirements. We simply ask that all jobs sourced through Jobbi are completed and paid through the platform.</p></details>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- DOWNLOAD -->
+<section class="download band" id="download" aria-labelledby="dl-title">
+  <div class="wrap dl-in">
+    <div class="dl-left">
+      <img class="m" src="assets/img/mark-white.png" alt="" width="171" height="200">
+      <div>
+        <h2 id="dl-title">Download the App</h2>
+        <p>Post a job or join as a tradesperson. Free on iPhone and Android.</p>
+      </div>
+    </div>
+    <div class="stores">
+      <a class="store" href="#download">
+        <svg viewBox="0 0 24 24" fill="none" stroke="#fff" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="6" y="2.5" width="12" height="19" rx="2.5"/><path d="M10.5 18.5h3"/></svg>
+        <span><small>Download on the</small><strong>App Store</strong></span>
+      </a>
+      <a class="store" href="#download">
+        <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M5 3.2v17.6c0 .5.5.8.9.6l15-8.8a.7.7 0 0 0 0-1.2l-15-8.8c-.4-.2-.9.1-.9.6Z" fill="#fff"/></svg>
+        <span><small>GET IT ON</small><strong>Google Play</strong></span>
+      </a>
+    </div>
+  </div>
+</section>
+
+</main>
+
+<div class="notes band">
+  <div class="wrap">
+    <p id="note-1">* Estimates are based on typical costs for the required job type and are provided as a guide only. Final price estimates are agreed directly with your tradesperson before the work begins.</p>
+    <p id="note-2">** Not all job types require qualifications or certifications by law. Where they are needed, only tradespeople with the appropriate qualification can provide a quote.</p>
+  </div>
+</div>
+
+<footer class="foot band">
+  <div class="wrap">
+    <div class="foot-in">
+      <a class="brand" href="#top" aria-label="Jobbi home">
+        <img class="m" src="assets/img/mark-blue.png" alt="" width="171" height="200">
+        <img class="w" src="assets/img/word-blue.png" alt="Jobbi" width="416" height="120">
+      </a>
+      <nav aria-label="Footer">
+        <a href="#top">Home</a>
+        <a href="#faq">FAQ</a>
+        <a href="https://www.jobbi.uk/guides">Help &amp; Guides</a>
+        <a href="#download">Download the App</a>
+      </nav>
+    </div>
+    <div class="legal">
+      <span>© 2026 Jobbi. All rights reserved.</span>
+      <span class="credit">Designed and built by <a href="https://itchenstudio.co.uk" data-umami-event="Itchen Studio link">Itchen Studio</a></span>
+      <nav aria-label="Legal" style="display:flex;flex-wrap:wrap">
+        <a href="https://www.jobbi.uk/privacy">Privacy Policy</a>
+        <a href="https://www.jobbi.uk/cookies">Cookie Policy</a>
+        <a href="#">Terms of Service</a>
+        <a href="#">Contact</a>
+      </nav>
+    </div>
+  </div>
+</footer>
+
+<script>
+(function(){
+  // Header shadow once the page moves
+  var top=document.getElementById('top');
+  function onScroll(){ top.classList.toggle('scrolled', window.scrollY>8); }
+  window.addEventListener('scroll', onScroll, {passive:true}); onScroll();
+
+  // Verification card: only animate if it starts out of view, so the resting page is complete
+  var card=document.getElementById('vcard');
+  var reduce=window.matchMedia && window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+  if(card && 'IntersectionObserver' in window && !reduce){
+    var r=card.getBoundingClientRect();
+    if(r.top>window.innerHeight){
+      card.classList.add('armed');
+      var io=new IntersectionObserver(function(es){
+        es.forEach(function(e){
+          if(e.isIntersecting){
+            card.classList.add('play');
+            requestAnimationFrame(function(){ requestAnimationFrame(function(){ card.classList.remove('armed'); }); });
+            io.disconnect();
+          }
+        });
+      },{threshold:.45});
+      io.observe(card);
+    }
+  }
+
+  // Commission calculator (5% per the published FAQ)
+  var RATE=0.05;
+  var range=document.getElementById('job-value');
+  var fmt=new Intl.NumberFormat('en-GB',{style:'currency',currency:'GBP'});
+  var fmt0=new Intl.NumberFormat('en-GB',{style:'currency',currency:'GBP',maximumFractionDigits:0});
+  function calc(){
+    var v=Number(range.value), fee=Math.round(v*RATE*100)/100;
+    document.getElementById('out-value').textContent=fmt0.format(v);
+    document.getElementById('out-fee').textContent=fmt.format(fee);
+    document.getElementById('out-take').textContent=fmt.format(v-fee);
+  }
+  range.addEventListener('input', calc); calc();
+  document.getElementById('calc').addEventListener('submit', function(e){ e.preventDefault(); });
+
+  // FAQ tabs
+  var tabs=[].slice.call(document.querySelectorAll('[role=tab]'));
+  function select(t){
+    tabs.forEach(function(x){
+      var on=x===t; x.setAttribute('aria-selected', on); x.tabIndex=on?0:-1;
+      document.getElementById(x.getAttribute('aria-controls')).hidden=!on;
+    });
+  }
+  tabs.forEach(function(t,i){
+    t.addEventListener('click', function(){ select(t); });
+    t.addEventListener('keydown', function(e){
+      if(e.key==='ArrowRight'||e.key==='ArrowLeft'){
+        var n=tabs[(i+(e.key==='ArrowRight'?1:-1)+tabs.length)%tabs.length]; select(n); n.focus(); e.preventDefault();
+      }
+    });
+  });
+})();
+</script>
+
+</body>
+</html>
