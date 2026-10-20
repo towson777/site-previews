@@ -1,0 +1,651 @@
+<!doctype html>
+<!--
+ART DIRECTION BRIEF: Gandhi Indian Cuisine, Winchester
+IDEA: The restaurant's own gold lotus emblem is the whole site. Sam's notes: no slogans, big logo, supplied copy, purple and white, a Tripadvisor ranking badge in the hero, and the logos rebuilt as exact SVG so they can move and catch light. Both logos were traced from the uploaded artwork into vector paths (petal ring, thin ring, G glyph; Gandhi / RESTAURANT wordmark), then given a gold gradient, an idle sheen and a pointer-following highlight.
+PALETTE: plum #4a2349 (sampled from the logo ground), deep plum #2e1430, mid plum #6a3568, white, lilac tint #f4eef4, logo gold #e6d79b used only for the logo, rules and accents on plum.
+TYPE: Cormorant (variable, with italics) for display; Figtree for text. Both self-hosted.
+HERO: plum ground with faint rays like the logo background. Left: the wordmark as the h1, drawn huge, and the supplied copy. Right: the emblem at full size, petals turning slowly, a light that follows the cursor. Tripadvisor rating badge overlapping the emblem. No photo, no headline.
+SIGNATURE MOMENT: "Through the lotus". A pinned scene where the petal ring turns with the scroll and the emblem's inner circle opens, one wipe after another, onto five of the restaurant's own photos. Phone: same scene, shorter, sized to the screen. Reduced motion: a plain figure grid.
+FEATURE: Table booking demo (guests, day, lunch or dinner time, name and phone) ending in a confirmation reference. Example availability, sends nothing. Plus a party and private dining enquiry form that sends nothing.
+HEADLINE SHORTLIST (overridden by Sam's "no slogans, large logo"): 1 Since 1987 on the High Street; 2 Winchester's Indian restaurant, since 1987 [competitor could say it]; 3 Spiced, grilled, shared; 4 Lunch and dinner on the High Street; 5 Cooking from 1987; 6 High Street, since 1987; 7 Thirty-nine years of curry [no]; 8 Table, takeaway or delivered; 9 Gandhi, Winchester; 10 Open since 1987. PICK: the logo itself, set as the h1, with no strapline.
+-->
+<html lang="en-GB">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<meta name="robots" content="noindex,nofollow">
+<title>Gandhi Indian Cuisine · Website concept</title>
+<meta name="description" content="A website concept for Gandhi Indian Cuisine, High Street, Winchester. Preview only, not the live site.">
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Ccircle cx='16' cy='16' r='16' fill='%234a2349'/%3E%3Ccircle cx='16' cy='16' r='12' fill='none' stroke='%23e6d79b' stroke-width='3' stroke-dasharray='4 2'/%3E%3Ccircle cx='16' cy='16' r='5' fill='%23e6d79b'/%3E%3C/svg%3E">
+<script defer src="https://cloud.umami.is/script.js" data-website-id="8df92b2d-e60b-4f9e-afc7-61b78ad1a912"></script>
+<link rel="preload" href="assets/fonts/cormorant.woff2" as="font" type="font/woff2" crossorigin>
+<link rel="preload" href="assets/fonts/figtree.woff2" as="font" type="font/woff2" crossorigin>
+<script>(function(d){if(!matchMedia('(prefers-reduced-motion: reduce)').matches){d.documentElement.classList.add('motion');setTimeout(function(){if(!d.documentElement.classList.contains('ready'))d.documentElement.classList.remove('motion')},3000)}})(document)</script>
+<style>
+@font-face{font-family:"Cormorant";src:url("assets/fonts/cormorant.woff2") format("woff2");font-weight:300 700;font-display:swap}
+@font-face{font-family:"Cormorant";src:url("assets/fonts/cormorant-italic.woff2") format("woff2");font-weight:300 700;font-style:italic;font-display:swap}
+@font-face{font-family:"Figtree";src:url("assets/fonts/figtree.woff2") format("woff2");font-weight:300 900;font-display:swap}
+:root{
+  --plum:#4a2349;--plum-deep:#2e1430;--plum-mid:#6a3568;--lilac:#f4eef4;--lilac-2:#e7dbe7;--white:#fff;
+  --ink:#2a1a2b;--muted:#665667;--gold:#e6d79b;--gold-deep:#c9b676;
+  --display:"Cormorant","Cormorant Garamond",Georgia,"Times New Roman",serif;--body:"Figtree",system-ui,-apple-system,"Segoe UI",sans-serif;
+  --ease:cubic-bezier(.2,.7,.1,1);
+}
+*{box-sizing:border-box}
+html.lenis,html.lenis body{height:auto}
+body{margin:0;background:var(--white);color:var(--ink);font:400 17px/1.6 var(--body);-webkit-font-smoothing:antialiased;overflow-x:clip}
+img{max-width:100%;display:block}
+svg{display:block}
+p{margin:0}
+.wrap{max-width:1240px;margin:0 auto;padding-inline:32px}
+@media (max-width:640px){.wrap{padding-inline:16px}}
+h1,h2,h3{font-family:var(--display);font-weight:500;margin:0;letter-spacing:-.015em;text-wrap:balance}
+h2{font-size:clamp(46px,6.2vw,92px);line-height:.96}
+h2 .sw,h3 .sw{padding-bottom:.24em;margin-bottom:-.24em}
+h2 em,h3 em{font-style:italic;color:var(--plum-mid)}
+.dk h2 em,.dk h3 em{color:var(--gold)}
+.kicker{font:700 12.5px/1 var(--body);letter-spacing:.2em;text-transform:uppercase;color:var(--plum-mid);display:inline-flex;align-items:center;gap:12px}
+.kicker::before{content:"";width:26px;height:1px;background:currentColor}
+.dk .kicker{color:var(--gold)}
+:focus-visible{outline:3px solid var(--plum-mid);outline-offset:3px;border-radius:6px}
+.dk :focus-visible{outline-color:var(--gold)}
+[hidden]{display:none!important}
+.sr{position:absolute;width:1px;height:1px;overflow:hidden;clip:rect(0 0 0 0);white-space:nowrap}
+.btn{display:inline-flex;align-items:center;justify-content:center;gap:10px;font:700 15px/1 var(--body);letter-spacing:.04em;text-decoration:none;padding:17px 28px;min-height:50px;border-radius:999px;border:1.5px solid transparent;cursor:pointer;transition:background-color .25s,color .25s,border-color .25s,transform .25s}
+.btn:hover{transform:translateY(-2px)}
+.btn-plum{background:var(--plum);color:#fff}
+.btn-plum:hover{background:var(--plum-mid)}
+.btn-gold{background:var(--gold);color:var(--plum-deep)}
+.btn-gold:hover{background:#fff}
+.btn-line{border-color:currentColor;color:inherit;background:transparent}
+.dk .btn-line{color:#fff}
+.dk .btn-line:hover{background:#fff;color:var(--plum-deep)}
+.btn-line:not(.dk *):hover{background:var(--plum);color:#fff;border-color:var(--plum)}
+
+/* preview banner */
+.concept{background:var(--plum-deep);color:#e4d6e4;font-size:13px;line-height:18px;text-align:center;padding:8px 16px}
+.concept a{color:#fff;font-weight:700}
+
+/* header */
+.top{position:sticky;top:0;z-index:60;background:rgba(58,26,57,.94);backdrop-filter:blur(10px);-webkit-backdrop-filter:blur(10px);color:#fff;transition:transform .5s cubic-bezier(.2,.8,.2,1);border-bottom:1px solid #ffffff14}
+.top.away{transform:translateY(-100%)}
+.top .wrap{display:flex;align-items:center;justify-content:space-between;height:76px;gap:20px}
+.brand{display:flex;align-items:center;gap:14px;text-decoration:none}
+.brand .em{width:50px;height:50px}
+.brand .wm{height:50px;width:auto}
+nav.main{display:flex;align-items:center;gap:30px}
+nav.main a:not(.btn){text-decoration:none;color:#f3e9f3;font-weight:600;font-size:15px;letter-spacing:.02em;padding:10px 2px;position:relative}
+nav.main a:not(.btn)::after{content:"";position:absolute;left:0;right:0;bottom:4px;height:1px;background:var(--gold);transform:scaleX(0);transform-origin:left;transition:transform .35s var(--ease)}
+nav.main a:not(.btn):hover::after{transform:scaleX(1)}
+nav.main .btn{padding:12px 20px;min-height:44px;font-size:14.5px}
+@media (max-width:860px){nav.main a:not(.btn){display:none}}
+@media (max-width:420px){.brand .em{display:none}}
+
+/* hero */
+.hero{position:relative;background:
+  radial-gradient(ellipse 60% 70% at 72% 46%,#6a3568 0%,#4a2349 55%,transparent 100%),
+  repeating-conic-gradient(from 0deg at 72% 48%,#ffffff0b 0 2.2deg,transparent 2.2deg 8deg),
+  var(--plum);color:#fff;overflow:hidden;padding-block:56px 110px}
+.hero .wrap{display:grid;grid-template-columns:minmax(0,1.02fr) minmax(0,.98fr);gap:24px;align-items:center;position:relative}
+.hero h1{margin:0;line-height:0}
+.hero h1 .ln{display:block;overflow:hidden;padding:4px 0 8px}
+.hero h1 .ln>span{display:block}
+.hero .wmark{width:clamp(300px,36vw,540px);height:auto;overflow:visible}
+.hero .copy{margin-top:30px;max-width:35em;color:#eadff0;font-size:clamp(16px,1.25vw,18px);line-height:1.62}
+.hero .copy p+p{margin-top:12px}
+.hero .ctas{display:flex;flex-wrap:wrap;gap:12px;margin-top:30px}
+.emblem-wrap{position:relative;justify-self:end;width:min(100%,680px);margin-right:-3%}
+.emblem-wrap .emb{width:100%;height:auto;overflow:visible;filter:drop-shadow(0 30px 50px #1a0a1a99)}
+html.motion .hero .petals{animation:turn 160s linear infinite;transform-box:fill-box;transform-origin:center}
+@keyframes turn{to{transform:rotate(360deg)}}
+.rating{position:absolute;left:-2%;bottom:3%;z-index:3;display:flex;align-items:center;gap:16px;text-decoration:none;color:var(--ink);background:#fff;border-radius:22px;padding:16px 22px 16px 18px;box-shadow:0 30px 60px -24px #1a0a1acc;transition:transform .3s var(--ease),box-shadow .3s}
+.rating:hover{transform:translateY(-4px) rotate(-1deg);box-shadow:0 40px 70px -24px #1a0a1add}
+.rating:focus-visible{outline-color:var(--gold);outline-offset:4px}
+.rating .score{font:600 56px/.9 var(--display);color:var(--plum);letter-spacing:-.03em}
+.rating .meta{display:grid;gap:5px}
+.rating .meta b{font:800 11px/1 var(--body);letter-spacing:.16em;text-transform:uppercase;color:var(--plum-mid)}
+.rating .meta span{font-size:14px;line-height:1.2;color:var(--muted)}
+.rating .stars{width:104px;height:18px}
+.arches{position:absolute;left:0;right:0;bottom:-1px;height:30px;background:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='60' height='30' viewBox='0 0 60 30'%3E%3Cpath d='M0 0H60C48 0 36 8 30 30 24 8 12 0 0 0Z' fill='%23fff'/%3E%3C/svg%3E") repeat-x bottom/60px 30px;transform:scaleY(-1)}
+html.motion:not(.ready) .hero h1 .ln>span{transform:translateY(105%)}
+html.motion:not(.ready) [data-intro]{opacity:0}
+@media (max-width:900px){
+  .hero{padding-block:28px 90px}
+  .hero .wrap{grid-template-columns:1fr;gap:34px}
+  .emblem-wrap{order:-1;justify-self:center;width:min(78vw,420px);margin:0}
+  .rating{left:50%;bottom:-18px;transform:translateX(-50%);padding:12px 16px}
+  .rating:hover{transform:translateX(-50%) translateY(-3px)}
+  .rating .score{font-size:42px}
+  .hero .wmark{width:min(78vw,420px)}
+  .hero .copy{margin-top:22px}
+}
+@media (max-width:900px){.hero .lead-col{padding-top:20px}}
+
+/* proof */
+.proof{background:#fff;padding:32px 0 12px}
+.proof ul{list-style:none;margin:0;padding:0;display:flex;flex-wrap:wrap;justify-content:center;gap:10px 44px}
+.proof li{display:flex;align-items:baseline;gap:10px;font-size:15px;color:var(--muted)}
+.proof li b{font:600 34px/1 var(--display);color:var(--plum);letter-spacing:-.01em}
+@media (max-width:640px){.proof ul{gap:10px 26px;justify-content:flex-start}.proof li b{font-size:28px}}
+
+/* services */
+.services{padding-block:96px 100px}
+.services .head{display:flex;justify-content:space-between;align-items:end;gap:32px;flex-wrap:wrap;margin-bottom:52px}
+.services .head p{max-width:26em;color:var(--muted);font-size:18px}
+.cards{display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:18px}
+.card{position:relative;background:var(--lilac);border-radius:200px 200px 20px 20px;padding:78px 26px 30px;min-height:330px;display:flex;flex-direction:column;transition:background-color .4s,color .4s,transform .4s var(--ease);overflow:hidden}
+.card:hover{background:var(--plum);color:#fff;transform:translateY(-6px)}
+.card .no{position:absolute;top:34px;left:0;right:0;text-align:center;font:italic 500 28px/1 var(--display);color:var(--plum-mid);transition:color .4s}
+.card:hover .no{color:var(--gold)}
+.card h3{font-size:34px;line-height:1;margin-bottom:12px;text-align:center}
+.card p{color:var(--muted);text-align:center;font-size:16px;line-height:1.55;transition:color .4s}
+.card:hover p{color:#e9dcea}
+.card a{margin-top:auto;padding-top:20px;text-align:center;color:inherit;font-weight:700;font-size:14px;letter-spacing:.06em;text-decoration:underline;text-underline-offset:5px}
+@media (max-width:1000px){.cards{grid-template-columns:repeat(2,minmax(0,1fr))}}
+@media (max-width:560px){.cards{grid-template-columns:1fr}.card{min-height:0}.services{padding-block:72px}}
+
+/* signature scene */
+.scene{position:relative;height:520vh;background:var(--plum-deep);color:#fff}
+.scene-pin{position:sticky;top:0;height:100vh;height:100svh;overflow:hidden;display:grid;place-items:center;
+  background:radial-gradient(ellipse 55% 60% at 50% 50%,#5b2c59 0%,#2e1430 75%),var(--plum-deep)}
+.scene-pin::before{content:"";position:absolute;inset:0;background:repeating-conic-gradient(from 0deg at 50% 50%,#ffffff09 0 2deg,transparent 2deg 7deg);pointer-events:none}
+.sc-svg{position:relative;width:min(88svh,780px);height:auto;max-height:92svh;overflow:visible}
+@media (min-width:901px){.sc-svg{width:max(360px,min(88svh,780px,calc(100vw - 760px)));translate:min(8vw,130px) 0}}
+.sc-text{position:absolute;left:max(32px,calc((100vw - 1240px)/2 + 32px));top:50%;transform:translateY(-50%);max-width:340px;z-index:2}
+.sc-text h2{font-size:clamp(44px,5vw,76px);color:#fff;margin-top:16px}
+.sc-cap{margin:26px 0 0;padding:0;list-style:none;display:grid;position:relative;min-height:3.6em}
+.sc-cap li{grid-area:1/1;opacity:0;transform:translateY(10px);transition:opacity .5s,transform .5s var(--ease);font:italic 500 28px/1.12 var(--display);color:var(--gold)}
+.sc-cap li.on{opacity:1;transform:none}
+.sc-count{position:absolute;right:max(32px,calc((100vw - 1240px)/2 + 32px));top:50%;transform:translateY(-50%);z-index:2;font:500 18px/1 var(--body);letter-spacing:.12em;color:#d9c9da;writing-mode:vertical-rl;display:flex;align-items:center;gap:14px}
+.sc-count i{display:block;width:1px;height:90px;background:#ffffff40;position:relative}
+.sc-count i::after{content:"";position:absolute;left:0;top:0;width:1px;height:100%;background:var(--gold);transform-origin:top;transform:scaleY(var(--p,0))}
+.scene-figs{display:none}
+html:not(.motion) .scene{height:auto}
+html:not(.motion) .scene-pin{position:static;height:auto;display:block;padding:80px 0}
+html:not(.motion) .sc-svg,html:not(.motion) .sc-count{display:none}
+html:not(.motion) .sc-text{position:static;transform:none;width:100%;max-width:none;padding-inline:32px;margin:0 auto 40px;max-width:1240px}
+html:not(.motion) .sc-cap{display:none}
+html:not(.motion) .scene-figs{display:grid;grid-template-columns:repeat(auto-fill,minmax(260px,1fr));gap:18px;max-width:1240px;margin:0 auto;padding-inline:32px}
+html:not(.motion) .scene-figs img{width:100%;aspect-ratio:4/3;object-fit:cover;border-radius:16px}
+html:not(.motion) .scene-figs figcaption{font:italic 500 22px/1.2 var(--display);color:var(--gold);margin-top:8px}
+@media (max-width:900px){
+  .scene{height:420vh}
+  .scene-pin{align-content:center;grid-template-rows:auto auto;gap:4px;padding-top:10px}
+  .sc-svg{width:min(94vw,56svh);margin-top:0}
+  .sc-text{position:relative;left:auto;top:auto;transform:none;max-width:none;text-align:center;padding-inline:20px;order:-1}
+  .sc-text h2{font-size:clamp(36px,10vw,52px);margin-top:10px}
+  .sc-cap{margin-top:8px;min-height:2.4em}
+  .sc-cap li{font-size:24px}
+  .sc-count{display:none}
+  .sc-text .kicker{justify-content:center}
+}
+
+/* menu */
+.menu{padding-block:110px;background:var(--lilac)}
+.menu .wrap{display:grid;grid-template-columns:minmax(0,1.05fr) minmax(0,.95fr);gap:64px;align-items:center}
+.menu .lead{font-size:19px;color:var(--muted);margin-top:22px;max-width:28em}
+.menu .ctas{display:flex;flex-wrap:wrap;gap:12px;margin-top:32px}
+.menu .note{margin-top:22px;font-size:15px;color:var(--muted);max-width:30em;border-left:2px solid var(--plum-mid);padding-left:14px}
+.menu-photo{position:relative;aspect-ratio:4/5;border-radius:300px 300px 22px 22px;overflow:hidden;box-shadow:0 40px 70px -40px #2e1430aa}
+.menu-photo img{width:100%;height:116%;object-fit:cover}
+@media (max-width:900px){.menu .wrap{grid-template-columns:1fr;gap:40px}.menu{padding-block:76px}.menu-photo{max-width:420px}}
+
+/* booking */
+.book{background:var(--plum);color:#fff;padding-block:120px;position:relative;overflow:hidden}
+.book::before{content:"";position:absolute;inset:0;background:repeating-conic-gradient(from 0deg at 12% 20%,#ffffff0a 0 2.2deg,transparent 2.2deg 8deg);pointer-events:none}
+.book .wrap{display:grid;grid-template-columns:minmax(0,.85fr) minmax(0,1.15fr);gap:64px;align-items:start;position:relative}
+.book h2{color:#fff}
+.book .intro{color:#e4d6e4;font-size:18px;margin-top:22px;max-width:26em}
+.book .ways{margin-top:34px;display:grid;gap:12px;max-width:26em}
+.book .ways a{color:#fff}
+.book .ways div{display:flex;justify-content:space-between;gap:16px;border-top:1px solid #ffffff30;padding:12px 0;font-size:16px}
+.book .ways div span{color:#d9c9da}
+.widget{background:#fff;color:var(--ink);border-radius:24px;padding:30px;display:grid;gap:26px;box-shadow:0 40px 80px -40px #00000099}
+.wl{font:800 12px/1 var(--body);letter-spacing:.14em;text-transform:uppercase;color:var(--muted);margin-bottom:12px;display:block}
+.guests{display:flex;align-items:center;gap:16px;flex-wrap:wrap}
+.guests button{width:48px;height:48px;border-radius:50%;border:1.5px solid var(--plum);background:transparent;font:500 22px/1 var(--body);color:var(--plum);cursor:pointer}
+.guests button:hover:not(:disabled){background:var(--plum);color:#fff}
+.guests button:disabled{opacity:.3;cursor:default}
+.guests output{font:500 44px/1 var(--display);min-width:2ch;text-align:center;font-variant-numeric:tabular-nums}
+.guests small{color:var(--muted);font-size:14px}
+.days{display:grid;grid-template-columns:repeat(7,minmax(0,1fr));gap:8px}
+.day{border:1.5px solid var(--lilac-2);background:#fff;border-radius:14px;padding:10px 4px;text-align:center;cursor:pointer;font:inherit;color:inherit;display:grid;gap:2px;min-height:64px}
+.day small{font-size:11px;font-weight:800;letter-spacing:.08em;text-transform:uppercase;color:var(--muted)}
+.day b{font:500 24px/1 var(--display)}
+.day:hover:not(:disabled){border-color:var(--plum)}
+.day[aria-pressed="true"]{background:var(--plum);border-color:var(--plum);color:#fff}
+.day[aria-pressed="true"] small{color:var(--gold)}
+.day:disabled{opacity:.4;cursor:not-allowed}
+.service-h{font:600 13px/1 var(--body);color:var(--plum-mid);margin:2px 0 8px;letter-spacing:.04em}
+.times{display:grid;grid-template-columns:repeat(auto-fill,minmax(84px,1fr));gap:8px}
+.time{font:700 15px/1 var(--body);padding:14px 6px;border-radius:10px;border:1.5px solid var(--lilac-2);background:#fff;color:var(--ink);cursor:pointer;font-variant-numeric:tabular-nums;min-height:46px}
+.time:hover:not(:disabled){border-color:var(--plum)}
+.time[aria-pressed="true"]{background:var(--plum);border-color:var(--plum);color:#fff}
+.time:disabled{text-decoration:line-through;opacity:.4;cursor:not-allowed}
+.eg{font-size:13px;color:var(--muted);margin-top:10px}
+.who{display:grid;grid-template-columns:1fr 1fr;gap:12px}
+.who label,.pform label{display:grid;gap:6px;font-weight:700;font-size:14px}
+.who input,.pform input,.pform textarea{font:inherit;font-weight:400;font-size:16px;border:1.5px solid var(--lilac-2);border-radius:12px;padding:13px 14px;background:#fff;color:var(--ink);min-height:48px;width:100%}
+.who input:focus,.pform input:focus,.pform textarea:focus{outline:none;border-color:var(--plum);box-shadow:0 0 0 3px #4a234926}
+.sumbar{display:flex;align-items:center;justify-content:space-between;gap:16px;flex-wrap:wrap;border-top:1px solid var(--lilac-2);padding-top:20px}
+.sumbar p{font-size:15px;color:var(--muted)}
+.sumbar p b{color:var(--ink)}
+.confirm{display:grid;gap:16px;text-align:center;justify-items:center;padding-block:20px}
+.confirm .tick{width:72px;height:72px;border-radius:50%;background:var(--lilac);color:var(--plum);display:grid;place-items:center}
+.confirm .tick svg{width:36px;height:36px}
+.confirm h3{font-size:46px}
+.confirm .ref{font:800 13px/1 var(--body);letter-spacing:.16em;text-transform:uppercase;color:var(--plum-mid)}
+.confirm dl{display:grid;grid-template-columns:auto auto;gap:6px 18px;margin:0;font-size:16px;text-align:left}
+.confirm dt{color:var(--muted)}
+.confirm dd{margin:0;font-weight:700}
+.confirm .note{color:var(--muted);font-size:14px;max-width:28em}
+@media (max-width:960px){.book .wrap{grid-template-columns:1fr;gap:40px}.book{padding-block:84px}.widget{padding:22px}}
+@media (max-width:520px){.days{grid-template-columns:repeat(4,minmax(0,1fr))}.who{grid-template-columns:1fr}}
+
+/* reviews */
+.reviews{padding-block:100px 90px;overflow:hidden;background:#fff}
+.reviews .wrap{margin-bottom:44px;display:flex;justify-content:space-between;align-items:end;gap:24px;flex-wrap:wrap}
+.reviews .src{color:var(--muted);font-size:16px;max-width:22em}
+.rv-row{display:inline-flex;white-space:nowrap;will-change:transform}
+.rv-row+.rv-row{margin-top:18px}
+.rv-wrap{overflow:hidden;white-space:nowrap}
+.rv{display:inline-flex;flex-direction:column;gap:14px;white-space:normal;width:min(520px,82vw);margin:0 22px 0 0;padding:30px 32px;background:var(--lilac);border-radius:22px;vertical-align:top}
+.rv:nth-child(even){background:var(--plum);color:#fff}
+.rv q{quotes:"\201C" "\201D";font:italic 500 clamp(25px,2.4vw,32px)/1.18 var(--display)}
+.rv cite{font:700 13px/1.3 var(--body);font-style:normal;letter-spacing:.08em;text-transform:uppercase;color:var(--plum-mid)}
+.rv:nth-child(even) cite{color:var(--gold)}
+
+/* visit */
+.visit{padding-block:110px 100px;background:var(--lilac)}
+.visit .wrap{display:grid;grid-template-columns:minmax(0,.9fr) minmax(0,1.1fr);gap:64px;align-items:start}
+.facts{margin-top:30px;border-top:1px solid var(--lilac-2)}
+.facts div{display:grid;grid-template-columns:7.5em 1fr;gap:16px;padding:16px 4px;border-bottom:1px solid var(--lilac-2);font-size:17px}
+.facts dt{font:800 12px/1.8 var(--body);letter-spacing:.14em;text-transform:uppercase;color:var(--plum-mid)}
+.facts dd{margin:0}
+.facts a{color:var(--plum);font-weight:700;text-underline-offset:4px}
+.facts a:hover{color:var(--plum-mid)}
+.pform{background:#fff;border-radius:24px;padding:30px;display:grid;gap:16px;box-shadow:0 40px 80px -50px #2e1430aa}
+.pform h3{font-size:38px;line-height:1}
+.pform .row2{display:grid;grid-template-columns:1fr 1fr;gap:12px}
+.pform textarea{min-height:110px;resize:vertical}
+.pdone{background:var(--lilac);border-radius:14px;padding:16px 18px;font-weight:600;color:var(--plum)}
+dl{margin:0}
+@media (max-width:900px){.visit .wrap{grid-template-columns:1fr;gap:40px}.visit{padding-block:76px}.pform{padding:22px}.pform .row2{grid-template-columns:1fr}.facts div{grid-template-columns:6.2em 1fr}}
+
+/* footer */
+footer{background:var(--plum-deep);color:#d6c6d6;padding-block:70px 40px;position:relative;overflow:hidden}
+footer .fl{display:flex;align-items:center;justify-content:space-between;gap:32px}
+footer .femb{width:clamp(130px,20vw,300px);height:auto;flex:none}
+footer .big{width:clamp(260px,38vw,520px);height:auto}
+footer .row{display:flex;flex-wrap:wrap;justify-content:space-between;gap:16px;margin-top:44px;font-size:14px;border-top:1px solid #ffffff24;padding-top:20px}
+footer a{color:#fff}
+</style>
+</head>
+<body>
+
+<svg width="0" height="0" style="position:absolute" aria-hidden="true" focusable="false">
+  <defs>
+    <linearGradient id="gold" x1="0" y1="1" x2="1" y2="0"><stop offset="0" stop-color="#cdbb7b"/><stop offset=".3" stop-color="#e9dca6"/><stop offset=".5" stop-color="#f3eab9"/><stop offset=".72" stop-color="#d9c98a"/><stop offset="1" stop-color="#cdbb7d"/></linearGradient>
+    <radialGradient id="glowE" gradientUnits="userSpaceOnUse" cx="416" cy="388" r="260"><stop offset="0" stop-color="#fffbe6" stop-opacity=".95"/><stop offset=".5" stop-color="#fff3c0" stop-opacity=".35"/><stop offset="1" stop-color="#fff3c0" stop-opacity="0"/></radialGradient>
+    <radialGradient id="glowW" gradientUnits="userSpaceOnUse" cx="300" cy="200" r="190"><stop offset="0" stop-color="#fffbe6" stop-opacity=".95"/><stop offset=".5" stop-color="#fff3c0" stop-opacity=".35"/><stop offset="1" stop-color="#fff3c0" stop-opacity="0"/></radialGradient>
+    <path id="p-petals" fill-rule="evenodd" d="M406.62,740.35C405.52,740.30 401.93,740.14 398.62,740.00C385.44,739.44 368.44,737.62 356.75,735.51C355.31,735.25 352.77,734.80 351.12,734.51C331.58,731.03 308.12,724.34 288.25,716.58C270.29,709.57 249.23,699.25 235.88,690.92C234.64,690.15 233.19,689.28 232.66,688.99C230.94,688.05 223.51,683.27 218.75,680.04C191.10,661.29 165.80,638.24 144.36,612.25C125.77,589.72 108.21,561.89 96.88,537.00C94.02,530.72 93.03,528.47 91.33,524.38C90.30,521.90 89.07,518.86 88.59,517.62C88.11,516.39 87.45,514.70 87.13,513.88C84.59,507.44 80.31,494.73 78.63,488.62C78.33,487.52 77.67,485.27 77.18,483.62C74.96,476.19 71.81,462.43 69.66,450.75C68.41,443.93 66.52,430.16 66.00,423.99C65.87,422.40 65.64,420.01 65.51,418.68C64.10,405.15 64.02,366.38 65.38,360.62C65.45,360.35 65.67,358.10 65.88,355.62C66.28,350.80 67.05,344.11 67.63,340.25C67.83,338.94 68.10,337.09 68.23,336.12C68.69,332.63 69.95,325.50 71.03,320.25C71.44,318.26 71.93,315.84 72.12,314.88C72.89,311.05 74.73,303.34 76.13,298.12C76.50,296.75 76.91,295.18 77.04,294.63C78.20,289.80 83.14,274.41 86.12,266.38C86.47,265.41 86.93,264.15 87.14,263.58C89.00,258.35 96.10,241.78 98.85,236.25C99.57,234.81 100.82,232.28 101.62,230.62C137.95,156.17 208.01,91.69 285.25,61.62C286.42,61.17 288.27,60.44 289.38,60.01C297.03,56.98 313.86,51.33 319.38,49.93C319.65,49.86 321.17,49.45 322.75,49.01C328.30,47.47 336.63,45.43 341.75,44.37C343.47,44.01 345.61,43.56 346.50,43.37C355.70,41.39 373.36,38.84 383.62,38.00C419.42,35.10 450.10,36.65 483.25,43.02C488.49,44.03 489.00,44.14 497.62,46.14C508.21,48.59 520.09,52.03 530.88,55.75C607.51,82.22 673.16,134.91 715.93,204.25C720.87,212.27 729.50,227.72 729.50,228.56C729.50,228.74 729.80,229.33 730.17,229.87C731.97,232.52 741.80,254.27 744.07,260.62C744.27,261.18 744.91,262.86 745.49,264.38C746.96,268.17 748.25,271.80 750.10,277.38C752.83,285.58 754.37,290.75 756.52,298.88C760.94,315.65 764.79,336.64 766.12,351.12C766.32,353.32 766.54,355.46 766.62,355.88C766.70,356.29 766.93,359.04 767.13,362.00C768.95,388.47 768.01,416.19 764.48,439.50C763.30,447.31 762.95,449.50 762.51,451.75C762.25,453.06 761.80,455.42 761.51,457.00C760.86,460.49 758.95,469.20 758.08,472.62C757.74,474.00 757.35,475.57 757.22,476.12C756.97,477.19 755.74,481.70 754.36,486.64C752.70,492.55 749.49,502.40 747.16,508.75C745.01,514.62 743.72,517.92 741.44,523.50C731.45,547.90 712.33,581.58 699.02,598.20C698.61,598.71 697.18,600.59 695.85,602.38C680.44,622.99 658.30,645.61 636.12,663.36C626.44,671.12 609.10,683.49 604.75,685.75C604.41,685.93 603.06,686.77 601.75,687.62C587.63,696.84 564.06,708.69 545.50,715.89C543.92,716.51 542.34,717.13 542.00,717.28C532.04,721.59 504.37,729.73 489.75,732.65C488.72,732.85 487.18,733.19 486.32,733.39C485.47,733.59 484.49,733.75 484.15,733.75C483.81,733.75 482.87,733.92 482.07,734.13C479.93,734.69 470.91,736.21 465.75,736.88C464.17,737.08 462.26,737.36 461.50,737.49C460.74,737.62 459.34,737.79 458.38,737.88C457.41,737.97 455.39,738.19 453.88,738.38C452.36,738.57 450.23,738.80 449.12,738.88C448.02,738.96 445.32,739.19 443.12,739.39C435.66,740.07 413.35,740.65 406.62,740.35Z M354.96,731.93C355.10,731.75 355.93,730.20 356.80,728.48C361.49,719.17 366.69,714.67 385.00,704.12C407.51,691.14 414.06,684.58 417.62,671.44C418.23,669.21 418.46,669.42 419.51,673.12C422.51,683.75 431.78,692.72 450.00,702.62C469.66,713.30 475.89,718.47 480.76,728.10C482.81,732.17 483.50,732.39 483.50,728.99C483.50,719.11 488.25,709.79 501.47,693.75C516.26,675.81 520.98,665.05 519.66,652.31C519.38,649.56 519.71,649.59 521.99,652.47C527.39,659.31 533.22,662.75 545.12,666.09C549.33,667.27 554.37,668.15 564.62,669.50C584.44,672.09 591.88,674.78 599.80,682.18C602.19,684.41 602.62,684.33 601.77,681.80C600.18,677.07 599.63,673.02 599.82,667.51C600.04,661.05 600.98,657.21 606.86,638.64C612.98,619.31 613.34,607.70 608.10,597.78C606.33,594.42 606.67,593.99 609.58,595.91C619.19,602.24 631.23,602.68 653.04,597.48C675.97,592.01 682.78,591.76 693.60,595.99C696.23,597.02 696.34,596.77 694.36,594.12C687.75,585.25 685.84,578.36 684.75,559.50C684.06,547.66 683.82,544.85 683.13,540.84C680.86,527.67 678.28,521.95 671.69,515.41C667.71,511.46 667.71,511.45 672.61,512.24C680.28,513.48 686.79,512.25 696.07,507.79C701.98,504.95 703.93,503.73 717.62,494.33C731.71,484.67 739.06,481.75 749.31,481.75C752.87,481.75 753.02,481.54 750.44,480.07C740.98,474.68 735.24,466.87 727.02,448.18C717.76,427.13 709.60,417.39 698.10,413.65C695.14,412.69 695.39,412.05 699.00,411.38C711.10,409.14 719.11,402.19 733.07,381.84C745.09,364.30 750.27,359.24 760.20,355.35C763.96,353.87 764.04,353.49 760.66,353.02C750.21,351.57 743.66,347.34 727.51,331.64C710.65,315.24 702.42,310.44 690.38,310.02C685.24,309.84 684.96,309.64 687.67,308.03C694.17,304.19 698.99,298.65 701.99,291.59C702.45,290.51 703.17,288.84 703.58,287.88C705.32,283.78 707.12,277.49 709.51,267.12C711.78,257.29 712.95,253.08 714.67,248.64C717.08,242.43 720.65,237.22 725.63,232.65C727.94,230.54 728.14,229.91 726.32,230.45C716.51,233.35 706.06,231.68 689.75,224.62C664.05,213.49 653.05,211.76 641.35,217.01C638.77,218.17 638.60,217.69 640.63,215.01C647.59,205.83 649.30,194.02 646.51,174.50C645.91,170.31 645.17,164.92 644.59,160.50C643.10,149.23 644.22,140.31 648.13,132.29C650.35,127.72 650.36,127.75 646.80,130.10C637.11,136.48 631.27,137.35 603.12,136.65C593.60,136.41 591.57,136.51 584.88,137.54C576.18,138.87 570.13,141.61 564.79,146.63C562.30,148.97 561.45,149.06 562.35,146.89C566.79,136.26 563.45,122.74 551.02,101.00C541.68,84.68 538.91,76.10 539.76,66.18C540.18,61.34 539.93,61.12 537.73,64.42C532.58,72.15 524.77,77.04 508.12,82.99C504.96,84.12 500.63,85.67 498.50,86.43C481.91,92.37 472.31,99.39 467.69,108.96C465.84,112.78 465.40,112.73 465.02,108.69C463.90,96.92 457.87,88.51 439.50,73.13C421.66,58.18 417.48,53.05 414.73,42.70C414.43,41.56 414.04,40.34 413.86,40.00L413.55,39.38L413.28,40.00C413.13,40.34 412.73,41.71 412.38,43.04C409.72,53.03 404.66,59.48 389.14,72.61C370.26,88.59 363.86,97.76 363.05,110.04C362.81,113.61 362.38,113.62 360.62,110.12C354.98,98.89 346.04,93.17 321.50,85.13C303.69,79.30 295.97,74.87 290.15,67.15C287.76,63.99 287.31,63.87 287.74,66.55C289.33,76.35 286.72,85.45 277.36,102.75C264.90,125.78 262.28,136.35 266.11,148.07C267.20,151.38 266.70,151.62 263.97,149.12C255.95,141.75 244.35,138.73 227.12,139.52C197.84,140.85 192.21,140.17 182.24,134.10C178.59,131.89 178.54,131.94 180.61,135.82C181.35,137.23 182.36,139.56 182.84,141.01C185.64,149.46 185.63,155.40 182.75,177.62C180.17,197.51 182.24,210.20 189.46,218.87C191.38,221.17 190.77,221.50 187.31,220.03C177.39,215.84 163.90,217.91 145.12,226.50C124.67,235.85 115.41,237.87 104.56,235.33C102.00,234.73 101.63,235.13 103.38,236.58C112.43,244.11 115.85,250.92 120.99,271.62C127.01,295.92 132.27,305.78 142.32,311.61C144.98,313.16 144.38,314.00 140.60,314.00C129.71,314.00 121.03,319.30 103.38,336.74C87.20,352.73 82.11,356.11 71.41,357.99C67.29,358.71 67.26,359.11 71.25,360.50C81.44,364.04 86.88,369.26 100.07,388.12C113.22,406.96 122.79,414.73 134.57,416.14C136.84,416.41 136.57,416.99 133.74,417.96C123.28,421.56 115.13,431.60 106.63,451.38C97.26,473.15 92.49,479.82 82.17,485.61C80.21,486.71 80.62,486.86 86.15,487.02C96.69,487.33 102.31,489.72 119.57,501.19C139.90,514.71 149.95,518.32 161.50,516.24C165.75,515.47 165.89,515.68 162.97,518.45C153.92,527.03 151.20,536.89 149.99,565.38C149.29,581.97 147.16,589.93 141.27,597.87C138.61,601.46 138.64,601.60 141.83,600.22C150.27,596.57 158.61,596.20 171.80,598.87C174.81,599.48 176.28,599.79 182.38,601.10C205.19,606.03 215.95,605.47 226.23,598.79C228.77,597.13 228.93,597.40 227.29,600.68C221.88,611.53 222.61,621.76 230.50,645.50C237.38,666.22 238.26,673.06 235.35,683.38C235.00,684.61 234.66,685.82 234.59,686.06C234.34,686.96 235.31,686.47 237.08,684.80C244.44,677.83 253.15,674.42 269.38,672.14C283.43,670.17 287.71,669.30 294.77,666.98C303.74,664.04 309.80,660.08 314.04,654.39C316.91,650.53 316.78,650.47 316.58,655.69C316.10,668.59 320.20,676.71 337.86,697.78C349.05,711.13 353.99,720.54 354.00,728.54C354.01,731.37 354.36,732.64 354.96,731.93Z"/>
+    <path id="p-ring" fill-rule="evenodd" d="M412.38,651.57C391.09,651.20 367.29,647.96 349.12,642.95C347.61,642.53 345.93,642.09 345.38,641.96C339.87,640.68 321.27,634.20 315.06,631.40C313.65,630.77 312.43,630.25 312.34,630.25C311.38,630.25 295.70,622.56 288.38,618.50C272.75,609.83 254.62,597.04 243.25,586.65C241.81,585.34 239.87,583.64 238.95,582.88C236.41,580.79 225.05,569.40 221.03,564.91C193.98,534.71 174.64,500.18 163.68,462.50C163.34,461.33 162.88,459.76 162.66,459.00C157.87,442.47 154.82,423.41 153.48,401.62C152.90,392.18 153.68,363.69 154.61,360.52C154.67,360.30 154.85,358.77 155.00,357.12C155.15,355.48 155.38,353.56 155.51,352.88C155.64,352.19 155.91,350.39 156.12,348.88C168.34,258.07 235.52,174.87 322.88,142.36C324.11,141.90 325.91,141.23 326.88,140.88C329.20,140.01 337.64,137.20 340.00,136.50C341.03,136.20 342.73,135.69 343.78,135.36C344.83,135.04 346.63,134.60 347.78,134.38C348.93,134.15 350.14,133.86 350.47,133.73C352.81,132.76 366.20,129.88 374.62,128.53C398.99,124.64 426.30,124.27 450.50,127.51C461.90,129.03 475.50,131.69 481.75,133.62C482.78,133.94 484.35,134.33 485.24,134.49C486.13,134.66 487.70,135.05 488.74,135.37C489.78,135.69 491.47,136.20 492.50,136.50C510.55,141.79 531.48,150.96 549.12,161.33C609.75,196.92 654.13,255.83 671.28,323.46C672.10,326.71 672.93,330.11 673.11,331.00C674.82,339.36 675.32,341.99 675.97,346.00C679.90,370.12 680.43,396.29 677.47,420.50C676.44,429.00 674.71,439.11 673.12,446.00C672.75,447.58 672.30,449.55 672.11,450.38C651.24,543.33 571.62,622.79 477.75,644.36C476.17,644.73 473.98,645.24 472.88,645.49C458.87,648.77 440.46,651.02 424.50,651.38C421.41,651.45 418.20,651.54 417.38,651.57C416.55,651.60 414.30,651.60 412.38,651.57Z M436.75,642.28C440.26,641.98 443.74,641.64 444.50,641.51C445.26,641.38 446.61,641.21 447.50,641.13C455.65,640.35 471.01,637.36 481.62,634.49C485.72,633.38 487.27,632.93 494.00,630.92C499.71,629.21 511.01,624.84 519.69,620.98C589.38,589.97 642.69,527.46 661.86,454.25C665.03,442.11 666.51,434.64 668.36,421.38C671.05,402.10 671.10,377.56 668.48,356.62C667.18,346.15 664.38,331.40 662.36,324.38C662.17,323.69 661.43,321.10 660.72,318.62C658.89,312.18 658.69,311.54 657.29,307.38C656.02,303.60 655.47,302.12 652.93,295.50C630.13,236.15 581.21,184.14 523.50,157.89C522.33,157.35 520.53,156.53 519.50,156.06C503.32,148.64 481.20,141.81 462.62,138.49C460.98,138.20 458.78,137.81 457.75,137.62C456.72,137.43 455.26,137.21 454.50,137.12C453.74,137.04 451.61,136.76 449.75,136.49C434.53,134.33 431.81,134.17 413.72,134.32C399.33,134.45 395.77,134.63 388.77,135.60C387.32,135.80 384.32,136.21 382.12,136.51C376.03,137.35 366.69,138.94 364.05,139.60C363.27,139.79 362.18,140.03 361.62,140.12C353.34,141.49 332.95,147.78 321.01,152.63C249.21,181.85 196.06,239.81 172.55,314.50C162.71,345.77 159.16,384.55 163.12,417.50C164.11,425.72 165.31,433.28 166.36,437.88C166.55,438.70 166.78,439.88 166.88,440.50C167.16,442.36 169.32,451.35 170.51,455.62C181.24,494.25 199.78,528.26 226.38,558.13C230.13,562.34 240.05,572.67 241.25,573.62C241.59,573.89 243.51,575.58 245.50,577.38C280.06,608.60 322.44,629.81 367.62,638.49C372.93,639.51 375.43,639.95 376.88,640.13C377.56,640.21 378.69,640.39 379.38,640.51C382.60,641.10 392.52,642.11 401.25,642.74C407.15,643.17 429.77,642.87 436.75,642.28Z"/>
+    <path id="p-g" d="M373.00,569.49C296.56,569.35 302.88,569.50 301.44,567.78C300.35,566.49 300.38,568.94 300.38,464.12L300.38,363.12L300.83,359.25C302.92,341.42 311.58,326.58 325.23,317.46C329.30,314.73 327.79,315.43 362.75,300.07C368.87,297.38 378.54,293.13 384.25,290.62C389.96,288.11 399.29,284.01 405.00,281.51C419.01,275.36 434.65,268.49 441.58,265.44C451.29,261.16 455.68,257.82 459.88,251.51C468.46,238.60 467.20,222.85 456.59,210.18C453.35,206.31 453.55,206.14 464.12,204.12C471.85,202.64 474.71,202.08 476.88,201.64C477.84,201.44 481.32,200.76 484.62,200.12C487.93,199.48 493.66,198.36 497.38,197.63C517.70,193.62 515.58,193.45 521.36,199.54C535.35,214.25 535.61,236.57 521.97,250.86C516.08,257.02 515.89,257.13 485.00,270.63C480.39,272.65 473.08,275.84 468.75,277.74C464.42,279.64 457.84,282.51 454.12,284.12C447.67,286.93 441.77,289.51 426.88,296.01C423.16,297.63 417.51,300.09 414.31,301.48C411.12,302.86 405.94,305.11 402.81,306.47C399.68,307.83 394.48,310.10 391.25,311.50C388.02,312.90 383.83,314.73 381.94,315.56C373.25,319.35 367.98,326.03 366.77,334.75C366.45,337.08 366.23,495.24 366.55,496.41C366.79,497.33 368.44,498.91 369.39,499.15C369.75,499.24 390.87,499.26 416.33,499.20C467.98,499.07 463.47,499.24 464.92,497.33L465.62,496.41L465.82,461.77C466.05,422.48 466.04,421.88 465.14,418.38C462.33,407.40 453.60,400.42 441.95,399.85C437.79,399.64 436.99,399.20 438.19,397.79C438.89,396.96 482.44,367.26 484.59,366.14L486.55,365.12L489.21,365.16C509.40,365.47 526.83,382.12 531.33,405.38L531.86,408.12L531.94,452.25L532.01,496.37L531.48,498.12C530.66,500.81 532.00,499.25 515.51,516.76C508.85,523.84 499.07,534.23 493.76,539.87C465.03,570.40 467.11,568.32 464.25,569.18C462.57,569.68 466.16,569.67 373.00,569.49Z"/>
+    <path id="p-worda" fill-rule="evenodd" d="M699.81,391.29C698.47,390.07 693.33,385.39 688.38,380.89C683.42,376.39 679.20,372.39 678.98,372.00C678.62,371.36 678.59,360.09 678.69,248.71C678.79,139.34 678.76,126.07 678.42,125.62L678.04,125.12L635.58,125.21C599.43,125.29 593.07,125.35 592.73,125.65C592.26,126.06 591.82,151.26 592.26,152.40C592.57,153.22 593.35,153.17 595.25,152.23C624.85,137.54 661.40,157.12 665.10,189.63C665.62,194.19 665.80,244.55 665.30,245.05C664.92,245.43 641.96,245.54 641.58,245.17C641.47,245.05 641.31,232.96 641.24,218.29L641.11,191.62L640.53,189.75C634.88,171.32 612.60,165.62 599.13,179.17C595.83,182.50 593.82,186.09 592.69,190.71L592.15,192.88L592.07,218.73C592.02,237.21 591.92,244.68 591.72,244.92C591.32,245.39 568.69,245.41 568.31,244.94C568.16,244.74 568.01,223.71 567.91,185.38L567.75,126.12L567.22,125.69C566.50,125.09 556.16,125.02 555.36,125.60L554.88,125.96L554.73,163.79C554.57,207.43 554.70,205.29 551.83,213.38C536.64,256.27 473.68,255.68 459.25,212.50C445.46,171.24 488.34,133.16 527.08,152.27C530.42,153.92 530.11,155.16 530.19,139.59C530.24,128.95 530.19,126.26 529.92,125.90L529.60,125.45L341.76,125.49C137.95,125.53 151.17,125.44 145.38,126.85C106.06,136.46 95.59,188.50 128.00,213.24C140.94,223.13 159.49,225.88 174.29,220.12C177.02,219.05 176.74,221.47 176.81,197.77L176.88,176.96L177.37,176.60C177.79,176.29 179.65,176.25 189.45,176.31L201.04,176.38L201.40,176.86C201.92,177.58 201.93,388.41 201.41,389.13L201.06,389.60L200.37,389.14C199.63,388.66 178.22,369.22 177.38,368.26L176.88,367.70L176.79,307.04C176.73,257.16 176.65,246.31 176.38,246.03C176.10,245.75 175.57,245.79 172.96,246.33C132.83,254.68 94.11,229.94 85.63,190.55C76.07,146.13 107.23,103.99 151.86,100.98C156.75,100.65 701.55,100.78 702.31,101.11C702.56,101.22 702.80,101.55 702.86,101.84C703.22,103.61 703.20,392.77 702.84,393.13C702.33,393.64 702.52,393.75 699.81,391.29Z M314.22,245.31C308.04,245.25 307.28,245.20 306.93,244.81C306.56,244.40 306.02,242.97 302.61,233.38C300.63,227.79 300.66,227.81 297.94,230.65C270.21,259.70 220.34,243.43 214.83,203.54C208.35,156.72 265.19,128.45 298.03,162.17C304.11,168.41 306.48,172.74 311.49,186.75C312.75,190.26 314.17,194.19 314.65,195.50C315.13,196.81 316.03,199.28 316.64,201.00C317.76,204.12 318.30,205.59 319.22,208.07C319.94,210.02 322.26,216.45 322.76,217.88C323.00,218.56 325.23,224.72 327.72,231.57C330.21,238.41 332.25,244.24 332.25,244.51C332.25,245.35 331.23,245.50 326.05,245.44C323.34,245.41 318.02,245.35 314.22,245.31Z M346.22,245.09C345.78,244.56 345.56,198.54 345.97,192.45C347.91,163.65 373.59,143.37 402.61,147.73C423.44,150.87 439.74,167.06 443.16,188.02C443.77,191.73 443.99,244.07 443.40,244.88L443.04,245.38L431.70,245.44C422.12,245.50 420.29,245.46 419.87,245.15L419.38,244.79L419.24,218.46L419.11,192.12L418.54,190.12C411.63,165.60 376.95,166.21 370.94,190.97C370.75,191.76 370.62,200.33 370.52,218.46L370.38,244.79L369.89,245.15C369.10,245.72 346.70,245.67 346.22,245.09Z M268.50,220.49C293.51,214.58 293.97,178.99 269.11,172.70C242.89,166.06 227.08,201.52 249.48,216.74C255.05,220.52 262.32,221.96 268.50,220.49Z M511.12,220.38C536.52,213.64 536.15,178.31 510.62,172.59C493.40,168.73 478.14,184.37 481.86,202.06C484.52,214.66 498.85,223.64 511.12,220.38Z M681.67,55.19C672.18,45.64 672.17,45.62 672.54,44.93C673.08,43.91 690.15,27.00 690.63,27.00C691.30,27.00 709.00,44.71 709.00,45.38C709.00,46.03 691.30,63.75 690.65,63.75C690.36,63.75 686.85,60.40 681.67,55.19Z"/>
+    <path id="p-wordb" fill-rule="evenodd" d="M542.57,297.49C541.74,297.16 541.72,296.85 541.80,286.61L541.88,277.12L542.66,275.62C546.11,269.03 556.20,268.29 560.87,274.28C562.59,276.50 562.60,276.57 562.69,287.16C562.79,298.35 563.01,297.50 560.00,297.50C557.22,297.50 557.25,297.55 557.25,291.98C557.25,286.32 557.67,286.75 552.08,286.75C546.58,286.75 547.00,286.30 547.00,292.21C547.00,297.65 546.95,297.76 544.56,297.73C543.77,297.73 542.88,297.62 542.57,297.49Z M590.50,297.25L590.00,296.75L590.00,284.27C590.00,277.41 590.07,271.61 590.15,271.40C590.49,270.51 591.66,271.31 600.70,278.62C606.44,283.27 610.33,286.24 610.66,286.25C611.47,286.25 611.53,285.65 611.46,277.94L611.41,270.93L611.98,270.46C613.28,269.41 616.39,270.00 616.63,271.35C616.94,273.06 616.64,296.21 616.30,296.55C615.82,297.03 615.56,296.84 605.95,289.19C601.19,285.40 597.05,282.16 596.75,282.00C595.52,281.34 595.50,281.45 595.50,289.25L595.50,296.52L594.89,297.14C594.05,297.97 591.29,298.04 590.50,297.25Z M652.86,297.14L652.25,296.52L652.25,285.65L652.25,274.77L651.77,274.51C651.50,274.37 649.95,274.25 648.31,274.25C644.66,274.25 644.38,274.10 644.38,272.25C644.38,271.19 644.48,270.87 644.98,270.47L645.58,269.98L655.31,270.05L665.04,270.12L665.40,270.61C665.59,270.88 665.75,271.63 665.75,272.28C665.75,274.06 665.34,274.25 661.60,274.25C657.47,274.25 657.89,272.97 657.82,285.98L657.76,296.88L657.23,297.31C656.35,298.03 653.65,297.92 652.86,297.14Z M214.64,297.11C214.30,296.76 214.25,295.20 214.25,283.74L214.25,270.77L214.73,270.51C215.54,270.08 223.79,270.18 225.57,270.64C232.63,272.47 235.29,279.58 230.97,285.04C230.04,286.21 230.06,286.50 231.16,287.94C232.70,289.94 233.01,290.90 233.07,293.95C233.14,297.43 233.09,297.50 230.48,297.50C228.10,297.50 228.00,297.38 228.00,294.57C228.00,291.03 226.53,289.21 223.30,288.76C219.55,288.23 219.25,288.55 219.25,293.12C219.25,297.42 219.20,297.50 216.69,297.50C215.52,297.50 214.92,297.38 214.64,297.11Z M261.14,296.94C260.55,296.10 260.55,271.65 261.14,270.81L261.53,270.25L267.87,270.25C275.01,270.25 275.00,270.25 275.00,272.03C275.00,273.98 274.96,274.00 270.72,274.00C265.86,274.00 266.00,273.92 266.00,276.83C266.00,279.87 265.82,279.75 270.41,279.75C274.94,279.75 275.00,279.78 275.00,282.02C275.00,284.39 274.80,284.50 270.30,284.50C265.67,284.50 266.00,284.15 266.00,289.01C266.00,294.06 265.69,293.75 270.70,293.75C274.97,293.75 275.00,293.77 275.00,295.72C275.00,297.50 275.01,297.50 267.87,297.50L261.53,297.50L261.14,296.94Z M308.71,297.12C304.67,296.36 303.57,295.45 303.86,293.13C304.14,290.90 304.36,290.79 306.35,291.89C310.05,293.92 314.63,293.12 315.15,290.35C315.52,288.38 314.44,287.29 310.06,285.21C305.15,282.89 303.88,281.32 303.88,277.61C303.87,272.99 307.18,270.17 312.59,270.19C316.54,270.20 319.50,271.45 319.50,273.11C319.49,275.37 318.64,276.29 317.36,275.40C314.99,273.74 310.63,274.06 309.64,275.97C308.50,278.17 309.65,279.71 313.80,281.55C319.42,284.03 320.94,285.96 320.71,290.30C320.41,295.63 315.52,298.42 308.71,297.12Z M358.56,297.13L358.00,296.72L358.00,286.42C358.00,273.07 358.31,274.01 353.92,274.00C350.21,274.00 350.00,273.90 350.00,272.12C350.00,270.18 349.62,270.25 360.36,270.25L369.75,270.25L370.25,270.75C370.58,271.08 370.75,271.58 370.75,272.24C370.75,273.78 370.24,274.00 366.58,274.00C362.35,274.00 362.75,272.77 362.75,285.87C362.74,291.95 362.64,296.78 362.51,296.99C362.16,297.54 359.28,297.65 358.56,297.13Z M399.06,297.11L398.50,296.72L398.50,287.56C398.50,277.33 398.59,276.57 400.14,274.44C404.51,268.42 414.77,269.17 418.29,275.78L418.88,276.88L418.95,286.75L419.02,296.62L418.48,297.06C417.81,297.61 415.32,297.66 414.61,297.15C414.16,296.82 414.12,296.41 414.05,292.08C413.96,286.09 414.33,286.50 409.11,286.50C403.24,286.50 403.51,286.23 403.50,292.06C403.50,296.16 403.46,296.54 403.00,297.00C402.36,297.64 399.90,297.71 399.06,297.11Z M454.44,297.11C451.36,296.36 448.81,294.34 447.60,291.68L446.90,290.12L446.81,280.88C446.71,269.71 446.54,270.41 449.41,270.30C452.17,270.20 451.97,269.42 452.05,280.26L452.12,289.62L452.74,290.50C455.03,293.73 459.57,293.76 461.76,290.56L462.38,289.66L462.50,280.20C462.64,269.37 462.40,270.26 465.17,270.25C467.88,270.25 467.75,269.80 467.74,279.24C467.73,288.04 467.54,290.28 466.62,292.16C464.68,296.12 459.32,298.29 454.44,297.11Z M495.55,297.20C495.04,296.69 495.13,270.91 495.64,270.49C496.28,269.95 505.38,270.15 507.28,270.74C513.91,272.80 516.25,279.87 512.03,285.10C511.06,286.30 511.06,286.45 512.03,287.65C513.58,289.60 514.02,290.82 514.18,293.63C514.38,297.24 514.20,297.50 511.51,297.50C509.10,297.50 509.16,297.57 509.00,294.33C508.80,290.36 507.13,288.75 503.21,288.75C500.49,288.75 500.50,288.74 500.50,292.96C500.50,297.41 500.45,297.50 497.79,297.50C496.61,297.50 495.73,297.38 495.55,297.20Z M225.27,283.42C228.59,281.67 228.81,277.60 225.68,275.66C224.06,274.65 220.61,274.39 219.78,275.22C219.07,275.93 218.96,282.92 219.64,283.61C220.31,284.27 223.89,284.15 225.27,283.42Z M506.72,283.18C509.90,281.07 509.54,276.80 506.05,275.33C504.91,274.85 501.45,274.77 500.91,275.22C500.27,275.75 500.30,283.35 500.94,283.74C501.86,284.31 505.56,283.95 506.72,283.18Z M413.25,282.68C413.83,282.39 413.88,282.21 413.95,280.35L414.02,278.33L413.20,277.12C409.78,272.08 400.91,276.70 403.77,282.03C404.28,283.00 411.63,283.50 413.25,282.68Z M556.86,282.26C558.07,280.93 557.15,277.51 555.15,275.89C551.38,272.84 544.66,278.30 547.39,282.19L547.78,282.75L552.10,282.75C556.07,282.75 556.46,282.71 556.86,282.26Z"/>
+    <g id="s-emblem"><use href="#p-petals" fill="url(#gold)"/><use href="#p-ring" fill="url(#gold)"/><use href="#p-g" fill="url(#gold)"/></g>
+    <g id="s-word"><use href="#p-worda" fill="url(#gold)"/><use href="#p-wordb" fill="url(#gold)"/></g>
+  </defs>
+</svg>
+
+<div class="concept">Website concept for Gandhi Indian Cuisine — preview only, not the live site. Designed by <a href="https://itchenstudio.co.uk" data-umami-event="Itchen Studio link">Itchen Studio</a> · sam@itchenstudio.co.uk</div>
+
+<header class="top dk">
+  <div class="wrap">
+    <a class="brand" href="#hero" aria-label="Gandhi Restaurant, back to the top">
+      <svg class="em" viewBox="56 28 721 721" aria-hidden="true"><use href="#s-emblem"/></svg>
+      <svg class="wm" viewBox="66 18 654 388" width="84" height="50" aria-hidden="true"><use href="#s-word"/></svg>
+    </a>
+    <nav class="main" aria-label="Main">
+      <a href="#services">Eat with us</a><a href="#menu">Menu</a><a href="#reviews">Reviews</a><a href="#visit">Find us</a>
+      <a class="btn btn-gold" href="tel:01962863940" aria-label="Call 01962 863940">Call 01962 863940</a>
+    </nav>
+  </div>
+</header>
+
+<main>
+<section class="hero dk" id="hero" aria-label="Gandhi Restaurant">
+  <div class="wrap">
+    <div class="lead-col">
+      <h1><span class="ln"><span>
+        <svg class="wmark" id="wmHero" viewBox="66 18 654 388" role="img" aria-label="Gandhi Restaurant">
+          <use href="#s-word"/>
+          <g aria-hidden="true"><use href="#p-worda" fill="url(#glowW)"/><use href="#p-wordb" fill="url(#glowW)"/></g>
+        </svg>
+      </span></span></h1>
+      <div class="copy" data-intro>
+        <p>Gandhi Restaurant is a premier and authentic Indian Restaurant that has been proudly serving the Winchester area and beyond since 1987. Since then, our mission has been to provide high-quality food for all those that wish to combine fun and enjoyable ambiance with skillful cooking into one extraordinary dining experience.</p>
+        <p>As the longest running indian restaurant, we pride ourselves on our personal service and the innovative and classic dishes that we have to offer.</p>
+      </div>
+      <div class="ctas" data-intro><a class="btn btn-gold" href="#book">Book a table</a><a class="btn btn-line" href="https://www.gandhirestaurant.com/_files/ugd/7543bb_732503ddfae740a1906a83a696fb4cff.pdf" target="_blank" rel="noopener">View the menu</a></div>
+    </div>
+    <div class="emblem-wrap">
+      <svg class="emb" id="embHero" viewBox="56 28 721 721" aria-hidden="true">
+        <g class="petals"><use href="#p-petals" fill="url(#gold)"/><use href="#p-petals" fill="url(#glowE)"/></g>
+        <use href="#p-ring" fill="url(#gold)"/><use href="#p-ring" fill="url(#glowE)"/>
+        <g class="gl"><use href="#p-g" fill="url(#gold)"/><use href="#p-g" fill="url(#glowE)"/></g>
+      </svg>
+      <a class="rating" href="https://www.tripadvisor.co.uk/Restaurant_Review-g186300-d1043811-Reviews-Gandhi_Indian_Cuisine-Winchester_Hampshire_England.html" target="_blank" rel="noopener" data-intro aria-label="Rated 4.3 out of 5 from 670 reviews on Tripadvisor">
+        <span class="score" aria-hidden="true">4.3</span>
+        <span class="meta" aria-hidden="true">
+          <b>Tripadvisor</b>
+          <svg class="stars" viewBox="0 0 104 18"><defs><linearGradient id="part"><stop offset=".3" stop-color="#4a2349"/><stop offset=".3" stop-color="#e3d3e3"/></linearGradient></defs><g fill="#4a2349"><circle cx="9" cy="9" r="8"/><circle cx="30" cy="9" r="8"/><circle cx="51" cy="9" r="8"/><circle cx="72" cy="9" r="8"/></g><circle cx="93" cy="9" r="8" fill="url(#part)"/></svg>
+          <span>670 reviews</span>
+        </span>
+      </a>
+    </div>
+  </div>
+  <div class="arches" aria-hidden="true"></div>
+</section>
+
+<section class="proof" aria-label="At a glance">
+  <div class="wrap">
+    <ul>
+      <li><b>4.3</b> on Tripadvisor</li>
+      <li><b data-count="670">670</b> guest reviews</li>
+      <li><b>1987</b> serving Winchester</li>
+      <li><b>Dine in</b> · takeaway · delivery</li>
+    </ul>
+  </div>
+</section>
+
+<section class="services" id="services" aria-labelledby="sv-title">
+  <div class="wrap">
+    <div class="head">
+      <div><p class="kicker" data-reveal>Eat with us</p><h2 id="sv-title" data-split style="margin-top:18px">Table, takeaway<br>or <em>delivered.</em></h2></div>
+      <p data-reveal>Lunch from Wednesday to Sunday and dinner from Tuesday to Sunday, on the High Street in Winchester.</p>
+    </div>
+    <div class="cards">
+      <article class="card" data-reveal><span class="no" aria-hidden="true">i</span><h3>Dine in</h3><p>A table at 163-164 High Street for lunch or dinner, with the full bar to hand.</p><a href="#book">Book a table</a></article>
+      <article class="card" data-reveal><span class="no" aria-hidden="true">ii</span><h3>Takeaway</h3><p>The same kitchen, packed up to collect and take home.</p><a href="tel:01962863940">Call to order</a></article>
+      <article class="card" data-reveal><span class="no" aria-hidden="true">iii</span><h3>Delivery</h3><p>Dinner brought to your door, so the evening stays at home.</p><a href="tel:01962863940">Call to order</a></article>
+      <article class="card" data-reveal><span class="no" aria-hidden="true">iv</span><h3>Parties</h3><p>Planning a celebration or a private dinner? Tell us the date and numbers.</p><a href="#visit">Send an enquiry</a></article>
+    </div>
+  </div>
+</section>
+
+<section class="scene dk" id="scene" aria-labelledby="sc-title">
+  <div class="scene-pin">
+    <div class="sc-text">
+      <p class="kicker">Inside Gandhi</p>
+      <h2 id="sc-title" style="margin-top:0">A look <em>inside.</em></h2>
+      <ol class="sc-cap" aria-hidden="true">
+        <li class="on">Grilled pieces with green sauce</li>
+        <li>Crisp golden starters</li>
+        <li>Sliced meat, herbs and orange purée</li>
+        <li>The dining room on the High Street</li>
+        <li>Glasses laid at the table</li>
+      </ol>
+    </div>
+    <svg class="sc-svg" id="scSvg" viewBox="56 28 721 721" role="img" aria-label="The Gandhi emblem opening onto photographs of the food and the dining room">
+      <defs>
+        <clipPath id="c0"><circle cx="416.5" cy="388.5" r="0"/></clipPath>
+        <clipPath id="c1"><circle cx="416.5" cy="388.5" r="0"/></clipPath>
+        <clipPath id="c2"><circle cx="416.5" cy="388.5" r="0"/></clipPath>
+        <clipPath id="c3"><circle cx="416.5" cy="388.5" r="0"/></clipPath>
+        <clipPath id="c4"><circle cx="416.5" cy="388.5" r="0"/></clipPath>
+      </defs>
+      <circle cx="416.5" cy="388.5" r="262" fill="#3a1a39"/>
+      <g class="sc-ph" clip-path="url(#c0)"><image href="assets/img/platter-1100.webp" x="154" y="126" width="525" height="525" preserveAspectRatio="xMidYMid slice"/></g>
+      <g class="sc-ph" clip-path="url(#c1)"><image href="assets/img/starters-1100.webp" x="154" y="126" width="525" height="525" preserveAspectRatio="xMidYMid slice"/></g>
+      <g class="sc-ph" clip-path="url(#c2)"><image href="assets/img/lamb-1100.webp" x="154" y="126" width="525" height="525" preserveAspectRatio="xMidYMid slice"/></g>
+      <g class="sc-ph" clip-path="url(#c3)"><image href="assets/img/room-1100.webp" x="154" y="126" width="525" height="525" preserveAspectRatio="xMidYMid slice"/></g>
+      <g class="sc-ph" clip-path="url(#c4)"><image href="assets/img/glasses-1100.webp" x="154" y="126" width="525" height="525" preserveAspectRatio="xMidYMid slice"/></g>
+      <g class="sc-petals"><use href="#p-petals" fill="url(#gold)"/></g>
+      <use href="#p-ring" fill="url(#gold)"/>
+      <g class="sc-g"><use href="#p-g" fill="url(#gold)"/></g>
+    </svg>
+    <div class="sc-count" aria-hidden="true"><span id="scNo">01 / 05</span><i id="scBar"></i></div>
+    <div class="scene-figs">
+      <figure style="margin:0"><img src="assets/img/platter-1100.webp" alt="Grilled pieces on a white plate with green sauce and a yellow drizzle" loading="lazy"><figcaption>Grilled pieces with green sauce</figcaption></figure>
+      <figure style="margin:0"><img src="assets/img/starters-1100.webp" alt="Two golden crumbed starters topped with grilled pieces on a slate plate with salad leaves" loading="lazy"><figcaption>Crisp golden starters</figcaption></figure>
+      <figure style="margin:0"><img src="assets/img/lamb-1100.webp" alt="Sliced meat topped with herbs and shredded carrot on a white plate with orange purée" loading="lazy"><figcaption>Sliced meat, herbs and orange purée</figcaption></figure>
+      <figure style="margin:0"><img src="assets/img/room-1100.webp" alt="Tables laid with napkins and glasses in the Gandhi dining room in the evening" loading="lazy"><figcaption>The dining room on the High Street</figcaption></figure>
+      <figure style="margin:0"><img src="assets/img/glasses-1100.webp" alt="Wine glasses and purple glass tumblers on a table with a blurred street behind" loading="lazy"><figcaption>Glasses laid at the table</figcaption></figure>
+    </div>
+  </div>
+</section>
+
+<section class="menu" id="menu" aria-labelledby="menu-title">
+  <div class="wrap">
+    <div>
+      <p class="kicker" data-reveal>The menu</p>
+      <h2 id="menu-title" data-split style="margin-top:18px">Classic dishes,<br><em>new ideas.</em></h2>
+      <p class="lead" data-reveal>Familiar favourites sit alongside newer dishes from the kitchen. Read the full menu before you book, or bring it with you.</p>
+      <div class="ctas" data-reveal><a class="btn btn-plum" href="https://www.gandhirestaurant.com/_files/ugd/7543bb_732503ddfae740a1906a83a696fb4cff.pdf" target="_blank" rel="noopener">Read the menu (PDF)</a><a class="btn btn-line" href="#book">Book a table</a></div>
+      <p class="note" data-reveal>Looking for vegan dishes? Ask when you book or at the table. Guests say the team are happy to explain what can be made.</p>
+    </div>
+    <div class="menu-photo" data-clip><img src="assets/img/lamb-1100.webp" alt="Sliced meat topped with herbs on a white plate with orange purée" loading="lazy" data-parallax></div>
+  </div>
+</section>
+
+<section class="book dk" id="book" aria-labelledby="book-title">
+  <div class="wrap">
+    <div>
+      <p class="kicker">Book a table</p>
+      <h2 id="book-title" data-split style="margin-top:18px">Save us<br><em>a table.</em></h2>
+      <p class="intro">Choose your numbers, a day and a time. For parties and private dining, use the enquiry form below or give us a ring.</p>
+      <div class="ways">
+        <div><span>Lunch</span><b>Wednesday to Sunday</b></div>
+        <div><span>Dinner</span><b>Tuesday to Sunday</b></div>
+        <div><span>Phone</span><a href="tel:01962863940"><b>01962 863940</b></a></div>
+      </div>
+    </div>
+    <form class="widget" id="widget" novalidate>
+      <div id="step-pick">
+        <div style="display:grid;gap:26px">
+          <div><span class="wl" id="gl">Guests</span><div class="guests" role="group" aria-labelledby="gl"><button type="button" id="gminus" aria-label="Fewer guests">−</button><output id="gcount" aria-live="polite">2</output><button type="button" id="gplus" aria-label="More guests">+</button><small>Larger party? Use the enquiry form below.</small></div></div>
+          <div><span class="wl" id="dl">Day</span><div class="days" id="days" role="group" aria-labelledby="dl"></div></div>
+          <div><span class="wl" id="tl">Time</span><div id="times" role="group" aria-labelledby="tl"></div><p class="eg">Example availability. This is a concept, so times are illustrative.</p></div>
+          <div class="who"><label>Name<input id="bname" autocomplete="name" required></label><label>Mobile<input id="bphone" type="tel" autocomplete="tel" required></label></div>
+          <div class="sumbar"><p id="summary">Choose a time</p><button class="btn btn-plum" type="submit">Book table</button></div>
+        </div>
+      </div>
+      <div class="confirm" id="step-done" hidden role="status" aria-live="polite">
+        <span class="tick"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="m5 12.5 4.5 4.5L19 7.5"/></svg></span>
+        <span class="ref" id="ref">Booking G-4821</span>
+        <h3>See you <em>soon.</em></h3>
+        <dl id="cdl"></dl>
+        <p class="note">This is a preview. On the live site this would go to the restaurant's booking system, so nothing was booked.</p>
+        <button class="btn btn-line" type="button" id="again" style="color:var(--plum)">Make another booking</button>
+      </div>
+    </form>
+  </div>
+</section>
+
+<section class="reviews" id="reviews" aria-labelledby="rv-title">
+  <div class="wrap">
+    <div><p class="kicker" data-reveal>Guest reviews</p><h2 id="rv-title" data-split style="margin-top:18px">What guests <em>write.</em></h2></div>
+    <p class="src" data-reveal>Taken from Tripadvisor, where Gandhi is rated 4.3 from 670 reviews.</p>
+  </div>
+  <div class="rv-wrap" role="group" aria-label="Guest quotes from Tripadvisor">
+    <div class="rv-row" data-speed="0.55" aria-hidden="true">
+      <blockquote class="rv"><q>perfect service and delicious food with the best ingredients</q><cite>Tripadvisor · January 2026</cite></blockquote><blockquote class="rv"><q>The staff were very helpful explaining what could be made vegan.</q><cite>Tripadvisor · August 2026</cite></blockquote><blockquote class="rv"><q>perfect service and delicious food with the best ingredients</q><cite>Tripadvisor · January 2026</cite></blockquote><blockquote class="rv"><q>The staff were very helpful explaining what could be made vegan.</q><cite>Tripadvisor · August 2026</cite></blockquote><blockquote class="rv"><q>perfect service and delicious food with the best ingredients</q><cite>Tripadvisor · January 2026</cite></blockquote><blockquote class="rv"><q>The staff were very helpful explaining what could be made vegan.</q><cite>Tripadvisor · August 2026</cite></blockquote><blockquote class="rv"><q>perfect service and delicious food with the best ingredients</q><cite>Tripadvisor · January 2026</cite></blockquote><blockquote class="rv"><q>The staff were very helpful explaining what could be made vegan.</q><cite>Tripadvisor · August 2026</cite></blockquote>
+    </div>
+  </div>
+  <ul class="sr"><li>“perfect service and delicious food with the best ingredients” — Tripadvisor, January 2026</li><li>“The staff were very helpful explaining what could be made vegan.” — Tripadvisor, August 2026</li></ul>
+</section>
+
+<section class="visit" id="visit" aria-labelledby="visit-title">
+  <div class="wrap">
+    <div>
+      <p class="kicker" data-reveal>Find us</p>
+      <h2 id="visit-title" data-split style="margin-top:18px">On the <em>High Street.</em></h2>
+      <dl class="facts" data-reveal>
+        <div><dt>Address</dt><dd>163-164 High Street<br>Winchester SO23 9BA</dd></div>
+        <div><dt>Lunch</dt><dd>Wednesday to Sunday</dd></div>
+        <div><dt>Dinner</dt><dd>Tuesday to Sunday</dd></div>
+        <div><dt>Phone</dt><dd><a href="tel:01962863940">01962 863940</a></dd></div>
+        <div><dt>Email</dt><dd><a href="mailto:info@gandhirestaurant.com">info@gandhirestaurant.com</a></dd></div>
+        <div><dt>Social</dt><dd><a href="https://www.facebook.com/gandhiwinchester/" target="_blank" rel="noopener">Facebook</a></dd></div>
+      </dl>
+    </div>
+    <form class="pform" id="pform" novalidate data-reveal>
+      <h3>Parties &amp; <em>private dining.</em></h3>
+      <p style="color:var(--muted);font-size:16px">Tell us about the occasion and we will come back to you.</p>
+      <div class="row2"><label>Name<input name="name" autocomplete="name" required></label><label>Phone or email<input name="contact" autocomplete="email" required></label></div>
+      <div class="row2"><label>Date<input name="date" type="date"></label><label>Number of guests<input name="guests" type="number" min="1" inputmode="numeric"></label></div>
+      <label>Anything we should know<textarea name="msg"></textarea></label>
+      <button class="btn btn-plum" type="submit" style="justify-self:start">Send enquiry</button>
+      <p class="pdone" id="pdone" hidden role="status">This is a preview — the form will go live with your new site.</p>
+    </form>
+  </div>
+</section>
+</main>
+
+<footer class="dk">
+  <div class="wrap">
+    <div class="fl"><svg class="big" viewBox="66 18 654 388" role="img" aria-label="Gandhi Restaurant"><use href="#s-word"/></svg><svg class="femb" viewBox="56 28 721 721" aria-hidden="true"><use href="#s-emblem"/></svg></div>
+    <div class="row"><span>© 2026 Gandhi Restaurant (concept) · 163-164 High Street, Winchester SO23 9BA</span><span>Designed and built by <a href="https://itchenstudio.co.uk" data-umami-event="Itchen Studio link">Itchen Studio</a></span></div>
+  </div>
+</footer>
+
+<script src="assets/js/gsap.min.js" defer></script>
+<script src="assets/js/ScrollTrigger.min.js" defer></script>
+<script src="assets/js/lenis.min.js" defer></script>
+<script src="assets/js/concept.js" defer></script>
+<script>
+document.addEventListener('DOMContentLoaded', function(){
+  var site = window.ConceptSite.init();
+  var now = new Date();
+
+  /* ---------- booking demo ---------- */
+  var guests = 2, day = null, time = null;
+  var daysEl = document.getElementById('days'), timesEl = document.getElementById('times');
+  var DN = ['Sun','Mon','Tue','Wed','Thu','Fri','Sat'], MN = ['Jan','Feb','Mar','Apr','May','Jun','Jul','Aug','Sep','Oct','Nov','Dec'];
+  var LUNCH = [12, 12.5, 13, 13.5, 14], DINNER = [17.5, 18, 18.5, 19, 19.5, 20, 20.5, 21];
+  var dates = []; for (var i = 0; i < 7; i++) dates.push(new Date(now.getFullYear(), now.getMonth(), now.getDate() + i));
+  function seeded(n){ var x = Math.sin(n) * 10000; return x - Math.floor(x); }
+  function serviceSlots(dt){
+    var d = dt.getDay(), out = [];
+    if (d === 1) return out;
+    var hr = now.getHours() + now.getMinutes() / 60, isToday = dt.toDateString() === now.toDateString();
+    function mk(list, name, ok){ if (!ok) return; var arr = list.map(function(t){
+      var past = isToday && t <= hr + 1, full = seeded(dt.getDate() * 31 + t * 7) < (d === 5 || d === 6 ? .45 : .22);
+      return { t: t, off: past || full, why: past ? 'past' : 'full' }; }); out.push({ name: name, slots: arr }); }
+    mk(LUNCH, 'Lunch', d >= 3 || d === 0);
+    mk(DINNER, 'Dinner', true);
+    return out;
+  }
+  function label(t){ var hh = Math.floor(t), m = t % 1 ? '30' : '00'; return String(hh).padStart(2, '0') + ':' + m; }
+  function hasFree(dt){ return serviceSlots(dt).some(function(s){ return s.slots.some(function(x){ return !x.off; }); }); }
+  function drawDays(){
+    daysEl.innerHTML = '';
+    dates.forEach(function(dt, k){
+      var b = document.createElement('button'); b.type = 'button'; b.className = 'day';
+      var free = hasFree(dt); b.disabled = !free;
+      b.setAttribute('aria-pressed', String(day === k));
+      b.setAttribute('aria-label', (k === 0 ? 'Today, ' : k === 1 ? 'Tomorrow, ' : '') + DN[dt.getDay()] + ' ' + dt.getDate() + ' ' + MN[dt.getMonth()] + (free ? '' : (dt.getDay() === 1 ? ', closed' : ', fully booked')));
+      b.innerHTML = '<small>' + (k === 0 ? 'Today' : DN[dt.getDay()]) + '</small><b>' + dt.getDate() + '</b>';
+      b.addEventListener('click', function(){ day = k; time = null; drawDays(); drawTimes(); sum(); });
+      daysEl.appendChild(b);
+    });
+    if (day === null) { var first = dates.findIndex(hasFree); if (first >= 0) { day = first; drawDays(); } }
+  }
+  function drawTimes(){
+    timesEl.innerHTML = '';
+    if (day === null) return;
+    serviceSlots(dates[day]).forEach(function(svc){
+      var h = document.createElement('p'); h.className = 'service-h'; h.textContent = svc.name; timesEl.appendChild(h);
+      var grid = document.createElement('div'); grid.className = 'times'; grid.style.marginBottom = '14px';
+      svc.slots.forEach(function(s){
+        var b = document.createElement('button'); b.type = 'button'; b.className = 'time'; b.textContent = label(s.t);
+        b.disabled = s.off; b.setAttribute('aria-pressed', String(time === s.t));
+        if (s.off) b.setAttribute('aria-label', label(s.t) + (s.why === 'full' ? ', fully booked' : ', not available'));
+        b.addEventListener('click', function(){ time = s.t; drawTimes(); sum(); });
+        grid.appendChild(b);
+      });
+      timesEl.appendChild(grid);
+    });
+    if (site.motion) gsap.from(timesEl.querySelectorAll('.time'), { autoAlpha:0, y:8, duration:.35, stagger:.012, ease:'power2.out' });
+  }
+  function when(){ var dt = dates[day]; return (day === 0 ? 'Today' : day === 1 ? 'Tomorrow' : DN[dt.getDay()]) + ' ' + dt.getDate() + ' ' + MN[dt.getMonth()]; }
+  function sum(){
+    document.getElementById('summary').innerHTML = time === null ? 'Choose a time' : 'Table for <b>' + guests + '</b> · <b>' + when() + '</b> at <b>' + label(time) + '</b>';
+  }
+  function setGuests(n){ guests = Math.max(1, Math.min(10, n)); document.getElementById('gcount').textContent = guests; document.getElementById('gminus').disabled = guests <= 1; document.getElementById('gplus').disabled = guests >= 10; sum(); }
+  document.getElementById('gminus').addEventListener('click', function(){ setGuests(guests - 1); });
+  document.getElementById('gplus').addEventListener('click', function(){ setGuests(guests + 1); });
+  document.getElementById('widget').addEventListener('submit', function(e){
+    e.preventDefault();
+    if (time === null) { document.getElementById('summary').innerHTML = '<b style="color:#8a1f3d">Pick a time first</b>'; return; }
+    var n = document.getElementById('bname'), p = document.getElementById('bphone'), bad = null;
+    [n, p].forEach(function(el){ var ok = el.value.trim() !== ''; el.style.borderColor = ok ? '' : '#b3261e'; el.setAttribute('aria-invalid', ok ? 'false' : 'true'); if (!ok && !bad) bad = el; });
+    if (bad) { bad.focus(); return; }
+    document.getElementById('ref').textContent = 'Booking G-' + (1000 + Math.floor(Math.random() * 8999));
+    document.getElementById('cdl').innerHTML = '<dt>Name</dt><dd>' + n.value.replace(/[<>&]/g, '') + '</dd><dt>Guests</dt><dd>' + guests + '</dd><dt>When</dt><dd>' + when() + ', ' + label(time) + '</dd>';
+    document.getElementById('step-pick').hidden = true;
+    var done = document.getElementById('step-done'); done.hidden = false;
+    if (site.motion) gsap.from(done.children, { autoAlpha:0, y:16, duration:.5, stagger:.07, ease:'power3.out' });
+  });
+  document.getElementById('again').addEventListener('click', function(){ document.getElementById('step-done').hidden = true; document.getElementById('step-pick').hidden = false; time = null; drawTimes(); sum(); });
+  setGuests(2); drawDays(); drawTimes(); sum();
+
+  /* ---------- party enquiry (sends nothing) ---------- */
+  site.fakeForm('pform', 'pdone');
+
+  /* ---------- logo light ---------- */
+  var glowE = document.getElementById('glowE'), glowW = document.getElementById('glowW');
+  var embSvg = document.getElementById('embHero'), wmSvg = document.getElementById('wmHero');
+  function toUser(svg, x, y){ var pt = svg.createSVGPoint(); pt.x = x; pt.y = y; var m = svg.getScreenCTM(); return m ? pt.matrixTransform(m.inverse()) : { x: 416, y: 388 }; }
+  if (site.motion) {
+    var hero = document.getElementById('hero'), live = false;
+    var idle = { e: 0, w: 0 };
+    gsap.to(idle, { e: 1, duration: 6, repeat: -1, ease: 'sine.inOut', yoyo: true, onUpdate: function(){
+      if (live) return;
+      glowE.setAttribute('cx', 200 + idle.e * 440); glowE.setAttribute('cy', 220 + idle.e * 280);
+      glowW.setAttribute('cx', 120 + idle.e * 500); glowW.setAttribute('cy', 150 + idle.e * 80);
+    } });
+    hero.addEventListener('pointermove', function(ev){
+      if (ev.pointerType === 'touch') return;
+      live = true;
+      var a = toUser(embSvg, ev.clientX, ev.clientY), b = toUser(wmSvg, ev.clientX, ev.clientY);
+      glowE.setAttribute('cx', a.x); glowE.setAttribute('cy', a.y);
+      glowW.setAttribute('cx', b.x); glowW.setAttribute('cy', b.y);
+    });
+    hero.addEventListener('pointerleave', function(){ live = false; });
+  } else {
+    glowE.setAttribute('r', 0); glowW.setAttribute('r', 0);
+  }
+
+  if (!site.motion) return;
+
+  /* hero emblem arrives */
+  gsap.from('#embHero .petals', { rotation: -40, scale: .86, svgOrigin: '416.5 388.5', transformOrigin: '50% 50%', autoAlpha: 0, duration: 2, ease: 'expo.out', delay: .1 });
+  gsap.from('#embHero .gl', { autoAlpha: 0, scale: .9, svgOrigin: '416.5 388.5', duration: 1.6, ease: 'power3.out', delay: .5 });
+
+  /* ---------- signature: through the lotus ---------- */
+  var circles = gsap.utils.toArray('#scSvg clipPath circle');
+  var imgs = gsap.utils.toArray('#scSvg .sc-ph image');
+  var caps = gsap.utils.toArray('.sc-cap li');
+  var noEl = document.getElementById('scNo'), bar = document.getElementById('scBar'), cur = -1;
+  var tl = gsap.timeline({ scrollTrigger: { trigger: '#scene', start: 'top top', end: 'bottom bottom', scrub: .6,
+    onUpdate: function(self){
+      var i = Math.min(4, Math.max(0, Math.floor(self.progress * 5.2 - .05)));
+      if (i !== cur) { cur = i; caps.forEach(function(c, k){ c.classList.toggle('on', k === i); }); noEl.textContent = '0' + (i + 1) + ' / 05'; }
+      bar.style.setProperty('--p', self.progress.toFixed(3));
+    } } });
+  tl.to('#scSvg .sc-g', { autoAlpha: 0, scale: .8, svgOrigin: '416.5 388.5', duration: .6, ease: 'power2.in' }, 0)
+    .to('#scSvg .sc-petals', { rotation: 100, svgOrigin: '416.5 388.5', duration: 6, ease: 'none' }, 0);
+  circles.forEach(function(c, i){
+    var at = .3 + i * 1.12;
+    tl.to(c, { attr: { r: 265 }, duration: 1, ease: 'power2.inOut' }, at);
+    tl.fromTo(imgs[i], { scale: 1.22, svgOrigin: '416.5 388.5' }, { scale: 1, svgOrigin: '416.5 388.5', duration: 1.6, ease: 'power1.out' }, at);
+  });
+  tl.to({}, { duration: .5 });
+
+  /* section headings and soft parallax already handled by the engine */
+});
+</script>
+</body>
+</html>
