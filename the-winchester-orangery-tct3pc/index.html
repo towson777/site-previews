@@ -1,0 +1,706 @@
+<!doctype html>
+<!--
+ART DIRECTION: The Winchester Orangery
+Idea: one glasshouse, one long day. The room is the same from first brunch to the last cocktail, and the page follows the light from sunny citrus to deep evening teal.
+Palette: cream #f7f2e7, paper #fdfaf3, evening teal #11302f, deeper teal #1d4a48, sage #8fa089, sage mist #e4e9d9, citrus #e8872b, citrus ink #a84e12.
+Type: Cormorant Garamond (variable, roman and italic) used very large for display; Figtree for text. Both self-hosted.
+Hero: full-bleed blossom-ceiling photo under a teal wash, giant three-line headline bottom-left, a floating arched window with the full English, and a round Tripadvisor rating badge (Sam's notes ask for the rating in the hero, shown as a badge, not the headline).
+Signature moment: "Brunch to after dark". A pinned, scrubbed scene. A sun crosses an arch and turns to a moon while the photo in the arched window changes (brunch, coffee, tapas, evening room) and the whole background shifts from cream to teal. Simple stacked version on phones and with reduced motion.
+Feature: table booking. Guests, day, example time slots, occasion, details, confirmation with a reference. Sends nothing.
+Logo: designed SVG mark (an orange inside a glasshouse arch) with a serif wordmark. No logo was supplied.
+Headline shortlist (ten): 1 Brunch under the blossoms. 2 Brunch by day, tapas by night. 3 A glasshouse on The Square. 4 Flowers overhead, brunch below. 5 The room full of flowers. 6 Day to night, one room. 7 Sit under the flowers. 8 The orangery on The Square. 9 Good morning, Winchester. 10 Brunch, then cocktails.
+Crossed out: 3 and 8 (any glass-fronted cafe could say them), 9 (generic), 2 and 10 (too long for what they say, and hold no picture). Picked 1: four words, and only they have the flowered ceiling.
+-->
+<html lang="en-GB">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<meta name="robots" content="noindex,nofollow">
+<title>The Winchester Orangery · Website concept</title>
+<meta name="description" content="A website concept for The Winchester Orangery, a brunch cafe, tapas and cocktail bar on The Square in Winchester.">
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Crect width='32' height='32' rx='16' fill='%2311302f'/%3E%3Ccircle cx='16' cy='18' r='7' fill='%23e8872b'/%3E%3C/svg%3E">
+<link rel="preload" href="assets/fonts/cormorant.woff2" as="font" type="font/woff2" crossorigin>
+<link rel="preload" href="assets/fonts/figtree.woff2" as="font" type="font/woff2" crossorigin>
+<script defer src="https://cloud.umami.is/script.js" data-website-id="8df92b2d-e60b-4f9e-afc7-61b78ad1a912"></script>
+<script>(function(d){if(!matchMedia('(prefers-reduced-motion: reduce)').matches){d.documentElement.classList.add('motion');setTimeout(function(){if(!d.documentElement.classList.contains('ready'))d.documentElement.classList.remove('motion')},3000)}})(document)</script>
+<style>
+@font-face{font-family:"Cormorant Garamond";src:url("assets/fonts/cormorant.woff2") format("woff2");font-weight:300 700;font-display:swap}
+@font-face{font-family:"Cormorant Garamond";src:url("assets/fonts/cormorant-italic.woff2") format("woff2");font-weight:300 700;font-style:italic;font-display:swap}
+@font-face{font-family:"Figtree";src:url("assets/fonts/figtree.woff2") format("woff2");font-weight:300 900;font-display:swap}
+:root{
+  --cream:#f7f2e7; --paper:#fdfaf3; --line:#ddd3bd; --ink:#17302e; --muted:#566460;
+  --teal:#11302f; --teal2:#1d4a48; --sage:#8fa089; --mist:#e4e9d9; --citrus:#e8872b; --citrus-ink:#a84e12; --butter:#f4d9a6;
+  --display:"Cormorant Garamond","Cormorant",Georgia,"Times New Roman",serif; --body:"Figtree",system-ui,-apple-system,"Segoe UI",sans-serif;
+  --ease:cubic-bezier(.2,.7,.1,1);
+}
+*{box-sizing:border-box}
+html.lenis,html.lenis body{height:auto}
+body{margin:0;background:var(--cream);color:var(--ink);font:400 17px/1.6 var(--body);-webkit-font-smoothing:antialiased;overflow-x:clip}
+img{max-width:100%;display:block}
+.wrap{max-width:1240px;margin:0 auto;padding-inline:32px}
+@media (max-width:640px){.wrap{padding-inline:16px}}
+h1,h2,h3{font-family:var(--display);font-weight:500;margin:0;letter-spacing:-.015em;text-wrap:balance}
+h2{font-size:clamp(46px,6.4vw,96px);line-height:.95}
+em,i.it{font-style:italic;color:var(--citrus-ink)}
+p{margin:0}
+a{color:inherit}
+.kicker{font:700 12.5px/1 var(--body);letter-spacing:.18em;text-transform:uppercase;color:var(--teal2);display:inline-flex;align-items:center;gap:12px}
+.kicker::before{content:"";width:28px;height:1.5px;background:var(--citrus)}
+:focus-visible{outline:2.5px solid var(--citrus);outline-offset:3px;border-radius:6px}
+[hidden]{display:none!important}
+.btn{white-space:nowrap;display:inline-flex;align-items:center;justify-content:center;gap:10px;font:700 15px/1 var(--body);letter-spacing:.04em;text-decoration:none;padding:18px 28px;min-height:52px;border-radius:999px;border:1.5px solid transparent;cursor:pointer;transition:background-color .25s,color .25s,border-color .25s,transform .25s}
+.btn-citrus{background:var(--citrus);color:var(--teal)}
+.btn-citrus:hover{background:var(--butter)}
+.btn-dark{background:var(--teal);color:var(--cream)}
+.btn-dark:hover{background:var(--citrus);color:var(--teal)}
+.btn-line{border-color:currentColor;color:inherit;background:transparent}
+.btn-line:hover{background:var(--cream);color:var(--teal);border-color:var(--cream)}
+
+/* preview banner */
+.concept{background:var(--teal);color:#cfdcd6;font-size:13px;line-height:18px;text-align:center;padding:9px 16px}
+.concept a{color:#fff;font-weight:600}
+
+/* header */
+.top{position:sticky;top:0;z-index:50;background:color-mix(in srgb,var(--cream) 92%,transparent);backdrop-filter:blur(10px);-webkit-backdrop-filter:blur(10px);border-bottom:1px solid #17302e14;transition:transform .5s var(--ease)}
+.top.away{transform:translateY(-100%)}
+.top .wrap{display:flex;align-items:center;justify-content:space-between;height:78px;gap:20px}
+.logo{display:inline-flex;align-items:center;gap:12px;text-decoration:none;color:var(--teal)}
+.logo svg{width:34px;height:42px;flex:none}
+.logo .wm{display:grid;gap:3px;line-height:1}
+.logo .wm small{font:700 10.5px/1 var(--body);letter-spacing:.3em;text-transform:uppercase;color:var(--teal2)}
+.logo .wm b{font:500 italic 31px/.9 var(--display);letter-spacing:-.01em}
+nav.main{display:flex;align-items:center;gap:30px}
+nav.main a:not(.btn){text-decoration:none;font-weight:600;font-size:15px;padding:10px 2px;position:relative}
+nav.main a:not(.btn)::after{content:"";position:absolute;left:0;right:0;bottom:4px;height:1.5px;background:var(--citrus);transform:scaleX(0);transform-origin:left;transition:transform .35s var(--ease)}
+nav.main a:not(.btn):hover::after,nav.main a:not(.btn):focus-visible::after{transform:scaleX(1)}
+nav.main .btn{padding:13px 20px;min-height:46px;font-size:14.5px}
+@media (max-width:900px){nav.main a:not(.btn){display:none}}
+nav.main a.call{display:inline-flex;align-items:center;gap:9px;font-weight:700;font-size:15px;text-decoration:none;white-space:nowrap}
+nav.main a.call svg{width:18px;height:18px;flex:none;color:var(--citrus-ink)}
+nav.main a.call:hover{color:var(--citrus-ink)}
+nav.main a.call::after{display:none}
+@media (max-width:900px){nav.main a.call{display:inline-flex!important;width:46px;height:46px;border-radius:50%;border:1.5px solid var(--teal);justify-content:center;padding:0}nav.main a.call span{display:none}nav.main{gap:10px}}
+@media (max-width:420px){.logo .wm b{font-size:26px}.logo .wm small{letter-spacing:.2em}.logo svg{width:28px;height:35px}.top .wrap{gap:8px}nav.main .btn{padding:0 18px}}
+
+/* hero */
+.hero{position:relative;min-height:max(680px,calc(100vh - 112px));display:flex;align-items:flex-end;color:var(--cream);isolation:isolate;overflow:hidden;background:var(--teal)}
+.hero .bg{position:absolute;inset:0;z-index:-2;overflow:hidden}
+.hero .bg img{position:absolute;left:0;width:100%;top:-20%;height:125%;object-fit:cover;object-position:50% 40%}
+.hero::before{content:"";position:absolute;inset:0;z-index:-1;background:linear-gradient(90deg,#11302ff0 0%,#11302fc7 38%,#11302f66 75%,#11302f40 100%),linear-gradient(0deg,#11302fcc 0%,#11302f00 45%)}
+.hero .wrap{width:100%;padding-block:70px 56px;position:relative}
+.hero .eyebrow{font:700 12.5px/1.4 var(--body);letter-spacing:.2em;text-transform:uppercase;color:var(--butter);margin-bottom:26px;display:block}
+.hero h1{font-size:clamp(64px,12.4vw,196px);line-height:.88;letter-spacing:-.03em;font-weight:500}
+.hero h1 .ln{display:block;overflow:hidden;padding-bottom:.1em;margin-bottom:-.1em}
+.hero h1 .ln>span{display:inline-block}
+.hero h1 em{color:var(--butter)}
+.hero .lead{font-size:clamp(17px,1.5vw,20px);max-width:27em;margin-top:34px;color:#eef0e6}
+.hero .ctas{display:flex;flex-wrap:wrap;gap:12px;margin-top:32px}
+.hero .btn-line{color:var(--cream)}
+html.motion:not(.ready) .hero h1 .ln>span{transform:translateY(105%)}
+html.motion:not(.ready) [data-intro]{opacity:0}
+.arch{position:absolute;right:32px;bottom:56px;width:clamp(230px,25vw,370px);aspect-ratio:3/4.1;border-radius:999px 999px 14px 14px;overflow:hidden;box-shadow:0 40px 80px -30px #000a;border:6px solid var(--cream);background:var(--teal2)}
+.arch img{width:100%;height:100%;object-fit:cover}
+.rating{position:absolute;right:calc(32px + clamp(230px,25vw,370px) - 74px);bottom:calc(56px + clamp(230px,25vw,370px)*1.3 - 60px);width:148px;height:148px;border-radius:50%;background:var(--butter);color:var(--teal);display:grid;place-content:center;text-align:center;line-height:1;box-shadow:0 20px 40px -20px #0008;z-index:2}
+.rating b{font:500 56px/.9 var(--display);letter-spacing:-.02em}
+.rating b sup{font-size:.4em;vertical-align:.9em;margin-left:2px}
+.rating span{font:700 10.5px/1.3 var(--body);letter-spacing:.14em;text-transform:uppercase;margin-top:6px;display:block}
+.rating small{font:600 12px/1.2 var(--body);margin-top:5px;display:block;color:#3b4b47}
+@media (max-width:1000px){.arch{display:none}.rating{position:static;width:auto;height:auto;border-radius:999px;padding:12px 18px;display:inline-flex;align-items:center;gap:12px;margin-top:30px;text-align:left}.rating b{font-size:36px}.rating span,.rating small{margin:0;display:block}.hero .wrap{padding-block:52px 44px}}
+
+/* proof strip */
+.proof{background:var(--paper);border-bottom:1px solid var(--line)}
+.proof ul{list-style:none;margin:0;padding:0;display:grid;grid-template-columns:repeat(4,auto);justify-content:space-between;gap:12px 32px}
+.proof li{padding-block:22px;font-size:15px;line-height:1.35;display:flex;align-items:center;gap:12px}
+.proof li b{font:500 30px/1 var(--display);color:var(--teal)}
+.proof li .st{color:var(--citrus);letter-spacing:2px;font-size:15px}
+@media (max-width:900px){.proof ul{grid-template-columns:1fr 1fr;justify-content:stretch}.proof li{padding-block:14px}}
+@media (max-width:520px){.proof ul{grid-template-columns:1fr}.proof li{padding-block:10px}.proof ul{padding-block:10px}}
+
+/* intro + menu list */
+.intro{padding-block:130px 40px}
+.intro .wrap{display:grid;grid-template-columns:minmax(0,.9fr) minmax(0,1.1fr);gap:72px;align-items:start}
+.intro h2{margin-top:22px}
+.intro .lead{font-size:19px;color:#34493f;max-width:26em;margin-top:26px}
+.svc{list-style:none;margin:0;padding:0;border-top:1px solid var(--line)}
+.svc li{display:grid;grid-template-columns:54px 1fr;gap:6px 12px;padding:24px 0;border-bottom:1px solid var(--line);transition:padding .4s var(--ease),background-color .4s}
+.svc li:hover{padding-left:14px;background:#fff6e4}
+.svc .n{font:600 13px/2.4 var(--body);letter-spacing:.12em;color:var(--citrus-ink)}
+.svc h3{font-size:clamp(32px,3.4vw,46px);line-height:1}
+.svc p{grid-column:2;color:var(--muted);max-width:30em;font-size:16.5px}
+@media (max-width:900px){.intro{padding-block:84px 24px}.intro .wrap{grid-template-columns:1fr;gap:44px}}
+
+/* day scene */
+.day{background:var(--cream);color:var(--ink);padding-block:90px;position:relative}
+.day .head{margin-bottom:44px}
+.day .head h2{margin-top:20px}
+.stages{display:grid;gap:56px}
+.stage{display:grid;grid-template-columns:minmax(0,1fr) minmax(0,1fr);gap:48px;align-items:center}
+.stage .sp{border-radius:999px 999px 18px 18px;overflow:hidden;aspect-ratio:4/5;max-width:420px;width:100%;margin-inline:auto}
+.stage .sp img{width:100%;height:100%;object-fit:cover}
+.stage .tag{font:700 12.5px/1 var(--body);letter-spacing:.18em;text-transform:uppercase;color:var(--citrus-ink);display:block;margin-bottom:16px}
+.stage h3{font-size:clamp(54px,8vw,120px);line-height:.9}
+.stage p{font-size:19px;max-width:23em;margin-top:18px;color:inherit;opacity:.88}
+.stage:last-child{background:var(--teal);color:var(--cream);border-radius:28px;padding:28px}
+.stage:last-child .tag{color:var(--butter)}
+.dscene{display:none}
+.day.scene-on{padding:0}
+.day.scene-on .head,.day.scene-on .stages{display:none}
+.day.scene-on .dscene{display:block}
+.dpin{height:100vh;min-height:620px;position:relative;overflow:hidden}
+.dpin .grid{position:absolute;inset:0;max-width:1240px;margin:0 auto;padding:70px 32px 40px;display:grid;grid-template-columns:minmax(0,1.05fr) minmax(0,.95fr);gap:40px;align-items:center}
+.dtext{position:relative;height:100%;display:grid;align-content:center}
+.dtext .kicker{color:inherit}
+.dtext .kicker::before{background:var(--citrus)}
+.dstage{position:absolute;left:0;right:0;top:50%;transform:translateY(-38%)}
+.dstage .tag{font:700 12.5px/1 var(--body);letter-spacing:.18em;text-transform:uppercase;color:var(--citrus-ink);display:block;margin-bottom:16px;transition:color .3s}
+.dstage h3{font-size:clamp(76px,10.5vw,170px);line-height:.86;letter-spacing:-.03em}
+.dstage p{font-size:20px;max-width:21em;margin-top:22px;opacity:.9}
+.dpin.dark .dstage .tag{color:var(--butter)}
+.dframe{position:relative;width:min(480px,100%);aspect-ratio:3/4.15;margin-inline:auto;border-radius:999px 999px 18px 18px;overflow:hidden;box-shadow:0 50px 90px -40px #000a;background:var(--teal2)}
+.dpic{position:absolute;inset:0}
+.dpic img{width:100%;height:100%;object-fit:cover}
+.dpic:not(:first-child){clip-path:inset(100% 0 0 0)}
+.arc{position:absolute;left:max(32px,calc((100vw - 1240px)/2 + 32px));top:46px;width:min(300px,28vw);z-index:3}
+.arc svg{width:100%;height:auto;overflow:visible}
+.arc .track{fill:none;stroke:currentColor;stroke-width:1.5;stroke-dasharray:2 7;opacity:.5}
+.arc .sun{fill:var(--citrus)}
+.dlabels{position:absolute;left:0;right:0;bottom:30px;z-index:3;display:flex;justify-content:center;gap:10px}
+.dlabels span{font:700 12px/1 var(--body);letter-spacing:.14em;text-transform:uppercase;padding:11px 16px;border-radius:999px;border:1.5px solid currentColor;opacity:.4;transition:opacity .3s,background-color .3s,color .3s}
+.dlabels span.on{opacity:1;background:var(--citrus);border-color:var(--citrus);color:var(--teal)}
+@media (max-width:860px){
+  .stage{grid-template-columns:1fr;gap:26px}
+  .stage .sp{max-width:340px}
+  .stage:last-child{padding:22px 22px 34px}
+  .day{padding-block:72px}
+}
+
+/* booking */
+.book{background:var(--teal);color:var(--cream);padding-block:130px;position:relative;overflow:hidden}
+.book::before{content:"";position:absolute;right:-12%;top:-18%;width:60vw;aspect-ratio:1;border-radius:50%;background:radial-gradient(circle,#e8872b26,#e8872b00 65%);pointer-events:none}
+.book .wrap{display:grid;grid-template-columns:minmax(0,.8fr) minmax(0,1.2fr);gap:64px;align-items:start;position:relative}
+.book h2 em{color:var(--butter)}
+.book .kicker{color:var(--butter)}
+.book .lead{color:#cfdcd6;font-size:19px;margin-top:24px;max-width:24em}
+.book ul.pts{list-style:none;padding:0;margin:34px 0 0;display:grid;gap:12px;color:#cfdcd6;font-size:16px}
+.book ul.pts li{display:flex;gap:12px;align-items:baseline}
+.book ul.pts li::before{content:"";width:8px;height:8px;border-radius:50%;background:var(--citrus);flex:none;transform:translateY(-1px)}
+.book .tel{margin-top:34px;display:inline-flex;flex-direction:column;gap:4px;text-decoration:none}
+.book .tel small{font:700 12px/1 var(--body);letter-spacing:.16em;text-transform:uppercase;color:var(--butter)}
+.book .tel b{font:500 40px/1 var(--display)}
+.book .tel:hover b{color:var(--butter)}
+.book .wrap>*,.widget>*,#step-pick>*{min-width:0}
+.widget{background:var(--paper);color:var(--ink);border-radius:26px;padding:32px;display:grid;gap:26px;box-shadow:0 50px 90px -40px #000b}
+.wl{font:700 12px/1 var(--body);letter-spacing:.14em;text-transform:uppercase;color:var(--muted);margin-bottom:12px;display:flex;justify-content:space-between;gap:12px}
+.wl em{font-style:normal;color:var(--citrus-ink);letter-spacing:.06em;text-transform:none;font-weight:600}
+.guests{display:flex;align-items:center;gap:16px}
+.guests button{width:48px;height:48px;border-radius:50%;border:1.5px solid var(--teal);background:transparent;font:500 22px/1 var(--body);color:var(--teal);cursor:pointer;transition:background-color .2s,color .2s}
+.guests button:hover:not(:disabled){background:var(--teal);color:var(--cream)}
+.guests button:disabled{opacity:.3;cursor:default}
+.guests output{font:500 48px/1 var(--display);min-width:2ch;text-align:center;font-variant-numeric:tabular-nums}
+.guests small{color:var(--muted);font-size:14px}
+.days{display:flex;gap:8px;overflow-x:auto;padding:2px 2px 10px;margin:0 -2px;scroll-snap-type:x proximity;scrollbar-width:thin}
+.day-b{flex:0 0 66px;border:1.5px solid var(--line);background:#fff;border-radius:16px;padding:12px 4px;text-align:center;cursor:pointer;font:inherit;color:inherit;display:grid;gap:3px;scroll-snap-align:start;min-height:76px;transition:border-color .2s}
+.day-b:hover:not(:disabled){border-color:var(--teal)}
+.day-b small{font-size:11px;font-weight:700;letter-spacing:.08em;text-transform:uppercase;color:var(--muted)}
+.day-b b{font:500 26px/1 var(--display)}
+.day-b[aria-pressed="true"]{background:var(--teal);border-color:var(--teal);color:var(--cream)}
+.day-b[aria-pressed="true"] small{color:var(--butter)}
+.day-b:disabled{opacity:.35;cursor:not-allowed}
+.tgroup{display:grid;gap:10px}
+.tgroup+.tgroup{margin-top:14px}
+.tgroup h4{margin:0;font:600 14px/1 var(--body);color:var(--muted)}
+.times{display:grid;grid-template-columns:repeat(auto-fill,minmax(86px,1fr));gap:8px}
+.time{font:600 15px/1 var(--body);min-height:46px;padding:12px 6px;border-radius:12px;border:1.5px solid var(--line);background:#fff;color:var(--ink);cursor:pointer;font-variant-numeric:tabular-nums;transition:border-color .2s}
+.time:hover:not(:disabled){border-color:var(--teal)}
+.time[aria-pressed="true"]{background:var(--citrus);border-color:var(--citrus);color:var(--teal)}
+.time:disabled{text-decoration:line-through;opacity:.4;cursor:not-allowed}
+.chips{display:flex;flex-wrap:wrap;gap:8px}
+.chip{font:600 15px/1 var(--body);min-height:46px;padding:12px 18px;border-radius:999px;border:1.5px solid var(--line);background:#fff;color:var(--ink);cursor:pointer}
+.chip:hover{border-color:var(--teal)}
+.chip[aria-pressed="true"]{background:var(--teal);border-color:var(--teal);color:var(--cream)}
+.hint{font-size:14.5px;color:var(--citrus-ink);margin-top:10px;font-weight:600}
+.who{display:grid;grid-template-columns:1fr 1fr;gap:12px}
+.who label{display:grid;gap:6px;font-weight:600;font-size:14px}
+.who input{font:inherit;font-size:16px;border:1.5px solid var(--line);border-radius:12px;padding:13px 14px;min-height:48px;background:#fff;color:var(--ink)}
+.who input:focus{outline:none;border-color:var(--citrus);box-shadow:0 0 0 3px #e8872b33}
+.sumbar{display:flex;align-items:center;justify-content:space-between;gap:16px;flex-wrap:wrap;border-top:1px solid var(--line);padding-top:22px}
+.sumbar p{font-size:15.5px;color:var(--muted);max-width:22em}
+.sumbar p b{color:var(--ink)}
+.confirm{display:grid;gap:16px;text-align:center;justify-items:center;padding-block:20px}
+.confirm .tick{width:76px;height:76px;border-radius:50%;background:var(--mist);color:var(--teal2);display:grid;place-items:center}
+.confirm .tick svg{width:38px;height:38px}
+.confirm h3{font-size:46px;line-height:1}
+.confirm .ref{font:700 14px/1 var(--body);letter-spacing:.14em;text-transform:uppercase;color:var(--citrus-ink)}
+.confirm dl{display:grid;grid-template-columns:auto auto;gap:6px 22px;margin:0;font-size:16px;text-align:left}
+.confirm dt{color:var(--muted)}
+.confirm dd{margin:0;font-weight:600}
+.confirm .note{color:var(--muted);font-size:14.5px;max-width:28em}
+@media (max-width:960px){.book .wrap{grid-template-columns:1fr;gap:44px}.book{padding-block:88px}.widget{padding:22px}.book .tel b{font-size:34px}}
+@media (max-width:520px){.who{grid-template-columns:1fr}}
+
+/* gallery */
+.gal{padding-block:130px 90px}
+.gal .head{display:flex;justify-content:space-between;align-items:end;gap:32px;flex-wrap:wrap;margin-bottom:48px}
+.gal .head h2{margin-top:20px}
+.gal .head>p{max-width:24em;color:var(--muted);font-size:18px}
+.mosaic{display:grid;grid-template-columns:repeat(12,minmax(0,1fr));gap:16px;grid-auto-rows:clamp(60px,7.4vw,106px)}
+.mosaic figure{margin:0;position:relative;overflow:hidden;border-radius:16px;background:var(--mist)}
+.mosaic img{position:absolute;left:0;top:-8%;width:100%;height:116%;object-fit:cover}
+.mosaic figcaption{position:absolute;left:14px;bottom:12px;z-index:2;font:700 11.5px/1 var(--body);letter-spacing:.14em;text-transform:uppercase;color:#fff;background:#11302fb3;padding:8px 11px;border-radius:999px}
+.m1{grid-column:1/5;grid-row:1/6;border-radius:999px 999px 16px 16px!important}
+.m2{grid-column:5/10;grid-row:1/5}
+.m3{grid-column:10/13;grid-row:1/5}
+.m4{grid-column:5/8;grid-row:5/8}
+.m5{grid-column:8/13;grid-row:5/8}
+.m6{grid-column:1/5;grid-row:6/8}
+@media (max-width:760px){
+  .gal{padding-block:84px 60px}
+  .mosaic{grid-template-columns:1fr 1fr;grid-auto-rows:auto;gap:10px}
+  .mosaic figure{grid-column:auto!important;grid-row:auto!important;aspect-ratio:1/1.1}
+  .mosaic .m1{grid-column:1/3!important;aspect-ratio:4/4.6!important}
+  .mosaic .m6{grid-column:1/3!important;aspect-ratio:16/10!important}
+}
+
+/* reviews */
+.rev{background:var(--mist);padding-block:110px 100px;overflow:hidden}
+.rev .head{margin-bottom:44px;display:flex;justify-content:space-between;align-items:end;gap:28px;flex-wrap:wrap}
+.rev .head h2{margin-top:20px}
+.rev .head>p{font-size:16.5px;color:var(--muted);max-width:22em}
+.rev .head>p b{color:var(--ink)}
+.rv-row{display:flex;gap:20px;width:max-content;will-change:transform}
+.rv{margin:0;width:min(560px,82vw);background:var(--paper);border-radius:22px;padding:34px 34px 30px;display:grid;gap:22px;align-content:space-between;white-space:normal;box-shadow:0 30px 60px -40px #11302f66}
+.rv .stars{color:var(--citrus);letter-spacing:3px;font-size:17px}
+.rv q{font:500 clamp(26px,2.5vw,34px)/1.18 var(--display);quotes:"\201C" "\201D";color:var(--teal)}
+.rv figcaption{font-size:14.5px;color:var(--muted)}
+.rv figcaption b{color:var(--ink)}
+@media (max-width:640px){.rev{padding-block:80px 70px}.rv{padding:26px 24px}}
+
+/* find */
+.find{padding-block:130px;background:var(--cream)}
+.find .wrap{display:grid;grid-template-columns:minmax(0,1fr) minmax(0,1fr);gap:72px;align-items:start}
+.find h2{margin-top:20px;font-size:clamp(46px,5vw,76px)}
+.find address{font-style:normal;margin-top:34px;font:500 clamp(28px,3vw,40px)/1.15 var(--display);color:var(--teal)}
+.find dl{display:grid;grid-template-columns:auto 1fr;gap:14px 28px;margin:34px 0 0;font-size:17px}
+.find dt{font:700 12px/1.9 var(--body);letter-spacing:.16em;text-transform:uppercase;color:var(--teal2)}
+.find dd{margin:0}
+.find dd a{text-underline-offset:4px;text-decoration-color:var(--citrus)}
+.find dd a:hover{color:var(--citrus-ink)}
+.enq{background:var(--paper);border-radius:26px;padding:34px;border:1px solid var(--line);display:grid;gap:18px}
+.enq h3{font-size:38px;line-height:1}
+.enq .sub{color:var(--muted);font-size:16px;margin-top:-6px}
+.enq label{display:grid;gap:6px;font-weight:600;font-size:14px}
+.enq input,.enq textarea,.enq select{font:inherit;font-size:16px;border:1.5px solid var(--line);border-radius:12px;padding:13px 14px;min-height:48px;background:#fff;color:var(--ink);width:100%}
+.enq textarea{min-height:110px;resize:vertical}
+.enq input:focus,.enq textarea:focus,.enq select:focus{outline:none;border-color:var(--citrus);box-shadow:0 0 0 3px #e8872b33}
+.enq .two{display:grid;grid-template-columns:1fr 1fr;gap:12px}
+.done{background:var(--mist);border-radius:14px;padding:16px 18px;font-weight:600;color:var(--teal)}
+@media (max-width:960px){.find{padding-block:84px}.find .wrap{grid-template-columns:1fr;gap:48px}.enq{padding:24px}}
+@media (max-width:520px){.enq .two{grid-template-columns:1fr}}
+
+/* footer */
+footer{background:var(--teal);color:#cfdcd6;padding-block:56px 40px}
+footer .wrap{display:flex;justify-content:space-between;align-items:center;gap:24px;flex-wrap:wrap}
+footer .logo{color:var(--cream)}
+footer .logo .wm small{color:var(--butter)}
+footer p{font-size:14.5px;max-width:34em}
+footer a{color:#fff;font-weight:600}
+</style>
+</head>
+<body>
+<svg width="0" height="0" style="position:absolute" aria-hidden="true" focusable="false">
+  <symbol id="mark" viewBox="0 0 48 60">
+    <path d="M4 58V24a20 20 0 0 1 40 0v34Z" fill="none" stroke="currentColor" stroke-width="2.6" stroke-linejoin="round"/>
+    <path d="M24 4v30M4 24h40" stroke="currentColor" stroke-width="1.6" opacity=".55" fill="none"/>
+    <circle cx="24" cy="46" r="10.5" fill="#e8872b"/>
+    <path d="M24 35.5c.5-4.5 4-6.5 8-6.5-.4 4.2-3.6 6.7-8 6.5Z" fill="#8fa089"/>
+  </symbol>
+</svg>
+
+<div class="concept">Website concept for The Winchester Orangery — preview only, not the live site. Designed by <a href="https://itchenstudio.co.uk" data-umami-event="Itchen Studio link">Itchen Studio</a> · <a href="mailto:sam@itchenstudio.co.uk">sam@itchenstudio.co.uk</a></div>
+
+<header class="top">
+  <div class="wrap">
+    <a class="logo" href="#top" aria-label="The Winchester Orangery, back to the top">
+      <svg aria-hidden="true"><use href="#mark"/></svg>
+      <span class="wm"><small>The Winchester</small><b>Orangery</b></span>
+    </a>
+    <nav class="main" aria-label="Main">
+      <a href="#day">From brunch to evening</a>
+      <a href="#gallery">Inside</a>
+      <a href="#find">Find us</a>
+      <a class="call" href="tel:01962620036" aria-label="Call 01962 620036"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 4h4l2 5-2.5 1.5a11 11 0 0 0 5 5L15 13l5 2v4a2 2 0 0 1-2 2A16 16 0 0 1 3 6a2 2 0 0 1 2-2"/></svg><span>01962 620036</span></a>
+      <a class="btn btn-citrus" href="#book">Book a table</a>
+    </nav>
+  </div>
+</header>
+
+<main id="top">
+<section class="hero" aria-labelledby="h1">
+  <div class="bg"><img src="assets/img/blossoms-1400.webp" srcset="assets/img/blossoms-1100.webp 1100w, assets/img/blossoms-1400.webp 1400w" sizes="100vw" alt="White blossoms hanging from the ceiling in the dining room" fetchpriority="high"></div>
+  <div class="wrap">
+    <span class="eyebrow" data-intro>Brunch cafe, tapas and cocktail bar · The Square, Winchester</span>
+    <h1 id="h1"><span class="ln"><span>Brunch</span></span><span class="ln"><span>under the</span></span><span class="ln"><span><em>blossoms.</em></span></span></h1>
+    <p class="lead" data-intro>A bright room by the cathedral where breakfast runs into coffee, then tapas, then cocktails.</p>
+    <div class="ctas" data-intro>
+      <a class="btn btn-citrus" href="#book">Book a table</a>
+      <a class="btn btn-line" href="#day">See the day</a>
+    </div>
+    <div class="rating" data-intro aria-label="Rated 4.3 on Tripadvisor from 211 reviews"><b>4.3<sup>/5</sup></b><div><span>Tripadvisor</span><small>211 reviews</small></div></div>
+    <div class="arch" data-intro><img src="assets/img/english-1100.webp" srcset="assets/img/english-1100.webp 1100w, assets/img/english-1400.webp 1400w" sizes="370px" alt="A full English breakfast on a grey plate, on a bed of moss"></div>
+  </div>
+</section>
+
+<section class="proof" aria-label="At a glance">
+  <div class="wrap"><ul>
+    <li><b>4.3</b><span><span class="st" aria-hidden="true">★★★★★</span><br>on Tripadvisor, <span data-count="211">211</span> reviews</span></li>
+    <li><b>2018</b><span>on The Square<br>since then</span></li>
+    <li><b>9pm</b><span>closing, Thursday<br>to Saturday</span></li>
+    <li><b>11</b><span>The Square, by<br>the cathedral</span></li>
+  </ul></div>
+</section>
+
+<section class="intro" aria-labelledby="in-title">
+  <div class="wrap">
+    <div>
+      <p class="kicker" data-reveal>What we serve</p>
+      <h2 id="in-title" data-split>One room.<br><em>All day.</em></h2>
+      <p class="lead" data-reveal>Come for eggs at the start of the day or for a drink at the end of it. The flowers stay the same. The menu changes with the hour.</p>
+    </div>
+    <ol class="svc" data-reveal>
+      <li><span class="n">01</span><h3>Breakfast and brunch</h3><p>Full English, sweet potato hash with a fried egg, waffles with chocolate.</p></li>
+      <li><span class="n">02</span><h3>Coffee</h3><p>Lattes and hot chocolates in sage-green cups, with leaves on the table.</p></li>
+      <li><span class="n">03</span><h3>Tapas</h3><p>Sharing boards of cured meat, cheese, crackers and fruit.</p></li>
+      <li><span class="n">04</span><h3>Cocktails</h3><p>Poured in the evening, with the room lit up. Open until 9pm Thursday to Saturday.</p></li>
+      <li><span class="n">05</span><h3>Events and occasions</h3><p>Ticketed evenings, plus decorated tables for birthdays and celebrations.</p></li>
+    </ol>
+  </div>
+</section>
+
+<section class="day" id="day" aria-labelledby="day-title">
+  <div class="wrap head">
+    <p class="kicker" data-reveal>From brunch to after dark</p>
+    <h2 id="day-title" data-split>The same room,<br><em>a different light.</em></h2>
+  </div>
+  <div class="wrap stages">
+    <article class="stage">
+      <div class="sp"><img src="assets/img/hash-1100.webp" alt="Sweet potato hash topped with a fried egg and halloumi, scattered with edible flowers" loading="lazy"></div>
+      <div><span class="tag">Morning</span><h3>Brunch</h3><p>Eggs, hash and waffles, served under a ceiling of flowers.</p></div>
+    </article>
+    <article class="stage">
+      <div class="sp"><img src="assets/img/coffee-1100.webp" alt="Two lattes with leaf-pattern art in pale green cups, on a table of ivy" loading="lazy"></div>
+      <div><span class="tag">Midday</span><h3>Coffee</h3><p>A long catch-up over a latte. Nobody is watching the clock.</p></div>
+    </article>
+    <article class="stage">
+      <div class="sp"><img src="assets/img/boards-1080.webp" alt="Sharing boards of cured meats, cheese, crackers and fruit" loading="lazy"></div>
+      <div><span class="tag">Afternoon</span><h3>Tapas</h3><p>Boards for the middle of the table, with plenty to pass round.</p></div>
+    </article>
+    <article class="stage">
+      <div class="sp"><img src="assets/img/evening-1100.webp" alt="The dining room in the evening, lit softly under hanging flowers" loading="lazy"></div>
+      <div><span class="tag">Evening</span><h3>Cocktails</h3><p>Lights down, flowers glowing. Open until 9pm Thursday to Saturday.</p></div>
+    </article>
+  </div>
+
+  <div class="dscene" aria-hidden="false">
+    <div class="dpin" id="dpin">
+      <div class="arc" aria-hidden="true">
+        <svg viewBox="0 0 400 210"><path class="track" d="M20 195A180 180 0 0 1 380 195"/><circle class="sun" id="sun" cx="20" cy="195" r="15"/></svg>
+      </div>
+      <div class="grid">
+        <div class="dtext">
+          <div class="dstage" data-i="0"><span class="tag">Morning</span><h3>Brunch</h3><p>Eggs, hash and waffles, served under a ceiling of flowers.</p></div>
+          <div class="dstage" data-i="1"><span class="tag">Midday</span><h3>Coffee</h3><p>A long catch-up over a latte. Nobody is watching the clock.</p></div>
+          <div class="dstage" data-i="2"><span class="tag">Afternoon</span><h3>Tapas</h3><p>Boards for the middle of the table, with plenty to pass round.</p></div>
+          <div class="dstage" data-i="3"><span class="tag">Evening</span><h3>Cocktails</h3><p>Lights down, flowers glowing. Open until 9pm Thursday to Saturday.</p></div>
+        </div>
+        <div class="dframe">
+          <div class="dpic"><img src="assets/img/hash-1100.webp" alt="Sweet potato hash topped with a fried egg and halloumi, scattered with edible flowers" loading="lazy"></div>
+          <div class="dpic"><img src="assets/img/coffee-1100.webp" alt="Two lattes with leaf-pattern art in pale green cups, on a table of ivy" loading="lazy"></div>
+          <div class="dpic"><img src="assets/img/boards-1080.webp" alt="Sharing boards of cured meats, cheese, crackers and fruit" loading="lazy"></div>
+          <div class="dpic"><img src="assets/img/evening-1100.webp" alt="The dining room in the evening, lit softly under hanging flowers" loading="lazy"></div>
+        </div>
+      </div>
+      <div class="dlabels" aria-hidden="true"><span class="on">Brunch</span><span>Coffee</span><span>Tapas</span><span>Cocktails</span></div>
+    </div>
+  </div>
+</section>
+
+<section class="book" id="book" aria-labelledby="book-title">
+  <div class="wrap">
+    <div>
+      <p class="kicker" data-reveal>Book a table</p>
+      <h2 id="book-title" data-split>Save us<br><em>a table.</em></h2>
+      <p class="lead" data-reveal>Pick a day and a time and tell us who is coming. Say if it is a birthday or a celebration and we will talk about dressing the table.</p>
+      <ul class="pts" data-reveal>
+        <li>Tables for one to eight people</li>
+        <li>Birthdays and celebrations welcome</li>
+        <li>Evening tables on Thursday, Friday and Saturday</li>
+      </ul>
+      <a class="tel" href="tel:01962620036" data-reveal><small>Prefer to call?</small><b>01962 620036</b></a>
+    </div>
+
+    <form class="widget" id="widget" novalidate aria-label="Table booking demo">
+      <div id="step-pick" style="display:grid;gap:26px">
+        <div>
+          <span class="wl" id="gl">Guests</span>
+          <div class="guests" role="group" aria-labelledby="gl">
+            <button type="button" id="gminus" aria-label="One fewer guest">&minus;</button>
+            <output id="gcount" aria-live="polite">2</output>
+            <button type="button" id="gplus" aria-label="One more guest">+</button>
+            <small>Tables for 1 to 8</small>
+          </div>
+        </div>
+        <div>
+          <span class="wl" id="dl">Day <em>Example availability</em></span>
+          <div class="days" id="days" role="group" aria-labelledby="dl"></div>
+        </div>
+        <div>
+          <span class="wl" id="tl">Time <em>Example availability</em></span>
+          <div id="times" role="group" aria-labelledby="tl"></div>
+        </div>
+        <div>
+          <span class="wl" id="ol">What is the occasion?</span>
+          <div class="chips" id="occ" role="group" aria-labelledby="ol">
+            <button type="button" class="chip" aria-pressed="true" data-v="Just a table">Just a table</button>
+            <button type="button" class="chip" aria-pressed="false" data-v="Birthday">Birthday</button>
+            <button type="button" class="chip" aria-pressed="false" data-v="A celebration">A celebration</button>
+          </div>
+          <p class="hint" id="occhint" hidden>Lovely. Decorated tables are available for occasions, so we will be in touch.</p>
+        </div>
+        <div class="who">
+          <label>Name<input id="bname" autocomplete="name" required></label>
+          <label>Phone<input id="bphone" type="tel" autocomplete="tel" required></label>
+        </div>
+        <div class="sumbar">
+          <p id="summary" aria-live="polite">Choose a time</p>
+          <button class="btn btn-dark" type="submit">Request this table</button>
+        </div>
+      </div>
+      <div class="confirm" id="step-done" hidden>
+        <div class="tick"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12.5l4.5 4.5L19 7.5"/></svg></div>
+        <h3>See you soon.</h3>
+        <div class="ref" id="ref">Booking WO-0000</div>
+        <dl id="cdl"></dl>
+        <p class="note">This is a preview — the form will go live with your new site. Nothing has been sent.</p>
+        <button class="btn btn-line" type="button" id="again" style="color:var(--teal);border-color:var(--teal)">Start again</button>
+      </div>
+    </form>
+  </div>
+</section>
+
+<section class="gal" id="gallery" aria-labelledby="gal-title">
+  <div class="wrap">
+    <div class="head">
+      <div><p class="kicker" data-reveal>Inside</p><h2 id="gal-title" data-split>Flowers <em>overhead.</em></h2></div>
+      <p data-reveal>Hanging blossoms, a tree growing through the ceiling and a table for every kind of morning.</p>
+    </div>
+    <div class="mosaic">
+      <figure class="m1" data-clip><img src="assets/img/evening-1100.webp" alt="The dining room after dark, with lit blossoms hanging over the tables" loading="lazy" data-parallax><figcaption>After dark</figcaption></figure>
+      <figure class="m2" data-clip><img src="assets/img/room-992.webp" alt="Guests at tables beneath a leafy tree that grows across the ceiling" loading="lazy" data-parallax><figcaption>Under the tree</figcaption></figure>
+      <figure class="m3" data-clip><img src="assets/img/frontage-1100.webp" alt="The black shopfront of The Winchester Orangery, with a hand holding an orange smoothie" loading="lazy" data-parallax><figcaption>On The Square</figcaption></figure>
+      <figure class="m4" data-clip><img src="assets/img/waffles-1100.webp" alt="Waffles with cream, chocolate sauce and crumble on a grey plate" loading="lazy" data-parallax><figcaption>Waffles</figcaption></figure>
+      <figure class="m5" data-clip><img src="assets/img/english-1100.webp" alt="A full English breakfast with black pudding, beans and a poached egg" loading="lazy" data-parallax><figcaption>Full English</figcaption></figure>
+      <figure class="m6" data-clip><img src="assets/img/blossoms-1100.webp" alt="Strands of white blossom hanging from the ceiling" loading="lazy" data-parallax><figcaption>The ceiling</figcaption></figure>
+    </div>
+  </div>
+</section>
+
+<section class="rev" id="reviews" aria-labelledby="rv-title">
+  <div class="wrap head">
+    <div><p class="kicker" data-reveal>Guests say</p><h2 id="rv-title" data-split>In their <em>words.</em></h2></div>
+    <p data-reveal><b>4.3 on Tripadvisor</b> from 211 reviews. Two recent ones are here.</p>
+  </div>
+  <div class="rv-row" data-dir="-1" data-speed=".5" aria-label="Guest reviews from Tripadvisor">
+    <figure class="rv"><span class="stars" aria-hidden="true">★★★★★</span><q>We had a lovely warm welcome, the tables were decorated beautifully in a box frame style</q><figcaption><b>Tripadvisor guest</b> · May 2026</figcaption></figure>
+    <figure class="rv"><span class="stars" aria-hidden="true">★★★★★</span><q>I've never experienced such attentive service before.</q><figcaption><b>Tripadvisor guest</b> · January 2026</figcaption></figure>
+    <figure class="rv" aria-hidden="true"><span class="stars">★★★★★</span><q>We had a lovely warm welcome, the tables were decorated beautifully in a box frame style</q><figcaption><b>Tripadvisor guest</b> · May 2026</figcaption></figure>
+    <figure class="rv" aria-hidden="true"><span class="stars">★★★★★</span><q>I've never experienced such attentive service before.</q><figcaption><b>Tripadvisor guest</b> · January 2026</figcaption></figure>
+  </div>
+</section>
+
+<section class="find" id="find" aria-labelledby="find-title">
+  <div class="wrap">
+    <div>
+      <p class="kicker" data-reveal>Find us</p>
+      <h2 id="find-title" data-split>On The Square,<br><em>by the cathedral.</em></h2>
+      <address data-reveal>11 The Square<br>Winchester SO23 9ES</address>
+      <dl data-reveal>
+        <dt>Phone</dt><dd><a href="tel:01962620036">01962 620036</a></dd>
+        <dt>Email</dt><dd><a href="mailto:info@thewinchesterorangery.com">info@thewinchesterorangery.com</a></dd>
+        <dt>Evenings</dt><dd>Open until 9pm, Thursday to Saturday</dd>
+        <dt>Events</dt><dd>Tickets for events are sold through Eventbrite</dd>
+      </dl>
+    </div>
+    <form class="enq" id="enq" novalidate data-reveal aria-labelledby="enq-title">
+      <h3 id="enq-title">Planning a celebration?</h3>
+      <p class="sub">Tell us the day and the numbers and we will come back to you.</p>
+      <div class="two">
+        <label>Name<input id="en-name" autocomplete="name" required></label>
+        <label>Phone or email<input id="en-contact" autocomplete="email" required></label>
+      </div>
+      <div class="two">
+        <label>Occasion
+          <select id="en-occ"><option>Birthday</option><option>Family celebration</option><option>Private hire</option><option>Something else</option></select>
+        </label>
+        <label>Guests<input id="en-n" type="number" min="1" max="60" inputmode="numeric" placeholder="e.g. 10"></label>
+      </div>
+      <label>Anything we should know<textarea id="en-msg"></textarea></label>
+      <button class="btn btn-dark" type="submit">Send enquiry</button>
+      <div class="done" id="enq-done" hidden role="status">This is a preview — the form will go live with your new site.</div>
+    </form>
+  </div>
+</section>
+</main>
+
+<footer>
+  <div class="wrap">
+    <a class="logo" href="#top" aria-label="The Winchester Orangery, back to the top"><svg aria-hidden="true" style="width:34px;height:42px"><use href="#mark"/></svg><span class="wm"><small>The Winchester</small><b>Orangery</b></span></a>
+    <p>11 The Square, Winchester SO23 9ES · <a href="tel:01962620036">01962 620036</a><br>Website concept by <a href="https://itchenstudio.co.uk" data-umami-event="Itchen Studio link">Itchen Studio</a>. Preview only, not the live site.</p>
+  </div>
+</footer>
+
+<script src="assets/js/gsap.min.js" defer></script>
+<script src="assets/js/ScrollTrigger.min.js" defer></script>
+<script src="assets/js/lenis.min.js" defer></script>
+<script src="assets/js/concept.js" defer></script>
+<script>
+document.addEventListener('DOMContentLoaded', function(){
+  var api = window.ConceptSite.init();
+  api.fakeForm('enq','enq-done');
+
+  /* ---------- booking demo ---------- */
+  var now = new Date(), guests = 2, day = null, time = null, occ = 'Just a table';
+  var DN = ['Sun','Mon','Tue','Wed','Thu','Fri','Sat'], MN = ['Jan','Feb','Mar','Apr','May','Jun','Jul','Aug','Sep','Oct','Nov','Dec'];
+  var daysEl = document.getElementById('days'), timesEl = document.getElementById('times');
+  var dates = [];
+  for (var i = 0; i < 14; i++) dates.push(new Date(now.getFullYear(), now.getMonth(), now.getDate() + i));
+  function seeded(n){ var x = Math.sin(n) * 10000; return x - Math.floor(x); }
+  function label(t){ var h = Math.floor(t), m = t % 1 ? '30' : '00'; return String(h).padStart(2,'0') + ':' + m; }
+  function slots(dt){
+    var out = [], eve = dt.getDay() >= 4 && dt.getDay() <= 6, hr = now.getHours() + now.getMinutes()/60, today = dt.toDateString() === now.toDateString();
+    function add(t, group){
+      var past = today && t <= hr + .5;
+      var full = seeded(dt.getDate() * 31 + t * 7) < (dt.getDay() === 6 || dt.getDay() === 0 ? .42 : .2);
+      out.push({ t:t, g:group, off:past || full, why: past ? 'past' : 'full' });
+    }
+    for (var t = 10; t <= 15.5; t += .5) add(t, 'Morning and afternoon');
+    if (eve) for (var u = 17; u <= 19; u += .5) add(u, 'Evening');
+    return out;
+  }
+  function anyFree(dt){ return slots(dt).some(function(s){ return !s.off; }); }
+  function when(){ var dt = dates[day]; return (day === 0 ? 'Today' : day === 1 ? 'Tomorrow' : DN[dt.getDay()]) + ' ' + dt.getDate() + ' ' + MN[dt.getMonth()]; }
+  function sum(){
+    document.getElementById('summary').innerHTML = time === null ? 'Choose a time' : 'Table for <b>' + guests + '</b> · <b>' + when() + '</b> at <b>' + label(time) + '</b>';
+  }
+  function drawDays(){
+    daysEl.innerHTML = '';
+    dates.forEach(function(dt, k){
+      var b = document.createElement('button'); b.type = 'button'; b.className = 'day-b';
+      var free = anyFree(dt); b.disabled = !free;
+      b.setAttribute('aria-pressed', String(day === k));
+      b.setAttribute('aria-label', (k === 0 ? 'Today, ' : k === 1 ? 'Tomorrow, ' : '') + DN[dt.getDay()] + ' ' + dt.getDate() + ' ' + MN[dt.getMonth()] + (free ? '' : ', fully booked'));
+      b.innerHTML = '<small>' + (k === 0 ? 'Today' : DN[dt.getDay()]) + '</small><b>' + dt.getDate() + '</b>';
+      b.addEventListener('click', function(){ day = k; time = null; drawDays(); drawTimes(); sum(); });
+      daysEl.appendChild(b);
+    });
+    if (day === null) { var f = dates.findIndex(anyFree); if (f >= 0) { day = f; drawDays(); } }
+  }
+  function drawTimes(){
+    timesEl.innerHTML = '';
+    if (day === null) return;
+    var groups = {};
+    slots(dates[day]).forEach(function(s){ (groups[s.g] = groups[s.g] || []).push(s); });
+    Object.keys(groups).forEach(function(g){
+      var wrap = document.createElement('div'); wrap.className = 'tgroup';
+      var h = document.createElement('h4'); h.textContent = g; wrap.appendChild(h);
+      var row = document.createElement('div'); row.className = 'times';
+      groups[g].forEach(function(s){
+        var b = document.createElement('button'); b.type = 'button'; b.className = 'time'; b.textContent = label(s.t);
+        b.disabled = s.off; b.setAttribute('aria-pressed', String(time === s.t));
+        if (s.off) b.setAttribute('aria-label', label(s.t) + (s.why === 'full' ? ', fully booked' : ', not available'));
+        b.addEventListener('click', function(){ time = s.t; drawTimes(); sum(); });
+        row.appendChild(b);
+      });
+      wrap.appendChild(row); timesEl.appendChild(wrap);
+    });
+  }
+  function setGuests(n){
+    guests = Math.max(1, Math.min(8, n));
+    document.getElementById('gcount').textContent = guests;
+    document.getElementById('gminus').disabled = guests <= 1;
+    document.getElementById('gplus').disabled = guests >= 8;
+    sum();
+  }
+  document.getElementById('gminus').addEventListener('click', function(){ setGuests(guests - 1); });
+  document.getElementById('gplus').addEventListener('click', function(){ setGuests(guests + 1); });
+  document.querySelectorAll('#occ .chip').forEach(function(c){
+    c.addEventListener('click', function(){
+      occ = c.dataset.v;
+      document.querySelectorAll('#occ .chip').forEach(function(x){ x.setAttribute('aria-pressed', String(x === c)); });
+      document.getElementById('occhint').hidden = occ === 'Just a table';
+    });
+  });
+  document.getElementById('widget').addEventListener('submit', function(e){
+    e.preventDefault();
+    if (time === null) { document.getElementById('summary').innerHTML = '<b style="color:#b3261e">Pick a time first</b>'; return; }
+    var n = document.getElementById('bname'), p = document.getElementById('bphone'), bad = null;
+    [n, p].forEach(function(el){ var ok = el.value.trim() !== ''; el.style.borderColor = ok ? '' : '#b3261e'; el.setAttribute('aria-invalid', ok ? 'false' : 'true'); if (!ok && !bad) bad = el; });
+    if (bad) { bad.focus(); return; }
+    document.getElementById('ref').textContent = 'Booking WO-' + (1000 + Math.floor(Math.random() * 8999));
+    var safe = function(v){ return v.replace(/[<>&"]/g, ''); };
+    document.getElementById('cdl').innerHTML = '<dt>Name</dt><dd>' + safe(n.value) + '</dd><dt>Guests</dt><dd>' + guests + '</dd><dt>When</dt><dd>' + when() + ', ' + label(time) + '</dd><dt>Occasion</dt><dd>' + occ + '</dd>';
+    document.getElementById('step-pick').hidden = true;
+    var done = document.getElementById('step-done'); done.hidden = false;
+    if (api.motion) gsap.from(done.children, { autoAlpha:0, y:16, duration:.5, stagger:.07, ease:'power3.out' });
+    done.scrollIntoView({ block:'nearest', behavior: api.motion ? 'smooth' : 'auto' });
+  });
+  document.getElementById('again').addEventListener('click', function(){
+    document.getElementById('step-done').hidden = true; document.getElementById('step-pick').hidden = false; time = null; drawTimes(); sum();
+  });
+  setGuests(2); drawDays(); drawTimes(); sum();
+
+  /* ---------- signature scene: brunch to after dark ---------- */
+  if (!api.motion) return;
+  var mm = gsap.matchMedia();
+  mm.add('(min-width: 861px)', function(){
+    var sec = document.getElementById('day'), pin = document.getElementById('dpin');
+    sec.classList.add('scene-on');
+    var stages = gsap.utils.toArray('.dstage'), pics = gsap.utils.toArray('.dpic'), labs = gsap.utils.toArray('.dlabels span');
+    var sun = document.getElementById('sun');
+    var bgs = ['#f7f2e7','#eef0dc','#d8e0c8','#11302f'], ink = ['#17302e','#17302e','#17302e','#f7f2e7'];
+    gsap.set(sec, { backgroundColor: bgs[0], color: ink[0] });
+    gsap.set(stages, { autoAlpha:0, y:50 }); gsap.set(stages[0], { autoAlpha:1, y:0 });
+    var arcP = { p: 0 };
+    function place(){
+      var a = Math.PI * (1 - arcP.p);
+      sun.setAttribute('cx', 200 + 180 * Math.cos(a)); sun.setAttribute('cy', 195 - 180 * Math.sin(a));
+    }
+    place();
+    var tl = gsap.timeline({ defaults:{ ease:'power2.inOut' }, scrollTrigger:{
+      trigger: pin, start:'top top', end:'+=3600', pin:true, scrub:.7, anticipatePin:1,
+      onUpdate: function(self){
+        var k = Math.min(3, Math.round(self.progress * 3));
+        labs.forEach(function(l, j){ l.classList.toggle('on', j === k); });
+        pin.classList.toggle('dark', k === 3);
+      }
+    }});
+    tl.to(arcP, { p:1, duration:3, ease:'none', onUpdate:place }, 0);
+    for (var i = 1; i < 4; i++) {
+      tl.to(pics[i], { clipPath:'inset(0% 0 0% 0)', duration:.9 }, i - .5)
+        .to(stages[i - 1], { autoAlpha:0, y:-50, duration:.5 }, i - .5)
+        .to(stages[i], { autoAlpha:1, y:0, duration:.6 }, i - .2)
+        .to(sec, { backgroundColor:bgs[i], duration:.9 }, i - .5)
+        .to(sec, { color:ink[i], duration:.2 }, i - .15);
+      tl.fromTo(pics[i].firstElementChild, { scale:1.18 }, { scale:1, duration:1.1, ease:'none' }, i - .5);
+    }
+    tl.to(sun, { fill:'#f3ecd2', duration:.8 }, 2.1);
+    tl.to({}, { duration:.3 });
+    return function(){ sec.classList.remove('scene-on'); gsap.set([sec, stages, pics], { clearProps:'all' }); };
+  });
+
+  /* hero arch drift */
+  gsap.to('.hero .arch', { yPercent:-10, ease:'none', scrollTrigger:{ trigger:'.hero', start:'top top', end:'bottom top', scrub:true } });
+  gsap.to('.hero .rating', { yPercent:-24, ease:'none', scrollTrigger:{ trigger:'.hero', start:'top top', end:'bottom top', scrub:true } });
+});
+</script>
+</body>
+</html>
