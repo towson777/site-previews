@@ -5,6 +5,7 @@
 <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
 <title>Jobbi — website concept</title>
 <meta name="robots" content="noindex,nofollow">
+<script>(function(d){if(!matchMedia('(prefers-reduced-motion: reduce)').matches){d.documentElement.classList.add('motion');setTimeout(function(){if(!d.documentElement.classList.contains('ready'))d.documentElement.classList.remove('motion')},3000)}})(document)</script>
 <meta name="description" content="A website concept for Jobbi. Preview only, not the live site.">
 <script defer src="https://cloud.umami.is/script.js" data-website-id="8df92b2d-e60b-4f9e-afc7-61b78ad1a912"></script>
 <style>
@@ -145,7 +146,7 @@ p{margin:0;text-wrap:pretty}
 @media (max-width: 520px){ .steps{grid-template-columns:1fr} }
 
 /* ---------- verified (signature) ---------- */
-.verified{background:var(--mist)}
+.verified{background:var(--mist);overflow-x:clip}
 .ver-in{display:grid;grid-template-columns:minmax(0,1fr) minmax(0,1fr);gap:clamp(40px,6vw,88px);align-items:center}
 .ver-copy{display:flex;flex-direction:column;gap:22px;min-width:0}
 .ver-copy p{color:var(--muted);max-width:34em}
@@ -284,6 +285,310 @@ p{margin:0;text-wrap:pretty}
   .card.armed .tick path{stroke-dashoffset:0}
   .card.armed .stamp{opacity:1;transform:rotate(-10deg)}
 }
+/* ---------- how it works: two phones, one job ---------- */
+.how{background:var(--paper)}
+.how .how-head{padding-block:clamp(72px,10vw,120px) 0;margin-bottom:0}
+.journey{position:relative;overflow-x:clip}
+.j-pin{min-height:100vh;display:flex;align-items:center;padding-block:96px 32px}
+.j-grid{width:100%;display:grid;grid-template-columns:minmax(0,.5fr) minmax(0,1.5fr);gap:clamp(24px,4vw,56px);align-items:center}
+
+.j-rail{position:relative;padding-left:22px;align-self:center}
+.j-rail::before{content:"";position:absolute;left:0;top:8px;bottom:8px;width:2px;background:var(--line);border-radius:2px}
+.j-bar{position:absolute;left:0;top:8px;bottom:8px;width:2px}
+.j-bar i{display:block;height:100%;background:var(--blue);border-radius:2px;transform-origin:top;transform:scaleY(var(--bp,0))}
+.j-caps{list-style:none;margin:0;padding:0;display:flex;flex-direction:column;gap:6px}
+.cap button{all:unset;box-sizing:border-box;display:grid;grid-template-columns:30px minmax(0,1fr);gap:12px;align-items:start;width:100%;padding:10px 10px 10px 0;border-radius:12px;cursor:pointer}
+.cap button:focus-visible{outline:3px solid #FFC93C;outline-offset:2px}
+.cap .n{width:30px;height:30px;border-radius:50%;display:grid;place-items:center;border:2px solid var(--line);color:var(--muted);font:800 .95rem/1 var(--display);transition:background .35s,border-color .35s,color .35s}
+.cap .tx{display:flex;flex-direction:column;gap:3px;min-width:0}
+.cap .tx b{font:700 1.1rem/1.25 var(--display);letter-spacing:-.01em;color:var(--ink)}
+.cap .tx>span{font-size:.93rem;line-height:1.5;color:var(--muted)}
+.cap .tx a{color:var(--blue);text-decoration:none;font-weight:700}
+.j-js .cap{opacity:.42;transition:opacity .35s}
+.j-js .cap.on{opacity:1}
+.j-js .cap .tx>span{display:block;max-height:0;overflow:hidden;opacity:0;transition:max-height .45s cubic-bezier(.2,.8,.2,1),opacity .3s}
+.j-js .cap.on .tx>span{max-height:10em;opacity:1}
+.cap.on .n{background:var(--blue);border-color:var(--blue);color:#fff}
+.cap.done .n{border-color:var(--blue);color:var(--blue)}
+.cap button:hover .tx b{color:var(--blue)}
+
+.j-cap-m{display:none}
+.j-view{display:flex;flex-direction:column;align-items:center;gap:10px;min-width:0}
+.j-stage-wrap{--s:.78;position:relative;width:calc(1000px * var(--s));height:calc(760px * var(--s));max-width:100%}
+.j-stage{position:absolute;left:0;top:0;width:1000px;height:760px;transform:scale(var(--s));transform-origin:0 0}
+.j-note{font-size:.82rem;color:var(--muted);text-align:center}
+
+.j-arc{position:absolute;inset:0;width:1000px;height:760px;overflow:visible;pointer-events:none}
+.arc-base{fill:none;stroke:#C9D7EB;stroke-width:2;stroke-dasharray:3 8;stroke-linecap:round}
+.arc-lit{fill:none;stroke:var(--blue);stroke-width:3.5;stroke-linecap:round;stroke-dasharray:0 1000}
+.who{position:absolute;top:722px;width:340px;display:flex;justify-content:center;align-items:center;gap:8px;font:700 17px/1 var(--display);color:var(--ink);letter-spacing:-.01em}
+.who .dot{width:9px;height:9px;border-radius:50%;background:var(--blue)}
+.who-c{left:0}.who-t{left:660px}.who-t .dot{background:var(--go)}
+.flip{position:absolute;inset:0}
+.pk{position:absolute;left:0;top:0;display:inline-flex;align-items:center;gap:8px;padding:8px 15px 8px 8px;background:#fff;border-radius:999px;
+  font:700 15px/1 var(--body);color:var(--ink);white-space:nowrap;box-shadow:0 10px 24px -8px rgba(11,59,128,.35),0 0 0 1px rgba(30,111,217,.12);z-index:30;visibility:hidden}
+.pk i{width:26px;height:26px;border-radius:50%;background:var(--blue);display:grid;place-items:center}
+.pk.g i{background:var(--go)}
+.pk i svg{width:15px;height:15px;fill:none;stroke:#fff;stroke-width:2.4;stroke-linecap:round;stroke-linejoin:round}
+
+/* ---------- the phones ---------- */
+.ph{position:absolute;top:0;width:340px;height:700px;border-radius:56px;background:#1A1E25;padding:11px;
+  box-shadow:inset 0 0 0 1.5px #3B414C,inset 0 0 0 4px #121519,0 50px 80px -40px rgba(8,42,92,.5),0 18px 30px -18px rgba(8,42,92,.35)}
+.ph-c{left:0}.ph-t{left:660px}
+.scr{position:relative;width:100%;height:100%;border-radius:45px;overflow:hidden;background:#F3F5F8;isolation:isolate;
+  font-family:-apple-system,BlinkMacSystemFont,"SF Pro Text","Instrument Sans","Helvetica Neue",Arial,sans-serif;font-size:13px;line-height:1.35;color:#111827;-webkit-font-smoothing:antialiased;text-align:left}
+.scr p{margin:0}
+.scr svg{fill:none;stroke:currentColor;stroke-width:2;stroke-linecap:round;stroke-linejoin:round}
+.sb{position:absolute;top:0;left:0;right:0;height:46px;display:flex;align-items:center;justify-content:space-between;padding:4px 24px 0 34px;z-index:20;color:#fff;font-weight:600;font-size:14.5px;pointer-events:none}
+.isl{position:absolute;left:50%;top:11px;width:98px;height:29px;margin-left:-49px;background:#000;border-radius:20px}
+.sbi svg{width:56px;height:12px;fill:#fff;stroke:none;color:#fff}
+.sbi svg path{fill:none;stroke:#fff}
+.pn{position:absolute;inset:0;display:flex;flex-direction:column;background:#F3F5F8}
+.pn:not([data-pn="new"]):not([data-pn="home"]){visibility:hidden}
+.ah{background:#1E6FD9;color:#fff;padding:54px 16px 15px;display:flex;align-items:center;gap:10px;flex:none}
+.ah>b{flex:1;text-align:center;font-size:17px;font-weight:700;margin-right:36px;letter-spacing:-.01em}
+.bk{width:36px;height:36px;border-radius:50%;background:rgba(255,255,255,.2);display:grid;place-items:center;flex:none}
+.bk svg{width:18px;height:18px;stroke:#fff;stroke-width:2.6}
+.bd{flex:1;padding:14px 14px 0;display:flex;flex-direction:column;gap:10px;overflow:hidden;min-height:0}
+.ft{padding:10px 14px 24px;flex:none}
+.cd{background:#fff;border-radius:16px;padding:12px;box-shadow:0 1px 2px rgba(16,24,40,.05),0 8px 18px -10px rgba(16,24,40,.16)}
+.row{display:flex;align-items:center;gap:10px}
+.grow{flex:1;min-width:0}
+.scr b{font-weight:650}
+.scr small{display:block;color:#6B7280;font-size:11.5px;line-height:1.35}
+.ib{width:38px;height:38px;border-radius:11px;background:#F1F4F9;display:grid;place-items:center;flex:none;color:#6B7280}
+.ib svg{width:18px;height:18px}
+.ib-o{background:#FFF1E7;color:#E8711A;border:1.5px solid #F7C9A6}
+.tg{width:40px;height:24px;border-radius:12px;background:#E5E7EB;position:relative;flex:none}
+.tg::after{content:"";position:absolute;left:2px;top:2px;width:20px;height:20px;border-radius:50%;background:#fff;box-shadow:0 1px 3px rgba(0,0,0,.2)}
+.lbl{font-weight:700;font-size:14.5px;margin-top:2px;display:flex;gap:6px;align-items:center}
+.hint{color:#6B7280;font-size:11.5px;margin-top:-6px}
+.chips{display:flex;flex-wrap:wrap;gap:6px}
+.chip{display:inline-flex;align-items:center;gap:5px;padding:7px 10px;border-radius:11px;background:#fff;border:1.5px solid #E2E8F0;font-size:11.5px;font-weight:600;color:#374151}
+.chip svg{width:14px;height:14px}
+.chip.on{border-color:#1E6FD9;background:#EAF2FF;color:#1E6FD9}
+.fld{background:#fff;border:1.5px solid #E2E8F0;border-radius:12px;padding:10px 12px;font-size:13px;line-height:1.45;color:#111827;transition:border-color .2s,box-shadow .2s}
+.fld-big{min-height:96px}.fld-mid{min-height:66px}
+.fld.focus{border-color:#1E6FD9;box-shadow:0 0 0 3px rgba(30,111,217,.15)}
+.ty.cr::after{content:"";display:inline-block;width:1.5px;height:1.15em;background:#1E6FD9;vertical-align:-3px;margin-left:1px;animation:jblink 1s steps(1) infinite}
+@keyframes jblink{50%{opacity:0}}
+.phs{display:flex;gap:8px;align-items:center}
+.addp{display:inline-flex;gap:6px;align-items:center;height:58px;padding:0 13px;border:1.5px dashed #CBD5E1;border-radius:12px;color:#6B7280;font-weight:600;font-size:12px}
+.addp svg{width:17px;height:17px}
+.pthumb{width:58px;height:58px;border-radius:12px;overflow:hidden;display:block;flex:none;box-shadow:0 0 0 1px rgba(0,0,0,.05)}
+.pthumb.sm{width:44px;height:44px;border-radius:10px}
+.pthumb svg{width:100%;height:100%;display:block;stroke:none}
+.btn{display:flex;align-items:center;justify-content:center;gap:8px;height:50px;border-radius:15px;font-weight:700;font-size:15px;color:#fff;position:relative;letter-spacing:-.005em}
+.btn svg{width:18px;height:18px}
+.b-blue{background:#1E6FD9}.b-green{background:#10A866}.b-dark{background:#0F172A}
+.b-line{background:#fff;border:1.5px solid #D0D7E2;color:#111827}
+.btn.sm{height:38px;font-size:13px;border-radius:11px}
+
+/* AI review */
+.ai{display:flex;flex-direction:column;gap:8px}
+.ait{display:flex;align-items:center;gap:7px;color:#1E6FD9;font-weight:700;font-size:13.5px}
+.ait svg{width:20px;height:20px;padding:3px;border-radius:7px;background:#EAF2FF}
+.skel{display:flex;flex-direction:column;gap:6px;visibility:hidden;height:0}
+.skel i{display:block;height:10px;border-radius:5px;background:linear-gradient(90deg,#EEF2F7,#E2E8F0,#EEF2F7);background-size:200% 100%;animation:jshim 1.2s linear infinite}
+.skel i.s{width:60%}
+@keyframes jshim{to{background-position:-200% 0}}
+.aisum{font-size:12.5px;line-height:1.5;color:#374151}
+.tag{align-self:flex-start;display:inline-block;padding:4px 10px;border-radius:8px;background:#F1F4F9;color:#4B5563;font-size:11.5px;font-weight:600}
+.tiles{display:grid;grid-template-columns:1fr 1fr;gap:8px}
+.tile{display:flex;flex-direction:column;align-items:center;text-align:center;gap:3px;padding:12px 8px}
+.tile .ti{width:34px;height:34px;border-radius:11px;display:grid;place-items:center;margin-bottom:3px;font-weight:700;font-size:16px}
+.tile .ti svg{width:18px;height:18px}
+.ti-b{background:#EAF2FF;color:#1E6FD9}.ti-g{background:#E3F7EC;color:#10A866}
+.tile b{font-size:14.5px}.tile b.sm{font-size:12px}
+.pill-g{background:#DDF7E9;color:#0B8A57;border-radius:8px;padding:2px 10px;font-size:12px!important}
+.tips{display:flex;flex-direction:column;gap:5px}
+.tt{display:flex;gap:6px;align-items:center;font-weight:700;font-size:12.5px}
+.tt svg{width:16px;height:16px;color:#E8A21A}
+.tl{font-size:11.5px;color:#4B5563;padding-left:22px}
+
+/* live job + quotes */
+.livec{display:flex;align-items:center;gap:12px}
+.radar{position:relative;width:44px;height:44px;flex:none}
+.radar i{position:absolute;inset:0;border-radius:50%;border:2px solid #10A866;opacity:0;animation:jradar 2s ease-out infinite}
+.radar i+i{animation-delay:1s}
+.radar b{position:absolute;inset:15px;border-radius:50%;background:#10A866}
+@keyframes jradar{0%{transform:scale(.35);opacity:.9}100%{transform:scale(1.15);opacity:0}}
+.lv{display:flex;align-items:center;gap:6px;color:#0B8A57;font-size:14px}
+.gd{width:7px;height:7px;border-radius:50%;background:#10A866}
+.qn{display:inline-grid;place-items:center;min-width:22px;height:22px;padding:0 6px;border-radius:11px;background:#1E6FD9;color:#fff;font-size:12px}
+.qwrap{overflow:hidden;flex:none;margin:-6px -6px 0;padding:6px 6px 0}
+.q{display:flex;flex-direction:column;gap:8px}
+.qh{display:flex;align-items:center;gap:10px}
+.qh b{display:flex;align-items:center;gap:4px;font-size:14px}
+.vt{width:15px!important;height:15px!important;fill:#1E6FD9!important;stroke:none!important}
+.vt .ck{fill:none;stroke:#fff;stroke-width:2.4}
+.qp{font-weight:800;font-size:19px;letter-spacing:-.02em}
+.q-best{box-shadow:0 0 0 2px #1E6FD9,0 10px 22px -12px rgba(30,111,217,.5)}
+.qnote{font-size:11.5px;color:#4B5563}
+.av{width:38px;height:38px;border-radius:50%;display:grid;place-items:center;font-weight:700;font-size:13px;color:#fff;flex:none}
+.av.lg{width:46px;height:46px;font-size:15px;box-shadow:0 0 0 3px rgba(255,255,255,.35)}
+.av-1{background:linear-gradient(135deg,#2B7BE4,#0E4FA8)}.av-2{background:linear-gradient(135deg,#6B7FA3,#3C4A66)}.av-3{background:linear-gradient(135deg,#8A7B6B,#5A4B3D)}
+
+/* booking */
+.days{display:grid;grid-template-columns:repeat(5,1fr);gap:6px}
+.day{display:flex;flex-direction:column;align-items:center;gap:2px;padding:8px 0;border-radius:12px;background:#fff;border:1.5px solid #E2E8F0}
+.day small{font-size:10.5px}.day b{font-size:16px}
+.day.on{background:#1E6FD9;border-color:#1E6FD9;color:#fff}.day.on small{color:rgba(255,255,255,.8)}
+.slots{display:flex;flex-direction:column;gap:6px}
+.slot{display:flex;justify-content:space-between;align-items:center;padding:10px 12px;border-radius:12px;background:#fff;border:1.5px solid #E2E8F0}
+.slot.on{border-color:#1E6FD9;background:#EAF2FF}.slot.on b{color:#1E6FD9}
+.sumr{display:flex;justify-content:space-between;align-items:center;padding:12px 14px}
+.sumr b{font-size:16px}
+.booked{position:absolute;inset:0;z-index:15;display:flex;flex-direction:column;align-items:center;justify-content:center;gap:10px;background:rgba(243,245,248,.97);visibility:hidden}
+.booked>b{font-size:24px;letter-spacing:-.02em}
+.bigtick{width:78px;height:78px;border-radius:50%;background:#10A866;display:grid;place-items:center;box-shadow:0 14px 30px -12px rgba(16,168,102,.7)}
+.bigtick svg{width:40px;height:40px;stroke:#fff;stroke-width:2.8}
+.bigtick.sm{width:46px;height:46px}.bigtick.sm svg{width:24px;height:24px}
+
+/* job hub */
+.msg{width:36px;height:36px;border-radius:50%;background:#EAF2FF;color:#1E6FD9;display:grid;place-items:center}
+.msg svg{width:17px;height:17px}
+.eta{display:flex;gap:10px;align-items:center;background:#EAF2FF;border-radius:16px;padding:12px;color:#0E3F86}
+.eta b{font-size:13.5px}.eta small{color:#3A5A8C}
+.van{width:38px;height:38px;border-radius:11px;background:#1E6FD9;color:#fff;display:grid;place-items:center;flex:none}
+.van svg{width:20px;height:20px}
+.trk{display:block;height:5px;border-radius:3px;background:#C9DBF5;margin-top:7px;overflow:hidden}
+.trk i{display:block;height:100%;width:100%;background:#1E6FD9;transform-origin:left;transform:scaleX(.15)}
+.prog{list-style:none;margin:0;padding:4px 4px 0;display:flex;flex-direction:column}
+.prog li{display:flex;align-items:center;gap:12px;position:relative;padding:7px 0;color:#9CA3AF}
+.prog li+li::before{content:"";position:absolute;left:8px;top:-9px;height:18px;width:2px;background:#E2E8F0}
+.prog .pd{width:18px;height:18px;border-radius:50%;border:2px solid #D1D5DB;background:#fff;position:relative;z-index:1;flex:none}
+.prog li b{font-size:13px;font-weight:600}
+.prog li.on{color:#111827}
+.prog li.on .pd{border-color:#10A866;background:#10A866;box-shadow:inset 0 0 0 3px #fff}
+.chg{font-size:11.5px;color:#0B8A57;font-weight:600;margin-top:-4px;padding:0 4px}
+.dim{position:absolute;inset:0;background:rgba(15,23,42,.38);z-index:16;visibility:hidden}
+.sheet{position:absolute;left:0;right:0;bottom:0;z-index:17;background:#fff;border-radius:24px 24px 0 0;padding:10px 16px 26px;display:flex;flex-direction:column;gap:10px;visibility:hidden;box-shadow:0 -10px 30px rgba(15,23,42,.15)}
+.grab{align-self:center;width:38px;height:5px;border-radius:3px;background:#D1D5DB}
+.sht{font-weight:700;font-size:17px;letter-spacing:-.01em}
+.shs{font-size:12px;color:#6B7280;margin-top:-6px!important}
+.lines{display:flex;flex-direction:column}
+.li{display:flex;justify-content:space-between;align-items:center;gap:10px;padding:9px 0;border-bottom:1px solid #EEF1F5;font-size:12.5px}
+.li b{font-size:13px;white-space:nowrap}
+.li-tot{border-bottom:0;font-weight:700}
+.li-tot b{font-size:15px}
+.li-tot s{color:#9CA3AF;font-weight:500;font-size:12px;margin-right:4px}
+.quo{font-size:12px;color:#374151;background:#F6F8FB;border-radius:12px;padding:10px 12px;line-height:1.5}
+.btns{display:flex;gap:8px}.btns .btn{flex:1;height:46px}
+.payamt{text-align:center;font-weight:800;font-size:36px;letter-spacing:-.03em;margin:2px 0}
+.method{display:flex;align-items:center;gap:10px;padding:10px 12px;border:1.5px solid #E2E8F0;border-radius:14px}
+.cardic{width:36px;height:24px;border-radius:5px;background:linear-gradient(135deg,#1A2B6B,#2C4CB0);flex:none}
+.chev{width:16px;height:16px;color:#9CA3AF}
+.b-dark .pl,.b-dark .spin,.b-dark .okk{position:absolute;inset:0;display:flex;align-items:center;justify-content:center;gap:8px}
+.b-dark .spin,.b-dark .okk{visibility:hidden}
+.b-dark .spin::before{content:"";width:20px;height:20px;border-radius:50%;border:2.5px solid rgba(255,255,255,.3);border-top-color:#fff;animation:jspin .8s linear infinite}
+@keyframes jspin{to{transform:rotate(360deg)}}
+.b-dark .okk{background:#10A866;border-radius:15px}
+.b-dark .okk svg{stroke-width:2.8}
+.stripe{display:flex;justify-content:center;align-items:center;gap:6px;font-size:11px;color:#6B7280}
+.stripe svg{width:13px;height:13px}
+
+/* paid + rate */
+.paidc{display:flex;align-items:center;gap:12px;background:#E3F7EC;border-radius:16px;padding:12px}
+.paidc b{font-size:16px}
+.rates{display:flex;flex-direction:column;background:#fff;border-radius:16px;padding:4px 14px;box-shadow:0 1px 2px rgba(16,24,40,.05),0 8px 18px -10px rgba(16,24,40,.16)}
+.rt{display:flex;justify-content:space-between;align-items:center;padding:8.5px 0;border-bottom:1px solid #EEF1F5;font-size:12.5px;font-weight:600}
+.rt:last-child{border-bottom:0}
+.st{position:relative;font-style:normal;color:#E5E7EB;letter-spacing:2px;font-size:15px;line-height:1}
+.st::before{content:"★★★★★"}
+.st b{position:absolute;left:0;top:0;overflow:hidden;width:100%;color:#F5A524;white-space:nowrap}
+.st b::before{content:"★★★★★"}
+
+/* tradesperson screens */
+.ah-home{padding:54px 16px 18px;display:block}
+.hrow{display:flex;align-items:center;gap:10px}
+.hrow small{color:rgba(255,255,255,.8)}
+.hrow b{font-size:19px;font-weight:700}
+.vpill{display:inline-flex;align-items:center;gap:4px;padding:5px 10px;border-radius:999px;background:rgba(255,255,255,.18);font-weight:700;font-size:11.5px}
+.vpill svg{width:13px;height:13px;stroke:#fff;stroke-width:3}
+.stats{display:grid;grid-template-columns:repeat(4,1fr);text-align:center;padding:12px 4px}
+.stats div+div{border-left:1px solid #EEF1F5}
+.stats b{font-size:18px;display:block}
+.empty{display:flex;gap:10px;align-items:center;color:#6B7280;font-size:12px}
+.empty svg{width:20px;height:20px;flex:none}
+.map{position:relative;height:112px;border-radius:16px;overflow:hidden;flex:none}
+.map>svg{width:100%;height:100%;display:block;stroke:none}
+.map svg path{fill:none}
+.mpin{position:absolute;left:50%;top:50%;width:30px;height:30px;margin:-26px 0 0 -15px;color:#1E6FD9}
+.mpin svg{width:100%;height:100%;fill:#1E6FD9;stroke:#fff;stroke-width:1.2}
+.mtag{position:absolute;left:8px;bottom:8px;background:#fff;border-radius:8px;padding:4px 8px;font-size:11px;font-weight:700}
+.jh{display:flex;justify-content:space-between;align-items:center;gap:8px}
+.jh>b{font-size:15px;white-space:nowrap}
+.jd{font-size:12px;line-height:1.5;color:#374151;margin:8px 0!important}
+.jrow{display:flex;gap:12px;align-items:center;border-top:1px solid #EEF1F5;padding-top:10px}
+.jrow b{font-size:13px}
+.fld-price{display:flex;align-items:baseline;gap:4px;font-size:28px;font-weight:750;letter-spacing:-.02em;padding:10px 14px;min-height:58px}
+.fld-price .cur{color:#9CA3AF;font-weight:600}
+.feeln{display:flex;justify-content:space-between;font-size:11.5px;color:#6B7280;margin-top:-4px;padding:0 2px}
+.feeln b{color:#0B8A57}
+.chip.on{border-color:#1E6FD9}
+.toast{position:absolute;left:14px;right:14px;bottom:90px;z-index:18;display:flex;align-items:center;gap:8px;padding:12px 14px;border-radius:14px;background:#0F172A;color:#fff;font-weight:600;font-size:13px;visibility:hidden;box-shadow:0 12px 24px -10px rgba(0,0,0,.4)}
+.toast svg{width:18px;height:18px;padding:2px;border-radius:50%;background:#10A866;stroke:#fff;stroke-width:3}
+.tact{position:relative;display:flex;flex-direction:column;gap:2px;padding-bottom:68px}
+.st-pills{position:relative;display:block;width:140px;height:24px;flex:none}
+.sp{position:absolute;right:0;top:0;padding:4px 10px;border-radius:999px;font-size:11.5px;font-weight:700;white-space:nowrap;background:#F1F4F9;color:#4B5563;visibility:hidden}
+.sp-q{visibility:visible}
+.sp-b,.sp-a{background:#E3F7EC;color:#0B8A57}
+.sp-w,.sp-s{background:#EAF2FF;color:#1E6FD9}
+.sp-r{background:#FFF4E0;color:#B26A00}
+.sp-i{background:#0F172A;color:#fff}
+.kv{display:flex;justify-content:space-between;align-items:center;padding:8px 0;border-bottom:1px solid #EEF1F5;font-size:12.5px}
+.kv span{color:#6B7280}
+.kv b{font-size:13px}
+.wv{position:relative;display:block;width:170px;height:18px;text-align:right}
+.wv span{position:absolute;right:0;top:0;color:#111827!important;white-space:nowrap}
+.wv .w1{visibility:hidden}
+.acts{position:absolute;left:12px;right:12px;bottom:12px;display:flex;gap:8px}
+.acts .btn{flex:1;height:46px;font-size:13.5px;white-space:nowrap;padding:0 8px}
+.a-site{visibility:hidden}
+.mini{display:flex;align-items:center;gap:10px;font-size:12px;color:#4B5563}
+.mini svg{width:18px;height:18px;color:#9CA3AF;flex:none}
+.li-add{overflow:hidden}
+.addi{color:#1E6FD9;font-weight:700;font-size:12.5px;padding:9px 0;border-bottom:1px solid #EEF1F5}
+.earn{display:flex;flex-direction:column;gap:2px;align-items:flex-start;background:linear-gradient(140deg,#0FA36B,#0B8A57);color:#fff;padding:16px}
+.earn small{color:rgba(255,255,255,.85)}
+.earn b{font-size:36px;font-weight:800;letter-spacing:-.03em;line-height:1.1}
+.earn span{font-size:11.5px;color:rgba(255,255,255,.85)}
+.review{display:flex;flex-direction:column;gap:4px}
+.rh{display:flex;justify-content:space-between;align-items:center}
+.stars{color:#F5A524;letter-spacing:1px;font-size:15px}
+.push{position:absolute;top:10px;left:9px;right:9px;z-index:25;display:flex;gap:10px;align-items:center;padding:11px 12px;border-radius:22px;
+  background:rgba(246,248,251,.94);backdrop-filter:blur(14px);-webkit-backdrop-filter:blur(14px);box-shadow:0 12px 30px -10px rgba(0,0,0,.35);visibility:hidden}
+.push .pic{width:38px;height:38px;border-radius:10px;background:#1E6FD9;display:grid;place-items:center;flex:none}
+.push .pic img{width:20px;height:auto}
+.push .pa{display:flex;justify-content:space-between;font-size:10.5px;color:#6B7280;letter-spacing:.04em}
+.push .pa b{font-weight:600}
+.push .grow>b{font-size:13.5px;display:block}
+.tapdot{position:absolute;left:0;top:0;width:40px;height:40px;margin:-20px 0 0 -20px;border-radius:50%;background:rgba(17,24,39,.18);border:2px solid rgba(255,255,255,.85);box-shadow:0 2px 10px rgba(0,0,0,.25);z-index:40;pointer-events:none;visibility:hidden}
+
+/* ---------- phone-width version: one handset that turns round ---------- */
+@media (max-width: 980px){
+  .j-pin{min-height:100svh;padding-block:68px 14px}
+  .j-grid{grid-template-columns:1fr;gap:10px;align-content:center}
+  .j-rail{display:none}
+  .j-cap-m{display:grid;grid-template-columns:30px minmax(0,1fr);gap:12px;align-items:start;min-height:112px;max-width:520px;margin:0 auto;width:100%}
+  .j-cap-m .n{width:30px;height:30px;border-radius:50%;display:grid;place-items:center;background:var(--blue);color:#fff;font:800 .95rem/1 var(--display)}
+  .j-cap-m b{display:block;font:700 1.2rem/1.25 var(--display);letter-spacing:-.01em}
+  .j-cap-m span{display:block;font-size:.95rem;line-height:1.5;color:var(--muted);margin-top:3px}
+  .j-cap-m a{color:var(--blue);text-decoration:none;font-weight:700}
+  .j-stage-wrap{width:calc(340px * var(--s));height:calc(760px * var(--s))}
+  .j-stage{width:340px}
+  .j-arc,.pk{display:none}
+  .who{top:0;left:0!important;width:340px;font-size:16px}
+  .who-t{visibility:hidden}
+  .j-stage{perspective:1700px}
+  .flip{top:44px;left:0;width:340px;height:700px;transform-style:preserve-3d}
+  .ph{left:0!important;-webkit-backface-visibility:hidden;backface-visibility:hidden}
+  .ph-t{transform:rotateY(180deg)}
+  .j-note{font-size:.76rem}
+}
+
+.top{transition:transform .5s cubic-bezier(.2,.8,.2,1),box-shadow .2s}.top.away{transform:translateY(-100%)}
 </style>
 </head>
 <body>
@@ -341,21 +646,338 @@ p{margin:0;text-wrap:pretty}
   </div>
 </section>
 
-<!-- HOW IT WORKS -->
-<section class="section band" id="how" aria-labelledby="how-title">
-  <div class="wrap">
-    <div class="how-head">
-      <h2 id="how-title">How Jobbi works</h2>
-      <p class="lead">Describe your job, receive quotes from verified local tradespeople, choose who to hire, and pay securely through the app once the job is done.</p>
+<!-- HOW IT WORKS: two phones, one job -->
+<section class="how" id="how" aria-labelledby="how-title">
+  <div class="band"><div class="wrap how-head">
+    <h2 id="how-title">How Jobbi works</h2>
+    <p class="lead">Describe your job, receive quotes from verified local tradespeople, choose who to hire, and pay securely through the app once the job is done.</p>
+  </div></div>
+
+  <div class="journey" id="journey">
+    <div class="j-pin band">
+      <div class="wrap j-grid">
+
+        <div class="j-rail">
+          <ol class="j-caps" aria-label="The steps of a job on Jobbi">
+            <li class="cap on" data-cap="0"><button type="button"><span class="n">1</span><span class="tx"><b>Describe your job</b><span>Tell us what needs doing, in your own words. Add a photo if it helps.</span></span></button></li>
+            <li class="cap" data-cap="1"><button type="button"><span class="n">2</span><span class="tx"><b>Get a guide price</b><span>Jobbi summarises the work and uses market insight data to provide a typical guide price<a href="#note-1" aria-label="See note on estimates">*</a></span></span></button></li>
+            <li class="cap" data-cap="2"><button type="button"><span class="n">3</span><span class="tx"><b>Compare estimates</b><span>Verified tradespeople in your area send quotes. Review their profile, credentials and ratings before booking.</span></span></button></li>
+            <li class="cap" data-cap="3"><button type="button"><span class="n">4</span><span class="tx"><b>Book a time</b><span>Accept a quote, pick a day, and see when they're on their way.</span></span></button></li>
+            <li class="cap" data-cap="4"><button type="button"><span class="n">5</span><span class="tx"><b>Agree any changes</b><span>If the job turns out bigger once they've had a look, they send a revised quote. You approve it before they carry on.</span></span></button></li>
+            <li class="cap" data-cap="5"><button type="button"><span class="n">6</span><span class="tx"><b>Pay securely</b><span>Pay your tradesperson directly through the app when the job is done. They're paid instantly, and you rate the job.</span></span></button></li>
+          </ol>
+          <div class="j-bar" aria-hidden="true"><i></i></div>
+        </div>
+
+        <div class="j-cap-m" aria-live="polite"><span class="n">1</span><div><b class="mh">Describe your job</b><span class="mp">Tell us what needs doing, in your own words. Add a photo if it helps.</span></div></div>
+
+        <div class="j-view">
+          <div class="j-stage-wrap">
+            <div class="j-stage" role="img" aria-label="Animation: a customer posts a leaking overflow pipe on Jobbi, gets a guide price, compares quotes, books Dan, approves a revised quote after his visit, and pays through the app.">
+
+              <svg class="j-arc" viewBox="0 0 1000 760" aria-hidden="true">
+                <path class="arc-base" d="M352 300 Q500 110 648 300"/>
+                <path class="arc-lit" d="M352 300 Q500 110 648 300"/>
+              </svg>
+
+              <div class="who who-c"><span class="dot"></span>Customer</div>
+              <div class="who who-t"><span class="dot"></span>Tradesperson</div>
+
+              <div class="flip">
+<!-- ======================= CUSTOMER PHONE ======================= -->
+<div class="ph ph-c">
+  <div class="scr">
+    <div class="sb"><span class="tm">15:47</span><i class="isl"></i><span class="sbi"><svg viewBox="0 0 54 12"><rect x="0" y="7" width="3" height="5" rx="1"/><rect x="5" y="5" width="3" height="7" rx="1"/><rect x="10" y="3" width="3" height="9" rx="1"/><rect x="15" y="1" width="3" height="11" rx="1" opacity=".35"/><path d="M29 4.2a7.5 7.5 0 0 1 9 0M30.8 6.6a4.5 4.5 0 0 1 5.4 0M32.6 9a1.6 1.6 0 0 1 1.8 0" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round"/><rect x="42" y="1.5" width="10.5" height="9" rx="2.4" fill="none" stroke="currentColor" stroke-width="1.1" opacity=".5"/><rect x="43.5" y="3" width="6.5" height="6" rx="1.2"/></svg></span></div>
+
+    <!-- C1: new job -->
+    <section class="pn" data-pn="new">
+      <header class="ah"><span class="bk"><svg viewBox="0 0 24 24"><path d="m15 5-7 7 7 7"/></svg></span><b>New Job Request</b></header>
+      <div class="bd">
+        <div class="cd row"><span class="ib"><svg viewBox="0 0 24 24"><path d="M5 4h4l2 5-2.5 1.5a11 11 0 0 0 5 5L15 13l5 2v4a1 1 0 0 1-1 1A16 16 0 0 1 4 5a1 1 0 0 1 1-1"/></svg></span><div class="grow"><b>Is this an emergency?</b><small>Toggle on for urgent callouts</small></div><span class="tg"></span></div>
+        <p class="lbl">What type of work?</p>
+        <div class="chips">
+          <span class="chip" data-k="plumb"><svg viewBox="0 0 24 24"><path d="M12 3c3.3 4 6 7.2 6 10.4a6 6 0 0 1-12 0C6 10.2 8.7 7 12 3Z"/></svg>Plumbing &amp; Heating</span>
+          <span class="chip"><svg viewBox="0 0 24 24"><path d="M13.5 2 5 14h6l-1 8 9-12h-6l.5-8Z"/></svg>Electrical</span>
+          <span class="chip"><svg viewBox="0 0 24 24"><path d="m4 20 5-1L20 8l-4-4L5 15l-1 5Z"/></svg>Carpentry &amp; Joinery</span>
+          <span class="chip"><svg viewBox="0 0 24 24"><path d="M3 20h18M5 20V10l7-5 7 5v10"/></svg>Building</span>
+          <span class="chip"><svg viewBox="0 0 24 24"><path d="M14.5 6.5a4 4 0 0 0-5 5L4 17l3 3 5.5-5.5a4 4 0 0 0 5-5L15 12l-3-3 2.5-2.5Z"/></svg>General/Other</span>
+        </div>
+        <p class="lbl">Describe the job</p>
+        <p class="hint">Be as detailed as possible: what needs doing, where, and any issues you've noticed.</p>
+        <div class="fld fld-big"><span class="ty" data-ty="desc">Water keeps dripping from the overflow pipe on the side of the house. I think it's coming from the tank in the loft.</span></div>
+        <div class="phs"><span class="addp"><svg viewBox="0 0 24 24"><path d="M4 8h3l2-3h6l2 3h3v11H4z"/><circle cx="12" cy="13" r="3.5"/></svg>Add photos</span><span class="pthumb"><svg viewBox="0 0 60 60"><rect width="60" height="60" fill="#E7DCCB"/><rect y="40" width="60" height="20" fill="#C9B79C"/><path d="M8 0v60M22 0v60M36 0v60M50 0v60" stroke="#D9CBB3" stroke-width="1"/><path d="M14 18h28" stroke="#F4F4F2" stroke-width="5" stroke-linecap="round"/><path d="M41 18v6" stroke="#F4F4F2" stroke-width="5" stroke-linecap="round"/><path d="M41 28c0 3-2 5-2 7a2 2 0 0 0 4 0c0-2-2-4-2-7Z" fill="#7FB2E8"/><path d="M41 46c0 2-1.6 3.4-1.6 4.8a1.6 1.6 0 0 0 3.2 0c0-1.4-1.6-2.8-1.6-4.8Z" fill="#7FB2E8"/></svg></span></div>
+      </div>
+      <div class="ft"><span class="btn b-blue" data-b="estimate">Get my estimate</span></div>
+    </section>
+
+    <!-- C2: AI review -->
+    <section class="pn" data-pn="ai">
+      <header class="ah"><span class="bk"><svg viewBox="0 0 24 24"><path d="m15 5-7 7 7 7"/></svg></span><b>AI Review</b></header>
+      <div class="bd">
+        <div class="cd ai">
+          <p class="ait"><svg viewBox="0 0 24 24"><path d="M12 3v4M12 17v4M3 12h4M17 12h4M6 6l2.5 2.5M15.5 15.5 18 18M18 6l-2.5 2.5M8.5 15.5 6 18"/></svg>AI Summary</p>
+          <div class="skel"><i></i><i></i><i class="s"></i></div>
+          <p class="aisum" data-ty="sum">Investigating and repairing a leaking overflow pipe from the loft tank, usually caused by a faulty float valve.</p>
+          <span class="tag">Overflow repair</span>
+        </div>
+        <div class="tiles">
+          <div class="cd tile"><span class="ti ti-b"><svg viewBox="0 0 24 24"><circle cx="12" cy="12" r="8.5"/><path d="M12 7.5V12l3 2"/></svg></span><small>Duration</small><b>1–2 hours</b></div>
+          <div class="cd tile"><span class="ti ti-g">£</span><small>Fair Price</small><b>£70–£150*</b></div>
+          <div class="cd tile"><span class="ti ti-b"><svg viewBox="0 0 24 24"><path d="M12 3c3.3 4 6 7.2 6 10.4a6 6 0 0 1-12 0C6 10.2 8.7 7 12 3Z"/></svg></span><small>Trade</small><b class="sm">Plumbing &amp; Heating</b></div>
+          <div class="cd tile"><span class="ti ti-b"><svg viewBox="0 0 24 24"><path d="M5 19V13M10 19V9M15 19V11M20 19V5"/></svg></span><small>Complexity</small><b class="pill-g">Simple</b></div>
+        </div>
+        <div class="cd tips"><p class="tt"><svg viewBox="0 0 24 24"><path d="M9 18h6M10 21h4M12 3a6 6 0 0 0-3.5 10.9c.6.5 1 1.2 1 2V17h5v-1.1c0-.8.4-1.5 1-2A6 6 0 0 0 12 3Z"/></svg>Tips before the tradesperson arrives</p><p class="tl">Clear access to the loft hatch so they can get in easily and safely.</p></div>
+      </div>
+      <div class="ft"><span class="btn b-green" data-b="post">Post job</span></div>
+    </section>
+
+    <!-- C3: live job, quotes arrive -->
+    <section class="pn" data-pn="live">
+      <header class="ah"><span class="bk"><svg viewBox="0 0 24 24"><path d="m15 5-7 7 7 7"/></svg></span><b>Overflow repair</b></header>
+      <div class="bd">
+        <div class="cd livec">
+          <span class="radar"><i></i><i></i><b></b></span>
+          <div><b class="lv"><span class="gd"></span>Live</b><small>Verified tradespeople near you have been notified</small></div>
+        </div>
+        <p class="lbl">Quotes <span class="qn">0</span></p>
+        <div class="qwrap" data-q="dan">
+          <div class="cd q q-best">
+            <div class="qh"><span class="av av-1">DH</span><div class="grow"><b>Dan H. <svg class="vt" viewBox="0 0 24 24"><path d="M12 2.5 14.6 5l3.5-.4.6 3.5 3 1.9-1.4 3.2 1.4 3.2-3 1.9-.6 3.5-3.5-.4L12 23.5 9.4 21l-3.5.4-.6-3.5-3-1.9 1.4-3.2-1.4-3.2 3-1.9.6-3.5L9.4 5Z"/><path class="ck" d="m8.5 12.5 2.5 2.5 4.5-5"/></svg></b><small>★ 4.9 · 31 reviews · 1.2 mi</small></div><span class="qp">£95</span></div>
+            <p class="qnote">Replace the float valve in the loft tank. Parts included.</p>
+            <span class="btn b-blue sm" data-b="accept">Accept quote</span>
+          </div>
+        </div>
+        <div class="qwrap" data-q="mark">
+          <div class="cd q"><div class="qh"><span class="av av-2">ME</span><div class="grow"><b>Mark E. <svg class="vt" viewBox="0 0 24 24"><path d="M12 2.5 14.6 5l3.5-.4.6 3.5 3 1.9-1.4 3.2 1.4 3.2-3 1.9-.6 3.5-3.5-.4L12 23.5 9.4 21l-3.5.4-.6-3.5-3-1.9 1.4-3.2-1.4-3.2 3-1.9.6-3.5L9.4 5Z"/><path class="ck" d="m8.5 12.5 2.5 2.5 4.5-5"/></svg></b><small>★ 4.8 · 54 reviews · 2.6 mi</small></div><span class="qp">£110</span></div></div>
+        </div>
+        <div class="qwrap" data-q="tom">
+          <div class="cd q"><div class="qh"><span class="av av-3">TR</span><div class="grow"><b>Tom R. <svg class="vt" viewBox="0 0 24 24"><path d="M12 2.5 14.6 5l3.5-.4.6 3.5 3 1.9-1.4 3.2 1.4 3.2-3 1.9-.6 3.5-3.5-.4L12 23.5 9.4 21l-3.5.4-.6-3.5-3-1.9 1.4-3.2-1.4-3.2 3-1.9.6-3.5L9.4 5Z"/><path class="ck" d="m8.5 12.5 2.5 2.5 4.5-5"/></svg></b><small>★ 4.7 · 19 reviews · 3.1 mi</small></div><span class="qp">£130</span></div></div>
+        </div>
+      </div>
+    </section>
+
+    <!-- C4: booking -->
+    <section class="pn" data-pn="book">
+      <header class="ah"><span class="bk"><svg viewBox="0 0 24 24"><path d="m15 5-7 7 7 7"/></svg></span><b>Book Dan H.</b></header>
+      <div class="bd">
+        <div class="cd row"><span class="av av-1">DH</span><div class="grow"><b>Dan H. <svg class="vt" viewBox="0 0 24 24"><path d="M12 2.5 14.6 5l3.5-.4.6 3.5 3 1.9-1.4 3.2 1.4 3.2-3 1.9-.6 3.5-3.5-.4L12 23.5 9.4 21l-3.5.4-.6-3.5-3-1.9 1.4-3.2-1.4-3.2 3-1.9.6-3.5L9.4 5Z"/><path class="ck" d="m8.5 12.5 2.5 2.5 4.5-5"/></svg></b><small>Overflow repair · £95.00</small></div></div>
+        <p class="lbl">Choose a day</p>
+        <div class="days">
+          <span class="day"><small>Wed</small><b>21</b></span>
+          <span class="day" data-k="thu"><small>Thu</small><b>22</b></span>
+          <span class="day"><small>Fri</small><b>23</b></span>
+          <span class="day"><small>Sat</small><b>24</b></span>
+          <span class="day"><small>Mon</small><b>26</b></span>
+        </div>
+        <p class="lbl">Time</p>
+        <div class="slots">
+          <span class="slot" data-k="am"><b>Morning</b><small>8am–12pm</small></span>
+          <span class="slot"><b>Afternoon</b><small>12pm–5pm</small></span>
+          <span class="slot"><b>Evening</b><small>5pm–8pm</small></span>
+        </div>
+        <div class="cd sumr"><span>Quote</span><b>£95.00</b></div>
+      </div>
+      <div class="ft"><span class="btn b-blue" data-b="confirm">Confirm booking</span></div>
+      <div class="booked">
+        <span class="bigtick"><svg viewBox="0 0 24 24"><path d="m6 12.5 4 4 8-9"/></svg></span>
+        <b>Booked</b>
+        <small>Dan H. · Thu 22 Oct, morning</small>
+      </div>
+    </section>
+
+    <!-- C5: job hub -->
+    <section class="pn" data-pn="job">
+      <header class="ah"><span class="bk"><svg viewBox="0 0 24 24"><path d="m15 5-7 7 7 7"/></svg></span><b>Overflow repair</b></header>
+      <div class="bd">
+        <div class="cd row"><span class="av av-1">DH</span><div class="grow"><b>Dan H. <svg class="vt" viewBox="0 0 24 24"><path d="M12 2.5 14.6 5l3.5-.4.6 3.5 3 1.9-1.4 3.2 1.4 3.2-3 1.9-.6 3.5-3.5-.4L12 23.5 9.4 21l-3.5.4-.6-3.5-3-1.9 1.4-3.2-1.4-3.2 3-1.9.6-3.5L9.4 5Z"/><path class="ck" d="m8.5 12.5 2.5 2.5 4.5-5"/></svg></b><small>Thu 22 Oct, morning</small></div><span class="msg"><svg viewBox="0 0 24 24"><path d="M5 5h14v10H9l-4 4z"/></svg></span></div>
+        <div class="eta"><span class="van"><svg viewBox="0 0 24 24"><path d="M3 7h11v9H3zM14 10h4l3 3v3h-7"/><circle cx="7" cy="17.5" r="1.8"/><circle cx="17" cy="17.5" r="1.8"/></svg></span><div class="grow"><b>Dan is on his way</b><small>Arriving in about 12 min</small><span class="trk"><i></i></span></div></div>
+        <ol class="prog">
+          <li data-s="booked" class="on"><span class="pd"></span><b>Booked</b></li>
+          <li data-s="way"><span class="pd"></span><b>On the way</b></li>
+          <li data-s="site"><span class="pd"></span><b>On site</b></li>
+          <li data-s="done"><span class="pd"></span><b>Job complete</b></li>
+        </ol>
+        <div class="cd sumr"><span>Agreed price</span><b class="agreed">£95.00</b></div>
+        <p class="chg">Updated after Dan's visit. You approved the change.</p>
+      </div>
+      <div class="ft"><span class="btn b-green" data-b="pay">Review and pay £120.00</span></div>
+
+      <div class="dim"></div>
+      <div class="sheet sh-rev">
+        <span class="grab"></span>
+        <p class="sht">Revised quote</p>
+        <p class="shs">Dan H. has updated the quote after his visit.</p>
+        <div class="lines">
+          <div class="li"><span>Float valve replacement</span><b>£95.00</b></div>
+          <div class="li li-new"><span>Replace ballcock arm</span><b>£25.00</b></div>
+          <div class="li li-tot"><span>New total</span><b><s>£95.00</s> £120.00</b></div>
+        </div>
+        <p class="quo">“The ballcock arm is corroded too, so it's worth replacing both while I'm here.”</p>
+        <div class="btns"><span class="btn b-line">Decline</span><span class="btn b-green" data-b="approve">Approve</span></div>
+      </div>
+      <div class="sheet sh-pay">
+        <span class="grab"></span>
+        <p class="sht">Pay Dan H.</p>
+        <div class="payamt">£120.00</div>
+        <div class="lines">
+          <div class="li"><span>Overflow repair</span><b>£120.00</b></div>
+          <div class="li"><span>Call out fee</span><b>£0.00</b></div>
+        </div>
+        <div class="method"><span class="cardic"></span><div class="grow"><b>Visa •••• 4417</b><small>Card or Apple Pay</small></div><svg class="chev" viewBox="0 0 24 24"><path d="m9 6 6 6-6 6"/></svg></div>
+        <span class="btn b-dark" data-b="paynow"><span class="pl">Pay £120.00</span><span class="spin"></span><span class="okk"><svg viewBox="0 0 24 24"><path d="m6 12.5 4 4 8-9"/></svg>Paid</span></span>
+        <p class="stripe"><svg viewBox="0 0 24 24"><rect x="5" y="11" width="14" height="10" rx="2"/><path d="M8 11V8a4 4 0 0 1 8 0v3"/></svg>Payment processed securely by Stripe</p>
+      </div>
+    </section>
+
+    <!-- C6: paid + rate -->
+    <section class="pn" data-pn="paid">
+      <header class="ah"><span class="bk"><svg viewBox="0 0 24 24"><path d="m15 5-7 7 7 7"/></svg></span><b>Rate your job</b></header>
+      <div class="bd">
+        <div class="paidc"><span class="bigtick sm"><svg viewBox="0 0 24 24"><path d="m6 12.5 4 4 8-9"/></svg></span><div><b>£120.00 paid</b><small>to Dan H. · Overflow repair</small></div></div>
+        <p class="lbl">How did Dan do?</p>
+        <div class="rates">
+          <div class="rt"><span>Quality</span><i class="st"><b></b></i></div>
+          <div class="rt"><span>Punctuality</span><i class="st"><b></b></i></div>
+          <div class="rt"><span>Cleanliness</span><i class="st"><b></b></i></div>
+          <div class="rt"><span>Professionalism</span><i class="st"><b></b></i></div>
+          <div class="rt"><span>Communication</span><i class="st"><b></b></i></div>
+          <div class="rt"><span>Value</span><i class="st"><b></b></i></div>
+        </div>
+      </div>
+      <div class="ft"><span class="btn b-blue" data-b="submit">Submit review</span></div>
+    </section>
+
+    <span class="tapdot"></span>
+  </div>
+</div>
+
+<!-- ======================= TRADESPERSON PHONE ======================= -->
+<div class="ph ph-t">
+  <div class="scr">
+    <div class="sb"><span class="tm">15:47</span><i class="isl"></i><span class="sbi"><svg viewBox="0 0 54 12"><rect x="0" y="7" width="3" height="5" rx="1"/><rect x="5" y="5" width="3" height="7" rx="1"/><rect x="10" y="3" width="3" height="9" rx="1"/><rect x="15" y="1" width="3" height="11" rx="1" opacity=".35"/><path d="M29 4.2a7.5 7.5 0 0 1 9 0M30.8 6.6a4.5 4.5 0 0 1 5.4 0M32.6 9a1.6 1.6 0 0 1 1.8 0" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round"/><rect x="42" y="1.5" width="10.5" height="9" rx="2.4" fill="none" stroke="currentColor" stroke-width="1.1" opacity=".5"/><rect x="43.5" y="3" width="6.5" height="6" rx="1.2"/></svg></span></div>
+
+    <!-- T1: dashboard -->
+    <section class="pn" data-pn="home">
+      <header class="ah ah-home">
+        <div class="hrow"><span class="av av-1 lg">DH</span><div class="grow"><small>Welcome back,</small><b>Dan</b></div><span class="vpill"><svg viewBox="0 0 24 24"><path d="m6 12.5 4 4 8-9"/></svg>Verified</span></div>
+      </header>
+      <div class="bd">
+        <div class="cd stats">
+          <div><b>1</b><small>Active</small></div><div><b>2</b><small>Quotes</small></div><div><b>15</b><small>Done</small></div><div><b>4.8</b><small>Rating</small></div>
+        </div>
+        <div class="cd row oncall"><span class="ib ib-o"><svg viewBox="0 0 24 24"><path d="M5 4h4l2 5-2.5 1.5a11 11 0 0 0 5 5L15 13l5 2v4a1 1 0 0 1-1 1A16 16 0 0 1 4 5a1 1 0 0 1 1-1"/></svg></span><div class="grow"><b>On Call: Off</b><small>Tap to go on call for emergencies</small></div><span class="tg"></span></div>
+        <p class="lbl">New jobs near you</p>
+        <div class="cd empty"><svg viewBox="0 0 24 24"><circle cx="11" cy="11" r="6.5"/><path d="m16 16 4 4"/></svg><span>No new jobs right now. We'll let you know.</span></div>
+        <p class="lbl">Coming up</p>
+        <div class="cd row"><span class="ib"><svg viewBox="0 0 24 24"><rect x="4" y="5" width="16" height="15" rx="2"/><path d="M4 10h16M9 3v4M15 3v4"/></svg></span><div class="grow"><b>Boiler service</b><small>Sat 24 Oct · 8am–12pm</small></div><span class="tag">Booked</span></div>
+        <div class="cd row"><span class="ib"><svg viewBox="0 0 24 24"><path d="M16 7.5A4 4 0 0 0 9 10v8M7 13h7M7 18h10"/></svg></span><div class="grow"><b>This week</b><small>3 jobs paid to your bank</small></div></div>
+      </div>
+    </section>
+
+    <!-- T2: job detail -->
+    <section class="pn" data-pn="tjob">
+      <header class="ah"><span class="bk"><svg viewBox="0 0 24 24"><path d="m15 5-7 7 7 7"/></svg></span><b>New job</b></header>
+      <div class="bd">
+        <div class="map"><svg viewBox="0 0 300 110" preserveAspectRatio="xMidYMid slice"><rect width="300" height="110" fill="#E8EFE4"/><path d="M0 70 C60 60 90 85 150 72 S250 40 300 52" stroke="#fff" stroke-width="9" fill="none"/><path d="M110 0 C120 40 105 70 125 110" stroke="#fff" stroke-width="6" fill="none"/><path d="M200 0 L215 110" stroke="#C9D7EC" stroke-width="5" fill="none"/><path d="M30 0v110M0 30h300" stroke="#fff" stroke-width="3" opacity=".7"/><rect x="40" y="38" width="40" height="18" rx="3" fill="#D6E3CF"/><rect x="230" y="70" width="44" height="26" rx="3" fill="#D6E3CF"/></svg><span class="mpin"><svg viewBox="0 0 24 24"><path d="M12 22s7-6.4 7-12a7 7 0 0 0-14 0c0 5.6 7 12 7 12Z"/><circle cx="12" cy="10" r="2.6" fill="#fff" stroke="none"/></svg></span><span class="mtag">1.2 mi · Chandler's Ford</span></div>
+        <div class="cd">
+          <div class="jh"><b>Overflow repair</b><span class="tag">Plumbing &amp; Heating</span></div>
+          <p class="jd">Water keeps dripping from the overflow pipe on the side of the house. I think it's coming from the tank in the loft.</p>
+          <div class="jrow"><span class="pthumb sm"><svg viewBox="0 0 60 60"><rect width="60" height="60" fill="#E7DCCB"/><rect y="40" width="60" height="20" fill="#C9B79C"/><path d="M14 18h28" stroke="#F4F4F2" stroke-width="5" stroke-linecap="round"/><path d="M41 18v6" stroke="#F4F4F2" stroke-width="5" stroke-linecap="round"/><path d="M41 28c0 3-2 5-2 7a2 2 0 0 0 4 0c0-2-2-4-2-7Z" fill="#7FB2E8"/></svg></span><div class="grow"><small>Guide price</small><b>£70–£150</b></div><div class="grow"><small>Posted</small><b>2 min ago</b></div></div>
+        </div>
+      </div>
+      <div class="ft"><span class="btn b-blue" data-b="toquote">Send a quote</span></div>
+    </section>
+
+    <!-- T3: quote composer -->
+    <section class="pn" data-pn="tquote">
+      <header class="ah"><span class="bk"><svg viewBox="0 0 24 24"><path d="m15 5-7 7 7 7"/></svg></span><b>Send a quote</b></header>
+      <div class="bd">
+        <p class="lbl">Your price</p>
+        <div class="fld fld-price"><span class="cur">£</span><span class="ty" data-ty="price">95.00</span></div>
+        <div class="feeln"><span>Jobbi fee 5%</span><span>You'll receive <b class="recv">£90.25</b></span></div>
+        <p class="lbl">What's included</p>
+        <div class="fld fld-mid"><span class="ty" data-ty="note">Replace the float valve in the loft tank. Parts included.</span></div>
+        <p class="lbl">Earliest availability</p>
+        <div class="chips"><span class="chip on">This week</span><span class="chip">Next week</span></div>
+      </div>
+      <div class="ft"><span class="btn b-blue" data-b="sendq">Send quote</span></div>
+      <div class="toast t-sent"><svg viewBox="0 0 24 24"><path d="m6 12.5 4 4 8-9"/></svg>Quote sent to Sam</div>
+    </section>
+
+    <!-- T4: active job -->
+    <section class="pn" data-pn="tact">
+      <header class="ah"><span class="bk"><svg viewBox="0 0 24 24"><path d="m15 5-7 7 7 7"/></svg></span><b>My Jobs</b></header>
+      <div class="bd">
+        <div class="cd tact">
+          <div class="jh"><b>Overflow repair</b><span class="st-pills">
+            <span class="sp sp-q">Quote sent · £95</span>
+            <span class="sp sp-b">Booked</span>
+            <span class="sp sp-w">On the way</span>
+            <span class="sp sp-s">On site</span>
+            <span class="sp sp-r">Awaiting approval</span>
+            <span class="sp sp-a">Approved · £120</span>
+            <span class="sp sp-i">Invoice sent · £120</span>
+          </span></div>
+          <div class="kv"><span>Customer</span><b>Sam · SO53</b></div>
+          <div class="kv when"><span>When</span><b class="wv"><span class="w0">Waiting for Sam</span><span class="w1">Thu 22 Oct, 8am–12pm</span></b></div>
+          <div class="kv"><span>Price</span><b class="tprice">£95.00</b></div>
+          <div class="acts a-way"><span class="btn b-blue" data-b="onway"><svg viewBox="0 0 24 24"><path d="M3 7h11v9H3zM14 10h4l3 3v3h-7"/><circle cx="7" cy="17.5" r="1.8"/><circle cx="17" cy="17.5" r="1.8"/></svg>I'm on my way</span></div>
+          <div class="acts a-site"><span class="btn b-line" data-b="adjust">Adjust quote</span><span class="btn b-green" data-b="complete">Mark complete</span></div>
+        </div>
+        <div class="cd mini"><svg viewBox="0 0 24 24"><rect x="4" y="5" width="16" height="15" rx="2"/><path d="M4 10h16M9 3v4M15 3v4"/></svg><span>Next: boiler service, Sat 24 Oct</span></div>
+      </div>
+      <div class="toast t-appr"><svg viewBox="0 0 24 24"><path d="m6 12.5 4 4 8-9"/></svg>Sam approved £120.00</div>
+    </section>
+
+    <!-- T5: adjust quote -->
+    <section class="pn" data-pn="tadj">
+      <header class="ah"><span class="bk"><svg viewBox="0 0 24 24"><path d="m15 5-7 7 7 7"/></svg></span><b>Adjust quote</b></header>
+      <div class="bd">
+        <p class="hint">Found more to do on site? Update the quote. Sam approves it before you carry on.</p>
+        <div class="cd lines">
+          <div class="li"><span>Float valve replacement</span><b>£95.00</b></div>
+          <div class="li li-add"><span class="ty" data-ty="item">Replace ballcock arm</span><b>£<span class="ty" data-ty="amt">25.00</span></b></div>
+          <span class="addi" data-b="additem">+ Add item</span>
+          <div class="li li-tot"><span>New total</span><b class="ntot">£95.00</b></div>
+        </div>
+        <p class="lbl">Reason for the change</p>
+        <div class="fld fld-mid"><span class="ty" data-ty="why">The ballcock arm is corroded too, so it's worth replacing both while I'm here.</span></div>
+      </div>
+      <div class="ft"><span class="btn b-blue" data-b="sendrev">Send revised quote</span></div>
+    </section>
+
+    <!-- T6: earnings -->
+    <section class="pn" data-pn="tearn">
+      <header class="ah"><span class="bk"><svg viewBox="0 0 24 24"><path d="m15 5-7 7 7 7"/></svg></span><b>Earnings</b></header>
+      <div class="bd">
+        <div class="cd earn"><small>Paid instantly</small><b class="earnv">+£114.00</b><span>Sent to your bank via Stripe</span></div>
+        <div class="cd lines">
+          <div class="li"><span>Overflow repair</span><b>£120.00</b></div>
+          <div class="li"><span>Jobbi fee (5%)</span><b>−£6.00</b></div>
+          <div class="li li-tot"><span>You receive</span><b>£114.00</b></div>
+        </div>
+        <div class="cd review"><div class="rh"><b>New review from Sam</b><span class="stars">★★★★★</span></div><small>Quality, punctuality, cleanliness, professionalism, communication, value</small></div>
+      </div>
+    </section>
+
+    <div class="push">
+      <span class="pic"><img src="assets/img/mark-white.png" alt="" width="171" height="200"></span>
+      <div class="grow"><p class="pa"><b>JOBBI</b><span>now</span></p><b>New job near you</b><small>Overflow repair · Chandler's Ford · 1.2 mi</small></div>
     </div>
-    <ol class="steps">
-      <li><div class="num" aria-hidden="true">1</div><h3>Describe your job</h3><p>Tell us what needs doing. Jobbi summarises the work and uses market insight data to provide a typical guide price<a href="#note-1" aria-label="See note on estimates">*</a></p></li>
-      <li><div class="num" aria-hidden="true">2</div><h3>Compare estimates</h3><p>Receive estimates from verified tradespeople in your area. Review their profile, credentials and ratings before booking.</p></li>
-      <li><div class="num" aria-hidden="true">3</div><h3>No cowboys</h3><p>All tradespeople on Jobbi are ID verified, insured and have the right qualifications for the job<a href="#note-2" aria-label="See note on qualifications">**</a></p></li>
-      <li><div class="num" aria-hidden="true">4</div><h3>Pay securely</h3><p>Pay your tradesperson directly through the app when the job is done.</p></li>
-    </ol>
+    <span class="tapdot"></span>
+  </div>
+</div>
+              </div><!-- /flip -->
+            </div>
+          </div>
+          <p class="j-note">Example job. Names, dates and prices are for illustration.</p>
+        </div>
+
+      </div>
+    </div>
   </div>
 </section>
+
 
 <!-- VERIFIED (signature moment) -->
 <section class="verified section band" aria-labelledby="ver-title">
@@ -628,5 +1250,10 @@ p{margin:0;text-wrap:pretty}
 })();
 </script>
 
+<script defer src="assets/js/gsap.min.js"></script>
+<script defer src="assets/js/ScrollTrigger.min.js"></script>
+<script defer src="assets/js/lenis.min.js"></script>
+<script defer src="assets/js/concept.js"></script>
+<script defer src="assets/js/journey.js"></script>
 </body>
 </html>
